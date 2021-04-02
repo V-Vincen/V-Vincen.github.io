@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -262,17 +273,6 @@
             <a href="/about/">
               
               ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -1029,15 +1029,15 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
   <div class="tags">
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
     
     
     
     <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1057,15 +1057,15 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     
     
+    <a href="/tags/#Spring RestTemplate" title="Spring RestTemplate" rel="1">Spring RestTemplate</a>
+    
+    
+    
     <a href="/tags/#WebService" title="WebService" rel="4">WebService</a>
     
     
     
     <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
-    
-    
-    
-    <a href="/tags/#Spring RestTemplate" title="Spring RestTemplate" rel="1">Spring RestTemplate</a>
     
     
     
@@ -1085,11 +1085,11 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
     
     
     
@@ -1137,11 +1137,11 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     
     
-    <a href="/tags/#Java 杂记" title="Java 杂记" rel="10">Java 杂记</a>
-    
-    
-    
     <a href="/tags/#Java 多线程高并发练习" title="Java 多线程高并发练习" rel="4">Java 多线程高并发练习</a>
+    
+    
+    
+    <a href="/tags/#Java 杂记" title="Java 杂记" rel="10">Java 杂记</a>
     
     
     
@@ -1165,15 +1165,15 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     
     
+    <a href="/tags/#Microservices" title="Microservices" rel="5">Microservices</a>
+    
+    
+    
     <a href="/tags/#Mybatis" title="Mybatis" rel="11">Mybatis</a>
     
     
     
     <a href="/tags/#Maven" title="Maven" rel="2">Maven</a>
-    
-    
-    
-    <a href="/tags/#Microservices" title="Microservices" rel="5">Microservices</a>
     
     
     
@@ -1205,11 +1205,11 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
     
     
     
-    <a href="/tags/#SSM" title="SSM" rel="2">SSM</a>
-    
-    
-    
     <a href="/tags/#Spring" title="Spring" rel="8">Spring</a>
+    
+    
+    
+    <a href="/tags/#SSM" title="SSM" rel="2">SSM</a>
     
     
     
@@ -1693,6 +1693,10 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             var date = data.date;
             var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
             var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io' + imgUrl;
+            
+
 
             var indexOfTitle = [];
             var indexOfContent = [];
