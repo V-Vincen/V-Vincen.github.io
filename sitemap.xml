@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://v-vincen.life/about/index.html</loc>
+    
+    <lastmod>2021-04-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/cn/Hexo-Theme-LiveMyLife/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -17,13 +24,6 @@
   
   <url>
     <loc>https://v-vincen.life/en/%E5%8F%8D%E5%B0%84%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3%E3%80%81Lambda-%E7%BB%93%E5%90%88%E7%BB%83%E4%B9%A0/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://v-vincen.life/about/index.html</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -51,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Web-4-Servlet-%E4%B8%AD-ajax-%E7%9A%84%E5%BA%94%E7%94%A8/</loc>
+    <loc>https://v-vincen.life/en/Web-5-Web-%E9%A1%B9%E7%9B%AE%E4%B8%AD-Mybatis-%E9%85%8D%E7%BD%AE-C3p0-%E5%92%8C-Druid-%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Web-5-Web-%E9%A1%B9%E7%9B%AE%E4%B8%AD-Mybatis-%E9%85%8D%E7%BD%AE-C3p0-%E5%92%8C-Druid-%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
+    <loc>https://v-vincen.life/en/Web-4-Servlet-%E4%B8%AD-ajax-%E7%9A%84%E5%BA%94%E7%94%A8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Ubuntu-4-Ubuntu-%E5%AE%89%E8%A3%85-JDK-1-8/</loc>
+    <loc>https://v-vincen.life/en/Ubuntu-4-1-Ubuntu-%E5%AE%89%E8%A3%85-OpenJDK-11/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Ubuntu-4-1-Ubuntu-%E5%AE%89%E8%A3%85-OpenJDK-11/</loc>
+    <loc>https://v-vincen.life/en/Ubuntu-4-Ubuntu-%E5%AE%89%E8%A3%85-JDK-1-8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -240,13 +240,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Thread-2-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Thread-3-%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -255,6 +248,13 @@
   
   <url>
     <loc>https://v-vincen.life/en/Thread-4-%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B0%E5%A2%9E%E6%96%B9%E5%BC%8F%EF%BC%88JKD-5-0%EF%BC%89/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/en/Thread-2-%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -282,13 +282,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-Session-Spring-Session-%E5%AE%8C%E6%88%90-session-%E5%85%B1%E4%BA%AB/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Spring-Retry-Spring-Retry/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -296,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-MVC-4-Spring-MVC-%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://v-vincen.life/en/Spring-Session-Spring-Session-%E5%AE%8C%E6%88%90-session-%E5%85%B1%E4%BA%AB/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -317,7 +310,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-MVC-5-Maven-%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://v-vincen.life/en/Spring-MVC-4-Spring-MVC-%E6%8B%A6%E6%88%AA%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -325,6 +318,13 @@
   
   <url>
     <loc>https://v-vincen.life/en/Spring-MVC-8-Spring-MVC-ResponseBody/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/en/Spring-MVC-5-Maven-%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-Cloud-Netflix-3-Eureka-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/</loc>
+    <loc>https://v-vincen.life/en/Spring-Cloud-Netflix-2-Dependencies-%E5%88%9B%E5%BB%BA%E7%BB%9F%E4%B8%80%E7%9A%84%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-Cloud-Netflix-2-Dependencies-%E5%88%9B%E5%BB%BA%E7%BB%9F%E4%B8%80%E7%9A%84%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</loc>
+    <loc>https://v-vincen.life/en/Spring-Cloud-Netflix-3-Eureka-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -555,7 +555,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/SSM-SSM-xml-%E9%85%8D%E7%BD%AE%E6%95%B4%E5%90%88/</loc>
+    <loc>https://v-vincen.life/en/SSM-SSM-%E6%B3%A8%E8%A7%A3-%E9%85%8D%E7%BD%AE%E6%95%B4%E5%90%88/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/SSM-SSM-%E6%B3%A8%E8%A7%A3-%E9%85%8D%E7%BD%AE%E6%95%B4%E5%90%88/</loc>
+    <loc>https://v-vincen.life/en/SSM-SSM-xml-%E9%85%8D%E7%BD%AE%E6%95%B4%E5%90%88/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -744,13 +744,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Microservices-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%89%B9%E5%BE%81/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Microservices-3-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -758,7 +751,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Mac-Mac-%E5%88%B7%E6%96%B0-DNS-%E7%BC%93%E5%AD%98/</loc>
+    <loc>https://v-vincen.life/en/Microservices-2-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%89%B9%E5%BE%81/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -766,6 +759,13 @@
   
   <url>
     <loc>https://v-vincen.life/en/Mac-Mac-ifconfig-%E7%9A%84%E5%90%84%E4%B8%AA%E7%AB%AF%E5%8F%A3/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/en/Mac-Mac-%E5%88%B7%E6%96%B0-DNS-%E7%BC%93%E5%AD%98/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -926,6 +926,13 @@
   </url>
   
   <url>
+    <loc>https://v-vincen.life/en/Logback-1-Logback-%E4%BB%8B%E7%BB%8D/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/en/Log4j-1-Log4j-%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -934,13 +941,6 @@
   
   <url>
     <loc>https://v-vincen.life/en/Log4j-2-Log4j-%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://v-vincen.life/en/Logback-1-Logback-%E4%BB%8B%E7%BB%8D/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -996,14 +996,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Linux-5-Linux-%E5%BC%80%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://v-vincen.life/en/Linux-3-Linux-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Linux-3-Linux-%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/</loc>
+    <loc>https://v-vincen.life/en/Linux-5-Linux-%E5%BC%80%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1052,7 +1052,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-Java-%E4%B8%AD%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-GoF-%E7%9A%8423%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1066,13 +1066,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-GoF-%E7%9A%8423%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-List-%E7%9A%84-remove-%E6%96%B9%E6%B3%95%E9%99%B7%E9%98%B1%E4%BB%A5%E5%8F%8A%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -1080,7 +1073,21 @@
   </url>
   
   <url>
+    <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-Java-%E4%B8%AD%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-RequestBody-%E5%92%8C-RequestParam-%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/en/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%AB%98%E5%B9%B6%E5%8F%91%E7%BB%83%E4%B9%A0-3-%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1095,13 +1102,6 @@
   
   <url>
     <loc>https://v-vincen.life/en/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%AB%98%E5%B9%B6%E5%8F%91%E7%BB%83%E4%B9%A0-2-ReentrantLock%E3%80%81ThreadLocal%E3%80%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%8D%95%E4%BE%8B/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://v-vincen.life/en/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%AB%98%E5%B9%B6%E5%8F%91%E7%BB%83%E4%B9%A0-3-%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1143,14 +1143,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/JUC-3-1-Java-%E5%B9%B6%E5%8F%91%E5%AE%B9%E5%99%A8/</loc>
+    <loc>https://v-vincen.life/en/JUC-2-Java-%E9%9B%86%E5%90%88%E5%AE%B9%E5%99%A8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/JUC-2-Java-%E9%9B%86%E5%90%88%E5%AE%B9%E5%99%A8/</loc>
+    <loc>https://v-vincen.life/en/JUC-3-1-Java-%E5%B9%B6%E5%8F%91%E5%AE%B9%E5%99%A8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1220,14 +1220,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/</loc>
+    <loc>https://v-vincen.life/en/JDK8-1-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/JDK8-1-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    <loc>https://v-vincen.life/en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1325,14 +1325,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/IDEA-IDEA-%E4%B8%AD-Bower-%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://v-vincen.life/en/IDEA-IDEA-%E4%B8%AD-Run-Dashboard-%E9%9D%A2%E6%9D%BF%E5%BC%80%E5%90%AF/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/IDEA-IDEA-%E4%B8%AD-Run-Dashboard-%E9%9D%A2%E6%9D%BF%E5%BC%80%E5%90%AF/</loc>
+    <loc>https://v-vincen.life/en/IDEA-IDEA-%E4%B8%AD-Bower-%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1619,13 +1619,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Docker-8-1-Docker-%E9%83%A8%E7%BD%B2-Tomcat/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Docker-7-2-Docker-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E6%B7%B1%E5%85%A5/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -1633,7 +1626,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Docker-Compose-2-Docker-Compose-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD/</loc>
+    <loc>https://v-vincen.life/en/Docker-8-1-Docker-%E9%83%A8%E7%BD%B2-Tomcat/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1648,6 +1641,13 @@
   
   <url>
     <loc>https://v-vincen.life/en/Docker-Compose-1-Docker-Compose-%E7%AE%80%E4%BB%8B/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/en/Docker-Compose-2-Docker-Compose-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1794,7 +1794,7 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/</loc>
+    <loc>https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1808,14 +1808,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/</loc>
+    <loc>https://v-vincen.life/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/</loc>
+    <loc>https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1836,6 +1836,13 @@
   </url>
   
   <url>
+    <loc>https://v-vincen.life/en/Calling-Third-party-API-2-Java-API-Core-Java-APIs-for-making-Java-http-requests/</loc>
+    
+    <lastmod>2021-04-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/en/Calling-Third-party-API-Apache-HttpClient-HttpClient-Tutorial/</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -1844,13 +1851,6 @@
   
   <url>
     <loc>https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-1-Feign-makes-writing-java-http-clients-easier/</loc>
-    
-    <lastmod>2021-04-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://v-vincen.life/en/Calling-Third-party-API-2-Java-API-Core-Java-APIs-for-making-Java-http-requests/</loc>
     
     <lastmod>2021-04-01</lastmod>
     
@@ -1936,6 +1936,13 @@
   </url>
   
   <url>
+    <loc>https://v-vincen.life/tags/Annotation/</loc>
+    <lastmod>2021-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/tags/Atom/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
@@ -1957,13 +1964,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Annotation/</loc>
-    <lastmod>2021-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/tags/OpenFeign/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
@@ -1971,14 +1971,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Spring-RestTemplate/</loc>
+    <loc>https://v-vincen.life/tags/WebService/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/WebService/</loc>
+    <loc>https://v-vincen.life/tags/Spring-RestTemplate/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2132,14 +2132,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Log4j/</loc>
+    <loc>https://v-vincen.life/tags/Logback/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Logback/</loc>
+    <loc>https://v-vincen.life/tags/Log4j/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2202,20 +2202,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/PageHelper/</loc>
-    <lastmod>2021-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://v-vincen.life/tags/Redis/</loc>
-    <lastmod>2021-04-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/tags/Reflect/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
@@ -2223,7 +2209,21 @@
   </url>
   
   <url>
+    <loc>https://v-vincen.life/tags/PageHelper/</loc>
+    <lastmod>2021-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/tags/Registry/</loc>
+    <lastmod>2021-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/tags/Redis/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2279,14 +2279,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Spring-Session/</loc>
+    <loc>https://v-vincen.life/tags/Spring-Retry/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Spring-Retry/</loc>
+    <loc>https://v-vincen.life/tags/Spring-Session/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2442,14 +2442,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/categories/Redis/</loc>
+    <loc>https://v-vincen.life/categories/Registry/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/categories/Registry/</loc>
+    <loc>https://v-vincen.life/categories/Redis/</loc>
     <lastmod>2021-04-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
