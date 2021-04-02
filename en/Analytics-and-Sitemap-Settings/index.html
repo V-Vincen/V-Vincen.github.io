@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -270,9 +270,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -516,7 +516,7 @@
 <li><p>在 hexo 根目录执行下面两个命令。</p>
   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure></li>
 <li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml" target="_blank" rel="noopener"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>sitemap</code> 配置。</p>
-  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don't forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># Note: don't forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></li>
 <li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>sitemap.xml</code> 文件。</p>
 <p>  <img src="7.png" alt="7"></p>
@@ -543,7 +543,7 @@
 <li><p>在 hexo 根目录执行下面两个命令。</p>
   <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure></li>
 <li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml" target="_blank" rel="noopener"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>Baidusitemap</code> 配置。</p>
-  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don't forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># Note: don't forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 <li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>baidusitemap.xml</code> 文件。</p>
 </li>
@@ -652,9 +652,9 @@
 
   <script>
     var gitalk = new Gitalk({
-      clientID: 'c81ff43219a616c193e0',
-      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
-      repo: 'test-comment',
+      clientID: 'c5c071e55f689f41560d',
+      clientSecret: '1e8aabf73ccb26e519ee937ea1ddd241c5d13b79',
+      repo: 'blog-comment',
       owner: 'V-Vincen',
       admin: 'V-Vincen',
       id: 'Tue Jul 21 2020 17:31:49 GMT+0800', // Ensure uniqueness and length less than 50
