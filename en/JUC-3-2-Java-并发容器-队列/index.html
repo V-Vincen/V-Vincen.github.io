@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/JUC-3-2-Java-并发容器-队列/">
+  <title>
+    
+      [JUC] 3.2 Java 并发容器 -- 队列 - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/juc/juc_bg2.png');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/juc/juc_bg2.png');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/juc/juc_bg2.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/juc/juc_bg2.png');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/juc/juc_bg2.png'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JUC" title="JUC">JUC</a>
+              
+            </div>
+            <h1>[JUC] 3.2 Java 并发容器 -- 队列</h1>
+            <h2 class="subheading">Queue 队列总结</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2019-10-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><code>Queue（队列）</code>：一种特殊的线性表，它只允许在表的前端（<code>front</code>）进行删除操作，只允许在表的后端（<code>rear</code>）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。</p>
+<p>每个元素总是从队列的 <code>rear</code> 端进入队列，然后等待该元素之前的所有元素出队之后，当前元素才能出对，遵循先进先出（<code>FIFO</code>）原则。</p>
+<p>下面是 <code>Queue</code> 类的继承关系图：</p>
+<p><img src="1.png" alt="1"></p>
+<p>图中我们可以看到，最上层是 <code>Collection</code> 接口，<code>Queue</code> 满足集合类的所有方法：</p>
+<ul>
+<li><code>add(E e)</code>：增加元素；</li>
+<li><code>remove(Object o)</code>：删除元素；</li>
+<li><code>clear()</code>：清除集合中所有元素；</li>
+<li><code>size()</code>：集合元素的大小；</li>
+<li><code>isEmpty()</code>：集合是否没有元素；</li>
+<li><code>contains(Object o)</code>：集合是否包含元素 <code>o</code>。</li>
+</ul>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><p><code>Queue</code>：队列的上层接口，提供了插入、删除、获取元素这3种类型的方法，而且对每一种类型都提供了两种方式，先来看看插入方法：</p>
+<ul>
+<li><code>add(E e)</code>：插入元素到队尾，插入成功返回 <code>true</code>，没有可用空间抛出异常 <code>IllegalStateException</code>。</li>
+<li><code>offer(E e)</code>： 插入元素到队尾，插入成功返回 <code>true</code>，否则返回 <code>false</code>。</li>
+</ul>
+<p><code>add</code> 和 <code>offer</code> 作为插入方法的唯一不同就在于队列满了之后的处理方式。<code>add</code> 抛出异常，而 <code>offer</code> 返回 <code>false</code>。</p>
+<p>再来看看删除和获取元素方法（和插入方法类似）：</p>
+<ul>
+<li><code>remove()</code>：获取并移除队首的元素，该方法和 <code>poll</code> 方法的不同之处在于，如果队列为空该方法会抛出异常，而 <code>poll</code> 不会。</li>
+<li><code>poll()</code>：获取并移除队首的元素，如果队列为空，返回 <code>null</code>。</li>
+<li><code>element()</code>：获取队列首的元素，该方法和 <code>peek</code> 方法的不同之处在于，如果队列为空该方法会抛出异常，而 <code>peek</code> 不会。</li>
+<li><code>peek()</code>：获取队列首的元素，如果队列为空，返回 <code>null</code>。</li>
+</ul>
+<p>如果队列是空，<code>remove</code> 和 <code>element</code> 方法会抛出异常，而 <code>poll</code> 和 <code>peek</code> 返回 <code>null</code>。</p>
+<p>当然，<code>Queue</code> 只是单向队列，为了提供更强大的功能，JDK 1.6 的时候新增了一个双向队列 <code>Deque</code>，用来实现更灵活的队列操作。</p>
+<h3 id="Deque"><a href="#Deque" class="headerlink" title="Deque"></a>Deque</h3><p><code>Deque</code> 在 <code>Queue</code> 的基础上，增加了以下几个方法：</p>
+<ul>
+<li><code>addFirst(E e)</code>：在前端插入元素，异常处理和 <code>add</code> 一样；</li>
+<li><code>addLast(E e)</code>：在后端插入元素，和 <code>add</code> 一样的效果；</li>
+<li><code>offerFirst(E e)</code>：在前端插入元素，异常处理和 <code>offer</code> 一样；</li>
+<li><code>offerLast(E e)</code>：在后端插入元素，和 <code>offer</code> 一样的效果；</li>
+<li><code>removeFirst()</code>：移除前端的一个元素，异常处理和 <code>remove</code> 一样；</li>
+<li><code>removeLast()</code>：移除后端的一个元素，和 <code>remove</code> 一样的效果；</li>
+<li><code>pollFirst()</code>：移除前端的一个元素，和 <code>poll</code> 一样的效果；</li>
+<li><code>pollLast()</code>：移除后端的一个元素，异常处理和 <code>poll</code> 一样；</li>
+<li><code>getFirst()</code>：获取前端的一个元素，和 <code>element</code> 一样的效果；</li>
+<li><code>getLast()</code>：获取后端的一个元素，异常处理和 <code>element</code> 一样；</li>
+<li><code>peekFirst()</code>：获取前端的一个元素，和 <code>peek</code> 一样的效果；</li>
+<li><code>peekLast()</code>：获取后端的一个元素，异常处理和 <code>peek</code> 一样；</li>
+<li><code>removeFirstOccurrence(Object o)</code>：从前端开始移除第一个是 <code>o</code> 的元素；</li>
+<li><code>removeLastOccurrence(Object o)</code>：从后端开始移除第一个是 <code>o</code> 的元素；</li>
+<li><code>push(E e)</code>：和 <code>addFirst</code> 一样的效果；</li>
+<li><code>pop()</code>：和 <code>removeFirst</code> 一样的效果。</li>
+</ul>
+<p>可以发现，其实很多方法的效果都是一样的，只不过名字不同。比如 <code>Deque</code> 为了实现 Stack 的语义，定义了 <code>push</code> 和 <code>pop</code> 两个方法。</p>
+<h2 id="阻塞队列（BlockingQueue）"><a href="#阻塞队列（BlockingQueue）" class="headerlink" title="阻塞队列（BlockingQueue）"></a>阻塞队列（<code>BlockingQueue</code>）</h2><p><code>BlockingQueue（阻塞队列）</code>，在 <code>Queue</code> 的基础上实现了阻塞等待的功能。它是 JDK 1.5 中加入的接口，它是指这样的一个队列：当生产者向队列添加元素但队列已满时，生产者会被阻塞；当消费者从队列移除元素但队列为空时，消费者会被阻塞。</p>
+<p>先给出 <code>BlockingQueue</code> 新增的方法：</p>
+<ul>
+<li><code>put(E e)</code>：向队尾插入元素。如果队列满了，阻塞等待，直到被中断为止。</li>
+<li><code>boolean offer(E e, long timeout, TimeUnit unit)</code>：向队尾插入元素。如果队列满了，阻塞等待 timeout 个时长，如果到了超时时间还没有空间，抛弃该元素。</li>
+<li><code>take()</code>：获取并移除队首的元素。如果队列为空，阻塞等待，直到被中断为止。</li>
+<li><code>poll(long timeout, TimeUnit unit)</code>：获取并移除队首的元素。如果队列为空，阻塞等待 timeout 个时长，如果到了超时时间还没有元素，则返回 <code>null</code>。</li>
+<li><code>remainingCapacity()</code>：返回在无阻塞的理想情况下（不存在内存或资源约束）此队列能接受的元素数量，如果该队列是无界队列，返回 <code>Integer.MAX_VALUE</code>。</li>
+<li><code>drainTo(Collection&lt;? super E&gt; c)</code>：移除此队列中所有可用的元素，并将它们添加到给定 collection 中。</li>
+<li><code>drainTo(Collection&lt;? super E&gt; c, int maxElements)</code>：最多从此队列中移除给定数量的可用元素，并将这些元素添加到给定 collection 中。</li>
+</ul>
+<p><code>BlockingQueue</code> 最重要的也就是关于阻塞等待的几个方法，而这几个方法正好可以用来实现 <strong>生产-消费的模型</strong>。</p>
+<p>从图中我们可以知道实现了 <code>BlockingQueue</code> 的类有以下几个：</p>
+<ul>
+<li><code>ArrayBlockingQueue</code>：一个由数组结构组成的有界阻塞队列。</li>
+<li><code>LinkedBlockingQueue</code>：一个由链表结构组成的有界阻塞队列。</li>
+<li><code>PriorityBlockingQueue</code>：一个支持优先级排序的无界阻塞队列。</li>
+<li><code>SynchronousQueue</code>：一个不存储元素的阻塞队列。</li>
+<li><code>DelayQueue</code>：一个使用优先级队列实现的无界阻塞队列。</li>
+</ul>
+<h3 id="ArrayBlockingQueue"><a href="#ArrayBlockingQueue" class="headerlink" title="ArrayBlockingQueue"></a><strong><code>ArrayBlockingQueue</code></strong></h3><p><code>ArrayBlockingQueue</code> 是一个底层用<strong>数组</strong>（准确的说是一个循环数组（可以类比一个圆环），所有的下标在到达最大长度时自动从0继续开始。）实现的<strong>有界阻塞队列</strong>，有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。它通过可重入的独占锁 <code>ReentrantLock</code> 来控制并发，<code>Condition</code> 来实现阻塞。</p>
+<p>此队列按照先进先出（<code>FIFO</code>）的原则对元素进行排序。默认情况下不保证访问者公平的访问队列，所谓公平访问队列是指阻塞的所有生产者线程或消费者线程，当队列可用时，可以按照阻塞的先后顺序访问队列，即先阻塞的生产者线程，可以先往队列里插入元素，先阻塞的消费者线程，可以先从队列里获取元素。通常情况下为了保证公平性会降低吞吐量。我们可以使用以下代码创建一个公平的阻塞队列：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayBlockingQueue fairQueue = <span class="keyword">new</span>  ArrayBlockingQueue(<span class="number">1000</span>, <span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p>访问者的公平性是使用可重入锁实现的，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">ArrayBlockingQueue</span><span class="params">(<span class="keyword">int</span> capacity, <span class="keyword">boolean</span> fair)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (capacity &lt;= <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">    <span class="keyword">this</span>.items = <span class="keyword">new</span> Object[capacity];</span><br><span class="line">    lock = <span class="keyword">new</span> ReentrantLock(fair);</span><br><span class="line">    notEmpty = lock.newCondition();</span><br><span class="line">    notFull =  lock.newCondition();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="LinkedBlockingQueue"><a href="#LinkedBlockingQueue" class="headerlink" title="LinkedBlockingQueue"></a><strong><code>LinkedBlockingQueue</code></strong></h3><p><code>LinkedBlockingQueue</code> 是一个底层用<strong>单向链表</strong>实现的<strong>可以是有界的也可以是无界的（<code>Integer.MAX_VALUE</code>）阻塞队列</strong>，采用 <code>ReentrantLock</code> 来控制并发，添加采用的是 <code>putLock</code>，移除采用的则是 <code>takeLock</code>，使用两个独占锁来控制消费和生产。此队列按照先进先出的原则对元素进行排序。</p>
+<h3 id="PriorityBlockingQueue"><a href="#PriorityBlockingQueue" class="headerlink" title="PriorityBlockingQueue"></a><strong><code>PriorityBlockingQueue</code></strong></h3><p><code>PriorityBlockingQueue</code>是一个支持优先级的无界队列。默认情况下元素采取自然顺序排列，也可以通过比较器 <code>comparator</code> 来指定元素的排序规则。元素按照升序排列。</p>
+<h3 id="SynchronousQueue"><a href="#SynchronousQueue" class="headerlink" title="SynchronousQueue"></a><strong><code>SynchronousQueue</code></strong></h3><p><code>SynchronousQueue</code> 是一个不存储元素的阻塞队列。每一个 <code>put</code> 操作必须等待一个 <code>take</code> 操作，否则不能继续添加元素。<code>SynchronousQueue</code> 可以看成是一个传球手，负责把生产者线程处理的数据直接传递给消费者线程。队列本身并不存储任何元素，非常适合于传递性场景,比如在一个线程中使用的数据，传递给另外一个线程使用，<code>SynchronousQueue</code> 的吞吐量高于 <code>LinkedBlockingQueue</code> 和 <code>ArrayBlockingQueue</code>。</p>
+<p><strong>案例：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SynchronousQueue：是一个不存储元素的阻塞队列。每一个 put 操作必须等待一个 take 操作，否则不能继续添加元素。</span></span><br><span class="line"><span class="comment"> * 其可以看成是一个传球手，负责把生产者线程处理的数据直接传递给消费者线程。</span></span><br><span class="line"><span class="comment"> * 队列本身并不存储任何元素，非常适合于传递性场景,比如在一个线程中使用的数据，传递给另外一个线程使用。</span></span><br><span class="line"><span class="comment"> * SynchronousQueue 的吞吐量高于 LinkedBlockingQueue 和 ArrayBlockingQueue。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_09_T_SynchronusQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        BlockingQueue&lt;String&gt; sQ = <span class="keyword">new</span> SynchronousQueue&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                System.out.println(sQ.take());</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        sQ.put(<span class="string">"aaa"</span>);</span><br><span class="line">        System.out.println(sQ.size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="DelayQueue"><a href="#DelayQueue" class="headerlink" title="DelayQueue"></a><strong><code>DelayQueue</code></strong></h3><p><code>DelayQueue</code> 是一个支持延时获取元素的无界阻塞队列。队列使用 <code>PriorityQueue</code> 来实现。队列中的元素必须实现 <code>Delayed</code> 接口，在创建元素时可以指定多久才能从队列中获取当前元素。只有在延迟期满时才能从队列中提取元素。我们可以将 <code>DelayQueue</code> 运用在以下应用场景：</p>
+<ul>
+<li>缓存系统的设计：可以用 <code>DelayQueue</code> 保存缓存元素的有效期，使用一个线程循环查询 <code>DelayQueue</code>，一旦能从 <code>DelayQueue</code>中获取元素时，表示缓存有效期到了。</li>
+<li>定时任务调度。使用 <code>DelayQueue</code> 保存当天将会执行的任务和执行时间，一旦从 <code>DelayQueue</code> 中获取到任务就开始执行，从比如 <code>TimerQueue</code> 就是使用 <code>DelayQueue</code> 实现的。</li>
+</ul>
+<p><strong>案例：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * DelayQueue：是一个支持延时获取元素的无界阻塞队列，队列使用 PriorityQueue 来实现。</span></span><br><span class="line"><span class="comment"> *            队列中的元素必须实现 Delayed 接口，在创建元素时可以指定多久才能从队列中获取当前元素，只有在延迟期满时才能从队列中提取元素。</span></span><br><span class="line"><span class="comment"> * 我们可以将 DelayQueue 运用在以下应用场景：</span></span><br><span class="line"><span class="comment"> *          缓存系统的设计：可以用 DelayQueue 保存缓存元素的有效期，使用一个线程循环查询 DelayQueue，一旦能从 DelayQueue 中获取元素时，表示缓存有效期到了。</span></span><br><span class="line"><span class="comment"> *          定时任务调度：使用 DelayQueue 保存当天将会执行的任务和执行时间，一旦从 DelayQueue 中获取到任务就开始执行，从比如 TimerQueue 就是使用 DelayQueue 实现的。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_07_T_DelayQueue</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> BlockingQueue&lt;MyTask&gt; dQ = <span class="keyword">new</span> DelayQueue&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> Random r = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTask</span> <span class="keyword">implements</span> <span class="title">Delayed</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> runningTime;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyTask</span><span class="params">(<span class="keyword">long</span> runningTime)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.runningTime = runningTime;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getDelay</span><span class="params">(TimeUnit unit)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> unit.convert(runningTime - System.currentTimeMillis(), TimeUnit.MILLISECONDS);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Delayed o)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.getDelay(TimeUnit.MILLISECONDS) &lt; o.getDelay(TimeUnit.MILLISECONDS))</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.getDelay(TimeUnit.MILLISECONDS) &gt; o.getDelay(TimeUnit.MILLISECONDS))</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"MyTask&#123;"</span> +</span><br><span class="line">                    <span class="string">"runningTime="</span> + runningTime +</span><br><span class="line">                    <span class="string">'&#125;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> now = System.currentTimeMillis();</span><br><span class="line">        MyTask t1 = <span class="keyword">new</span> MyTask(now + <span class="number">1000</span>);</span><br><span class="line">        MyTask t2 = <span class="keyword">new</span> MyTask(now + <span class="number">2000</span>);</span><br><span class="line">        MyTask t3 = <span class="keyword">new</span> MyTask(now + <span class="number">1500</span>);</span><br><span class="line">        MyTask t4 = <span class="keyword">new</span> MyTask(now + <span class="number">2500</span>);</span><br><span class="line">        MyTask t5 = <span class="keyword">new</span> MyTask(now + <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line">        dQ.put(t1);</span><br><span class="line">        dQ.put(t2);</span><br><span class="line">        dQ.put(t3);</span><br><span class="line">        dQ.put(t4);</span><br><span class="line">        dQ.put(t5);</span><br><span class="line"></span><br><span class="line">        System.out.println(dQ);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">            System.out.println(dQ.take());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="TransferQueue"><a href="#TransferQueue" class="headerlink" title="TransferQueue"></a><strong><code>TransferQueue</code></strong></h3><p><code>TransferQueue</code> 是 JDK 1.7 对于并发类库新增加的一个接口，它扩展自 <code>BlockingQueue</code>，所以自然保持着阻塞队列的所有特性。</p>
+<blockquote>
+<p>有人这样评价它：<code>TransferQueue</code> 是 <code>ConcurrentLinkedQueue</code>、<code>SynchronousQueue (公平模式下)</code>、无界的 <code>LinkedBlockingQueues</code> 等的超集。</p>
+</blockquote>
+<p><code>TransferQueue</code> 对比与 <code>BlockingQueue</code> 更强大的一点是，生产者会一直阻塞直到所添加到队列的元素被某一个消费者所消费（不仅仅是添加到队列里就完事）。新添加的 <code>transfer</code> 方法用来实现这种约束。顾名思义，阻塞就是发生在元素从一个线程 <code>transfer</code> 到另一个线程的过程中，它有效地实现了元素在线程之间的传递（以建立 Java 内存模型中的 <code>happens-before</code> 关系的方式）。</p>
+<p>我们来看看该接口提供的标准方法：</p>
+<ul>
+<li><code>tryTransfer(E e)</code>：若当前存在一个正在等待获取的消费者线程（使用 <code>take()</code> 或者 <code>poll()</code> 函数），使用该方法会即刻转移/传输对象元素 <code>e</code> 并立即返回 <code>true</code>；<strong>若不存在，则返回 <code>false</code>，并且不进入队列。这是一个不阻塞的操作。</strong></li>
+<li><code>transfer(E e)</code>：若当前存在一个正在等待获取的消费者线程，即立刻移交之；<strong>否则，会插入当前元素 <code>e</code> 到队列尾部，并且等待进入阻塞状态，到有消费者线程取走该元素。</strong></li>
+<li><code>tryTransfer(E e, long timeout, TimeUnit unit)</code>：若当前存在一个正在等待获取的消费者线程，会立即传输给它；<strong>否则将插入元素 <code>e</code> 到队列尾部，并且等待被消费者线程获取消费掉；若在指定的时间内元素 <code>e</code> 无法被消费者线程获取，则返回 <code>false</code>，同时该元素被移除。</strong></li>
+<li><code>hasWaitingConsumer()</code>：判断是否存在消费者线程。</li>
+<li><code>getWaitingConsumerCount()</code>：获取所有等待获取元素的消费线程数量。</li>
+</ul>
+<p>其实 <code>transfer</code> 方法在 <code>SynchronousQueue</code> 的实现中就已存在了，只是没有做为 API 暴露出来。<code>SynchronousQueue</code> 有一个特性：它本身不存在容量，只能进行线程之间的元素传送。<code>SynchronousQueue</code> 在执行 <code>offer</code> 操作时，如果没有其他线程执行 <code>poll</code>，则直接返回 <code>false</code>。线程之间元素传送正是通过 <code>transfer</code> 方法完成的。</p>
+<p><code>TransferQueue</code> 相比 <code>SynchronousQueue</code> 用处更广、更好用，因为你可以决定是使用 <code>BlockingQueue</code> 的方法（例如 <code>put</code> 方法）还是确保一次传递完成（即 <code>transfer</code> 方法）。在队列中已有元素的情况下，调用 <code>transfer</code> 方法，可以确保队列中被传递元素之前的所有元素都能被处理。</p>
+<p>从图中我们可以知道实现了 <code>TransferQueue</code> 的类有：</p>
+<ul>
+<li><code>LinkedTransferQueue</code>：一个由链表结构组成的无界阻塞队列。</li>
+</ul>
+<p><strong>案例：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * LinkedTransferQueue：是一个无界的阻塞队列，底层由链表实现。</span></span><br><span class="line"><span class="comment"> * 虽然和 LinkedBlockingQueue 一样也是链表实现的，但并发控制的实现上却很不一样，</span></span><br><span class="line"><span class="comment"> * 和 SynchronousQueue 类似，采用了大量的 CAS 操作，没有使用锁，由于是无界的，</span></span><br><span class="line"><span class="comment"> * 所以 put 生产线程不会阻塞，只会在 take 时阻塞消费线程，消费线程挂起时同样使用 LockSupport.park 方法。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * LinkedTransferQueue 相比于以上的队列还提供了一些额外的功能，它实现了 TransferQueue 接口，</span></span><br><span class="line"><span class="comment"> * 有两个关键方法 transfer(E e) 和 tryTransfer(E e) 方法，</span></span><br><span class="line"><span class="comment"> *          transfer 在没有消费时会阻塞；</span></span><br><span class="line"><span class="comment"> *          tryTransfer 在没有消费时不会插入到队列中，也不会等待，直接返回 false；</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_08_T_TransferQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        LinkedTransferQueue&lt;Object&gt; lTQ = <span class="keyword">new</span> LinkedTransferQueue&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                System.out.println(lTQ.take());</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        lTQ.transfer(<span class="string">"aaa"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*new Thread(() -&gt; &#123;</span></span><br><span class="line"><span class="comment">            try &#123;</span></span><br><span class="line"><span class="comment">                System.out.println(lTQ.take());</span></span><br><span class="line"><span class="comment">            &#125; catch (InterruptedException e) &#123;</span></span><br><span class="line"><span class="comment">                e.printStackTrace();</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;).start();*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="阻塞双端队列（BlockingDeque）"><a href="#阻塞双端队列（BlockingDeque）" class="headerlink" title="阻塞双端队列（BlockingDeque）"></a>阻塞双端队列（<code>BlockingDeque</code>）</h2><p><code>BlockingDeque（阻塞双端队列）</code>在 <code>Deque</code> 的基础上实现了双端阻塞等待的功能。<code>BlockingDeque</code> 也提供了双端队列该有的阻塞等待方法：</p>
+<ul>
+<li><code>putFirst(E e)</code>：在队首插入元素，如果队列满了，阻塞等待，直到被中断为止。</li>
+<li><code>putLast(E e)</code>：在队尾插入元素，如果队列满了，阻塞等待，直到被中断为止。</li>
+<li><code>offerFirst(E e, long timeout, TimeUnit unit)</code>：向队首插入元素。如果队列满了，阻塞等待 timeout 个时长，如果到了超时时间还没有空间，抛弃该元素。</li>
+<li><code>offerLast(E e, long timeout, TimeUnit unit)</code>：向队尾插入元素。如果队列满了，阻塞等待 timeout 个时长，如果到了超时时间还没有空间，抛弃该元素。</li>
+<li><code>takeFirst()</code>：获取并移除队首的元素。如果队列为空，阻塞等待，直到被中断为止。</li>
+<li><code>takeLast()</code>：获取并移除队尾的元素。如果队列为空，阻塞等待，直到被中断为止。</li>
+<li><code>pollFirst(long timeout, TimeUnit unit)</code>：获取并移除队首的元素。如果队列为空，阻塞等待 timeout 个时长，如果到了超时时间还没有元素，则返回 <code>null</code>。</li>
+<li><code>pollLast(long timeout, TimeUnit unit)</code>：获取并移除队尾的元素。如果队列为空，阻塞等待 timeout 个时长，如果到了超时时间还没有元素，则返回 <code>null</code>。</li>
+<li><code>removeFirstOccurrence(Object o)</code>：从队首开始移除第一个和 <code>o</code> 相等的元素。</li>
+<li><code>removeLastOccurrence(Object o)</code>：从队尾开始移除第一个和 <code>o</code> 相等的元素。</li>
+</ul>
+<p>从图中我们可以知道实现了 <code>BlockingDeque</code> 的类有：</p>
+<h3 id="LinkedBlockingDeque"><a href="#LinkedBlockingDeque" class="headerlink" title="LinkedBlockingDeque"></a><strong><code>LinkedBlockingDeque</code></strong></h3><p><code>LinkedBlockingDeque</code>：是一个有界的双端队列，底层采用一个双向的链表来实现，在 <code>LinkedBlockingQueue</code> 的 Node 实现多了指向前一个节点的变量 prev。并发控制上和 <code>ArrayBlockingQueue</code> 类似，采用单个 <code>ReentrantLock</code> 来控制并发，这里是因为双端队列头尾都可以消费和生产，所以使用了一个共享锁。它实现了 <code>BlockingDeque</code> 接口，继承自 <code>BlockingQueue</code> 接口，多了 <code>addFirst</code>，<code>addLast</code>，<code>offerFirst</code>，<code>offerLast</code>，<code>peekFirst</code>，<code>peekLast</code> 等方法，用来头尾生产和消费。<code>LinkedBlockingDeque</code> 的实现代码比较简单，基本就是综合了 <code>LinkedBlockingQueue</code> 和 <code>ArrayBlockingQueue</code> 的代码逻辑，这里就不做分析了。</p>
+<h2 id="非阻塞队列"><a href="#非阻塞队列" class="headerlink" title="非阻塞队列"></a>非阻塞队列</h2><h3 id="ConcurrentLinkedQueue"><a href="#ConcurrentLinkedQueue" class="headerlink" title="ConcurrentLinkedQueue"></a><strong><code>ConcurrentLinkedQueue</code></strong></h3><p><code>ConcurrentLinkedQueue</code>：（线程安全的无界队列，底层采用单链表，支持 <code>FIFO</code>。）是一个基于链接节点的无界线程安全队列，它采用先进先出的规则对节点进行排序，当我们添加一个元素的时候，它会添加到队列的尾部；当我们获取一个元素的时候，它会返回队列头部的元素。</p>
+<p><strong>案例：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">_04_T_ConcurrentQueue</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//ConcurrentLinkedQueue 线程安全的无界队列，底层采用单链表，支持 FIFO。</span></span><br><span class="line">        Queue&lt;String&gt; lQ = <span class="keyword">new</span> ConcurrentLinkedQueue&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            <span class="comment">//offer 添加，类似于 add</span></span><br><span class="line">            lQ.offer(<span class="string">"a"</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(lQ);</span><br><span class="line"></span><br><span class="line">        System.out.println(lQ.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//poll 从头部获取元素，获取后会删除元素</span></span><br><span class="line">        System.out.println(lQ.poll());</span><br><span class="line">        System.out.println(lQ);</span><br><span class="line">        System.out.println(lQ.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//peek 从头部获取元素，获取后不会删除元素</span></span><br><span class="line">        System.out.println(lQ.peek());</span><br><span class="line">        System.out.println(lQ);</span><br><span class="line">        System.out.println(lQ.size());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//ConcurrentLinkedDeque：线程安全的双端无界阻塞队列，底层采用双向链表，支持 FIFO 和 FILO。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ConcurrentLinkedDeque"><a href="#ConcurrentLinkedDeque" class="headerlink" title="ConcurrentLinkedDeque"></a><strong><code>ConcurrentLinkedDeque</code></strong></h3><p><code>ConcurrentLinkedDeque</code>：线程安全的双端无界非阻塞队列，底层采用双向链表，支持 <code>FIFO</code> 和 <code>FILO</code>。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/JUC-3-3-ArrayBlockingQueue-和-LinkedBlockingQueue/" data-toggle="tooltip" data-placement="top" title="[JUC] 3.3 ArrayBlockingQueue 和 LinkedBlockingQueue">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/JUC-3-1-Java-并发容器/" data-toggle="tooltip" data-placement="top" title="[JUC] 3.1 Java 并发容器">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[JUC] 3.2 Java 并发容器 -- 队列&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/JUC-3-2-Java-并发容器-队列/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Sat Oct 12 2019 15:12:44 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#简介"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#队列"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">队列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Queue"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Queue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Deque"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Deque</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#阻塞队列（BlockingQueue）"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">阻塞队列（BlockingQueue）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ArrayBlockingQueue"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">ArrayBlockingQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#LinkedBlockingQueue"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">LinkedBlockingQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#PriorityBlockingQueue"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">PriorityBlockingQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SynchronousQueue"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">SynchronousQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DelayQueue"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">DelayQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#TransferQueue"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">TransferQueue</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#阻塞双端队列（BlockingDeque）"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">阻塞双端队列（BlockingDeque）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#LinkedBlockingDeque"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">LinkedBlockingDeque</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#非阻塞队列"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">非阻塞队列</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConcurrentLinkedQueue"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">ConcurrentLinkedQueue</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConcurrentLinkedDeque"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">ConcurrentLinkedDeque</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JUC" title="JUC">JUC</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/JUC-3-2-Java-并发容器-队列/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/POI-Alibaba-EasyExcel-Alibaba-EasyExcel/">
+  <title>
+    
+      [POI - Alibaba EasyExcel] Alibaba EasyExcel - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg11.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg11.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg11.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg11.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg11.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#POI" title="POI">POI</a>
+              
+            </div>
+            <h1>[POI - Alibaba EasyExcel] Alibaba EasyExcel</h1>
+            <h2 class="subheading">EasyExcel is a simple, memory-saving open source project for reading and writing Excel based on Java...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-10-22
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">15</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Java 领域解析、生成 Excel 比较有名的框架有 Apache poi、jxl 等。但他们都存在一个严重的问题就是非常的耗内存。如果你的系统并发量不大的话可能还行，但是一旦并发上来后一定会 OOM 或者 JVM 频繁的 full gc。EasyExcel 是阿里巴巴开源的一个 excel 处理框架，以使用简单、节省内存著称。EasyExcel 是一个基于 Java 的简单、省内存的读写 Excel 的开源项目。在尽可能节约内存的情况下支持读写百 M 的 Excel。</p>
+<p><strong>64M 内存1分钟内读取 75M（46W行25列）的 Excel</strong>（当然还有急速模式能更快，但是内存占用会在 100M 多一点）</p>
+<p><img src="1.png" alt="1"></p>
+<p>EasyExcel 能大大减少占用内存的主要原因是在解析 Excel 时没有将文件数据一次性全部加载到内存中，而是从磁盘上一行行读取数据，逐个解析。</p>
+<p>下图是 EasyExcel 和 POI 在解析 Excel 时的对比图。</p>
+<p><img src="2.jpg" alt="2"></p>
+<p>EasyExcel 采用一行一行的解析模式，并将一行的解析结果以观察者的模式通知处理（AnalysisEventListener）。</p>
+<p><img src="3.jpg" alt="3"></p>
+<p>上面简要介绍了 EasyExcel 的特点和原理，关于 EasyExcel 的其他问题可以先参考：</p>
+<p>Github 地址：<a href="https://github.com/alibaba/easyexcel" target="_blank" rel="noopener">https://github.com/alibaba/easyexcel</a></p>
+<p>官方文档：<a href="https://www.yuque.com/easyexcel/doc/easyexcel" target="_blank" rel="noopener">https://www.yuque.com/easyexcel/doc/easyexcel</a></p>
+<p>下面就通过代码来介绍下怎么使用 EasyExcel。</p>
+<h2 id="Maven-依赖"><a href="#Maven-依赖" class="headerlink" title="Maven 依赖"></a>Maven 依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="读-Excel"><a href="#读-Excel" class="headerlink" title="读 Excel"></a>读 Excel</h2><h3 id="数据量小的情况"><a href="#数据量小的情况" class="headerlink" title="数据量小的情况"></a>数据量小的情况</h3><p><strong>Excel 数据</strong></p>
+<p>EasyExcelRead_03.xls 中 <strong>日期标题</strong> 为自定义日期格式。</p>
+<p><img src="4.png" alt="4"></p>
+<p>EasyExcelRead_03.xls 中 <strong>日期标题</strong> 为文本格式。</p>
+<p><img src="5.png" alt="5"></p>
+<p><strong>实体类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConverterDto</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 我自定义 转换器，不管数据库传过来什么 。我给他加上“自定义：”</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ExcelProperty</span>(converter = CustomStringStringConverter<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">    <span class="title">private</span> <span class="title">String</span> <span class="title">string</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这里需要注意：</span></span><br><span class="line"><span class="comment">     * 1. Excel 中的对应日期字段，必须为日期格式时（如果 Excel 中的对应日期字段为文本格式时，并不会转换为 "yyyy年MM月dd日HH时mm分ss秒" 格式）</span></span><br><span class="line"><span class="comment">     * 2. 同时实体类中 date 为 String 类型时</span></span><br><span class="line"><span class="comment">     * 才会转换为 DateTimeFormat 中的 "yyyy年MM月dd日HH时mm分ss秒" 格式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@DateTimeFormat</span>(<span class="string">"yyyy年MM月dd日HH时mm分ss秒"</span>)</span><br><span class="line">    <span class="keyword">private</span> String date;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 我想接收百分比的数字</span></span><br><span class="line"><span class="comment">     * 需要注意：</span></span><br><span class="line"><span class="comment">     * 如果要转换格式为 NumberFormat 中的 "#.##%"，实体类中 doubleData 字段必须为 String 类型时，才会转换。</span></span><br><span class="line"><span class="comment">     * 如果用 Double 接收，是不会转换格式的。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@NumberFormat</span>(<span class="string">"#.##%"</span>)</span><br><span class="line">    <span class="keyword">private</span> Double doubleData;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义转换器</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomStringStringConverter</span> <span class="keyword">implements</span> <span class="title">Converter</span>&lt;<span class="title">String</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Class <span class="title">supportJavaTypeKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> String<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CellDataTypeEnum <span class="title">supportExcelTypeKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> CellDataTypeEnum.STRING;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这里读的时候会调用</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> cellData            NotNull</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contentProperty     Nullable</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> globalConfiguration NotNull</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">convertToJavaData</span><span class="params">(CellData cellData, ExcelContentProperty contentProperty, GlobalConfiguration globalConfiguration)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"自定义："</span> + cellData.getStringValue();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这里是写的时候会调用，不用管</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value               NotNull</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contentProperty     Nullable</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> globalConfiguration NotNull</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CellData <span class="title">convertToExcelData</span><span class="params">(String value, ExcelContentProperty contentProperty, GlobalConfiguration globalConfiguration)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CellData(value);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyExcelTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String READPATH = <span class="string">"/Users/vincent/IDEA_Project/my_project/common/src/test/java/com/vincent/common/exceltest/template/read"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据量小的情况下，最简单的读</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">simpleDoReadSync</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 数据量不是很大的话，直接用下面的方法即可</span></span><br><span class="line">        File xlsFile = Paths.get(READPATH).resolve(<span class="string">"EasyExcelRead_03.xls"</span>).toFile();</span><br><span class="line">        List&lt;ConverterDto&gt; list_03 = EasyExcel.read(xlsFile).head(ConverterDto<span class="class">.<span class="keyword">class</span>).<span class="title">sheet</span>().<span class="title">doReadSync</span>()</span>;</span><br><span class="line">        list_03.forEach(System.out::println);</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        File xlsxFile = Paths.get(READPATH).resolve(<span class="string">"EasyExcelRead_07.xlsx"</span>).toFile();</span><br><span class="line">        List&lt;ConverterDto&gt; list_07 = EasyExcel.read(xlsxFile).head(ConverterDto<span class="class">.<span class="keyword">class</span>).<span class="title">sheet</span>().<span class="title">doReadSync</span>()</span>;</span><br><span class="line">        list_07.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示结果</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">ConverterDto(string=自定义：字符串<span class="number">0</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">20</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">1</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">21</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">2</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">22</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">3</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">23</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">4</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">24</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">5</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">25</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">6</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">26</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">7</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">27</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">8</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">28</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">9</span>, date=<span class="number">2020</span>年<span class="number">10</span>月<span class="number">29</span>日<span class="number">18</span>时<span class="number">29</span>分<span class="number">14</span>秒, doubleData=<span class="number">0.56</span>)</span><br><span class="line"></span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">0</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">12</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">1</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">13</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">2</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">14</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">3</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">15</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">4</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">16</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">5</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">17</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">6</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">18</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">7</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">19</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">8</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">20</span>, doubleData=<span class="number">0.56</span>)</span><br><span class="line">ConverterDto(string=自定义：字符串<span class="number">9</span>, date=<span class="number">2020</span>&gt;<span class="number">10</span>&gt;<span class="number">20</span>  <span class="number">18</span>:<span class="number">44</span>:<span class="number">21</span>, doubleData=<span class="number">0.56</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="数据量大的情况"><a href="#数据量大的情况" class="headerlink" title="数据量大的情况"></a>数据量大的情况</h3><p><strong>Excel 数据</strong></p>
+<p>EasyExcelRead_03.xls 中 <strong>日期标题</strong> 为自定义日期格式。</p>
+<p><img src="4.png" alt="4.1"></p>
+<p><strong>实体类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoReadDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String string;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 这里的时间转换，当为读取 excel 时，时间类为 String 时才会生效，其他类型时 @DateTimeFormat 不会转换。</span></span><br><span class="line"><span class="comment">     *              当为写入 excel 时，@DateTimeFormat 时间转换会生效。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@DateTimeFormat</span>(<span class="string">"yyyy年MM月dd日HH时mm分ss秒"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date date;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 我想接收百分比的数字</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@NumberFormat</span>(<span class="string">"#.##%"</span>)</span><br><span class="line">    <span class="keyword">private</span> String doubleData;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 忽略这个字段</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ExcelIgnore</span></span><br><span class="line">    <span class="keyword">private</span> String ignore;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>监听类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 有个很重要的点 DemoDataListener 不能被 spring 管理，要每次读取 excel 都要 new，然后里面用到 spring 可以构造方法传进去。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoDataListener</span> <span class="keyword">extends</span> <span class="title">AnalysisEventListener</span>&lt;<span class="title">DemoReadDto</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(DemoDataListener<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每隔5条存储数据库，实际使用中可以3000条，然后清理 list ，方便内存回收。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> BATCH_COUNT = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">private</span> List&lt;DemoReadDto&gt; list = <span class="keyword">new</span> ArrayList&lt;DemoReadDto&gt;();</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 假设这个是一个 DAO，当然有业务逻辑这个也可以是一个 service。当然如果不用存储这个对象没用。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> DemoDAO demoDAO;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DemoDataListener</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 这里是 demo，所以随便 new 一个。实际使用如果到了 spring，请使用下面的有参构造函数。</span></span><br><span class="line">        demoDAO = <span class="keyword">new</span> DemoDAO();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 如果使用了 spring，请使用这个构造方法。每次创建 Listener 的时候需要把 spring 管理的类传进来</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> demoDAO</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DemoDataListener</span><span class="params">(DemoDAO demoDAO)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.demoDAO = demoDAO;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这个每一条数据解析都会来调用</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> data    one row value. Is is same as &#123;<span class="doctag">@link</span> AnalysisContext#readRowHolder()&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">(DemoReadDto data, AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        LOGGER.info(<span class="string">"解析到一条数据:&#123;&#125;"</span>, JSON.toJSONString(data));</span><br><span class="line">        list.add(data);</span><br><span class="line">        <span class="comment">// 达到 BATCH_COUNT 了，需要去存储一次数据库，防止数据几万条数据在内存，容易 OOM。</span></span><br><span class="line">        <span class="keyword">if</span> (list.size() &gt;= BATCH_COUNT) &#123;</span><br><span class="line">            saveData();</span><br><span class="line">            <span class="comment">// 存储完成清理 list</span></span><br><span class="line">            list.clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 所有数据解析完成了 都会来调用</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> context</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doAfterAllAnalysed</span><span class="params">(AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 这里也要保存数据，确保最后遗留的数据也存储到数据库。</span></span><br><span class="line">        saveData();</span><br><span class="line">        LOGGER.info(<span class="string">"所有数据解析完成！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加上存储数据库</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">saveData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LOGGER.info(<span class="string">"&#123;&#125;条数据，开始存储数据库！"</span>, list.size());</span><br><span class="line">        demoDAO.save(list);</span><br><span class="line">        LOGGER.info(<span class="string">"存储数据库成功！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>持久层</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 假设这个是你的 DAO 存储。当然还要这个类让 spring 管理，当然你不用需要存储，也不需要这个类。</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoDAO</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(List&lt;DemoReadDto&gt; list)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 如果是 mybatis，尽量别直接调用多次 insert，自己写一个mapper里面新增一个方法 batchInsert，所有数据一次性插入</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyExcelTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String READPATH = <span class="string">"/Users/vincent/IDEA_Project/my_project/common/src/test/java/com/vincent/common/exceltest/template/read"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据量大的情况下，最简单的读</span></span><br><span class="line"><span class="comment">     * 1. 创建 excel 对应的实体对象 参照&#123;<span class="doctag">@link</span> DemoDto&#125;</span></span><br><span class="line"><span class="comment">     * 2. 由于默认一行行的读取 excel，所以需要创建 excel 一行一行的回调监听器，参照&#123;<span class="doctag">@link</span> DemoDataListener&#125;</span></span><br><span class="line"><span class="comment">     * 3. 直接读即可</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">simpleRead</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 有个很重要的点 DemoDataListener 不能被 spring 管理，要每次读取 excel 都要 new，然后里面用到 spring 可以构造方法传进去</span></span><br><span class="line">        <span class="comment">// 写法1：</span></span><br><span class="line">        String fileName = Paths.get(READPATH).resolve(<span class="string">"EasyExcelRead_03.xls"</span>).toString();</span><br><span class="line">        <span class="comment">// 这里 需要指定读用哪个 class 去读，然后读取第一个 sheet 文件流会自动关闭</span></span><br><span class="line">        EasyExcel.read(fileName, DemoDto<span class="class">.<span class="keyword">class</span>, <span class="title">new</span> <span class="title">DemoDataListener</span>()).<span class="title">sheet</span>().<span class="title">doRead</span>()</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        // 写法2：</span></span><br><span class="line"><span class="comment">//        fileName = READPATH + "EasyExcel.xlsx";</span></span><br><span class="line"><span class="comment">//        ExcelReader excelReader = null;</span></span><br><span class="line"><span class="comment">//        try &#123;</span></span><br><span class="line"><span class="comment">//            excelReader = EasyExcel.read(fileName, DemoData.class, new DemoDataListener()).build();</span></span><br><span class="line"><span class="comment">//            ReadSheet readSheet = EasyExcel.readSheet(0).build();</span></span><br><span class="line"><span class="comment">//            excelReader.read(readSheet);</span></span><br><span class="line"><span class="comment">//        &#125; finally &#123;</span></span><br><span class="line"><span class="comment">//            if (excelReader != null) &#123;</span></span><br><span class="line"><span class="comment">//                // 这里千万别忘记关闭，读的时候会创建临时文件，到时磁盘会崩的</span></span><br><span class="line"><span class="comment">//                excelReader.finish();</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示结果</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.040</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603189754000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串0"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.040</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603276154000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串1"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.040</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603362554000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串2"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603448954000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串3"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603535354000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串4"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - <span class="number">5</span>条数据，开始存储数据库！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 存储数据库成功！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603621754000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串5"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.041</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603708154000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串6"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.042</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603794554000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串7"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.042</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603880954000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串8"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.042</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 解析到一条数据:&#123;<span class="string">"date"</span>:<span class="number">1603967354000</span>,<span class="string">"doubleData"</span>:<span class="string">"56%"</span>,<span class="string">"string"</span>:<span class="string">"字符串9"</span>&#125;</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.042</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - <span class="number">5</span>条数据，开始存储数据库！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.042</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 存储数据库成功！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.043</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - <span class="number">0</span>条数据，开始存储数据库！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.043</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 存储数据库成功！</span><br><span class="line"><span class="number">13</span>:<span class="number">38</span>:<span class="number">43.043</span> [main] INFO com.vincent.common.exceltest.easyexcel.DemoDataListener - 所有数据解析完成！</span><br></pre></td></tr></table></figure>
+
+<h2 id="写-Excel"><a href="#写-Excel" class="headerlink" title="写 Excel"></a>写 Excel</h2><p><strong>实体类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoWriteDto</span> </span>&#123;</span><br><span class="line">    <span class="meta">@ExcelProperty</span>(<span class="string">"字符串标题"</span>)</span><br><span class="line">    <span class="keyword">private</span> String string;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty</span>(<span class="string">"日期标题"</span>)</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 这里的时间转换，当为读取 excel 时，时间类为 String 时才会生效，其他类型时 @DateTimeFormat 不会转换。</span></span><br><span class="line"><span class="comment">     *              当为写入 excel 时，@DateTimeFormat 时间转换会生效。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@DateTimeFormat</span>(<span class="string">"yyyy年MM月dd日HH时mm分ss秒"</span>)</span><br><span class="line">    <span class="keyword">private</span> Date date;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty</span>(<span class="string">"数字标题"</span>)</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 百分比的数字</span></span><br><span class="line"><span class="comment">     * 当为写入 excel 时，@NumberFormat 数字转换生效。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@NumberFormat</span>(<span class="string">"#.##%"</span>)</span><br><span class="line">    <span class="keyword">private</span> Double doubleData;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 忽略这个字段</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ExcelIgnore</span></span><br><span class="line">    <span class="keyword">private</span> String ignore;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyExcelTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String WRITEPATH = <span class="string">"/Users/vincent/IDEA_Project/my_project/common/src/test/java/com/vincent/common/exceltest/template/write"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;DemoWriteDto&gt; <span class="title">data</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;DemoWriteDto&gt; list = Lists.newArrayList();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            DemoWriteDto data = <span class="keyword">new</span> DemoWriteDto();</span><br><span class="line">            data.setString(<span class="string">"字符串"</span> + i);</span><br><span class="line">            data.setDate(<span class="keyword">new</span> Date());</span><br><span class="line">            data.setDoubleData(<span class="number">0.56</span>);</span><br><span class="line">            list.add(data);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 最简单的写</span></span><br><span class="line"><span class="comment">     * 1. 创建 excel 对应的实体对象 参照&#123;<span class="doctag">@link</span> DemoWriteDto&#125;</span></span><br><span class="line"><span class="comment">     * 2. 直接写即可</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">simpleWrite</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 写法1</span></span><br><span class="line">        <span class="comment">// 这里 需要指定写用哪个 class 去写，然后写到第一个 sheet，名字为模板，然后文件流会自动关闭</span></span><br><span class="line">        <span class="comment">// 官方文档中说 03.xls 版本的 excel 需要设置 excelType()，但是自测下来并不需要。</span></span><br><span class="line">        String fileName_03 = Paths.get(WRITEPATH).resolve(<span class="string">"EasyExcelWrite_03.xls"</span>).toString();</span><br><span class="line">        EasyExcel.write(fileName_03, DemoWriteDto.class).sheet("模板").doWrite(data());</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        String fileName_07 = Paths.get(WRITEPATH).resolve(<span class="string">"EasyExcelWrite_07.xlsx"</span>).toString();</span><br><span class="line">        EasyExcel.write(fileName_07, DemoWriteDto.class).sheet("模板").doWrite(data());</span><br><span class="line"></span><br><span class="line"><span class="comment">//        // 写法2</span></span><br><span class="line"><span class="comment">//        fileName = PATH + "simpleWrite" + System.currentTimeMillis() + ".xlsx";</span></span><br><span class="line"><span class="comment">//        // 这里需要指定写用哪个 class 去写</span></span><br><span class="line"><span class="comment">//        ExcelWriter excelWriter = null;</span></span><br><span class="line"><span class="comment">//        try &#123;</span></span><br><span class="line"><span class="comment">//            excelWriter = EasyExcel.write(fileName, DemoWriteDto.class).build();</span></span><br><span class="line"><span class="comment">//            WriteSheet writeSheet = EasyExcel.writerSheet("模板").build();</span></span><br><span class="line"><span class="comment">//            excelWriter.write(data(), writeSheet);</span></span><br><span class="line"><span class="comment">//        &#125; finally &#123;</span></span><br><span class="line"><span class="comment">//            // 千万别忘记 finish 会帮忙关闭流</span></span><br><span class="line"><span class="comment">//            if (excelWriter != null) &#123;</span></span><br><span class="line"><span class="comment">//                excelWriter.finish();</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>导出后的 Excel 数据</strong></p>
+<p>导出的数据都是一样，区别在于一个03版的 Excel、一个07版的 Excel。<br><img src="6.png" alt="6"></p>
+<h2 id="web-上传、下载"><a href="#web-上传、下载" class="headerlink" title="web 上传、下载"></a>web 上传、下载</h2><p><strong>测试类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 文件下载（失败了会返回一个有部分数据的 Excel）</span></span><br><span class="line"><span class="comment"> * 1. 创建 excel 对应的实体对象 参照&#123;<span class="doctag">@link</span> DownloadData&#125;</span></span><br><span class="line"><span class="comment"> * 2. 设置返回的 参数</span></span><br><span class="line"><span class="comment"> * 3. 直接写，这里注意，finish 的时候会自动关闭 OutputStream,当然你外面再关闭流问题不大</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@GetMapping</span>(<span class="string">"download"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">download</span><span class="params">(HttpServletResponse response)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">// 这里注意 有同学反应使用swagger 会导致各种问题，请直接用浏览器或者用postman</span></span><br><span class="line">    response.setContentType(<span class="string">"application/vnd.ms-excel"</span>);</span><br><span class="line">    response.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">    <span class="comment">// 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系</span></span><br><span class="line">    String fileName = URLEncoder.encode(<span class="string">"测试"</span>, <span class="string">"UTF-8"</span>);</span><br><span class="line">    response.setHeader(<span class="string">"Content-disposition"</span>, <span class="string">"attachment;filename="</span> + fileName + <span class="string">".xlsx"</span>);</span><br><span class="line">    EasyExcel.write(response.getOutputStream(), DownloadData.class).sheet("模板").doWrite(data());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 文件上传</span></span><br><span class="line"><span class="comment"> * 1. 创建 excel 对应的实体对象 参照&#123;<span class="doctag">@link</span> UploadData&#125;</span></span><br><span class="line"><span class="comment"> * 2. 由于默认一行行的读取 excel，所以需要创建excel一行一行的回调监听器，参照&#123;<span class="doctag">@link</span> UploadDataListener&#125;</span></span><br><span class="line"><span class="comment"> * 3. 直接读即可</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"upload"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload</span><span class="params">(MultipartFile file)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    EasyExcel.read(file.getInputStream(), UploadData<span class="class">.<span class="keyword">class</span>, <span class="title">new</span> <span class="title">UploadDataListener</span>(<span class="title">uploadDAO</span>)).<span class="title">sheet</span>().<span class="title">doRead</span>()</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Mac-Mac-刷新-DNS-缓存/" data-toggle="tooltip" data-placement="top" title="[Mac] Mac 刷新 DNS 缓存">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/POI-Apache-POI-Apache-POI/" data-toggle="tooltip" data-placement="top" title="[POI - Apache POI] Apache POI">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[POI - Alibaba EasyExcel] Alibaba EasyExcel&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/POI-Alibaba-EasyExcel-Alibaba-EasyExcel/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Oct 22 2020 14:12:21 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#简介"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Maven-依赖"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Maven 依赖</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#读-Excel"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">读 Excel</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#数据量小的情况"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">数据量小的情况</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#数据量大的情况"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">数据量大的情况</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写-Excel"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">写 Excel</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#web-上传、下载"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">web 上传、下载</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#POI" title="POI">POI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/POI-Alibaba-EasyExcel-Alibaba-EasyExcel/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

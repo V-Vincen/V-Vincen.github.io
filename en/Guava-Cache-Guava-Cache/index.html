@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Guava-Cache-Guava-Cache/">
+  <title>
+    
+      [Guava Cache] Guava Cache - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/guava/guava_bg.png');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/guava/guava_bg.png');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/guava/guava_bg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/guava/guava_bg.png');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/guava/guava_bg.png'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Guava Cache" title="Guava Cache">Guava Cache</a>
+              
+            </div>
+            <h1>[Guava Cache] Guava Cache</h1>
+            <h2 class="subheading">Guava provides a very powerful memory based caching mechanism by an interface LoadingCache&lt;K,V&gt;...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-04-30
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">17</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.8k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p><code>Guava Cache</code> 是在内存中缓存数据，相比较于数据库或 <code>redis</code> 存储，访问内存中的数据会更加高效。<code>Guava</code> 官网介绍，下面的这几种情况可以考虑使用 <code>Guava Cache</code>：</p>
+<ul>
+<li><p>愿意消耗一些内存空间来提升速度。</p>
+</li>
+<li><p>预料到某些键会被多次查询。</p>
+</li>
+<li><p>缓存中存放的数据总量不会超出内存容量。</p>
+</li>
+</ul>
+<p>所以，可以将程序频繁用到的少量数据存储到 <code>Guava Cache</code> 中，以改善程序性能。下面对 <code>Guava Cache</code> 的用法进行详细的介绍。</p>
+<h2 id="构建缓存对象"><a href="#构建缓存对象" class="headerlink" title="构建缓存对象"></a>构建缓存对象</h2><p>接口 <code>Cache</code> 代表一块缓存，它有如下方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Cache</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function">V <span class="title">get</span><span class="params">(K key, Callable&lt;? extends V&gt; valueLoader)</span> <span class="keyword">throws</span> ExecutionException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">ImmutableMap&lt;K, V&gt; <span class="title">getAllPresent</span><span class="params">(Iterable&lt;?&gt; keys)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(K key, V value)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">putAll</span><span class="params">(Map&lt;? extends K, ? extends V&gt; m)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">invalidate</span><span class="params">(Object key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">invalidateAll</span><span class="params">(Iterable&lt;?&gt; keys)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">invalidateAll</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">long</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">CacheStats <span class="title">stats</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">ConcurrentMap&lt;K, V&gt; <span class="title">asMap</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">cleanUp</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以通过 <code>CacheBuilder</code> 类构建一个缓存对象，<code>CacheBuilder</code> 类采用 <code>builder</code> 设计模式，它的每个方法都返回 <code>CacheBuilder</code> 本身，直到 <code>build</code> 方法被调用。构建一个缓存对象代码如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder().build();</span><br><span class="line">        cache.put(<span class="string">"word"</span>,<span class="string">"Hello Guava Cache"</span>);</span><br><span class="line">        System.out.println(cache.getIfPresent(<span class="string">"word"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码通过 <code>CacheBuilder.newBuilder().build()</code> 这句代码创建了一个 <code>Cache</code> 缓存对象，并在缓存对象中存储了 <code>key</code> 为 <strong>word</strong>，<code>value</code> 为 <strong>Hello Guava Cache</strong>的一条记录。可以看到 <code>Cache</code> 非常类似于 JDK 中的 <code>Map</code>，但是相比于 <code>Map</code>，<code>Guava Cache</code> 提供了很多更强大的功能。</p>
+<h3 id="maximumSize"><a href="#maximumSize" class="headerlink" title="maximumSize"></a><code>maximumSize</code></h3><p><code>Guava Cache</code> 可以在构建缓存对象时指定缓存 <code>maximumSize</code> 所能够存储的最大记录数量。当 <code>Cache</code> 中的记录数量达到最大值后再调用 <code>put</code> 方法向其中添加对象，<code>Guava</code> 会先从当前缓存的对象记录中选择一条删除掉，腾出空间后再将新的对象存储到 <code>Cache</code> 中。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">2</span>)</span><br><span class="line">                .build();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        cache.put(<span class="string">"key2"</span>,<span class="string">"value2"</span>);</span><br><span class="line">        cache.put(<span class="string">"key3"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        System.out.println(<span class="string">"第一个值："</span> + cache.getIfPresent(<span class="string">"key1"</span>));</span><br><span class="line">        System.out.println(<span class="string">"第二个值："</span> + cache.getIfPresent(<span class="string">"key2"</span>));</span><br><span class="line">        System.out.println(<span class="string">"第三个值："</span> + cache.getIfPresent(<span class="string">"key3"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一个值：null</span><br><span class="line">第二个值：<span class="keyword">value</span><span class="number">2</span></span><br><span class="line">第三个值：<span class="keyword">value</span><span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="expireAfterAccess、expireAfterWrite"><a href="#expireAfterAccess、expireAfterWrite" class="headerlink" title="expireAfterAccess、expireAfterWrite"></a><code>expireAfterAccess</code>、<code>expireAfterWrite</code></h3><p>在构建 <code>Cache</code> 对象时，可以通过 <code>CacheBuilder</code> 类的 <code>expireAfterAccess</code> 和 <code>expireAfterWrite</code> 两个方法为缓存中的对象指定过期时间，过期的对象将会被缓存自动删除。其中，<code>expireAfterWrite</code> 方法指定对象被写入到缓存后多久过期，<code>expireAfterAccess</code> 指定对象多久没有被访问后过期。</p>
+<p><strong>eg：</strong> <code>expireAfterWrite</code> 方法指定 <code>put</code> 到 <code>Cache</code> 中的对象在3秒后会过期。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">2</span>)</span><br><span class="line">                .expireAfterWrite(<span class="number">3</span>,TimeUnit.SECONDS)</span><br><span class="line">                .build();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        <span class="keyword">int</span> time = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"第"</span> + time++ + <span class="string">"次取到key1的值为："</span> + cache.getIfPresent(<span class="string">"key1"</span>));</span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>程序执行结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">第<span class="number">1</span>次取到key1的值为：value1</span><br><span class="line">第<span class="number">2</span>次取到key1的值为：value1</span><br><span class="line">第<span class="number">3</span>次取到key1的值为：value1</span><br><span class="line">第<span class="number">4</span>次取到key1的值为：<span class="literal">null</span></span><br><span class="line">第<span class="number">5</span>次取到key1的值为：<span class="literal">null</span></span><br><span class="line">第<span class="number">6</span>次取到key1的值为：<span class="literal">null</span></span><br><span class="line">第<span class="number">7</span>次取到key1的值为：<span class="literal">null</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>eg：</strong> <code>expireAfterAccess</code> 方法指定超过3秒没有被访问就会过期。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">2</span>)</span><br><span class="line">                .expireAfterAccess(<span class="number">3</span>,TimeUnit.SECONDS)</span><br><span class="line">                .build();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        <span class="keyword">int</span> time = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">            Thread.sleep(time*<span class="number">1000</span>);</span><br><span class="line">            System.out.println(<span class="string">"睡眠"</span> + time++ + <span class="string">"秒后取到key1的值为："</span> + cache.getIfPresent(<span class="string">"key1"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">睡眠<span class="number">1</span>秒后取到key1的值为：value1</span><br><span class="line">睡眠<span class="number">2</span>秒后取到key1的值为：value1</span><br><span class="line">睡眠<span class="number">3</span>秒后取到key1的值为：<span class="literal">null</span></span><br><span class="line">睡眠<span class="number">4</span>秒后取到key1的值为：<span class="literal">null</span></span><br><span class="line">睡眠<span class="number">5</span>秒后取到key1的值为：<span class="literal">null</span></span><br><span class="line">睡眠<span class="number">6</span>秒后取到key1的值为：<span class="literal">null</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：</strong> 可同时用 <code>expireAfterAccess</code> 和 <code>expireAfterWrite</code> 方法指定过期时间，这时只要对象满足两者中的一个条件就会被自动过期删除。</p>
+<h3 id="weakKeys、weakValues"><a href="#weakKeys、weakValues" class="headerlink" title="weakKeys、weakValues"></a><code>weakKeys</code>、<code>weakValues</code></h3><p>可以通过<code>weakKeys</code>、<code>weakValues</code>方法指定 <code>Cache</code> 只保存对缓存记录 <code>key</code> 和 <code>value</code> 的弱引用。这样当没有其他强引用指向 <code>key</code> 和 <code>value</code> 时，<code>key</code> 和 <code>value</code> 对象就会被垃圾回收器回收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Cache&lt;String,Object&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">2</span>)</span><br><span class="line">                .weakValues()</span><br><span class="line">                .build();</span><br><span class="line">        Object value = <span class="keyword">new</span> Object();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,value);</span><br><span class="line"></span><br><span class="line">        value = <span class="keyword">new</span> Object();<span class="comment">//原对象不再有强引用</span></span><br><span class="line">        System.gc();</span><br><span class="line">        System.out.println(cache.getIfPresent(<span class="string">"key1"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码的打印结果是 <code>null</code>。构建 <code>Cache</code> 时通过 <code>weakValues</code> 方法指定 <code>Cache</code> 只保存记录值的一个弱引用。当给 <code>value</code> 引用赋值一个新的对象之后，就不再有任何一个强引用指向原对象。<code>System.gc()</code> 触发垃圾回收后，原对象就被清除了。</p>
+<h3 id="removalListener"><a href="#removalListener" class="headerlink" title="removalListener"></a><code>removalListener</code></h3><p>可以为 <code>Cache</code> 对象添加一个移除监听器，这样当有记录被删除时可以感知到这个事件。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        RemovalListener&lt;String, String&gt; listener = <span class="keyword">new</span> RemovalListener&lt;String, String&gt;() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRemoval</span><span class="params">(RemovalNotification&lt;String, String&gt; notification)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"["</span> + notification.getKey() + <span class="string">":"</span> + notification.getValue() + <span class="string">"] is removed!"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">3</span>)</span><br><span class="line">                .removalListener(listener)</span><br><span class="line">                .build();</span><br><span class="line">        Object value = <span class="keyword">new</span> Object();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        cache.put(<span class="string">"key2"</span>,<span class="string">"value2"</span>);</span><br><span class="line">        cache.put(<span class="string">"key3"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key4"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key5"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key6"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key7"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key8"</span>,<span class="string">"value3"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[key<span class="number">1</span>:<span class="keyword">value</span><span class="number">1</span>] <span class="keyword">is</span> removed!</span><br><span class="line">[key<span class="number">2</span>:<span class="keyword">value</span><span class="number">2</span>] <span class="keyword">is</span> removed!</span><br><span class="line">[key<span class="number">3</span>:<span class="keyword">value</span><span class="number">3</span>] <span class="keyword">is</span> removed!</span><br><span class="line">[key<span class="number">4</span>:<span class="keyword">value</span><span class="number">4</span>] <span class="keyword">is</span> removed!</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="invalidate、invalidateAll"><a href="#invalidate、invalidateAll" class="headerlink" title="invalidate、invalidateAll"></a><code>invalidate</code>、<code>invalidateAll</code></h3><p>可以调用 <code>Cache</code> 的 <code>invalidateAll</code>、<code>invalidate</code> 方法显示删除 <code>Cache</code> 中的记录。<code>invalidate</code> 方法一次只能删除 <code>Cache</code> 中一个记录，接收的参数是要删除记录的 <code>key</code>。<code>invalidateAll</code> 方法可以批量删除 <code>Cache</code> 中的记录，当没有传任何参数时，<code>invalidateAll</code> 方法将清除 <code>Cache</code> 中的全部记录。<code>invalidateAll</code> 也可以接收一个 <code>Iterable</code> 类型的参数，参数中包含要删除记录的所有 <code>key</code> 值。</p>
+<p><strong>eg：</strong> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder().build();</span><br><span class="line">        Object value = <span class="keyword">new</span> Object();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        cache.put(<span class="string">"key2"</span>,<span class="string">"value2"</span>);</span><br><span class="line">        cache.put(<span class="string">"key3"</span>,<span class="string">"value3"</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        list.add(<span class="string">"key1"</span>);</span><br><span class="line">        list.add(<span class="string">"key2"</span>);</span><br><span class="line"></span><br><span class="line">        cache.invalidateAll(list);<span class="comment">//批量清除list中全部key对应的记录</span></span><br><span class="line">        System.out.println(cache.getIfPresent(<span class="string">"key1"</span>));</span><br><span class="line">        System.out.println(cache.getIfPresent(<span class="string">"key2"</span>));</span><br><span class="line">        System.out.println(cache.getIfPresent(<span class="string">"key3"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码中构造了一个集合 <code>list</code> 用于保存要删除记录的 <code>key</code> 值，然后调用 <code>invalidateAll</code> 方法批量删除 <code>key1</code> 和 <code>key2</code> 对应的记录，只剩下 <code>key3</code> 对应的记录没有被删除。</p>
+<h3 id="get-K-key-Callable-lt-extends-V-gt-valueLoader"><a href="#get-K-key-Callable-lt-extends-V-gt-valueLoader" class="headerlink" title="get(K key, Callable&lt;? extends V&gt; valueLoader)"></a><code>get(K key, Callable&lt;? extends V&gt; valueLoader)</code></h3><p><code>Cache</code> 的 <code>get</code> 方法有两个参数，第一个参数是要从 <code>Cache</code> 中获取记录的key，第二个记录是一个 <code>Callable</code> 对象。当缓存中已经存在 <code>key</code> 对应的记录时，<code>get</code> 方法直接返回 <code>key</code> 对应的记录。如果缓存中不包含 <code>key</code> 对应的记录，<code>Guava</code> 会启动一个线程执行 <code>Callable</code> 对象中的 <code>call</code> 方法，<code>call</code> 方法的返回值会作为 <code>key</code> 对应的值被存储到缓存中，并且被 <code>get</code> 方法返回。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">            .maximumSize(<span class="number">3</span>)</span><br><span class="line">            .build();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"thread1"</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    String value = cache.get(<span class="string">"key"</span>, <span class="keyword">new</span> Callable&lt;String&gt;() &#123;</span><br><span class="line">                        <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                            System.out.println(<span class="string">"load1"</span>); <span class="comment">//加载数据线程执行标志</span></span><br><span class="line">                            Thread.sleep(<span class="number">1000</span>); <span class="comment">//模拟加载时间</span></span><br><span class="line">                            <span class="keyword">return</span> <span class="string">"auto load by Callable"</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line">                    System.out.println(<span class="string">"thread1 "</span> + value);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"thread2"</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    String value = cache.get(<span class="string">"key"</span>, <span class="keyword">new</span> Callable&lt;String&gt;() &#123;</span><br><span class="line">                        <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                            System.out.println(<span class="string">"load2"</span>); <span class="comment">//加载数据线程执行标志</span></span><br><span class="line">                            Thread.sleep(<span class="number">1000</span>); <span class="comment">//模拟加载时间</span></span><br><span class="line">                            <span class="keyword">return</span> <span class="string">"auto load by Callable"</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line">                    System.out.println(<span class="string">"thread2 "</span> + value);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码中有两个线程共享同一个 <code>Cache</code> 对象，两个线程同时调用 <code>get</code> 方法获取同一个 <code>key</code> 对应的记录。由于 <code>key</code> 对应的记录不存在，所以两个线程都在 <code>get</code> 方法处阻塞。此处在 <code>call</code> 方法中调用 <code>Thread.sleep(1000)</code> 模拟程序从外存加载数据的时间消耗。</p>
+<p>程序执行结果：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">thread1</span><br><span class="line">thread2</span><br><span class="line">load1</span><br><span class="line">thread2 auto <span class="keyword">load</span> <span class="keyword">by</span> Callable</span><br><span class="line">thread1 <span class="keyword">auto</span> <span class="keyword">load</span> <span class="keyword">by</span> Callable</span><br></pre></td></tr></table></figure>
+
+<p>从结果中可以看出，虽然是两个线程同时调用 <code>get</code> 方法，但只有一个 <code>get</code> 方法中的 <code>Callable</code> 会被执行（没有打印出 load2）。<code>Guava</code> 可以保证当有多个线程同时访问 <code>Cache</code> 中的一个 <code>key</code> 时，如果 <code>key</code> 对应的记录不存在，<code>Guava</code> 只会启动一个线程执行 <code>get</code> 方法中 <code>Callable</code> 参数对应的任务加载数据存到缓存。当加载完数据后，任何线程中的 <code>get</code> 方法都会获取到 <code>key</code> 对应的值。</p>
+<h3 id="recordStats"><a href="#recordStats" class="headerlink" title="recordStats"></a><code>recordStats</code></h3><p>可以对 <code>Cache</code> 的命中率、加载数据时间等信息进行统计。在构建 <code>Cache</code> 对象时，可以通过 <code>CacheBuilder</code> 的 <code>recordStats</code> 方法开启统计信息的开关。开关开启后 <code>Cache</code> 会自动对缓存的各种操作进行统计，调用 <code>Cache</code> 的 <code>stats</code> 方法可以查看统计后的信息。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudyGuavaCache</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Cache&lt;String,String&gt; cache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">3</span>)</span><br><span class="line">                .recordStats() <span class="comment">//开启统计信息开关</span></span><br><span class="line">                .build();</span><br><span class="line">        cache.put(<span class="string">"key1"</span>,<span class="string">"value1"</span>);</span><br><span class="line">        cache.put(<span class="string">"key2"</span>,<span class="string">"value2"</span>);</span><br><span class="line">        cache.put(<span class="string">"key3"</span>,<span class="string">"value3"</span>);</span><br><span class="line">        cache.put(<span class="string">"key4"</span>,<span class="string">"value4"</span>);</span><br><span class="line"></span><br><span class="line">        cache.getIfPresent(<span class="string">"key1"</span>);</span><br><span class="line">        cache.getIfPresent(<span class="string">"key2"</span>);</span><br><span class="line">        cache.getIfPresent(<span class="string">"key3"</span>);</span><br><span class="line">        cache.getIfPresent(<span class="string">"key4"</span>);</span><br><span class="line">        cache.getIfPresent(<span class="string">"key5"</span>);</span><br><span class="line">        cache.getIfPresent(<span class="string">"key6"</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(cache.stats()); <span class="comment">//获取统计信息</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CacheStats&#123;<span class="attribute">hitCount</span>=3, <span class="attribute">missCount</span>=3, <span class="attribute">loadSuccessCount</span>=0, <span class="attribute">loadExceptionCount</span>=0, <span class="attribute">totalLoadTime</span>=0, <span class="attribute">evictionCount</span>=1&#125;</span><br></pre></td></tr></table></figure>
+<p>这些统计信息对于调整缓存设置是至关重要的，在性能要求高的应用中应该密切关注这些数据。</p>
+<h2 id="LoadingCache"><a href="#LoadingCache" class="headerlink" title="LoadingCache"></a><code>LoadingCache</code></h2><p><code>LoadingCache</code> 是 <code>Cache</code> 的子接口，相比较于 <code>Cache</code>，当从 <code>LoadingCache</code> 中读取一个指定 <code>key</code> 的记录时，如果该记录不存在，则 <code>LoadingCache</code> 可以自动执行加载数据到缓存的操作。<code>LoadingCache</code> 接口的定义如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">LoadingCache</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; <span class="keyword">extends</span> <span class="title">Cache</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt;, <span class="title">Function</span>&lt;<span class="title">K</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">V <span class="title">get</span><span class="params">(K key)</span> <span class="keyword">throws</span> ExecutionException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">V <span class="title">getUnchecked</span><span class="params">(K key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">ImmutableMap&lt;K, V&gt; <span class="title">getAll</span><span class="params">(Iterable&lt;? extends K&gt; keys)</span> <span class="keyword">throws</span> ExecutionException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">V <span class="title">apply</span><span class="params">(K key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">refresh</span><span class="params">(K key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function">ConcurrentMap&lt;K, V&gt; <span class="title">asMap</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与构建 <code>Cache</code> 类型的对象类似，<code>LoadingCache</code> 类型的对象也是通过 <code>CacheBuilder</code> 进行构建。不同的是，在调用 <code>CacheBuilder的build</code> 方法时，必须传递一个 <code>CacheLoader</code> 类型的参数，<code>CacheLoader</code> 的 <code>load</code> 方法需要我们提供实现。当调用 <code>LoadingCache</code> 的 <code>get</code> 方法时，如果缓存不存在对应 <code>key</code> 的记录，则 <code>CacheLoader</code> 中的 <code>load</code> 方法会被自动调用从外存加载数据，<code>load</code> 方法的返回值会作为 <code>key</code> 对应的 <code>value</code> 存储到 <code>LoadingCache</code> 中，并从 <code>get</code> 方法返回。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class StudyGuavaCache &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        CacheLoader&lt;<span class="keyword">String</span>, <span class="keyword">String</span>&gt; loader = <span class="keyword">new</span> CacheLoader&lt;<span class="keyword">String</span>, <span class="keyword">String</span>&gt; () &#123;</span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">String</span> load(<span class="keyword">String</span> <span class="built_in">key</span>) <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>); <span class="comment">//休眠1s，模拟加载数据</span></span><br><span class="line">                System.out.<span class="built_in">println</span>(<span class="built_in">key</span> + <span class="string">" is loaded from a cacheLoader!"</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">key</span> + <span class="string">"'s value"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        LoadingCache&lt;<span class="keyword">String</span>,<span class="keyword">String</span>&gt; loadingCache = CacheBuilder.newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">3</span>)</span><br><span class="line">                .build(loader);<span class="comment">//在构建时指定自动加载器</span></span><br><span class="line"></span><br><span class="line">        loadingCache.<span class="built_in">get</span>(<span class="string">"key1"</span>);</span><br><span class="line">        loadingCache.<span class="built_in">get</span>(<span class="string">"key2"</span>);</span><br><span class="line">        loadingCache.<span class="built_in">get</span>(<span class="string">"key3"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">key1 <span class="keyword">is</span> loaded <span class="keyword">from</span> a cacheLoader!</span><br><span class="line">key2 <span class="keyword">is</span> loaded <span class="keyword">from</span> a cacheLoader!</span><br><span class="line">key3 <span class="keyword">is</span> loaded <span class="keyword">from</span> a cacheLoader!</span><br></pre></td></tr></table></figure>
+
+<h2 id="场景案例"><a href="#场景案例" class="headerlink" title="场景案例"></a>场景案例</h2><p><strong>调取第三方服务的 Token 缓存到内存</strong></p>
+<h3 id="Guava-Cache"><a href="#Guava-Cache" class="headerlink" title="Guava Cache"></a>Guava Cache</h3><p><code>expiresIn</code> 为 token 有效期。第一次获取的 token 的时间 + <code>expiresIn</code> = 最终有限期的时间；在第二次获取 token 时，先要比较此时的时间是否大于第一次的最终有限期的时间，如果大于说明 token 过期，重新获取；反之直接从 <code>Cache</code> 缓存中获取。</p>
+<p><strong>eg：</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- guava --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>28.2-jre<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TOKEN = <span class="string">"token"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SYS_CODE = <span class="string">"xxx"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SECRET_KEY = <span class="string">"xxxxxxxxxxxxxxxxxxxxxxxx"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TOKEN_URL = <span class="string">"https://get.token.com.cn/xx/xxx/v1/oauth"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Cache&lt;String, List&lt;String&gt;&gt; build = CacheBuilder</span><br><span class="line">            .newBuilder()</span><br><span class="line">            .maximumSize(<span class="number">1</span>)</span><br><span class="line">            .removalListener(</span><br><span class="line">                    (RemovalListener&lt;String, List&lt;String&gt;&gt;) notification -&gt; &#123;</span><br><span class="line">                        String key = notification.getKey();</span><br><span class="line">                        List&lt;String&gt; value = notification.getValue();</span><br><span class="line">                        <span class="keyword">if</span> (CollectionUtils.isNotEmpty(value)) &#123;</span><br><span class="line">                            log.debug(<span class="string">"删除旧的 token：&#123;&#125; ......"</span>, value);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">            )</span><br><span class="line">            .build();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            List&lt;String&gt; list;</span><br><span class="line">            list = build.get(TOKEN, () -&gt; getAccessToken());</span><br><span class="line"></span><br><span class="line">            <span class="comment">//模拟 token 过期</span></span><br><span class="line"><span class="comment">//            SECONDS.sleep(2);</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (CollectionUtils.isNotEmpty(list)) &#123;</span><br><span class="line">                Long expiresTime = Long.parseLong(list.get(<span class="number">0</span>));</span><br><span class="line">                Long currentTimeMillis = System.currentTimeMillis();</span><br><span class="line">                <span class="keyword">if</span> (expiresTime &lt;= currentTimeMillis) &#123;</span><br><span class="line">                    log.debug(<span class="string">"token 过期 ......"</span>);</span><br><span class="line">                    build.invalidate(TOKEN);</span><br><span class="line">                    list = build.get(TOKEN, () -&gt; getAccessToken());</span><br><span class="line"><span class="comment">//                    build.put(TOKEN, getAccessToken());</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//                    log.debug("从 Cache 中，获取缓存的 token ......");</span></span><br><span class="line"><span class="comment">//                    list = build.get(TOKEN, () -&gt; getAccessToken());</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                list = build.get(TOKEN, () -&gt; getAccessToken());</span><br><span class="line">            &#125;</span><br><span class="line">            log.debug(<span class="string">"最终获取的 token：&#123;&#125; ......"</span>, list);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">getAccessToken</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HashMap&lt;String, String&gt; map = Maps.newHashMap();</span><br><span class="line">        map.put(<span class="string">"sysCode"</span>, SYS_CODE);</span><br><span class="line">        map.put(<span class="string">"secretKey"</span>, SECRET_KEY);</span><br><span class="line">        String postJson = HttpClientUtils.postJson(map, TOKEN_URL);</span><br><span class="line">        List&lt;String&gt; list = Lists.newArrayList();</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isNotBlank(postJson)) &#123;</span><br><span class="line">            JSONObject jsonObject = JSON.parseObject(postJson);</span><br><span class="line">            String state = jsonObject.getString(<span class="string">"state"</span>);</span><br><span class="line">            <span class="keyword">if</span> (StringUtils.equals(<span class="string">"true"</span>, state)) &#123;</span><br><span class="line">                String expiresIn = jsonObject.getString(<span class="string">"expiresIn"</span>);</span><br><span class="line">                String token = jsonObject.getString(<span class="string">"token"</span>);</span><br><span class="line">                Long expiresTime = System.currentTimeMillis() + Long.parseLong(expiresIn);</span><br><span class="line"><span class="comment">//                Long expiresTime = System.currentTimeMillis() + 2000;</span></span><br><span class="line">                list.add(String.valueOf(expiresTime));</span><br><span class="line">                list.add(token);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        log.debug(<span class="string">"请求新的 token：&#123;&#125; ......"</span>, list);</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序执行结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-30</span> <span class="number">18</span>:<span class="number">56</span>:<span class="number">41</span>,<span class="number">733</span> DEBUG [com.tem.<span class="built_in">int</span>egration.workflow.CacheTest]  - token 过期 ......</span><br><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-30</span> <span class="number">18</span>:<span class="number">56</span>:<span class="number">41</span>,<span class="number">741</span> DEBUG [com.tem.<span class="built_in">int</span>egration.workflow.CacheTest]  - 删除旧的 token：[<span class="number">1588244201721</span>, eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6dHJpcCIsImV4cCI6MTU4ODMzMDU5OSwiaWF0IjoxNTg4MjQ0MTk5fQ.cwGT6KFf7TjW7ZfHbWKd5HHYjGlM9XXnGPHaZlKddg90T67M_a8_KiCejzRlp5Ay8_kqoVt8EW6yNUqw5Xc4uQ] ......</span><br><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-30</span> <span class="number">18</span>:<span class="number">56</span>:<span class="number">41</span>,<span class="number">911</span> DEBUG [com.tem.<span class="built_in">int</span>egration.workflow.CacheTest]  - 请求新的 token：[<span class="number">1588244203911</span>, eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6dHJpcCIsImV4cCI6MTU4ODMzMDYwMSwiaWF0IjoxNTg4MjQ0MjAxfQ.rZB0BHmc_hWf0_v7TJ4CyqhPpj792Lwtj0naAOMcyLydyqAevaHsMqeBj8H9kPlFCw1ooTthxGXnBKPWnsJTng] ......</span><br><span class="line"><span class="number">2020</span><span class="number">-04</span><span class="number">-30</span> <span class="number">18</span>:<span class="number">56</span>:<span class="number">41</span>,<span class="number">911</span> DEBUG [com.tem.<span class="built_in">int</span>egration.workflow.CacheTest]  - 最终获取的 token：[<span class="number">1588244203911</span>, eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6dHJpcCIsImV4cCI6MTU4ODMzMDYwMSwiaWF0IjoxNTg4MjQ0MjAxfQ.rZB0BHmc_hWf0_v7TJ4CyqhPpj792Lwtj0naAOMcyLydyqAevaHsMqeBj8H9kPlFCw1ooTthxGXnBKPWnsJTng] ......</span><br></pre></td></tr></table></figure>
+
+<p>当然如果觉得 <code>Guava Cache</code> 用起来有点麻烦的话，没关系我们也可以使用 JDK 自带的并发容器 <code>ConcurrentHashMap</code> 来做缓存。</p>
+<h3 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a><code>ConcurrentHashMap</code></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TOKEN = <span class="string">"token"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SYS_CODE = <span class="string">"xxx"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SECRET_KEY = <span class="string">"xxxxxxxxxxxxxxxxxxxxxxxx"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TOKEN_URL = <span class="string">"https://get.token.com.cn/xx/xxx/v1/oauth"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 缓存token</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;String, List&lt;String&gt;&gt; KeyMap = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        String token = getToken();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getToken</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//模拟缓存中已经有 token 了</span></span><br><span class="line"><span class="comment">//        KeyMap.put(TOKEN, Lists.newArrayList(</span></span><br><span class="line"><span class="comment">//                String.valueOf(System.currentTimeMillis() + 4000),</span></span><br><span class="line"><span class="comment">//                "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6dHJpcCIsImV4cCI6MTU4ODkwOTc0MSwiaWF0IjoxNTg4ODIzMzQxfQ.f8j_W5TZnet1142B9AMtmS6aKPc64x3ek09ogVfAX-m8SmCbDLAG0lMScyb5G2hNJogey0_mW6H9bVbWSIlT1w"</span></span><br><span class="line"><span class="comment">//        ));</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//先去 ConcurrentHashMap 中获取 token，如果为空则重新获取；如果不为空则判断 token 是否过期</span></span><br><span class="line">        <span class="keyword">if</span> (KeyMap != <span class="keyword">null</span> &amp;&amp; !KeyMap.isEmpty()) &#123;</span><br><span class="line">            List&lt;String&gt; list = KeyMap.get(TOKEN);</span><br><span class="line">            <span class="keyword">if</span> (CollectionUtils.isNotEmpty(list)) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//模拟 token 已经存储了2秒</span></span><br><span class="line"><span class="comment">//                try &#123;</span></span><br><span class="line"><span class="comment">//                    SECONDS.sleep(2);</span></span><br><span class="line"><span class="comment">//                &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="comment">//                    e.printStackTrace();</span></span><br><span class="line"><span class="comment">//                &#125;</span></span><br><span class="line"></span><br><span class="line">                Long expiresTime = Long.parseLong(list.get(<span class="number">0</span>));</span><br><span class="line">                Long currentTimeMillis = System.currentTimeMillis();</span><br><span class="line">                <span class="comment">//有效时间是否大于当前时间，大于则没过期，直接获取</span></span><br><span class="line">                <span class="keyword">if</span> (expiresTime &gt; currentTimeMillis) &#123;</span><br><span class="line">                    String token = list.get(<span class="number">1</span>);</span><br><span class="line">                    log.debug(<span class="string">"从缓存中获取到 token：&#123;&#125;"</span>, token);</span><br><span class="line">                    <span class="keyword">return</span> token;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//小于则说明已过期，清空缓存</span></span><br><span class="line">                    log.debug(<span class="string">"token 过期 ......"</span>);</span><br><span class="line">                    KeyMap.clear();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        HashMap&lt;String, String&gt; map = Maps.newHashMap();</span><br><span class="line">        map.put(<span class="string">"sysCode"</span>, SYS_CODE);</span><br><span class="line">        map.put(<span class="string">"secretKey"</span>, SECRET_KEY);</span><br><span class="line">        String token = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; list = Lists.newArrayList();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String postJson;</span><br><span class="line">            <span class="keyword">synchronized</span> (HttpClientUtils<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">                postJson = HttpClientUtils.postJson(map, TOKEN_URL);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (postJson != <span class="keyword">null</span> &amp;&amp; postJson != <span class="string">""</span>) &#123;</span><br><span class="line">                JSONObject jsonObject = JSON.parseObject(postJson);</span><br><span class="line">                String state = jsonObject.getString(<span class="string">"state"</span>);</span><br><span class="line">                <span class="keyword">if</span> (StringUtils.equals(<span class="string">"true"</span>, state)) &#123;</span><br><span class="line">                    <span class="comment">//expiresIn 为 token 有效期的时长</span></span><br><span class="line">                    String expiresIn = jsonObject.getString(<span class="string">"expiresIn"</span>);</span><br><span class="line">                    token = jsonObject.getString(<span class="string">"token"</span>);</span><br><span class="line">                    Long expiresTime = System.currentTimeMillis() + Long.parseLong(expiresIn);</span><br><span class="line">                    list.add(String.valueOf(expiresTime));</span><br><span class="line">                    list.add(token);</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//把获取到的 token 存储到 ConcurrentHashMap 中</span></span><br><span class="line">                    KeyMap.put(TOKEN, list);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            log.debug(<span class="string">"请求新的 token：&#123;&#125; ......"</span>, list);</span><br><span class="line">            <span class="keyword">return</span> token;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>官网：<a href="https://www.baeldung.com/guava-cache" target="_blank" rel="noopener">https://www.baeldung.com/guava-cache</a><br>参考：<a href="https://segmentfault.com/a/1190000011105644" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011105644</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/npm-1-npm/" data-toggle="tooltip" data-placement="top" title="[npm] 1 npm">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Guava-Retrying-Guava-Retrying/" data-toggle="tooltip" data-placement="top" title="[Guava Retrying] Guava Retrying">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Guava Cache] Guava Cache&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Guava-Cache-Guava-Cache/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Apr 30 2020 19:05:04 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#构建缓存对象"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">构建缓存对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#maximumSize"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">maximumSize</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#expireAfterAccess、expireAfterWrite"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">expireAfterAccess、expireAfterWrite</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#weakKeys、weakValues"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">weakKeys、weakValues</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#removalListener"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">removalListener</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#invalidate、invalidateAll"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">invalidate、invalidateAll</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#get-K-key-Callable-lt-extends-V-gt-valueLoader"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">get(K key, Callable&lt;? extends V&gt; valueLoader)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#recordStats"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">recordStats</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#LoadingCache"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">LoadingCache</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#场景案例"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">场景案例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Guava-Cache"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Guava Cache</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConcurrentHashMap"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">ConcurrentHashMap</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Guava Cache" title="Guava Cache">Guava Cache</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Guava-Cache-Guava-Cache/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

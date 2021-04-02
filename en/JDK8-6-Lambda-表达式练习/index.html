@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/JDK8-6-Lambda-表达式练习/">
+  <title>
+    
+      [JDK8] 6 Lambda 表达式练习 - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/java8/java8_bg.png');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/java8/java8_bg.png');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/java8/java8_bg.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/java8/java8_bg.png');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/java8/java8_bg.png'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JDK8" title="JDK8">JDK8</a>
+              
+            </div>
+            <h1>[JDK8] 6 Lambda 表达式练习</h1>
+            <h2 class="subheading">Practice something...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-04-07
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">19</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>先来写个基本类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LambdaTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer id;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(Integer id, String name, Integer age)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.id = id;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Student&gt; <span class="title">getStudents</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">100</span>, <span class="string">"小明"</span>, <span class="number">10</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">101</span>, <span class="string">"小红"</span>, <span class="number">11</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">102</span>, <span class="string">"小李"</span>, <span class="number">12</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">103</span>, <span class="string">"小王"</span>, <span class="number">13</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">104</span>, <span class="string">"小张"</span>, <span class="number">14</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">105</span>, <span class="string">"小五"</span>, <span class="number">15</span>));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">106</span>, <span class="string">"小华"</span>, <span class="number">16</span>));</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sorted-四种排序"><a href="#sorted-四种排序" class="headerlink" title="sorted() 四种排序"></a><code>sorted()</code> 四种排序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sortedTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;Student&gt; students = <span class="keyword">this</span>.getStudents();</span><br><span class="line">    <span class="comment">//正序：常规写法</span></span><br><span class="line">    List&lt;Student&gt; collect = students.stream().sorted((a1, a2) -&gt; Integer.compare(a1.getAge(), a2.getAge())).collect(Collectors.toList());</span><br><span class="line">    collect.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line">    <span class="comment">//正序：lambda 简写</span></span><br><span class="line">    List&lt;Student&gt; collectComparator = students.stream().sorted(Comparator.comparing(Student::getAge)).collect(Collectors.toList());</span><br><span class="line">    collectComparator.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//倒序：常规写法</span></span><br><span class="line">    List&lt;Student&gt; collectReversed = students.stream().sorted((a1, a2) -&gt; Integer.compare(a2.getAge(), a1.getAge())).collect(Collectors.toList());</span><br><span class="line">    collectReversed.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line">    <span class="comment">//正序：lambda 简写</span></span><br><span class="line">    List&lt;Student&gt; collectComparatorReversed = students.stream().sorted(Comparator.comparing(Student::getAge).reversed()).collect(Collectors.toList());</span><br><span class="line">    collectComparatorReversed.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="List-转-Map"><a href="#List-转-Map" class="headerlink" title="List 转 Map"></a><code>List</code> 转 <code>Map</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listToMapTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;Student&gt; students = <span class="keyword">this</span>.getStudents();</span><br><span class="line">    Map&lt;Integer, Student&gt; collect = students.stream().collect(Collectors.toMap(Student::getId, s -&gt; s, (s1, s2) -&gt; s1));</span><br><span class="line">    collect.keySet().forEach(key -&gt; System.out.println(String.format(<span class="string">"key：%s，value：%s"</span>, key, collect.get(key))));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="map-映射"><a href="#map-映射" class="headerlink" title="map 映射"></a><code>map</code> 映射</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mapTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; students = <span class="keyword">this</span>.getStudents();</span><br><span class="line"><span class="comment">//        List&lt;Student&gt; students = Lists.newArrayList(new Student(null, "小炎姬", 5));</span></span><br><span class="line">        Integer id = students.stream().map(Student::getId).max(Integer::compareTo).orElse(<span class="number">0</span>);</span><br><span class="line">        System.out.println(id);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="对象中-String-类型属性为空的字段赋值为-null"><a href="#对象中-String-类型属性为空的字段赋值为-null" class="headerlink" title="对象中 String 类型属性为空的字段赋值为 null"></a>对象中 <code>String</code> 类型属性为空的字段赋值为 <code>null</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">stringEmptyToNull</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">    Class&lt;?&gt; clazz = t.getClass();</span><br><span class="line"></span><br><span class="line">    Field[] fields = clazz.getDeclaredFields();</span><br><span class="line">    Arrays.stream(fields)</span><br><span class="line">        .filter(f -&gt; f.getType() == String<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">        .<span class="title">filter</span>(<span class="title">f</span> -&gt; </span>&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                f.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">                String value = (String) f.get(t);</span><br><span class="line">                <span class="keyword">return</span> StringUtils.isEmpty(value);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .forEach(field -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">                field.set(t, <span class="keyword">null</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception ignore) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="BiConsumer-lt-T-U-gt"><a href="#BiConsumer-lt-T-U-gt" class="headerlink" title="BiConsumer&lt;T, U&gt;"></a><code>BiConsumer&lt;T, U&gt;</code></h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        </span><br><span class="line"><span class="comment">&lt;!-- guava --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>28.2-jre<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LambdaTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer id;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> Integer age;</span><br><span class="line">        <span class="keyword">private</span> Integer interestType;</span><br><span class="line">        <span class="keyword">private</span> List&lt;Hobby&gt; hobbies;</span><br><span class="line">        <span class="keyword">private</span> List&lt;Fancy&gt; fancies;</span><br><span class="line">        <span class="keyword">private</span> Subject subject;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Student</span><span class="params">(Integer id, String name, Integer age, Integer interestType, List&lt;Hobby&gt; hobbies, List&lt;Fancy&gt; fancies, Subject subject)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.id = id;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">            <span class="keyword">this</span>.interestType = interestType;</span><br><span class="line">            <span class="keyword">this</span>.hobbies = hobbies;</span><br><span class="line">            <span class="keyword">this</span>.fancies = fancies;</span><br><span class="line">            <span class="keyword">this</span>.subject = subject;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">enum</span> InterestType &#123;</span><br><span class="line">        HOBBY(<span class="number">1</span>, <span class="string">"兴趣"</span>),</span><br><span class="line">        FANCY(<span class="number">2</span>, <span class="string">"喜好"</span>);</span><br><span class="line">        <span class="keyword">private</span> Integer code;</span><br><span class="line">        <span class="keyword">private</span> String message;</span><br><span class="line"></span><br><span class="line">        InterestType(Integer code, String message) &#123;</span><br><span class="line">            <span class="keyword">this</span>.code = code;</span><br><span class="line">            <span class="keyword">this</span>.message = message;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Integer <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> code;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> InterestType <span class="title">getInterestTypeByCode</span><span class="params">(<span class="keyword">int</span> code)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Arrays.stream(InterestType.values()).filter(interestType -&gt; interestType.getCode() == code).findFirst().orElse(<span class="keyword">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Hobby</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String basketball;</span><br><span class="line">        <span class="keyword">private</span> String running;</span><br><span class="line">        <span class="keyword">private</span> String drinking;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Hobby</span><span class="params">(String basketball, String running, String drinking)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.basketball = basketball;</span><br><span class="line">            <span class="keyword">this</span>.running = running;</span><br><span class="line">            <span class="keyword">this</span>.drinking = drinking;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Fancy</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String dance;</span><br><span class="line">        <span class="keyword">private</span> String takePhotos;</span><br><span class="line">        <span class="keyword">private</span> String meetGirls;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Fancy</span><span class="params">(String dance, String takePhotos, String meetGirls)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.dance = dance;</span><br><span class="line">            <span class="keyword">this</span>.takePhotos = takePhotos;</span><br><span class="line">            <span class="keyword">this</span>.meetGirls = meetGirls;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Subject</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String english;</span><br><span class="line">        <span class="keyword">private</span> String chinese;</span><br><span class="line">        <span class="keyword">private</span> String mathematics;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Subject</span><span class="params">(String english, String chinese, String mathematics)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.english = english;</span><br><span class="line">            <span class="keyword">this</span>.chinese = chinese;</span><br><span class="line">            <span class="keyword">this</span>.mathematics = mathematics;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;Student&gt; <span class="title">getStudent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; list = Lists.newArrayList();</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">100</span>, <span class="string">"小明"</span>, <span class="number">10</span>, <span class="number">1</span>,</span><br><span class="line">                Lists.newArrayList(</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球"</span>, <span class="string">"跑步"</span>, <span class="string">"喝酒"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_1"</span>, <span class="string">"跑步_1"</span>, <span class="string">"喝酒_1"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_2"</span>, <span class="string">"跑步_2"</span>, <span class="string">"喝酒_2"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_3"</span>, <span class="string">"跑步_3"</span>, <span class="string">"喝酒_3"</span>)</span><br><span class="line">                ),</span><br><span class="line">                Lists.newArrayList(</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞"</span>, <span class="string">"摄影"</span>, <span class="string">"泡妞"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_1"</span>, <span class="string">"摄影_1"</span>, <span class="string">"泡妞_1"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_2"</span>, <span class="string">"摄影_2"</span>, <span class="string">"泡妞_2"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_3"</span>, <span class="string">"摄影_3"</span>, <span class="string">"泡妞_3"</span>)</span><br><span class="line">                ),</span><br><span class="line">                <span class="keyword">new</span> Subject(<span class="string">"英语"</span>, <span class="string">"语文"</span>, <span class="string">"数学"</span>)</span><br><span class="line">        ));</span><br><span class="line">        list.add(<span class="keyword">new</span> Student(<span class="number">200</span>, <span class="string">"小红"</span>, <span class="number">10</span>, <span class="number">2</span>,</span><br><span class="line">                Lists.newArrayList(</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球"</span>, <span class="string">"跑步"</span>, <span class="string">"喝酒"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_1"</span>, <span class="string">"跑步_1"</span>, <span class="string">"喝酒_1"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_2"</span>, <span class="string">"跑步_2"</span>, <span class="string">"喝酒_2"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Hobby(<span class="string">"篮球_3"</span>, <span class="string">"跑步_3"</span>, <span class="string">"喝酒_3"</span>)</span><br><span class="line">                ),</span><br><span class="line">                Lists.newArrayList(</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞"</span>, <span class="string">"摄影"</span>, <span class="string">"泡妞"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_1"</span>, <span class="string">"摄影_1"</span>, <span class="string">"泡妞_1"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_2"</span>, <span class="string">"摄影_2"</span>, <span class="string">"泡妞_2"</span>),</span><br><span class="line">                        <span class="keyword">new</span> Fancy(<span class="string">"街舞_3"</span>, <span class="string">"摄影_3"</span>, <span class="string">"泡妞_3"</span>)</span><br><span class="line">                ),</span><br><span class="line">                <span class="keyword">new</span> Subject(<span class="string">"英语"</span>, <span class="string">"语文"</span>, <span class="string">"数学"</span>)</span><br><span class="line">        ));</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer pid;</span><br><span class="line">        <span class="keyword">private</span> String pname;</span><br><span class="line">        <span class="keyword">private</span> Integer page;</span><br><span class="line">        <span class="keyword">private</span> String interest;</span><br><span class="line">        <span class="keyword">private</span> String subject;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> BiConsumer&lt;Person, Student&gt; HOBBY = (person, student) -&gt; &#123;</span><br><span class="line">        Optional.ofNullable(student.getHobbies())</span><br><span class="line">                .flatMap(hobbies -&gt; hobbies.stream().findFirst())</span><br><span class="line">                .ifPresent(hobby -&gt; person.setInterest(hobby.getDrinking()));</span><br><span class="line">        Optional.ofNullable(student.subject).ifPresent(subject -&gt; person.setSubject(subject.getEnglish()));</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> BiConsumer&lt;Person, Student&gt; FANCY = (person, student) -&gt; &#123;</span><br><span class="line">        Optional.ofNullable(student.getFancies())</span><br><span class="line">                .flatMap(fancies -&gt; fancies.stream().findFirst())</span><br><span class="line">                .ifPresent(fancy -&gt; person.setInterest(fancy.getDance()));</span><br><span class="line">        Optional.ofNullable(student.subject).ifPresent(subject -&gt; person.setSubject(subject.getMathematics()));</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> ImmutableMap&lt;InterestType, BiConsumer&lt;Person, Student&gt;&gt; OF = ImmutableMap.of(</span><br><span class="line">            InterestType.HOBBY, HOBBY,</span><br><span class="line">            InterestType.FANCY, FANCY</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * BiConsumer&lt;T, U&gt; 实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Student&gt; studentList = getStudent();</span><br><span class="line">        List&lt;Object&gt; collect = studentList.stream().map(student -&gt; &#123;</span><br><span class="line">            Person person = <span class="keyword">new</span> Person();</span><br><span class="line">            Optional.ofNullable(student).ifPresent(stu -&gt; &#123;</span><br><span class="line">                person.setPid(stu.getId());</span><br><span class="line">                person.setPname(stu.getName());</span><br><span class="line">                person.setPage(stu.getAge());</span><br><span class="line"></span><br><span class="line">                Integer interestType = student.getInterestType();</span><br><span class="line">                InterestType interestTypeByCode = InterestType.getInterestTypeByCode(interestType);</span><br><span class="line">                person.setInterest(interestTypeByCode.message);</span><br><span class="line"></span><br><span class="line">                OF.get(interestTypeByCode).accept(person, student);</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">return</span> person;</span><br><span class="line">        &#125;).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">        System.out.println(collect);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="T-reduce-T-identity-BinaryOperator-lt-T-gt-accumulator"><a href="#T-reduce-T-identity-BinaryOperator-lt-T-gt-accumulator" class="headerlink" title="T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)"></a><code>T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)</code></h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- commons-lang3 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-lang3<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LambdaTest</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">trip</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String departure;</span><br><span class="line">        <span class="keyword">private</span> String destination;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">trip</span><span class="params">(String departure, String destination)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.departure = departure;</span><br><span class="line">            <span class="keyword">this</span>.destination = destination;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * reduce 规则：</span></span><br><span class="line"><span class="comment">     * 例子：1.上海 -&gt; 北京</span></span><br><span class="line"><span class="comment">     *      2.北京 -&gt; 上海</span></span><br><span class="line"><span class="comment">     *      3.天津 -&gt; 西安</span></span><br><span class="line"><span class="comment">     *      4.拉萨 -&gt; 灵芝</span></span><br><span class="line"><span class="comment">     *      5.灵芝 -&gt; 兰州</span></span><br><span class="line"><span class="comment">     *      6.兰州 -&gt; 西宁</span></span><br><span class="line"><span class="comment">     * 展示效果：上海-北京-上海,天津-西安,拉萨-灵芝-兰州-西宁</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> BinaryOperator&lt;String&gt; ACCUMULATOR = (v1, v2) -&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isEmpty(v1)) &#123;</span><br><span class="line">            <span class="keyword">return</span> v2;</span><br><span class="line">        &#125;</span><br><span class="line">        String[] item = StringUtils.split(v1, <span class="string">","</span>);</span><br><span class="line">        String[] lastOfItem = StringUtils.split(item[item.length - <span class="number">1</span>], <span class="string">"-"</span>);</span><br><span class="line">        String lastElement = lastOfItem[lastOfItem.length - <span class="number">1</span>];</span><br><span class="line">        String[] nextItem = StringUtils.split(v2, <span class="string">"-"</span>);</span><br><span class="line">        String startElement = nextItem[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.equals(lastElement, startElement)) &#123;</span><br><span class="line">            <span class="keyword">return</span> v1 + <span class="string">"-"</span> + nextItem[nextItem.length - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> v1 + <span class="string">","</span> + v2;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;trip&gt; list = Lists.newArrayList(</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"上海"</span>, <span class="string">"北京"</span>),</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"北京"</span>, <span class="string">"上海"</span>),</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"天津"</span>, <span class="string">"西安"</span>),</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"拉萨"</span>, <span class="string">"灵芝"</span>),</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"灵芝"</span>, <span class="string">"兰州"</span>),</span><br><span class="line">                <span class="keyword">new</span> trip(<span class="string">"兰州"</span>, <span class="string">"西宁"</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">//[上海-北京-上海,天津-西安,拉萨-灵芝-兰州-西宁]</span></span><br><span class="line">        String reduce = list.stream()</span><br><span class="line">                .map(t -&gt; String.format(<span class="string">"%s-%s"</span>, t.getDeparture(), t.getDestination()))</span><br><span class="line">                .reduce(<span class="string">""</span>, ACCUMULATOR);</span><br><span class="line">        System.out.println(reduce);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="allMatch-Predicate-p"><a href="#allMatch-Predicate-p" class="headerlink" title="allMatch(Predicate p)"></a><code>allMatch(Predicate p)</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYYMMDD = <span class="string">"yyyyMMdd"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY_MM_DD = <span class="string">"yyyy-MM-dd"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY_MM_DD_HH_MM = <span class="string">"yyyy-MM-dd HH:mm"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY_MM_DD_HH_MM_SS = <span class="string">"yyyy-MM-dd HH:mm:ss"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY__MM__DD = <span class="string">"yyyy/MM/dd"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY__MM__DD_HH_MM = <span class="string">"yyyy/MM/dd HH:mm"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String YYYY__MM__DD_HH_MM_SS = <span class="string">"yyyy/MM/dd HH:mm:ss"</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">DateValidate</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String date;</span><br><span class="line">        <span class="keyword">private</span> String dateFormat;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">DateValidate</span><span class="params">(String date, String dateFormat)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.date = date;</span><br><span class="line">            <span class="keyword">this</span>.dateFormat = dateFormat;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    List&lt;DateValidate&gt; list = Lists.newArrayList(</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"202086"</span>, YYYYMMDD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020086"</span>, YYYYMMDD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020806"</span>, YYYYMMDD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"20200806"</span>, YYYYMMDD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"20200806 19"</span>, <span class="keyword">null</span>),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"20200806 19:00"</span>, <span class="keyword">null</span>),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"20200806 19:00:00"</span>, <span class="keyword">null</span>),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-8-06"</span>, YYYY_MM_DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-08-6"</span>, YYYY_MM_DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-08-06"</span>, YYYY_MM_DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-08-06 19"</span>, <span class="keyword">null</span>),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-08-06 19:00"</span>, YYYY_MM_DD_HH_MM),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020-08-06 19:00:00"</span>, YYYY_MM_DD_HH_MM_SS),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/8/06"</span>, YYYY__MM__DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/08/6"</span>, YYYY__MM__DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/08/06"</span>, YYYY__MM__DD),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/08/06 19"</span>, <span class="keyword">null</span>),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/08/06 19:00"</span>, YYYY__MM__DD_HH_MM),</span><br><span class="line">            <span class="keyword">new</span> DateValidate(<span class="string">"2020/08/06 19:00:00"</span>, YYYY__MM__DD_HH_MM_SS)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    list.forEach(item -&gt; &#123;</span><br><span class="line">        <span class="keyword">boolean</span> matchDateTime = matchDateTime(item.getDate());</span><br><span class="line">        System.out.println(item.getDate() + <span class="string">" ("</span> + item.getDateFormat() + <span class="string">")：matchDateTime -&gt; "</span> + matchDateTime);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 时间校验</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> dateTime</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">matchDateTime</span><span class="params">(String dateTime)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isEmpty(dateTime)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    String[] dt = dateTime.split(<span class="string">"\\s+"</span>);</span><br><span class="line">    <span class="keyword">if</span> (dt.length == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> dateMatch(dt[<span class="number">0</span>], <span class="string">"/"</span>) || dateMatch(dt[<span class="number">0</span>], <span class="string">"-"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        String date = dt[<span class="number">0</span>];</span><br><span class="line">        String time = dt[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> (dateMatch(date, <span class="string">"/"</span>) || dateMatch(date, <span class="string">"-"</span>)) &amp;&amp; timeMatch(time, <span class="string">":"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">timeMatch</span><span class="params">(String s, String split)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isEmpty(s)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    s = StringUtils.trim(s);</span><br><span class="line">    String[] time = StringUtils.split(s, split);</span><br><span class="line">    <span class="keyword">boolean</span> isNumber = Arrays.stream(time).anyMatch(StringUtils::isNumeric);</span><br><span class="line">    <span class="keyword">if</span> (!isNumber) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (time.length != <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (time[<span class="number">0</span>].length() &gt; <span class="number">2</span> || Integer.parseInt(time[<span class="number">0</span>]) &gt; <span class="number">24</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (time[<span class="number">1</span>].length() &gt; <span class="number">2</span> || Integer.parseInt(time[<span class="number">1</span>]) &gt; <span class="number">60</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (time[<span class="number">2</span>].length() &gt; <span class="number">2</span> || Integer.parseInt(time[<span class="number">2</span>]) &gt; <span class="number">60</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">dateMatch</span><span class="params">(String s, String spl)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isEmpty(s)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s = StringUtils.trim(s);</span><br><span class="line">    String[] date = StringUtils.split(s, spl);</span><br><span class="line">    <span class="keyword">boolean</span> isNumber = Arrays.stream(date).anyMatch(StringUtils::isNumeric);</span><br><span class="line">    <span class="keyword">if</span> (!isNumber) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (date.length != <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (date[<span class="number">0</span>].length() != <span class="number">4</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (Integer.parseInt(date[<span class="number">1</span>]) &gt; <span class="number">12</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (Integer.parseInt(date[<span class="number">2</span>]) &gt; <span class="number">31</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">202086</span> (yyyyMMdd)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020086</span> (yyyyMMdd)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020806</span> (yyyyMMdd)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">20200806</span> (yyyyMMdd)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">20200806</span> <span class="number">19</span> (<span class="literal">null</span>)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">20200806</span> <span class="number">19</span>:<span class="number">00</span> (<span class="literal">null</span>)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">20200806</span> <span class="number">19</span>:<span class="number">00</span>:<span class="number">00</span> (<span class="literal">null</span>)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020</span><span class="number">-8</span><span class="number">-06</span> (yyyy-MM-dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span><span class="number">-08</span><span class="number">-6</span> (yyyy-MM-dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span><span class="number">-08</span><span class="number">-06</span> (yyyy-MM-dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span><span class="number">-08</span><span class="number">-06</span> <span class="number">19</span> (<span class="literal">null</span>)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020</span><span class="number">-08</span><span class="number">-06</span> <span class="number">19</span>:<span class="number">00</span> (yyyy-MM-dd HH:mm)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020</span><span class="number">-08</span><span class="number">-06</span> <span class="number">19</span>:<span class="number">00</span>:<span class="number">00</span> (yyyy-MM-dd HH:mm:ss)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">8</span>/<span class="number">06</span> (yyyy/MM/dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">08</span>/<span class="number">6</span> (yyyy/MM/dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">08</span>/<span class="number">06</span> (yyyy/MM/dd)：matchDateTime -&gt; <span class="literal">true</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">08</span>/<span class="number">06</span> <span class="number">19</span> (<span class="literal">null</span>)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">08</span>/<span class="number">06</span> <span class="number">19</span>:<span class="number">00</span> (yyyy/MM/dd HH:mm)：matchDateTime -&gt; <span class="literal">false</span></span><br><span class="line"><span class="number">2020</span>/<span class="number">08</span>/<span class="number">06</span> <span class="number">19</span>:<span class="number">00</span>:<span class="number">00</span> (yyyy/MM/dd HH:mm:ss)：matchDateTime -&gt; <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="groupingBy-Function-f"><a href="#groupingBy-Function-f" class="headerlink" title="groupingBy(Function f)"></a><code>groupingBy(Function f)</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Stu</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Integer id;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> Long money;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Stu</span><span class="params">(Integer id, String name, Long money)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.id = id;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.money = money;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    List&lt;Stu&gt; list = Lists.newArrayList(</span><br><span class="line">            <span class="keyword">new</span> Stu(<span class="number">1</span>, <span class="string">"小明"</span>, <span class="number">100L</span>),</span><br><span class="line">            <span class="keyword">new</span> Stu(<span class="number">1</span>, <span class="string">"小红"</span>, <span class="number">200L</span>),</span><br><span class="line">            <span class="keyword">new</span> Stu(<span class="number">2</span>, <span class="string">"小黄"</span>, <span class="number">200L</span>),</span><br><span class="line">            <span class="keyword">new</span> Stu(<span class="number">2</span>, <span class="string">"小紫"</span>, <span class="number">200L</span>)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    Map&lt;Integer, List&lt;Stu&gt;&gt; collect = list.stream().collect(Collectors.groupingBy(Stu::getId));</span><br><span class="line">    System.out.println(JSON.toJSONString(collect, SerializerFeature.PrettyFormat));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="number">1</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"id"</span>:<span class="number">1</span>,</span><br><span class="line">			<span class="string">"money"</span>:<span class="number">100</span>,</span><br><span class="line">			<span class="string">"name"</span>:<span class="string">"小明"</span></span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"id"</span>:<span class="number">1</span>,</span><br><span class="line">			<span class="string">"money"</span>:<span class="number">200</span>,</span><br><span class="line">			<span class="string">"name"</span>:<span class="string">"小红"</span></span><br><span class="line">		&#125;</span><br><span class="line">	],<span class="number">2</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"id"</span>:<span class="number">2</span>,</span><br><span class="line">			<span class="string">"money"</span>:<span class="number">200</span>,</span><br><span class="line">			<span class="string">"name"</span>:<span class="string">"小黄"</span></span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"id"</span>:<span class="number">2</span>,</span><br><span class="line">			<span class="string">"money"</span>:<span class="number">200</span>,</span><br><span class="line">			<span class="string">"name"</span>:<span class="string">"小紫"</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="flatMap-Function-f"><a href="#flatMap-Function-f" class="headerlink" title="flatMap(Function f)"></a><code>flatMap(Function f)</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">TravelInfo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String trip;</span><br><span class="line">    <span class="keyword">private</span> String hotelName;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Order&gt; orders;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TravelInfo</span><span class="params">(String trip, String hotelName, List&lt;Order&gt; orders)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.trip = trip;</span><br><span class="line">        <span class="keyword">this</span>.hotelName = hotelName;</span><br><span class="line">        <span class="keyword">this</span>.orders = orders;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long orderId;</span><br><span class="line">    <span class="keyword">private</span> List&lt;Travellers&gt; travellers;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Order</span><span class="params">(Long orderId, List&lt;Travellers&gt; travellers)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.orderId = orderId;</span><br><span class="line">        <span class="keyword">this</span>.travellers = travellers;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Travellers</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Travellers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Travellers</span><span class="params">(String userName, String email)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.userName = userName;</span><br><span class="line">        <span class="keyword">this</span>.email = email;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * flatMap(Function f)：扁平化</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    TravelInfo travelInfo = <span class="keyword">new</span> TravelInfo(<span class="string">"三人行"</span>, <span class="string">"天上人间"</span>,</span><br><span class="line">            Lists.newArrayList(</span><br><span class="line">                    <span class="keyword">new</span> Order(<span class="number">123456789L</span>, Lists.newArrayList(</span><br><span class="line">                            <span class="keyword">new</span> Travellers(<span class="string">"zhangSanFirst"</span>, <span class="string">"zhangSanFirst@qq.com"</span>),</span><br><span class="line">                            <span class="keyword">new</span> Travellers(<span class="string">"zhangSanSecond"</span>, <span class="string">"zhangSanSecond@qq.com"</span>)</span><br><span class="line">                    )),</span><br><span class="line">                    <span class="keyword">new</span> Order(<span class="number">987654321L</span>, Lists.newArrayList(</span><br><span class="line">                            <span class="keyword">new</span> Travellers(<span class="string">"liSiFirst"</span>, <span class="string">"zhangSanFirst@qq.com"</span>),</span><br><span class="line">                            <span class="keyword">new</span> Travellers(<span class="string">"liSiSecond"</span>, <span class="string">"zhangSanSecond@qq.com"</span>)</span><br><span class="line">                    )),</span><br><span class="line">                    <span class="keyword">new</span> Order(<span class="number">987654322L</span>, Lists.newArrayList(</span><br><span class="line">                            <span class="keyword">new</span> Travellers(<span class="string">"wangWu"</span>, <span class="string">"wangWu@qq.com"</span>)</span><br><span class="line">                    )),</span><br><span class="line">                    <span class="keyword">new</span> Order(<span class="number">987654323L</span>, Lists.newArrayList()),</span><br><span class="line">                    <span class="keyword">new</span> Order(<span class="number">987654323L</span>, <span class="keyword">null</span>)</span><br><span class="line">            ));</span><br><span class="line">    System.out.println(JSON.toJSONString(travelInfo, SerializerFeature.PrettyFormat));</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; email = travelInfo.getOrders().stream()</span><br><span class="line">            .filter(Objects::nonNull)</span><br><span class="line">            .map(Order::getTravellers)</span><br><span class="line">            .filter(CollectionUtils::isNotEmpty)</span><br><span class="line">            .flatMap(Collection::stream)</span><br><span class="line">            .filter(Objects::nonNull)</span><br><span class="line">            .map(Travellers::getEmail)</span><br><span class="line">            .collect(Collectors.toList());</span><br><span class="line">    System.out.println(email);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"hotelName"</span>:<span class="string">"天上人间"</span>,</span><br><span class="line">	<span class="attr">"orders"</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"orderId"</span>:<span class="number">123456789</span>,</span><br><span class="line">			<span class="attr">"travellers"</span>:[</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">"email"</span>:<span class="string">"zhangSanFirst@qq.com"</span>,</span><br><span class="line">					<span class="attr">"userName"</span>:<span class="string">"zhangSanFirst"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">"email"</span>:<span class="string">"zhangSanSecond@qq.com"</span>,</span><br><span class="line">					<span class="attr">"userName"</span>:<span class="string">"zhangSanSecond"</span></span><br><span class="line">				&#125;</span><br><span class="line">			]</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"orderId"</span>:<span class="number">987654321</span>,</span><br><span class="line">			<span class="attr">"travellers"</span>:[</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">"email"</span>:<span class="string">"zhangSanFirst@qq.com"</span>,</span><br><span class="line">					<span class="attr">"userName"</span>:<span class="string">"liSiFirst"</span></span><br><span class="line">				&#125;,</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">"email"</span>:<span class="string">"zhangSanSecond@qq.com"</span>,</span><br><span class="line">					<span class="attr">"userName"</span>:<span class="string">"liSiSecond"</span></span><br><span class="line">				&#125;</span><br><span class="line">			]</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"orderId"</span>:<span class="number">987654322</span>,</span><br><span class="line">			<span class="attr">"travellers"</span>:[</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">"email"</span>:<span class="string">"wangWu@qq.com"</span>,</span><br><span class="line">					<span class="attr">"userName"</span>:<span class="string">"wangWu"</span></span><br><span class="line">				&#125;</span><br><span class="line">			]</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"orderId"</span>:<span class="number">987654323</span>,</span><br><span class="line">			<span class="attr">"travellers"</span>:[]</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">"orderId"</span>:<span class="number">987654323</span></span><br><span class="line">		&#125;</span><br><span class="line">	],</span><br><span class="line">	<span class="attr">"trip"</span>:<span class="string">"三人行"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[zhangSanFirst@qq.com, zhangSanSecond@qq.com, zhangSanFirst@qq.com, zhangSanSecond@qq.com, wangWu@qq.com]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Optional-ofNullable-T-t-和-T-orElse-T-other"><a href="#Optional-ofNullable-T-t-和-T-orElse-T-other" class="headerlink" title="Optional.ofNullable(T t) 和 T orElse(T other)"></a><code>Optional.ofNullable(T t)</code> 和 <code>T orElse(T other)</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">PaymentDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String liqAccountName;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 来款业务：COMPANY-企业来款；OFFLINE-订单线下收款</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String paymentMode;</span><br><span class="line">    <span class="keyword">private</span> List&lt;ClaimDto&gt; claimDto;</span><br><span class="line">    <span class="keyword">private</span> List&lt;OrderClaimDto&gt; orderClaimDto;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PaymentDto</span><span class="params">(Long id, String liqAccountName, String paymentMode, List&lt;ClaimDto&gt; claimDto, List&lt;OrderClaimDto&gt; orderClaimDto)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.liqAccountName = liqAccountName;</span><br><span class="line">        <span class="keyword">this</span>.paymentMode = paymentMode;</span><br><span class="line">        <span class="keyword">this</span>.claimDto = claimDto;</span><br><span class="line">        <span class="keyword">this</span>.orderClaimDto = orderClaimDto;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ClaimDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long paymentId;</span><br><span class="line">    <span class="keyword">private</span> String partnerName;</span><br><span class="line">    <span class="keyword">private</span> Integer amount;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ClaimDto</span><span class="params">(Long paymentId, String partnerName, Integer amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.paymentId = paymentId;</span><br><span class="line">        <span class="keyword">this</span>.partnerName = partnerName;</span><br><span class="line">        <span class="keyword">this</span>.amount = amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">OrderClaimDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long paymentId;</span><br><span class="line">    <span class="keyword">private</span> Integer amount;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">OrderClaimDto</span><span class="params">(Long paymentId, Integer amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.paymentId = paymentId;</span><br><span class="line">        <span class="keyword">this</span>.amount = amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">PaymentApiDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String liqAccountName;</span><br><span class="line">    <span class="keyword">private</span> String paymentMode;</span><br><span class="line">    <span class="keyword">private</span> Long paymentId;</span><br><span class="line">    <span class="keyword">private</span> String partnerName;</span><br><span class="line">    <span class="keyword">private</span> Integer amount;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> List&lt;PaymentDto&gt; <span class="title">getPaymentDto</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;PaymentDto&gt; list = Lists.newArrayList();</span><br><span class="line">    list.add(<span class="keyword">new</span> PaymentDto(<span class="number">123456789L</span>, <span class="string">"收款账户_COMPANY"</span>, <span class="string">"COMPANY"</span>,</span><br><span class="line">            Lists.newArrayList(</span><br><span class="line">                    <span class="keyword">new</span> ClaimDto(<span class="number">123456789L</span>, <span class="string">"企业名称1"</span>, <span class="number">999</span>),</span><br><span class="line">                    <span class="keyword">new</span> ClaimDto(<span class="number">123456789L</span>, <span class="string">"企业名称2"</span>, <span class="number">888</span>),</span><br><span class="line">                    <span class="keyword">new</span> ClaimDto(<span class="number">123456789L</span>, <span class="string">"企业名称3"</span>, <span class="number">777</span>)</span><br><span class="line">            ),</span><br><span class="line">            Lists.newArrayList(</span><br><span class="line">                    <span class="keyword">new</span> OrderClaimDto(<span class="number">123456789L</span>, <span class="number">666</span>),</span><br><span class="line">                    <span class="keyword">new</span> OrderClaimDto(<span class="number">123456789L</span>, <span class="number">555</span>)</span><br><span class="line">            )));</span><br><span class="line">    list.add(<span class="keyword">new</span> PaymentDto(<span class="number">987654321L</span>, <span class="string">"收款账户_OFFLINE"</span>, <span class="string">"OFFLINE"</span>,</span><br><span class="line">            Lists.newArrayList(</span><br><span class="line">                    <span class="keyword">new</span> ClaimDto(<span class="number">987654321L</span>, <span class="string">"企业名称1"</span>, <span class="number">999</span>),</span><br><span class="line">                    <span class="keyword">new</span> ClaimDto(<span class="number">987654321L</span>, <span class="string">"企业名称2"</span>, <span class="number">888</span>)</span><br><span class="line">            ),</span><br><span class="line">            Lists.newArrayList(</span><br><span class="line">                    <span class="keyword">new</span> OrderClaimDto(<span class="number">987654321L</span>, <span class="number">666</span>),</span><br><span class="line">                    <span class="keyword">new</span> OrderClaimDto(<span class="number">987654321L</span>, <span class="number">555</span>)</span><br><span class="line">            )));</span><br><span class="line">    list.add(<span class="keyword">new</span> PaymentDto(<span class="number">888888888L</span>, <span class="string">"收款账户"</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>));</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Optional.ofNullable(T t) 和 T orElse(T other)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t6</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;PaymentDto&gt; paymentDtos = getPaymentDto();</span><br><span class="line">    paymentDtos.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 根据 paymentMode 把 claimDto、orderClaimDto 集合数据查分为单条数据</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    List&lt;PaymentApiDto&gt; collect = paymentDtos</span><br><span class="line">            .stream()</span><br><span class="line">            .map(paymentDto -&gt; &#123;</span><br><span class="line">                PaymentApiDto apiDto = <span class="keyword">new</span> PaymentApiDto();</span><br><span class="line">                apiDto.setId(paymentDto.getId());</span><br><span class="line">                apiDto.setLiqAccountName(paymentDto.getLiqAccountName());</span><br><span class="line">                apiDto.setPaymentMode(paymentDto.getPaymentMode());</span><br><span class="line">                ImmutableList&lt;PaymentApiDto&gt; defaultList = ImmutableList.of(apiDto);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (StringUtils.equals(paymentDto.getPaymentMode(), <span class="string">"COMPANY"</span>)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> Optional.ofNullable(paymentDto.getClaimDto())</span><br><span class="line">                            .map(claimDtos -&gt; claimDtos.stream()</span><br><span class="line">                                    .map(claimDto -&gt; &#123;</span><br><span class="line">                                        PaymentApiDto paymentApiDto = <span class="keyword">new</span> PaymentApiDto();</span><br><span class="line">                                        paymentApiDto.setId(paymentDto.getId());</span><br><span class="line">                                        paymentApiDto.setLiqAccountName(paymentDto.getLiqAccountName());</span><br><span class="line">                                        paymentApiDto.setPaymentMode(paymentDto.getPaymentMode());</span><br><span class="line">                                        paymentApiDto.setPaymentId(claimDto.getPaymentId());</span><br><span class="line">                                        paymentApiDto.setPartnerName(claimDto.getPartnerName());</span><br><span class="line">                                        paymentApiDto.setAmount(claimDto.getAmount());</span><br><span class="line">                                        <span class="keyword">return</span> paymentApiDto;</span><br><span class="line">                                    &#125;)</span><br><span class="line">                                    .collect(Collectors.toList())</span><br><span class="line">                            )</span><br><span class="line">                            .orElse(defaultList);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (StringUtils.equals(paymentDto.getPaymentMode(), <span class="string">"OFFLINE"</span>)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> Optional.ofNullable(paymentDto.getOrderClaimDto())</span><br><span class="line">                            .map(orderClaimDtos -&gt; orderClaimDtos.stream()</span><br><span class="line">                                    .map(orderClaimDto -&gt; &#123;</span><br><span class="line">                                        PaymentApiDto paymentApiDto = <span class="keyword">new</span> PaymentApiDto();</span><br><span class="line">                                        paymentApiDto.setId(paymentDto.getId());</span><br><span class="line">                                        paymentApiDto.setLiqAccountName(paymentDto.getLiqAccountName());</span><br><span class="line">                                        paymentApiDto.setPaymentMode(paymentDto.getPaymentMode());</span><br><span class="line">                                        paymentApiDto.setAmount(orderClaimDto.getAmount());</span><br><span class="line">                                        <span class="keyword">return</span> paymentApiDto;</span><br><span class="line">                                    &#125;)</span><br><span class="line">                                    .collect(Collectors.toList())</span><br><span class="line">                            )</span><br><span class="line">                            .orElse(defaultList);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> defaultList;</span><br><span class="line">            &#125;)</span><br><span class="line">            .flatMap(Collection::stream)</span><br><span class="line">            .collect(Collectors.toList());</span><br><span class="line">    collect.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">LambdaTest.PaymentDto(<span class="attribute">id</span>=123456789, <span class="attribute">liqAccountName</span>=收款账户_COMPANY, <span class="attribute">paymentMode</span>=COMPANY, claimDto=[LambdaTest.ClaimDto(<span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称1, <span class="attribute">amount</span>=999), LambdaTest.ClaimDto(<span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称2, <span class="attribute">amount</span>=888), LambdaTest.ClaimDto(<span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称3, <span class="attribute">amount</span>=777)], orderClaimDto=[LambdaTest.OrderClaimDto(<span class="attribute">paymentId</span>=123456789, <span class="attribute">amount</span>=666), LambdaTest.OrderClaimDto(<span class="attribute">paymentId</span>=123456789, <span class="attribute">amount</span>=555)])</span><br><span class="line">LambdaTest.PaymentDto(<span class="attribute">id</span>=987654321, <span class="attribute">liqAccountName</span>=收款账户_OFFLINE, <span class="attribute">paymentMode</span>=OFFLINE, claimDto=[LambdaTest.ClaimDto(<span class="attribute">paymentId</span>=987654321, <span class="attribute">partnerName</span>=企业名称1, <span class="attribute">amount</span>=999), LambdaTest.ClaimDto(<span class="attribute">paymentId</span>=987654321, <span class="attribute">partnerName</span>=企业名称2, <span class="attribute">amount</span>=888)], orderClaimDto=[LambdaTest.OrderClaimDto(<span class="attribute">paymentId</span>=987654321, <span class="attribute">amount</span>=666), LambdaTest.OrderClaimDto(<span class="attribute">paymentId</span>=987654321, <span class="attribute">amount</span>=555)])</span><br><span class="line">LambdaTest.PaymentDto(<span class="attribute">id</span>=888888888, <span class="attribute">liqAccountName</span>=收款账户, <span class="attribute">paymentMode</span>=<span class="literal">null</span>, <span class="attribute">claimDto</span>=<span class="literal">null</span>, <span class="attribute">orderClaimDto</span>=<span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=123456789, <span class="attribute">liqAccountName</span>=收款账户_COMPANY, <span class="attribute">paymentMode</span>=COMPANY, <span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称1, <span class="attribute">amount</span>=999)</span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=123456789, <span class="attribute">liqAccountName</span>=收款账户_COMPANY, <span class="attribute">paymentMode</span>=COMPANY, <span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称2, <span class="attribute">amount</span>=888)</span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=123456789, <span class="attribute">liqAccountName</span>=收款账户_COMPANY, <span class="attribute">paymentMode</span>=COMPANY, <span class="attribute">paymentId</span>=123456789, <span class="attribute">partnerName</span>=企业名称3, <span class="attribute">amount</span>=777)</span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=987654321, <span class="attribute">liqAccountName</span>=收款账户_OFFLINE, <span class="attribute">paymentMode</span>=OFFLINE, <span class="attribute">paymentId</span>=<span class="literal">null</span>, <span class="attribute">partnerName</span>=<span class="literal">null</span>, <span class="attribute">amount</span>=666)</span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=987654321, <span class="attribute">liqAccountName</span>=收款账户_OFFLINE, <span class="attribute">paymentMode</span>=OFFLINE, <span class="attribute">paymentId</span>=<span class="literal">null</span>, <span class="attribute">partnerName</span>=<span class="literal">null</span>, <span class="attribute">amount</span>=555)</span><br><span class="line">LambdaTest.PaymentApiDto(<span class="attribute">id</span>=888888888, <span class="attribute">liqAccountName</span>=收款账户, <span class="attribute">paymentMode</span>=<span class="literal">null</span>, <span class="attribute">paymentId</span>=<span class="literal">null</span>, <span class="attribute">partnerName</span>=<span class="literal">null</span>, <span class="attribute">amount</span>=<span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+
+<p>案例源码：<a href="https://github.com/V-Vincen/jdk_18" target="_blank" rel="noopener">https://github.com/V-Vincen/jdk_18</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Reflect-1-反射/" data-toggle="tooltip" data-placement="top" title="[Reflect] 1 反射">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/JSON-2-FastJson-的用法/" data-toggle="tooltip" data-placement="top" title="[JSON] 2 FastJson 的用法">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[JDK8] 6 Lambda 表达式练习&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/JDK8-6-Lambda-表达式练习/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Tue Apr 07 2020 18:30:29 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#sorted-四种排序"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">sorted() 四种排序</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#List-转-Map"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">List 转 Map</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#map-映射"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">map 映射</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#对象中-String-类型属性为空的字段赋值为-null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">对象中 String 类型属性为空的字段赋值为 null</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#BiConsumer-lt-T-U-gt"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">BiConsumer&lt;T, U&gt;</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#T-reduce-T-identity-BinaryOperator-lt-T-gt-accumulator"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#allMatch-Predicate-p"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">allMatch(Predicate p)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#groupingBy-Function-f"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">groupingBy(Function f)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#flatMap-Function-f"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">flatMap(Function f)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Optional-ofNullable-T-t-和-T-orElse-T-other"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">Optional.ofNullable(T t) 和 T orElse(T other)</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JDK8" title="JDK8">JDK8</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/JDK8-6-Lambda-表达式练习/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

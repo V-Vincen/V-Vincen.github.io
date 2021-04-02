@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Utils-Commons-IO-3-IOUtils/">
+  <title>
+    
+      [Utils - Commons IO] 3 IOUtils - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+              
+            </div>
+            <h1>[Utils - Commons IO] 3 IOUtils</h1>
+            <h2 class="subheading">This package defines utility classes for working with streams, readers, writers and files...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-09-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">15</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.8k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>概述<br>Apache commons 包括 Apache <code>commons-io</code>。它是一个实用程序库，用于帮助实现各种 IO 功能。有很多实用程序类，<code>IOUtils</code> 就是其中之一。在这篇文章中，我们将了解 Apache <code>commons-io</code> 的 <code>IOUtils</code> 类和其中的静态实用程序方法。</p>
+<p>官网地址：<a href="http://commons.apache.org/proper/commons-io/" target="_blank" rel="noopener">http://commons.apache.org/proper/commons-io/</a></p>
+<p>下载：<a href="http://commons.apache.org/proper/commons-io/download_io.cgi" target="_blank" rel="noopener">http://commons.apache.org/proper/commons-io/download_io.cgi</a></p>
+<h2 id="maven-依赖"><a href="#maven-依赖" class="headerlink" title="maven 依赖"></a><code>maven</code> 依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常用的静态变量"><a href="#常用的静态变量" class="headerlink" title="常用的静态变量"></a>常用的静态变量</h2><p>在 <code>IOUtils</code> 中还是有很多常用的一些变量的，比如换行符等等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span> DIR_SEPARATOR_UNIX = <span class="string">'/'</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span> DIR_SEPARATOR_WINDOWS = <span class="string">'\\'</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span> DIR_SEPARATOR;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LINE_SEPARATOR_UNIX = <span class="string">"\n"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LINE_SEPARATOR_WINDOWS = <span class="string">"\r\n"</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String LINE_SEPARATOR;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    DIR_SEPARATOR = File.separatorChar;</span><br><span class="line">    StringBuilderWriter buf = <span class="keyword">new</span> StringBuilderWriter(<span class="number">4</span>);</span><br><span class="line">    PrintWriter out = <span class="keyword">new</span> PrintWriter(buf);</span><br><span class="line">    out.println();</span><br><span class="line">    LINE_SEPARATOR = buf.toString();</span><br><span class="line">    out.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><p>我将主要使用一个名为 sample-file.txt，假设其中包含以下数据。它表示学生的 id、学生姓名和总百分比。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>-Will<span class="number">-90</span></span><br><span class="line"><span class="number">2</span>-James<span class="number">-87</span></span><br><span class="line"><span class="number">3</span>-Kyle<span class="number">-67</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="buffer"><a href="#buffer" class="headerlink" title="buffer"></a><code>buffer</code></h3><p><code>buffer</code> 方法创建 Buffered Stream、Buffered Reader、Buffered Writer。</p>
+<p><code>buffer(InputStream inputStream)</code>：接受 InputStream 并返回 BufferedInputStream。</p>
+<p><code>buffer(OutputStream outputStream)</code>：接受 OutputStream 并返回缓冲的 OutputStream。</p>
+<p><code>buffer(Reader reader)</code>：获取 Reader 并返回 BufferedReader。</p>
+<p><code>buffer(Writer writer)</code>：接受 Writer 并返回 BufferedWriter。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">buffer(InputStream inputStream)</span><br><span class="line">buffer(InputStream inputStream, <span class="keyword">int</span> size)</span><br><span class="line">buffer(OutputStream outputStream)</span><br><span class="line">buffer(OutputStream outputStream, <span class="keyword">int</span> size)</span><br><span class="line">buffer(Reader reader)</span><br><span class="line">buffer(Reader reader, <span class="keyword">int</span> size)</span><br><span class="line">buffer(Writer writer)</span><br><span class="line">buffer(Writer writer, <span class="keyword">int</span> size)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Buffer</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * buffer 方法创建 Buffered Stream、Buffered Reader、Buffered Writer。</span></span><br><span class="line"><span class="comment">     * buffer(InputStream inputStream)：接受 InputStream 并返回 BufferedInputStream。</span></span><br><span class="line"><span class="comment">     * buffer(OutputStream outputStream)：接受 OutputStream 并返回缓冲的 OutputStream。</span></span><br><span class="line"><span class="comment">     * buffer(Reader reader)：获取 Reader 并返回 BufferedReader。</span></span><br><span class="line"><span class="comment">     * buffer(Writer writer)：接受 Writer 并返回 BufferedWriter。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//InputStream</span></span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    BufferedInputStream bufferedInputStream = IOUtils.buffer(inputStream);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//We can test the contents by printing it as a String as shown below</span></span><br><span class="line">    System.out.println(IOUtils.toString(bufferedInputStream, StandardCharsets.UTF_8));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Reader</span></span><br><span class="line">    Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    BufferedReader bufferedReader = IOUtils.buffer(reader);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//OutputStream</span></span><br><span class="line">    OutputStream outputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    BufferedOutputStream bufferedOutputStream = IOUtils.buffer(outputStream);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Writer</span></span><br><span class="line">    Writer writer = <span class="keyword">new</span> FileWriter(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    BufferedWriter bufferedWriter = IOUtils.buffer(writer);</span><br><span class="line">    <span class="comment">//Can write into the output stream</span></span><br><span class="line">    bufferedWriter.write(<span class="string">'a'</span>);</span><br><span class="line">    bufferedWriter.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="copy"><a href="#copy" class="headerlink" title="copy"></a><code>copy</code></h3><p>这个方法可以拷贝流，算是这个工具类中使用最多的方法了。支持多种数据间的拷贝。</p>
+<p><code>copy</code>：内部使用的其实还是 <code>copyLarge</code> 方法。因为 <code>copy</code> 能拷贝 <code>Integer.MAX_VALUE</code> 的字节数据，即 <code>2^31-1</code>。</p>
+<p><code>copyLarge</code>：这个方法适合拷贝较大的数据流，比如2G以上。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">copy(InputStream input, OutputStream output)</span><br><span class="line">copy(InputStream input, Writer output)</span><br><span class="line">copy(InputStream input, Writer output, Charset inputCharset)</span><br><span class="line">copy(InputStream input, Writer output, String inputCharsetName)</span><br><span class="line">copy(Reader input, OutputStream output)</span><br><span class="line">copy(Reader input, OutputStream output, Charset outputCharset)</span><br><span class="line">copy(Reader input, OutputStream output, String outputCharsetName)</span><br><span class="line">copy(Reader input, Writer output)</span><br><span class="line">copyLarge(InputStream input, OutputStream output)</span><br><span class="line">copyLarge(InputStream input, OutputStream output, <span class="keyword">byte</span>[] buffer)</span><br><span class="line">copyLarge(InputStream input, OutputStream output, <span class="keyword">long</span> inputOffset, <span class="keyword">long</span> length)</span><br><span class="line">copyLarge(InputStream input, OutputStream output, <span class="keyword">long</span> inputOffset, <span class="keyword">long</span> length, <span class="keyword">byte</span>[] buffer)</span><br><span class="line">copyLarge(Reader input, Writer output)</span><br><span class="line">copyLarge(Reader input, Writer output, <span class="keyword">char</span>[] buffer)</span><br><span class="line">copyLarge(Reader input, Writer output, <span class="keyword">long</span> inputOffset, <span class="keyword">long</span> length)</span><br><span class="line">copyLarge(Reader input, Writer output, <span class="keyword">long</span> inputOffset, <span class="keyword">long</span> length, <span class="keyword">char</span>[] buffer)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyAndCopyLarge</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    OutputStream outputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-output-file.txt"</span>);</span><br><span class="line">    <span class="keyword">int</span> numberOfBytesCopied = IOUtils.copy(inputStream, outputStream);</span><br><span class="line">    System.out.println(numberOfBytesCopied);<span class="comment">//30</span></span><br><span class="line">    outputStream.close();</span><br><span class="line"></span><br><span class="line">    Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    Writer writer = <span class="keyword">new</span> FileWriter(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-output-file.txt"</span>, <span class="keyword">false</span>);<span class="comment">//boolean append：是否继续追加</span></span><br><span class="line">    <span class="keyword">int</span> numberOfCharsRead = IOUtils.copy(reader, writer);</span><br><span class="line">    System.out.println(numberOfCharsRead);<span class="comment">//30</span></span><br><span class="line">    writer.close();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> numberOfBytesCopied2 = IOUtils.copyLarge(inputStream, outputStream);</span><br><span class="line">    System.out.println(numberOfBytesCopied2); <span class="comment">//30</span></span><br><span class="line">    outputStream.close();</span><br><span class="line">    <span class="keyword">long</span> numberOfCharsRead2 = IOUtils.copyLarge(reader, writer);</span><br><span class="line">    System.out.println(numberOfCharsRead2); <span class="comment">//30</span></span><br><span class="line">    writer.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="read、readFully、readLines"><a href="#read、readFully、readLines" class="headerlink" title="read、readFully、readLines"></a><code>read</code>、<code>readFully</code>、<code>readLines</code></h3><p><code>read</code>：从一个流中读取内容。</p>
+<p><code>readFully</code>：这个方法会读取指定长度的流，如果读取的长度不够，就会抛出异常。</p>
+<p><code>readLines</code>：可以从流中读取内容，并转换为 <code>List&lt;String&gt;</code> 集合。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">read(InputStream input, <span class="keyword">byte</span>[] buffer)</span><br><span class="line">read(InputStream input, <span class="keyword">byte</span>[] buffer, <span class="keyword">int</span> offset, <span class="keyword">int</span> length)</span><br><span class="line">read(Reader input, <span class="keyword">char</span>[] buffer)</span><br><span class="line">read(Reader input, <span class="keyword">char</span>[] buffer, <span class="keyword">int</span> offset, <span class="keyword">int</span> length)</span><br><span class="line">readFully(InputStream input, <span class="keyword">byte</span>[] buffer)</span><br><span class="line">readFully(InputStream input, <span class="keyword">byte</span>[] buffer, <span class="keyword">int</span> offset, <span class="keyword">int</span> length)</span><br><span class="line">readFully(Reader input, <span class="keyword">char</span>[] buffer)</span><br><span class="line">readFully(Reader input, <span class="keyword">char</span>[] buffer, <span class="keyword">int</span> offset, <span class="keyword">int</span> length)</span><br><span class="line">readLines(InputStream input)</span><br><span class="line">readLines(InputStream input, Charset charset)</span><br><span class="line">readLines(InputStream input, String charsetName)</span><br><span class="line">readLines(Reader input)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * read：从一个流中读取内容。</span></span><br><span class="line"><span class="comment">         * readFully：这个方法会读取指定长度的流，如果读取的长度不够，就会抛出异常。</span></span><br><span class="line"><span class="comment">         * readLines：可以从流中读取内容，并转换为 List&lt;String&gt; 集合。</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * read(InputStream input, byte[] buffer)</span></span><br><span class="line"><span class="comment">         * read(InputStream input, byte[] buffer, int offset, int length)</span></span><br><span class="line"><span class="comment">         * read(Reader input, char[] buffer)</span></span><br><span class="line"><span class="comment">         * read(Reader input, char[] buffer, int offset, int length)</span></span><br><span class="line"><span class="comment">         * readFully(InputStream input, byte[] buffer)</span></span><br><span class="line"><span class="comment">         * readFully(InputStream input, byte[] buffer, int offset, int length)</span></span><br><span class="line"><span class="comment">         * readFully(Reader input, char[] buffer)</span></span><br><span class="line"><span class="comment">         * readFully(Reader input, char[] buffer, int offset, int length)</span></span><br><span class="line"><span class="comment">         * readLines(InputStream input)</span></span><br><span class="line"><span class="comment">         * readLines(InputStream input, Charset charset)</span></span><br><span class="line"><span class="comment">         * readLines(InputStream input, String charsetName)</span></span><br><span class="line"><span class="comment">         * readLines(Reader input)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">7</span>]; <span class="comment">//Creating a byte array of size 7.</span></span><br><span class="line">        <span class="keyword">int</span> numberOfBytesRead = IOUtils.read(inputStream, bytes);</span><br><span class="line">        System.out.println(numberOfBytesRead);<span class="comment">//7</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(bytes)); <span class="comment">//1-Will-</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] bytes2 = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">7</span>]; <span class="comment">//Creating a byte array of size 7.</span></span><br><span class="line">        <span class="keyword">int</span> numberOfBytesRead2 = IOUtils.read(inputStream, bytes, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line">        System.out.println(numberOfBytesRead2);<span class="comment">//5</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(bytes2)); <span class="comment">//1-Wil</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">        <span class="keyword">char</span>[] chars = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">7</span>];</span><br><span class="line">        <span class="keyword">int</span> numberOfCharsRead = IOUtils.read(reader, chars);</span><br><span class="line">        System.out.println(numberOfCharsRead);<span class="comment">//5</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(chars)); <span class="comment">//1-Wil</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">char</span>[] chars2 = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">7</span>];</span><br><span class="line">        <span class="keyword">int</span> numberOfCharsRead2 = IOUtils.read(reader, chars, <span class="number">0</span>, <span class="number">5</span>);</span><br><span class="line">        System.out.println(numberOfCharsRead2);<span class="comment">//5</span></span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(chars2)); <span class="comment">//1-Wil</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] bytesReadFully = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">4</span>];</span><br><span class="line">        <span class="comment">//但是如果读取20个byte，就会出错了。java.io.EOFException: Length to read: 20 actual: 11</span></span><br><span class="line"><span class="comment">//        byte[] bytesReadFully = new byte[20];</span></span><br><span class="line">        InputStream is = IOUtils.toInputStream(<span class="string">"hello world"</span>, StandardCharsets.UTF_8);</span><br><span class="line">        IOUtils.readFully(is, bytesReadFully);</span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(bytesReadFully));<span class="comment">//hell</span></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        InputStream inputStreamReadLins = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">        List&lt;String&gt; lines = IOUtils.readLines(inputStreamReadLins, StandardCharsets.UTF_8);</span><br><span class="line">        lines.forEach(System.out::println);<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="skip-和-skipFully"><a href="#skip-和-skipFully" class="headerlink" title="skip 和 skipFully"></a><code>skip</code> 和 <code>skipFully</code></h3><p><code>skip</code>：跳过指定长度的流。</p>
+<p><code>skipFully</code>：这个方法类似 skip，只是如果忽略的长度大于现有的长度，就会抛出异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">skip(InputStream input, <span class="keyword">long</span> toSkip)</span><br><span class="line">skip(ReadableByteChannel input, <span class="keyword">long</span> toSkip)</span><br><span class="line">skip(Reader input, <span class="keyword">long</span> toSkip)</span><br><span class="line">skipFully(InputStream input, <span class="keyword">long</span> toSkip)</span><br><span class="line">skipFully(ReadableByteChannel input, <span class="keyword">long</span> toSkip)</span><br><span class="line">skipFully(Reader input, <span class="keyword">long</span> toSkip)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">skipAndSkipFully</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * skip：跳过指定长度的流。</span></span><br><span class="line"><span class="comment">     * skipFully：这个方法类似 skip，只是如果忽略的长度大于现有的长度，就会抛出异常。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * skip(InputStream input, long toSkip)</span></span><br><span class="line"><span class="comment">     * skip(ReadableByteChannel input, long toSkip)</span></span><br><span class="line"><span class="comment">     * skip(Reader input, long toSkip)</span></span><br><span class="line"><span class="comment">     * skipFully(InputStream input, long toSkip)</span></span><br><span class="line"><span class="comment">     * skipFully(ReadableByteChannel input, long toSkip)</span></span><br><span class="line"><span class="comment">     * skipFully(Reader input, long toSkip)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">long</span> numBytesSkipped = IOUtils.skip(inputStream, <span class="number">5</span>);</span><br><span class="line">    System.out.println(numBytesSkipped);<span class="comment">//5</span></span><br><span class="line">    System.out.println(IOUtils.toString(inputStream, StandardCharsets.UTF_8));<span class="comment">//l-90 2-James-87 3-Kyle-67</span></span><br><span class="line"></span><br><span class="line">    InputStream inputStreamSkipFully = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    IOUtils.skipFully(inputStream, <span class="number">50</span>);</span><br><span class="line">    System.out.println(IOUtils.toString(inputStreamSkipFully, StandardCharsets.UTF_8));<span class="comment">//java.io.EOFException: Bytes to skip: 50 actual: 0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toBufferedInputStream-和-toBufferedReader"><a href="#toBufferedInputStream-和-toBufferedReader" class="headerlink" title="toBufferedInputStream 和 toBufferedReader"></a><code>toBufferedInputStream</code> 和 <code>toBufferedReader</code></h3><p><code>toBufferedInputStream</code>：把字节输入流的全部内容放在另一个输入流中。</p>
+<p><code>toBufferedReader</code>：返回缓存字符输入流。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">toBufferedInputStream(InputStream input)</span><br><span class="line">toBufferedInputStream(InputStream input, <span class="keyword">int</span> size)</span><br><span class="line">toBufferedReader(Reader reader)</span><br><span class="line">toBufferedReader(Reader reader, <span class="keyword">int</span> size)</span><br></pre></td></tr></table></figure>
+
+<h3 id="toByteArray"><a href="#toByteArray" class="headerlink" title="toByteArray"></a><code>toByteArray</code></h3><p><code>toByteArray</code>：返回字节数组。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">toByteArray(InputStream input)</span><br><span class="line">toByteArray(InputStream input, <span class="keyword">int</span> size)</span><br><span class="line">toByteArray(InputStream input, <span class="keyword">long</span> size)</span><br><span class="line">toByteArray(Reader input)</span><br><span class="line">toByteArray(Reader input, Charset charset)</span><br><span class="line">toByteArray(Reader input, String charsetName)</span><br><span class="line">toByteArray(String input)</span><br><span class="line">toByteArray(URI uri)</span><br><span class="line">toByteArray(URL url)</span><br><span class="line">toByteArray(URLConnection urlConn)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toByteArray</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * toByteArray：返回字节数组。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * toByteArray(InputStream input)</span></span><br><span class="line"><span class="comment">     * toByteArray(InputStream input, int size)</span></span><br><span class="line"><span class="comment">     * toByteArray(InputStream input, long size)</span></span><br><span class="line"><span class="comment">     * toByteArray(Reader input)</span></span><br><span class="line"><span class="comment">     * toByteArray(Reader input, Charset charset)</span></span><br><span class="line"><span class="comment">     * toByteArray(Reader input, String charsetName)</span></span><br><span class="line"><span class="comment">     * toByteArray(String input)</span></span><br><span class="line"><span class="comment">     * toByteArray(URI uri)</span></span><br><span class="line"><span class="comment">     * toByteArray(URL url)</span></span><br><span class="line"><span class="comment">     * toByteArray(URLConnection urlConn)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] bytes = IOUtils.toByteArray(inputStream);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(bytes));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] bytes2 = IOUtils.toByteArray(reader, StandardCharsets.UTF_8);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(bytes2));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toCharArray"><a href="#toCharArray" class="headerlink" title="toCharArray"></a><code>toCharArray</code></h3><p><code>toCharArray</code>：返回字符数组。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">toCharArray(InputStream is)</span><br><span class="line">toCharArray(InputStream is, Charset charset)</span><br><span class="line">toCharArray(InputStream is, String charsetName)</span><br><span class="line">toCharArray(Reader input)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toCharArray</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * toCharArray：返回字符数组。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * toCharArray(InputStream is)</span></span><br><span class="line"><span class="comment">     * toCharArray(InputStream is, Charset charset)</span></span><br><span class="line"><span class="comment">     * toCharArray(InputStream is, String charsetName)</span></span><br><span class="line"><span class="comment">     * toCharArray(Reader input)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">char</span>[] chars = IOUtils.toCharArray(inputStream, StandardCharsets.UTF_8);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(chars));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">char</span>[] chars2 = IOUtils.toCharArray(reader);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(chars2));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toInputStream"><a href="#toInputStream" class="headerlink" title="toInputStream"></a><code>toInputStream</code></h3><p><code>toInputStream</code>：返回字节输入流。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">toInputStream(CharSequence input)</span><br><span class="line">toInputStream(CharSequence input, Charset charset)</span><br><span class="line">toInputStream(CharSequence input, String charsetName)</span><br><span class="line">toInputStream(String input)</span><br><span class="line">toInputStream(String input, Charset charset)</span><br><span class="line">toInputStream(String input, String charsetName)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toInputStream</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * toInputStream：返回字节输入流。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * toInputStream(CharSequence input)</span></span><br><span class="line"><span class="comment">     * toInputStream(CharSequence input, Charset charset)</span></span><br><span class="line"><span class="comment">     * toInputStream(CharSequence input, String charsetName)</span></span><br><span class="line"><span class="comment">     * toInputStream(String input)</span></span><br><span class="line"><span class="comment">     * toInputStream(String input, Charset charset)</span></span><br><span class="line"><span class="comment">     * toInputStream(String input, String charsetName)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream generatedInputStream = IOUtils.toInputStream(<span class="string">"Vincent is so handsome!!!"</span>, StandardCharsets.UTF_8);</span><br><span class="line">    System.out.println(IOUtils.toString(generatedInputStream, StandardCharsets.UTF_8));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a><code>toString</code></h3><p><code>toString</code>：返回字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">toString(<span class="keyword">byte</span>[] input)</span><br><span class="line">toString(<span class="keyword">byte</span>[] input, String charsetName)</span><br><span class="line">toString(InputStream input)</span><br><span class="line">toString(InputStream input, Charset charset)</span><br><span class="line">toString(InputStream input, String charsetName)</span><br><span class="line">toString(Reader input)</span><br><span class="line">toString(URI uri)</span><br><span class="line">toString(URI uri, Charset encoding)</span><br><span class="line">toString(URI uri, String charsetName)</span><br><span class="line">toString(URL url)</span><br><span class="line">toString(URL url, Charset encoding)</span><br><span class="line">toString(URL url, String charsetName)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">staticToString</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * toString：返回字符串。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * toString(byte[] input)</span></span><br><span class="line"><span class="comment">     * toString(byte[] input, String charsetName)</span></span><br><span class="line"><span class="comment">     * toString(InputStream input)</span></span><br><span class="line"><span class="comment">     * toString(InputStream input, Charset charset)</span></span><br><span class="line"><span class="comment">     * toString(InputStream input, String charsetName)</span></span><br><span class="line"><span class="comment">     * toString(Reader input)</span></span><br><span class="line"><span class="comment">     * toString(URI uri)</span></span><br><span class="line"><span class="comment">     * toString(URI uri, Charset encoding)</span></span><br><span class="line"><span class="comment">     * toString(URI uri, String charsetName)</span></span><br><span class="line"><span class="comment">     * toString(URL url)</span></span><br><span class="line"><span class="comment">     * toString(URL url, Charset encoding)</span></span><br><span class="line"><span class="comment">     * toString(URL url, String charsetName)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    System.out.println(IOUtils.toString(inputStream, StandardCharsets.UTF_8));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line"></span><br><span class="line">    Reader reader = <span class="keyword">new</span> FileReader(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    System.out.println(IOUtils.toString(reader));<span class="comment">//1-Will-90 2-James-87 3-Kyle-67</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="write、writeChunked、writeLines"><a href="#write、writeChunked、writeLines" class="headerlink" title="write、writeChunked、writeLines"></a><code>write</code>、<code>writeChunked</code>、<code>writeLines</code></h3><p><code>write</code>：把数据写入到输出流中。</p>
+<p><code>writeChunked</code>：把字节或者字符数组，用分块写入的方式，写入到另一个输出流。</p>
+<p><code>writeLines</code>：把 List<string> 的集合写入到输出流中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">write(<span class="keyword">byte</span>[] data, OutputStream output)</span><br><span class="line">write(<span class="keyword">byte</span>[] data, Writer output)</span><br><span class="line">write(<span class="keyword">byte</span>[] data, Writer output, Charset charset)</span><br><span class="line">write(<span class="keyword">byte</span>[] data, Writer output, String charsetName)</span><br><span class="line">write(<span class="keyword">char</span>[] data, OutputStream output)</span><br><span class="line">write(<span class="keyword">char</span>[] data, OutputStream output, Charset charset)</span><br><span class="line">write(<span class="keyword">char</span>[] data, OutputStream output, String charsetName)</span><br><span class="line">write(<span class="keyword">char</span>[] data, Writer output)</span><br><span class="line">write(CharSequence data, OutputStream output)</span><br><span class="line">write(CharSequence data, OutputStream output, Charset charset)</span><br><span class="line">write(CharSequence data, OutputStream output, String charsetName)</span><br><span class="line">write(CharSequence data, Writer output)</span><br><span class="line">write(StringBuffer data, OutputStream output)</span><br><span class="line">write(StringBuffer data, OutputStream output, String charsetName)</span><br><span class="line">write(StringBuffer data, Writer output)</span><br><span class="line">write(String data, OutputStream output)</span><br><span class="line">write(String data, OutputStream output, Charset charset)</span><br><span class="line">write(String data, OutputStream output, String charsetName)</span><br><span class="line">write(String data, Writer output)</span><br><span class="line">writeChunked(<span class="keyword">byte</span>[] data, OutputStream output)</span><br><span class="line">writeChunked(<span class="keyword">char</span>[] data, Writer output)</span><br><span class="line">writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output)</span><br><span class="line">writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output, Charset charset)</span><br><span class="line">writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output, String charsetName)</span><br><span class="line">writeLines(Collection&lt;?&gt; lines, String lineEnding, Writer writer)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writerXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * write：把数据写入到输出流中。</span></span><br><span class="line"><span class="comment">     * writeChunked：把字节或者字符数组，用分块写入的方式，写入到另一个输出流。</span></span><br><span class="line"><span class="comment">     * writeLines：把 List&lt;string&gt; 的集合写入到输出流中。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * write(byte[] data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * write(byte[] data, Writer output)</span></span><br><span class="line"><span class="comment">     * write(byte[] data, Writer output, Charset charset)</span></span><br><span class="line"><span class="comment">     * write(byte[] data, Writer output, String charsetName)</span></span><br><span class="line"><span class="comment">     * write(char[] data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * write(char[] data, OutputStream output, Charset charset)</span></span><br><span class="line"><span class="comment">     * write(char[] data, OutputStream output, String charsetName)</span></span><br><span class="line"><span class="comment">     * write(char[] data, Writer output)</span></span><br><span class="line"><span class="comment">     * write(CharSequence data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * write(CharSequence data, OutputStream output, Charset charset)</span></span><br><span class="line"><span class="comment">     * write(CharSequence data, OutputStream output, String charsetName)</span></span><br><span class="line"><span class="comment">     * write(CharSequence data, Writer output)</span></span><br><span class="line"><span class="comment">     * write(StringBuffer data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * write(StringBuffer data, OutputStream output, String charsetName)</span></span><br><span class="line"><span class="comment">     * write(StringBuffer data, Writer output)</span></span><br><span class="line"><span class="comment">     * write(String data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * write(String data, OutputStream output, Charset charset)</span></span><br><span class="line"><span class="comment">     * write(String data, OutputStream output, String charsetName)</span></span><br><span class="line"><span class="comment">     * write(String data, Writer output)</span></span><br><span class="line"><span class="comment">     * writeChunked(byte[] data, OutputStream output)</span></span><br><span class="line"><span class="comment">     * writeChunked(char[] data, Writer output)</span></span><br><span class="line"><span class="comment">     * writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output)</span></span><br><span class="line"><span class="comment">     * writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output, Charset charset)</span></span><br><span class="line"><span class="comment">     * writeLines(Collection&lt;?&gt; lines, String lineEnding, OutputStream output, String charsetName)</span></span><br><span class="line"><span class="comment">     * writeLines(Collection&lt;?&gt; lines, String lineEnding, Writer writer)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    OutputStream outputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-output-file.txt"</span>);</span><br><span class="line">    IOUtils.write(<span class="string">"data1"</span>, outputStream, StandardCharsets.UTF_8);</span><br><span class="line">    IOUtils.write(System.lineSeparator(), outputStream, StandardCharsets.UTF_8);</span><br><span class="line">    IOUtils.write(<span class="string">"data2"</span>, outputStream, StandardCharsets.UTF_8);</span><br><span class="line">    outputStream.close();</span><br><span class="line"></span><br><span class="line">    Writer writer = <span class="keyword">new</span> FileWriter(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-output-file.txt"</span>);</span><br><span class="line">    IOUtils.write(<span class="string">"data3"</span>, writer);</span><br><span class="line">    IOUtils.write(System.lineSeparator(), writer);</span><br><span class="line">    IOUtils.write(<span class="string">"data4"</span>, writer);</span><br><span class="line">    IOUtils.write(System.lineSeparator(), writer);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; list = Lists.newArrayList(<span class="string">"hello"</span>, <span class="string">"list"</span>, <span class="string">"to"</span>, <span class="string">"file"</span>);</span><br><span class="line">    IOUtils.writeLines(list, IOUtils.LINE_SEPARATOR, writer);</span><br><span class="line">    writer.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="lineIterator"><a href="#lineIterator" class="headerlink" title="lineIterator"></a><code>lineIterator</code></h3><p><code>lineIterator</code>：读取流，返回迭代器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lineIterator(InputStream input, Charset charset)</span><br><span class="line">lineIterator(InputStream input, String charsetName)</span><br><span class="line">lineIterator(Reader reader)</span><br></pre></td></tr></table></figure>
+
+<h3 id="contentEquals-和-contentEqualsIgnoreEOL"><a href="#contentEquals-和-contentEqualsIgnoreEOL" class="headerlink" title="contentEquals 和 contentEqualsIgnoreEOL"></a><code>contentEquals</code> 和 <code>contentEqualsIgnoreEOL</code></h3><p><code>contentEquals</code>：比较两个输入流。</p>
+<p><code>contentEqualsIgnoreEOL</code>：比较两个流，忽略换行符。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">contentEquals(InputStream input1, InputStream input2)</span><br><span class="line">contentEquals(Reader input1, Reader input2)</span><br><span class="line">contentEqualsIgnoreEOL(Reader input1, Reader input2)</span><br></pre></td></tr></table></figure>
+
+<h3 id="close-和-closeQuietly"><a href="#close-和-closeQuietly" class="headerlink" title="close 和 closeQuietly"></a><code>close</code> 和 <code>closeQuietly</code></h3><p><code>close</code>：关闭 URL 连接。</p>
+<p><code>closeQuietly</code>：忽略 null 和异常，关闭某个流。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">close(URLConnection conn)</span><br><span class="line">closeQuietly(Closeable... closeables)</span><br><span class="line">closeQuietly(Closeable closeable)</span><br><span class="line">closeQuietly(Closeable closeable, Consumer&lt;IOException&gt; consumer)</span><br><span class="line">closeQuietly(InputStream input)</span><br><span class="line">closeQuietly(OutputStream output)</span><br><span class="line">closeQuietly(Reader input)</span><br><span class="line">closeQuietly(Selector selector)</span><br><span class="line">closeQuietly(ServerSocket serverSocket)</span><br><span class="line">closeQuietly(Socket socket)</span><br><span class="line">closeQuietly(Writer output)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Utils-JDK-2-Files/" data-toggle="tooltip" data-placement="top" title="[Utils - JDK] 2 Files ">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Utils-JDK-1-Arrays/" data-toggle="tooltip" data-placement="top" title="[Utils - JDK] 1 Arrays">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Utils - Commons IO] 3 IOUtils&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Utils-Commons-IO-3-IOUtils/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Sat Sep 12 2020 20:10:32 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#maven-依赖"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">maven 依赖</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用的静态变量"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">常用的静态变量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用方法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">常用方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#buffer"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">buffer</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copy"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">copy</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#read、readFully、readLines"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">read、readFully、readLines</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#skip-和-skipFully"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">skip 和 skipFully</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toBufferedInputStream-和-toBufferedReader"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">toBufferedInputStream 和 toBufferedReader</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toByteArray"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">toByteArray</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toCharArray"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">toCharArray</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toInputStream"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">toInputStream</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#toString-NaN"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">toString</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#write、writeChunked、writeLines"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">write、writeChunked、writeLines</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#lineIterator"><span class="toc-nav-number">3.11.</span> <span class="toc-nav-text">lineIterator</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#contentEquals-和-contentEqualsIgnoreEOL"><span class="toc-nav-number">3.12.</span> <span class="toc-nav-text">contentEquals 和 contentEqualsIgnoreEOL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#close-和-closeQuietly"><span class="toc-nav-number">3.13.</span> <span class="toc-nav-text">close 和 closeQuietly</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Utils-Commons-IO-3-IOUtils/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

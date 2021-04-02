@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
+  <title>
+    
+      [Calling Third-party API - OpenFeign] 3 Feign Call Case - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/tag_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/tag_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
+              
+              <a class="tag" href="/tags/#OpenFeign" title="OpenFeign">OpenFeign</a>
+              
+            </div>
+            <h1>[Calling Third-party API - OpenFeign] 3 Feign Call Case</h1>
+            <h2 class="subheading">Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign&#39;s first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2021-02-03
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">26</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4.8k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>上文博主已经举例并总结了 Feign 的大部分用法。那么接下来，博主结合实际真正开发中的情况，简单模拟了一个案例。需求大致如下：A 公司需要对接并获取 B 公司的用户信息和部门信息。在这里可以把 A 公司看做是调用方，B 公司是被调用方。或者说 A 公司是客户端，B 公司是服务端。那么直接上代码。</p>
+<h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><h3 id="Commons"><a href="#Commons" class="headerlink" title="Commons"></a>Commons</h3><h4 id="ResponseDto"><a href="#ResponseDto" class="headerlink" title="ResponseDto"></a>ResponseDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 返回前端数据封装</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ResponseDto</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> status;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">    <span class="keyword">private</span> T data;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(<span class="keyword">int</span> status)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(<span class="keyword">int</span> status, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = status;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(<span class="keyword">int</span> status, String msg, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = status;</span><br><span class="line">        <span class="keyword">this</span>.msg = msg;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(<span class="keyword">int</span> status, String msg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = status;</span><br><span class="line">        <span class="keyword">this</span>.msg = msg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(ResultCode responseCode, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(responseCode, <span class="keyword">null</span>, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ResponseDto</span><span class="params">(ResultCode responseCode, String detailMsg, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.status = responseCode.getCode();</span><br><span class="line">        <span class="keyword">this</span>.msg = Optional.ofNullable(detailMsg)</span><br><span class="line">                .map(deMsg -&gt; String.format(<span class="string">"%s : %s"</span>, responseCode.getDesc(), deMsg))</span><br><span class="line">                .orElse(responseCode.getDesc());</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@JsonIgnore</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSuccess</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.status == ResultCode.SUCCESS.getCode();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStatus</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> status;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMsg</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> msg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">success</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> success(<span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">success</span><span class="params">(T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseDto&lt;&gt;(ResultCode.SUCCESS, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">success</span><span class="params">(String msg, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseDto&lt;&gt;(ResultCode.SUCCESS, msg, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">error</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> error(ResultCode.ERROR, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">error</span><span class="params">(String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseDto&lt;&gt;(ResultCode.ERROR, errorMsg, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">error</span><span class="params">(ResultCode responseCode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> error(responseCode, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">error</span><span class="params">(ResultCode responseCode, String errorMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> error(responseCode, errorMsg, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">error</span><span class="params">(ResultCode responseCode, String errorMsg, T data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseDto&lt;&gt;(responseCode, errorMsg, data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">ResponseDto&lt;T&gt; <span class="title">exception</span><span class="params">(String exceptionMsg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ResponseDto&lt;&gt;(ResultCode.EXCEPTION, exceptionMsg, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ResultCode"><a href="#ResultCode" class="headerlink" title="ResultCode"></a>ResultCode</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ResultCode</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取 code</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> int</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取 desc</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> String</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function">String <span class="title">getDesc</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    BaseResultCode SUCCESS = BaseResultCode.SUCCESS;</span><br><span class="line">    BaseResultCode ERROR = BaseResultCode.ERROR;</span><br><span class="line">    BaseResultCode EXCEPTION = BaseResultCode.EXCEPTION;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="BaseResultCode"><a href="#BaseResultCode" class="headerlink" title="BaseResultCode"></a>BaseResultCode</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 返回状态的枚举</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> BaseResultCode implements ResultCode &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * SUCCESS: 0</span></span><br><span class="line"><span class="comment">     * ERROR: 1</span></span><br><span class="line"><span class="comment">     * Exception: -1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    SUCCESS(<span class="number">0</span>, <span class="string">"SUCCESS"</span>),</span><br><span class="line">    ERROR(<span class="number">1</span>, <span class="string">"ERROR"</span>),</span><br><span class="line">    EXCEPTION(-<span class="number">1</span>, <span class="string">"Exception"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> code;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String desc;</span><br><span class="line"></span><br><span class="line">    BaseResultCode(<span class="keyword">int</span> code, String desc) &#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.desc = desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> desc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><h4 id="AccessTokenFilter"><a href="#AccessTokenFilter" class="headerlink" title="AccessTokenFilter"></a>AccessTokenFilter</h4><p>这里简单的写了一个 Filter 过滤器，用于对 Token 进行校验。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 一个简单的校验 token 的过滤器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@WebFilter</span>(filterName = <span class="string">"AccessTokenFilter"</span>, urlPatterns = <span class="string">"/*"</span>)</span><br><span class="line"><span class="meta">@Order</span>(value = <span class="number">1</span>)</span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccessTokenFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> List&lt;String&gt; NOT_ALLOWED_PATHS = ImmutableList.of(<span class="string">"/autho/user/get"</span>, <span class="string">"/autho/department/list"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;String, List&lt;String&gt;&gt; TOKEN_MAP = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String KEY = <span class="string">"token"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 假设 token 有效时间为 3 分钟</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Long EXPIRES_IN = <span class="number">3</span> * <span class="number">60</span> * <span class="number">1000L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> </span>&#123;</span><br><span class="line">        System.out.println();</span><br><span class="line">        log.info(<span class="string">"AccessTokenFilter init..."</span>);</span><br><span class="line">        <span class="comment">// 初始化 token</span></span><br><span class="line">        getTokenMap();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">        HttpServletRequest request = (HttpServletRequest) servletRequest;</span><br><span class="line">        HttpServletResponse response = (HttpServletResponse) servletResponse;</span><br><span class="line">        String path = request.getRequestURI().substring(request.getContextPath().length());</span><br><span class="line">        <span class="keyword">if</span> (NOT_ALLOWED_PATHS.contains(path)) &#123;</span><br><span class="line">            System.out.println();</span><br><span class="line">            log.info(<span class="string">"AccessTokenFilter doFilter..."</span>);</span><br><span class="line">            log.info(<span class="string">"AccessTokenFilter check Token start !!!!!!"</span>);</span><br><span class="line">            String accessToken = request.getParameter(<span class="string">"accessToken"</span>);</span><br><span class="line">            <span class="keyword">if</span> (StringUtils.isEmpty(accessToken)) &#123;</span><br><span class="line">                log.warn(<span class="string">"Parameter accessToken is empty..."</span>);</span><br><span class="line">                TpCallCaseUtils.writeJson(<span class="string">"Parameter accessToken is empty..."</span>, response);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            log.info(<span class="string">"Parameter accessToken is [&#123;&#125;]..."</span>, accessToken);</span><br><span class="line"></span><br><span class="line">            List&lt;String&gt; tokenList = TOKEN_MAP.get(KEY);</span><br><span class="line">            <span class="keyword">if</span> (MapUtils.isNotEmpty(TOKEN_MAP) &amp;&amp; TOKEN_MAP.containsKey(KEY)) &#123;</span><br><span class="line">                <span class="keyword">long</span> expiresTime = Long.parseLong(tokenList.get(<span class="number">0</span>));</span><br><span class="line">                <span class="keyword">long</span> currentTimeMillis = System.currentTimeMillis();</span><br><span class="line">                <span class="keyword">if</span> (expiresTime &lt; currentTimeMillis) &#123;</span><br><span class="line">                    log.warn(<span class="string">"Access Token has expired..."</span>);</span><br><span class="line">                    TOKEN_MAP.clear();</span><br><span class="line">                    log.info(<span class="string">"Clear access Token..."</span>);</span><br><span class="line">                    getTokenMap();</span><br><span class="line">                    TpCallCaseUtils.writeJson(<span class="string">"Access Token has expired..."</span>, response);</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (!StringUtils.equals(tokenList.get(<span class="number">1</span>), accessToken)) &#123;</span><br><span class="line">                log.warn(<span class="string">"Access Token is error..."</span>);</span><br><span class="line">                TpCallCaseUtils.writeJson(<span class="string">"Access Token is error..."</span>, response);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            log.info(<span class="string">"AccessTokenFilter check Token end !!!!!!\n"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        filterChain.doFilter(servletRequest, servletResponse);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">"AccessTokenFilter destroy..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 生成 token</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">getTokenMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> currentTimeMillis = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">long</span> expiresTime = currentTimeMillis + EXPIRES_IN;</span><br><span class="line">        String token = UUID.randomUUID().toString() + <span class="string">"_"</span> + Base64.getEncoder().encodeToString(<span class="string">"token"</span>.getBytes(StandardCharsets.UTF_8));</span><br><span class="line">        List&lt;String&gt; linkedList = Lists.newLinkedList();</span><br><span class="line">        linkedList.add(String.valueOf(expiresTime));</span><br><span class="line">        linkedList.add(token);</span><br><span class="line">        TOKEN_MAP.put(KEY, linkedList);</span><br><span class="line">        log.info(<span class="string">"Generate access Token: [&#123;&#125;], Expires Time: [&#123;&#125;] ...\n"</span>, token, TpCallCaseUtils.millisConvertToDate(expiresTime));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Utils"><a href="#Utils" class="headerlink" title="Utils"></a>Utils</h3><h4 id="TpCallCaseUtils"><a href="#TpCallCaseUtils" class="headerlink" title="TpCallCaseUtils"></a>TpCallCaseUtils</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpCallCaseUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回错误信息</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> errorMsg 错误信息</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response HttpServletResponse</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeJson</span><span class="params">(String errorMsg, HttpServletResponse response)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String json = <span class="keyword">new</span> ObjectMapper().writeValueAsString(ResponseDto.error(ResultCodeErrorEnum.TOKEN_ERROR, errorMsg));</span><br><span class="line">            response.setCharacterEncoding(StandardCharsets.UTF_8.name());</span><br><span class="line">            response.setContentType(MediaType.APPLICATION_JSON_VALUE);</span><br><span class="line">            PrintWriter writer = response.getWriter();</span><br><span class="line">            writer.print(json);</span><br><span class="line">            writer.flush();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 毫秒值转时间</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> currentTimeMillis 毫秒值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 时间格式（yyyy-MM-dd HH:mm:ss.SSS）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">millisConvertToDate</span><span class="params">(Long currentTimeMillis)</span> </span>&#123;</span><br><span class="line">        Instant instant = Instant.ofEpochMilli(currentTimeMillis);</span><br><span class="line">        LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.of(ZoneId.SHORT_IDS.get(<span class="string">"CTT"</span>)));</span><br><span class="line">        <span class="keyword">return</span> localDateTime.format(DateTimeFormatter.ofPattern(<span class="string">"yyyy-MM-dd HH:mm:ss.SSS"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Enum"><a href="#Enum" class="headerlink" title="Enum"></a>Enum</h3><h4 id="ResultCodeErrorEnum"><a href="#ResultCodeErrorEnum" class="headerlink" title="ResultCodeErrorEnum"></a>ResultCodeErrorEnum</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> ResultCodeErrorEnum implements ResultCode &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 业务类型错误枚举</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    AUTH_TYPE_ERROR(<span class="number">18900</span>, <span class="string">"权限校验类型错误"</span>),</span><br><span class="line">    AUTH_ERROR(<span class="number">18901</span>, <span class="string">"权限校验错误"</span>),</span><br><span class="line">    TOKEN_ERROR(<span class="number">18902</span>, <span class="string">"Token 校验错误"</span>),</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> code;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String desc;</span><br><span class="line"></span><br><span class="line">    ResultCodeErrorEnum(<span class="keyword">int</span> code, String desc) &#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.desc = desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDesc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> desc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dto"><a href="#Dto" class="headerlink" title="Dto"></a>Dto</h3><h4 id="AuthServerDto"><a href="#AuthServerDto" class="headerlink" title="AuthServerDto"></a>AuthServerDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthServerDto</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * access_token : 2e63f6f5-c546-427e-8a1c-f4db48671bf8</span></span><br><span class="line"><span class="comment">     * token_type : bearer</span></span><br><span class="line"><span class="comment">     * expires_in : 7199</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@JsonProperty</span>(<span class="string">"access_token"</span>)</span><br><span class="line">    <span class="keyword">private</span> String accessToken;</span><br><span class="line">    <span class="meta">@JsonProperty</span>(<span class="string">"token_type"</span>)</span><br><span class="line">    <span class="keyword">private</span> String tokenType;</span><br><span class="line">    <span class="meta">@JsonProperty</span>(<span class="string">"expires_in"</span>)</span><br><span class="line">    <span class="keyword">private</span> Integer expiresIn;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TpUserDto"><a href="#TpUserDto" class="headerlink" title="TpUserDto"></a>TpUserDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpUserDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String userId;</span><br><span class="line">    <span class="keyword">private</span> String userCode;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TpDepartmentQueryDto"><a href="#TpDepartmentQueryDto" class="headerlink" title="TpDepartmentQueryDto"></a>TpDepartmentQueryDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpDepartmentQueryDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long idOrParentId;</span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TpDepartmentDto"><a href="#TpDepartmentDto" class="headerlink" title="TpDepartmentDto"></a>TpDepartmentDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpDepartmentDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 部门名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 英文名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@JsonProperty</span>(<span class="string">"name_en"</span>)</span><br><span class="line">    <span class="keyword">private</span> String nameEn;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 父亲部门id。根部门为1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@JsonProperty</span>(<span class="string">"parent_Id"</span>)</span><br><span class="line">    <span class="keyword">private</span> Long parentId;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 职位</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String position;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 在父部门中的次序值。order值大的排序靠前。值范围是[0, 2^32)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Long order;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><h4 id="AuthServerController"><a href="#AuthServerController" class="headerlink" title="AuthServerController"></a>AuthServerController</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/autho"</span>)</span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AuthServerController</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String GRANT_TYPE = <span class="string">"client_credentials"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CLIENT_ID = <span class="string">"client_id"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String CLIENT_SECRET = <span class="string">"client_secret"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String TOKEN = <span class="string">"token"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/token"</span>, method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseDto&lt;AuthServerDto&gt; <span class="title">getAccessToken</span><span class="params">(@RequestParam(<span class="string">"grant_type"</span>)</span> String grantType,</span></span><br><span class="line"><span class="function">                                                     @<span class="title">RequestParam</span><span class="params">(<span class="string">"client_id"</span>)</span> String clientId,</span></span><br><span class="line"><span class="function">                                                     @<span class="title">RequestParam</span><span class="params">(<span class="string">"client_secret"</span>)</span> String clientSecret) </span>&#123;</span><br><span class="line">        log.info(<span class="string">"GetAccessToken method request parameters -&gt; grant_type: &#123;&#125;, client_id: &#123;&#125;,client_secret: &#123;&#125; ..."</span>, grantType, clientId, clientSecret);</span><br><span class="line">        <span class="keyword">if</span> (!StringUtils.equals(grantType, GRANT_TYPE)) &#123;</span><br><span class="line">            <span class="keyword">return</span> ResponseDto.error(ResultCodeErrorEnum.AUTH_TYPE_ERROR);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!StringUtils.equals(clientId, CLIENT_ID) &amp;&amp; !StringUtils.equals(clientSecret, CLIENT_SECRET)) &#123;</span><br><span class="line">            <span class="keyword">return</span> ResponseDto.error(ResultCodeErrorEnum.AUTH_ERROR);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 获取 token, 并重置 token 的过期时间</span></span><br><span class="line">        List&lt;String&gt; tokenList = AccessTokenFilter.TOKEN_MAP.get(TOKEN);</span><br><span class="line">        String oldExpiresTime = tokenList.get(<span class="number">0</span>);</span><br><span class="line">        String token = tokenList.get(<span class="number">1</span>);</span><br><span class="line">        tokenList.remove(<span class="number">0</span>);</span><br><span class="line">        Long newExpiresTime = System.currentTimeMillis() + AccessTokenFilter.EXPIRES_IN;</span><br><span class="line">        tokenList.add(<span class="number">0</span>, String.valueOf(newExpiresTime));</span><br><span class="line">        log.info(<span class="string">"Update Expires Time: Old Expires Time &#123;&#125;, New Expires Time &#123;&#125; ..."</span>, TpCallCaseUtils.millisConvertToDate(Long.parseLong(oldExpiresTime)), TpCallCaseUtils.millisConvertToDate(newExpiresTime));</span><br><span class="line"></span><br><span class="line">        AuthServerDto authDto = <span class="keyword">new</span> AuthServerDto();</span><br><span class="line">        authDto.setAccessToken(token);</span><br><span class="line">        authDto.setTokenType(<span class="string">"bearer"</span>);</span><br><span class="line">        authDto.setExpiresIn(<span class="number">3</span> * <span class="number">60</span> * <span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">return</span> ResponseDto.success(authDto);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/user/get"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseDto&lt;TpUserDto&gt; <span class="title">getUserDto</span><span class="params">(@RequestParam(<span class="string">"accessToken"</span>)</span> String accessToken, @<span class="title">RequestParam</span><span class="params">(<span class="string">"userId"</span>)</span> String userId) </span>&#123;</span><br><span class="line">        log.info(<span class="string">"GetUserDto method request parameters -&gt; accessToken: [&#123;&#125;], userId: [&#123;&#125;] ..."</span>, accessToken, userId);</span><br><span class="line">        TpUserDto userDto = <span class="keyword">new</span> TpUserDto();</span><br><span class="line">        userDto.setUserId(userId);</span><br><span class="line">        userDto.setUserCode(<span class="string">"USERCODE_VINCENT"</span>);</span><br><span class="line">        userDto.setUserName(<span class="string">"Vincent"</span>);</span><br><span class="line">        <span class="keyword">return</span> ResponseDto.success(userDto);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span>(value = <span class="string">"/department/list"</span>)</span><br><span class="line">    <span class="keyword">public</span> ResponseDto&lt;List&lt;TpDepartmentDto&gt;&gt; getDepartmentDtos(<span class="meta">@RequestParam</span>(<span class="string">"accessToken"</span>) String accessToken, <span class="meta">@RequestBody</span> TpDepartmentQueryDto queryDto) &#123;</span><br><span class="line">        log.info(<span class="string">"GetDepartmentDtos method request parameters -&gt; accessToken: [&#123;&#125;], queryDto: [&#123;&#125;] ..."</span>, accessToken, queryDto);</span><br><span class="line">        <span class="keyword">return</span> ResponseDto.success(Lists.newArrayList(</span><br><span class="line">                <span class="keyword">new</span> TpDepartmentDto(<span class="number">19000L</span>, <span class="string">"xxx公司"</span>, <span class="string">"xxx_company"</span>, <span class="number">1L</span>, queryDto.getPosition(), <span class="number">1L</span>),</span><br><span class="line">                <span class="keyword">new</span> TpDepartmentDto(<span class="number">19580L</span>, <span class="string">"人事部"</span>, <span class="string">"personnel_department"</span>, <span class="number">19000L</span>, queryDto.getPosition(), <span class="number">23L</span>),</span><br><span class="line">                <span class="keyword">new</span> TpDepartmentDto(<span class="number">19581L</span>, <span class="string">"财务部"</span>, <span class="string">"finance_department"</span>, <span class="number">19000L</span>, queryDto.getPosition(), <span class="number">24L</span>),</span><br><span class="line">                <span class="keyword">new</span> TpDepartmentDto(<span class="number">19582L</span>, <span class="string">"技术部"</span>, <span class="string">"technology_department"</span>, <span class="number">19000L</span>, queryDto.getPosition(), <span class="number">25L</span>)</span><br><span class="line">        ));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Client"><a href="#Client" class="headerlink" title="Client"></a>Client</h2><h3 id="Utils-1"><a href="#Utils-1" class="headerlink" title="Utils"></a>Utils</h3><h4 id="DefaultFeignClient"><a href="#DefaultFeignClient" class="headerlink" title=" DefaultFeignClient "></a><font color='red'> DefaultFeignClient </font></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * openfeign 默认构造器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultFeignClient</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Map&lt;ContractEnum, Contract&gt; CONTRACT_MAP = ImmutableMap.of(</span><br><span class="line">            ContractEnum.DEFAULT, <span class="keyword">new</span> Contract.Default(),</span><br><span class="line">            ContractEnum.SPRINGMVC, <span class="keyword">new</span> SpringMvcContract()</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> SSLSocketFactory SSL_SOCKET_FACTORY;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Map&lt;String, Object&gt; FEIGN_CLIENT_CACHE = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            SSLContext sslContext = SSLContexts.custom().loadTrustMaterial(<span class="keyword">null</span>, (chain, authType) -&gt; <span class="keyword">true</span>).build();</span><br><span class="line">            SSL_SOCKET_FACTORY = sslContext.getSocketFactory();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            log.error(<span class="string">"Init SSLSocketFactory fail..."</span>);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Feign 构造器</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType            请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url                请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contractEnum       定义接口上有效的注释 &#123;<span class="doctag">@link</span> Contract&#125;,  默认 feign 自带注解 &#123;<span class="doctag">@link</span> Contract.Default&#125;, 也可使用 &#123;<span class="doctag">@link</span> SpringMvcContract&#125; 注解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> requestInterceptor 请求拦截器 &#123;<span class="doctag">@link</span> RequestInterceptor&#125;（在请求前做一些特殊需求处理，需自己实现 &#123;<span class="doctag">@link</span> RequestInterceptor#apply(RequestTemplate)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> options            请求可选设置 &#123;<span class="doctag">@link</span> Request.Options&#125;, 默认设置 &#123;<span class="doctag">@link</span> Request.Options#Options()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Request.Options#Options(long, TimeUnit, long, TimeUnit, boolean)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> retryer            请求重试设置 &#123;<span class="doctag">@link</span> Retryer&#125;, 默认设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default(long, long, int)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> errorDecoder       请求返回值解码器 &#123;<span class="doctag">@link</span> ErrorDecoder&#125;, 默认设置 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125;,</span></span><br><span class="line"><span class="comment">     *                           当 HTTP &#123;<span class="doctag">@link</span> Response&#125; 的 &#123;<span class="doctag">@link</span> Response#status()&#125; 值不在 2xx 范围内时，可自定义实现 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;                请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">createClient</span><span class="params">(Class&lt;T&gt; apiType, String url, ContractEnum contractEnum,</span></span></span><br><span class="line"><span class="function"><span class="params">                                      Consumer&lt;RequestTemplate&gt; requestInterceptor, Options options,</span></span></span><br><span class="line"><span class="function"><span class="params">                                      Retryer retryer, BiFunction&lt;String, Response, Exception&gt; errorDecoder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Feign.builder()</span><br><span class="line">                .logger(<span class="keyword">new</span> Slf4jLogger())</span><br><span class="line">                .logLevel(Logger.Level.FULL)</span><br><span class="line">                .requestInterceptor(requestInterceptor::accept)</span><br><span class="line">                .contract(CONTRACT_MAP.get(contractEnum))</span><br><span class="line">                .client(<span class="keyword">new</span> Client.Default(SSL_SOCKET_FACTORY, NoopHostnameVerifier.INSTANCE))</span><br><span class="line">                .options(options)</span><br><span class="line">                .retryer(retryer)</span><br><span class="line">                .encoder(DefaultFeignClient::encode)</span><br><span class="line">                .decoder(DefaultFeignClient::decode)</span><br><span class="line">                .errorDecoder(errorDecoder::apply)</span><br><span class="line">                .target(apiType, url);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 单例</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType            请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url                请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contractEnum       定义接口上有效的注释 &#123;<span class="doctag">@link</span> Contract&#125;,  默认 feign 自带注解 &#123;<span class="doctag">@link</span> Contract.Default&#125;, 也可使用 &#123;<span class="doctag">@link</span> SpringMvcContract&#125; 注解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> requestInterceptor 请求拦截器 &#123;<span class="doctag">@link</span> RequestInterceptor&#125;（在请求前做一些特殊需求处理，需自己实现 &#123;<span class="doctag">@link</span> RequestInterceptor#apply(RequestTemplate)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> options            请求可选设置 &#123;<span class="doctag">@link</span> Request.Options&#125;, 默认设置 &#123;<span class="doctag">@link</span> Request.Options#Options()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Request.Options#Options(long, TimeUnit, long, TimeUnit, boolean)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> retryer            请求重试设置 &#123;<span class="doctag">@link</span> Retryer&#125;, 默认设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default(long, long, int)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> errorDecoder       请求返回值解码器 &#123;<span class="doctag">@link</span> ErrorDecoder&#125;, 默认设置 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125;,</span></span><br><span class="line"><span class="comment">     *                           当 HTTP &#123;<span class="doctag">@link</span> Response&#125; 的 &#123;<span class="doctag">@link</span> Response#status()&#125; 值不在 2xx 范围内时，可自定义实现 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;                请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 单例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getSingleClient</span><span class="params">(Class&lt;T&gt; apiType, String url, ContractEnum contractEnum,</span></span></span><br><span class="line"><span class="function"><span class="params">                                        Consumer&lt;RequestTemplate&gt; requestInterceptor, Options options,</span></span></span><br><span class="line"><span class="function"><span class="params">                                        Retryer retryer, BiFunction&lt;String, Response, Exception&gt; errorDecoder)</span> </span>&#123;</span><br><span class="line">        T singletonClient = CheckedCast.cast(FEIGN_CLIENT_CACHE.get(apiType.getName()));</span><br><span class="line">        <span class="keyword">if</span> (Objects.isNull(singletonClient)) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (FEIGN_CLIENT_CACHE) &#123;</span><br><span class="line">                singletonClient = CheckedCast.cast(FEIGN_CLIENT_CACHE.get(apiType.getName()));</span><br><span class="line">                <span class="keyword">if</span> (Objects.isNull(singletonClient)) &#123;</span><br><span class="line">                    singletonClient = createClient(apiType, url, contractEnum, requestInterceptor, options, retryer, errorDecoder);</span><br><span class="line">                    FEIGN_CLIENT_CACHE.put(apiType.getName(), singletonClient);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singletonClient;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 单例</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType      请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url          请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contractEnum 定义接口上有效的注释 &#123;<span class="doctag">@link</span> Contract&#125;,  默认 feign 自带注解 &#123;<span class="doctag">@link</span> Contract.Default&#125;, 也可使用 &#123;<span class="doctag">@link</span> SpringMvcContract&#125; 注解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;          请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 单例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getSingleClient</span><span class="params">(Class&lt;T&gt; apiType, String url, ContractEnum contractEnum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getSingleClient(apiType, url, contractEnum, requestTemplate -&gt; &#123;</span><br><span class="line">        &#125;, <span class="keyword">new</span> Options(), <span class="keyword">new</span> Retryer.Default(), (methodKey, response) -&gt; <span class="keyword">new</span> ErrorDecoder.Default().decode(methodKey, response));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 单例, 默认使用 springmvc 注解</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType 请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url     请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;     请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 单例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getSingleClient</span><span class="params">(Class&lt;T&gt; apiType, String url)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getSingleClient(apiType, url, ContractEnum.SPRINGMVC);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType            请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url                请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contractEnum       定义接口上有效的注释 &#123;<span class="doctag">@link</span> Contract&#125;,  默认 feign 自带注解 &#123;<span class="doctag">@link</span> Contract.Default&#125;, 也可使用 &#123;<span class="doctag">@link</span> SpringMvcContract&#125; 注解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> requestInterceptor 请求拦截器 &#123;<span class="doctag">@link</span> RequestInterceptor&#125;（在请求前做一些特殊需求处理，需自己实现 &#123;<span class="doctag">@link</span> RequestInterceptor#apply(RequestTemplate)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> options            请求可选设置 &#123;<span class="doctag">@link</span> Request.Options&#125;, 默认设置 &#123;<span class="doctag">@link</span> Request.Options#Options()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Request.Options#Options(long, TimeUnit, long, TimeUnit, boolean)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> retryer            请求重试设置 &#123;<span class="doctag">@link</span> Retryer&#125;, 默认设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default()&#125;, 自定义设置 &#123;<span class="doctag">@link</span> Retryer.Default#Default(long, long, int)&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> errorDecoder       请求返回值解码器 &#123;<span class="doctag">@link</span> ErrorDecoder&#125;, 默认设置 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125;,</span></span><br><span class="line"><span class="comment">     *                           当 HTTP &#123;<span class="doctag">@link</span> Response&#125; 的 &#123;<span class="doctag">@link</span> Response#status()&#125; 值不在 2xx 范围内时，可自定义实现 &#123;<span class="doctag">@link</span> ErrorDecoder.Default#decode(String, Response)&#125; 接口方法）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;                请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getClient</span><span class="params">(Class&lt;T&gt; apiType, String url, ContractEnum contractEnum,</span></span></span><br><span class="line"><span class="function"><span class="params">                                  Consumer&lt;RequestTemplate&gt; requestInterceptor, Options options,</span></span></span><br><span class="line"><span class="function"><span class="params">                                  Retryer retryer, BiFunction&lt;String, Response, Exception&gt; errorDecoder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> createClient(apiType, url, contractEnum, requestInterceptor, options, retryer, errorDecoder);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType      请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url          请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contractEnum 定义接口上有效的注释 &#123;<span class="doctag">@link</span> Contract&#125;,  默认 feign 自带注解 &#123;<span class="doctag">@link</span> Contract.Default&#125;, 也可使用 &#123;<span class="doctag">@link</span> SpringMvcContract&#125; 注解</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;          请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getClient</span><span class="params">(Class&lt;T&gt; apiType, String url, ContractEnum contractEnum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getClient(apiType, url, contractEnum, requestTemplate -&gt; &#123;</span><br><span class="line">        &#125;, <span class="keyword">new</span> Options(), <span class="keyword">new</span> Retryer.Default(), (methodKey, response) -&gt; <span class="keyword">new</span> ErrorDecoder.Default().decode(methodKey, response));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 创建 DefaultFeignClient 实例, 默认使用 springmvc 注解</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> apiType 请求目标类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> url     请求路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &lt;T&gt;     请求目标类泛型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 DefaultFeignClient 实例</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">getClient</span><span class="params">(Class&lt;T&gt; apiType, String url)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getClient(apiType, url, ContractEnum.SPRINGMVC);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发送请求时的编码器</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> object   请求体中的内容（body 中的内容）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> bodyType 请求体的类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> template 请求模板</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> EncodeException 编码失败时异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">encode</span><span class="params">(Object object, Type bodyType, RequestTemplate template)</span> <span class="keyword">throws</span> EncodeException </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.equalsIgnoreCase(template.method(), HttpMethod.GET.name()) || Objects.isNull(object)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">new</span> SpringFormEncoder(<span class="keyword">new</span> SpringEncoder(HttpMessageConverters::<span class="keyword">new</span>)).encode(object, bodyType, template);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 请求响应后进行解密处理</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response 请求响应</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> type     接口方法定义的返回类型</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回 object（就是 type 的类型）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException    IO 异常</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> FeignException Feign 异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Object <span class="title">decode</span><span class="params">(Response response, Type type)</span> <span class="keyword">throws</span> IOException, FeignException </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (type == InputStream<span class="class">.<span class="keyword">class</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> response.body().asInputStream();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> JacksonDecoder().decode(response, type);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="CheckedCast"><a href="#CheckedCast" class="headerlink" title=" CheckedCast "></a><font color='red'> CheckedCast </font></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 强制类型转换</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CheckedCast</span> </span>&#123;</span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">cast</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (T) obj;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ContractEnum"><a href="#ContractEnum" class="headerlink" title=" ContractEnum "></a><font color='red'> ContractEnum </font></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * feign 创建实例时, 与之配套使用的注解（这里暂时只支持 feign 本身默认的注解和 springmvc 的注解）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> ContractEnum &#123;</span><br><span class="line">    DEFAULT(<span class="string">"feign_default"</span>),</span><br><span class="line">    SPRINGMVC(<span class="string">"springmvc"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String value;</span><br><span class="line"></span><br><span class="line">    ContractEnum(String value) &#123;</span><br><span class="line">        <span class="keyword">this</span>.value = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getValue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dto-1"><a href="#Dto-1" class="headerlink" title="Dto"></a>Dto</h3><h4 id="TpConfigDto"><a href="#TpConfigDto" class="headerlink" title="TpConfigDto"></a>TpConfigDto</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpConfigDto</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String clientId;</span><br><span class="line">    <span class="keyword">private</span> String clientSecret;</span><br><span class="line">    <span class="keyword">private</span> String hostName;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Dao"><a href="#Dao" class="headerlink" title="Dao"></a>Dao</h3><h4 id="TpConfigDao"><a href="#TpConfigDao" class="headerlink" title="TpConfigDao"></a>TpConfigDao</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpConfigDao</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从数据库查询出 TpConfigDto 对象</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> clientId 标识唯一</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> TpConfigDto</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TpConfigDto <span class="title">selectByClientId</span><span class="params">(String clientId)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 当然这里你可以创建一个 TpConfigMapper, 通过 mybatis 来查询出 TpConfigDto, 并交给 spring 容器来管理（这里只是 demo 所以就简单模拟下）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> TpConfigDto(clientId, <span class="string">"client_secret"</span>, <span class="string">"http://localhost:8080/autho"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h3><h4 id="TpApi"><a href="#TpApi" class="headerlink" title="TpApi"></a>TpApi</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TpApi</span> </span>&#123;</span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/token"</span>, method = RequestMethod.GET)</span><br><span class="line">    <span class="function">ResponseDto&lt;AuthServerDto&gt; <span class="title">getAccessToken</span><span class="params">(@RequestParam(<span class="string">"grant_type"</span>)</span> String grantType, @<span class="title">RequestParam</span><span class="params">(<span class="string">"client_id"</span>)</span> String clientId, @<span class="title">RequestParam</span><span class="params">(<span class="string">"client_secret"</span>)</span> String clientSecret)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/user/get"</span>)</span><br><span class="line">    <span class="function">ResponseDto&lt;TpUserDto&gt; <span class="title">getUserDto</span><span class="params">(@RequestParam(<span class="string">"accessToken"</span>)</span> String accessToken, @<span class="title">RequestParam</span><span class="params">(<span class="string">"userId"</span>)</span> String userId)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span>(value = <span class="string">"/department/list"</span>)</span><br><span class="line">    ResponseDto&lt;List&lt;TpDepartmentDto&gt;&gt; getDepartmentDtos(<span class="meta">@RequestParam</span>(<span class="string">"accessToken"</span>) String accessToken, <span class="meta">@RequestBody</span> TpDepartmentQueryDto queryDto);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TpFeignClient"><a href="#TpFeignClient" class="headerlink" title="TpFeignClient"></a>TpFeignClient</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> * 可自定义一些别的需求</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpFeignClient</span> <span class="keyword">extends</span> <span class="title">DefaultFeignClient</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Helper"><a href="#Helper" class="headerlink" title="Helper"></a>Helper</h3><h4 id="TpApiHelper"><a href="#TpApiHelper" class="headerlink" title="TpApiHelper"></a>TpApiHelper</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TpApiHelper</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">TpUserDto <span class="title">getUserDto</span><span class="params">(String userId)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;TpDepartmentDto&gt; <span class="title">getDepartmentDtos</span><span class="params">(TpDepartmentQueryDto queryDto)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="TpApiHelperImpl"><a href="#TpApiHelperImpl" class="headerlink" title="TpApiHelperImpl"></a>TpApiHelperImpl</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpApiHelperImpl</span> <span class="keyword">implements</span> <span class="title">TpApiHelper</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> TpApi tpApi;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> TpConfigDto tpConfigDto;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> TpApiHelperImpl instance;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> LoadingCache&lt;String, String&gt; loadingCache;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Lock reentrantLock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String GRANT_TYPE = <span class="string">"client_credentials"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> TpApiHelperImpl <span class="title">getInstance</span><span class="params">(TpConfigDto tpConfigDto)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            reentrantLock.lock();</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> TpApiHelperImpl(tpConfigDto);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                reentrantLock.unlock();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">TpApiHelperImpl</span><span class="params">(TpConfigDto tpConfigDto)</span> </span>&#123;</span><br><span class="line">        Objects.requireNonNull(tpConfigDto);</span><br><span class="line">        <span class="keyword">this</span>.tpConfigDto = tpConfigDto;</span><br><span class="line">        tpApi = TpFeignClient.getClient(TpApi<span class="class">.<span class="keyword">class</span>, <span class="title">tpConfigDto</span>.<span class="title">getHostName</span>())</span>;</span><br><span class="line">        loadingCache = CacheBuilder</span><br><span class="line">                .newBuilder()</span><br><span class="line">                .maximumSize(<span class="number">1</span>)</span><br><span class="line">                .expireAfterWrite(<span class="number">178</span>, TimeUnit.SECONDS)</span><br><span class="line">                .expireAfterAccess(<span class="number">180</span>, TimeUnit.SECONDS)</span><br><span class="line">                .removalListener((RemovalListener&lt;String, String&gt;) notification -&gt; log.info(<span class="string">"[ Token: &#123;&#125; ] is removed..."</span>, notification.getValue()))</span><br><span class="line">                .build(<span class="keyword">new</span> CacheLoader&lt;String, String&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> String <span class="title">load</span><span class="params">(@NonNull String key)</span> </span>&#123;</span><br><span class="line">                        String accessToken = tpApi.getAccessToken(GRANT_TYPE, key, tpConfigDto.getClientSecret()).getData().getAccessToken();</span><br><span class="line">                        log.info(<span class="string">"Get access Token with feign client first time: [&#123;&#125;]..."</span>, accessToken);</span><br><span class="line">                        <span class="keyword">return</span> accessToken;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TpUserDto <span class="title">getUserDto</span><span class="params">(String userId)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String accessToken = loadingCache.get(tpConfigDto.getClientId());</span><br><span class="line">            log.info(<span class="string">"LoadingCache get access Token: [&#123;&#125;]..."</span>, accessToken);</span><br><span class="line">            <span class="keyword">return</span> tpApi.getUserDto(accessToken, userId).getData();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line">            log.error(<span class="string">"GetUserDto is error..."</span>);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;TpDepartmentDto&gt; <span class="title">getDepartmentDtos</span><span class="params">(TpDepartmentQueryDto queryDto)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String accessToken = loadingCache.get(tpConfigDto.getClientId());</span><br><span class="line">            log.info(<span class="string">"LoadingCache get access Token: [&#123;&#125;]..."</span>, accessToken);</span><br><span class="line">            <span class="keyword">return</span> tpApi.getDepartmentDtos(accessToken, queryDto).getData();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line">            log.error(<span class="string">"GetDepartmentDtos is error..."</span>);</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3><h4 id="TpCallCaseTest"><a href="#TpCallCaseTest" class="headerlink" title="TpCallCaseTest"></a>TpCallCaseTest</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootTest</span>(classes = CallingThirdPartyApiApplicationTests<span class="class">.<span class="keyword">class</span>, <span class="title">webEnvironment</span> </span>= SpringBootTest.WebEnvironment.RANDOM_PORT)</span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TpCallCaseTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TpConfigDao tpConfigDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tpCallTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        TpConfigDto tpConfigDto = tpConfigDao.selectByClientId(<span class="string">"client_id"</span>);</span><br><span class="line">        TpApiHelperImpl instance = TpApiHelperImpl.getInstance(tpConfigDto);</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">"GetUserDto method start..."</span>);</span><br><span class="line">        TpUserDto tpUserDto = instance.getUserDto(<span class="string">"userId"</span>);</span><br><span class="line">        log.info(<span class="string">"tpUserDto: &#123;&#125;..."</span>, tpUserDto);</span><br><span class="line">        log.info(<span class="string">"GetUserDto method end...\n"</span>);</span><br><span class="line"></span><br><span class="line">        log.info(<span class="string">"GetDepartmentDtos method start..."</span>);</span><br><span class="line">        TpDepartmentQueryDto queryDto = <span class="keyword">new</span> TpDepartmentQueryDto();</span><br><span class="line">        queryDto.setIdOrParentId(<span class="number">19000L</span>);</span><br><span class="line">        queryDto.setPosition(<span class="string">"员工"</span>);</span><br><span class="line">        List&lt;TpDepartmentDto&gt; departmentDtos = instance.getDepartmentDtos(queryDto);</span><br><span class="line">        departmentDtos.forEach(departmentDto -&gt; log.info(<span class="string">"departmentDto: &#123;&#125;..."</span>, departmentDto));</span><br><span class="line">        log.info(<span class="string">"GetDepartmentDtos method end..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>AuthServerController Log：</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">30</span>:<span class="number">59.918</span>  INFO <span class="number">10818</span> --- [           main] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter init...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">30</span>:<span class="number">59.926</span>  INFO <span class="number">10818</span> --- [           main] c.v.c.o.t.config.AccessTokenFilter       : Generate access Token: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=], Expires Time: [<span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">33</span>:<span class="number">59.918</span>] ...</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">00.182</span>  INFO <span class="number">10818</span> --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService <span class="string">'applicationTaskExecutor'</span></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">00.445</span>  INFO <span class="number">10818</span> --- [           main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server <span class="keyword">is</span> running on port <span class="number">35729</span></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">00.598</span>  INFO <span class="number">10818</span> --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): <span class="number">8080</span> (http) with context path <span class="string">''</span></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">00.615</span>  INFO <span class="number">10818</span> --- [           main] c.v.c.CallingThirdPartyApiApplication    : Started CallingThirdPartyApiApplication <span class="keyword">in</span> <span class="number">3.719</span> seconds (JVM running <span class="keyword">for</span> <span class="number">12.864</span>)</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.436</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-1</span>] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet <span class="string">'dispatcherServlet'</span></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.436</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-1</span>] o.s.web.servlet.DispatcherServlet        : Initializing Servlet <span class="string">'dispatcherServlet'</span></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.437</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-1</span>] o.s.web.servlet.DispatcherServlet        : Completed initialization <span class="keyword">in</span> <span class="number">1</span> ms</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.477</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-1</span>] c.v.c.o.t.c.AuthServerController         : GetAccessToken method request parameters -&gt; grant_type: client_credentials, client_id: client_id,client_secret: client_secret ...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.487</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-1</span>] c.v.c.o.t.c.AuthServerController         : Update Expires Time: Old Expires Time <span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">33</span>:<span class="number">59.918</span>, New Expires Time <span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">34</span>:<span class="number">31.487</span> ...</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.851</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-2</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter doFilter...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.852</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-2</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter check Token start !!!!!!</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.852</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-2</span>] c.v.c.o.t.config.AccessTokenFilter       : Parameter accessToken <span class="keyword">is</span> [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=]...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.862</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-2</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter check Token end !!!!!!</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.865</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-2</span>] c.v.c.o.t.c.AuthServerController         : GetUserDto method request parameters -&gt; accessToken: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=], userId: [userId] ...</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.958</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-3</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter doFilter...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.958</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-3</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter check Token start !!!!!!</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.958</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-3</span>] c.v.c.o.t.config.AccessTokenFilter       : Parameter accessToken <span class="keyword">is</span> [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=]...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.958</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-3</span>] c.v.c.o.t.config.AccessTokenFilter       : AccessTokenFilter check Token end !!!!!!</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.003</span>  INFO <span class="number">10818</span> --- [nio<span class="number">-8080</span>-exec<span class="number">-3</span>] c.v.c.o.t.c.AuthServerController         : GetDepartmentDtos method request parameters -&gt; accessToken: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=], queryDto: [TpDepartmentQueryDto(idOrParentId=<span class="number">19000</span>, position=员工)] ...</span><br></pre></td></tr></table></figure>
+
+<p><strong>TpCallCaseTest Log：</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.122</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : GetUserDto method start...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.845</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.helper.iml.TpApiHelperImpl     : Get access Token with feign client first time: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=]...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.849</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.helper.iml.TpApiHelperImpl     : LoadingCache <span class="keyword">get</span> access Token: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=]...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.871</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : tpUserDto: TpUserDto(userId=userId, userCode=USERCODE_VINCENT, userName=Vincent)...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.871</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : GetUserDto method end...</span><br><span class="line"></span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.871</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : GetDepartmentDtos method start...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">31.872</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.helper.iml.TpApiHelperImpl     : LoadingCache <span class="keyword">get</span> access Token: [<span class="number">98</span>ee0324<span class="number">-0</span>ac9<span class="number">-4e54</span><span class="number">-9710</span>-e9d834ad19a0_dG9rZW4=]...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.025</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : departmentDto: TpDepartmentDto(id=<span class="number">19000</span>, name=xxx公司, nameEn=xxx_company, parentId=<span class="number">1</span>, position=员工, order=<span class="number">1</span>)...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.026</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : departmentDto: TpDepartmentDto(id=<span class="number">19580</span>, name=人事部, nameEn=personnel_department, parentId=<span class="number">19000</span>, position=员工, order=<span class="number">23</span>)...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.026</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : departmentDto: TpDepartmentDto(id=<span class="number">19581</span>, name=财务部, nameEn=finance_department, parentId=<span class="number">19000</span>, position=员工, order=<span class="number">24</span>)...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.026</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : departmentDto: TpDepartmentDto(id=<span class="number">19582</span>, name=技术部, nameEn=technology_department, parentId=<span class="number">19000</span>, position=员工, order=<span class="number">25</span>)...</span><br><span class="line"><span class="number">2021</span><span class="number">-02</span><span class="number">-03</span> <span class="number">12</span>:<span class="number">31</span>:<span class="number">32.026</span>  INFO <span class="number">10832</span> --- [           main] c.v.c.o.t.TpCallCaseTest                 : GetDepartmentDtos method end...</span><br></pre></td></tr></table></figure>
+
+<p>Case Source Code：<a href="https://github.com/V-Vincen/calling-third-party-api" target="_blank" rel="noopener">https://github.com/V-Vincen/calling-third-party-api</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/" data-toggle="tooltip" data-placement="top" title="[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/" data-toggle="tooltip" data-placement="top" title="[IO] 5 How to Download a File from a URL in Java">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Calling Third-party API - OpenFeign] 3 Feign Call Case&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Wed Feb 03 2021 11:53:54 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Server"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Server</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Commons"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Commons</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ResponseDto"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">ResponseDto</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ResultCode"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">ResultCode</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#BaseResultCode"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">BaseResultCode</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#config"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">config</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#AccessTokenFilter"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">AccessTokenFilter</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Utils"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Utils</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpCallCaseUtils"><span class="toc-nav-number">1.3.1.</span> <span class="toc-nav-text">TpCallCaseUtils</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Enum"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Enum</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ResultCodeErrorEnum"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">ResultCodeErrorEnum</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Dto"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Dto</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#AuthServerDto"><span class="toc-nav-number">1.5.1.</span> <span class="toc-nav-text">AuthServerDto</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpUserDto"><span class="toc-nav-number">1.5.2.</span> <span class="toc-nav-text">TpUserDto</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpDepartmentQueryDto"><span class="toc-nav-number">1.5.3.</span> <span class="toc-nav-text">TpDepartmentQueryDto</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpDepartmentDto"><span class="toc-nav-number">1.5.4.</span> <span class="toc-nav-text">TpDepartmentDto</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Controller"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">Controller</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#AuthServerController"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">AuthServerController</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Client"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Client</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Utils-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Utils</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#DefaultFeignClient"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text"> DefaultFeignClient </span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CheckedCast"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text"> CheckedCast </span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#ContractEnum"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text"> ContractEnum </span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Dto-1"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Dto</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpConfigDto"><span class="toc-nav-number">2.2.1.</span> <span class="toc-nav-text">TpConfigDto</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Dao"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Dao</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpConfigDao"><span class="toc-nav-number">2.3.1.</span> <span class="toc-nav-text">TpConfigDao</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Feign</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpApi"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">TpApi</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpFeignClient"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">TpFeignClient</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Helper"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">Helper</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpApiHelper"><span class="toc-nav-number">2.5.1.</span> <span class="toc-nav-text">TpApiHelper</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpApiHelperImpl"><span class="toc-nav-number">2.5.2.</span> <span class="toc-nav-text">TpApiHelperImpl</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Test"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">Test</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TpCallCaseTest"><span class="toc-nav-number">2.6.1.</span> <span class="toc-nav-text">TpCallCaseTest</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
+            
+            <a class="tag" href="/tags/#OpenFeign" title="OpenFeign">OpenFeign</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Utils-JDK-2-Files/">
+  <title>
+    
+      [Utils - JDK] 2 Files  - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+              
+            </div>
+            <h1>[Utils - JDK] 2 Files </h1>
+            <h2 class="subheading">This class consists exclusively of static methods that operate on files, directories, or other types of files...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-09-13
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">19</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.7k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JDK1.7引入了新的IO操作类。<code>java.nio</code> 包下定义了一些操作文件和文件系统的接口和类。<code>java.nio.file.Files</code> 类具有对文件、目录和其他类型的文件进行操作的静态实用程序方法。在这篇文章中，我们将学习 <code>java.nio</code> 文件 API。<code>Files</code> 类在 <code>java.nio.file</code> 包下。这篇文章将介绍有关文件操作的 <code>NIO Files</code> 类。</p>
+<h2 id="Java-NIO-Paths"><a href="#Java-NIO-Paths" class="headerlink" title="Java NIO Paths"></a>Java NIO Paths</h2><p>在 <code>java.nio.file</code> 包下有一个 <code>Path</code> 类，这个类用于来表示文件路径和文件。在 JDK 1.7 中 <code>Path</code> 类取代了 <code>File</code> 类。<code>NIO Files</code> 类中的 API 就通过 <code>Path</code> 类来工作。</p>
+<h3 id="构造-Path-的方法（Java-8）"><a href="#构造-Path-的方法（Java-8）" class="headerlink" title="构造 Path 的方法（Java 8）"></a>构造 <code>Path</code> 的方法（Java 8）</h3><ul>
+<li><p><code>get(String first, String... more)</code>：将路径字符串或联接后形成路径字符串的字符串序列转换为路径。</p>
+</li>
+<li><p><code>Path    get(URI uri)</code>：将给定的URI转换为路径对象。</p>
+</li>
+</ul>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">path</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Path path = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    System.out.println(path.getFileName());</span><br><span class="line"></span><br><span class="line">    Path path2 = Paths.get(<span class="string">"/Users"</span>, <span class="string">"/vincent"</span>, <span class="string">"/IDEA_Project"</span>, <span class="string">"/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    System.out.println(path2.getFileName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>或者另一种创建路径的方法是通过创建一个 URI。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Path path3 = Paths.get(URI.create(<span class="string">"file:///Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>));</span><br><span class="line">System.out.println(path3.getFileName());</span><br></pre></td></tr></table></figure>
+
+<p>从 Java 11 开始，<code>Paths.get()</code> 不建议使用。取而代之的，推荐用 Path接口中的 <code>static of()</code> 方法来创建。它和 <code>Paths.get()</code> 方法没有区别。</p>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Path path = Path.of(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">Path path = Path.of(<span class="string">"/Users"</span>, <span class="string">"/vincent"</span>, <span class="string">"/IDEA_Project"</span>, <span class="string">"/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">Path path = Path.of(URI.create(<span class="string">"file:///Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="Path-部分方法"><a href="#Path-部分方法" class="headerlink" title="Path 部分方法"></a><code>Path</code> 部分方法</h3><ul>
+<li><code>toFile()</code>：获取文件。</li>
+<li><code>getFileName()</code>：获取文件名。</li>
+<li><code>toUri()</code>：获取 URI（例：file:///Users/vincent/IDEA_Project/my_project/IO/sample-file.txt）。</li>
+<li><code>getParent()</code>：获取父路径。</li>
+<li><code>getRoot()</code>：获取根路径。</li>
+<li><code>toString()</code>：该路径的字符串形式。</li>
+<li><code>isAbsolute()</code>：是否是绝对路径。</li>
+</ul>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">path</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Path path = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line"></span><br><span class="line">    File file = path.toFile();</span><br><span class="line">    System.out.println(file);</span><br><span class="line"></span><br><span class="line">    Path fileName = path.getFileName();</span><br><span class="line">    System.out.println(fileName);</span><br><span class="line"></span><br><span class="line">    URI uri = path.toUri();</span><br><span class="line">    System.out.println(uri);</span><br><span class="line"></span><br><span class="line">    Path parent = path.getParent();</span><br><span class="line">    System.out.println(parent);</span><br><span class="line"></span><br><span class="line">    Path root = path.getRoot();</span><br><span class="line">    System.out.println(root);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> absolute = path.isAbsolute();</span><br><span class="line">    System.out.println(absolute);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Java-NIO-Files"><a href="#Java-NIO-Files" class="headerlink" title="Java NIO Files"></a>Java NIO Files</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li><code>exists(Path path, LinkOption... options)</code>：是否存在。 </li>
+<li><code>notExists(Path path, LinkOption... options)</code>：是否不存在。</li>
+<li><code>isDirectory(Path path, LinkOption... options)</code>：是否是目录。</li>
+<li><code>isSymbolicLink(Path path)</code>：是否是象征链接。</li>
+<li><code>isWritable(Path path)</code>：是否可写。</li>
+<li><code>isExecutable(Path path)</code>：是否可执行。</li>
+<li><code>isReadable(Path path)</code>：是否可读。</li>
+<li><code>isHidden(Path path)</code>：是否是隐藏。</li>
+<li><code>getPosixFilePermissions(Path path, LinkOption... options)</code>：获取具体的权限。</li>
+<li><code>getOwner(Path path, LinkOption... options)</code>：</li>
+<li><code>getLastModifiedTime(Path path, LinkOption... options)</code>：获取最后修改时间。</li>
+<li><code>size(Path path)</code>：获取大小。</li>
+<li><code>newInputStream(Path path, OpenOption... options)</code>：返回输入流。</li>
+<li><code>newOutputStream(Path path, OpenOption... options)</code>：返回输出流。</li>
+</ul>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">files</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * exists(Path path, LinkOption... options)：是否存在。</span></span><br><span class="line"><span class="comment">     * notExists(Path path, LinkOption... options)：是否不存在。</span></span><br><span class="line"><span class="comment">     * isDirectory(Path path, LinkOption... options)：是否是目录。</span></span><br><span class="line"><span class="comment">     * isSymbolicLink(Path path)：是否是象征链接。</span></span><br><span class="line"><span class="comment">     * isWritable(Path path)：是否可写。</span></span><br><span class="line"><span class="comment">     * isExecutable(Path path)：是否可执行。</span></span><br><span class="line"><span class="comment">     * isReadable(Path path)：是否可读。</span></span><br><span class="line"><span class="comment">     * isHidden(Path path)：是否是隐藏。</span></span><br><span class="line"><span class="comment">     * getPosixFilePermissions(Path path, LinkOption... options)：获取具体的权限。</span></span><br><span class="line"><span class="comment">     * getOwner(Path path, LinkOption... options)：获取所属者。</span></span><br><span class="line"><span class="comment">     * getLastModifiedTime(Path path, LinkOption... options)：获取最后修改时间。</span></span><br><span class="line"><span class="comment">     * size(Path path)：获取大小。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path newFilePath2 = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new-file2.txt"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> exists = Files.exists(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"exists：："</span> + exists);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> notExists = Files.notExists(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"notExists："</span> + notExists);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> directory = Files.isDirectory(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"directory："</span> + directory);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> symbolicLink = Files.isSymbolicLink(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"symbolicLink："</span> + symbolicLink);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> writable = Files.isWritable(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"writable："</span> + symbolicLink);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> executable = Files.isExecutable(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"executable："</span> + symbolicLink);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> readable = Files.isReadable(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"readable："</span> + symbolicLink);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> hidden = Files.isHidden(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"hidden："</span> + symbolicLink);</span><br><span class="line"></span><br><span class="line">    Set&lt;PosixFilePermission&gt; posixFilePermissions = Files.getPosixFilePermissions(newFilePath2);</span><br><span class="line">    posixFilePermissions.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    UserPrincipal owner = Files.getOwner(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"owner："</span> + owner);</span><br><span class="line"></span><br><span class="line">    FileTime lastModifiedTime = Files.getLastModifiedTime(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"lastModifiedTime："</span> + lastModifiedTime);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> size = Files.size(newFilePath2);</span><br><span class="line">    System.out.println(<span class="string">"size："</span> + size);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">exists：：<span class="keyword">true</span></span><br><span class="line">notExists：<span class="keyword">false</span></span><br><span class="line">directory：<span class="keyword">false</span></span><br><span class="line">symbolicLink：<span class="keyword">false</span></span><br><span class="line">writable：<span class="keyword">false</span></span><br><span class="line">executable：<span class="keyword">false</span></span><br><span class="line">readable：<span class="keyword">false</span></span><br><span class="line">hidden：<span class="keyword">false</span></span><br><span class="line">OWNER_WRITE</span><br><span class="line">owner：vincent</span><br><span class="line">lastModifiedTime：<span class="number">2020</span>-<span class="number">09</span>-<span class="number">13</span>T16:<span class="number">40</span>:<span class="number">27</span>Z</span><br><span class="line">size：<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="readAttributes"><a href="#readAttributes" class="headerlink" title="readAttributes"></a><code>readAttributes</code></h3><p><code>readAttributes</code>：读取文件的全部属性，作为一个批次操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">readAttributes(Path path, Class&lt;A&gt; type, LinkOption... options)</span><br><span class="line">readAttributes(Path path, String attributes, LinkOption... options)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readAttributes</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * readAttributes：读取文件的全部属性，作为一个批次操作。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * readAttributes(Path path, Class&lt;A&gt; type, LinkOption... options)</span></span><br><span class="line"><span class="comment">     * readAttributes(Path path, String attributes, LinkOption... options)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path pathFile = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new-file2.txt"</span>);</span><br><span class="line">    PosixFileAttributes attrs = Files.readAttributes(pathFile, PosixFileAttributes<span class="class">.<span class="keyword">class</span>)</span>;<span class="comment">// 读取文件的权限</span></span><br><span class="line">    Set&lt;PosixFilePermission&gt; posixPermissions = attrs.permissions();</span><br><span class="line">    posixPermissions.clear();</span><br><span class="line">    System.out.format(<span class="string">"%s %s%n"</span>, attrs.owner().getName(), PosixFilePermissions.toString(posixPermissions));</span><br><span class="line">    Files.setPosixFilePermissions(pathFile, posixPermissions);</span><br><span class="line">    </span><br><span class="line">    posixPermissions.add(PosixFilePermission.OWNER_READ);</span><br><span class="line">    posixPermissions.add(PosixFilePermission.GROUP_READ);</span><br><span class="line">    posixPermissions.add(PosixFilePermission.OTHERS_READ);</span><br><span class="line">    posixPermissions.add(PosixFilePermission.OWNER_WRITE);</span><br><span class="line">    <span class="comment">// 设置文件的权限</span></span><br><span class="line">    Files.setPosixFilePermissions(pathFile, posixPermissions);</span><br><span class="line">    System.out.format(<span class="string">"%s %s%n"</span>, attrs.owner().getName(), PosixFilePermissions.toString(attrs.permissions()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="createFile-和-createDirectory"><a href="#createFile-和-createDirectory" class="headerlink" title="createFile 和 createDirectory"></a><code>createFile</code> 和 <code>createDirectory</code></h3><p><code>createFile</code>：创建一个新的空的文件，如果存在创建失败（抛 FileAlreadyExistsException）。</p>
+<p><code>createDirectory</code>：创建一个新的目录，如果存在创建失败（抛 FileAlreadyExistsException）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">createDirectories(Path dir, FileAttribute&lt;?&gt;... attrs)</span><br><span class="line">createDirectory(Path dir, FileAttribute&lt;?&gt;... attrs)</span><br><span class="line">createFile(Path path, FileAttribute&lt;?&gt;... attrs)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createFileAndDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * createFile：创建一个新的空的文件，如果存在创建失败（抛 FileAlreadyExistsException）。</span></span><br><span class="line"><span class="comment">     * createDirectory：创建一个新的目录，如果存在创建失败（抛 FileAlreadyExistsException）。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * createDirectories(Path dir, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     * createDirectory(Path dir, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     * createFile(Path path, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path newFilePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new-file.txt"</span>);</span><br><span class="line">    Files.createFile(newFilePath);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置了权限，只能写的权限。（--w-------   1 vincent  staff        0 Sep 14 00:40 new-file2.txt）</span></span><br><span class="line">    Path newFilePath2 = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new-file2.txt"</span>);</span><br><span class="line">    FileAttribute&lt;Set&lt;PosixFilePermission&gt;&gt; fileAttributes = PosixFilePermissions</span><br><span class="line">            .asFileAttribute(Sets.newHashSet(PosixFilePermission.OWNER_WRITE));</span><br><span class="line">    Files.createFile(newFilePath2, fileAttributes);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Files.createDirectory()：只是创建目录，如果它的上级目录不存在就会报错。</span></span><br><span class="line">    Path newDirectoryPath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/newDir1"</span>);</span><br><span class="line">    Files.createDirectory(newDirectoryPath);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Files.createDirectories()：会首先创建所有不存在的父目录来创建目录。</span></span><br><span class="line">    Path newDirectoriesPath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/newDir2/newDir3"</span>);</span><br><span class="line">    Files.createDirectories(newDirectoriesPath);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="createTempFile-和-createTempDirectory"><a href="#createTempFile-和-createTempDirectory" class="headerlink" title="createTempFile 和 createTempDirectory"></a><code>createTempFile</code> 和 <code>createTempDirectory</code></h3><p><code>createTempFile</code>：生成临时文件，支持前缀和后缀命名。</p>
+<p><code>createTempDirectory</code>：生成临时目录，支持前缀命名。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Path directoryPath = Paths.get(<span class="string">"/Users/JavaDeveloperCentral/data"</span>);</span><br><span class="line">Path tmpDirPath = Files.createTempDirectory(directoryPath, <span class="string">""</span>);</span><br><span class="line">System.out.println(tmpDirPath);</span><br><span class="line">tmpDirPath.toFile().deleteOnExit();</span><br><span class="line"></span><br><span class="line">Path filePath1 = Paths.get(tmpDirPath.toString() + <span class="string">"/file1"</span>);</span><br><span class="line">filePath1.toFile().deleteOnExit();</span><br><span class="line">Files.write(filePath1, List.of(<span class="string">"something"</span>));</span><br><span class="line"></span><br><span class="line">Path filePath2 = Paths.get(tmpDirPath.toString() + <span class="string">"/file2"</span>);</span><br><span class="line">filePath2.toFile().deleteOnExit();</span><br><span class="line">Files.write(filePath2, List.of(<span class="string">"something"</span>));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">createTempFile(Path dir, String prefix, String suffix, FileAttribute&lt;?&gt;... attrs)</span><br><span class="line">createTempFile(String prefix, String suffix, FileAttribute&lt;?&gt;... attrs)</span><br><span class="line">createTempDirectory(Path dir, String prefix, FileAttribute&lt;?&gt;... attrs)</span><br><span class="line">createTempDirectory(String prefix, FileAttribute&lt;?&gt;... attrs)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createTempFileAndDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * createTempFile：生成临时文件，支持前缀和后缀命名。</span></span><br><span class="line"><span class="comment">     * createTempDirectory：生成临时目录，支持前缀命名。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * createTempFile(Path dir, String prefix, String suffix, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     * createTempFile(String prefix, String suffix, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     * createTempDirectory(Path dir, String prefix, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     * createTempDirectory(String prefix, FileAttribute&lt;?&gt;... attrs)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path path = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/"</span>);</span><br><span class="line">    Path tempFile = Files.createTempFile(path, <span class="string">"prefix"</span>, <span class="string">"suffix.txt"</span>);</span><br><span class="line">    System.out.println(tempFile);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//不指定目录，会在系统默认目录下生成。</span></span><br><span class="line">    Path tempFile2 = Files.createTempFile(<span class="string">"prefix"</span>, <span class="string">"suffix.txt"</span>);</span><br><span class="line">    System.out.println(tempFile2);</span><br><span class="line"></span><br><span class="line">    Path tempDirectory = Files.createTempDirectory(path, <span class="string">"prefix"</span>);</span><br><span class="line">    System.out.println(tempDirectory);</span><br><span class="line"></span><br><span class="line">    Path tempDirectory2 = Files.createTempDirectory(<span class="string">"prefix"</span>);</span><br><span class="line">    System.out.println(tempDirectory2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="readAllBytes、readAllLines、readString、lines、list"><a href="#readAllBytes、readAllLines、readString、lines、list" class="headerlink" title="readAllBytes、readAllLines、readString、lines、list"></a><code>readAllBytes</code>、<code>readAllLines</code>、<code>readString</code>、<code>lines</code>、<code>list</code></h3><p><code>readAllBytes</code>：读取文件，返回字节。</p>
+<p><code>readAllLines</code>：读取文件的所以行，返回 <code>List&lt;String&gt;</code>。</p>
+<p><code>readString</code>：读取文件，返回字符串。（Java 11）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//This method was added in Java 11</span></span><br><span class="line">String data = Files.readString(filePath);</span><br><span class="line">System.out.println(data);</span><br><span class="line"></span><br><span class="line">data = Files.readString(filePath, StandardCharsets.UTF_8);</span><br><span class="line">System.out.println(data);</span><br></pre></td></tr></table></figure>
+
+<p><code>lines</code>：从文件中读取所有行作为 Stream 。</p>
+<p><code>list</code>：返回一个懒惰的填充 Stream ，其元素是 Stream 中的条目。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">readAllBytes(Path path)</span><br><span class="line">readAllLines(Path path)</span><br><span class="line">readAllLines(Path path, Charset cs)</span><br><span class="line">readString(Path path)	</span><br><span class="line">readString(Path path, Charset cs)</span><br><span class="line">lines(Path path)</span><br><span class="line">lines(Path path, Charset cs)</span><br><span class="line">list(Path dir)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * readAllBytes：读取文件，返回字节。</span></span><br><span class="line"><span class="comment">     * readAllLines：读取文件的所以行，返回 List&lt;String&gt;。</span></span><br><span class="line"><span class="comment">     * readString：读取文件，返回字符串。（Java 11）</span></span><br><span class="line"><span class="comment">     * lines：从文件中读取所有行作为 Stream 。</span></span><br><span class="line"><span class="comment">     * list：返回一个懒惰的填充 Stream ，其元素是 Stream 中的条目。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * readAllBytes(Path path)</span></span><br><span class="line"><span class="comment">     * readAllLines(Path path)</span></span><br><span class="line"><span class="comment">     * readAllLines(Path path, Charset cs)</span></span><br><span class="line"><span class="comment">     * readString(Path path)（Java 11）</span></span><br><span class="line"><span class="comment">     * readString(Path path, Charset cs)（Java 11）</span></span><br><span class="line"><span class="comment">     * lines(Path path)</span></span><br><span class="line"><span class="comment">     * lines(Path path, Charset cs)</span></span><br><span class="line"><span class="comment">     * list(Path dir)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path filePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] bytes = Files.readAllBytes(filePath);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(bytes));</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; readAllLines = Files.readAllLines(filePath, StandardCharsets.UTF_8);</span><br><span class="line">    readAllLines.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> (Stream&lt;String&gt; lines = Files.lines(filePath)) &#123;</span><br><span class="line">        lines.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    Path directoryPath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO"</span>);</span><br><span class="line">    <span class="keyword">try</span> (Stream&lt;Path&gt; list = Files.list(directoryPath)) &#123;</span><br><span class="line">        list.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>-Will-<span class="number">90</span></span><br><span class="line"><span class="number">2</span>-James-<span class="number">87</span></span><br><span class="line"><span class="number">3</span>-Kyle-<span class="number">67</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>-Will-<span class="number">90</span></span><br><span class="line"><span class="number">2</span>-James-<span class="number">87</span></span><br><span class="line"><span class="number">3</span>-Kyle-<span class="number">67</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>-Will-<span class="number">90</span></span><br><span class="line"><span class="number">2</span>-James-<span class="number">87</span></span><br><span class="line"><span class="number">3</span>-Kyle-<span class="number">67</span></span><br><span class="line"></span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>copyFile.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span><span class="keyword">new</span>-file2.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>sample-output-<span class="keyword">file</span>.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>IO.iml</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>reader.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>touch</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>target</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/i</span>o.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>pom.xml</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>writer.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>readerAndWriter.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>touch.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span><span class="keyword">new</span>-<span class="keyword">file</span>.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>outputStreamReader.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/i</span>nputStreamReader.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>a.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>.gitignore</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span><span class="keyword">write</span>.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>sample-<span class="keyword">file</span>.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/i</span>o3.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/i</span>o2.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/i</span>nputStream.txt</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>fileutils</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>.git</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>copyFile2.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>.idea</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/my</span>_project<span class="regexp">/IO/</span>src</span><br></pre></td></tr></table></figure>
+
+<h3 id="write、writeString"><a href="#write、writeString" class="headerlink" title="write、writeString"></a><code>write</code>、<code>writeString</code></h3><p><code>write</code>：将内容写入文件。</p>
+<p><code>writeString</code>：将字符写入文件。（Java 11）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//This method was added in Java 11</span></span><br><span class="line"><span class="comment">//File exists - Append to it</span></span><br><span class="line">Files.writeString(filePath, data, StandardOpenOption.WRITE, StandardOpenOption.APPEND);</span><br><span class="line"></span><br><span class="line"><span class="comment">//File exists - Truncate existing data</span></span><br><span class="line">Files.writeString(filePath, data, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);</span><br><span class="line"></span><br><span class="line"><span class="comment">//File does not exist, create a new one and write</span></span><br><span class="line">Files.writeString(filePath, data, StandardOpenOption.CREATE_NEW);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Create file if it does not exist and Append to it</span></span><br><span class="line">Files.writeString(filePath, data, StandardOpenOption.CREATE, StandardOpenOption.APPEND);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Create file if it does not exist - Truncate existing data</span></span><br><span class="line">Files.writeString(filePath, data, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">write(Path path, <span class="keyword">byte</span>[] bytes, OpenOption... options)</span><br><span class="line">write(Path path, Iterable&lt;? extends CharSequence&gt; lines, Charset cs, OpenOption... options)</span><br><span class="line">write(Path path, Iterable&lt;? extends CharSequence&gt; lines, OpenOption... options)</span><br><span class="line">writeString(Path path, CharSequence csq, Charset cs, OpenOption... options)	（Java <span class="number">11</span>）</span><br><span class="line">writeString(Path path, CharSequence csq, OpenOption... options)（Java <span class="number">11</span>）</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * write：将内容写入文件。</span></span><br><span class="line"><span class="comment">     * writeString：将字符写入文件。（Java 11）</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * write(Path path, byte[] bytes, OpenOption... options)</span></span><br><span class="line"><span class="comment">     * write(Path path, Iterable&lt;? extends CharSequence&gt; lines, Charset cs, OpenOption... options)</span></span><br><span class="line"><span class="comment">     * write(Path path, Iterable&lt;? extends CharSequence&gt; lines, OpenOption... options)</span></span><br><span class="line"><span class="comment">     * writeString(Path path, CharSequence csq, Charset cs, OpenOption... options)	（Java 11）</span></span><br><span class="line"><span class="comment">     * writeString(Path path, CharSequence csq, OpenOption... options)（Java 11）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path filePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-file.txt"</span>);</span><br><span class="line">    Path filePath2 = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/sample-output-file.txt"</span>);</span><br><span class="line">    Path write = Files.write(filePath2, Files.readAllBytes(filePath));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//StandardOpenOption.APPEND：追加在原文件内容后。</span></span><br><span class="line">    Path write2 = Files.write(filePath2, Lists.newArrayList(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>), StandardCharsets.UTF_8, StandardOpenOption.APPEND);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="copy"><a href="#copy" class="headerlink" title="copy"></a><code>copy</code></h3><p><code>copy</code>：复制文件或目录。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">copy(InputStream in, Path target, CopyOption... options)	</span><br><span class="line">copy(Path source, OutputStream out)	</span><br><span class="line">copy(Path source, Path target, CopyOption... options)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copy</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * copy：复制文件或目录。</span></span><br><span class="line"><span class="comment">         *</span></span><br><span class="line"><span class="comment">         * copy(InputStream in, Path target, CopyOption... options)	</span></span><br><span class="line"><span class="comment">         * copy(Path source, OutputStream out)	</span></span><br><span class="line"><span class="comment">         * copy(Path source, Path target, CopyOption... options)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        Path sourceFilePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/source.txt"</span>);</span><br><span class="line">        Path destinationFilePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/destination.txt"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//StandardCopyOption.REPLACE_EXISTING：如果存在，则替换。</span></span><br><span class="line">        Files.copy(sourceFilePath, destinationFilePath, StandardCopyOption.REPLACE_EXISTING);</span><br><span class="line"></span><br><span class="line"><span class="comment">//        Files.copy(sourceFilePath, new FileOutputStream(destinationFilePath.toFile()));</span></span><br><span class="line">        Files.copy(sourceFilePath, Files.newOutputStream(destinationFilePath, StandardOpenOption.WRITE));</span><br><span class="line"></span><br><span class="line"><span class="comment">//        Files.copy(IOUtils.toInputStream("Vincent is so handsome!!!", StandardCharsets.UTF_8), destinationFilePath, StandardCopyOption.REPLACE_EXISTING);</span></span><br><span class="line">        Files.copy(Files.newInputStream(sourceFilePath), destinationFilePath, StandardCopyOption.REPLACE_EXISTING);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="move、delete、deleteIfExists"><a href="#move、delete、deleteIfExists" class="headerlink" title="move、delete、deleteIfExists"></a><code>move</code>、<code>delete</code>、<code>deleteIfExists</code></h3><p><code>move</code>：移动或重命名文件到目标文件；移动或重命名目录（注：被移动或重命名的目录必须为空目录）。</p>
+<p><code>delete</code>：删除文件。</p>
+<p><code>deleteIfExists</code>：如果存在删除文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">move(Path source, Path target, CopyOption... options)</span><br><span class="line">delete(Path path)</span><br><span class="line">deleteIfExists(Path path)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moveAndDelete</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * move：移动或重命名文件到目标文件；移动或重命名目录（注：被移动或重命名的目录必须为空目录）。</span></span><br><span class="line"><span class="comment">     * delete：删除文件。</span></span><br><span class="line"><span class="comment">     * deleteIfExists：如果存在删除文件。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * move(Path source, Path target, CopyOption... options)</span></span><br><span class="line"><span class="comment">     * delete(Path path)</span></span><br><span class="line"><span class="comment">     * deleteIfExists(Path path)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path sourceFilePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/source.txt"</span>);</span><br><span class="line">    Path destinationFilePath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new_source.txt"</span>);</span><br><span class="line">    Files.move(sourceFilePath, destinationFilePath, StandardCopyOption.REPLACE_EXISTING);</span><br><span class="line"></span><br><span class="line">    Path path1 = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/newData"</span>);</span><br><span class="line">    Path path2 = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/dir1/dir2"</span>);</span><br><span class="line">    <span class="comment">//Works only if on the same filestore - else use walkFileTree</span></span><br><span class="line">    Files.move(path1, path2);</span><br><span class="line"></span><br><span class="line">    Path filePathToDelete = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/a.txt"</span>);</span><br><span class="line">    Files.delete(filePathToDelete);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//deletes only if it exists</span></span><br><span class="line">    Files.deleteIfExists(filePathToDelete);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="newDirectoryStream"><a href="#newDirectoryStream" class="headerlink" title="newDirectoryStream"></a><code>newDirectoryStream</code></h3><p><code>newDirectoryStream</code>：遍历当前目录（仅当前目录）下的所以条目（但不做递归遍历）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">newDirectoryStream(Path dir)</span><br><span class="line">newDirectoryStream(Path dir, DirectoryStream.Filter&lt;? <span class="keyword">super</span> Path&gt; filter)</span><br><span class="line">newDirectoryStream(Path dir, String glob)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">newDirectoryStream</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * newDirectoryStream：遍历当前目录（仅当前目录）下的所以条目（但不做递归遍历）。</span></span><br><span class="line"><span class="comment">     * 这里有个目录，目录结构如下：</span></span><br><span class="line"><span class="comment">     * |-- data</span></span><br><span class="line"><span class="comment">     *     |-- file1.txt</span></span><br><span class="line"><span class="comment">     *     |-- file2.txt</span></span><br><span class="line"><span class="comment">     *     |-- SomeClass.java</span></span><br><span class="line"><span class="comment">     *     |-- dir1</span></span><br><span class="line"><span class="comment">     *         |-- dir2</span></span><br><span class="line"><span class="comment">     *             |-- file1InDir2.txt</span></span><br><span class="line"><span class="comment">     *     |-- file3.txt</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 调用 newDirectoryStream(Path dir) 后，输出打印：</span></span><br><span class="line"><span class="comment">     *     file1.txt</span></span><br><span class="line"><span class="comment">     *     file2.txt</span></span><br><span class="line"><span class="comment">     *     SomeClass.java</span></span><br><span class="line"><span class="comment">     *     dir1</span></span><br><span class="line"><span class="comment">     *     file3.txt</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * newDirectoryStream(Path dir)</span></span><br><span class="line"><span class="comment">     * newDirectoryStream(Path dir, DirectoryStream.Filter&lt;? super Path&gt; filter)</span></span><br><span class="line"><span class="comment">     * newDirectoryStream(Path dir, String glob)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path directoryPath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>);</span><br><span class="line">    <span class="keyword">try</span> (DirectoryStream&lt;Path&gt; directoryStream = Files.newDirectoryStream(directoryPath)) &#123;</span><br><span class="line">        directoryStream.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> (DirectoryStream&lt;Path&gt; directoryStream = Files.newDirectoryStream(directoryPath, path -&gt; path.toFile().isFile())) &#123;</span><br><span class="line">        directoryStream.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> (DirectoryStream&lt;Path&gt; directoryStream = Files.newDirectoryStream(directoryPath, <span class="string">"*.txt"</span>)) &#123;</span><br><span class="line">        directoryStream.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">file1</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">file2</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">SomeClass</span><span class="selector-class">.java</span></span><br><span class="line"><span class="selector-tag">dir1</span></span><br><span class="line"><span class="selector-tag">file3</span><span class="selector-class">.txt</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">file1</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">file2</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">SomeClass</span><span class="selector-class">.java</span></span><br><span class="line"><span class="selector-tag">file3</span><span class="selector-class">.txt</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">file1</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">file2</span><span class="selector-class">.txt</span></span><br><span class="line"><span class="selector-tag">file3</span><span class="selector-class">.txt</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="walk-和-walkFileTree"><a href="#walk-和-walkFileTree" class="headerlink" title="walk 和 walkFileTree"></a><code>walk</code> 和 <code>walkFileTree</code></h3><p><code>walk</code>：遍历整个文件目录（递归）。</p>
+<p><code>walkFileTree</code>：遍历整个文件目录（递归）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">walk(Path start, FileVisitOption... options)</span><br><span class="line">walk(Path start, <span class="keyword">int</span> maxDepth, FileVisitOption... options)</span><br><span class="line">walkFileTree(Path start, FileVisitor&lt;? <span class="keyword">super</span> Path&gt; visitor)</span><br><span class="line">walkFileTree(Path start, Set&lt;FileVisitOption&gt; options, <span class="keyword">int</span> maxDepth, FileVisitor&lt;? <span class="keyword">super</span> Path&gt; visitor)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">walkAndWalkFileTree</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * walk：遍历整个文件目录（递归）。</span></span><br><span class="line"><span class="comment">     * walkFileTree：遍历整个文件目录（递归）。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * walk(Path start, FileVisitOption... options)</span></span><br><span class="line"><span class="comment">     * walk(Path start, int maxDepth, FileVisitOption... options)</span></span><br><span class="line"><span class="comment">     * walkFileTree(Path start, FileVisitor&lt;? super Path&gt; visitor)</span></span><br><span class="line"><span class="comment">     * walkFileTree(Path start, Set&lt;FileVisitOption&gt; options, int maxDepth, FileVisitor&lt;? super Path&gt; visitor)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Path directoryPath = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>);</span><br><span class="line">    <span class="keyword">try</span> (Stream&lt;Path&gt; walk = Files.walk(directoryPath, <span class="number">1</span>)) &#123;</span><br><span class="line">        walk.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * walkFileTree(Path start, Set&lt;FileVisitOption&gt; options, int maxDepth, FileVisitor&lt;? super Path&gt; visitor)：</span></span><br><span class="line"><span class="comment">     * 参数：</span></span><br><span class="line"><span class="comment">     *      1. java.nio.file.Path start：遍历的起始路径。</span></span><br><span class="line"><span class="comment">     *      2. Set&lt;java.nio.file.FileVisitOption&gt; options：遍历选项。</span></span><br><span class="line"><span class="comment">     *      3. int maxDepth：遍历深度。</span></span><br><span class="line"><span class="comment">     *      4. java.nio.file.FileVisitor&lt;? super Path&gt; visitor：遍历过程中的行为控制器。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * FileVisitor&lt;Path&gt;：</span></span><br><span class="line"><span class="comment">     *      1. preVisitDirectory：访问一个目录，在进入之前调用。</span></span><br><span class="line"><span class="comment">     *      2. postVisitDirectory：一个目录的所有节点都被访问后调用。遍历时跳过同级目录或有错误发生，Exception 会传递给这个方法。</span></span><br><span class="line"><span class="comment">     *      3. visitFile：文件被访问时被调用。该文件的文件属性被传递给这个方法。</span></span><br><span class="line"><span class="comment">     *      4. visitFileFailed：当文件不能被访问时，此方法被调用。Exception 被传递给这个方法。</span></span><br><span class="line"><span class="comment">     * FileVisitResult：</span></span><br><span class="line"><span class="comment">     *      1. CONTINUE：继续遍历。</span></span><br><span class="line"><span class="comment">     *      2. SKIP_SIBLINGS：继续遍历，但忽略当前节点的所有兄弟节点直接返回上一层继续遍历。</span></span><br><span class="line"><span class="comment">     *      3. SKIP_SUBTREE：继续遍历，但是忽略子目录，但是子文件还是会访问。</span></span><br><span class="line"><span class="comment">     *      4. TERMINATE：终止遍历。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Files.walkFileTree(directoryPath, <span class="keyword">new</span> MySimpleFileVisitorImpl());</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    Files.walkFileTree(directoryPath, Sets.newHashSet(FileVisitOption.FOLLOW_LINKS), <span class="number">1</span>, <span class="keyword">new</span> SimpleFileVisitor&lt;Path&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">visitFile</span><span class="params">(Path file, BasicFileAttributes attrs)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"visitFile "</span> + file);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">super</span>.visitFile(file, attrs);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySimpleFileVisitorImpl</span> <span class="keyword">implements</span> <span class="title">FileVisitor</span>&lt;<span class="title">Path</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">preVisitDirectory</span><span class="params">(Path dir, BasicFileAttributes attrs)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"preVisitDirectory "</span> + dir);</span><br><span class="line">        <span class="keyword">return</span> FileVisitResult.CONTINUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">visitFile</span><span class="params">(Path file, BasicFileAttributes attrs)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"visitFile "</span> + file);</span><br><span class="line">        <span class="keyword">return</span> FileVisitResult.CONTINUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">visitFileFailed</span><span class="params">(Path file, IOException exc)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"visitFileFailed "</span> + file);</span><br><span class="line">        <span class="keyword">return</span> FileVisitResult.CONTINUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">postVisitDirectory</span><span class="params">(Path dir, IOException exc)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"postVisitDirectory "</span> + dir);</span><br><span class="line">        <span class="keyword">return</span> FileVisitResult.CONTINUE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/abc</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/io.png</span><br><span class="line"><span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/a.txt</span><br><span class="line"></span><br><span class="line">preVisitDirectory <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils</span><br><span class="line">preVisitDirectory <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/abc</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils<span class="regexp">/abc/</span>abc.txt</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils<span class="regexp">/abc/</span>a.txt</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils<span class="regexp">/abc/</span>abcd.txt</span><br><span class="line">postVisitDirectory <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/abc</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/io.png</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/a.txt</span><br><span class="line">postVisitDirectory <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils</span><br><span class="line"></span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/abc</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/io.png</span><br><span class="line">visitFile <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/IO/</span>fileutils/a.txt</span><br></pre></td></tr></table></figure>
+
+
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Utils-Commons-Collections4-CollectionsUtils/" data-toggle="tooltip" data-placement="top" title="[Utils - Commons Collections4] CollectionsUtils">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Utils-Commons-IO-3-IOUtils/" data-toggle="tooltip" data-placement="top" title="[Utils - Commons IO] 3 IOUtils">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Utils - JDK] 2 Files &body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Utils-JDK-2-Files/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Sun Sep 13 2020 20:03:50 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-NIO-Paths"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Java NIO Paths</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#构造-Path-的方法（Java-8）"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">构造 Path 的方法（Java 8）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Path-部分方法"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Path 部分方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-NIO-Files"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Java NIO Files</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#常用方法"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">常用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#readAttributes"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">readAttributes</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#createFile-和-createDirectory"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">createFile 和 createDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#createTempFile-和-createTempDirectory"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">createTempFile 和 createTempDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#readAllBytes、readAllLines、readString、lines、list"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">readAllBytes、readAllLines、readString、lines、list</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#write、writeString"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">write、writeString</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copy"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">copy</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#move、delete、deleteIfExists"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">move、delete、deleteIfExists</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#newDirectoryStream"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">newDirectoryStream</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#walk-和-walkFileTree"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">walk 和 walkFileTree</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Utils-JDK-2-Files/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

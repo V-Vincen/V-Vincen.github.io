@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Logback-3-Logback 的配置/">
+  <title>
+    
+      [Logback] 3 Logback 的配置 - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg5.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg5.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Logback" title="Logback">Logback</a>
+              
+            </div>
+            <h1>[Logback] 3 Logback 的配置</h1>
+            <h2 class="subheading">Configuration...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-12-31
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">45</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">10.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>我们开始通过多种配置 logback，以及许多示例的配置脚本。logback 依赖的配置框架 - <a href="http://logback.qos.ch/manual/onJoran.html" target="_blank" rel="noopener">Joran</a> 将会在之后的章节介绍</p>
+<h2 id="配置-logback"><a href="#配置-logback" class="headerlink" title="配置 logback"></a>配置 logback</h2><p>在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。</p>
+<p>可以通过编程或者配置 XML 脚本或者 Groovy 格式的方式来配置 logback。对于已经使用 log4j 的用户可以通过这个 <a href="http://logback.qos.ch/translator/" target="_blank" rel="noopener">工具</a> 来把 log4j.properties 转换为 logback.xml。</p>
+<p>以下是 logback 的初始化步骤：</p>
+<ol>
+<li>logback 会在类路径下寻找名为 logback-test.xml 的文件。</li>
+<li>如果没有找到，logback 会继续寻找名为 logback.groovy 的文件。</li>
+<li>如果没有找到，logback 会继续寻找名为 logback.xml 的文件。</li>
+<li>如果没有找到，将会通过 JDK 提供的 <a href="https://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html" target="_blank" rel="noopener">ServiceLoader</a> 工具在类路径下寻找文件 <code>META-INFO/services/ch.qos.logback.classic.spi.Configurator</code>，该文件的内容为实现了 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/spi/Configurator.html" target="_blank" rel="noopener"><code>Configurator</code></a> 接口的实现类的全限定类名。</li>
+<li>如果以上都没有成功，logback 会通过 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/BasicConfigurator.html" target="_blank" rel="noopener">BasicConfigurator</a> 为自己进行配置，并且日志将会全部在控制台打印出来。</li>
+</ol>
+<p>最后一步的目的是为了保证在所有的配置文件都没有被找到的情况下，提供一个默认的（但是是非常基础的）配置。</p>
+<p>如果你使用的是 maven，你可以在 <em>src/test/resources</em> 下新建 logback-test.xml。maven 会确保它不会被生成。所以你可以在测试环境中给配置文件命名为 <em>logback-test.xml</em>，在生产环境中命名为 <em>logback.xml</em>。</p>
+<p><code>FAST START-UP</code> Joran 解析给定的配置文件大概需要耗费 100 毫秒。为了减少应用程序启动时的时间，你可以使用 <a href="https://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html" target="_blank" rel="noopener">ServiceLoader</a> 来加载自定义的 <code>Configurator</code>，并使用 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/BasicConfigurator.html" target="_blank" rel="noopener">BasicConfigurator</a> 作为一个好的起点（个人的理解是通过继承这个类）。</p>
+<h3 id="自动配置-logback"><a href="#自动配置-logback" class="headerlink" title="自动配置 logback"></a>自动配置 logback</h3><p>最简单的方式配置 logback 是让它去加载默认的配置。例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.configuration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApp1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(MyApp1<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LOGGER.info(<span class="string">"Entering application."</span>);</span><br><span class="line">        </span><br><span class="line">        Foo foo = <span class="keyword">new</span> Foo();</span><br><span class="line">        foo.doIt();</span><br><span class="line">        LOGGER.info(<span class="string">"Exiting application."</span>);</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Foo</code> 的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.configuration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(Foo<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doIt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LOGGER.debug(<span class="string">"Did it again!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>假设配置文件 <em>logback-test.xml</em> 或者 <em>logback.xml</em> 不存在，logback 会调用 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/BasicConfigurator.html" target="_blank" rel="noopener">BasicConfigurator</a> 进行最小的配置。最小的配置包含一个附加到 root logger 上的 <code>ConsoleAppender</code>，格式化输出使用 <code>PatternLayoutEncoder</code> 对模版 <em>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</em> 进行格式化。root logger 默认的日志级别为 <code>DEBUG</code>。</p>
+<p>所以，<em>MyApp1</em> 的输出信息如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">16</span>:<span class="number">59</span>:<span class="number">20.161</span> [main] INFO chapters.configuration.MyApp1 - Entering application.</span><br><span class="line"><span class="number">16</span>:<span class="number">59</span>:<span class="number">20.164</span> [main] DEBUG chapters.configuration.Foo - Did it again!</span><br><span class="line"><span class="number">16</span>:<span class="number">59</span>:<span class="number">20.164</span> [main] INFO chapters.configuration.MyApp1 - Exiting application.</span><br></pre></td></tr></table></figure>
+
+<p><code>MyApp1</code>  通过调用 <code>org.slf4j.LoggerFactory</code> 与 <code>org.slf4j.Logger</code> 这两个类与 logback 相关联，并检索会用到的 logger。除了配置 logback 的代码，客户端的代码不需要依赖 logback，因为 SLF4J 允许在它的抽象层下使用任何日志框架，所以非常容易将大量代码从一个框架迁移到另一个框架。</p>
+<h3 id="使用-logback-test-xml-或-logback-xml-自动配置"><a href="#使用-logback-test-xml-或-logback-xml-自动配置" class="headerlink" title="使用 logback-test.xml 或 logback.xml 自动配置"></a>使用 <em>logback-test.xml</em> 或 <em>logback.xml</em> 自动配置</h3><p>下面的配置等同于通过 <code>BasicConfigurator</code> 进行配置。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>你需要将上面的配置文件命名为 logback.xml 或 logback-test.xml</p>
+</blockquote>
+<p>运行 <em>MyApp1</em>，你将会看到相同的结果（你要是不相信，你可以更改模版，看是否生效）。</p>
+<h4 id="在警告或错误的情况下自动打印状态信息"><a href="#在警告或错误的情况下自动打印状态信息" class="headerlink" title="在警告或错误的情况下自动打印状态信息"></a>在警告或错误的情况下自动打印状态信息</h4><p>如果在解析配置文件的过程当中发生了错误，logback 会在控制台打印出它的内部状态数据。如果用户明确的定义了状态监听器，为了避免重复，logback 将不会自动打印状态信息。</p>
+<p>在没有警告或错误的情况下，如果你想查看 logback 内部的状态信息，可以通过 <code>StatusPrinter</code> 类来调用 <code>print()</code> 方法查看具体的信息。</p>
+<blockquote>
+<p>在 <em>MyApp1</em> 的基础上添加两行代码，并命名为 <em>MyApp2</em></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.configuration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApp2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(MyApp2<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        LoggerContext lc = (LoggerContext)LoggerFactory.getILoggerFactory();</span><br><span class="line">        StatusPrinter.print(lc);</span><br><span class="line">        </span><br><span class="line">        LOGGER.info(<span class="string">"Entering application."</span>);</span><br><span class="line">        </span><br><span class="line">        Foo foo = <span class="keyword">new</span> Foo();</span><br><span class="line">        foo.doIt();</span><br><span class="line">        LOGGER.info(<span class="string">"Exiting application."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出信息如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">130</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback-test.xml]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">130</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback.groovy]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">131</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Found resource [logback.xml] at [file:/D:/E/project/logback-examples/target/classes/logback.xml]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">224</span> |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">225</span> |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">238</span> |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">251</span> |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming <span class="keyword">default</span> type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] <span class="keyword">for</span> [encoder] property</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">328</span> |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to DEBUG</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">329</span> |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">329</span> |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47</span>,<span class="number">332</span> |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@<span class="number">7</span>d4793a8 - Registering current configuration as safe fallback point</span><br><span class="line"></span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47.340</span> [main] INFO  chapters.configuration.MyApp2 - Entering application.</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47.342</span> [main] DEBUG chapters.configuration.Foo - Did it again!</span><br><span class="line"><span class="number">17</span>:<span class="number">56</span>:<span class="number">47.342</span> [main] INFO  chapters.configuration.MyApp2 - Exiting application.</span><br></pre></td></tr></table></figure>
+
+<p>在输出信息中，可以清楚的看到内部的状态信息，又称之为 <code>Status</code> 对象，可以很方便的获取 logback 的内部状态。</p>
+<h4 id="状态数据"><a href="#状态数据" class="headerlink" title="状态数据"></a>状态数据</h4><p>你可以通过构造一个配置文件来打印状态信息，而不需要通过编码的方式调用 <code>StatusPrinter</code> 去实现。只需要在 <em>configuration</em> 元素上添加 <em>debug</em> 属性。配置文件如下所示。</p>
+<blockquote>
+<p>注意：debug 属性只跟状态信息有关，并不会影响 logback 的配置文件，也不会影响 logger 的日志级别。</p>
+</blockquote>
+<p><em>Example: sample1.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要将 sample1.xml 改名为 logback.xml 或 logback-test.xml，不然 logbak 找不到配置文件。以后这种情况不再重复申明。</p>
+</blockquote>
+<p>如果配置文件的配置有问题，logback 会检测到这个错误并且在控制台打印它的内部状态。但是，如果配置文件没有被找到，logback 不会打印它的内部状态信息，因为没有检测到错误。通过编码方式调用 <code>StatusPrinter.print()</code> 方法会在任何情况下都打印状态信息。</p>
+<p><code>强制输出状态信息</code>：在缺乏状态信息的情况下，要找一个有问题的配置文件很难，特别是在生产环境下。为了能够更好的定位到有问题的配置文件，可以通过系统属性 <a href="#%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7-logback-statusListenerClass">logback.statusListenerClass</a> 来设置 <code>StatusListener</code> 强制输出状态信息。系统属性 <code>logback.statusListenerClass</code> 也可以用来在遇到错误的情况下进行输出。</p>
+<p>设置 <code>debug=&quot;true&quot;</code> 完全等同于配置一个 <code>OnConsoleStatusListener</code> 。具体示例如下：</p>
+<p><em>Example: onConsoleStatusListener.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">statusListener</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.status.OnConsoleStatusListener"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 剩下的配置跟之前的相同 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>设置 <code>debug=&quot;true&quot;</code> 与配置 <code>OnConsoleStatusListener</code> 的效果完全一样。</p>
+<h3 id="通过系统属性指定默认的配置文件"><a href="#通过系统属性指定默认的配置文件" class="headerlink" title="通过系统属性指定默认的配置文件"></a>通过系统属性指定默认的配置文件</h3><p>通过系统属性 <code>logback.configurationFile</code> 可以指定默认的配置文件的路径。它的值可以是 URL，类路径下的文件或者是应用外部的文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Dlogback.configurationFile=/path/to/config.xml chapters.configuration.MyApp1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：文件类型只能是 “.xml” 或者 “.groovy”，其它的拓展文件将会被忽略。</p>
+</blockquote>
+<p>因为 <code>logback.configureFile</code> 是一个系统属性，所以也可以在应用内进行设置。但是必须在 logger 实例创建前进行设置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.util.ContextInitializer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServerMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.setProperty(ContextInitializer.CONFIG_FILE_PROPERTY, <span class="string">"configurationFile.xml"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(ServerMain<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LOGGER.info(<span class="string">"xxxxxxxx"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="当配置文件更改时，自动加载"><a href="#当配置文件更改时，自动加载" class="headerlink" title="当配置文件更改时，自动加载"></a>当配置文件更改时，自动加载</h3><p>为了让 logback 能够在配置文件改变的时候自动去扫描，需要在 <code>&lt;configuration&gt;</code> 标签上添加 <code>scan=true</code> 属性。</p>
+<p><em>Example</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">scan</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，一分钟扫描一次配置文件，看是否有更改。通过 <code>&lt;configuration&gt;</code> 标签上的 <code>scanPeriod</code> 属性可以指定扫描周期。扫描周期的时间单位可以是毫秒、秒、分钟或者小时。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">scan</span>=<span class="string">"true"</span> <span class="attr">scanPeriod</span>=<span class="string">"30 seconds"</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：如果没有指定时间单位，则默认为毫秒。</p>
+</blockquote>
+<p>当设置了 <code>scan=&quot;true&quot;</code>，会新建一个 <a href="http://logback.qos.ch/xref/ch/qos/logback/classic/joran/ReconfigureOnChangeTask.html" target="_blank" rel="noopener">ReconfigureOnChangeTask</a> 任务用于监视配置文件是否变化。<code>ReconfigureOnChangeTask</code> 也会自动监视外部文件的变化。</p>
+<p>如果更改后的配置文件有语法错误，则会回退到之前的配置文件。</p>
+<h4 id="在堆栈中展示包数据"><a href="#在堆栈中展示包数据" class="headerlink" title="在堆栈中展示包数据"></a>在堆栈中展示包数据</h4><blockquote>
+<p>注意：在 1.1.4 版本中，展示包数据是默认被禁用的。</p>
+</blockquote>
+<p>如果启用了展示包数据，logback 会在堆栈的每一行显示 jar 包的名字以及 jar 的版本号。展示包数据可以很好的解决 jar 版本冲突的问题。但是，这个的代价比较高，特别是在频繁报错的情况下。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">14:28:48.835 [btpool0-7] INFO  c.q.l.demo.prime.PrimeAction - 99 is not a valid value</span><br><span class="line">java.lang.Exception: 99 is invalid</span><br><span class="line">  at ch.qos.logback.demo.prime.PrimeAction.execute(PrimeAction.java:28) [classes&#x2F;:na]</span><br><span class="line">  at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431) [struts-1.2.9.jar:1.2.9]</span><br><span class="line">  at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236) [struts-1.2.9.jar:1.2.9]</span><br><span class="line">  at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432) [struts-1.2.9.jar:1.2.9]</span><br><span class="line">  at javax.servlet.http.HttpServlet.service(HttpServlet.java:820) [servlet-api-2.5-6.1.12.jar:6.1.12]</span><br><span class="line">  at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502) [jetty-6.1.12.jar:6.1.12]</span><br><span class="line">  at ch.qos.logback.demo.UserServletFilter.doFilter(UserServletFilter.java:44) [classes&#x2F;:na]</span><br><span class="line">  at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115) [jetty-6.1.12.jar:6.1.12]</span><br><span class="line">  at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361) [jetty-6.1.12.jar:6.1.12]</span><br><span class="line">  at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417) [jetty-6.1.12.jar:6.1.12]</span><br><span class="line">  at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230) [jetty-6.1.12.jar:6.1.12]</span><br></pre></td></tr></table></figure>
+
+<p>启用展示包数据：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">packagingData</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="直接调用-JoranConfigurator"><a href="#直接调用-JoranConfigurator" class="headerlink" title="直接调用 JoranConfigurator"></a>直接调用 <code>JoranConfigurator</code></h3><p>Logback 依赖的配置文件库为 Joran，是 logback-core 的一部分。logback 的默认配置机制为：通过 <code>JoranConfigurator</code> 在类路径上寻找默认的配置文件。你可以通过直接调用 <code>JoranConfigurator</code> 的方式来重写 logback 的默认配置机制。</p>
+<p><em>Example</em>：直接调用 <code>JoranConfigurator</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.configuration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.joran.JoranConfigurator;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.joran.spi.JoranException;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApp3</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(MyApp3<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// assume SLF4J is bound to logback in the current environment</span></span><br><span class="line">    LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      JoranConfigurator configurator = <span class="keyword">new</span> JoranConfigurator();</span><br><span class="line">      configurator.setContext(context);</span><br><span class="line">      <span class="comment">// Call context.reset() to clear any previous configuration, e.g. default </span></span><br><span class="line">      <span class="comment">// configuration. For multi-step configuration, omit calling context.reset().</span></span><br><span class="line">      context.reset(); </span><br><span class="line">      configurator.doConfigure(args[<span class="number">0</span>]);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (JoranException je) &#123;</span><br><span class="line">      <span class="comment">// StatusPrinter will handle this</span></span><br><span class="line">    &#125;</span><br><span class="line">    StatusPrinter.printInCaseOfErrorsOrWarnings(context);</span><br><span class="line"></span><br><span class="line">    logger.info(<span class="string">"Entering application."</span>);</span><br><span class="line"></span><br><span class="line">    Foo foo = <span class="keyword">new</span> Foo();</span><br><span class="line">    foo.doIt();</span><br><span class="line">    logger.info(<span class="string">"Exiting application."</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：对于多个步骤的配置，context.reset() 不需要调用。</p>
+</blockquote>
+<h3 id="查看内部状态信息"><a href="#查看内部状态信息" class="headerlink" title="查看内部状态信息"></a>查看内部状态信息</h3><p>logback 通过 <a href="https://logback.qos.ch/xref/ch/qos/logback/core/status/StatusManager.html" target="_blank" rel="noopener">StatusManager</a> 的对象来收集内部的状态信息，这个对象可以通过 <code>LoggerContext</code> 来获取。</p>
+<p>对于一个给定的 <code>StatusManager</code>，你可以获取 logback 上下文所有的状态信息。为了保持内存的使用在一个合理的水平，<code>StatusManager</code> 的默认实现包含两个部分：头部与尾部。头部存储第一个 <em>H</em> 状态的消息，尾部存储最后一个 <em>T</em> 状态的消息。目前 <em>H=T=150</em>，这个值在以后可能会改变。</p>
+<p>logback-classic 包含一个名叫 ViewStatusMessagesServlet 的 servlet。这个 servlet 打印当前 LoggerContext 的 StatusManager 的内容，通过 html 进行输出。</p>
+<p><em>Example</em>：</p>
+<p><img src="statusMessages.png" alt="statusMessages"></p>
+<p>在 <em>WEB-INF/web.xml</em> 中添加如下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>ViewStatusMessages<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>ch.qos.logback.classic.ViewStatusMessagesServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>ViewStatusMessages<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/lbClassicStatus<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后可以通过 <code>http://host/yourWebapp/lbClassicStatus</code> 进行访问。</p>
+<h3 id="监听状态信息"><a href="#监听状态信息" class="headerlink" title="监听状态信息"></a>监听状态信息</h3><p>通过给 <code>StatusManager</code> 附加一个 <code>StatusListener</code>，可以对状态信息进行获取。特别是在配置好 logback 之后。注册一个状态监听器可以很方便的监听 logback 的内部状态，并且不需要人工的干预。</p>
+<p> <code>StatusListener</code> 有一个名为 <code>OnConsoleStatusListener</code> 的实现类，可以将状态信息在控制台打印出来。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddStatusListenerApp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    LoggerContext lc = (LoggerContext)LoggerFactory.getILoggerFactory();</span><br><span class="line">    StatusManager statusManager = lc.getStatusManager();</span><br><span class="line">    OnConsoleStatusListener onConsoleStatusListener = <span class="keyword">new</span> OnConsoleStatusListener();</span><br><span class="line">    statusManager.add(onConsoleStatusListener);</span><br><span class="line">		</span><br><span class="line">    Logger logger = LoggerFactory.getLogger(<span class="string">"myApp"</span>);</span><br><span class="line">    logger.info(<span class="string">"Entering application"</span>);</span><br><span class="line">		</span><br><span class="line">    Foo foo = <span class="keyword">new</span> Foo();</span><br><span class="line">    foo.doIt();</span><br><span class="line">    logger.info(<span class="string">"Exiting application"</span>);</span><br><span class="line">		</span><br><span class="line">    StatusPrinter.print(statusManager);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：注册的状态监听器只会获取注册之后产生的状态消息，而不会获取注册之前产生的消息。所以建议在最开始的时候直接进行配置。</p>
+</blockquote>
+<p>可以在配置文件中配置多个状态监听器。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">statusListener</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.status.OnConsoleStatusListener"</span> /&gt;</span>  </span><br><span class="line"></span><br><span class="line">  ... the rest of the configuration file  </span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="系统属性-logback-statusListenerClass"><a href="#系统属性-logback-statusListenerClass" class="headerlink" title="系统属性 logback.statusListenerClass"></a>系统属性 logback.statusListenerClass</h3><p>通过设置 java 的系统属性来配置状态监听器。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Dlogback.statusListenerClass=ch.qos.logback.core.status.OnConsoleStatusListener</span><br></pre></td></tr></table></figure>
+
+<p>logback 子级实现了几个监听器。<a href="https://logback.qos.ch/xref/ch/qos/logback/core/status/OnConsoleStatusListener.html" target="_blank" rel="noopener">OnConsoleStatusListener</a> 用于在控制台打印状态消息。<a href="https://logback.qos.ch/xref/ch/qos/logback/core/status/OnErrorConsoleStatusListener.html" target="_blank" rel="noopener">OnErrorConsoleStatusListener</a> 用于在控制台打印显示错误的状态信息。<a href="https://logback.qos.ch/xref/ch/qos/logback/core/status/NopStatusListener.html" target="_blank" rel="noopener">NopStatusListener</a> 会丢弃掉状态信息。</p>
+<blockquote>
+<p>注意：在配置期间，任何的状态监听器被注册，或者通过 java 系统变量指定 <code>logback.statusListenerClass</code> 的值，<a href="#%E5%9C%A8%E8%AD%A6%E5%91%8A%E6%88%96%E9%94%99%E8%AF%AF%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%B0%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF">在警告或错误的情况下自动打印状态信息</a> 将会被禁用。</p>
+</blockquote>
+<p>可以通过设置 java 系统变量 <code>logback.statusListenerClass</code> 的值来禁用一切状态信息的打印。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Dlogback.statusListenerClass=ch.qos.logback.core.status.NopStatusListener</span><br></pre></td></tr></table></figure>
+
+<h2 id="停止-logback-classic"><a href="#停止-logback-classic" class="headerlink" title="停止 logback-classic"></a>停止 logback-classic</h2><p>为了释放 logback-classic 所使用的资源，停止使用 logger context 是一个好注意。停止 context 将会关闭所有在 logger 上定义的 appender，并且有序的停止正在活动的线程。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.sflf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();</span><br><span class="line">loggerContext.stop();</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码在 web 应用中，通过调用 <code>ServletContextListener</code> 的 <a href="http://docs.oracle.com/javaee/6/api/javax/servlet/ServletContextListener.html#contextDestroyed(javax.servlet.ServletContextEvent)" target="_blank" rel="noopener">contextDestroyed</a> 方法来停止 logback-classic 并释放资源。1.1.10 版本后，<code>ServletContextListener</code> 会被自动加载。</p>
+<h3 id="通过-shutddown-hook-停止-logback-classic"><a href="#通过-shutddown-hook-停止-logback-classic" class="headerlink" title="通过 shutddown hook 停止 logback-classic"></a>通过 shutddown hook 停止 logback-classic</h3><blockquote>
+<p>个人觉得 hook 可以理解为钩子或者开关，但是还是觉得照写会更好理解一点。</p>
+</blockquote>
+<p>指定一个 JVM shutdown hook 可以非常方便的关闭 logback 并释放资源。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 如果缺失 class 属性，则会默认加载 ch.qos.logback.core.hook.DefaultShutdownHook --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">shutdownHook</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：可以通过 <em>class</em> 属性指定一个 shutdown hook 的名字。</p>
+</blockquote>
+<p>默认的 shutdown hook 为 <a href="https://logback.qos.ch/apidocs/ch/qos/logback/core/hook/DefaultShutdownHook.html" target="_blank" rel="noopener">DefaultShutdownHook</a>，在一个指定的时间后（默认是 0）会停掉 context。但是允许 context 在 30s 内完成日志文件的打包。在独立的 java 应用程序中，在配置文件中添加 <code>&lt;shutdownHook/&gt;</code> 可以确保任何日志打包任务完成之后，JVM 才会退出。在 web 应用程序中，<a href="#%E5%9C%A8-web-%E5%BA%94%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-WebShutdownHook-%E5%81%9C%E6%AD%A2-logback-classic">webShutdownHook</a> 会自动安装，<code>&lt;shutdownHook/&gt;</code> 将会变的多余且没有必要。</p>
+<h3 id="在-web-应用中使用-WebShutdownHook-停止-logback-classic"><a href="#在-web-应用中使用-WebShutdownHook-停止-logback-classic" class="headerlink" title="在 web 应用中使用 WebShutdownHook 停止 logback-classic"></a>在 web 应用中使用 WebShutdownHook 停止 logback-classic</h3><p><code>SINCE 1.1.10</code> logback-classic 会自动要求 web 服务安装 <a href="https://logback.qos.ch/apidocs/ch/qos/logback/classic/servlet/LogbackServletContainerInitializer.html" target="_blank" rel="noopener">LogbackServletContainerInitializer</a>（实现了 <code>ServletContainerInitializer</code> 接口，在 servlet-api 3.x 或以后的版本才有效）。这个初始化程序将会依次实例化 <a href="https://logback.qos.ch/apidocs/ch/qos/logback/classic/servlet/LogbackServletContextListener.html" target="_blank" rel="noopener">LogbackServletContextListener</a> 的实例。在 web 应用停止或者重载的时候会停掉当前 logback-classic 的 context。</p>
+<blockquote>
+<p>我表示不是很懂这种做法有何意义，难道应用都停止了，context 还会在运行？这就是作者说的非常多余跟没有必要吗？</p>
+</blockquote>
+<p>可以在 web.xml 中禁止 <code>LogbackServletContextListener</code> 的实例化。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>logbackDisableServletContainerInitializer<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>logbackDisableServletContainerInitializer</code> 也可以通过 java 系统属性或者系统的环境变量来设置。优先级为：web 应用 &gt; java 系统属性 &gt; 系统环境变量</p>
+<h2 id="配置文件的语法"><a href="#配置文件的语法" class="headerlink" title="配置文件的语法"></a>配置文件的语法</h2><p>logback 允许你重新定义日志的行为而不需要重新编译代码，你可以轻易的禁用掉应用中某些部分的日志，或者将日志输出到任何地方。</p>
+<p>logback 的配置文件非常的灵活，不需要指定 DTD 或者 xml 文件需要的语法。但是，最基本的结构为 <code>&lt;configuration&gt;</code> 元素，包含 0 或多个 <code>&lt;appender&gt;</code> 元素，其后跟 0 或多个 <code>&lt;logger&gt;</code> 元素，其后再跟最多只能存在一个的 <code>&lt;root&gt;</code> 元素。基本结构图如下：</p>
+<p><img src="basicSyntax.png" alt="basicSyntax"></p>
+<p><strong>标签名大小写敏感</strong></p>
+<p>在 logback 版本 0.9.17 之后，显示规定的标签名不区分大小写。例如：<code>&lt;logger&gt;</code>、<code>&lt;Logger</code>、<code>&lt;LOGGER&gt;</code> 这些都是有效的标签名。xml 风格的规则仍然适用。如果你有一个开始标签为 &lt;xyz&gt;，那么必须要有一个结束标签 &lt;/xyz&gt;。&lt;/XyZ&gt; 则是错误的。根据 <a href="http://logback.qos.ch/manual/onJoran.html#implicit" target="_blank" rel="noopener">Implicit actions</a>，标签名字是大小写敏感的，除了第一个字母。所以，&lt;xyz&gt; 与 &lt;Xyz&gt; 是一样的，但是 &lt;xYz&gt; 是错误的。默认规则遵循驼峰命名法。很难说清楚一个标签遵循什么规则，如果你不知道给定的标签遵循哪种规则，那么使用驼峰命名法总是正确的。</p>
+<p><strong>配置 logger</strong></p>
+<p>现在你至少应该对 <a href="https://v-vincen.github.io/2020/12/31/Logback-2-%E6%9E%B6%E6%9E%84/#%E6%9C%89%E6%95%88%E7%AD%89%E7%BA%A7%E5%8F%88%E7%A7%B0%E4%B8%BA%E7%AD%89%E7%BA%A7%E7%BB%A7%E6%89%BF" target="_blank" rel="noopener">等级继承规则</a> 与 <a href="https://v-vincen.github.io/2020/12/31/Logback-2-%E6%9E%B6%E6%9E%84/#%E6%96%B9%E6%B3%95%E6%89%93%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E8%A7%84%E5%88%99" target="_blank" rel="noopener">基本规则</a> 有所了解.。</p>
+<p>通过 <code>&lt;logger&gt;</code> 标签来过 logger 进行配置，一个 <code>&lt;logger&gt;</code> 标签必须包含一个 <em>name</em> 属性，一个可选的 <em>level</em> 属性，一个可选 <em>additivity</em> 属性。<code>additivity</code> 的值为 <em>true</em> 或 <em>false</em>。<code>level</code> 的值为 TRACE，DEBUG，INFO，WARN，ERROR，ALL，OFF，INHERITED，NULL。当 <code>level</code> 的值为 INHERITED 或 NULL 时，将会强制 logger 继承上一层的级别。</p>
+<p><code>&lt;logger&gt;</code> 元素至少包含 0 或多个 <code>&lt;appender-ref&gt;</code> 元素。每一个 appender 通过这种方式被添加到 logger 上。与 log4j 不同的是，logbakc-classic 不会关闭或移除任何之前在 logger 上定义好的的 appender。</p>
+<p><strong>配置 root logger</strong></p>
+<p>root logger 通过 <code>&lt;root&gt;</code> 元素来进行配置。它只支持一个属性——<code>level</code>。它不允许设置其它任何的属性，因为 additivity 并不适用 root logger。而且，root logger 的名字已经被命名为 “ROOT”，也就是说也不支持 name 属性。level 属性的值可以为：TRACE、DEBUG、INFO、WARN、ERROR、ALL、OFF，但是不能设置为 INHERITED  或 NULL。</p>
+<p>跟 <code>&lt;logger</code> 元素类似，<code>&lt;root&gt;</code> 元素可以包含 0 或多个 <code>&lt;appender-ref&gt;</code> 元素。</p>
+<p><strong>例子</strong></p>
+<p>如果我们不想看到属于 <a href="#%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE-logback">chapters.configuration</a> 组件中任何的 DEBUG 信息。</p>
+<p><em>Example</em>：sample2.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration"</span> <span class="attr">level</span>=<span class="string">"INFO"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行 <em>MyApp3</em>，可以看到如下的输出信息：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">21</span>:<span class="number">52</span>:<span class="number">48.726</span> [main] INFO  chapters.configuration.MyApp3 - Entering application</span><br><span class="line"><span class="number">21</span>:<span class="number">52</span>:<span class="number">48.728</span> [main] INFO  chapters.configuration.MyApp3 - Exiting application</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，<a href="https://logback.qos.ch/xref/chapters/configuration/Foo.html" target="_blank" rel="noopener">“chapters.configuration.Foo”</a> 类中的 debug 信息没有被输出。</p>
+<p>你可以配置任何 logger 的日志级别。在下一个例子中，我们设置 <em>chapters.configurations</em> 的 logger 日志级别为 INFO，同时设置 <em>chapters.configuration.Foo</em> 的 logger 日志级别为 DEBUG。</p>
+<p><em>Example</em>：sample3.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration"</span> <span class="attr">level</span>=<span class="string">"INFO"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration.Foo"</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行 <em>MyApp3</em> 可以看到如下的输出信息：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">22</span>:<span class="number">06</span>:<span class="number">43.500</span> [main] INFO  chapters.configuration.MyApp3 - Entering application</span><br><span class="line"><span class="number">22</span>:<span class="number">06</span>:<span class="number">43.502</span> [main] DEBUG chapters.configuration.Foo - Did it again!</span><br><span class="line"><span class="number">22</span>:<span class="number">06</span>:<span class="number">43.502</span> [main] INFO  chapters.configuration.MyApp3 - Exiting application</span><br></pre></td></tr></table></figure>
+
+<p>下面的表格列出了 <code>JoranConfigurator</code> 通过 <em>sample3.xml</em> 配置 logback 后，logger 以及其对应的日志级别。</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Logger name</strong></th>
+<th align="left"><strong>指定级别</strong></th>
+<th align="left"><strong>有效级别</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">root</td>
+<td align="left">DEBUG</td>
+<td align="left">DEBUG</td>
+</tr>
+<tr>
+<td align="left">chapters.configuration</td>
+<td align="left">INFO</td>
+<td align="left">INFO</td>
+</tr>
+<tr>
+<td align="left">chapters.configuration.MyApp3</td>
+<td align="left">null</td>
+<td align="left">INFO</td>
+</tr>
+<tr>
+<td align="left">chapters.configuration.Foo</td>
+<td align="left">DEBUG</td>
+<td align="left">DEBUG</td>
+</tr>
+</tbody></table>
+<p><code>MyApp3</code> 类中的两条日志消息的级别都为 INFO，Foo.doIt() 中的 DEBUG 信息也能够进行输出。</p>
+<blockquote>
+<p>注意：root logger 的日志级别永远不会设置成一个非空的值，默认是 DEBUG。</p>
+</blockquote>
+<p><a href="https://v-vincen.github.io/2020/12/31/Logback-2-%E6%9E%B6%E6%9E%84/#%E6%96%B9%E6%B3%95%E6%89%93%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E8%A7%84%E5%88%99" target="_blank" rel="noopener">基本选择法</a> 依赖被调用 logger 的有效日志级别，而并不是 appender 所依附的 logger 的级别。logback 会首先判断日志语句是否可以被打印，如果可以，则会在 logger 的层级结构中查找 appender，而不管它们的级别如何（表示很费解，appender 本来就没有日志级别，为什么会关 appender 的事？）。下面的例子说明了这一点。</p>
+<p><em>Example</em>：sample4.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration"</span> <span class="attr">level</span>=<span class="string">"INFO"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"OFF"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如下表格展示了应用 sample4.xml 之后的各 logger 的日志级别。</p>
+<table>
+<thead>
+<tr>
+<th>logger name</th>
+<th>分配级别</th>
+<th>有效级别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>root</td>
+<td>OFF</td>
+<td>OFF</td>
+</tr>
+<tr>
+<td>chapters.configuration</td>
+<td>INFO</td>
+<td>INFO</td>
+</tr>
+<tr>
+<td>chapters.configuration.MyApp3</td>
+<td>null</td>
+<td>INFO</td>
+</tr>
+<tr>
+<td>chapters.configuration.Foo</td>
+<td>null</td>
+<td>INFO</td>
+</tr>
+</tbody></table>
+<p>ConsoleAppender 的名字为 <em>STDOUT</em>，<em>sample4.xml</em> 中唯一的 appender，它所依附的 root logger 的 level = OFF。但是，运行 <em>MyApp3</em> 还是得到日志输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>:<span class="number">47</span>:<span class="number">34.310</span> [main] INFO  chapters.configuration.MyApp3 - Entering application</span><br><span class="line"><span class="number">10</span>:<span class="number">47</span>:<span class="number">34.313</span> [main] INFO  chapters.configuration.MyApp3 - Exiting application</span><br></pre></td></tr></table></figure>
+
+<p>很明显，root logger 没有影响到其他的 logger，因为 <code>chapters.configuration.MyApp3</code> 与 <code>chapters.configuration.Foo</code> 类的日志级别为 INFO。即使在 java 代码中没有直接引用 <em>chapters.configuration</em> 这个 logger，但是它是存在，因为它在配置文件中声明了。</p>
+<p><strong>配置 appender</strong></p>
+<p>appender 通过 <code>&lt;appender&gt;</code> 元素进行配置，需要两个强制的属性 <em>name</em> 与 <em>class</em>。<em>name</em> 属性用来指定 appender 的名字，<em>class</em> 属性需要指定类的全限定名用于实例化。<code>&lt;appender&gt;</code> 元素可以包含 0 或一个 <code>&lt;layout&gt;</code> 元素，0 或多个 <code>&lt;encoder&gt;</code> 元素，0 或多个 <code>&lt;filter&gt;</code> 元素。除了这些公共的元素之外，<code>&lt;appender&gt;</code> 元素可以包含任意与 appender 类的 JavaBean 属性相一致的元素。</p>
+<p>下图展示了一些常见的结构。</p>
+<blockquote>
+<p>注意：对属性的支持不可见（没懂这句话是什么意思）。</p>
+</blockquote>
+<p><img src="appenderSyntax.png" alt="appenderSyntax"></p>
+<p><code>&lt;layout&gt;</code> 元素强制一个 class 属性去指定一个类的全限定名，用于实例化。与 <code>&lt;appender&gt;</code> 元素一样，<code>&lt;layout&gt;</code> 元素也可以包含与 layout 实例相关的属性。如果 layout 的 class 是 <code>PatternLayout</code>，那么 class 属性可以被隐藏掉（参考：<a href="http://logback.qos.ch/manual/onJoran.html#defaultClassMapping" target="_blank" rel="noopener">Default class mapping</a>，因为这个很常见。</p>
+<p><code>&lt;encoder&gt;</code> 元素强制一个 class 属性去指定一个类的全限定名，用于实例化。如果 encoder 的 class 是 <code>PatternLayoutEncoder</code>，那么基于 <a href="http://logback.qos.ch/manual/onJoran.html#defaultClassMapping" target="_blank" rel="noopener">Default class mapping</a>，class 属性可以被隐藏。 </p>
+<p>通过多个 appender 输出日志就像定义多个 appender 以及将它们关联到 logger 上一样简单。</p>
+<p><em>Example</em>：multiple.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%date %level [%thread] %logger&#123;10&#125; [%file:%line] %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个配置文件定义了两个 appender：<em>FILE</em> 和 <em>STDOUT</em>。<em>FILE</em> appender 将日志输出到 <em>myApp.log</em> 文件。encoder 通过 <code>PatternLayoutEncoder</code> 输出日期、日志等级、线程名、logger 的名字、可以定位日志来源的文件以及所在行、具体的日志信息以及行分隔符。第二个 appender 是 <code>STDOUT</code>，将日志输出到控制台。它的 encoder 仅仅输出日志信息以及行分隔符。</p>
+<p>appender 通过 <em>appender-ref</em> 元素附加到 root logger 上。每一个 appender 都有自己 encoder。encoder 通常不会设计成给所有的 appender 共享。对于 layout 也是如此。因此，logback 不会提供任何共享 encoder 和 layout 的语法。</p>
+<p><strong>重复使用 appender</strong></p>
+<p>在默认的情况下，appender 是可以重复使用的：logger 可以通过附加到本身的 appender 输出日志，同样的也可以附加到祖先的身上，并输出日志。因此，如果同一个 appender 附加到多个 logger 身上，那么就导致日志重复打印。</p>
+<p><em>Example</em>：duplicate.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d&#123;HH:mm:ss.SSS&#125; [%thread] %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">logger</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行 <em>MyApp3</em>，将会输出如下结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.469</span> [main] INFO  chapters.configuration.MyApp3 - Entering application</span><br><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.469</span> [main] INFO  chapters.configuration.MyApp3 - Entering application</span><br><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.471</span> [main] DEBUG chapters.configuration.Foo - Did it again!</span><br><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.471</span> [main] DEBUG chapters.configuration.Foo - Did it again!</span><br><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.472</span> [main] INFO  chapters.configuration.MyApp3 - Exiting application</span><br><span class="line"><span class="number">22</span>:<span class="number">43</span>:<span class="number">35.472</span> [main] INFO  chapters.configuration.MyApp3 - Exiting application</span><br></pre></td></tr></table></figure>
+
+<p>注意日志重复输出了，因为 appender <em>STDOUT</em> 附加到了两个 logger 身上：root 以及 <em>chapters.configuration</em>。因为 root logger 是所有 logger 的祖先，<em>chapters.configuration</em> 是 <em>chapters.configuration.MyApp3</em> 以及 <em>chapters.configuraion.Foo</em> 的父级。每一次日志请求都会被打印两次，一次是通过 <em>STDOUT</em>，一次是通过 <em>root</em>。</p>
+<p>appender 的叠加性并不是为新用户设置的陷阱。它是 logback 非常方便的一个特性。例如，你可以让系统中所有的日志输出到控制台上，而其它特定的日志输出到特定的 appender 中。</p>
+<p><em>Example</em>： restricted.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%date %level [%thread] %logger&#123;10&#125; [%file:%line] %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span>	</span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span>	</span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">logger</span>&gt;</span>	</span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，控制台会打印所有的日志，而只有属于 <em>chapters.configuration</em> 的 logger 以及它的子级 logger 的日志才会输出到 <em>myApp.log</em> 文件。</p>
+<p><strong>重写默认的累加行为</strong></p>
+<p>如果默认的累积行为对你来说不适合，你可以设置 additivity = false。</p>
+<p><em>Example</em>：additivityFlag.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>foo.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%date %level [%thread] %logger&#123;10&#125; [%file : %line] %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">logger</span> <span class="attr">name</span>=<span class="string">"chapters.configuration.Foo"</span> <span class="attr">additivity</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">logger</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<em>FILE</em> appender 附加到了名为 <em>chaoters.configuration.Foo</em> 的 logger 上。而且，<em>chapters.configuration.Foo</em> 设置了 additivity = false，那么这个 logger 的日志将会通过 <em>FILE</em> 这个 appender 输出，但是它的父级 logger 将不会输出属于这个 logger 的日志。运行 <em>MyApp3</em> 属于 <em>chapters.configuration.MyApp3</em> 这个 logger 的日志将会在控制台输出，但是属于 <em>chapters.configuration.Foo</em> 这个 logger 的日志只会在 <em>foo.log</em> 这个文件看到。</p>
+<h3 id="设置-context-的名字"><a href="#设置-context-的名字" class="headerlink" title="设置 context 的名字"></a>设置 context 的名字</h3><p>在之前的 <a href="https://v-vincen.github.io/2020/12/31/Logback-2-%E6%9E%B6%E6%9E%84/#Logger-%E4%B8%8A%E4%B8%8B%E6%96%87" target="_blank" rel="noopener">[Logback] 2 架构</a> 中提到，每一个 logger 都会附加到一个 logger context 上去。默认这个 logger context 的名字为 “default”。但是你可以通过 <code>&lt;contextName&gt;</code> 设置其它的名字。但是如果设置过一次就不能 <a href="http://logback.qos.ch/apidocs/ch/qos/logback/core/ContextBase.html#setName(java.lang.String)" target="_blank" rel="noopener">再设置</a>。当多个应用输出日志到同一个目的地，设置 logger context 的名字可以更好的区分。</p>
+<p><em>Example</em>：contextName.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">contextName</span>&gt;</span>myAppName<span class="tag">&lt;/<span class="name">contextName</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d %contextName [%t] %level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="变量替换"><a href="#变量替换" class="headerlink" title="变量替换"></a>变量替换</h3><p>**<code>注意</code>**：早期版本使用的是属性替换而不是变量替换</p>
+<h4 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h4><p>logback 支持变量的定义以及替换，变量有它的作用域。而且，变量可以在配置文件中，外部文件中，外部资源文件中，甚至动态定义。</p>
+<p><em>Example</em>：variableSubstitution1.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"USER_NAME"</span> <span class="attr">value</span>=<span class="string">"/data/logs"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;USER_NAME&#125;/myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个例子中，在配置文件的开始定义了一个变量，之后通过引用这个变量指定了日志文件的路径。</p>
+<p><em>Example</em>：variableSubstitution2.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;USER_HOME&#125;/myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个例子中，在 java 的系统变量中定义一个同样的变量名，达到的效果是一样的。可以通过如下的方式去运行：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">java </span>-DUSER_HOME=<span class="string">"/data/logs"</span> MyApp3</span><br></pre></td></tr></table></figure>
+
+<p>当需要定义多个变量时，可以将这些变量放到一个单独的文件中。</p>
+<p><em>Example</em>：variableSubstitution3.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">file</span>=<span class="string">"F:\project\logback-examples\src\main\resources\variables1.properties"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;USER_HOME&#125;/myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个配置文件包含了一个对外部文件的引用：<em>variables1.properties</em>。这个外部文件包含一个变量：</p>
+<p><em>Example</em>：variables1.properties</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">USER_HOME</span>=<span class="string">/data/logs</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以引用 classpath 下的资源文件：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">resource</span>=<span class="string">"resource1.properties"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;USER_HOME&#125;/myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>属性的作用域分别为本地（local scope）、上下文（context scope）、系统（system scope）。默认为本地作用域。</p>
+<ul>
+<li><code>本地（local scope）</code>：本地范围内的属性存在配置文件的加载过程中。配置文件每加载一次，变量就会被重新定义一次。</li>
+<li><code>上下文（context scope）</code>：具有上下文范围的属性将插入到上下文中，并且持续时间与上下文一样长，直到被清除为止。 一旦定义，上下文范围内的属性就是上下文的一部分。 这样，它在所有日志记录事件中都可用，包括那些通过序列化发送到远程主机的事件。</li>
+<li><code>系统（system scope）</code>：系统范围内的属性，会插入到 JVM 的系统属性中，跟随 JVM 一同消亡。</li>
+</ul>
+<p>在进行变量替换的时候，会先从本地范围去找，再从上下文去找，再从系统属性中去找，最后会去系统的环境变量中去找。</p>
+<p>可以通过 <code>&lt;property&gt;</code>、<code>&lt;define&gt;</code>、<code>&lt;insertFromJNDI&gt;</code> 元素的 <em>scope</em> 属性来设置变量的作用范围。<em>scope</em> 属性可能的值为：local，context，system。如果没有指定，则默认为 local。</p>
+<p><em>Example</em>：contextScopedVariable.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">scope</span>=<span class="string">"context"</span> <span class="attr">name</span>=<span class="string">"nodeId"</span> <span class="attr">value</span>=<span class="string">"firstNode"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>/data/$&#123;nodeId&#125;/myApp.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<em>nodeId</em> 这个变量被定义在上下文范围，它在每个日志事件，甚至通过序列化发送到远程服务器上都有效。</p>
+<h3 id="变量的默认值"><a href="#变量的默认值" class="headerlink" title="变量的默认值"></a>变量的默认值</h3><p>在某些情况下，如果某个变量没有被声明，或者为空，默认值则非常有用。在 <a href="https://tldp.org/LDP/abs/html/parameter-substitution.html" target="_blank" rel="noopener">bash shell</a> 中，默认值可以通过 <strong>:-</strong> 来指定。例如：假设变量 <em>aName</em> 没有被定义，“${aNme:-golden}” 会被解释成 “golden” 。</p>
+<h3 id="变量的嵌套"><a href="#变量的嵌套" class="headerlink" title="变量的嵌套"></a>变量的嵌套</h3><p>变量的名字、默认值、以及值都可以引用其它的变量。</p>
+<h4 id="嵌套值"><a href="#嵌套值" class="headerlink" title="嵌套值"></a>嵌套值</h4><p>一个变量的值可以包含对其它变量的引用。</p>
+<p><em>Example</em>：variables2.properties</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">USER_HOME</span>=<span class="string">/data/logs</span></span><br><span class="line"><span class="attr">fileName</span>=<span class="string">myApp.log</span></span><br><span class="line"><span class="attr">destination</span>=<span class="string">$&#123;USER_HOME&#125;/$&#123;fileName&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><em>Example</em>：variableSubsitution4.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 注: 官网的例子不是 resource 而是 file --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">resource</span>=<span class="string">"variables2.properties"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;destination&#125;<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="名字嵌套"><a href="#名字嵌套" class="headerlink" title="名字嵌套"></a>名字嵌套</h4><p>变量的名字可以包含对其它变量的引用。例如：如果变量 <em>userid=alice</em>，那么 “${${userid}.password}” 就是对变量名为 “alice.passowrd” 的引用。</p>
+<h4 id="默认值嵌套"><a href="#默认值嵌套" class="headerlink" title="默认值嵌套"></a>默认值嵌套</h4><p>一个变量的默认值可以引用另一个变量。例如：假设变量 “id” 没有被定义，变量 “userid” 的值为 “alice”，那么表达式 “${id:-${userid}}” 的值为 “alice”。</p>
+<h3 id="HOSTNAME-属性"><a href="#HOSTNAME-属性" class="headerlink" title="HOSTNAME 属性"></a>HOSTNAME 属性</h3><p><code>HOSTNAME</code> 在配置期间会被自动定义为上下文范围内。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;HOSTNAME&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CONTEXT-NAME-属性"><a href="#CONTEXT-NAME-属性" class="headerlink" title="CONTEXT_NAME 属性"></a>CONTEXT_NAME 属性</h3><p>通过名字可以看出来，<code>CONTEXT_NAME</code> 属性对应当前上下文的名字。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;CONTEXT_NAME&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="动态定义属性"><a href="#动态定义属性" class="headerlink" title="动态定义属性"></a>动态定义属性</h3><p>可以通过 <code>&lt;define&gt;</code> 元素动态的定义变量。这个元素需要两个强制的属性：<em>name</em>、<em>class</em>。<em>name</em> 属性用来定义变量的名字，<em>classs</em> 属性用来引用实现了 <a href="https://logback.qos.ch/xref/ch/qos/logback/core/spi/PropertyDefiner.html" target="_blank" rel="noopener">PropertyDefiner</a> 接口的类。<code>PropertyDefiner</code> 实例的 <code>getPropertyValue()</code> 的返回值就是变量的值。还可以通过 <em>scope</em> 属性指定变量的 <a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F">作用域</a>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">define</span> <span class="attr">name</span>=<span class="string">"rootLevel"</span> <span class="attr">class</span>=<span class="string">"chapters.configuration.PropertyDefiner1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span>round<span class="tag">&lt;/<span class="name">shape</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">color</span>&gt;</span>brown<span class="tag">&lt;/<span class="name">color</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">size</span>&gt;</span>24<span class="tag">&lt;/<span class="name">size</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">define</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"$&#123;rootLevel&#125;"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>shape，color，size 都是 “chapters.configuration.PropertyDefiner1” 的属性。只要在实现类里面，各属性有对应的 set 方法，logback 就可以通过配置文件给各属性注入对应的值。</p>
+<p>目前，logback 已经有了几个简单的实现类：</p>
+<table>
+<thead>
+<tr>
+<th align="center">类名</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://logback.qos.ch/apidocs/ch/qos/logback/core/property/CanonicalHostNamePropertyDefiner.html" target="_blank" rel="noopener"><code>CanonicalHostNamePropertyDefiner</code></a></td>
+<td align="left">将变量的值设置为本地的主机名。注意：获取主机名可能需要花费几秒的时间。</td>
+</tr>
+<tr>
+<td align="center"><a href="https://logback.qos.ch/apidocs/ch/qos/logback/core/property/FileExistsPropertyDefiner.html" target="_blank" rel="noopener"><code>FileExistsPropertyDefiner</code></a></td>
+<td align="left">如果通过 <code>path</code> 属性指定的文件存在，则设置变量为 “true”，否则设置为 “false”。</td>
+</tr>
+<tr>
+<td align="center"><a href="https://logback.qos.ch/apidocs/ch/qos/logback/core/property/FileExistsPropertyDefiner.html" target="_blank" rel="noopener"><code>ResourceExistsPropertyDefiner</code></a></td>
+<td align="left">如果通过 <code>resource</code> 属性指定的资源文件在类路径中存在，则设置变量为 “true”，否则设置为 “false”。</td>
+</tr>
+</tbody></table>
+<h3 id="配置文件中的条件处理"><a href="#配置文件中的条件处理" class="headerlink" title="配置文件中的条件处理"></a>配置文件中的条件处理</h3><p>开发者通常需要在多个环境中切换配置文件，例如：开发，测试和生产。这些配置文件有大量相同的地方，只有少数地方不同。为了避免重复，logback 在配置文件中支持通过 <code>&lt;if&gt;</code>、<code>&lt;then&gt;</code>、<code>&lt;else&gt;</code> 元素作为条件语句来区分不同的环境。条件处理需要 <a href="https://logback.qos.ch/setup.html#janino" target="_blank" rel="noopener">Janino</a> 环境的支持。</p>
+<p><em>Example</em>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"条件表达式"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">then</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">then</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">"条件表达式"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">then</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">then</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">else</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">else</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>条件表达式只能是上下文变量或者系统变量。因为值是通过参数传递的，<code>property()</code> 方法或者其等价的 <code>p()</code> 方法属性的值。例如：如果要获取变量 “k” 的值，可以通过 <code>property(&quot;k&quot;)</code> 或者 <code>p(&quot;k&quot;)</code> 来获取。如果 “k” 没有定义，那么方法将会返回空字符串。所以不需要去判断是否为 null。</p>
+<p><code>isDefined()</code> 方法可以用来判断变量是否已经被定义。例如：可以通过 <code>isDefined(&quot;k&quot;)</code> 来判断 k 是否已经定义。还可以通过 <code>isNull()</code> 方法来判断变量是否为 null。例如：<code>isNull(&quot;k&quot;)</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">condition</span>=<span class="string">'property("HOSTNAME").contains("volong")'</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">then</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"CON"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d %-5level %logger&#123;35&#125; - %msg %n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">root</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"CON"</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">then</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>$&#123;randomOutputDir&#125;/conditional.log<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>$&#123;HOSTNAME&#125; %d %-5level %logger&#123;35&#125; - %msg %n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"ERROR"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>条件处理语句与嵌套的 if-else 语句在 <code>&lt;configuration&gt;</code> 元素内都是可以使用的。但是 xml 的语法非常的繁琐，不适合作为通用变成语言的基础。因此，不建议使用过多的条件语句，因为别人看了难以理解，对你自己也是如此。</p>
+<h3 id="从-JNDI-中获取变量"><a href="#从-JNDI-中获取变量" class="headerlink" title="从 JNDI 中获取变量"></a>从 JNDI 中获取变量</h3><p>在某些情况下，如果从 JNDI 中获取变量的值。<code>&lt;insertFromJNDI&gt;</code> 元素能够获取存储在 JNDI 中的元素并插入到本地的上下文中，然后通过 <code>as</code> 属性获取具体的值。还可以通过 <a href="#%E4%BD%9C%E7%94%A8%E5%9F%9F">作用域</a> 将变量插入到不同的作用域中。</p>
+<p><em>Example</em>：insertFromJNDI.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- appName 的配置在 web.xml 中：（使用的是 eclipse 的 jetty 插件运行）</span></span><br><span class="line"><span class="comment">运行的时候的配置：右键点击项目 -&gt; Run Configurations -&gt; Jetty 选项卡下选择 Show Advanced Options -&gt; 选中 JNDI Support -&gt; 在运行就可以了。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">insertFromJNDI</span> <span class="attr">env-entry-name</span>=<span class="string">"java:comp/env/appName"</span> <span class="attr">as</span>=<span class="string">"appName"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">contextName</span>&gt;</span>$&#123;appName&#125;<span class="tag">&lt;/<span class="name">contextName</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"CONSOLE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d %contextName %level %msg %logger&#123;50&#125;%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"CONSOLE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="引入文件"><a href="#引入文件" class="headerlink" title="引入文件"></a>引入文件</h3><p>通过 <code>&lt;include&gt;</code> 元素可以引入外部的配置文件。</p>
+<p><em>Example</em>：containingConfig.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">include</span> <span class="attr">file</span>=<span class="string">"src/main/resources/includedConfig.xml"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"includedConsole"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>目标文件必须是由 <code>&lt;included&gt;</code> 元素包裹的。</p>
+<p><em>Example</em>：includedConfig.xml</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">included</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"includedConsole"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%d - %m%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">included</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以通过如下几个属性引入文件：</p>
+<ul>
+<li><p><strong>通过文件引入：</strong>可以通过 <code>file</code> 属性引入外部文件。可以通过相对路径或者绝对路径来引入。相对路径是指相对应用程序的路径。</p>
+</li>
+<li><p><strong>通过资源文件引入：</strong>可以通过 <code>resource</code> 属性来引入位于 classpath 路径下的资源文件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">resource</span>=<span class="string">"includedConfig.xml"</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>通过 url 引入文件：</strong>可以通过 <code>url</code> 属性来引入外部文件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">url</span>=<span class="string">"http://some.host.com/includedConfig.xml"</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>如果 logback 没有通过 <code>include</code> 元素找到指定的配置文件，会在控制台打印出内部状态信息。如果引入的外部配置文件是可选的，可以设置 <code>optional=true</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">optional</span>=<span class="string">"true"</span> <span class="attr">....</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加上下文监听器"><a href="#添加上下文监听器" class="headerlink" title="添加上下文监听器"></a>添加上下文监听器</h2><p><a href="https://logback.qos.ch/xref/ch/qos/logback/classic/spi/LoggerContextListener.html" target="_blank" rel="noopener">LoggerContextListener</a> 接口的实例监听上下文生命周期内的事件。<code>JMXConfigurator</code> 是 <code>LoggerContextListener</code> 接口的一个实现。</p>
+<h3 id="更改传播级别"><a href="#更改传播级别" class="headerlink" title="更改传播级别"></a>更改传播级别</h3><p>在 0.9.25 版本，logback-classic 通过 <code>LoggerContextListener</code> 的实现类 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/jul/LevelChangePropagator.html" target="_blank" rel="noopener">LevelChangePropagator</a> 来更改 logback-classic 中的 logger 传播到 java.util.logging 中的日志级别。这些传播消除了禁止打印日志时的性能损耗。<a href="http://download.oracle.com/javase/1.5.0/docs/api/java/util/logging/LogRecord.html?is-external=true" target="_blank" rel="noopener">LogRecord</a> 实例仅仅会在允许打印日志的情况下通过 SFL4J 传播到 logback。</p>
+<p>配置 <code>LevelChangePropagator</code>：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">contextListener</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.jul.LevelChangePropagator"</span>/&gt;</span></span><br><span class="line">    .... </span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>resetJUL </code> 属性会重置 j.u.l 中的所有 logger 的等级配置。但是之前配置的将不会受到影响。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">contextListener</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.jul.LevelChangePropagator"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resetJUL</span>&gt;</span>true<span class="tag">&lt;/<span class="name">resetJUL</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">contextListener</span>&gt;</span></span><br><span class="line">    ....</span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Logback-4-Appenders/" data-toggle="tooltip" data-placement="top" title="[Logback] 4 Appenders">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Logback-2-架构/" data-toggle="tooltip" data-placement="top" title="[Logback] 2 架构">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Logback] 3 Logback 的配置&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Logback-3-Logback 的配置/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Dec 31 2020 15:46:53 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置-logback"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">配置 logback</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自动配置-logback"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">自动配置 logback</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用-logback-test-xml-或-logback-xml-自动配置"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用 logback-test.xml 或 logback.xml 自动配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#在警告或错误的情况下自动打印状态信息"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">在警告或错误的情况下自动打印状态信息</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#状态数据"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">状态数据</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#通过系统属性指定默认的配置文件"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">通过系统属性指定默认的配置文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#当配置文件更改时，自动加载"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">当配置文件更改时，自动加载</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#在堆栈中展示包数据"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">在堆栈中展示包数据</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#直接调用-JoranConfigurator"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">直接调用 JoranConfigurator</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看内部状态信息"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">查看内部状态信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#监听状态信息"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">监听状态信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#系统属性-logback-statusListenerClass"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">系统属性 logback.statusListenerClass</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#停止-logback-classic"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">停止 logback-classic</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#通过-shutddown-hook-停止-logback-classic"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">通过 shutddown hook 停止 logback-classic</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#在-web-应用中使用-WebShutdownHook-停止-logback-classic"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">在 web 应用中使用 WebShutdownHook 停止 logback-classic</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置文件的语法"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">配置文件的语法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置-context-的名字"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">设置 context 的名字</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量替换"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">变量替换</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#变量的定义"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">变量的定义</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#作用域"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">作用域</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量的默认值"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">变量的默认值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量的嵌套"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">变量的嵌套</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#嵌套值"><span class="toc-nav-number">3.4.1.</span> <span class="toc-nav-text">嵌套值</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#名字嵌套"><span class="toc-nav-number">3.4.2.</span> <span class="toc-nav-text">名字嵌套</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#默认值嵌套"><span class="toc-nav-number">3.4.3.</span> <span class="toc-nav-text">默认值嵌套</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HOSTNAME-属性"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">HOSTNAME 属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CONTEXT-NAME-属性"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">CONTEXT_NAME 属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#动态定义属性"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">动态定义属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置文件中的条件处理"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">配置文件中的条件处理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#从-JNDI-中获取变量"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">从 JNDI 中获取变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引入文件"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">引入文件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#添加上下文监听器"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">添加上下文监听器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#更改传播级别"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">更改传播级别</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Logback" title="Logback">Logback</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Logback-3-Logback 的配置/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

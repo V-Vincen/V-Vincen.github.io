@@ -1,0 +1,5993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/tags/">
+  <title>
+    
+      Tags - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          <!-- LangSelect start -->
+          <!-- LangSelect -->
+<li>
+  <a id="lang-select-label"><i class="fa fa-globe"></i>
+    <span>
+      
+      English
+      
+    </span>
+    <select id="lang-select" data-canonical="tags/index.html">
+      
+      <option value="en"  selected >
+        
+        English
+        
+      </option>
+      
+      <option value="cn" >
+        
+        简体中文
+        
+      </option>
+      
+    </select>
+  </a>
+</li>
+
+          <!-- LangSelect end -->
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.ioimg/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.ioimg/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg.jpg');
+    }
+    header.intro-header {
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="site-heading">
+            <h1>Tags</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">I don’t know where I am going, but I am on my way......</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <!-- 标签列表 -->
+
+      <!-- 标签云 -->
+      <div id='tag_cloud' class="tags">
+        
+        <a href="#Hexo" title="Hexo" rel="12">Hexo</a>
+        
+        <a href="#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+        
+        <a href="#Atom" title="Atom" rel="2">Atom</a>
+        
+        <a href="#Annotation" title="Annotation" rel="2">Annotation</a>
+        
+        <a href="#Calling Third-party API" title="Calling Third-party API" rel="13">Calling Third-party API</a>
+        
+        <a href="#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
+        
+        <a href="#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+        
+        <a href="#WebService" title="WebService" rel="4">WebService</a>
+        
+        <a href="#Charles" title="Charles" rel="2">Charles</a>
+        
+        <a href="#Docker" title="Docker" rel="16">Docker</a>
+        
+        <a href="#Spring RestTemplate" title="Spring RestTemplate" rel="1">Spring RestTemplate</a>
+        
+        <a href="#Docker Compose" title="Docker Compose" rel="5">Docker Compose</a>
+        
+        <a href="#Dubbo Zookeeper" title="Dubbo Zookeeper" rel="13">Dubbo Zookeeper</a>
+        
+        <a href="#Enum" title="Enum" rel="1">Enum</a>
+        
+        <a href="#Generics" title="Generics" rel="1">Generics</a>
+        
+        <a href="#Git" title="Git" rel="7">Git</a>
+        
+        <a href="#GitLab" title="GitLab" rel="2">GitLab</a>
+        
+        <a href="#Github (Open-Source)" title="Github (Open-Source)" rel="1">Github (Open-Source)</a>
+        
+        <a href="#Guava Cache" title="Guava Cache" rel="1">Guava Cache</a>
+        
+        <a href="#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+        
+        <a href="#IDEA" title="IDEA" rel="11">IDEA</a>
+        
+        <a href="#IO" title="IO" rel="5">IO</a>
+        
+        <a href="#JDK8" title="JDK8" rel="9">JDK8</a>
+        
+        <a href="#JSON" title="JSON" rel="4">JSON</a>
+        
+        <a href="#Web" title="Web" rel="6">Web</a>
+        
+        <a href="#JUC" title="JUC" rel="5">JUC</a>
+        
+        <a href="#JUnit" title="JUnit" rel="2">JUnit</a>
+        
+        <a href="#Java 杂记" title="Java 杂记" rel="10">Java 杂记</a>
+        
+        <a href="#Java 多线程高并发练习" title="Java 多线程高并发练习" rel="4">Java 多线程高并发练习</a>
+        
+        <a href="#Linux" title="Linux" rel="10">Linux</a>
+        
+        <a href="#Log4j" title="Log4j" rel="2">Log4j</a>
+        
+        <a href="#Logback" title="Logback" rel="9">Logback</a>
+        
+        <a href="#MQ" title="MQ" rel="1">MQ</a>
+        
+        <a href="#Mac" title="Mac" rel="13">Mac</a>
+        
+        <a href="#Microservices" title="Microservices" rel="5">Microservices</a>
+        
+        <a href="#Mybatis" title="Mybatis" rel="11">Mybatis</a>
+        
+        <a href="#Maven" title="Maven" rel="2">Maven</a>
+        
+        <a href="#Druid" title="Druid" rel="3">Druid</a>
+        
+        <a href="#Nexus" title="Nexus" rel="2">Nexus</a>
+        
+        <a href="#POI" title="POI" rel="2">POI</a>
+        
+        <a href="#PageHelper" title="PageHelper" rel="2">PageHelper</a>
+        
+        <a href="#Reflect" title="Reflect" rel="5">Reflect</a>
+        
+        <a href="#Redis" title="Redis" rel="1">Redis</a>
+        
+        <a href="#Registry" title="Registry" rel="2">Registry</a>
+        
+        <a href="#SSM" title="SSM" rel="2">SSM</a>
+        
+        <a href="#Spring" title="Spring" rel="8">Spring</a>
+        
+        <a href="#Spring Boot" title="Spring Boot" rel="7">Spring Boot</a>
+        
+        <a href="#Thymeleaf" title="Thymeleaf" rel="4">Thymeleaf</a>
+        
+        <a href="#Spring Cloud Netflix" title="Spring Cloud Netflix" rel="14">Spring Cloud Netflix</a>
+        
+        <a href="#Spring MVC" title="Spring MVC" rel="8">Spring MVC</a>
+        
+        <a href="#Spring Profile" title="Spring Profile" rel="1">Spring Profile</a>
+        
+        <a href="#Spring Retry" title="Spring Retry" rel="1">Spring Retry</a>
+        
+        <a href="#Spring Session" title="Spring Session" rel="1">Spring Session</a>
+        
+        <a href="#Thread" title="Thread" rel="4">Thread</a>
+        
+        <a href="#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+        
+        <a href="#ThreadPool" title="ThreadPool" rel="2">ThreadPool</a>
+        
+        <a href="#Ubuntu" title="Ubuntu" rel="11">Ubuntu</a>
+        
+        <a href="#Utils" title="Utils" rel="8">Utils</a>
+        
+        <a href="#npm" title="npm" rel="2">npm</a>
+        
+        <a href="#Zip4j" title="Zip4j" rel="1">Zip4j</a>
+        
+      </div>
+
+      <!-- 标签列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Hexo">
+          <span class="tag-text">Hexo</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/cn/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              Hexo-Theme-LiveMyLife
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A succinct hexo theme...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Analytics-and-Sitemap-Settings/">
+            <h2 class="post-title">
+              Analytics and Sitemap Settings
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              How to use analytics and sitemap...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Four-Ways-to-Deploy-Hexo/">
+            <h2 class="post-title">
+              Four Ways to Deploy Hexo
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              How to deploy hexo...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Github-加速优化/">
+            <h2 class="post-title">
+              Github 加速优化
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              What is the DNS and CDN...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-1-1-建站/">
+            <h2 class="post-title">
+              [Hexo] 1.1 建站
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Hexo 建站
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-1-2-配置/">
+            <h2 class="post-title">
+              [Hexo] 1.2 配置
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Hexo 的配置
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-1-搭建个人博客/">
+            <h2 class="post-title">
+              [Hexo] 1 搭建个人博客
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Hexo 的安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-2-开始搭建-Github-Pages/">
+            <h2 class="post-title">
+              [Hexo] 2 开始搭建 Github Pages
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              搭建 Github Pages
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-1-3-指令/">
+            <h2 class="post-title">
+              [Hexo] 1.3 指令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Hexo 指令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-3-Hexo-修改主题/">
+            <h2 class="post-title">
+              [Hexo] 3 Hexo 修改主题
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              修改 Hexo 主题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-4-Hexo-图片插入/">
+            <h2 class="post-title">
+              [Hexo] 4 Hexo 图片插入
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Hexo 图片插入
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              Hexo-Theme-LiveMyLife
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A succinct hexo theme...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Hexo-Theme-LiveMyLife">
+          <span class="tag-text">Hexo-Theme-LiveMyLife</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/cn/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              Hexo-Theme-LiveMyLife
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A succinct hexo theme...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Analytics-and-Sitemap-Settings/">
+            <h2 class="post-title">
+              Analytics and Sitemap Settings
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              How to use analytics and sitemap...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Four-Ways-to-Deploy-Hexo/">
+            <h2 class="post-title">
+              Four Ways to Deploy Hexo
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              How to deploy hexo...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Github-加速优化/">
+            <h2 class="post-title">
+              Github 加速优化
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              What is the DNS and CDN...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Hexo-Theme-LiveMyLife/">
+            <h2 class="post-title">
+              Hexo-Theme-LiveMyLife
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A succinct hexo theme...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Atom">
+          <span class="tag-text">Atom</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Atom-1-Atom/">
+            <h2 class="post-title">
+              [Atom] 1 Atom
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A hackable text editor for the 21st Century...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Atom-2-Sync-Settings-for-Atom/">
+            <h2 class="post-title">
+              [Atom] 2 Sync Settings for Atom
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Synchronize settings, keymaps, user styles, init script, snippets and installed packages across Atom instances...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Annotation">
+          <span class="tag-text">Annotation</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Annotation-自定义注解/">
+            <h2 class="post-title">
+              [Annotation] 自定义注解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Annotation
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/反射、自定义注解、Lambda-结合练习/">
+            <h2 class="post-title">
+              反射、自定义注解、Lambda 结合练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Reflect、Annotation and Lambda
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Calling Third-party API">
+          <span class="tag-text">Calling Third-party API</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-1-How-to-call-Third-party-API/">
+            <h2 class="post-title">
+              [Calling Third-party API] 1 How to call Third-party API
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Making HTTP requests is a core feature of modern programming, and is often one of the first things you want to do when learning a new programming language. For Java programmers there are many ways to do it - core libraries in the JDK and third-party libraries...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-2-Java-API-Core-Java-APIs-for-making-Java-http-requests/">
+            <h2 class="post-title">
+              [Calling Third-party API - Java API] 2 Core Java APIs for making Java http requests
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A URLConnection with support for HTTP-specific features. An HttpClient can be used to send requests and retrieve their responses...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-Apache-HttpClient-HttpClient-Tutorial/">
+            <h2 class="post-title">
+              [Calling Third-party API - Apache HttpClient] HttpClient Tutorial
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              HttpClient is a HTTP/1.1 compliant HTTP agent implementation based on HttpCore. It also provides reusable components for client-side authentication, HTTP state management, and HTTP connection management...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-1-Feign-makes-writing-java-http-clients-easier/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 1 Feign makes writing java http clients easier
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-1-WebService/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 1 WebService
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              WebService
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-5-Feign-Spring-Cloud-upload、download-File/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 5 Feign Spring Cloud upload、download File
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-2-CXF-服务端开发/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 2 CXF 服务端开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              CXF 服务端开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-3-SOAP-消息和-WSDL-文件解析/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 3 SOAP 消息和 WSDL 文件解析
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              SOAP 消息和 WSDL 文件解析
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-4-CXF、AXIS-客户端开发/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 4 CXF、AXIS 客户端开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              CXF、AXIS 客户端开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 3 Feign Call Case
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/">
+            <h2 class="post-title">
+              [Calling Third-party API - Spring RestTemplate] The Guide to RestTemplate
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-2-DefaultFeignClient-Case-and-Summary/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 2 DefaultFeignClient Case and Summary
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Apache HttpClient">
+          <span class="tag-text">Apache HttpClient</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-Apache-HttpClient-HttpClient-Tutorial/">
+            <h2 class="post-title">
+              [Calling Third-party API - Apache HttpClient] HttpClient Tutorial
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              HttpClient is a HTTP/1.1 compliant HTTP agent implementation based on HttpCore. It also provides reusable components for client-side authentication, HTTP state management, and HTTP connection management...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="OpenFeign">
+          <span class="tag-text">OpenFeign</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-1-Feign-makes-writing-java-http-clients-easier/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 1 Feign makes writing java http clients easier
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-5-Feign-Spring-Cloud-upload、download-File/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 5 Feign Spring Cloud upload、download File
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 3 Feign Call Case
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-OpenFeign-2-DefaultFeignClient-Case-and-Summary/">
+            <h2 class="post-title">
+              [Calling Third-party API - OpenFeign] 2 DefaultFeignClient Case and Summary
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="WebService">
+          <span class="tag-text">WebService</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-1-WebService/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 1 WebService
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              WebService
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-2-CXF-服务端开发/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 2 CXF 服务端开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              CXF 服务端开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-3-SOAP-消息和-WSDL-文件解析/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 3 SOAP 消息和 WSDL 文件解析
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              SOAP 消息和 WSDL 文件解析
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-WebService-4-CXF、AXIS-客户端开发/">
+            <h2 class="post-title">
+              [Calling Third-party API - WebService] 4 CXF、AXIS 客户端开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              CXF、AXIS 客户端开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Charles">
+          <span class="tag-text">Charles</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Charles-1-Charles/">
+            <h2 class="post-title">
+              [Charles] 1 Charles
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Web debugging proxy application...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Charles-2-How-to-Use-Charles/">
+            <h2 class="post-title">
+              [Charles] 2 How to Use Charles
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Web debugging proxy application...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Docker">
+          <span class="tag-text">Docker</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-2-Docker-基本概念/">
+            <h2 class="post-title">
+              [Docker] 2 Docker 基本概念
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 基本概念
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-4-2-Docker-删除本地镜像/">
+            <h2 class="post-title">
+              [Docker] 4.2 Docker 删除本地镜像
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 删除本地镜像
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-3-Docker-安装/">
+            <h2 class="post-title">
+              [Docker] 3 Docker 安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-1-Docker-简介/">
+            <h2 class="post-title">
+              [Docker] 1 Docker 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-4-1-Docker-列出镜像/">
+            <h2 class="post-title">
+              [Docker] 4.1 Docker 列出镜像
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 列出镜像
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-4-3-使用-Dockerfile-定制镜像/">
+            <h2 class="post-title">
+              [Docker] 4.3 使用 Dockerfile 定制镜像
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dockerfile 定制镜像
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-4-4-Dockerfile-指令详解/">
+            <h2 class="post-title">
+              [Docker] 4.4 Dockerfile 指令详解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dockerfile 指令详解
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-4-Docker-镜像/">
+            <h2 class="post-title">
+              [Docker] 4 Docker 镜像
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 获取镜像
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-5-Docker-容器/">
+            <h2 class="post-title">
+              [Docker] 5 Docker 容器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 容器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-7-2-Docker-数据管理深入/">
+            <h2 class="post-title">
+              [Docker] 7.2 Docker 数据管理深入
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 数据管理深入
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-7-1-Docker-数据管理简洁/">
+            <h2 class="post-title">
+              [Docker] 7.1 Docker 数据管理简洁
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 数据管理简洁
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-6-Docker-仓库/">
+            <h2 class="post-title">
+              [Docker] 6 Docker 仓库
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 仓库
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-8-1-Docker-部署-Tomcat/">
+            <h2 class="post-title">
+              [Docker] 8.1 Docker 部署 Tomcat
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 部署 Tomcat
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-8-2-Docker-部署-MySQL-8-0-17/">
+            <h2 class="post-title">
+              [Docker] 8.2 Docker 部署 MySQL 8.0.17
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 部署 MySQL 8.0.17
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Docker-常用命令/">
+            <h2 class="post-title">
+              [Docker] Docker 常用命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker 常用命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Docker-插件部署-Spring-Boot-项目（IDEA-中）/">
+            <h2 class="post-title">
+              [Docker] Docker 插件部署 Spring Boot 项目（IDEA 中）
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA 中 Docker 插件部署 Spring Boot 项目
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring RestTemplate">
+          <span class="tag-text">Spring RestTemplate</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/">
+            <h2 class="post-title">
+              [Calling Third-party API - Spring RestTemplate] The Guide to RestTemplate
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Docker Compose">
+          <span class="tag-text">Docker Compose</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Compose-1-Docker-Compose-简介/">
+            <h2 class="post-title">
+              [Docker Compose] 1 Docker Compose 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Compose 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Compose-2-Docker-Compose-安装与卸载/">
+            <h2 class="post-title">
+              [Docker Compose] 2 Docker Compose 安装与卸载
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Compose 安装与卸载
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Compose-4-1-Docker-Compose-部署-Tomcat/">
+            <h2 class="post-title">
+              [Docker Compose] 4.1 Docker Compose 部署 Tomcat
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Compose 部署 Tomcat
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Compose-3-Docker-Compose-命令说明/">
+            <h2 class="post-title">
+              [Docker Compose] 3 Docker Compose 命令说明
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Compose 命令说明
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Docker-Compose-4-2-Docker-Compose-部署-MySQL/">
+            <h2 class="post-title">
+              [Docker Compose] 4.2 Docker Compose 部署 MySQL
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Compose 部署 MySQL
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Dubbo Zookeeper">
+          <span class="tag-text">Dubbo Zookeeper</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-10-Dubbo-Kryo-实现高速序列化/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 10 Dubbo + Kryo 实现高速序列化
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dubbo + Kryo 实现高速序列化
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-1-Apache-Dubbo-Zookeeper/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 1 Apache Dubbo Zookeeper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Apache Dubbo Zookeeper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-11-Dubbo-Hystrix-实现服务熔断/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 11 Dubbo + Hystrix 实现服务熔断
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dubbo + Hystrix 实现服务熔断
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-2-什么是分布式锁/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 2 什么是分布式锁
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              什么是分布式锁
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-12-Dubbo-Hystrix-熔断器仪表盘/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 12 Dubbo + Hystrix 熔断器仪表盘
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dubbo + Hystrix 熔断器仪表盘
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-3-什么是-Zookeeper/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 3 什么是 Zookeeper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              什么是 Zookeeper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-5-1-基于-Docker-安装-Zookeeper/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 5.1 基于 Docker 安装 Zookeeper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              基于 Docker 安装 Zookeeper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-6-Zookeeper-配置说明/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 6 Zookeeper 配置说明
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper 配置说明
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-4-Zookeeper-如何实现分布式锁/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 4 Zookeeper 如何实现分布式锁
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zookeeper 如何实现分布式锁
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-5-2-Linux-下手动安装-Zookeeper/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 5.2 Linux 下手动安装 Zookeeper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 下手动安装 Zookeeper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-7-什么是-Dubbo/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 7 什么是 Dubbo
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              什么是 Dubbo
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-9-Dubbo-的负载均衡/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 9 Dubbo 的负载均衡
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dubbo 的负载均衡
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Dubbo-Zookeeper-8-Dubbo-应用案例/">
+            <h2 class="post-title">
+              [Dubbo Zookeeper] 8 Dubbo 应用案例
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dubbo 应用案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Enum">
+          <span class="tag-text">Enum</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Enum-枚举/">
+            <h2 class="post-title">
+              [Enum] 枚举
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              枚举
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Generics">
+          <span class="tag-text">Generics</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Generics-泛型/">
+            <h2 class="post-title">
+              [Generics] 泛型
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Generics
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Git">
+          <span class="tag-text">Git</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Git-2-Git-的一般工作流程/">
+            <h2 class="post-title">
+              [Git] 2 Git 的一般工作流程
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Git 的一般工作流程
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-1-Git-简介和安装/">
+            <h2 class="post-title">
+              [Git] 1 Git 简介和安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Git 简介和安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-3-Git-命令/">
+            <h2 class="post-title">
+              [Git] 3 Git 命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Git 命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-4-TortoiseGit-简介和安装/">
+            <h2 class="post-title">
+              [Git] 4 TortoiseGit 简介和安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              TortoiseGit 简介和安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-5-Git-实战总结/">
+            <h2 class="post-title">
+              [Git] 5 Git 实战总结
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Git 实战总结
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-7-Git-Tag-And-Git-Branch/">
+            <h2 class="post-title">
+              [Git] 7 Git Tag And Git Branch
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Git Tag And Git Branch
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Git-6-Git-不常用到的命令（看懂这个-git-你就懂了)/">
+            <h2 class="post-title">
+              [Git] 6 Git 不常用到的命令（看懂这个 git 你就懂了)
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              看懂这个 git 你就懂了
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="GitLab">
+          <span class="tag-text">GitLab</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/GitLab-1-GitLab-简介和安装/">
+            <h2 class="post-title">
+              [GitLab] 1 GitLab 简介和安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitLab 简介和安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/GitLab-2-GitLab-初始化设置和项目创建/">
+            <h2 class="post-title">
+              [GitLab] 2 GitLab 初始化设置和项目创建
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              GitLab 初始化设置和项目创建
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Github (Open-Source)">
+          <span class="tag-text">Github (Open-Source)</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Github-Open-Source-GitHub-s-10-essential-open-source-projects/">
+            <h2 class="post-title">
+              [Github (Open-Source)] GitHub's 10 essential open source projects
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A premium and open source dashboard template with a responsive and high-quality UI...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Guava Cache">
+          <span class="tag-text">Guava Cache</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Guava-Cache-Guava-Cache/">
+            <h2 class="post-title">
+              [Guava Cache] Guava Cache
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Guava provides a very powerful memory based caching mechanism by an interface LoadingCache<K,V>...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Guava Retrying">
+          <span class="tag-text">Guava Retrying</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Guava-Retrying-Guava-Retrying/">
+            <h2 class="post-title">
+              [Guava Retrying] Guava Retrying
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This is a small extension to Google's Guava library to allow for the creation of configurable retrying strategies for an arbitrary function call...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="IDEA">
+          <span class="tag-text">IDEA</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-26款实用插件/">
+            <h2 class="post-title">
+              [IDEA] IDEA 26款实用插件
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA 实用插件
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-中-Run-Dashboard-面板开启/">
+            <h2 class="post-title">
+              [IDEA] IDEA 中 Run Dashboard 面板开启
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Run Dashboard 面板开启
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-中-Bower-的使用/">
+            <h2 class="post-title">
+              [IDEA] IDEA 中 Bower 的使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Bower 的使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-使用前最好修改的配置/">
+            <h2 class="post-title">
+              [IDEA] IDEA 使用前最好修改的配置
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA 的配置
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-如何设置类头注释和方法注释/">
+            <h2 class="post-title">
+              [IDEA] IDEA 如何设置类头注释和方法注释
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA 设置类头、方法注释
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-实现-Java-远程调试/">
+            <h2 class="post-title">
+              [IDEA] IDEA 实现 Java 远程调试
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Remote JVM Debug...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-安装及破解/">
+            <h2 class="post-title">
+              [IDEA] IDEA 安装及破解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              以 ideaIU-2019.1.1 版本为例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-IDEA-设置代码自动提示快捷键/">
+            <h2 class="post-title">
+              [IDEA] IDEA 设置代码自动提示快捷键
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA 设置（Alt + /）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-JRebel-XRebel-插件安装和使用/">
+            <h2 class="post-title">
+              [IDEA] JRebel & XRebel 插件安装和使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JRebel is a productivity tool that allows developers to reload code changes instantly... XRebel is a performance tool for Java development which gives developers real time performance insights to help them understand and resolve potential issues faster and earlier, during the development phase...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-MybatisCodeHelperPro-插件破解版安装/">
+            <h2 class="post-title">
+              [IDEA] MybatisCodeHelperPro 插件破解版安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              IDEA Mybatis 插件安装及使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IDEA-MybatisCodeHelperPro-操作使用/">
+            <h2 class="post-title">
+              [IDEA] MybatisCodeHelperPro 操作使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mybatis 插件操作使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="IO">
+          <span class="tag-text">IO</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/IO-1-IO-基础概念/">
+            <h2 class="post-title">
+              [IO] 1 IO 基础概念
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Provides for system input and output through data streams, serialization and the file system...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IO-2-File-类的使用/">
+            <h2 class="post-title">
+              [IO] 2 File 类的使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              An abstract representation of file and directory pathnames...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IO-3-IO-流原理及流的分类/">
+            <h2 class="post-title">
+              [IO] 3 IO 流原理及流的分类
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Provides for system input and output through data streams, serialization and the file system...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IO-4-节点流和处理流/">
+            <h2 class="post-title">
+              [IO] 4 节点流和处理流
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Provides for system input and output through data streams, serialization and the file system...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
+            <h2 class="post-title">
+              [IO] 5 How to Download a File from a URL in Java
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              There are multiple ways to download a file using Java code...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JDK8">
+          <span class="tag-text">JDK8</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-1-Lambda-表达式/">
+            <h2 class="post-title">
+              [JDK8] 1 Lambda 表达式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Lambda 表达式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-2-函数式接口/">
+            <h2 class="post-title">
+              [JDK8] 2 函数式接口
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              函数式接口
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-4-Stream-API/">
+            <h2 class="post-title">
+              [JDK8] 4 Stream API
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Stream API
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-3-方法引用与构造方法引用/">
+            <h2 class="post-title">
+              [JDK8] 3 方法引用与构造方法引用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              方法引用与构造方法引用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-5-Optional-类/">
+            <h2 class="post-title">
+              [JDK8] 5 Optional 类
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              A container object which may or may not contain a non-null value.
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-7-Lambda-总结/">
+            <h2 class="post-title">
+              [JDK8] 7 Lambda 总结
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Lambda 总结
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-6-Lambda-表达式练习/">
+            <h2 class="post-title">
+              [JDK8] 6 Lambda 表达式练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Practice something...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JDK8-8-ParallelStream/">
+            <h2 class="post-title">
+              [JDK8] 8 ParallelStream
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              ParallelStream...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/反射、自定义注解、Lambda-结合练习/">
+            <h2 class="post-title">
+              反射、自定义注解、Lambda 结合练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Reflect、Annotation and Lambda
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JSON">
+          <span class="tag-text">JSON</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/JSON-2-FastJson-的用法/">
+            <h2 class="post-title">
+              [JSON] 2 FastJson 的用法
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              FastJson 的用法
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JSON-1-Jackson-的用法/">
+            <h2 class="post-title">
+              [JSON] 1 Jackson 的用法
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Jackson 的用法
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-3-Servlet-输出-JSON-数据/">
+            <h2 class="post-title">
+              [Web] 3 Servlet 输出 JSON 数据
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Servlet 输出 JSON 数据
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-4-Servlet-中-ajax-的应用/">
+            <h2 class="post-title">
+              [Web] 4 Servlet 中 ajax 的应用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Servlet 中 ajax 的应用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Web">
+          <span class="tag-text">Web</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/JSON-1-Jackson-的用法/">
+            <h2 class="post-title">
+              [JSON] 1 Jackson 的用法
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Jackson 的用法
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-2-重定向与请求转发/">
+            <h2 class="post-title">
+              [Web] 2 重定向与请求转发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              重定向与请求转发区别
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-3-Servlet-输出-JSON-数据/">
+            <h2 class="post-title">
+              [Web] 3 Servlet 输出 JSON 数据
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Servlet 输出 JSON 数据
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-1-Web-学习总结/">
+            <h2 class="post-title">
+              [Web] 1 Web 学习总结
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Web 学习基础
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-4-Servlet-中-ajax-的应用/">
+            <h2 class="post-title">
+              [Web] 4 Servlet 中 ajax 的应用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Servlet 中 ajax 的应用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Web-5-Web-项目中-Mybatis-配置-C3p0-和-Druid-连接池/">
+            <h2 class="post-title">
+              [Web] 5 Web 项目中 Mybatis 配置 C3p0 和 Druid 连接池
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Web 配置 C3p0 和 Druid
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JUC">
+          <span class="tag-text">JUC</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/JUC-1-Java-容器/">
+            <h2 class="post-title">
+              [JUC] 1 Java 容器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              同步容器和并发容器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JUC-2-Java-集合容器/">
+            <h2 class="post-title">
+              [JUC] 2 Java 集合容器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Java 集合
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JUC-3-3-ArrayBlockingQueue-和-LinkedBlockingQueue/">
+            <h2 class="post-title">
+              [JUC] 3.3 ArrayBlockingQueue 和 LinkedBlockingQueue
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Java 并发容器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JUC-3-1-Java-并发容器/">
+            <h2 class="post-title">
+              [JUC] 3.1 Java 并发容器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Java 并发容器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JUC-3-2-Java-并发容器-队列/">
+            <h2 class="post-title">
+              [JUC] 3.2 Java 并发容器 -- 队列
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Queue 队列总结
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="JUnit">
+          <span class="tag-text">JUnit</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/JUnit-2-JUnit-断言/">
+            <h2 class="post-title">
+              [JUnit] 2 JUnit 断言
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JUnit 断言
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/JUnit-1-JUnit-用法/">
+            <h2 class="post-title">
+              [JUnit] 1 JUnit 用法
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JUnit 单元测试
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java 杂记">
+          <span class="tag-text">Java 杂记</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Java 杂记-JVM-浅谈/">
+            <h2 class="post-title">
+              [Java 杂记] JVM 浅谈
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JVM 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-GoF-的23种设计模式/">
+            <h2 class="post-title">
+              [Java 杂记] GoF 的23种设计模式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              23种设计模式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-GoF-单例模式/">
+            <h2 class="post-title">
+              [Java 杂记] GoF 单例模式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              单例模式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-Java-中精度丢失问题/">
+            <h2 class="post-title">
+              [Java 杂记] Java 中精度丢失问题
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用 BigDecimal 的 string 构造函数
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-Java-中-Char-数组转换为-List-集合/">
+            <h2 class="post-title">
+              [Java 杂记] Java 中 Char 数组转换为 List 集合
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Char 数组转换为 List 集合
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-List-的-remove-方法陷阱以及性能优化/">
+            <h2 class="post-title">
+              [Java 杂记] List 的 remove() 方法陷阱以及性能优化
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              List 的 remove() 方法陷阱
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-RequestBody-和-RequestParam-区别/">
+            <h2 class="post-title">
+              [Java 杂记] @RequestBody 和 @RequestParam 区别
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              RequestBody 和 RequestParam 区别
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-四种常见的-POST-提交数据方式/">
+            <h2 class="post-title">
+              [Java 杂记] 四种常见的 POST 提交数据方式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              四种常见的 POST 提交数据方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-六大设计原则/">
+            <h2 class="post-title">
+              [Java 杂记] 六大设计原则
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              六大设计原则
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-杂记-表驱动法和-if-else，switch-case-优化/">
+            <h2 class="post-title">
+              [Java 杂记] 表驱动法和 if-else，switch-case 优化
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              What is a "table-driven method"?
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Java 多线程高并发练习">
+          <span class="tag-text">Java 多线程高并发练习</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Java-多线程高并发练习-2-ReentrantLock、ThreadLocal、线程安全单例/">
+            <h2 class="post-title">
+              [Java 多线程高并发练习] 2 ReentrantLock、ThreadLocal、线程安全单例
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              多线程练习
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-多线程高并发练习-1-synchronized、volatile、AtomicXXX/">
+            <h2 class="post-title">
+              [Java 多线程高并发练习] 1 synchronized、volatile、AtomicXXX
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              多线程练习
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-多线程高并发练习-4-并发容器案例/">
+            <h2 class="post-title">
+              [Java 多线程高并发练习] 4 并发容器案例
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              ConcurrentLinkedQueue
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Java-多线程高并发练习-3-经典面试题/">
+            <h2 class="post-title">
+              [Java 多线程高并发练习] 3 经典面试题
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              wait、notify/notifyAll；Lock、Condition；CountDownLatch
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Linux">
+          <span class="tag-text">Linux</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-1-Linux-远程控制管理/">
+            <h2 class="post-title">
+              [Linux] 1 Linux 远程控制管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 远程控制管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-2-Linux-的目录结构/">
+            <h2 class="post-title">
+              [Linux] 2 Linux 的目录结构
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 的目录结构
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-5-Linux-开关机命令/">
+            <h2 class="post-title">
+              [Linux] 5 Linux 开关机命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 开关机命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-4-Linux-系统管理命令/">
+            <h2 class="post-title">
+              [Linux] 4 Linux 系统管理命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 系统管理命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-3-Linux-操作文件目录/">
+            <h2 class="post-title">
+              [Linux] 3 Linux 操作文件目录
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 操作文件目录
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-6-Linux-压缩命令/">
+            <h2 class="post-title">
+              [Linux] 6 Linux 压缩命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 压缩命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-7-Linux-编辑器/">
+            <h2 class="post-title">
+              [Linux] 7 Linux 编辑器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 编辑器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-Linux-简介/">
+            <h2 class="post-title">
+              [Linux] Linux 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Linux 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-VMware-安装/">
+            <h2 class="post-title">
+              [Linux] VMware 安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              VMware Workstation Pro is the industry standard desktop hypervisor for running virtual machines on Linux or Windows PCs...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Linux-VMware-虚拟机三种网络模式详解/">
+            <h2 class="post-title">
+              [Linux] VMware 虚拟机三种网络模式详解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              VMware Workstation Pro is the industry standard desktop hypervisor for running virtual machines on Linux or Windows PCs...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Log4j">
+          <span class="tag-text">Log4j</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Log4j-1-Log4j-简介/">
+            <h2 class="post-title">
+              [Log4j] 1 Log4j 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Log4j 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Log4j-2-Log4j-日志文件/">
+            <h2 class="post-title">
+              [Log4j] 2 Log4j 日志文件
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Slf4j 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Logback">
+          <span class="tag-text">Logback</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-1-Logback-介绍/">
+            <h2 class="post-title">
+              [Logback] 1 Logback 介绍
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Introduction to logback...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-2-架构/">
+            <h2 class="post-title">
+              [Logback] 2 架构
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Architecture...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-5-Encoder/">
+            <h2 class="post-title">
+              [Logback] 5 Encoder
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Encoder...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-8-从 Log4j 迁移/">
+            <h2 class="post-title">
+              [Logback] 8 从 Log4j 迁移
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Migration from log4j...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-6-Layouts/">
+            <h2 class="post-title">
+              [Logback] 6 Layout
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Layout...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-7-Filters/">
+            <h2 class="post-title">
+              [Logback] 7 Filters
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Filters...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-9-Logback-Case-and-Summary/">
+            <h2 class="post-title">
+              [Logback] 9 Logback Case and Summary
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Case and Summary...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-3-Logback 的配置/">
+            <h2 class="post-title">
+              [Logback] 3 Logback 的配置
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Configuration...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Logback-4-Appenders/">
+            <h2 class="post-title">
+              [Logback] 4 Appenders
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Appenders...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="MQ">
+          <span class="tag-text">MQ</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/MQ-RabbitMQ-1-消息队列/">
+            <h2 class="post-title">
+              [MQ - RabbitMQ] 1 消息队列
+              
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Mac">
+          <span class="tag-text">Mac</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-1-Homebrew-的安装和简单使用/">
+            <h2 class="post-title">
+              [Mac] 1 Homebrew 的安装和简单使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Homebrew 的安装和简单使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-10-Mac-安装配置-Nginx/">
+            <h2 class="post-title">
+              [Mac] 10 Mac 安装配置 Nginx
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 Nginx
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-2-Mac-终端神器-iTerm2-告别黑白/">
+            <h2 class="post-title">
+              [Mac] 2 Mac 终端神器 iTerm2 -- 告别黑白
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 终端神器 iTerm2
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-3-Mac-安装配置-JDK/">
+            <h2 class="post-title">
+              [Mac] 3 Mac 安装配置 JDK
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 JDK
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-4-Mac-安装配置-Maven/">
+            <h2 class="post-title">
+              [Mac] 4 Mac 安装配置 Maven
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 Maven
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-5-Mac-安装配置-MySQL/">
+            <h2 class="post-title">
+              [Mac] 5 Mac 安装配置 MySQL
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 MySQL
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-6-Mac-安装配置-Redis/">
+            <h2 class="post-title">
+              [Mac] 6 Mac 安装配置 Redis
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 Redis
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-7-使用-Mac-自带服务器实现本地文件访问/">
+            <h2 class="post-title">
+              [Mac] 7 使用 Mac 自带服务器实现本地文件访问
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用 Mac 自带服务器实现本地
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-8-Mac-终端链接-Linux-服务器/">
+            <h2 class="post-title">
+              [Mac] 8 Mac 终端链接 Linux 服务器
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 终端链接 Linux 服务器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-9-Mac-安装配置-Zookeeper/">
+            <h2 class="post-title">
+              [Mac] 9 Mac 安装配置 Zookeeper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 安装配置 Zookeeper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-Mac-ifconfig-的各个端口/">
+            <h2 class="post-title">
+              [Mac] Mac ifconfig 的各个端口
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac ifconfig 的各个端口
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-Mac-刷新-DNS-缓存/">
+            <h2 class="post-title">
+              [Mac] Mac 刷新 DNS 缓存
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Reset the DNS cache in OS X...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mac-Mac-进程、端口、上传下载、压缩等命令/">
+            <h2 class="post-title">
+              [Mac] Mac 进程、端口、上传下载、压缩等命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mac 进程、端口、上传下载等命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Microservices">
+          <span class="tag-text">Microservices</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Microservices-1-浅谈微服务/">
+            <h2 class="post-title">
+              [Microservices] 1 浅谈微服务
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Microservices-2-微服务的特征/">
+            <h2 class="post-title">
+              [Microservices] 2 微服务的特征
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Microservices-3-微服务架构设计模式/">
+            <h2 class="post-title">
+              [Microservices] 3 微服务架构设计模式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Microservices-5-The-difference-between-http-and-rpc/">
+            <h2 class="post-title">
+              [Microservices] 5 The difference between http and rpc
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              The difference between http and rpc...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Microservices-4-微服务的实践/">
+            <h2 class="post-title">
+              [Microservices] 4 微服务的实践
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Their small scale and relative isolation can lead to many additional benefits, such as easier maintenance, improved productivity, greater fault tolerance, better business alignment, and more...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Mybatis">
+          <span class="tag-text">Mybatis</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Maven-Maven-插件自动生成-MyBatis-代码/">
+            <h2 class="post-title">
+              [Maven] Maven 插件自动生成 MyBatis 代码
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              MyBatis 配置文件自动生成
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-1-MyBatis-简介/">
+            <h2 class="post-title">
+              [Mybatis] 1 MyBatis 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              MyBatis 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-2-Druid-简介/">
+            <h2 class="post-title">
+              [Mybatis] 2 Druid 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Druid 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-3-Spring-整合-Druid/">
+            <h2 class="post-title">
+              [Mybatis] 3 Spring 整合 Druid
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring 整合 Druid
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-4-Spring-整合-MyBatis/">
+            <h2 class="post-title">
+              [Mybatis] 4 Spring 整合 MyBatis
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring 整合 MyBatis
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-6-MyBatis-动态-SQL/">
+            <h2 class="post-title">
+              [Mybatis] 6 MyBatis 动态 SQL 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              MyBatis 动态 SQL
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-5-MyBatis-测试和-CRUD/">
+            <h2 class="post-title">
+              [Mybatis] 5 MyBatis 测试和 CRUD 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              MyBatis 案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-7-MyBatis-一对一、一对多、多对多查询/">
+            <h2 class="post-title">
+              [Mybatis] 7 MyBatis 一对一、一对多、多对多查询
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              一对一、一对多、多对多查询
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-8-MyBatis-中-jdbcType、javaType、ofType-的区别/">
+            <h2 class="post-title">
+              [Mybatis] 8 MyBatis 中 jdbcType、javaType、ofType 的区别
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              jdbcType、javaType、ofType 的区别
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-Mybatis-思维导图/">
+            <h2 class="post-title">
+              [Mybatis] Mybatis 思维导图
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              图解 Mybatis
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-深解-Mybatis-配置文件中-数据源配置的理解/">
+            <h2 class="post-title">
+              [Mybatis] 深解 Mybatis 配置文件中 -- 数据源配置的理解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mybatis 数据源配置的理解
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Maven">
+          <span class="tag-text">Maven</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Maven-Maven-插件自动生成-MyBatis-代码/">
+            <h2 class="post-title">
+              [Maven] Maven 插件自动生成 MyBatis 代码
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              MyBatis 配置文件自动生成
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-5-Maven-模块化开发/">
+            <h2 class="post-title">
+              [Spring MVC] 5 Maven 模块化开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Maven 模块化开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Druid">
+          <span class="tag-text">Druid</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-2-Druid-简介/">
+            <h2 class="post-title">
+              [Mybatis] 2 Druid 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Druid 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Mybatis-3-Spring-整合-Druid/">
+            <h2 class="post-title">
+              [Mybatis] 3 Spring 整合 Druid
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring 整合 Druid
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-6-Spring-Boot-整合-Druid、MyBatis-和-PageHelper/">
+            <h2 class="post-title">
+              [Spring Boot] 6 Spring Boot 整合 Druid、MyBatis 和 PageHelper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              整合 Druid、MyBatis 和 PageHelper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Nexus">
+          <span class="tag-text">Nexus</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Nexus-1-Nexus-简介和安装/">
+            <h2 class="post-title">
+              [Nexus] 1 Nexus 简介和安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Nexus 简介和安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Nexus-2-Nexus-相关设置和项目应用/">
+            <h2 class="post-title">
+              [Nexus] 2 Nexus 相关设置和项目应用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Nexus 相关设置和项目应用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="POI">
+          <span class="tag-text">POI</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/POI-Alibaba-EasyExcel-Alibaba-EasyExcel/">
+            <h2 class="post-title">
+              [POI - Alibaba EasyExcel] Alibaba EasyExcel
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              EasyExcel is a simple, memory-saving open source project for reading and writing Excel based on Java...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/POI-Apache-POI-Apache-POI/">
+            <h2 class="post-title">
+              [POI - Apache POI] Apache POI
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              The Apache POI project is the master project for developing pure Java ports of file formats based on Microsoft's OLE 2 Compound Document Format...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="PageHelper">
+          <span class="tag-text">PageHelper</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/PageHelper-Mybatis-分页插件-PageHelper/">
+            <h2 class="post-title">
+              [PageHelper] Mybatis 分页插件 PageHelper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Mybatis 分页插件 PageHelper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-6-Spring-Boot-整合-Druid、MyBatis-和-PageHelper/">
+            <h2 class="post-title">
+              [Spring Boot] 6 Spring Boot 整合 Druid、MyBatis 和 PageHelper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              整合 Druid、MyBatis 和 PageHelper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Reflect">
+          <span class="tag-text">Reflect</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Reflect-1-反射/">
+            <h2 class="post-title">
+              [Reflect] 1 反射
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Reflect
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Reflect-2-获取运行时类的结构/">
+            <h2 class="post-title">
+              [Reflect] 2 获取运行时类的结构
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              获取运行时类的结构
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Reflect-3-反射相关练习/">
+            <h2 class="post-title">
+              [Reflect] 3 反射相关练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              反射相关练习
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Reflect-4-动态代理/">
+            <h2 class="post-title">
+              [Reflect] 4 动态代理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              动态代理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/反射、自定义注解、Lambda-结合练习/">
+            <h2 class="post-title">
+              反射、自定义注解、Lambda 结合练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Reflect、Annotation and Lambda
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Redis">
+          <span class="tag-text">Redis</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Redis-Redis-入门/">
+            <h2 class="post-title">
+              [Redis] Redis 入门
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Redis 入门
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Registry">
+          <span class="tag-text">Registry</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Registry-2-Docker-Registry-客户端配置/">
+            <h2 class="post-title">
+              [Registry] 2 Docker Registry 客户端配置
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Registry 客户端配置
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Registry-1-Docker-Registry-私服和-WebUI-安装/">
+            <h2 class="post-title">
+              [Registry] 1 Docker Registry 私服和 WebUI 安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Docker Registry 私服和 WebUI 安装
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="SSM">
+          <span class="tag-text">SSM</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/SSM-SSM-xml-配置整合/">
+            <h2 class="post-title">
+              [SSM] SSM xml 配置整合
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              xml 配置整合
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/SSM-SSM-注解-配置整合/">
+            <h2 class="post-title">
+              [SSM] SSM 注解 配置整合
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              注解配置整合
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring">
+          <span class="tag-text">Spring</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-1-Spring/">
+            <h2 class="post-title">
+              [Spring] 1 Spring
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring 的总结
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-3-Spring-中-Bean-的装配方式/">
+            <h2 class="post-title">
+              [Spring] 3 Spring 中 Bean 的装配方式
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              基于注解的装配方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-2-Spring-IoC/">
+            <h2 class="post-title">
+              [Spring] 2 Spring IoC
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring IoC
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-4-Spring-AOP/">
+            <h2 class="post-title">
+              [Spring] 4 Spring AOP
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring AOP
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-5-1-脏读、不可重复读、幻读/">
+            <h2 class="post-title">
+              [Spring] 5.1 脏读、不可重复读、幻读
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              脏读、不可重复读、幻读
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-5-Spring-事务管理/">
+            <h2 class="post-title">
+              [Spring] 5 Spring 事务管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring 事务管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-7-使用-Spring-注解管理事务/">
+            <h2 class="post-title">
+              [Spring] 7 使用 Spring 注解管理事务
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring @Transactional
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-6-使用-AspectJ-的-AOP-配置管理事务/">
+            <h2 class="post-title">
+              [Spring] 6 使用 AspectJ 的 AOP 配置管理事务
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring AspectJ
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring Boot">
+          <span class="tag-text">Spring Boot</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-1-Spring-Boot/">
+            <h2 class="post-title">
+              [Spring Boot] 1 Spring Boot
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              什么是 Spring Boot
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-2-Spring-Boot-应用案例/">
+            <h2 class="post-title">
+              [Spring Boot] 2 Spring Boot 应用案例
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring Boot 第一个应用程序
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-3-Spring-Boot-单元测试/">
+            <h2 class="post-title">
+              [Spring Boot] 3 Spring Boot 单元测试
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring Boot 单元测试
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-4-Spring-Boot-常用配置/">
+            <h2 class="post-title">
+              [Spring Boot] 4 Spring Boot 常用配置
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring Boot 常用配置
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-5-Spring-Boot-整合-Thymeleaf/">
+            <h2 class="post-title">
+              [Spring Boot] 5 Spring Boot 整合 Thymeleaf
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              第一个 Thymeleaf 模板页
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-6-Spring-Boot-整合-Druid、MyBatis-和-PageHelper/">
+            <h2 class="post-title">
+              [Spring Boot] 6 Spring Boot 整合 Druid、MyBatis 和 PageHelper
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              整合 Druid、MyBatis 和 PageHelper
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-7-Spring-Boot-测试-MyBatis-操作数据库/">
+            <h2 class="post-title">
+              [Spring Boot] 7 Spring Boot 测试 MyBatis 操作数据库
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring Boot 测试 MyBatis 案例
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Thymeleaf">
+          <span class="tag-text">Thymeleaf</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Boot-5-Spring-Boot-整合-Thymeleaf/">
+            <h2 class="post-title">
+              [Spring Boot] 5 Spring Boot 整合 Thymeleaf
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              第一个 Thymeleaf 模板页
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thymeleaf-1-Thymeleaf/">
+            <h2 class="post-title">
+              [Thymeleaf] 1 Thymeleaf
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              什么是 Thymeleaf
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thymeleaf-2-Thymeleaf-常用语法/">
+            <h2 class="post-title">
+              [Thymeleaf] 2 Thymeleaf 常用语法
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Thymeleaf 常用语法
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thymeleaf-3-Thymeleaf-参考手册/">
+            <h2 class="post-title">
+              [Thymeleaf] 3 Thymeleaf 参考手册
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Thymeleaf 参考手册
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring Cloud Netflix">
+          <span class="tag-text">Spring Cloud Netflix</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-1-Spring-Cloud-Netflix-简介/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 1 Spring Cloud Netflix 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              分布式框架
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-10-ZuulFilter-使用路由网关的服务过滤功能/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 10 ZuulFilter 使用路由网关的服务过滤功能
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用路由网关的服务过滤功能
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-12-ZipKin-服务链路追踪/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 12 ZipKin 服务链路追踪
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              服务链路追踪
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-2-Dependencies-创建统一的依赖管理/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 2 Dependencies 创建统一的依赖管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              统一的依赖管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-3-Eureka-服务注册与发现/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 3 Eureka 服务注册与发现
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              服务注册与发现
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-13-Admin-服务监控/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 13 Admin  服务监控
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              服务监控
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-4-Service-创建服务提供者/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 4 Service 创建服务提供者
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              创建服务提供者
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-5-Ribbon-创建服务消费者/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 5 Ribbon  创建服务消费者
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              创建服务消费者（Ribbon）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-6-Feign-创建服务消费者/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 6 Feign 创建服务消费者
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              创建服务消费者（Feign）
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-7-Hystrix-使用熔断器防止服务雪崩/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 7 Hystrix 使用熔断器防止服务雪崩
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用熔断器防止服务雪崩
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-8-HystrixDashboard-使用熔断器仪表盘监控/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 8 HystrixDashboard  使用熔断器仪表盘监控
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用熔断器仪表盘监控
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Colud-Netflix-11-Config-分布式配置中心/">
+            <h2 class="post-title">
+              [Spring Colud Netflix] 11 Config 分布式配置中心
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              分布式配置中心
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-9-Zuul-使用路由网关统一访问接口/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] 9 Zuul 使用路由网关统一访问接口
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              使用路由网关统一访问接口
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Cloud-Netflix-Spring-Cloud-总结/">
+            <h2 class="post-title">
+              [Spring Cloud Netflix] Spring Cloud 总结
+              
+            </h2>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring MVC">
+          <span class="tag-text">Spring MVC</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-1-Spring-MVC-简介/">
+            <h2 class="post-title">
+              [Spring MVC] 1 Spring MVC 简介
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC 简介
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-2-Spring-整合-Spring-MVC/">
+            <h2 class="post-title">
+              [Spring MVC] 2 Spring 整合 Spring MVC
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC 配置
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-3-Controller-控制器-例子/">
+            <h2 class="post-title">
+              [Spring MVC] 3 Controller 控制器(例子)
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC 注解
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-4-Spring-MVC-拦截器的使用/">
+            <h2 class="post-title">
+              [Spring MVC] 4 Spring MVC 拦截器的使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC 拦截器
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-7-Spring-MVC-ModelAttribute/">
+            <h2 class="post-title">
+              [Spring MVC] 7 Spring MVC @ModelAttribute
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC @ModelAttribute
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-6-Spring-MVC-表单标签库/">
+            <h2 class="post-title">
+              [Spring MVC] 6 Spring MVC 表单标签库
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC 标签库
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-5-Maven-模块化开发/">
+            <h2 class="post-title">
+              [Spring MVC] 5 Maven 模块化开发
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Maven 模块化开发
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-MVC-8-Spring-MVC-ResponseBody/">
+            <h2 class="post-title">
+              [Spring MVC] 8 Spring MVC @ResponseBody
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring MVC @ResponseBody
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring Profile">
+          <span class="tag-text">Spring Profile</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Profile-How-to-Use-Spring-Profile/">
+            <h2 class="post-title">
+              [Spring Profile] How to Use Spring Profile
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Profiles are a core feature of the framework — allowing us to map our beans to different profiles — for example, dev, test, and prod....
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring Retry">
+          <span class="tag-text">Spring Retry</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Retry-Spring-Retry/">
+            <h2 class="post-title">
+              [Spring Retry] Spring Retry
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Spring Retry provides an ability to automatically re-invoke a failed operation.
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Spring Session">
+          <span class="tag-text">Spring Session</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Spring-Session-Spring-Session-完成-session-共享/">
+            <h2 class="post-title">
+              [Spring Session] Spring Session 完成 session 共享
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              session 共享
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Thread">
+          <span class="tag-text">Thread</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Thread-2-线程的安全问题/">
+            <h2 class="post-title">
+              [Thread] 2 线程的安全问题
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              线程的安全问题
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thread-1-线程的基本概念/">
+            <h2 class="post-title">
+              [Thread] 1 线程的基本概念
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              线程的基本概念
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thread-3-线程的通信/">
+            <h2 class="post-title">
+              [Thread] 3 线程的通信
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              线程的通信
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Thread-4-线程创建新增方式（JKD-5-0）/">
+            <h2 class="post-title">
+              [Thread] 4 线程创建新增方式（JKD 5.0）
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              JKD 5.0 线程创建新增方式
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Swagger2">
+          <span class="tag-text">Swagger2</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Swagger2-Swagger2-接口文档引擎的配置和使用/">
+            <h2 class="post-title">
+              [Swagger2] Swagger2 接口文档引擎的配置和使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Swagger2 接口文档引擎的配置和使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="ThreadPool">
+          <span class="tag-text">ThreadPool</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/ThreadPool-1-线程池的使用/">
+            <h2 class="post-title">
+              [ThreadPool] 1 线程池的使用
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              线程池的使用
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/ThreadPool-2-线程池的使用练习/">
+            <h2 class="post-title">
+              [ThreadPool] 2 线程池的使用练习
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              线程池的使用练习
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Ubuntu">
+          <span class="tag-text">Ubuntu</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-1-Ubuntu-软件包管理/">
+            <h2 class="post-title">
+              [Ubuntu] 1 Ubuntu 软件包管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 软件包管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-2-Ubuntu-用户和组管理/">
+            <h2 class="post-title">
+              [Ubuntu] 2 Ubuntu 用户和组管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 用户和组管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-3-Ubuntu-文件权限管理/">
+            <h2 class="post-title">
+              [Ubuntu] 3 Ubuntu 文件权限管理
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 文件权限管理
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-4-Ubuntu-安装-JDK-1-8/">
+            <h2 class="post-title">
+              [Ubuntu] 4 Ubuntu 安装 JDK 1.8
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              The Java Development Kit (JDK) is one of three core technology packages used in Java programming, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment)...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-4-1-Ubuntu-安装-OpenJDK-11/">
+            <h2 class="post-title">
+              [Ubuntu] 4.1 Ubuntu 安装 OpenJDK 11
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              OpenJDK (Open Java Development Kit) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE)...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-5-Ubuntu-安装-Tomcat/">
+            <h2 class="post-title">
+              [Ubuntu] 5 Ubuntu 安装 Tomcat
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 安装 Tomcat
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-6-1-Ubuntu-安装-MySQL-8-0/">
+            <h2 class="post-title">
+              [Ubuntu] 6.1 Ubuntu 安装 MySQL 8.0
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 安装 MySQL 8.0
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-6-Ubuntu-安装-MySQL-5-7/">
+            <h2 class="post-title">
+              [Ubuntu] 6 Ubuntu 安装 MySQL 5.7
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 安装 MySQL 5.7
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-Ubuntu-Server（16.04）安装/">
+            <h2 class="post-title">
+              [Ubuntu] Ubuntu Server（16.04）安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-Ubuntu-常用命令/">
+            <h2 class="post-title">
+              [Ubuntu] Ubuntu 常用命令
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu 常用命令
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Ubuntu-Ubuntu-Server（18-04、20-04）安装/">
+            <h2 class="post-title">
+              [Ubuntu] Ubuntu Server（18.04、20.04）安装
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Utils">
+          <span class="tag-text">Utils</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-Collections4-CollectionsUtils/">
+            <h2 class="post-title">
+              [Utils - Commons Collections4] CollectionsUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Provides utility methods and decorators for Collection instances...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-IO-2-FilenameUtils/">
+            <h2 class="post-title">
+              [Utils - Commons IO] 2 FilenameUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This package defines utility classes for working with streams, readers, writers and files...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-IO-3-IOUtils/">
+            <h2 class="post-title">
+              [Utils - Commons IO] 3 IOUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This package defines utility classes for working with streams, readers, writers and files...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-IO-1-FileUtils/">
+            <h2 class="post-title">
+              [Utils - Commons IO] 1 FileUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This package defines utility classes for working with streams, readers, writers and files...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-Lang3-2-ArrayUtils/">
+            <h2 class="post-title">
+              [Utils - Commons Lang3] 2 ArrayUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Operations on arrays, primitive arrays (like int[]) and primitive wrapper arrays (like Integer[])...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-JDK-2-Files/">
+            <h2 class="post-title">
+              [Utils - JDK] 2 Files 
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This class consists exclusively of static methods that operate on files, directories, or other types of files...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-JDK-1-Arrays/">
+            <h2 class="post-title">
+              [Utils - JDK] 1 Arrays
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              This class contains various methods for manipulating arrays...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/Utils-Commons-Lang3-1-StringUtils/">
+            <h2 class="post-title">
+              [Utils - Commons Lang3] 1 StringUtils
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Provides highly reusable static utility methods, chiefly concerned with adding value to the java.lang classes...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="npm">
+          <span class="tag-text">npm</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/npm-1-npm/">
+            <h2 class="post-title">
+              [npm] 1 npm
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              npm is the package manager for Node.js...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+        <div class="post-preview">
+          <a href="/en/npm-2-npm-common-commands/">
+            <h2 class="post-title">
+              [npm] 2 npm common commands
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              npm is the package manager for Node.js...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Zip4j">
+          <span class="tag-text">Zip4j</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/en/Zip4j-Zip4j-A-Java-library-for-zip-files/">
+            <h2 class="post-title">
+              [Zip4j] Zip4j - A Java library for zip files
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Zip4j is the most comprehensive Java library for zip files or streams...
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "tags/index.html";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

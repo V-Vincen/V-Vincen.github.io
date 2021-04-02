@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Zip4j-Zip4j-A-Java-library-for-zip-files/">
+  <title>
+    
+      [Zip4j] Zip4j - A Java library for zip files - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/zip4j/zip4j.png');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/zip4j/zip4j.png');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/zip4j/zip4j.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/zip4j/zip4j.png');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/zip4j/zip4j.png'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Zip4j" title="Zip4j">Zip4j</a>
+              
+            </div>
+            <h1>[Zip4j] Zip4j - A Java library for zip files</h1>
+            <h2 class="subheading">Zip4j is the most comprehensive Java library for zip files or streams...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-12-27
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">14</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.8k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>之前开发过程中遇到一个需求：需要解密解压处理客户上传的 .zip 文件。先度娘了一波，但是发现都不太符合自己的要求，然后又谷歌了一波。发现也没有找到，最后在 <code>stackoverflow</code> 上看到了 <a href="https://stackoverflow.com/questions/10587561/password-protected-zip-file-in-java" target="_blank" rel="noopener">Password protected zip file in java</a> 这样一篇解答。因为在搜索解决方案的时候，看到 Jdk 有自带的 <code>java.util.zip</code> 类，所以刚开始想的是直接用 Jdk 原生提供的 API 来进行 zip 的解密解压处理。但是搜索下来并没有找到相关的解决方案，都是需要引用第三方类库。不应该呀，本着追根溯源的精神，继续谷歌。最后发现原来 Jdk 并没有提供 .zip 文件解密处理的 API。好吧，从始至终是我想多了，但是 Jdk 对 .zip 文件的压缩和解压缩是提供了相关的 API 的，只是没有加解密而已。那今天就来简单总结下 .zip 文件加密、解密、压缩和解压缩的处理方式。</p>
+<h2 id="java-util-zip"><a href="#java-util-zip" class="headerlink" title="java.util.zip"></a><code>java.util.zip</code></h2><h3 id="基础案例"><a href="#基础案例" class="headerlink" title="基础案例"></a>基础案例</h3><p>首先来看下 Jdk 提供的压缩和解压缩的处理方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zipFile</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//压缩文件</span></span><br><span class="line">        String path = <span class="string">"dirtest/jdkziptest"</span>;</span><br><span class="line">        Path dirPath = Paths.get(path);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(dirPath)) &#123;</span><br><span class="line">            Files.createDirectories(dirPath);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String zipFileName = <span class="string">"test.zip"</span>;</span><br><span class="line">        Path absoluteZipPath = dirPath.resolve(zipFileName);</span><br><span class="line">        <span class="comment">//最终输出的文件路径：/Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/test.zip</span></span><br><span class="line">        ZipOutputStream out = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(absoluteZipPath.toFile()));</span><br><span class="line">        ZipEntry e = <span class="keyword">new</span> ZipEntry(<span class="string">"mytext.txt"</span>);</span><br><span class="line">        out.putNextEntry(e);</span><br><span class="line"></span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        sb.append(<span class="string">"Test String"</span>);</span><br><span class="line">        <span class="keyword">byte</span>[] data = sb.toString().getBytes();</span><br><span class="line">        out.write(data, <span class="number">0</span>, data.length);</span><br><span class="line">        out.closeEntry();</span><br><span class="line"></span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zipDir</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//压缩目录：/Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/src（中有两个文件：abc.txt、abcd.txt）</span></span><br><span class="line">        String dirPath = <span class="string">"dirtest/jdkziptest/src"</span>;</span><br><span class="line">        Path sourceDir = Paths.get(dirPath);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建目标目录：/Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/out</span></span><br><span class="line">        String targetPath = <span class="string">"dirtest/jdkziptest/out"</span>;</span><br><span class="line">        Path targetDir = Paths.get(targetPath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(targetDir)) &#123;</span><br><span class="line">            Files.createDirectories(targetDir);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//压缩后的文件路径（也是最终压缩后输出的文件路径）：/Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/out/dirzip.zip</span></span><br><span class="line">        Path targetZipPath = targetDir.resolve(sourceDir.getFileName().toString().concat(<span class="string">".zip"</span>));</span><br><span class="line">        ZipOutputStream outputStream = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(targetZipPath.toFile()));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//递归压缩 dirzip 目录下的全部文件，压缩后的文件名为 dirzip.zip，输出到 dirzipout 目录下（中有一个文件：dirzip.zip）。</span></span><br><span class="line">        Files.walkFileTree(sourceDir, <span class="keyword">new</span> SimpleFileVisitor&lt;Path&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">visitFile</span><span class="params">(Path file, BasicFileAttributes attributes)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Path targetFile = sourceDir.relativize(file);</span><br><span class="line">                    outputStream.putNextEntry(<span class="keyword">new</span> ZipEntry(targetFile.toString()));</span><br><span class="line">                    <span class="keyword">byte</span>[] bytes = Files.readAllBytes(file);</span><br><span class="line">                    outputStream.write(bytes, <span class="number">0</span>, bytes.length);</span><br><span class="line">                    outputStream.closeEntry();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> FileVisitResult.CONTINUE;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        outputStream.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unzip</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        String dirPath = <span class="string">"dirtest/jdkziptest/out"</span>;</span><br><span class="line">        Path filePath = Paths.get(dirPath);</span><br><span class="line"></span><br><span class="line">        List&lt;Path&gt; zipPaths = Files.walk(filePath)</span><br><span class="line">                .filter(p -&gt; FilenameUtils.isExtension(p.toFile().getName(), <span class="string">"zip"</span>))</span><br><span class="line">                .collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//解压缩 dirzipout 目录下（中有一个压缩文件：dirzip.zip）的全部 .zip 文件，到当前目录（dirzipout）下。最后解压缩出的结果为两个文件：abc.tet、test.zip</span></span><br><span class="line">        zipPaths.forEach(CheckedConsumer.&lt;Path&gt;of(</span><br><span class="line">                zipPath -&gt; &#123;</span><br><span class="line">                    File file = zipPath.toFile();</span><br><span class="line">                    ZipFile zipFile = <span class="keyword">new</span> ZipFile(file);</span><br><span class="line">                    Enumeration&lt;? extends ZipEntry&gt; entries = zipFile.entries();</span><br><span class="line">                    <span class="keyword">while</span> (entries.hasMoreElements()) &#123;</span><br><span class="line">                        ZipEntry entry = entries.nextElement();</span><br><span class="line">                        InputStream inputStream = zipFile.getInputStream(entry);</span><br><span class="line">                        IOUtils.copy(inputStream, <span class="keyword">new</span> FileOutputStream(filePath.resolve(entry.getName()).toFile()));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).unchecked()</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ZipUtils-工具类"><a href="#ZipUtils-工具类" class="headerlink" title="ZipUtils 工具类"></a><code>ZipUtils</code> 工具类</h3><p>这个工具类，是根据 Jdk 提供的 API 自己做的简单封装。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipUtils</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String EXTENSION = <span class="string">".zip"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 压缩文件</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> filePath 需要压缩的文件路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException IO异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">packFile</span><span class="params">(String filePath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Objects.requireNonNull(filePath, <span class="string">"filePath"</span>);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(Paths.get(filePath))) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Paths.get(filePath).toFile().isFile()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath + <span class="string">" is not a file..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        packFile(filePath, Paths.get(filePath).getParent().toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 压缩文件到指定目录</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> filePath 需要压缩的文件路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> desDirPath  压缩到指定文件目录（该目录必须存在，否则抛出异常）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException IO异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">packFile</span><span class="params">(String filePath, String desDirPath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         *  假设：filePath -&gt; /Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/srcfile.txt</span></span><br><span class="line"><span class="comment">         *       desDirPath -&gt; /Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/out</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        Objects.requireNonNull(filePath, <span class="string">"filePath"</span>);</span><br><span class="line">        Objects.requireNonNull(desDirPath, <span class="string">"dirPath"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取文件路径：sourceFilePath -&gt; /Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/srcfile.txt</span></span><br><span class="line">        Path sourceFilePath = Paths.get(filePath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(sourceFilePath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!sourceFilePath.toFile().isFile()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath + <span class="string">" is not a file..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取文件目录路径：dirPath -&gt; /Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/out</span></span><br><span class="line">        Path sourceDirPath = Paths.get(desDirPath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(sourceDirPath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(desDirPath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Files.isDirectory(sourceDirPath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(desDirPath + <span class="string">" is not a directory..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拼接文件被压缩后的压缩文件名：zipFileName -&gt; "abc" + ".zip" = "abc.zip"</span></span><br><span class="line">        String zipFileName = FilenameUtils.getBaseName(sourceFilePath.getFileName().toString()).concat(EXTENSION);</span><br><span class="line">        <span class="comment">//创建压缩输出流（就是创建最终输出的压缩文件容器），文件被压缩后的压缩文件的全路径（/Users/vincent/IDEA_Project/my_project/zip/dirtest/jdkziptest/out/abc.zip）</span></span><br><span class="line">        ZipOutputStream outputStream = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(sourceDirPath.resolve(zipFileName).toFile()));</span><br><span class="line">        <span class="comment">//创建压缩文件 zip 实例</span></span><br><span class="line">        ZipEntry zipEntry = <span class="keyword">new</span> ZipEntry(sourceFilePath.getFileName().toString());</span><br><span class="line">        <span class="comment">//开始写入新的 zip 文件条目，并将流定位到条目数据的开头</span></span><br><span class="line">        outputStream.putNextEntry(zipEntry);</span><br><span class="line">        <span class="comment">//读取原文件 filePath</span></span><br><span class="line">        <span class="keyword">byte</span>[] bytes = Files.readAllBytes(sourceFilePath);</span><br><span class="line">        <span class="comment">//把原文件 filePath 写入到压缩文件中</span></span><br><span class="line">        outputStream.write(bytes, <span class="number">0</span>, bytes.length);</span><br><span class="line">        outputStream.closeEntry();</span><br><span class="line">        outputStream.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 压缩整个文件目录</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dirPath 需要压缩的文件目录路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException IO异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">packDir</span><span class="params">(String dirPath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Path sourceDir = Paths.get(dirPath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(sourceDir)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(dirPath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Files.isDirectory(sourceDir)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(dirPath + <span class="string">" is not a directory..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ZipOutputStream outputStream = <span class="keyword">new</span> ZipOutputStream(<span class="keyword">new</span> FileOutputStream(sourceDir.toString().concat(EXTENSION)));</span><br><span class="line">        Files.walkFileTree(sourceDir, <span class="keyword">new</span> SimpleFileVisitor&lt;Path&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> FileVisitResult <span class="title">visitFile</span><span class="params">(Path filePath, BasicFileAttributes attrs)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">                Path targetFilePath = sourceDir.relativize(filePath);</span><br><span class="line">                outputStream.putNextEntry(<span class="keyword">new</span> ZipEntry(targetFilePath.toString()));</span><br><span class="line">                <span class="keyword">byte</span>[] bytes = Files.readAllBytes(filePath);</span><br><span class="line">                outputStream.write(bytes, <span class="number">0</span>, bytes.length);</span><br><span class="line">                outputStream.closeEntry();</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">super</span>.visitFile(filePath, attrs);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        outputStream.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解压缩目录中的 zip 文件</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> dirPath 解压缩该目录下的所以 zip 文件</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException IO异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">unpackDir</span><span class="params">(String dirPath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Path sourceDirPath = Paths.get(dirPath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(sourceDirPath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(dirPath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Files.isDirectory(sourceDirPath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(dirPath + <span class="string">" is not a directory..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        List&lt;Path&gt; sourceZipPaths = Files.walk(sourceDirPath)</span><br><span class="line">                .filter(p -&gt; FilenameUtils.isExtension(p.toFile().getName(), <span class="string">"zip"</span>))</span><br><span class="line">                .collect(Collectors.toList());</span><br><span class="line">        sourceZipPaths.forEach(CheckedConsumer.&lt;Path&gt;of(</span><br><span class="line">                sourceZipPath -&gt; unpack(sourceZipPath, sourceDirPath)).unchecked()</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解压缩 zip 文件</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> filePath 需要解压缩的文件路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException IO异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">unpackFile</span><span class="params">(String filePath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Path sourceFilePath = Paths.get(filePath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(sourceFilePath)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!sourceFilePath.toFile().isFile()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath + <span class="string">" is not a file..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        unpack(sourceFilePath, sourceFilePath.getParent());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">unpack</span><span class="params">(Path path, Path parentPath)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Objects.requireNonNull(path);</span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(path.toFile());</span><br><span class="line">        Enumeration&lt;? extends ZipEntry&gt; entries = zipFile.entries();</span><br><span class="line">        <span class="keyword">while</span> (entries.hasMoreElements()) &#123;</span><br><span class="line">            ZipEntry zipEntry = entries.nextElement();</span><br><span class="line">            InputStream inputStream = zipFile.getInputStream(zipEntry);</span><br><span class="line">            IOUtils.copy(inputStream, <span class="keyword">new</span> FileOutputStream(parentPath.resolve(zipEntry.getName()).toFile()));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Zip4j"><a href="#Zip4j" class="headerlink" title="Zip4j"></a>Zip4j</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Zip4j 官网：<a href="http://www.lingala.net/" target="_blank" rel="noopener">http://www.lingala.net/</a></p>
+<p>Github Repo：<a href="https://github.com/srikanth-lingala/zip4j" target="_blank" rel="noopener">https://github.com/srikanth-lingala/zip4j</a></p>
+<p>特征：</p>
+<ul>
+<li>从 Zip 文件创建，添加，提取，更新，删除文件</li>
+<li>读/写密码保护的 Zip 文件</li>
+<li>支持 AES 128/256 加密</li>
+<li>支持标准邮编加密</li>
+<li>支持 Zip64 格式</li>
+<li>支持存储（无压缩）和 Deflate 压缩方法</li>
+<li>从 Split Zip 文件创建或提取文件（例如：z01，z02，… zip）</li>
+<li>支持 Unicode 文件名</li>
+<li>进度监视器</li>
+</ul>
+<h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a><code>pom.xml</code></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>net.lingala.zip4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zip4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="官网案例"><a href="#官网案例" class="headerlink" title="官网案例"></a>官网案例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Zip4jTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">packAddFile</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 添加具体文件（该文件必须存在，否则会抛异常）到压缩文件中</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Creating a zip file with single file in it / Adding single file to an existing zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filename.zip"</span>).addFile(<span class="string">"dirtest/zip4jtest/src/a.txt"</span>);</span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filename.zip"</span>).addFile(<span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/src/b.txt"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//官网案例：Creating a zip file with multiple files / Adding multiple files to an existing zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filename.zip"</span>).addFiles(Arrays.asList(<span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/src/first_file"</span>), <span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/src/second_file"</span>)));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">packAddFolder</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 添加具体文件夹（该文件夹必须存在，否则会抛异常）到压缩文件中（被添加的文件夹，可以设置过滤条件）</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Creating a zip file by adding a folder to it / Adding a folder to an existing zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filenamefolder.zip"</span>).addFolder(<span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/srcdir2"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//官网案例：Since v2.6, it is possible to exclude certain files when adding a folder to zip by using an ExcludeFileFilter</span></span><br><span class="line">        <span class="comment">//ExcludeFileFilter：过滤掉文件夹内不需要的文件（该案例是过滤文件名结尾是 ext 格式的文件）</span></span><br><span class="line">        ExcludeFileFilter excludeFileFilter = file -&gt; FilenameUtils.isExtension(file.getName(), <span class="string">"ext"</span>);</span><br><span class="line">        ZipParameters zipParameters = <span class="keyword">new</span> ZipParameters();</span><br><span class="line">        zipParameters.setExcludeFileFilter(excludeFileFilter);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//CompressionMethod：压缩方式</span></span><br><span class="line"><span class="comment">//        zipParameters.setCompressionMethod(CompressionMethod.STORE);</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/excludefilefilter.zip"</span>).addFolder(<span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/srcdir3"</span>), zipParameters);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">packWithPwd</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 压缩文件并设置保护密码，或者添加文件到要以存在的压缩文件中</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Creating a password protected zip file / Adding files to an existing zip with password protection</span></span><br><span class="line">        ZipParameters zipParameters = <span class="keyword">new</span> ZipParameters();</span><br><span class="line">        zipParameters.setEncryptFiles(<span class="keyword">true</span>);</span><br><span class="line">        zipParameters.setEncryptionMethod(EncryptionMethod.AES);</span><br><span class="line">        <span class="comment">// Below line is optional. AES 256 is used by default. You can override it to use AES 128. AES 192 is supported only for extracting.</span></span><br><span class="line">        zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256);</span><br><span class="line"></span><br><span class="line">        List&lt;File&gt; filesToAdd = Arrays.asList(</span><br><span class="line">                <span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/src/somefile.txt"</span>),</span><br><span class="line">                <span class="keyword">new</span> File(<span class="string">"dirtest/zip4jtest/src/someotherfile.txt"</span>)</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filenamepwd.zip"</span>, <span class="string">"password"</span>.toCharArray());</span><br><span class="line">        zipFile.addFiles(filesToAdd, zipParameters);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unpackAllFile</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 从 zip 提取所有文件</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Extracting all files from a zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filename.zip"</span>).extractAll(<span class="string">"dirtest/zip4jtest/out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unpackAllFileWithPwd</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 从受密码保护的 zip 提取所有文件</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Extracting all files from a password protected zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filenamepwd.zip"</span>, <span class="string">"password"</span>.toCharArray()).extractAll(<span class="string">"dirtest/zip4jtest/out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unpackSingleFile</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 从 zip 提取单个文件</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Extracting a single file from zip</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filename.zip"</span>).extractFile(<span class="string">"a.txt"</span>, <span class="string">"dirtest/zip4jtest/out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unpackSingleFileWithPwd</span><span class="params">()</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 从受密码保护的 zip 提取单个文件</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Extracting a single file from zip which is password protected</span></span><br><span class="line">        <span class="keyword">new</span> ZipFile(<span class="string">"dirtest/zip4jtest/filenamepwd.zip"</span>, <span class="string">"password"</span>.toCharArray()).extractFile(<span class="string">"somefile.txt"</span>, <span class="string">"dirtest/zip4jtest/out"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">zipInputStreamExample</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 使用 ZipInputStream 提取文件（以流的形式解压文件）</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//官网案例：Extract files with ZipInputStream</span></span><br><span class="line">        String filePath = <span class="string">"dirtest/zip4jtest/zipinputstreamexample.zip"</span>;</span><br><span class="line">        String password = <span class="string">"password"</span>;</span><br><span class="line">        LocalFileHeader localFileHeader;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> readLen;</span><br><span class="line">        <span class="keyword">byte</span>[] readBuffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">4096</span>];</span><br><span class="line">        InputStream inputStream = <span class="keyword">new</span> FileInputStream(<span class="keyword">new</span> File(filePath));</span><br><span class="line">        <span class="keyword">try</span> (ZipInputStream zipInputStream = <span class="keyword">new</span> ZipInputStream(inputStream, password.toCharArray())) &#123;</span><br><span class="line">            <span class="keyword">while</span> ((localFileHeader = zipInputStream.getNextEntry()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                File extractedFile = <span class="keyword">new</span> File(localFileHeader.getFileName());</span><br><span class="line">                <span class="keyword">try</span> (OutputStream outputStream = <span class="keyword">new</span> FileOutputStream(extractedFile)) &#123;</span><br><span class="line">                    <span class="keyword">while</span> ((readLen = zipInputStream.read(readBuffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                        outputStream.write(readBuffer, <span class="number">0</span>, readLen);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//改动：以流的形式输出</span></span><br><span class="line">        List&lt;InputStream&gt; list = Lists.newArrayList();</span><br><span class="line">        InputStream newInputStream = Files.newInputStream(Paths.get(filePath));</span><br><span class="line">        <span class="keyword">try</span> (ZipInputStream zipInputStream = <span class="keyword">new</span> ZipInputStream(newInputStream, password.toCharArray())) &#123;</span><br><span class="line">            <span class="keyword">while</span> ((localFileHeader = zipInputStream.getNextEntry()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">"解压后的文件名："</span> + localFileHeader.getFileName());</span><br><span class="line">                ByteArrayOutputStream byteArrayOutputStream = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">                IOUtils.copy(zipInputStream, byteArrayOutputStream);</span><br><span class="line">                ByteArrayInputStream byteArrayInputStream = <span class="keyword">new</span> ByteArrayInputStream(byteArrayOutputStream.toByteArray());</span><br><span class="line">                list.add(byteArrayInputStream);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        list.forEach(CheckedConsumer.&lt;InputStream&gt;of(</span><br><span class="line">                byteArrayInputStream -&gt; &#123;</span><br><span class="line">                    String str = IOUtils.toString(byteArrayInputStream, StandardCharsets.UTF_8);</span><br><span class="line">                    System.out.println(<span class="string">"解压后的文件内容："</span> + str);</span><br><span class="line">                &#125;).unchecked()</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ZipClient-工具类"><a href="#ZipClient-工具类" class="headerlink" title="ZipClient 工具类"></a><code>ZipClient</code> 工具类</h3><p>自己根据官方文档做的简单封装。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipClient</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String EXTENSION = <span class="string">"zip"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ZipClient</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ZipClient</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.password = password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pack</span><span class="params">(List&lt;String&gt; filePaths, String desZipFileName)</span> <span class="keyword">throws</span> ZipException </span>&#123;</span><br><span class="line">        Objects.requireNonNull(filePaths);</span><br><span class="line">        Objects.requireNonNull(desZipFileName);</span><br><span class="line"></span><br><span class="line">        List&lt;File&gt; files = filePaths.stream().map(File::<span class="keyword">new</span>).collect(Collectors.toList());</span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(desZipFileName + <span class="string">"."</span> + EXTENSION, Optional.ofNullable(password).map(String::toCharArray).orElse(<span class="keyword">null</span>));</span><br><span class="line">        zipFile.addFiles(files, Optional.ofNullable(password)</span><br><span class="line">                .map(p -&gt; &#123;</span><br><span class="line">                    ZipParameters zipParameters = <span class="keyword">new</span> ZipParameters();</span><br><span class="line">                    zipParameters.setCompressionMethod(CompressionMethod.DEFLATE);</span><br><span class="line">                    zipParameters.setCompressionLevel(CompressionLevel.ULTRA);</span><br><span class="line">                    zipParameters.setEncryptFiles(<span class="keyword">true</span>);</span><br><span class="line">                    zipParameters.setEncryptionMethod(EncryptionMethod.AES);</span><br><span class="line">                    zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256);</span><br><span class="line">                    <span class="keyword">return</span> zipParameters;</span><br><span class="line">                &#125;)</span><br><span class="line">                .orElse(<span class="keyword">new</span> ZipParameters())</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pack</span><span class="params">(String filePath)</span> <span class="keyword">throws</span> ZipException, NoSuchFileException </span>&#123;</span><br><span class="line">        Objects.requireNonNull(filePath);</span><br><span class="line">        Path path = Paths.get(filePath);</span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(path)) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!path.toFile().isFile()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(filePath + <span class="string">" is not a file..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.pack(Lists.newArrayList(filePath), path.getParent().resolve(FilenameUtils.getBaseName(filePath)).toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">unpack</span><span class="params">(String sourceZipFilePath, String extractedZipDirPath)</span> <span class="keyword">throws</span> ZipException, NoSuchFileException, NotDirectoryException </span>&#123;</span><br><span class="line">        Objects.requireNonNull(sourceZipFilePath);</span><br><span class="line">        Objects.requireNonNull(extractedZipDirPath);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(Paths.get(sourceZipFilePath))) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(sourceZipFilePath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Paths.get(sourceZipFilePath).toFile().isFile()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchFileException(sourceZipFilePath + <span class="string">" is not a file..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Files.notExists(Paths.get(extractedZipDirPath))) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(extractedZipDirPath);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!Files.isDirectory(Paths.get(extractedZipDirPath))) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NotDirectoryException(extractedZipDirPath + <span class="string">" is not a directory..."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ZipFile zipFile = <span class="keyword">new</span> ZipFile(sourceZipFilePath);</span><br><span class="line">        <span class="keyword">if</span> (zipFile.isEncrypted()) &#123;</span><br><span class="line">            zipFile.setPassword(password.toCharArray());</span><br><span class="line">        &#125;</span><br><span class="line">        zipFile.extractAll(extractedZipDirPath);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>案例源码：<a href="https://github.com/V-Vincen/zip" target="_blank" rel="noopener">https://github.com/V-Vincen/zip</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/IDEA-IDEA-实现-Java-远程调试/" data-toggle="tooltip" data-placement="top" title="[IDEA] IDEA 实现 Java 远程调试">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Calling-Third-party-API-OpenFeign-1-Feign-makes-writing-java-http-clients-easier/" data-toggle="tooltip" data-placement="top" title="[Calling Third-party API - OpenFeign] 1 Feign makes writing java http clients easier">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Zip4j] Zip4j - A Java library for zip files&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Zip4j-Zip4j-A-Java-library-for-zip-files/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Sun Dec 27 2020 16:54:12 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#java-util-zip"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">java.util.zip</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基础案例"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">基础案例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZipUtils-工具类"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">ZipUtils 工具类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zip4j"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Zip4j</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#简介"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#pom-xml"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">pom.xml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#官网案例"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">官网案例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZipClient-工具类"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">ZipClient 工具类</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Zip4j" title="Zip4j">Zip4j</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Zip4j-Zip4j-A-Java-library-for-zip-files/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

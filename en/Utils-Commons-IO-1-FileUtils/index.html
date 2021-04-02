@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Utils-Commons-IO-1-FileUtils/">
+  <title>
+    
+      [Utils - Commons IO] 1 FileUtils - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+              
+            </div>
+            <h1>[Utils - Commons IO] 1 FileUtils</h1>
+            <h2 class="subheading">This package defines utility classes for working with streams, readers, writers and files...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-09-03
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">24</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">5.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>commons-io</code> 是一款处理 IO 流的工具，封装了很多处理 IO 流和文件的方法，可以大大简化我们处理 IO 流和操作文件的代码。从 <code>commons-io</code> 的官方使用文档可以看出，它主要分为工具类、尾端类、行迭代器、文件过滤器、文件比较器和扩展流。</p>
+<p>官网地址：<a href="http://commons.apache.org/proper/commons-io/" target="_blank" rel="noopener">http://commons.apache.org/proper/commons-io/</a></p>
+<p>下载：<a href="http://commons.apache.org/proper/commons-io/download_io.cgi" target="_blank" rel="noopener">http://commons.apache.org/proper/commons-io/download_io.cgi</a></p>
+<p><img src="commons-io.png" alt="commons-io"></p>
+<h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><p><code>org.apache.commons.io</code> 包下包含了 <code>FileUtils</code>、<code>IOUtils</code>、<code>FilenameUtils</code> 和 <code>FileSystemUtils</code> 等，前三者的方法并没有多大的区别，只是操作的对象不同，故名思议：<code>FileUtils</code> 主要操作 File 类，<code>IOUtils</code> 主要操作 IO 流，<code>FilenameUtils</code> 则是操作文件名，<code>FileSystemUtils</code> 包含了一些 JDK 没有提供的用于访问文件系统的实用方法。下面我们就来总结下这些工具类的具体用法。</p>
+<h2 id="maven-依赖"><a href="#maven-依赖" class="headerlink" title="maven 依赖"></a><code>maven</code> 依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="FileUtils-常用常量"><a href="#FileUtils-常用常量" class="headerlink" title="FileUtils 常用常量"></a><code>FileUtils</code> 常用常量</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_KB = <span class="number">1024</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_KB_BI = BigInteger.valueOf(ONE_KB);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_MB = ONE_KB * ONE_KB;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_MB_BI = ONE_KB_BI.multiply(ONE_KB_BI);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> FILE_COPY_BUFFER_SIZE = ONE_MB * <span class="number">30</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_GB = ONE_KB * ONE_MB;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_GB_BI = ONE_KB_BI.multiply(ONE_MB_BI);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_TB = ONE_KB * ONE_GB;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_TB_BI = ONE_KB_BI.multiply(ONE_GB_BI);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_PB = ONE_KB * ONE_TB;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_PB_BI = ONE_KB_BI.multiply(ONE_TB_BI);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> ONE_EB = ONE_KB * ONE_PB;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_EB_BI = ONE_KB_BI.multiply(ONE_PB_BI);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_ZB = BigInteger.valueOf(ONE_KB).multiply(BigInteger.valueOf(ONE_EB));</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> BigInteger ONE_YB = ONE_KB_BI.multiply(ONE_ZB);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> File[] EMPTY_FILE_ARRAY = <span class="keyword">new</span> File[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<h2 id="FileUtils-常用方法"><a href="#FileUtils-常用方法" class="headerlink" title="FileUtils 常用方法"></a><code>FileUtils</code> 常用方法</h2><h3 id="getFile、getTempDirectory、getUserDirectory、byteCountToDisplaySize、sizeOf、sizeOfDirectory"><a href="#getFile、getTempDirectory、getUserDirectory、byteCountToDisplaySize、sizeOf、sizeOfDirectory" class="headerlink" title="getFile、getTempDirectory、getUserDirectory、byteCountToDisplaySize、sizeOf、sizeOfDirectory"></a><code>getFile</code>、<code>getTempDirectory</code>、<code>getUserDirectory</code>、<code>byteCountToDisplaySize</code>、<code>sizeOf</code>、<code>sizeOfDirectory</code></h3><ul>
+<li><code>getFile(String... names)</code>：获取指定文件。</li>
+<li><code>getFile(File directory, String... names)</code>：获取指定目录下的指定文件。</li>
+<li><code>getTempDirectory()</code>：获取系统临时目录 File 对象。</li>
+<li><code>getTempDirectoryPath()</code>：获取系统临时目录路径。</li>
+<li><code>getUserDirectory()</code>：获取用户主目录 File 对象。</li>
+<li><code>getUserDirectoryPath()</code>：获取用户主目录路径。</li>
+<li><code>byteCountToDisplaySize(long size)</code>：以可读的方式，返回文件的大小 EB、PB、TB、GB、MB、KB or bytes。</li>
+<li><code>byteCountToDisplaySize(BigInteger size)</code>：以可读的方式，返回文件的大小 EB、PB、TB、GB、MB、KB or bytes。</li>
+<li><code>sizeOf(File file)</code>：读取文件大小，返回 long。</li>
+<li><code>sizeOfAsBigInteger(File file)</code>：读取文件大小，返回 BigInteger。</li>
+<li><code>sizeOfDirectory(File directory)</code>：目录，级联计算文件下的所有文件大小，返回 long。</li>
+<li><code>sizeOfDirectoryAsBigInteger(File directory)</code>：目录，级联计算文件下的所有文件大小，返回 BigInteger。</li>
+<li><code>toFile(URL url)</code>：根据 URL 获取文件（new URL(“file://Users/vincent/IDEA_Project/my_project/IO/touch”)）。</li>
+<li><code>toFiles(URL... urls)</code>：根据多个 URL 获取多个文件文件，返回 File[] 数组。</li>
+<li><code>toURLs(File... files)</code>：文件地址转为 URL。</li>
+<li><code>copyInputStreamToFile(InputStream source, File destination)</code>：将输入流的内容复制到新文件。</li>
+<li><code>directoryContains(File directory, File child)</code>：判断父目录是否包含子目录或者子文件。</li>
+<li><code>listFiles(File directory, String[] extensions, boolean recursive)</code>：根据 extensions 拓展规则，搜索文件；recursive 是否递归，返回文件迭代器。</li>
+<li><code>listFiles(File directory, String[] extensions, boolean recursive)</code>：根据 extensions 拓展规则，搜索文件；recursive 是否递归，返回文件集合。</li>
+<li><code>listFilesAndDirs(File directory, IOFileFilter fileFilter, IOFileFilter dirFilter)</code>：根据 FileFileFilter 自定义文件过滤器，和 DirectoryFileFilter 自定义目录过滤器，搜索文件和目录，返回文件和目录集合。</li>
+</ul>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">//获取指定文件</span></span><br><span class="line">    File file = FileUtils.getFile(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/a.txt"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取指定目录下的："123.txt", "456.txt"</span></span><br><span class="line">    File file1 = FileUtils.getFile(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/"</span>), <span class="string">"123.txt"</span>, <span class="string">"456.txt"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取临时目录 File 对象</span></span><br><span class="line">    File tempDirectory = FileUtils.getTempDirectory();</span><br><span class="line">    System.out.println(tempDirectory);</span><br><span class="line">    <span class="comment">//获取临时目录路径字符串</span></span><br><span class="line">    String tempDirectoryPath = FileUtils.getTempDirectoryPath();</span><br><span class="line">    System.out.println(tempDirectoryPath);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取用户主目录 File 对象</span></span><br><span class="line">    File userDirectory = FileUtils.getUserDirectory();</span><br><span class="line">    System.out.println(userDirectory);</span><br><span class="line">    <span class="comment">//获取用户主目录路径字符串</span></span><br><span class="line">    String userDirectoryPath = FileUtils.getUserDirectoryPath();</span><br><span class="line">    System.out.println(userDirectoryPath);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//以可读的方式，返回文件的大小EB, PB, TB, GB, MB, KB or bytes</span></span><br><span class="line">    String byteCountToDisplaySize = FileUtils.byteCountToDisplaySize(<span class="number">10000000</span>);</span><br><span class="line">    System.out.println(byteCountToDisplaySize); <span class="comment">// 9 MB</span></span><br><span class="line">    String byteCountToDisplaySize1 = FileUtils.byteCountToDisplaySize(<span class="number">1</span>);</span><br><span class="line">    System.out.println(byteCountToDisplaySize1); <span class="comment">// 1 bytes</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//读取文件大小 sizeOf：返回Long；sizeOfAsBigInteger：返回BigInteger</span></span><br><span class="line">    Long lon = FileUtils.sizeOf(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO"</span>));</span><br><span class="line">    System.out.println(lon);</span><br><span class="line">    BigInteger bigInteger = FileUtils.sizeOfAsBigInteger(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO"</span>));</span><br><span class="line">    System.out.println(bigInteger);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//根据 URL 获取文件，new URL("file://Users/vincent/IDEA_Project/my_project/IO/touch")</span></span><br><span class="line">    File file2 = FileUtils.toFile(<span class="keyword">new</span> URL(<span class="string">"file://Users/vincent/IDEA_Project/my_project/IO"</span>));</span><br><span class="line">    System.out.println(file2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//文件地址转为 URL</span></span><br><span class="line">    URL[] urls = FileUtils.toURLs(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO"</span>));</span><br><span class="line">    Arrays.stream(urls).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将输入流的内容复制到新文件</span></span><br><span class="line">    FileUtils.copyInputStreamToFile(<span class="keyword">new</span> FileInputStream(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/a.txt"</span>),</span><br><span class="line">            <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/a.txt"</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断父目录是否包含子目录或者子文件</span></span><br><span class="line">    <span class="keyword">boolean</span> b = FileUtils.directoryContains(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/"</span>),</span><br><span class="line">            <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/a1.txt"</span>));</span><br><span class="line">    System.out.println(b);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//根据 extensions 拓展规则，搜索文件；recursive 是否递归，返回文件迭代器</span></span><br><span class="line">    Iterator&lt;File&gt; iterateFiles = FileUtils.iterateFiles(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>), <span class="keyword">new</span> String[]&#123;<span class="string">"png"</span>, <span class="string">"txt"</span>&#125;, <span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">while</span> (iterateFiles.hasNext()) &#123;</span><br><span class="line">        File next = iterateFiles.next();</span><br><span class="line">        System.out.println(next);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//根据 extensions 拓展规则，搜索文件；recursive 是否递归，返回文件集合</span></span><br><span class="line">    Collection&lt;File&gt; files = FileUtils.listFiles(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>), <span class="keyword">new</span> String[]&#123;<span class="string">"png"</span>, <span class="string">"txt"</span>&#125;, <span class="keyword">true</span>);</span><br><span class="line">    files.forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//根据 FileFileFilter 自定义文件过滤器，和 DirectoryFileFilter 自定义目录过滤器，搜索文件和目录，返回文件和目录集合</span></span><br><span class="line">    Collection&lt;File&gt; listFilesAndDirs = FileUtils.listFilesAndDirs(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>),</span><br><span class="line">            <span class="keyword">new</span> FileFileFilter() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> file.getPath().endsWith(<span class="string">"png"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, DirectoryFileFilter.DIRECTORY);</span><br><span class="line">    listFilesAndDirs.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="touch-和-forceMkdir"><a href="#touch-和-forceMkdir" class="headerlink" title="touch 和 forceMkdir"></a><code>touch</code> 和 <code>forceMkdir</code></h3><p><code>touch(File file)</code>：创建文件，如果文件存在则更新时间；如果不存在，创建一个空文件。</p>
+<p><code>forceMkdir(File directory)</code>：强制创建文件目录，如果文件目录存在，会抛出异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch(File file)</span><br><span class="line">forceMkdir(File directory)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createFileOrDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 	touch(File file)：创建文件，如果文件存在则更新时间；如果不存在，创建一个空文件。</span></span><br><span class="line"><span class="comment">     * 	forceMkdir(File directory)：强制创建文件目录，如果文件目录存在，会抛出异常。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    FileUtils.touch(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/touch.txt"</span>));</span><br><span class="line">    FileUtils.forceMkdir(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/touch"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="copyFile"><a href="#copyFile" class="headerlink" title="copyFile"></a><code>copyFile</code></h3><p><code>copyFile(File srcFile, File destFile)</code>：此方法将目录 A 下的 abc.txt 拷贝到目录 B 下的 abc.txt；如果有同名文件则替换，没有则新建。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">copyFile(File srcFile, File destFile)</span><br><span class="line">copyFile(File srcFile, File destFile, <span class="keyword">boolean</span> preserveFileDate)</span><br><span class="line">copyFile(File input, OutputStream output)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyFile</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 此方法将目录 A 下的 abc.txt 拷贝到目录 B 下的 abc.txt；如果有同名文件则替换，没有则新建。（如果前者文件不存在则报错）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File srcFile = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/abc.txt"</span>);</span><br><span class="line">    File destFile = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy/abc/abc.txt"</span>);</span><br><span class="line">    FileUtils.copyFile(srcFile, destFile);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="copyFileToDirectory"><a href="#copyFileToDirectory" class="headerlink" title="copyFileToDirectory"></a><code>copyFileToDirectory</code></h3><p><code>copyFileToDirectory(File srcFile, File destDir)</code>：此方法将目录 A 下的 abc.txt 拷贝到指定目录下，如果有同名文件则替换，没有则新建。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">copyFileToDirectory(File srcFile, File destDir)</span><br><span class="line">copyFileToDirectory(File sourceFile, File destinationDir, <span class="keyword">boolean</span> preserveFileDate)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyFileToDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * copyFileToDirectory(File srcFile, File destDir)：此方法将目录 A 下的 abc.txt 拷贝到指定目录下，如果有同名文件则替换，没有则新建。（如果前者文件不存在则报错）。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File srcFile = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/abc.txt"</span>);</span><br><span class="line">    File destDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy"</span>);</span><br><span class="line">    FileUtils.copyFileToDirectory(srcFile, destDir);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="copyDirectory"><a href="#copyDirectory" class="headerlink" title="copyDirectory"></a><code>copyDirectory</code></h3><p><code>copyDirectory(File srcDir, File destDir)</code>：文件目录复制。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">copyDirectory(File srcDir, File destDir)</span><br><span class="line">copyDirectory(File srcDir, File destDir, <span class="keyword">boolean</span> preserveFileDate)</span><br><span class="line">copyDirectory(File srcDir, File destDir, FileFilter filter)</span><br><span class="line">copyDirectory(File srcDir, File destDir, FileFilter filter, <span class="keyword">boolean</span> preserveFileDate)</span><br><span class="line">copyDirectoryToDirectory(File sourceDir, File destinationDir)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * copyDirectory(File srcDir, File destDir)：复制文件夹（文件夹里面的文件内容也会复制）。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File srcDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils"</span>);</span><br><span class="line">    File destDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy"</span>);</span><br><span class="line">    FileUtils.copyDirectory(srcDir, destDir);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 带过滤器的复制文件夹</span></span><br><span class="line"><span class="comment">     * copyDirectory(File srcDir, File destDir, FileFilter filter)：</span></span><br><span class="line"><span class="comment">     * FileFilter：DirectoryFileFilter.DIRECTORY，只复制文件目录。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File destDir2 = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy2"</span>);</span><br><span class="line">    FileUtils.copyDirectory(srcDir, destDir2, DirectoryFileFilter.DIRECTORY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="copyDirectoryToDirectory"><a href="#copyDirectoryToDirectory" class="headerlink" title="copyDirectoryToDirectory"></a><code>copyDirectoryToDirectory</code></h3><p><code>copyDirectoryToDirectory(File sourceDir, File destinationDir)</code>：此方法将目录 A 下的所有的文件夹及文件（包含目录 A），复制到目录 B 下；如果有同名目录则合并，如果有同名文件则替换。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyDirectoryToDirectory(File sourceDir, File destinationDir)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyDirectoryToDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * copyDirectoryToDirectory(File sourceDir, File destinationDir)：</span></span><br><span class="line"><span class="comment">     * 此方法将目录 A 下的所有的文件夹及文件（包含目录 A），复制到目录 B 下；</span></span><br><span class="line"><span class="comment">     * 如果目录 B 下也有一个目录 A，则两个目录合并，</span></span><br><span class="line"><span class="comment">     * 如果目录 A 下有文件 a，同时目录 B 下的目录 A 中，也有一个文件 a，则目录 A 下的文件 a 替换目录 B 下的目录 A 下的文件 a。</span></span><br><span class="line"><span class="comment">     * 总结：有同名文件夹则合并，如果有同名文件则替换。</span></span><br><span class="line"><span class="comment">     * 例子（结构示意图）：</span></span><br><span class="line"><span class="comment">     * A (srcDir)</span></span><br><span class="line"><span class="comment">     * |</span></span><br><span class="line"><span class="comment">     * |--   a.txt (内容：aaa) </span></span><br><span class="line"><span class="comment">     * |-- abc.txt (内容：abc)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * B (destDir):</span></span><br><span class="line"><span class="comment">     * |</span></span><br><span class="line"><span class="comment">     * |-- A (dir)</span></span><br><span class="line"><span class="comment">     *     |</span></span><br><span class="line"><span class="comment">     *     |-- a.txt (内容：vvv)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * copyDirectoryToDirectory(srcDir, destDir)：</span></span><br><span class="line"><span class="comment">     * B (destDir)</span></span><br><span class="line"><span class="comment">     * |</span></span><br><span class="line"><span class="comment">     * |-- A (dir) </span></span><br><span class="line"><span class="comment">     *     |</span></span><br><span class="line"><span class="comment">     *     |--   a.txt (内容：aaa)</span></span><br><span class="line"><span class="comment">     *     |-- abc.txt (内容：abc)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File srcDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc"</span>);</span><br><span class="line">    File destDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy"</span>);</span><br><span class="line">    FileUtils.copyDirectoryToDirectory(srcDir, destDir);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="moveDirectory"><a href="#moveDirectory" class="headerlink" title="moveDirectory"></a><code>moveDirectory</code></h3><p><code>moveDirectory(File srcDir, File destDir)</code>：移动目录（复制并删除），目标目录与原目录中如果存在同名目录会报错（相当与重命名）。</p>
+<p><code>moveDirectoryToDirectory(File src, File destDir, boolean createDestDir)</code>：移动目录到目标目录下；createDestDir 目录不存在是否创建。</p>
+<p><code>moveFile(File srcFile, File destFile)</code>：移动文件（复制并删除），目标目录下存在文件则报错（也可重命名）。</p>
+<p><code>moveFileToDirectory(File srcFile, File destDir, boolean createDestDir)</code>：移动文件到目标目录下；createDestDir 目录不存在是否创建。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">moveDirectory(File srcDir, File destDir)</span><br><span class="line">moveDirectoryToDirectory(File src, File destDir, <span class="keyword">boolean</span> createDestDir)</span><br><span class="line">moveFile(File srcFile, File destFile)</span><br><span class="line">moveFileToDirectory(File srcFile, File destDir, <span class="keyword">boolean</span> createDestDir)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">moveDirectory</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 	moveDirectory(File srcDir, File destDir)：移动目录（复制并删除），目标目录与原目录中如果存在同名目录会报错（也可重命名）。</span></span><br><span class="line"><span class="comment">     * 	moveDirectoryToDirectory(File src, File destDir, boolean createDestDir)：移动目录到目标目录下；createDestDir 目录不存在是否创建。</span></span><br><span class="line"><span class="comment">     * 	moveFile(File srcFile, File destFile)：移动文件（复制并删除），目标目录下存在文件则报错（也可重命名）。</span></span><br><span class="line"><span class="comment">     * 	moveFileToDirectory(File srcFile, File destDir, boolean createDestDir)：移动文件到目标目录下；createDestDir 目录不存在是否创建。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File srcDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abcd"</span>);</span><br><span class="line">    File destDir = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils2"</span>);</span><br><span class="line">    FileUtils.moveDirectory(srcDir, destDir);</span><br><span class="line">    FileUtils.moveDirectoryToDirectory(srcDir, destDir, <span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    File srcFile = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abcd/a.txt"</span>);</span><br><span class="line">    File destFile = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abcd/ab.txt"</span>);</span><br><span class="line">    FileUtils.moveFile(srcFile, destFile);</span><br><span class="line">    FileUtils.moveFileToDirectory(srcFile, destDir, <span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="openInputStream-和-openOutputStream"><a href="#openInputStream-和-openOutputStream" class="headerlink" title="openInputStream 和 openOutputStream"></a><code>openInputStream</code> 和 <code>openOutputStream</code></h3><p><code>openInputStream(File file)</code> 和 <code>openOutputStream(File file)</code>：获取文件输入输出流。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">openInputStream(File file)</span><br><span class="line">openOutputStream(File file)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">openInputAndOutStream</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * openInputStream(File file)：获取文件输入流。</span></span><br><span class="line"><span class="comment">     * openOutputStream(File file)：获取文件输出流。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    InputStream in = FileUtils.openInputStream(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/inputStream.txt"</span>));</span><br><span class="line"></span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/outputStream.txt"</span>);</span><br><span class="line">    OutputStream os = FileUtils.openOutputStream(file);</span><br><span class="line">    os = FileUtils.openOutputStream(file, <span class="keyword">true</span>);<span class="comment">//是否追加的形式添加内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="deleteDirectory、deleteQuietly、cleanDirectory、forceDelete、forceDeleteOnExit"><a href="#deleteDirectory、deleteQuietly、cleanDirectory、forceDelete、forceDeleteOnExit" class="headerlink" title="deleteDirectory、deleteQuietly、cleanDirectory、forceDelete、forceDeleteOnExit"></a><code>deleteDirectory</code>、<code>deleteQuietly</code>、<code>cleanDirectory</code>、<code>forceDelete</code>、<code>forceDeleteOnExit</code></h3><p><code>deleteDirectory(File directory)</code>：删除目录或文件，无法删除会抛异常。</p>
+<p><code>deleteQuietly(File file)</code>：安静删除目录或文件，无法删除时也不会抛异常。</p>
+<p><code>cleanDirectory(File directory)</code>：删除该目录下的所有内容（保留该目录）。</p>
+<p><code>forceDelete(File file)</code>：强制删除目录或文件。</p>
+<p><code>forceDeleteOnExit(File file)</code>：当 JVM 退出时，删除目录或文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deleteDirectory(File directory)</span><br><span class="line">deleteQuietly(File file)</span><br><span class="line">cleanDirectory(File directory)</span><br><span class="line">forceDelete(File file)</span><br><span class="line">forceDeleteOnExit(File file)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteDirectoryAndQuietly</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * deleteDirectory(File directory)：删除目录或文件，无法删除会抛异常。</span></span><br><span class="line"><span class="comment">     * deleteQuietly(File file)：安静删除目录或文件，无法删除时也不会抛异常。</span></span><br><span class="line"><span class="comment">     * cleanDirectory(File directory)：删除该目录下的所有内容（保留该目录）。</span></span><br><span class="line"><span class="comment">     * forceDelete(File file)：强制删除目录或文件。</span></span><br><span class="line"><span class="comment">     * forceDeleteOnExit(File file)：当 JVM 退出时，删除目录或文件。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    FileUtils.deleteDirectory(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/dir"</span>));</span><br><span class="line">    FileUtils.deleteQuietly(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/dir2"</span>));</span><br><span class="line">    FileUtils.cleanDirectory(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutilscopy"</span>));</span><br><span class="line">    FileUtils.forceDelete(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/readerAndWriter2.txt"</span>));</span><br><span class="line">    FileUtils.forceDeleteOnExit(<span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/readerAndWriter3.txt"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="readXxx"><a href="#readXxx" class="headerlink" title="readXxx"></a><code>readXxx</code></h3><p><code>readFileToByteArray(File file)</code>：读取目标文件，返回文件内容的 bytes 数组。</p>
+<p><code>readFileToString(File file)</code>：读取目标文件，返回文件内容字符串。</p>
+<p><code>readLines(File file)</code>：读取目标文件每一行数据，返回 list。</p>
+<p><code>lineIterator(File file)</code>：读取目标文件每一行数据，返回迭代器。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">readFileToByteArray(File file)</span><br><span class="line">readFileToString(File file)</span><br><span class="line">readFileToString(File file, Charset charsetName)</span><br><span class="line">readFileToString(File file, String charsetName)</span><br><span class="line">readLines(File file)</span><br><span class="line">readLines(File file, Charset charset)</span><br><span class="line">readLines(File file, String charsetName)</span><br><span class="line">lineIterator(File file)</span><br><span class="line">lineIterator(File file, String charsetName)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">readXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * readFileToByteArray(File file)：读取目标文件，返回文件内容的 bytes 数组。</span></span><br><span class="line"><span class="comment">     * readFileToString(File file)：读取目标文件，返回文件内容字符串（Deprecated）。</span></span><br><span class="line"><span class="comment">     * readFileToString(File file, Charset charsetName)：读取目标文件，返回文件内容字符串（确认字符集）。</span></span><br><span class="line"><span class="comment">     * readFileToString(File file, String charsetName)：读取目标文件，返回文件内容字符串（确认字符集）。</span></span><br><span class="line"><span class="comment">     * readLines(File file)：读取目标文件每一行数据，返回 list。</span></span><br><span class="line"><span class="comment">     * readLines(File file, Charset charset)：读取目标文件每一行数据，返回 list（确认字符集）。</span></span><br><span class="line"><span class="comment">     * readLines(File file, String charsetName)：：读取目标文件每一行数据，返回 list（确认字符集）。</span></span><br><span class="line"><span class="comment">     * lineIterator(File file)：读取目标文件每一行数据，返回迭代器。</span></span><br><span class="line"><span class="comment">     * lineIterator(File file, String charsetName)：读取目标文件每一行数据，返回迭代器（确认字符集）。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/a.txt"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] readFileToByteArray = FileUtils.readFileToByteArray(file);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> String(readFileToByteArray));</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    String readFileToString = FileUtils.readFileToString(file, <span class="string">"UTF-8"</span>);</span><br><span class="line">    System.out.println(readFileToString);</span><br><span class="line">    String readFileToStringCharset = FileUtils.readFileToString(file, StandardCharsets.UTF_8);</span><br><span class="line">    System.out.println(readFileToStringCharset);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; readLines = FileUtils.readLines(file, <span class="string">"UTF-8"</span>);</span><br><span class="line">    readLines.forEach(System.out::println);</span><br><span class="line">    List&lt;String&gt; readLinesCharset = FileUtils.readLines(file, StandardCharsets.UTF_8);</span><br><span class="line">    readLinesCharset.forEach(System.out::println);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    LineIterator lineIterator = FileUtils.lineIterator(file);</span><br><span class="line">    <span class="keyword">while</span> (lineIterator.hasNext()) &#123;</span><br><span class="line">        String next = lineIterator.next();</span><br><span class="line">        System.out.println(next);</span><br><span class="line">    &#125;</span><br><span class="line">    LineIterator lineIteratorCharset = FileUtils.lineIterator(file, <span class="string">"UTF-8"</span>);</span><br><span class="line">    <span class="keyword">while</span> (lineIteratorCharset.hasNext()) &#123;</span><br><span class="line">        String next = lineIteratorCharset.next();</span><br><span class="line">        System.out.println(next);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="writeXxx"><a href="#writeXxx" class="headerlink" title="writeXxx"></a><code>writeXxx</code></h3><p><code>write(File file, CharSequence data, Charset charset, boolean append)</code>：将字符串写入目标文件，并设置字符集；append 是否追加（true：追加，false：覆盖）。</p>
+<p><code>writeByteArrayToFile(File file, byte[] data, boolean append)</code>：将文件内容以 bytes 数组写入文件；append 是否追加（true：追加，false：覆盖）。</p>
+<p><code>writeLines(File file, String charsetName, Collection&lt;?&gt; lines, String lineEnding, boolean append)</code>：将集合中的数据逐行写入文件中，并设置字符集，并设置行与行直接的分隔符；append 是否追加（true：追加，false：覆盖）。</p>
+<p><code>writeStringToFile(File file, String data, Charset charset, boolean append)</code>：将字符串写入文件，并设置字符集；append 是否追加（true：追加，false：覆盖）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">write(File file, CharSequence data)</span><br><span class="line">write(File file, CharSequence data, <span class="keyword">boolean</span> append)</span><br><span class="line">write(File file, CharSequence data, Charset charset)</span><br><span class="line">write(File file, CharSequence data, Charset charset, <span class="keyword">boolean</span> append)</span><br><span class="line">write(File file, CharSequence data, String charsetName)</span><br><span class="line">write(File file, CharSequence data, String charsetName, <span class="keyword">boolean</span> append)</span><br><span class="line">writeByteArrayToFile(File file, <span class="keyword">byte</span>[] data)</span><br><span class="line">writeByteArrayToFile(File file, <span class="keyword">byte</span>[] data, <span class="keyword">boolean</span> append)</span><br><span class="line">writeByteArrayToFile(File file, <span class="keyword">byte</span>[] data, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span><br><span class="line">writeByteArrayToFile(File file, <span class="keyword">byte</span>[] data, <span class="keyword">int</span> off, <span class="keyword">int</span> len, <span class="keyword">boolean</span> append)</span><br><span class="line">writeLines(File file, Collection&lt;?&gt; lines)</span><br><span class="line">writeLines(File file, Collection&lt;?&gt; lines, <span class="keyword">boolean</span> append)</span><br><span class="line">writeLines(File file, Collection&lt;?&gt; lines, String lineEnding)</span><br><span class="line">writeLines(File file, Collection&lt;?&gt; lines, String lineEnding, <span class="keyword">boolean</span> append)</span><br><span class="line">writeLines(File file, String charsetName, Collection&lt;?&gt; lines)</span><br><span class="line">writeLines(File file, String charsetName, Collection&lt;?&gt; lines, <span class="keyword">boolean</span> append)</span><br><span class="line">writeLines(File file, String charsetName, Collection&lt;?&gt; lines, String lineEnding)</span><br><span class="line">writeLines(File file, String charsetName, Collection&lt;?&gt; lines, String lineEnding, <span class="keyword">boolean</span> append)</span><br><span class="line">writeStringToFile(File file, String data)</span><br><span class="line">writeStringToFile(File file, String data, <span class="keyword">boolean</span> append)</span><br><span class="line">writeStringToFile(File file, String data, Charset charset)</span><br><span class="line">writeStringToFile(File file, String data, Charset charset, <span class="keyword">boolean</span> append)</span><br><span class="line">writeStringToFile(File file, String data, String charsetName)</span><br><span class="line">writeStringToFile(File file, String data, String charsetName, <span class="keyword">boolean</span> append)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writeXxx</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * CharSequence 接口：String、StringBuilder、StringBuffer 都是实现了它。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data)：将字符串写入目标文件（Deprecated）。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data, boolean append)：将字符串写入目标文件；append 为 true 时追加，false 时为覆盖（Deprecated）。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data, Charset charset)：将字符串写入目标文件，并设置字符集。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data, Charset charset, boolean append)：将字符串写入目标文件，并设置字符集；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data, String charsetName)：将字符串写入目标文件，并设置字符集。</span></span><br><span class="line"><span class="comment">     * write(File file, CharSequence data, String charsetName, boolean append)：将字符串写入目标文件，并设置字符集；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeByteArrayToFile(File file, byte[] data)：将文件内容以 bytes 数组写入文件。</span></span><br><span class="line"><span class="comment">     * writeByteArrayToFile(File file, byte[] data, boolean append)：将文件内容以 bytes 数组写入文件；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeByteArrayToFile(File file, byte[] data, int off, int len)：将文件内容以 bytes 数组写入文件。</span></span><br><span class="line"><span class="comment">     * writeByteArrayToFile(File file, byte[] data, int off, int len, boolean append)：将文件内容以 bytes 数组写入文件；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, Collection&lt;?&gt; lines)：将集合中的数据逐行写入文件中。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, Collection&lt;?&gt; lines, boolean append)：将集合中的数据逐行写入文件中；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, Collection&lt;?&gt; lines, String lineEnding)：将集合中的数据逐行写入文件中，并设置行与行直接的分隔符。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, Collection&lt;?&gt; lines, String lineEnding, boolean append)：将集合中的数据逐行写入文件中，并设置行与行直接的分隔符；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, String charsetName, Collection&lt;?&gt; lines)：将集合中的数据逐行写入文件中，并设置字符集。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, String charsetName, Collection&lt;?&gt; lines, boolean append)：将集合中的数据逐行写入文件中，并设置字符集；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, String charsetName, Collection&lt;?&gt; lines, String lineEnding)：将集合中的数据逐行写入文件中，并设置字符集，并设置行与行直接的分隔符。</span></span><br><span class="line"><span class="comment">     * writeLines(File file, String charsetName, Collection&lt;?&gt; lines, String lineEnding, boolean append)：将集合中的数据逐行写入文件中，并设置字符集，并设置行与行直接的分隔符；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data)：将字符串写入文件（Deprecated）。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data, boolean append)：将字符串写入文件；append 为 true 时追加，false 时为覆盖（Deprecated）。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data, Charset charset)：将字符串写入文件，并设置字符集。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data, Charset charset, boolean append)：将字符串写入文件，并设置字符集；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data, String charsetName)：将字符串写入文件，并设置字符集。</span></span><br><span class="line"><span class="comment">     * writeStringToFile(File file, String data, String charsetName, boolean append)：将字符串写入文件，并设置字符集；append 为 true 时追加，false 时为覆盖。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/abc.txt"</span>);</span><br><span class="line">    FileUtils.write(file, <span class="string">"write(File file, CharSequence data)\n"</span>);</span><br><span class="line">    FileUtils.write(file, <span class="string">"write(File file, CharSequence data, boolean append)\n"</span>, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.write(file, <span class="string">"write(File file, CharSequence data, Charset charset)\n"</span>, StandardCharsets.UTF_8);</span><br><span class="line">    FileUtils.write(file, <span class="string">"write(File file, CharSequence data, Charset charset, boolean append)\n"</span>, StandardCharsets.UTF_8, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.write(file, <span class="string">"(File file, CharSequence data, String charsetName)\n"</span>, <span class="string">"UTF-8"</span>);</span><br><span class="line">    FileUtils.write(file, <span class="string">"write(File file, CharSequence data, String charsetName, boolean append)\n"</span>, <span class="string">"UTF-8"</span>, <span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    File file2 = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/fileutils/abc/abcd.txt"</span>);</span><br><span class="line">    <span class="keyword">byte</span>[] readFileToByteArray = FileUtils.readFileToByteArray(file2);</span><br><span class="line">    FileUtils.writeByteArrayToFile(file, readFileToByteArray);</span><br><span class="line">    FileUtils.writeByteArrayToFile(file, readFileToByteArray, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeByteArrayToFile(file, readFileToByteArray, <span class="number">0</span>, <span class="keyword">new</span> String(readFileToByteArray).length());</span><br><span class="line">    FileUtils.writeByteArrayToFile(file, readFileToByteArray, <span class="number">0</span>, <span class="keyword">new</span> String(readFileToByteArray).length(), <span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; readLines = FileUtils.readLines(file2, StandardCharsets.UTF_8);</span><br><span class="line">    FileUtils.writeLines(file, readLines);</span><br><span class="line">    FileUtils.writeLines(file, readLines, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeLines(file, readLines, <span class="string">"\n"</span>);</span><br><span class="line">    FileUtils.writeLines(file, readLines, <span class="string">"\n"</span>, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeLines(file, <span class="string">"UTF-8"</span>, readLines);</span><br><span class="line">    FileUtils.writeLines(file, <span class="string">"UTF-8"</span>, readLines, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeLines(file, <span class="string">"UTF-8"</span>, readLines, <span class="string">"\n"</span>);</span><br><span class="line">    FileUtils.writeLines(file, <span class="string">"UTF-8"</span>, readLines, <span class="string">"\n"</span>, <span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">    String readFileToString = FileUtils.readFileToString(file2, StandardCharsets.UTF_8);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString, StandardCharsets.UTF_8);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString, StandardCharsets.UTF_8, <span class="keyword">true</span>);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString, <span class="string">"UTF-8"</span>);</span><br><span class="line">    FileUtils.writeStringToFile(file, readFileToString, <span class="string">"UTF-8"</span>, <span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="isFileNewer-和-isFileOlder"><a href="#isFileNewer-和-isFileOlder" class="headerlink" title="isFileNewer 和 isFileOlder"></a><code>isFileNewer</code> 和 <code>isFileOlder</code></h3><p><code>isFileNewer(File file, Date date)</code>：比较指定的文件是否比指定的日期新。</p>
+<p><code>isFileNewer(File file, File reference)</code>：比较前一个文件是否比后一个文件新。</p>
+<p><code>isFileNewer(File file, Instant instant)</code>：比较指定的文件是否比指定的瞬间更新。</p>
+<p><code>isFileNewer(File file, long timeMillis)</code>：比较指定的文件是否比指定的时间引用新。</p>
+<p><code>isFileOlder(File file, Date date)</code>：比较指定的文件是否比指定的日期旧。</p>
+<p><code>isFileOlder(File file, File reference)</code>：比较前一个文件是否比后一个文件旧。</p>
+<p><code>isFileOlder(File file, Instant instant)</code>：比较指定的文件是否比指定的瞬间更旧。</p>
+<p><code>isFileOlder(File file, long timeMillis)</code>：比较指定的文件是否比指定的时间引用旧。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">isFileNewer(File file, Date date)</span><br><span class="line">isFileNewer(File file, File reference)</span><br><span class="line">isFileNewer(File file, Instant instant)</span><br><span class="line">isFileNewer(File file, <span class="keyword">long</span> timeMillis)</span><br><span class="line">isFileOlder(File file, Date date)</span><br><span class="line">isFileOlder(File file, File reference)</span><br><span class="line">isFileOlder(File file, Instant instant)</span><br><span class="line">isFileOlder(File file, <span class="keyword">long</span> timeMillis)</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">isFileNewerOrOld</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * isFileNewer(File file, Date date)：比较指定的文件是否比指定的日期新。</span></span><br><span class="line"><span class="comment">     * isFileNewer(File file, File reference)：比较前一个文件是否比后一个文件新。</span></span><br><span class="line"><span class="comment">     * isFileNewer(File file, Instant instant)：比较指定的文件是否比指定的瞬间更新。</span></span><br><span class="line"><span class="comment">     * isFileNewer(File file, long timeMillis)：比较指定的文件是否比指定的时间引用新。</span></span><br><span class="line"><span class="comment">     * isFileOlder(File file, Date date)：比较指定的文件是否比指定的日期旧。</span></span><br><span class="line"><span class="comment">     * isFileOlder(File file, File reference)：比较前一个文件是否比后一个文件旧。</span></span><br><span class="line"><span class="comment">     * isFileOlder(File file, Instant instant)：比较指定的文件是否比指定的瞬间更旧。</span></span><br><span class="line"><span class="comment">     * isFileOlder(File file, long timeMillis)：比较指定的文件是否比指定的时间引用旧。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    File file1 = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/copyFile.png"</span>);</span><br><span class="line">    File file2 = <span class="keyword">new</span> File(<span class="string">"/Users/vincent/IDEA_Project/my_project/IO/new.txt"</span>);</span><br><span class="line">    Calendar calendar = Calendar.getInstance();</span><br><span class="line">    calendar.set(<span class="number">2020</span>, Calendar.SEPTEMBER, <span class="number">11</span>);</span><br><span class="line">    Date time = calendar.getTime();</span><br><span class="line">    <span class="keyword">boolean</span> fileNewer = FileUtils.isFileNewer(file2, time);</span><br><span class="line">    System.out.println(fileNewer);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> fileNewer2 = FileUtils.isFileNewer(file1, file2);</span><br><span class="line">    System.out.println(fileNewer2);</span><br><span class="line">    <span class="keyword">boolean</span> fileNewer3 = FileUtils.isFileNewer(file2, file1);</span><br><span class="line">    System.out.println(fileNewer3);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> fileNewer4 = FileUtils.isFileNewer(file2, System.currentTimeMillis());</span><br><span class="line">    System.out.println(fileNewer4);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> fileOlder = FileUtils.isFileOlder(file2, time);</span><br><span class="line">    System.out.println(fileOlder);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> fileOlder2 = FileUtils.isFileOlder(file1, file2);</span><br><span class="line">    System.out.println(fileOlder2);</span><br><span class="line">    <span class="keyword">boolean</span> fileOlder3 = FileUtils.isFileOlder(file2, file1);</span><br><span class="line">    System.out.println(fileOlder3);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> fileOlder4 = FileUtils.isFileOlder(file2, System.currentTimeMillis());</span><br><span class="line">    System.out.println(fileOlder4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Java-杂记-Java-中-Char-数组转换为-List-集合/" data-toggle="tooltip" data-placement="top" title="[Java 杂记] Java 中 Char 数组转换为 List 集合">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/IO-4-节点流和处理流/" data-toggle="tooltip" data-placement="top" title="[IO] 4 节点流和处理流">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Utils - Commons IO] 1 FileUtils&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Utils-Commons-IO-1-FileUtils/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Sep 03 2020 16:22:52 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#工具类"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">工具类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#maven-依赖"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">maven 依赖</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#FileUtils-常用常量"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">FileUtils 常用常量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#FileUtils-常用方法"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">FileUtils 常用方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#getFile、getTempDirectory、getUserDirectory、byteCountToDisplaySize、sizeOf、sizeOfDirectory"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">getFile、getTempDirectory、getUserDirectory、byteCountToDisplaySize、sizeOf、sizeOfDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#touch-和-forceMkdir"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">touch 和 forceMkdir</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copyFile"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">copyFile</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copyFileToDirectory"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">copyFileToDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copyDirectory"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">copyDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copyDirectoryToDirectory"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">copyDirectoryToDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#moveDirectory"><span class="toc-nav-number">5.7.</span> <span class="toc-nav-text">moveDirectory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#openInputStream-和-openOutputStream"><span class="toc-nav-number">5.8.</span> <span class="toc-nav-text">openInputStream 和 openOutputStream</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#deleteDirectory、deleteQuietly、cleanDirectory、forceDelete、forceDeleteOnExit"><span class="toc-nav-number">5.9.</span> <span class="toc-nav-text">deleteDirectory、deleteQuietly、cleanDirectory、forceDelete、forceDeleteOnExit</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#readXxx"><span class="toc-nav-number">5.10.</span> <span class="toc-nav-text">readXxx</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#writeXxx"><span class="toc-nav-number">5.11.</span> <span class="toc-nav-text">writeXxx</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#isFileNewer-和-isFileOlder"><span class="toc-nav-number">5.12.</span> <span class="toc-nav-text">isFileNewer 和 isFileOlder</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Utils" title="Utils">Utils</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Utils-Commons-IO-1-FileUtils/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

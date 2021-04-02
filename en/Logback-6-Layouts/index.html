@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Logback-6-Layouts/">
+  <title>
+    
+      [Logback] 6 Layout - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg5.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg5.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg5.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Logback" title="Logback">Logback</a>
+              
+            </div>
+            <h1>[Logback] 6 Layout</h1>
+            <h2 class="subheading">Layout...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-12-31
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">44</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">10.6k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="什么是-layout？"><a href="#什么是-layout？" class="headerlink" title="什么是 layout？"></a>什么是 layout？</h2><p>layout 是 logback 的组件，负责将日志事件转换为字符串。<a href="https://logback.qos.ch/xref/ch/qos/logback/core/Layout.html" target="_blank" rel="noopener"><code>Layout</code></a> 接口中的 <code>format()</code> 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。<code>Layout</code> 接口的概要如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Layout</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">ContextAware</span>, <span class="title">LifeCycle</span> </span>&#123;</span><br><span class="line">  <span class="function">String <span class="title">doLayout</span><span class="params">(E event)</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">getFileHeader</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">getPresentationHeader</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">getFileFooter</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">getPresentationFooter</span><span class="params">()</span></span>;</span><br><span class="line">  <span class="function">String <span class="title">getContentType</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个接口相对简单，但是它可以满足大部分的格式化需求。</p>
+<h2 id="Logback-classic"><a href="#Logback-classic" class="headerlink" title="Logback-classic"></a>Logback-classic</h2><p>logback-classic 仅仅用来处理 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/spi/ILoggingEvent.html" target="_blank" rel="noopener">ch.qos.logback.classic.spi.ILoggingEvent</a> 类型的日志事件。我们将在这个部分说明这个事实。</p>
+<h2 id="定制-Layout"><a href="#定制-Layout" class="headerlink" title="定制 Layout"></a>定制 Layout</h2><p>让我们为 logback-classic  模块实现一个简单但是实用的功能，打印应用启动所耗费的时间，日志事件的级别，被综括号包裹的调用者线程，logger 名，破折号后面跟日志信息，以及新起一行。</p>
+<p>类似下面的输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10489</span> DEBUG [main] com.marsupial.Pouch - Hello world.</span><br></pre></td></tr></table></figure>
+
+<p>下面是一种可能的实现：</p>
+<p><em>Example: MySampleLayout.java</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.layouts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.spi.ILoggingEvent;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.LayoutBase;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySampleLayout</span> <span class="keyword">extends</span> <span class="title">LayoutBase</span>&lt;<span class="title">ILoggingEvent</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">doLayout</span><span class="params">(ILoggingEvent event)</span> </span>&#123;</span><br><span class="line">    StringBuffer sbuf = <span class="keyword">new</span> StringBuffer(<span class="number">128</span>);</span><br><span class="line">    sbuf.append(event.getTimeStamp() - event.getLoggingContextVO.getBirthTime());</span><br><span class="line">    sbuf.append(<span class="string">" "</span>);</span><br><span class="line">    sbuf.append(event.getLevel());</span><br><span class="line">    sbuf.append(<span class="string">" ["</span>);</span><br><span class="line">    sbuf.append(event.getThreadName());</span><br><span class="line">    sbuf.append(<span class="string">"] "</span>);</span><br><span class="line">    sbuf.append(event.getLoggerName();</span><br><span class="line">    sbuf.append(<span class="string">" - "</span>);</span><br><span class="line">    sbuf.append(event.getFormattedMessage());</span><br><span class="line">    sbuf.append(CoreConstants.LINE_SEP);</span><br><span class="line">    <span class="keyword">return</span> sbuf.toString();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>MySampleLayout</code> 继承自 <a href="https://logback.qos.ch/xref/ch/qos/logback/core/LayoutBase.html" target="_blank" rel="noopener"><code>LayoutBase</code></a>。这个类管理所有 layout 实例的状态信息，例如：layout 是否启动或者停止，头部，尾部以及内容类型数据。它让开发者通过自己 <code>Layout</code> 集中在日志具体的格式化上。<code>LayoutBase</code> 类是通用的。在它的类声明上，<code>MySampleLayout</code> 继承 <code>LayoutBase&lt;ILoggingEvent&gt;</code>。</p>
+<p>在上面这个例子中，<code>doLayout</code> 方法忽略了日志事件中任何可能的异常。在实际应用中，你可能需要打印异常信息。</p>
+<h3 id="配置自定义的-layout"><a href="#配置自定义的-layout" class="headerlink" title="配置自定义的 layout"></a>配置自定义的 layout</h3><p>配置自定义的 layout 跟其它的组件一样的配置。根据之前提到的，<code>FileAppender</code> 及其子类期望一个 encoder。为了去满足这个需求，我们将一个包裹了我们自己定义的 <code>MySampleLayout</code> 的 <code>LayoutWrappingEncoder</code> 的实例传递给 <code>FileAppender</code>。下面是配置示例：</p>
+<p><em>Example: sampleLayoutConfig.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.encoder.LayoutWrappingEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">"chapters.layouts.MySampleLayout"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://logback.qos.ch/xref/chapters/layouts/SampleLogging.html" target="_blank" rel="noopener">chapters.layouts.SampleLogging</a> 这个简单的应用通过第一个参数接收配置文件，然后打印了一个 debug 信息，接着打印了 error 信息。</p>
+<p>在 <em>logback-examples</em> 文件夹下通过以下命令来运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java chapters.layouts.SampleLogging src/main/java/chapters/layouts/sampleLayoutConfig.xml</span><br></pre></td></tr></table></figure>
+
+<p>将会输出：</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">0 </span>DEBUG [main] chapters.layouts.SampleLogging - Everything<span class="comment">'s going well</span></span><br><span class="line"><span class="symbol">0 </span><span class="keyword">ERROR</span> [main] chapters.layouts.SampleLogging - maybe <span class="keyword">not</span> quite...</span><br></pre></td></tr></table></figure>
+
+<p>这种足够简单。读者应该会发现，在 <a href="https://logback.qos.ch/xref/chapters/layouts/MySampleLayout2.html" target="_blank" rel="noopener">MySampleLayout2.java</a> 中，我们自定义的 layout 做了一点点的修改。正如本手册一直提到的，为 layout 或者其它 logback 的组件添加一个属性，跟为这个属性添加一个 set 方法一样简单。</p>
+<p><a href="https://logback.qos.ch/xref/chapters/layouts/MySampleLayout2.html" target="_blank" rel="noopener">MySampleLayout2</a> 类包含了两个属性。第一个是可以将一个前缀添加到输出的日志中。第二个属性可以用来选择是否展示发送日志请求的线程名。</p>
+<p>下面是 <a href="https://logback.qos.ch/xref/chapters/layouts/MySampleLayout2.html" target="_blank" rel="noopener">MySampleLayout2</a> 类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.layouts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.spi.ILoggingEvent;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.LayoutBase;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySampleLayout2</span> <span class="keyword">extends</span> <span class="title">LayoutBase</span>&lt;<span class="title">ILoggingEvent</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">  String prefix = <span class="keyword">null</span>;</span><br><span class="line">  <span class="keyword">boolean</span> printThreadName = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPrefix</span><span class="params">(String prefix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.prefix = prefix;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPrintThreadName</span><span class="params">(<span class="keyword">boolean</span> printThreadName)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.printThreadName = printThreadName;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">doLayout</span><span class="params">(ILoggingEvent event)</span> </span>&#123;</span><br><span class="line">    StringBuffer sbuf = <span class="keyword">new</span> StringBuffer(<span class="number">128</span>);</span><br><span class="line">    <span class="keyword">if</span> (prefix != <span class="keyword">null</span>) &#123;</span><br><span class="line">      sbuf.append(prefix + <span class="string">": "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    sbuf.append(event.getTimeStamp() - event.getLoggerContextVO().getBirthTime());</span><br><span class="line">    sbuf.append(<span class="string">" "</span>);</span><br><span class="line">    sbuf.append(event.getLevel());</span><br><span class="line">    <span class="keyword">if</span> (printThreadName) &#123;</span><br><span class="line">      sbuf.append(<span class="string">" ["</span>);</span><br><span class="line">      sbuf.append(event.getThreadName());</span><br><span class="line">      sbuf.append(<span class="string">"] "</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      sbuf.append(<span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    sbuf.append(event.getLoggerName());</span><br><span class="line">    sbuf.append(<span class="string">" - "</span>);</span><br><span class="line">    sbuf.append(event.getFormattedMessage());</span><br><span class="line">    sbuf.append(LINE_SEP);</span><br><span class="line">    <span class="keyword">return</span> sbuf.toString();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加相应的 set 方法就可以开启属性的配置。<code>PrintThreadName</code> 属性是 <code>boolean</code> 而不是 <code>String</code> 类型。关于配置 logback 的详细信息请参见 <a href="https://v-vincen.github.io/2020/12/31/Logback-3-Logback%20%E7%9A%84%E9%85%8D%E7%BD%AE/" target="_blank" rel="noopener">[Logback] 3 Logback 的配置</a>。<a href="http://logback.qos.ch/manual/onJoran.html" target="_blank" rel="noopener">Chapter 11: Joran</a> 将会提供更详细的内容。下面是关于 <code>MySampleLayout2</code> 的相关配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.encoder.LayoutWrappingEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">"chapters.layouts.MySampleLayout2"</span>&gt;</span> </span><br><span class="line">                <span class="tag">&lt;<span class="name">prefix</span>&gt;</span>MyPrefix<span class="tag">&lt;/<span class="name">prefix</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">printThreadName</span>&gt;</span>false<span class="tag">&lt;/<span class="name">printThreadName</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="PatternLayout"><a href="#PatternLayout" class="headerlink" title="PatternLayout"></a>PatternLayout</h2><p>logback 配备了一个更加灵活的 layout 叫做 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/PatternLayout.html" target="_blank" rel="noopener">PatternLayout</a>。跟所有的 layout 一样，<code>PatternLayout</code> 接收一个日志事件并返回一个字符串。但是，可以通过调整 <code>PatternLayout</code> 的转换模式来进行定制。</p>
+<p><code>PatternLayout</code> 中的转换模式与 C 语言中 <code>printf()</code> 方法中的转换模式密切相关。转换模式由字面量与格式控制表达式也叫<em>转换说明符</em>组成。你可以在转换模式中自由的插入字面量。每一个转换说明符由一个百分号开始 ‘%’，后面跟随可选的<em>格式修改器</em>，以及用综括号括起来的转换字符与可选的参数。转换字符需要转换的字段。如：logger 的名字，日志级别，日期以及线程名。格式修改器控制字段的宽度，间距以及左右对齐。</p>
+<p>正如我们已经在其它地方提到过的，<code>FileAppender</code> 及其子类需要一个 encoder。因为，当将 <code>FileAppender</code> 及其子类与 <code>PatternLayout</code> 结合使用时，<code>PatternLayout</code> 必须用 encoder 包裹起来。鉴于 <code>FileAppender/PatternLayout</code> 结合使用很常见，因此 logback 单独设计了一个名叫 <code>PatternLayoutEncoder</code> 的 encoder，包裹了一个 <code>PatternLayout</code>，因此它可以被当作一个 encoder。下面是通过代码配置 <code>ConsoleAppender</code> 与 <code>PatternLayoutEncoder</code> 使用的例子：</p>
+<p><em>Example: <a href="https://logback.qos.ch/xref/chapters/layouts/PatternSample.html" target="_blank" rel="noopener">PatternSample.java</a></em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.layouts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.Logger;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.encoder.PatternLayoutEncoder;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.spi.ILoggingEvent;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.ConsoleAppender;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PatternSample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    Logger rootLogger = (Logger)LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);</span><br><span class="line">    LoggerContext loggerContext = rootLogger.getLoggerContext();</span><br><span class="line">    <span class="comment">// we are not interested in auto-configuration</span></span><br><span class="line">    loggerContext.reset();</span><br><span class="line"></span><br><span class="line">    PatternLayoutEncoder encoder = <span class="keyword">new</span> PatternLayoutEncoder();</span><br><span class="line">    encoder.setContext(loggerContext);</span><br><span class="line">    encoder.setPattern(<span class="string">"%-5level [%thread]: %message%n"</span>);</span><br><span class="line">    encoder.start();</span><br><span class="line"></span><br><span class="line">    ConsoleAppender&lt;ILoggingEvent&gt; appender = <span class="keyword">new</span> ConsoleAppender&lt;ILoggingEvent&gt;();</span><br><span class="line">    appender.setContext(loggerContext);</span><br><span class="line">    appender.setEncoder(encoder); </span><br><span class="line">    appender.start();</span><br><span class="line"></span><br><span class="line">    rootLogger.addAppender(appender);</span><br><span class="line"></span><br><span class="line">    rootLogger.debug(<span class="string">"Message 1"</span>); </span><br><span class="line">    rootLogger.warn(<span class="string">"Message 2"</span>);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在上面这个例子中，转换模式被设置为 “<strong>%-5level [%thread]: %message%n</strong> “，关于 logback 中简短的转换字符将会很快给出。运行 <code>PatternSample</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java java chapters.layouts.PatternSample</span><br></pre></td></tr></table></figure>
+
+<p>将会输出如下信息：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DEBUG [main]: Message <span class="number">1</span> </span><br><span class="line">WARN  [main]: Message <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>在转换模式 <strong>“%-5level [%thread]: %message%n”</strong> 中，字面量与转换说明符之间没有明显的分隔符。当对转换模式进行解析的时候，<code>PatternLayout</code> 有能力对字面量 (空格符，方括号，冒号) 和 转换说明符进行区分。在上面的例子中，转换说明符 %-5level 表示日志事件的级别的字符应该向左对齐，保持五个字符的宽度。具体的转换格式将会在下面介绍。</p>
+<p>在 <code>PatternLayout</code> 中，括号用于对转换模式进行分组。**’(‘ 与 ‘)’ 有特殊的含义，因此如果想用作字面量，需要进行特殊的转义**。圆括号的特殊含义将在 <a href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9C%86%E6%8B%AC%E5%8F%B7">下面</a> 进行详细的介绍。</p>
+<p>之前提到过，特定的转换模式可以通过花括号指定可选的参数。一个简单的可选转换模式可以是 %logger{10}。在这里 “logger” 就是转换字符，10 就是可选参数。可选参将在 <a href="#%E8%BD%AC%E6%8D%A2%E5%AD%97%E7%AC%A6%E7%9A%84%E9%80%89%E9%A1%B9">下面</a> 详细介绍。</p>
+<p>转换字符与它们的可选参数在下面的表格中进行详细叙述。当多个转换字符在同一个单元格中被列出来，它们被当作别名来考虑。</p>
+<table>
+<thead>
+<tr>
+<th>转换字符</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>c</strong>{<em>length</em>}<br /><strong>lo</strong>{<em>length</em>}<br /><strong>logger</strong>{<em>length</em>}</td>
+<td>输出 logger 的名字作为日志事件的来源。转换字符接收一个作为它的第一个也是为一个参数。转换器的简写算法将会缩短 logger 的名字，但是通过不会丢失重要的信息。设置 length 的值为 0 是一个例外。它将会导致转换字符返回 logger 名字中最右边的点右边的字符。下面的表格提供了一个示例：<br /><table><tr><th>转换说明符</th><th>logger的名字</th><th>结果</th></tr><tr><td>%logger</td><td>mainPackage.sub.sample.Bar</td><td>mainPackage.sub.sample.Bar</td></tr><tr><td>%logger{0}</td><td>mainPackage.sub.sample.Bar</td><td>Bar</td></tr><tr><td>%logger{5}</td><td>mainPackage.sub.sample.Bar</td><td>m.s.s.Bar</td></tr><tr><td>%logger{10}</td><td>mainPackage.sub.sample.Bar</td><td>m.s.s.Bar</td></tr><tr><td>%logger{15}</td><td>mainPackage.sub.sample.Bar</td><td>m.s.sample.Bar</td></tr><tr><td>%logger{16}</td><td>mainPackage.sub.sample.Bar</td><td>m.sub.sample.Bar</td></tr><tr><td>%logger{26}</td><td>mainPackage.sub.sample.Bar</td><td>mainPackage.sub.sample.Bar</td></tr></table>logger 名字最右边的部分永远不会被简写，即使它的长度比 <em>length</em> 的值要大。其它的部分可能会被缩短为一个字符，但是永不会被移除。<br /></td>
+</tr>
+<tr>
+<td><strong>C</strong>{<em>length</em>}  <br /><strong>class</strong>{<em>length</em>}</td>
+<td>输出发出日志请求的类的全限定名称。<br />跟 <em>%logger%</em> 转换符一样，它也可以接收一个整型的可选参数去缩短类名。0 表示特殊含义，在打印类名时将不会输出包的前缀名。默认表示打印类的全限定名。<br />生成调用者类的信息并不是特别快。因此，应该避免使用，除非执行速度不是问题。</td>
+</tr>
+<tr>
+<td><strong>contextName</strong><br /><strong>cn</strong></td>
+<td>输出日志事件附加到的 logger 上下文的名字。</td>
+</tr>
+<tr>
+<td><strong>d</strong>{<em>pattern</em>}  <strong>date</strong>{<em>pattern</em>}  <strong>d</strong>{<em>pattern</em>, <em>timezone</em>}  <strong>date</strong>{<em>pattern</em>, <em>timezone</em>}</td>
+<td>用于输出日志事件的日期。日期转换符允许接收一个字符串作为参数。字符串的语法与 <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html" target="_blank" rel="noopener">SimpleDateFormat</a> 中的格式完全兼容。<br />你可以指定 “ISO8601” 来表示将日期格式为 ISO8601 类型。如果没有指定日期格式，那么 %date 转换字符默认为 <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank" rel="noopener">ISO860 类型</a>。<br />这里有一个例子。它假设当前时间为 2006.10.20 星期五，作者刚刚吃完饭准备写这篇文档。<br /><table><tr><th>转换模式</th><th>结果</th></tr><tr><td>%d</td><td>2006-10-20 14:06:49,812</td></tr><tr><td>%date</td><td>2006-10-20 14:06:49,812</td></tr><tr><td>%date{ISO8601}</td><td>2006-10-20 14:06:49,812</td></tr><tr><td>%date{HH:mm:ss.SSS}</td><td>14:06:49.812</td></tr><tr><td>%date{dd MMM yyyy;HH:mm:ss.SSS}</td><td>20 oct. 2006;14:06:49.812</td></tr></table><br />第二个参数用于指定时区。例如， ‘%date{HH:mm:ss.SSS, Australia/Perth}’ 将会打印世界上最孤立的城市，澳大利亚佩斯所在时区的日期。如果没有指定时区参数，则默认使用 Java 平台所在主机的时区。如果指定的时区不能识别或者拼写错误，则 <a href="http://docs.oracle.com/javase/6/docs/api/java/util/TimeZone.html#getTimeZone(java.lang.String)" target="_blank" rel="noopener">TimeZone.getTimeZone(String)</a> 方法会指定时区为 GMT。<br /><code>常见错误：</code> 对于 <code>HH:mm:ss,SSS</code> 模式，逗号会被解析为分隔符，所以最终会被解析为 <code>HH:mm:ss</code>，<code>SSS</code> 会被当作时区。如果你想在日期模式中使用逗号，那么你可以这样使用，%date{<strong>“<strong>HH:mm:ss,SSS</strong>“</strong>}  用双引号将日期模式包裹起来。</td>
+</tr>
+<tr>
+<td><strong>F / file</strong></td>
+<td>输出发出日志请求的 Java 源文件名。<br />由于生成文件的信息不是特别快，因此，应该避免使用，除非速度不是问题。</td>
+</tr>
+<tr>
+<td><strong>caller{depth}</strong><br /><strong>caller{depthStart..depthEnd}</strong><br /><strong>caller{depth, evaluator-1, … evaluator-n}</strong><br /><strong>caller{depthStart..depthEnd, evaluator-1, … evaluator-n}</strong></td>
+<td>输出生成日志的调用者所在的位置信息。<br />位置信息依赖 JVM 的实现，但是通常由调用方法的全限定名以及调用者的来源组成。以及由圆括号括起来的文件名与行号。<br /><em>caller</em> 转换符还可以接收一个整形的参数，用来配置展示信息的深度。<br />例如，**%caller{2}** 会展示如下的信息：<br /><pre>0    [main] DEBUG - logging statement<br />Caller+0   at mainPackage.sub.sample.Bar.sampleMethodName(Bar.java:22)<br />Caller+1   at mainPackage.sub.sample.Bar.createLoggingRequest(Bar.java:17)</pre> <strong>%caller{3}</strong>  会展示如下信息：<br /><pre><span>16   [main] DEBUG - logging statement <br />Caller+0   at mainPackage.sub.sample.Bar.sampleMethodName(Bar.java:22) <br />Caller+1   at mainPackage.sub.sample.Bar.createLoggingRequest(Bar.java:17) <br />Caller+2   at mainPackage.ConfigTester.main(ConfigTester.java:38) </span></pre><br /><em>caller</em> 转换符还可以接收一个范围用来展示深度在这个范围内的信息。<br />例如，**%caller{1..2}** 会展示如下信息：<br /><pre>[main] DEBUG - logging statement <br />Caller+0   at mainPackage.sub.sample.Bar.createLoggingRequest(Bar.java:17)</pre><br />转换字符还可以接收一个 evaluator，在计算调用者数据之前通过指定的标准对日志事件进行测验。例如，**%caller{3, CALLER_DISPLAY_EVAL}** 会在 <em>CALLER_DISPLAY_EVAL</em> 返回一个肯定的答案，才会显示三行堆栈信息。<br />将在下面详细叙述 evaluator。</td>
+</tr>
+<tr>
+<td><strong>L / line</strong></td>
+<td>输出发出日志请求所在的行号。<br />生成行号不是特别快。因此，不建议使用，除非生成速度不是问题。</td>
+</tr>
+<tr>
+<td><strong>m / msg / message</strong></td>
+<td>输出与日志事件相关联的，由应用程序提供的日志信息。</td>
+</tr>
+<tr>
+<td><strong>M / method</strong></td>
+<td>输出发出日志请求的方法名。<br />生成方法名不是特别快，因此，应该避免使用，除非生成速度不是问题。</td>
+</tr>
+<tr>
+<td><strong>n</strong></td>
+<td>输出平台所依赖的行分割字符。<br />转换字符提供了像 “\n” 或 “\r\n” 一样的转换效果。因此指定行分隔符它是首选的指定方式。</td>
+</tr>
+<tr>
+<td><strong>p / le / level</strong></td>
+<td>输出日志事件的级别。</td>
+</tr>
+<tr>
+<td><strong>r / relative</strong></td>
+<td>输出应用程序启动到创建日志事件所花费的毫秒数</td>
+</tr>
+<tr>
+<td><strong>t / thread</strong></td>
+<td>输出生成日志事件的线程名。</td>
+</tr>
+<tr>
+<td><strong>ex</strong>{<em>depth</em>}  <strong>exception</strong>{<em>depth</em>}  <strong>throwable</strong>{<em>depth</em>}   <strong>ex</strong>{depth, evaluator-1, …, evaluator-n}  <strong>exception</strong>{depth, evaluator-1, …, evaluator-n}  <strong>throwable</strong>{depth, evaluator-1, …, evaluator-n}</td>
+<td>输出日志事件相关的堆栈信息，默认情况下会输出全部的堆栈信息。<br /> <em>throwable</em> 转换词可以接收如下的参数：<br /><ul><li><em>short</em>：输出堆栈信息的第一行</li><li><em>full</em>：输出全部的堆栈信息</li><li>任意整数：输出指定行数的堆栈信息</li></ul>下面是一些示例：<br /><table><thead><th>转换模式</th><th>结果</th></thead><tbody><tr><td>%ex</td><td><pre>mainPackage.foo.bar.TestException: Houston we have a problem<br />  at mainPackage.foo.bar.TestThrower.fire(TestThrower.java:22)<br />  at mainPackage.foo.bar.TestThrower.readyToLaunch(TestThrower.java:17)<br />  at mainPackage.ExceptionLauncher.main(ExceptionLauncher.java:38)</pre></td></tr><tr><td>%ex{short}</td><td><pre><br />mainPackage.foo.bar.TestException: Houston we have a problem<br />  at mainPackage.foo.bar.TestThrower.fire(TestThrower.java:22)</pre></td></tr><tr><td>%ex{full}</td><td><pre><br />mainPackage.foo.bar.TestException: Houston we have a problem<br />  at mainPackage.foo.bar.TestThrower.fire(TestThrower.java:22)<br />  at mainPackage.foo.bar.TestThrower.readyToLaunch(TestThrower.java:17)<br />  at mainPackage.ExceptionLauncher.main(ExceptionLauncher.java:38)</pre></td></tr><tr><td>%ex{2}</td><td><pre>mainPackage.foo.bar.TestException: Houston we have a problem<br />  at mainPackage.foo.bar.TestThrower.fire(TestThrower.java:22)<br />  at mainPackage.foo.bar.TestThrower.readyToLaunch(TestThrower.java:17)</pre></td></tr></tbody></table><br />在输出前，转换字符还可以使用给定的标准再次检验日志事件。例如，使用  %ex{full, EX_DISPLAY_EVAL} ，只有 EX_DISPLAY_EVAL 返回一个否定的答案，才会输出全部的堆栈信息。evaluator 在接下来的文档中将会进一步叙述。如果你没有指定 %throwable 或者其它跟 throwable 相关的转换字符，那么 <code>PatternLayout</code> 会在最后一个转换字符加上这个。因为堆栈信息非常的重要。如果你不想展示堆栈信息，那么可以使用 %nopex (作者原文为 $nopex) 可以替代 %throwable。详情见 %nopex。</td>
+</tr>
+<tr>
+<td><a  style="text-decoration:none" name="xThrowable" href="#xThrowable"><strong>xEx</strong>{<em>depth</em>}</a>  <br /><strong>xException</strong>{<em>depth</em>}  <strong>xThrowable</strong>{<em>depth</em>}   <br /><strong>xEx</strong>{depth, evaluator-1, …, evaluator-n}  <br /><strong>xException</strong>{depth, evaluator-1, …, evaluator-n} <br /><strong>xThrowable</strong>{depth, evaluator-1, …, evaluator-n}</td>
+<td>跟 %throwable 类似，只不过多了类的包信息。<br />在每个堆栈信息的末尾，多了包含 jar 文件的字符串，后面再加上具体的实现版本。这项创造性的技术是来自  <a href="http://macstrac.blogspot.com/2008/09/better-stack-traces-in-java-with-log4j.html" target="_blank" rel="noopener">James Strachan</a> 的建议。如果该信息不确定，那么类的包信息前面会有一个波浪号（~）。<br /> 下面是一个例子：<br /><pre>java.lang.NullPointerException<br />  at com.xyz.Wombat(Wombat.java:57) ~[wombat-1.3.jar:1.3]<br />  at  com.xyz.Wombat(Wombat.java:76) ~[wombat-1.3.jar:1.3]<br />  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.5.0_06]<br />  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39) ~[na:1.5.0_06]<br />  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) &#126;[na:1.5.0_06]<br />  at java.lang.reflect.Method.invoke(Method.java:585) &#126;[na:1.5.0_06]<br />  at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:59) [junit-4.4.jar:na]<br />  at org.junit.internal.runners.MethodRoadie.runTestMethod(MethodRoadie.java:98) [junit-4.4.jar:na]<br />  ...etc </pre>logback 努力的去确保类的包信息正确的展示，即使是在复杂的类加载层次中。但是，一个不能保证信息的绝对正确，那么在这些数据的前面将会多一个波浪符 (~)。因此，从理论上来说，打印的类的包信息跟真实的类的包信息是有区别的。在上面的例子中，类 Wombat 的包信息前面有一个波浪符，在实际的情况中，它真实包可能为  [wombat.jar:1.7]。<br />但是请注意潜在的性能损耗，计算 <a href="https://v-vincen.github.io/2020/12/31/Logback-3-Logback%20%E7%9A%84%E9%85%8D%E7%BD%AE/#%E5%9C%A8%E5%A0%86%E6%A0%88%E4%B8%AD%E5%B1%95%E7%A4%BA%E5%8C%85%E6%95%B0%E6%8D%AE" target="_blank" rel="noopener">包信息默认是禁止的</a>。当启用了计算包信息，那么 <code>PatternLayout</code> 将会自动认为在字符串模式的末尾 %xThrowable 替代了 %throwable。<br />根据用户的 <a href="https://jira.qos.ch/browse/LOGBACK-324" target="_blank" rel="noopener">反馈</a>，Netbeans 会阻止包信息的打印。</td>
+</tr>
+<tr>
+<td><strong>nopex</strong><br /><strong>nopexception</strong></td>
+<td>这个转换字符不会输出任何数据，因此，它可以用来有效忽略异常信息。<br />%nopex 转换字符允许用户重写 <code>PatternLayout</code> 内部的安全机制，该机制将会在没有指定其它处理异常的转换字符时，默认添加 %xThrowable。</td>
+</tr>
+<tr>
+<td><strong>marker</strong></td>
+<td>输出与日志请求相关的标签。<br />一旦标签包含子标签，那么转换器将会根据下面的格式展示父标签与子标签。<br /><em>parentName [child1, child2]</em></td>
+</tr>
+<tr>
+<td><strong>property{key}</strong></td>
+<td>输出属性 <em>key</em> 所对应的值。相关定义参见 <a href="https://v-vincen.github.io/2020/12/31/Logback-3-Logback%20%E7%9A%84%E9%85%8D%E7%BD%AE/#%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2" target="_blank" rel="noopener">定义变量</a> 以及 <a href="https://v-vincen.github.io/2020/12/31/Logback-3-Logback%20%E7%9A%84%E9%85%8D%E7%BD%AE/#%E4%BD%9C%E7%94%A8%E5%9F%9F" target="_blank" rel="noopener">作用域</a>。如果 key 在 logger context 中没有找到，那么将会去系统属性中找。<br /><em>key</em> 没有默认值，如果缺失，则会展示 “ Property_HAS_NO_KEY” 的错误信息。</td>
+</tr>
+<tr>
+<td><a  style="text-decoration:none" name="replace" href="#replace"><strong>replace(p){r, t}</strong></a></td>
+<td>在子模式 ‘p’ 产生的字符中，将所有出现正则表达式 ‘r’ 的地方替换为 ‘t’。例如，”%replace(%msg){‘\s’, ‘’}” 将会移除事件消息中所有空格。<br />模式 ‘p’ 可以是任意复杂的甚至由多个转换字符组成。例如，”%replace(%logger %msg){‘.‘, ‘/‘}” 将会替换 logger 以及消息中所有的点为斜杆。</td>
+</tr>
+<tr>
+<td><strong>rEx</strong>{<em>depth</em>}  <strong>rootException</strong>{<em>depth</em>}   <strong>rEx</strong>{depth, evaluator-1, …, evaluator-n}  <strong>rootException</strong>{depth, evaluator-1, …, evaluator-n}</td>
+<td>输出与日志事件相关的堆栈信息，根异常将会首先输出，而是标准的”根异常最后输出”。下面是一个输出例子：<br /><pre>java.lang.NullPointerException<br />  at com.xyz.Wombat(Wombat.java:57) ~[wombat-1.3.jar:1.3]<br />  at com.xyz.Wombat(Wombat.java:76) ~[wombat-1.3.jar:1.3]<br />Wrapped by: org.springframework.BeanCreationException: Error creating bean with name 'wombat': <br />  at org.springframework.AbstractBeanFactory.getBean(AbstractBeanFactory.java:248) [spring-2.0.jar:2.0]<br />  at org.springframework.AbstractBeanFactory.getBean(AbstractBeanFactory.java:170) [spring-2.0.jar:2.0]<br />  at org.apache.catalina.StandardContext.listenerStart(StandardContext.java:3934) [tomcat-6.0.26.jar:6.0.26]</pre>%rootException 跟 %xException 类似，也允许一些可选的参数，包括深度以及 evaluator。它也会输出包信息。简单来说，%rootException 跟 %xException 非常的类似，仅仅是异常输出的顺序完全相反。<br />  %rootException 的作者 Tomasz Nurkiewicz 在他的博客说明了他所作的贡献 <a href="http://nurkiewicz.blogspot.com/2011/09/logging-exceptions-root-cause-first.html" target="_blank" rel="noopener">“Logging exceptions root cause first”</a>。</td>
+</tr>
+</tbody></table>
+<p><strong>% 有特殊的含义</strong></p>
+<p>在给定的转换模式上下文中，% 有特殊的含义。如果作为字面量，需要进行转义。例如，”%d %p % %m%n”。</p>
+<p><strong>转换字符对字面量的限制</strong></p>
+<p>在大多数的情况下，字面量包括空格或者其它的分隔符，所以它们不会与转换字符混淆。例如，”%level [%thread] - %message%n” 包含字面量字符 “ [“ 与 “] - “。但是，如果一个转换字符后面紧跟着一个字面量，那么 logback 的模式解析器将会错误的认为这个字面量也是转换字符的一部分。例如，”%date**%nHello**” 将会被解析成两个转换字符 %date 与 %nHello，但是 %nHello 不是一个转换字符，所以 logback 将会输出 %PARSER_ERROR[nHello]。如果你想要区分 %n 跟 Hello，可以通过给 %n 传递一个空参数。例如，”%date**%n{}**Hello” 将会被解析为 %date %n 再紧跟着一个字符串 “Hello”。</p>
+<h3 id="格式修改器"><a href="#格式修改器" class="headerlink" title="格式修改器"></a>格式修改器</h3><p>默认情况下，相关信息按照原样输出。但是，在格式修改器的帮助下，可以对每个数据字段进行对齐，以及更改最大最小宽度。</p>
+<p>可选的格式修改器放在百分号跟转换字符之间。</p>
+<p>第一个可选的格式修改器是<em>左对齐标志</em>，也就是减号 (-) 字符。接下来的是<em>最小字段宽度修改器</em>，它是一个十进制常量，表示输出至少多少个字符。如果字段包含很少的数据，它会选择填充左边或者右边，直到满足最小宽度。默认是填充左边 (右对齐)，但是你可以通过左对齐标志来对右边进行填充。填充字符为空格。如果字段的数据大于最小字段的宽度，会自动扩容去容纳所有的数据。字段的数据永远不会被截断。</p>
+<p>这个行为可以通过使用<em>最大字段宽度修改器</em>来改变，它通过一个点后面跟着一个十进制常量来指定。如果字段的数据长度大于最大字段的宽度，那么会从数据字段的开头移除多余的字符。举个例子，如果最大字段的宽度是 8，数据长度是十个字符的长度，那么开头的两个字符将会被丢弃。这个行为跟 C 语言中 printf 函数从后面开始截断的行为相违背。</p>
+<p>如果想从后面开始截断，可以在点后面增加一个减号。如果是这样的话，最大字段宽度是 8，数据长度是十个字符的长度，那么最后两个字符将会被丢弃。</p>
+<p>下面是各种格式修改器的例子：</p>
+<table>
+<thead>
+<tr>
+<th>格式修改器</th>
+<th>左对齐</th>
+<th>最小宽度</th>
+<th>最大宽度</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%20logger</td>
+<td>false</td>
+<td>20</td>
+<td>none</td>
+<td>如果 logger 的名字小于 20 个字符的长度，那么会在左边填充空格</td>
+</tr>
+<tr>
+<td>%-20logger</td>
+<td>true</td>
+<td>20</td>
+<td>none</td>
+<td>如果 logger 的名字小于 20 个字符的长度，那么会在右边填充空格</td>
+</tr>
+<tr>
+<td>%.30logger</td>
+<td>NA</td>
+<td>none</td>
+<td>30</td>
+<td>如果 logger 的名字大于 30 个字符的长度，那么从前面开始截断</td>
+</tr>
+<tr>
+<td>%20.30logger</td>
+<td>false</td>
+<td>20</td>
+<td>30</td>
+<td>如果 logger 的名字大于 20 个字符的长度，那么会从左边填充空格。但是如果 logger 的名字大于 30 字符，将会从前面开始截断</td>
+</tr>
+<tr>
+<td>%-20.30logger</td>
+<td>true</td>
+<td>20</td>
+<td>30</td>
+<td>如果 logger 的名字小于 20 个字符的长度，那么从右边开始填充空格。但是如果 logger 的名字大于 30 个字符，将会从前面开始截断</td>
+</tr>
+<tr>
+<td>%.-30logger</td>
+<td>NA</td>
+<td>none</td>
+<td>30</td>
+<td>如果 logger 的名字大于 30 个字符的长度，那么从后面开始截断</td>
+</tr>
+</tbody></table>
+<p>下面的表格列出了格式修改器截断的例子。但是请注意综括号 “[]” 不是输出结果的一部分，它只是用来区分输出的长度。</p>
+<table>
+<thead>
+<tr>
+<th>格式修改器</th>
+<th>logger 的名字</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[%20.20logger]</td>
+<td>main.Name</td>
+<td>[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.Name]</td>
+</tr>
+<tr>
+<td>[%-20.20logger]</td>
+<td>main.Name</td>
+<td>[main.Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+</tr>
+<tr>
+<td>[%10.10logger]</td>
+<td>main.foo.foo.bar.Name</td>
+<td>[o.bar.Name]</td>
+</tr>
+<tr>
+<td>[%10.-10logger]</td>
+<td>main.foo.foo.bar.Name</td>
+<td>[main.foo.f]</td>
+</tr>
+</tbody></table>
+<h4 id="只输出日志等级的一个字符"><a href="#只输出日志等级的一个字符" class="headerlink" title="只输出日志等级的一个字符"></a>只输出日志等级的一个字符</h4><p>除了可以输出 TRACE, DEBUG, WARN, INFO 或者 ERROR 来表示日志等级之外，还是输出T, D, W, I 与 E 来进行表示。你可以 <a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BD%AC%E6%8D%A2%E8%AF%B4%E6%98%8E%E7%AC%A6">自定义转换器</a> 或者利用刚才讨论的格式修改器来缩短日志级别为一个字符。这个转换说明符可能为 “%.-1level”。</p>
+<h3 id="转换字符的选项"><a href="#转换字符的选项" class="headerlink" title="转换字符的选项"></a>转换字符的选项</h3><p>一个转换字符后面可以跟一个选项。它们通过综括号来声明。我们之前已经看到了一些可能的选项。例如之前的 MDC 转换说明符 *%mdc{someKey}*。</p>
+<p>一个转换说明符可能有多个可选项。一个转换说明符可以充分利用我们即将介绍到的 evaluator，可以添加多个 evaluator 的名字到可选列表。如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%-4relative [%thread] %-5level - %msg%n \</span><br><span class="line">  %caller&#123;2, DISP_CALLER_EVAL, OTHER_EVAL_NAME, THIRD_EVAL_NAME&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果这些选项中包含了一些特殊字符，例如花括号，空格，逗号。你可以使用单引号或者双引号来包裹它们。例如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%-5level - %replace(%msg)&#123;'\d&#123;14,16&#125;', 'XXXX'&#125;%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>我们传递 <code>\d{16}</code> 与 <code>XXXX</code>  给 <code>replace</code> 转换字符。它将消息中 14，15 或者 16 位的数字替换为 XXXX，用来混淆信用卡号码。在正则表达式中，”\d” 表示一个数字的简写。”{14,16}“ 会被解析成 “{14,16}”，也就是说前一个项将会被重复至少 14 次，至多 16 次。</p>
+<h3 id="特殊的圆括号"><a href="#特殊的圆括号" class="headerlink" title="特殊的圆括号"></a>特殊的圆括号</h3><p>在 logback 里，模式字符串中的圆括号被看作为分组标记。因此，它能够对子模式进行分组，并且直接对子模式进行格式化。在 0.9.27 版本，logback 开始支持综合转换字符，例如 <em>%replace</em> 可以对子模式进行转换。</p>
+<p>例如一下模式：</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">%-30</span>(<span class="symbol">%d</span>&#123;HH:mm:ss.SSS&#125; [<span class="symbol">%thread</span>]) <span class="symbol">%-5level</span> <span class="symbol">%logger</span>&#123;<span class="number">32</span>&#125; - <span class="symbol">%msg</span><span class="symbol">%n</span></span><br></pre></td></tr></table></figure>
+
+<p>将会对子模式 “%d{HH:mm:ss.SSS} [%thread]” 进行分组输出，为了在少于 30 个字符时进行右填充。</p>
+<p>如果没有进行分组将会输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main] DEBUG c.q.logback.demo.ContextListener - Classload hashcode is <span class="number">13995234</span></span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main] DEBUG c.q.logback.demo.ContextListener - Initializing <span class="keyword">for</span> ServletContext</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main] DEBUG c.q.logback.demo.ContextListener - Trying platform Mbean server</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [pool-<span class="number">1</span>-thread-<span class="number">1</span>] INFO  ch.qos.logback.demo.LoggingTask - Howdydy-diddly-ho - <span class="number">0</span></span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">38</span> [btpool0-<span class="number">7</span>] INFO c.q.l.demo.lottery.LotteryAction - Number: <span class="number">50</span> was tried.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>] INFO c.q.l.d.prime.NumberCruncherImpl - Beginning to factor.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>] DEBUG c.q.l.d.prime.NumberCruncherImpl - Trying <span class="number">2</span> as a factor.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>] INFO c.q.l.d.prime.NumberCruncherImpl - Found factor <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>如果对 “%-30()” 进行分组将会输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main]            DEBUG c.q.logback.demo.ContextListener - Classload hashcode is <span class="number">13995234</span></span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main]            DEBUG c.q.logback.demo.ContextListener - Initializing <span class="keyword">for</span> ServletContext</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [main]            DEBUG c.q.logback.demo.ContextListener - Trying platform Mbean server</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">30</span> [pool-<span class="number">1</span>-thread-<span class="number">1</span>] INFO  ch.qos.logback.demo.LoggingTask - Howdydy-diddly-ho - <span class="number">0</span></span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">38</span> [btpool0-<span class="number">7</span>]       INFO  c.q.l.demo.lottery.LotteryAction - Number: <span class="number">50</span> was tried.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>]       INFO  c.q.l.d.prime.NumberCruncherImpl - Beginning to factor.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>]       DEBUG c.q.l.d.prime.NumberCruncherImpl - Trying <span class="number">2</span> as a factor.</span><br><span class="line"><span class="number">13</span>:<span class="number">09</span>:<span class="number">40</span> [btpool0-<span class="number">7</span>]       INFO  c.q.l.d.prime.NumberCruncherImpl - Found factor <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>后者的格式更加容易阅读。</p>
+<p>如果你想将圆括号当作字面量输出，那么你需要对每个圆括号用反斜杠进行转义。就像 <strong>(</strong>%d{HH:mm:ss.SSS} [%thread]<strong>)</strong> 一样。</p>
+<h3 id="着色"><a href="#着色" class="headerlink" title="着色"></a>着色</h3><p>如上所述的 <a href="#%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9C%86%E6%8B%AC%E5%8F%B7">圆括号</a> 分组，允许对子模式进行着色。在 1.0.5 版本，<code>PatternLayout</code> 可以识别 “%black”，”%red”，”%green”，”%yellow”，”%blue”，”%magenta”,”%cyan”, “%white”, “%gray”, “%boldRed”,”%boldGreen”, “%boldYellow”, “%boldBlue”, “%boldMagenta””%boldCyan”, “%boldWhite” 以及 “%highlight” 作为转换字符。这些转换字符都还可以包含一个子模式。任何被颜色转换字符包裹的子模式都会通过指定的颜色输出。</p>
+<p>下面是关于着色的配置文件。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 在 Windows 平台下，设置 withJansi = true 来开启 ANSI 颜色代码需要 Jansi 类库 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 需要在 classpath 引入 org.fusesource.jansi:jansi:1.8 包 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 在基于 Unix 操作系统，像 Linux 以及 Mac OS X 系统默认支持 ANSI 颜色代码 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">withJansi</span>&gt;</span>true<span class="tag">&lt;/<span class="name">withJansi</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>[%thread] %highlight(%-5level) %cyan(%logger&#123;15&#125;) - %msg %n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>下面是相关的输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[main] WARN  c.l.TrivialMain - a warning message <span class="number">0</span></span><br><span class="line">[main] DEBUG c.l.TrivialMain - hello world number1</span><br><span class="line">[main] DEBUG c.l.TrivialMain - hello world number2</span><br><span class="line">[main] INFO  c.l.TrivialMain - hello world number3</span><br><span class="line">[main] DEBUG c.l.TrivialMain - hello world number4</span><br><span class="line">[main] WARN  c.l.TrivialMain - a warning message <span class="number">5</span></span><br><span class="line">[main] ERROR c.l.TrivialMain - Finish off with fireworks</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  其实是有颜色的，但是 md 不支持直接对字体颜色进行操作，而我懒得去折腾 HTML。</p>
+</blockquote>
+<p>只需要几行代码就可以创建一个着色转换字符。在自定义转换说明符部分，我们将讨论怎样在配置文件中注册一个转换字符。</p>
+<h3 id="Evaluators"><a href="#Evaluators" class="headerlink" title="Evaluators"></a>Evaluators</h3><p>像之前提到的，当一个转换字符需要基于一个或者多个 <a href="https://logback.qos.ch/xref/ch/qos/logback/core/boolex/EventEvaluator.html" target="_blank" rel="noopener">EventEvaluator</a> 对象动态表现时，<code>EventEvaluator</code> 对象根据规则可以决定给定的日志事件是否匹配。</p>
+<p>让我们来回顾一下包含 <code>EventEvaluator</code> 的例子。下一个配置文件输出日志事件到控制台，显示日期，线程，日志级别，消息，以及调用者数据。获取日志事件调用者的信息成本比较高，只有当日志请求来源特定的 logger，或者消息包含特定的字符串时，我们才会这样做。换句话说，在调用者信息是多余的情况下，我们不应该去影响应用的性能。</p>
+<p>Evaluator 与 <em>评价表达式 (evaluation expressions)</em> 都会在 <a href="https://v-vincen.github.io/2020/12/31/Logback-7-Filters/" target="_blank" rel="noopener">[Logback] 7 Filters</a> 详细介绍。如果你想利用 evaluator 去做一些有意思的事情，你必须看一下对这个的详细介绍。下面的例子基于 <code>JaninoEventEvaluator</code>，所以需要 <a href="http://docs.codehaus.org/display/JANINO/Home" target="_blank" rel="noopener">Janino 类库</a>。查看 <a href="https://logback.qos.ch/setup.html#janino" target="_blank" rel="noopener">相关文档</a> 进行设置。</p>
+<p><em>Example: callerEvaluatorConfig.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">evaluator</span> <span class="attr">name</span>=<span class="string">"DISP_CALLER_EVAL"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">expression</span>&gt;</span>logger.contains("chapters.layouts") &amp;amp;&amp;amp; \</span><br><span class="line">      message.contains("who calls thee")<span class="tag">&lt;/<span class="name">expression</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">evaluator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%-4relative [%thread] %-5level - %msg%n%caller&#123;2, DISP_CALLER_EVAL&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的评价表达式用来匹配从名为 “chapters.layouts” logger 发出，并且消息中包含字符串 “who calls thee” 的日志事件。由于 XML 的编码规则，<code>&amp;</code> 符号需要被转义为 <code>&amp;amp;</code>。</p>
+<p>下面的类利用了配置文件中所提到的特性。</p>
+<p><em>Example: CallerEvaluatorExample.java</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.layouts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.joran.JoranConfigurator;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.joran.spi.JoranException;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CallerEvaluatorExample</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span>  </span>&#123;</span><br><span class="line">    Logger logger = LoggerFactory.getLogger(CallerEvaluatorExample<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      JoranConfigurator configurator = <span class="keyword">new</span> JoranConfigurator();</span><br><span class="line">      configurator.setContext(lc);</span><br><span class="line">      configurator.doConfigure(args[<span class="number">0</span>]);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (JoranException je) &#123;</span><br><span class="line">      <span class="comment">// StatusPrinter will handle this</span></span><br><span class="line">    &#125;</span><br><span class="line">    StatusPrinter.printInCaseOfErrorsOrWarnings(lc);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (i == <span class="number">3</span>) &#123;</span><br><span class="line">        logger.debug(<span class="string">"who calls thee?"</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        logger.debug(<span class="string">"I know me "</span> + i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的应用没有什么特别的地方。发出五条日志请求，第三条的的请求信息为 “who calls thee?”。</p>
+<p>通过命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java chapters.layouts.CallerEvaluatorExample src/main/java/chapters/layouts/callerEvaluatorConfig.xml</span><br></pre></td></tr></table></figure>
+
+<p>将会输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>    [main] DEBUG - I know me <span class="number">0</span> </span><br><span class="line"><span class="number">0</span>    [main] DEBUG - I know me <span class="number">1</span> </span><br><span class="line"><span class="number">0</span>    [main] DEBUG - I know me <span class="number">2</span> </span><br><span class="line"><span class="number">0</span>    [main] DEBUG - who calls thee? </span><br><span class="line">Caller+<span class="number">0</span>   at chapters.layouts.CallerEvaluatorExample.main(CallerEvaluatorExample.java:<span class="number">28</span>)</span><br><span class="line"><span class="number">0</span>    [main] DEBUG - I know me <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<p>当发出日志请求时，会评价相应的日志事件。仅仅只有第三个日志事件会匹配到评价规则，所以它的调用者信息会被展示出来。对于其它的日志事件，由于没有匹配到评价规则，调用者信息不会被打印。</p>
+<p>可以通过更改表达式来应对真实的应用场景。举个例子，你可以结合 logger 名与日志级别，日志级别在 <em>WARN</em> 以上的日志请求被当作一个敏感的部分，在金融业务模块中，我们可以这样做来获取调用者的信息。</p>
+<p><strong>重要：</strong> 当 <em>评价表达式</em> 为 <strong>true</strong> 时，通过 <em>caller</em> 转换字符，可以输出调用者的信息。</p>
+<p>考虑这么一种情况，当日志请求中包含异常信息时，它们的堆栈信息也会输出。但是，对于某些特定的异常信息，可能需要禁止输出堆栈信息。</p>
+<p>下面的代码创建了三条日志请求，每一条都包含一个异常信息。第二条的异常信息跟其它的不一样，它包含 “do not display this” 字符串，并且它的异常信息类型为 <code>chapters.layouts.TestException</code>。现在让我们来阻止第二条日志的打印。</p>
+<p><em>Example: ExceptionEvaluatorExample.java</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.layouts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.joran.JoranConfigurator;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.joran.spi.JoranException;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionEvaluatorExample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Logger logger = LoggerFactory.getLogger(ExceptionEvaluatorExample<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      JoranConfigurator configurator = <span class="keyword">new</span> JoranConfigurator();</span><br><span class="line">      configurator.setContext(lc);</span><br><span class="line">      lc.reset();</span><br><span class="line">      configurator.doConfigure(args[<span class="number">0</span>]);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (JoranException je) &#123;</span><br><span class="line">       <span class="comment">// StatusPrinter will handle this</span></span><br><span class="line">    &#125;</span><br><span class="line">    StatusPrinter.printInCaseOfErrorsOrWarnings(lc);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (i == <span class="number">1</span>) &#123;</span><br><span class="line">        logger.debug(<span class="string">"logging statement "</span> + i, <span class="keyword">new</span> TestException(</span><br><span class="line">            <span class="string">"do not display this"</span>));</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        logger.debug(<span class="string">"logging statement "</span> + i, <span class="keyword">new</span> Exception(<span class="string">"display"</span>));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面的配置文件通过评价表达式来匹配包含 <code>chapters.layouts.TextException</code> 类型的日志事件，也就是我们之前说要禁止的异常类型。</p>
+<p><em>Example: exceptionEvaluatorConfig.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- evaluator 需要在 appender 前面定义 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">evaluator</span> <span class="attr">name</span>=<span class="string">"DISPLAY_EX_EVAL"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">expression</span>&gt;</span>throwable != null &amp;amp;&amp;amp; throwable instanceof  \</span><br><span class="line">      chapters.layouts.TestException<span class="tag">&lt;/<span class="name">expression</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">evaluator</span>&gt;</span></span><br><span class="line">        </span><br><span class="line">  <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%msg%n%xEx&#123;full, DISPLAY_EX_EVAL&#125;<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  作者原文里面是 %ex，应该是笔误。</p>
+</blockquote>
+<p>通过这个配置文件，每当日志请求中包含一个 <em>chapters.layouts.TestException</em> 时，堆栈信息不会被输出。</p>
+<p>通过如下命令启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java chapters.layouts.ExceptionEvaluatorExample src/main/java/chapters/layouts/exceptionEvaluatorConfig.xml</span><br></pre></td></tr></table></figure>
+
+<p>将会输出：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">logging statement <span class="number">0</span></span><br><span class="line">java.lang.Exception: display</span><br><span class="line">	at chapters.layouts.ExceptionEvaluatorExample.main(ExceptionEvaluatorExample.java:<span class="number">16</span>)</span><br><span class="line">logging statement <span class="number">1</span></span><br><span class="line">logging statement <span class="number">2</span></span><br><span class="line">java.lang.Exception: display</span><br><span class="line">	at chapters.layouts.ExceptionEvaluatorExample.main(ExceptionEvaluatorExample.java:<span class="number">16</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  作者原文还输出了 jar 包的信息，是因为打包后通过命令行执行的 (I think 😂)。</p>
+</blockquote>
+<p>第二条日志没有堆栈信息，因为我们禁止 <code>TextException</code> 类型的堆栈信息。每条堆栈信息的最后用综括号包裹起来的是具体的 <a href="#xThrowable">包信息</a>。</p>
+<p><strong><code>注意：</code></strong> 当 <strong>%ex</strong> 转换说明符中的评价表达式为 <strong>false</strong> 时，堆栈信息才会输出。</p>
+<h3 id="自定义转换说明符"><a href="#自定义转换说明符" class="headerlink" title="自定义转换说明符"></a>自定义转换说明符</h3><p>我们可以在 <code>PatternLayout</code> 中使用内置的转换字符。我们也可以使用自己新建的转换字符。</p>
+<p>新建一个自定义的转换字符需要两步。</p>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>首先，你必须继承 <code>ClassicConverter</code> 类。<a href="https://logback.qos.ch/xref/ch/qos/logback/classic/pattern/ClassicConverter.html" target="_blank" rel="noopener"><code>ClassicConverter</code></a> 对象负责从 <code>ILoggingEvent</code> 实例中抽取信息并输出字符串。例如，%logger 对应的转换器 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/pattern/LoggerConverter.html" target="_blank" rel="noopener"><code>LoggerConverter</code></a>，可以从 <code>ILoggingEvent</code> 从抽取 logger 的名字，返回一个字符串。它可以缩写 logger 的名字。</p>
+<p>下面是一个自定义的转换器，返回从创建开始经过的时间，单位为纳秒。</p>
+<p><em>Example: MySampleConverter</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySampleConverter</span> <span class="keyword">extends</span> <span class="title">ClassicConverter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">long</span> start = System.nanoTime();</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">convert</span><span class="params">(ILoggingEvent event)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> nowInNanos = System.nanoTime();</span><br><span class="line">    <span class="keyword">return</span> Long.toString(nowInNanos-start);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个实现非常简单。<code>MySampleConverter</code> 继承了 <code>ClassicConverter</code> 并实现了 <code>convert</code> 方法，返回从创建开始经过多少纳秒。</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>第二步，我们必须让 logback 知道这个新建的 <code>Converter</code>。所以我们需要在配置文件中进行声明，如下：</p>
+<p><em>Example: mySampleConverterConfig.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">conversionRule</span> <span class="attr">conversionWord</span>=<span class="string">"nanos"</span> <span class="attr">converterClass</span>=<span class="string">"chapters.layouts.MySampleConverter"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"STDOUT"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%-6nanos [%thread] - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"STDOUT"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>执行命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java chapters.layouts.SampleLogging src/main/java/chapters/layouts/mySampleConverterConfig.xml</span><br></pre></td></tr></table></figure>
+
+<p>输出信息如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">26113953</span> [main] - Everything<span class="string">'s going well</span></span><br><span class="line"><span class="string">26672034 [main] - maybe not quite...</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看一下其它 <code>Converter</code> 的实现，例如 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/pattern/MDCConverter.html" target="_blank" rel="noopener">MDCConverter</a> ，去定制更加复杂的功能，如可选处理。想创建自己的颜色主题，可以看一下 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/pattern/color/HighlightingCompositeConverter.html" target="_blank" rel="noopener">HighlightingCompositeConverter</a>。</p>
+<h2 id="HTMLLayout"><a href="#HTMLLayout" class="headerlink" title="HTMLLayout"></a>HTMLLayout</h2><p><a href="https://logback.qos.ch/xref/ch/qos/logback/classic/html/HTMLLayout.html" target="_blank" rel="noopener">HTMLLayout</a> (包含在 logback-classic 中) 以 HTML 格式生成日志。<code>HTMLLayout</code> 通过 HTML 表格输出日志，每一行对应一条日志事件。</p>
+<p>下面是 <code>HTMLLayout</code> 通过默认的 CSS 样式生成的。</p>
+<p><img src="htmlLayout0.gif" alt="htmlLayout0"></p>
+<p>表格的列是通过转换模式指定的。关于转换模式的文档请查看 <a href="https://github.com/Volong/logback-chinese-manual/blob/34f5a61965088f0fa6d0d2a7e0e7085160e95201/06%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9ALayouts.md#patternlayout" target="_blank" rel="noopener">PatternLayout</a>。所以，你可以完全控制表格的内容以及格式。你可以选择并且展示任何跟 <code>PatternLayout</code> 组合的转换器。</p>
+<p>一个值得注意的问题是使用 <code>PatternLayout</code> 中的 <code>HTMLLayout</code> 时，不要使用空格或者其它的字面量来分隔转换说明符。转换模式中的每个说明符都会被当做一个单独的列。同样的转换模式中的每个文本块也会被当作一个单独的列，这会占用屏幕的空间。</p>
+<p>下面的 <code>HTMLLayout</code> 相关的配置：</p>
+<p><em>Example: htmlLayoutConfig1.xml</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">debug</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.encoder.LayoutWrappingEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.html.HTMLLayout"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%relative%thread%mdc%level%logger%msg<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">file</span>&gt;</span>test.html<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://logback.qos.ch/xref/chapters/layouts/TrivialMain.html" target="_blank" rel="noopener">TrivialMain</a> 包含一些消息以及一个结束异常。执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java chapters.layouts.TrivialMain src/main/java/chapters/layouts/htmlLayoutConfig1.xml</span><br></pre></td></tr></table></figure>
+
+<p>将会当前文件夹创建一个 <em>test.html</em> 文件。<em>test.html</em> 文件的内容与下面类似：</p>
+<p><img src="htmlLayout1.png" alt="htmlLayout1"></p>
+<h3 id="堆栈信息"><a href="#堆栈信息" class="headerlink" title="堆栈信息"></a>堆栈信息</h3><p>如果你使用 <em>%ex</em> 转换字符去展示堆栈信息，那么将会创建一个列来展示堆栈信息。在大多数的情况下，列会为空，那么就会浪费屏幕的空间。而且，在单独的列打印堆栈信息，输出的结果阅读起来有难度。但是，*%ex* 转换字符不是唯一一个用来展示堆栈信息的。</p>
+<blockquote>
+<p>  原文第一个 %ex 为 %em</p>
+</blockquote>
+<p>一个更好的解决办法是通过实现 <code>IThrowableRenderer</code> 接口。实现的接口可以分配给 <code>HTMLLayout</code> 来管理相关的异常数据。默认情况下，会给每个 <code>HTMLLayout</code> 实例分配一个 <a href="https://logback.qos.ch/xref/ch/qos/logback/classic/html/DefaultThrowableRenderer.html" target="_blank" rel="noopener">DefaultThrowableRenderer</a>。它将异常的堆栈信息写入到表格新的一行，并且非常易读，就跟上面展示的表格一样。</p>
+<p>如果在某些情况下，你仍然想要使用 <em>%ex</em>，那么你可以在配置文件中指定 <a href="https://logback.qos.ch/xref/ch/qos/logback/core/html/NOPThrowableRenderer.html" target="_blank" rel="noopener">NOPThrowableRenderer</a> 来禁止在单独一行展示堆栈信息。我们不理解为什么你要这样做，但是你开心就好。</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p><code>HTMLLayout</code> 创建的 HTML 是通过 CSS 来控制样式的。在缺少指定命令的情况下，<code>HTMLLayout</code> 会使用内部默认的样式。但是，你可以告诉 <code>HTMLLayout</code> 去使用外部的 CSS 文件。通过在 <code>&lt;layout&gt;</code> 元素内置 <code>&lt;cssBuilder&gt;</code> 元素可以做到。如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.html.HTMLLayout"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>%relative...%msg<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">cssBuilder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.html.UrlCssBuilder"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- css 文件的路径 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://...<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">cssBuilder</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>HTMLLayout</code> 通常与 <code>SMTPAppender</code> 配合使用，所以邮件可以被格式化成 HTML。</p>
+<h2 id="Log4j-XMLLayout"><a href="#Log4j-XMLLayout" class="headerlink" title="Log4j XMLLayout"></a>Log4j XMLLayout</h2><p><a href="https://logback.qos.ch/xref/ch/qos/logback/classic/log4j/XMLLayout.html" target="_blank" rel="noopener">XMLLayout</a> (logback-classic 的一部分) 生成一个 log4j.dtd 格式的文件，用来与类似 <a href="http://logging.apache.org/chainsaw/index.html" target="_blank" rel="noopener">Chainsaw</a> 以及 <a href="http://vigilog.sourceforge.net/" target="_blank" rel="noopener">Vigilog</a> 这样的工具进行交互操作，这些工具可以处理由 <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/XMLLayout.html" target="_blank" rel="noopener">log4j XMLLayout</a> 生成的文件。</p>
+<p>跟 log4j 1.2.15 版本的 XMLLayout 一样，logback-classic 中的 XMLLayout 接收两个 boolean 属性：<code>locationInfo</code> 与 <code>properties</code>。设置 <code>locationInfo</code> 的值为 true，可以在每个事件中开启包含位置信息 (调用者的数据)。设置 <code>properties</code> 为 true，可以开启包含 MDC 信息。默认情况下，两个属性都设置为 false。</p>
+<p>下面是一个示例：</p>
+<p><em>Example: log4jXMLLayout.xml</em> </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"FILE"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.FileAppender"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">file</span>&gt;</span>test.xml<span class="tag">&lt;/<span class="name">file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">encoder</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.encoder.LayoutWrappingEncoder"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">layout</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.classic.log4j.XMLLayout"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">locationInfo</span>&gt;</span>true<span class="tag">&lt;/<span class="name">locationInfo</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"DEBUG"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"FILE"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Logback-access"><a href="#Logback-access" class="headerlink" title="Logback access"></a>Logback access</h2><p>大多数 logback-access 的 layout 仅仅只是 logback-classic 的 layout 的改编。logback-classic 与 logback-access 模块定位不同的需求，但是都提供了类似的功能。</p>
+<h3 id="写你自己的-layout"><a href="#写你自己的-layout" class="headerlink" title="写你自己的 layout"></a>写你自己的 layout</h3><p>在 logback-access 中写一个定制的 <code>Layout</code> 与在 logback-classic 的 <code>Layout</code> 中几乎一致。</p>
+<h3 id="PatternLayout-1"><a href="#PatternLayout-1" class="headerlink" title="PatternLayout"></a>PatternLayout</h3><p>配置 logback-access 中的 <a href="https://logback.qos.ch/xref/ch/qos/logback/access/PatternLayout.html" target="_blank" rel="noopener">PatternLayout</a>，与在 logback-classic 中配置相同。但是它添加了一些额外的转换说明符来适应 HTTP 请求以及 HTTP 响应中特定信息位的记录。</p>
+<p>下表是 logback-access 中 <code>PatternLayout</code> 的相关转换说明符。</p>
+<table>
+<thead>
+<tr>
+<th align="left">转换字符</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>a / remoteIP</strong></td>
+<td>远程 IP 地址</td>
+</tr>
+<tr>
+<td align="left"><strong>A / localIP</strong></td>
+<td>本地 IP 地址</td>
+</tr>
+<tr>
+<td align="left"><strong>b / B / bytesSent</strong></td>
+<td>响应内容的长度</td>
+</tr>
+<tr>
+<td align="left"><strong>h / clientHost</strong></td>
+<td>远程 host</td>
+</tr>
+<tr>
+<td align="left"><strong>H / protocol</strong></td>
+<td>请求协议</td>
+</tr>
+<tr>
+<td align="left"><strong>l</strong></td>
+<td>远程日志名，在 logback-access 中，转换器总是返回 “-“</td>
+</tr>
+<tr>
+<td align="left"><strong>reqParameter{paramName}</strong></td>
+<td>响应参数。<br />这个转换字符在花括号中接受一个参数，在请求中寻找相应的参数。<br /> <strong>%reqParameter{input_data}</strong> 展示相应的参数。</td>
+</tr>
+<tr>
+<td align="left"><strong>i{header} / header{header}</strong></td>
+<td>请求头。<br /> <strong>%header{Referer}</strong> 显示请求的来源。<br />如果没有指定选项，将会展示所有可用的请求头</td>
+</tr>
+<tr>
+<td align="left"><strong>m / requestMethod</strong></td>
+<td>请求方法</td>
+</tr>
+<tr>
+<td align="left"><strong>r / requestURL</strong></td>
+<td>请求 URL</td>
+</tr>
+<tr>
+<td align="left"><strong>s / statusCode</strong></td>
+<td>请求状态码</td>
+</tr>
+<tr>
+<td align="left"><strong>D / elapsedTime</strong></td>
+<td>请求所耗费的时间，单位为毫秒</td>
+</tr>
+<tr>
+<td align="left"><strong>T / elapsedSeconds</strong></td>
+<td>请求所耗费的时间，单位为秒</td>
+</tr>
+<tr>
+<td align="left"><strong>t / date</strong></td>
+<td>输出日志事件的日期。日期说明符需要用花括号指定。日期格式来源 <code> java.text.SimpleDateFormat</code>。<em>ISO8601</em> 也是一个有效的值。<br />例如，**%t{HH:mm:ss,SSS}** 或者 **%t{dd MMM yyyy ;HH:mm:ss,SSS}**。如果没有指定日期格式字符，那么会默认指定为 <strong>%t{dd/MMM/yyyy:HH:mm:ss Z}</strong></td>
+</tr>
+<tr>
+<td align="left"><strong>u / user</strong></td>
+<td>远程用户</td>
+</tr>
+<tr>
+<td align="left"><strong>q / queryString</strong></td>
+<td>请求查询字符串，前缀为 ‘?’</td>
+</tr>
+<tr>
+<td align="left"><strong>U / requestURI</strong></td>
+<td>请求 URI</td>
+</tr>
+<tr>
+<td align="left"><strong>S / sessionID</strong></td>
+<td>Session ID.</td>
+</tr>
+<tr>
+<td align="left"><strong>v / server</strong></td>
+<td>服务器名</td>
+</tr>
+<tr>
+<td align="left"><strong>I / threadName</strong></td>
+<td>处理该条请求的线程</td>
+</tr>
+<tr>
+<td align="left"><strong>localPort</strong></td>
+<td>本地端口</td>
+</tr>
+<tr>
+<td align="left"><strong>reqAttribute{attributeName}</strong></td>
+<td>请求的属性。<br /><strong>%reqAttribute{SOME_ATTRIBUTE}</strong> 展示相应的属性。</td>
+</tr>
+<tr>
+<td align="left"><strong>reqCookie{cookie}</strong></td>
+<td>请求 cookie。<br /><strong>%cookie{COOKIE_NAME}</strong> 展示相应的 cookie。</td>
+</tr>
+<tr>
+<td align="left"><strong>responseHeader{header}</strong></td>
+<td>响应头。<br /><strong>%header{Referer}</strong> 展示响应的来源。</td>
+</tr>
+<tr>
+<td align="left"><strong>requestContent</strong></td>
+<td>展示请求的内容，即请求的 <code>InputStream</code>。它与 <a href="https://logback.qos.ch/xref/ch/qos/logback/access/servlet/TeeFilter.html" target="_blank" rel="noopener">TeeFilter</a> 结合使用。一个使用  <a href="https://logback.qos.ch/xref/ch/qos/logback/access/servlet/TeeHttpServletRequest.html" target="_blank" rel="noopener"><code>TeeHttpServletRequest</code></a> 替代  <code>HttpServletRequest</code> 的  javax.servlet.Filter。前者可以多次访问请求的 <code>InputStream</code> 而不会丢失内容。</td>
+</tr>
+<tr>
+<td align="left"><strong>fullRequest</strong></td>
+<td>请求的数据。包括所有的请求头以及请求内容。</td>
+</tr>
+<tr>
+<td align="left"><strong>responseContent</strong></td>
+<td>展示响应的内容，也就是响应的 <code>InputStream</code>。 它与 <a href="https://logback.qos.ch/xref/ch/qos/logback/access/servlet/TeeFilter.html" target="_blank" rel="noopener">TeeFilter</a> 结合使用。一个使用  <a href="https://logback.qos.ch/xref/ch/qos/logback/access/servlet/TeeHttpServletResponse.html" target="_blank" rel="noopener"><code>TeeHttpServletResponse</code></a> 替代 <code>HttpServletResponse</code> 的  <code>javax.servlet.Filter</code>。前者可以多次访问响应 (原文为请求) 的 <code>InputStream</code> 而不会丢失内容。</td>
+</tr>
+<tr>
+<td align="left"><strong>fullResponse</strong></td>
+<td>获取响应所有可用的数据，包括所有的响应头以及响应内容。</td>
+</tr>
+</tbody></table>
+<p>logback-access 的 <code>PatternLayout</code> 能够识别三个关键字，有点类似快捷键。</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>相等的转换模式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>common</em> or <em>CLF</em></td>
+<td><em>%h %l %u [%t] “%r” %s %b</em></td>
+</tr>
+<tr>
+<td><em>combined</em></td>
+<td><em>%h %l %u [%t] “%r” %s %b “%i{Referer}” “%i{User-Agent}”</em></td>
+</tr>
+</tbody></table>
+<p>关键字 <em>common</em> 对应 *’%h %l %u [%t] “%r” %s %b’*，分别展示客户端主机，远程日志名，用户，日期，请求 URL，状态码，以及响应内容的长度。</p>
+<p>关键字 <em>combined</em> 对应 <em>‘%h %l %u [%t] “%r” %s %b “%i{Referer}” “%i{User-Agent}”‘</em> 。跟 <em>common</em> 有点类似，但是它还会再显示两个请求头，referer 以及 user-agent。</p>
+<h3 id="HTMLLayout-1"><a href="#HTMLLayout-1" class="headerlink" title="HTMLLayout"></a>HTMLLayout</h3><p>logback-access 中的 <a href="https://logback.qos.ch/xref/ch/qos/logback/access/html/HTMLLayout.html" target="_blank" rel="noopener">HTMLLayout</a> 与 logback-classic 中的 <a href="https://logback.qos.ch/manual/layouts.html#ClassicHTMLLayout" target="_blank" rel="noopener"><code>HTMLLayout</code></a> 有点类似。</p>
+<p>默认情况下，它会创建一个包含如下数据的表格：</p>
+<ul>
+<li>  请求 IP (Remote IP)</li>
+<li>  日期 (Date)</li>
+<li>  请求 URL (Request URL)</li>
+<li>  状态码 (Status code)</li>
+<li>  内容长度 (Content Length)</li>
+</ul>
+<p>下面是 logback-access 中的 <code>HTMLLayout</code> 输出的一个例子：</p>
+<p><img src="htmlLayoutAccess.gif" alt="htmlLayoutAccess"></p>
+<p>还有比真实的例子更好的例子吗？我们自己的 log4j.properties 用于 logback <a href="http://logback.qos.ch/translator/" target="_blank" rel="noopener">翻译器</a>，充分的利用了 logback-access 在线演示 <code>RollingFileAppender</code> 与 <code>HTMLLayout</code> 的输出。</p>
+<p>每一个新的用户请求 <a href="http://logback.qos.ch/translator/" target="_blank" rel="noopener">翻译器</a> 这个网站，一个新的条目就会添加到访问日志，你可以通过 <a href="https://logback.qos.ch/translator/logs/access.html" target="_blank" rel="noopener">这个链接</a> 查看。</p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Logback-7-Filters/" data-toggle="tooltip" data-placement="top" title="[Logback] 7 Filters">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Logback-5-Encoder/" data-toggle="tooltip" data-placement="top" title="[Logback] 5 Encoder">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Logback] 6 Layout&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Logback-6-Layouts/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Dec 31 2020 15:49:53 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#什么是-layout？"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 layout？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Logback-classic"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Logback-classic</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#定制-Layout"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">定制 Layout</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置自定义的-layout"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">配置自定义的 layout</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#PatternLayout"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">PatternLayout</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#格式修改器"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">格式修改器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#只输出日志等级的一个字符"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">只输出日志等级的一个字符</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#转换字符的选项"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">转换字符的选项</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#特殊的圆括号"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">特殊的圆括号</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#着色"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">着色</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Evaluators"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">Evaluators</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自定义转换说明符"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">自定义转换说明符</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第一步"><span class="toc-nav-number">4.6.1.</span> <span class="toc-nav-text">第一步</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#第二步"><span class="toc-nav-number">4.6.2.</span> <span class="toc-nav-text">第二步</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTMLLayout"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">HTMLLayout</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#堆栈信息"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">堆栈信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CSS"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">CSS</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Log4j-XMLLayout"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Log4j XMLLayout</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Logback-access"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Logback access</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#写你自己的-layout"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">写你自己的 layout</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#PatternLayout-1"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">PatternLayout</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTMLLayout-1"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">HTMLLayout</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Logback" title="Logback">Logback</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Logback-6-Layouts/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>

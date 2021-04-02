@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/">
+  <title>
+    
+      [Calling Third-party API - Spring RestTemplate] The Guide to RestTemplate - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/tag_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/tag_bg2.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/tag_bg2.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
+              
+              <a class="tag" href="/tags/#Spring RestTemplate" title="Spring RestTemplate">Spring RestTemplate</a>
+              
+            </div>
+            <h1>[Calling Third-party API - Spring RestTemplate] The Guide to RestTemplate</h1>
+            <h2 class="subheading">Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2020-11-12
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">21</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.9k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>首先在我们学习使用 RestTemplate 之前，先认识下这个类，来看 Spring 官方怎么描述的。 从官方 API 文档 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html" target="_blank" rel="noopener">RestTemplate javadoc</a> 可以找该类的描述如下：</p>
+<blockquote>
+<p>Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others.<br>The RestTemplate offers templates for common scenarios by HTTP method, in addition to the generalized exchange and execute methods that support of less frequent cases.</p>
+</blockquote>
+<p>从这里可以清楚地了解到 RestTemplate 采用同步方式执行 HTTP 请求的类，底层使用 JDK 原生 <code>HttpURLConnection API</code>，或者 <code>HttpComponents</code> 等其他 HTTP 客户端请求类库。还有一处强调的就是 RestTemplate 提供模板化的方法让开发者能更简单地发送 HTTP 请求。值得注意的是，RestTemplate 类是在 Spring Framework 3.0 开始引入的，这里我们使用的 Spring 版本为当前最新的 <code>GA 版本 5.3.1</code>。而在 5.0 以上，官方标注了更推荐使用非阻塞的响应式 HTTP 请求处理类 <code>org.springframework.web.reactive.client.WebClient</code> 来替代 RestTemplate，尤其是对应异步请求处理的场景上 。这里我们先简单总结下什么是 RestTemplate：RestTemplate 就是 Spring 封装的处理同步 HTTP 请求的类。具体如何使用这个类进行 HTTP 请求操作，可见下文。</p>
+<h2 id="RestTemplate-methods"><a href="#RestTemplate-methods" class="headerlink" title="RestTemplate methods"></a>RestTemplate methods</h2><p>接下来我们看下 RestTemplate 类提供的 API 有哪些，RestTemplate 提供了将近 30 个请求方法，其中多数是单个方法重载实现，这里主要参考官方文档 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-resttemplate" target="_blank" rel="noopener">rest-resttemplate</a> 进行如下分类：</p>
+<table id="rest-overview-of-resttemplate-methods-tbl" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. RestTemplate methods</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method group</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getForObject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves a representation via GET.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>getForEntity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves a <code>ResponseEntity</code> (that is, status, headers, and body) by using GET.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>headForHeaders</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves all headers for a resource by using HEAD.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postForLocation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new resource by using POST and returns the <code>Location</code> header from the response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postForObject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new resource by using POST and returns the representation from the response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>postForEntity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new resource by using POST and returns the representation from the response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>put</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates or updates a resource by using PUT.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>patchForObject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates a resource by using PATCH and returns the representation from the response.
+Note that the JDK <code>HttpURLConnection</code> does not support the <code>PATCH</code>, but Apache
+HttpComponents and others do.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the resources at the specified URI by using DELETE.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>optionsForAllow</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retrieves allowed HTTP methods for a resource by using ALLOW.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exchange</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">More generalized (and less opinionated) version of the preceding methods that provides extra
+flexibility when needed. It accepts a <code>RequestEntity</code> (including HTTP method, URL, headers,
+and body as input) and returns a <code>ResponseEntity</code>.</p>
+<p class="tableblock">These methods allow the use of <code>ParameterizedTypeReference</code> instead of <code>Class</code> to specify
+a response type with generics.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>execute</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The most generalized way to perform a request, with full control over request
+preparation and response extraction through callback interfaces.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="Building-RestTemplate-Bean"><a href="#Building-RestTemplate-Bean" class="headerlink" title="Building RestTemplate Bean"></a>Building RestTemplate Bean</h2><p>默认构造函数使用 java.net.HttpURLConnection 来执行请求。您可以使用 ClientHttpRequestFactory 的实现切换到其他 HTTP 库。内置支持以下内容：</p>
+<ul>
+<li>Apache HttpComponents</li>
+<li>Netty</li>
+<li>OkHttp</li>
+</ul>
+<p>例如，要切换到Apache HttpComponents，可以使用下面的写法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RestTemplate template = <span class="keyword">new</span> RestTemplate(<span class="keyword">new</span> HttpComponentsClientHttpRequestFactory());</span><br></pre></td></tr></table></figure>
+
+<p>再来看几个简单的例子：</p>
+<h3 id="Using-RestTemplateBuilder"><a href="#Using-RestTemplateBuilder" class="headerlink" title="Using RestTemplateBuilder"></a>Using RestTemplateBuilder</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> RestTemplate <span class="title">restTemplate</span><span class="params">(RestTemplateBuilder builder)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> builder</span><br><span class="line">            .setConnectTimeout(Duration.ofMillis(<span class="number">3000</span>))</span><br><span class="line">            .setReadTimeout(Duration.ofMillis(<span class="number">3000</span>))</span><br><span class="line">            .build();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-SimpleClientHttpRequestFactory"><a href="#Using-SimpleClientHttpRequestFactory" class="headerlink" title="Using SimpleClientHttpRequestFactory"></a>Using SimpleClientHttpRequestFactory</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> RestTemplate <span class="title">restTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">var</span> factory = <span class="keyword">new</span> SimpleClientHttpRequestFactory();</span><br><span class="line">    factory.setConnectTimeout(<span class="number">3000</span>);</span><br><span class="line">    factory.setReadTimeout(<span class="number">3000</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate(factory);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-Apache-HTTPClient"><a href="#Using-Apache-HTTPClient" class="headerlink" title="Using Apache HTTPClient"></a>Using Apache HTTPClient</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">CloseableHttpClient httpClient;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> RestTemplate <span class="title">restTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    RestTemplate restTemplate = <span class="keyword">new</span> RestTemplate(clientHttpRequestFactory());</span><br><span class="line">    <span class="keyword">return</span> restTemplate;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> HttpComponentsClientHttpRequestFactory <span class="title">clientHttpRequestFactory</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = <span class="keyword">new</span> HttpComponentsClientHttpRequestFactory();</span><br><span class="line">    clientHttpRequestFactory.setHttpClient(httpClient);</span><br><span class="line">    <span class="keyword">return</span> clientHttpRequestFactory;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后依赖注入就可以了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> RestTemplate restTemplate;</span><br></pre></td></tr></table></figure>
+
+<h2 id="RestTemplate-Example"><a href="#RestTemplate-Example" class="headerlink" title="RestTemplate Example"></a>RestTemplate Example</h2><h3 id="HTTP-GET-Example"><a href="#HTTP-GET-Example" class="headerlink" title="HTTP GET Example"></a>HTTP GET Example</h3><p><strong>HTTP GET REST APIs</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/product"</span>)</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/getProductByNoParams"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">getProductByNoParams</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Product(<span class="number">1</span>, <span class="string">"ProductA"</span>, BigDecimal.valueOf(<span class="number">6666.0</span>), <span class="keyword">new</span> Date());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/getProductById"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Product <span class="title">getProductById</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Product(id, <span class="string">"ProductC"</span>, BigDecimal.valueOf(<span class="number">6666.0</span>), <span class="keyword">new</span> Date());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Consume REST API</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">restTemplate</span><span class="params">(RestTemplateBuilder builder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> builder</span><br><span class="line">                .setConnectTimeout(Duration.ofMillis(<span class="number">3000</span>))</span><br><span class="line">                .setReadTimeout(Duration.ofMillis(<span class="number">3000</span>))</span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> vincent</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootTest</span>(classes = CallingThirdPartyApiApplicationTests<span class="class">.<span class="keyword">class</span>, <span class="title">webEnvironment</span> </span>= WebEnvironment.RANDOM_PORT)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RestTemplateTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"http://localhost:8080/product"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getProductByNoParams</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String url = URL + <span class="string">"/getProductByNoParams"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式一：GET 方式获取 JSON 串数据</span></span><br><span class="line">        String strProduct = restTemplate.getForObject(url, String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"strProduct:"</span> + strProduct);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式二：GET 方式获取 JSON 数据映射后的 Product 实体对象</span></span><br><span class="line">        Product product = restTemplate.getForObject(url, Product<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"product:"</span> + product);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式三：GET 方式获取包含 Product 实体对象 的响应实体 ResponseEntity 对象，用 getBody() 获取</span></span><br><span class="line">        ResponseEntity&lt;Product&gt; productEntity = restTemplate.getForEntity(url, Product<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"productEntity:"</span> + productEntity);</span><br><span class="line">        Product productEntityBody = productEntity.getBody();</span><br><span class="line">        System.out.println(<span class="string">"productEntityBody:"</span> + productEntityBody);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式四：1.构建请求实体 HttpEntity 对象，用于配置 Header 信息和请求参数</span></span><br><span class="line">        LinkedMultiValueMap&lt;String, String&gt; header = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">        header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);</span><br><span class="line">        HttpEntity requestEntity = <span class="keyword">new</span> HttpEntity&lt;&gt;(header);</span><br><span class="line">        <span class="comment">//方式一：2.执行请求获取包含 Product 实体对象的响应实体 ResponseEntity 对象，用 getBody() 获取</span></span><br><span class="line">        ResponseEntity&lt;Product&gt; exchange = restTemplate.exchange(url, HttpMethod.GET, requestEntity, Product<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"exchange:"</span> + exchange);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式五：根据 RequestCallback 接口实现类设置Header信息，用 ResponseExtractor 接口实现类读取响应数据</span></span><br><span class="line">        String execute = restTemplate.execute(url, HttpMethod.GET,</span><br><span class="line">                clientHttpRequest -&gt; clientHttpRequest.getHeaders().add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE),</span><br><span class="line">                clientHttpResponse -&gt; IOUtils.toString(clientHttpResponse.getBody(), StandardCharsets.UTF_8));</span><br><span class="line">        System.out.println(<span class="string">"execute:"</span> + execute);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getProductById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String url = URL + <span class="string">"/getProductById?id=&#123;id&#125;"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式一：将参数的值存在可变长度参数里，按照顺序进行参数匹配</span></span><br><span class="line">        ResponseEntity&lt;Product&gt; productEntity = restTemplate.getForEntity(url, Product<span class="class">.<span class="keyword">class</span>, 101)</span>;</span><br><span class="line">        System.out.println(<span class="string">"productEntity"</span> + productEntity);</span><br><span class="line">        Product productEntityBody = productEntity.getBody();</span><br><span class="line">        System.out.println(<span class="string">"productEntityBody:"</span> + productEntityBody);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//方式二：将请求参数以键值对形式存储到 Map 集合中，用于请求时 URL 上的拼接</span></span><br><span class="line">        Map&lt;String, Object&gt; uriVariables = Maps.newHashMap();</span><br><span class="line">        uriVariables.put(<span class="string">"id"</span>, <span class="number">109</span>);</span><br><span class="line">        Product product = restTemplate.getForObject(url, Product<span class="class">.<span class="keyword">class</span>, <span class="title">uriVariables</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"product"</span> + product);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output getProductByNoParams() Method:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">strProduct:&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"ProductA"</span>,<span class="string">"price"</span>:<span class="number">6666.0</span>,<span class="string">"date"</span>:<span class="string">"2020-11-17T07:24:43.385+00:00"</span>&#125;</span><br><span class="line">product:Product(id=<span class="number">1</span>, name=ProductA, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">24</span>:<span class="number">43</span> CST <span class="number">2020</span>)</span><br><span class="line">productEntity:&lt;<span class="number">200</span>,Product(id=<span class="number">1</span>, name=ProductA, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">24</span>:<span class="number">43</span> CST <span class="number">2020</span>),[Content-Type:<span class="string">"application/json"</span>, Transfer-Encoding:<span class="string">"chunked"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:24:43 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br><span class="line">productEntityBody:Product(id=<span class="number">1</span>, name=ProductA, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">24</span>:<span class="number">43</span> CST <span class="number">2020</span>)</span><br><span class="line">exchange:&lt;<span class="number">200</span>,Product(id=<span class="number">1</span>, name=ProductA, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">24</span>:<span class="number">43</span> CST <span class="number">2020</span>),[Content-Type:<span class="string">"application/json"</span>, Transfer-Encoding:<span class="string">"chunked"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:24:43 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br><span class="line">execute:&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"ProductA"</span>,<span class="string">"price"</span>:<span class="number">6666.0</span>,<span class="string">"date"</span>:<span class="string">"2020-11-17T07:24:43.462+00:00"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output getProductById() Method:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">productEntity&lt;<span class="number">200</span>,Product(id=<span class="number">101</span>, name=ProductC, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">27</span>:<span class="number">34</span> CST <span class="number">2020</span>),[Content-Type:<span class="string">"application/json"</span>, Transfer-Encoding:<span class="string">"chunked"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:27:34 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br><span class="line">productEntityBody:Product(id=<span class="number">101</span>, name=ProductC, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">27</span>:<span class="number">34</span> CST <span class="number">2020</span>)</span><br><span class="line">productProduct(id=<span class="number">109</span>, name=ProductC, price=<span class="number">6666.0</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">27</span>:<span class="number">34</span> CST <span class="number">2020</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="HTTP-POST-Example"><a href="#HTTP-POST-Example" class="headerlink" title="HTTP POST Example"></a>HTTP POST Example</h3><p><strong>HTTP POST REST APIs</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/postProductByForm"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">postProductByForm</span><span class="params">(Product product)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> product.toString();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/postProductByObject"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">postProductByObject</span><span class="params">(@RequestBody Product product)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> product.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Consume REST API</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">postProductByForm</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String url = URL + <span class="string">"/postProductByForm"</span>;</span><br><span class="line">    Product product = <span class="keyword">new</span> Product(<span class="number">201</span>, <span class="string">"MacBook Pro"</span>, BigDecimal.valueOf(<span class="number">2148.99</span>), <span class="keyword">new</span> Date());</span><br><span class="line">    </span><br><span class="line">    MultiValueMap&lt;String, String&gt; header = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">    <span class="comment">// 设置请求的 Content-Type 为：application/x-www-form-urlencoded</span></span><br><span class="line">    header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方式一： 将请求参数以键值对形式存储在 MultiValueMap 集合，发送请求时使用</span></span><br><span class="line">    MultiValueMap&lt;String, Object&gt; map = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">    map.add(<span class="string">"id"</span>, product.getId());</span><br><span class="line">    map.add(<span class="string">"name"</span>, product.getName());</span><br><span class="line">    map.add(<span class="string">"price"</span>, product.getPrice());</span><br><span class="line">    map.add(<span class="string">"date"</span>, product.getDate());</span><br><span class="line"></span><br><span class="line">    HttpEntity&lt;MultiValueMap&lt;String, Object&gt;&gt; request = <span class="keyword">new</span> HttpEntity&lt;&gt;(map, header);</span><br><span class="line">    ResponseEntity&lt;String&gt; exchange = restTemplate.exchange(url, HttpMethod.POST, request, String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    System.out.println(<span class="string">"exchange:"</span> + exchange);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方式二： 将请求参数值以 K=V 方式用 &amp; 拼接，发送请求使用</span></span><br><span class="line">    String productStr = <span class="string">"id="</span> + product.getId() + <span class="string">"&amp;name="</span> + product.getName() + <span class="string">"&amp;price="</span> + product.getPrice() + <span class="string">"&amp;date="</span> + product.getDate();</span><br><span class="line">    HttpEntity request2 = <span class="keyword">new</span> HttpEntity&lt;&gt;(productStr, header);</span><br><span class="line">    ResponseEntity&lt;String&gt; exchange2 = restTemplate.exchange(url, HttpMethod.POST, request2, String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    System.out.println(<span class="string">"exchange2: "</span> + exchange2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">postProductByObject</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String url = URL + <span class="string">"/postProductByObject"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置请求的 Content-Type 为：application/json</span></span><br><span class="line">    MultiValueMap&lt;String, String&gt; header = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">    header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);</span><br><span class="line">    <span class="comment">// 设置 Accept 向服务器表明客户端可处理的内容类型</span></span><br><span class="line">    header.add(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);</span><br><span class="line">    <span class="comment">// 直接将实体 Product 作为请求参数传入，底层利用 Jackson 框架序列化成 JSON 串发送请求</span></span><br><span class="line">    HttpEntity&lt;Product&gt; request = <span class="keyword">new</span> HttpEntity&lt;&gt;(<span class="keyword">new</span> Product(<span class="number">2</span>, <span class="string">"Macbook Pro"</span>, BigDecimal.valueOf(<span class="number">10000</span>), <span class="keyword">new</span> Date()), header);</span><br><span class="line">    ResponseEntity&lt;String&gt; exchange = restTemplate.exchange(url, HttpMethod.POST, request, String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    System.out.println(<span class="string">"exchange: "</span> + exchange);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output postProductByForm() Method:</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exchange:&lt;200,Product(<span class="attribute">id</span>=201, <span class="attribute">name</span>=MacBook Pro, <span class="attribute">price</span>=2148.99, <span class="attribute">date</span>=Wed Nov 18 05:29:47 CST 2020),[Content-Type:<span class="string">"text/plain;charset=UTF-8"</span>, Content-Length:<span class="string">"83"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:29:47 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br><span class="line">exchange2: &lt;200,Product(<span class="attribute">id</span>=201, <span class="attribute">name</span>=MacBook Pro, <span class="attribute">price</span>=2148.99, <span class="attribute">date</span>=Wed Nov 18 05:29:47 CST 2020),[Content-Type:<span class="string">"text/plain;charset=UTF-8"</span>, Content-Length:<span class="string">"83"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:29:47 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output postProductByObject() Method:</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exchange: &lt;200,Product(<span class="attribute">id</span>=2, <span class="attribute">name</span>=Macbook Pro, <span class="attribute">price</span>=10000, <span class="attribute">date</span>=Tue Nov 17 15:31:33 CST 2020),[Content-Type:<span class="string">"application/json"</span>, Content-Length:<span class="string">"79"</span>, Date:<span class="string">"Tue, 17 Nov 2020 07:31:33 GMT"</span>, Keep-Alive:<span class="string">"timeout=60"</span>, Connection:<span class="string">"keep-alive"</span>]&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="HTTP-PUT-Example"><a href="#HTTP-PUT-Example" class="headerlink" title="HTTP PUT Example"></a>HTTP PUT Example</h3><p><strong>HTTP PUT REST APIs</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PutMapping</span>(<span class="string">"/putByproduct"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">putByproduct</span><span class="params">(Product product)</span> </span>&#123;</span><br><span class="line">    System.out.println(product);</span><br><span class="line">    <span class="keyword">return</span> String.format(<span class="string">"%s 的产品更新成功"</span>, product.toString());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PutMapping</span>(value = <span class="string">"/putProductById/&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> ResponseEntity&lt;Product&gt; <span class="title">putProductById</span><span class="params">(@PathVariable(<span class="string">"id"</span>)</span> <span class="keyword">int</span> id, @RequestBody Product product) </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"id:"</span> + id);</span><br><span class="line">    System.out.println(product);</span><br><span class="line">    <span class="comment">//<span class="doctag">TODO:</span> Save employee details</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ResponseEntity&lt;&gt;(product, HttpStatus.OK);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Consume REST API</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">putByproduct</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String url = URL + <span class="string">"/putByproduct"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// PUT 方法请求</span></span><br><span class="line">    MultiValueMap&lt;String, String&gt; header = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">    header.add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_FORM_URLENCODED_VALUE);</span><br><span class="line">    Product product = <span class="keyword">new</span> Product(<span class="number">101</span>, <span class="string">"iWatch"</span>, BigDecimal.valueOf(<span class="number">2333</span>), <span class="keyword">new</span> Date());</span><br><span class="line">    String productStr = <span class="string">"id="</span> + product.getId() + <span class="string">"&amp;name="</span> + product.getName() + <span class="string">"&amp;price="</span> + product.getPrice() + <span class="string">"&amp;date="</span> + product.getDate();</span><br><span class="line">    HttpEntity&lt;String&gt; request = <span class="keyword">new</span> HttpEntity&lt;&gt;(productStr, header);</span><br><span class="line">    restTemplate.put(url, request);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">putProductById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String url = URL + <span class="string">"/putProductById/&#123;id&#125;"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// PUT 方法请求</span></span><br><span class="line">    Map&lt;String, String&gt; params = Maps.newHashMap();</span><br><span class="line">    params.put(<span class="string">"id"</span>, <span class="string">"108"</span>);</span><br><span class="line">    Product product = <span class="keyword">new</span> Product(<span class="number">108</span>, <span class="string">"Nike"</span>, BigDecimal.valueOf(<span class="number">888.88</span>), <span class="keyword">new</span> Date());</span><br><span class="line">    restTemplate.put(url, product, params);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output on the server: putByproduct()</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Product(<span class="attribute">id</span>=101, <span class="attribute">name</span>=iWatch, <span class="attribute">price</span>=2333, <span class="attribute">date</span>=Wed Nov 18 05:33:28 CST 2020)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output on the server: putProductById()</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">id:<span class="number">108</span></span><br><span class="line">Product(id=<span class="number">108</span>, name=Nike, price=<span class="number">888.88</span>, date=Tue Nov <span class="number">17</span> <span class="number">15</span>:<span class="number">36</span>:<span class="number">08</span> CST <span class="number">2020</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTTP-DELETE-Example"><a href="#HTTP-DELETE-Example" class="headerlink" title="HTTP DELETE Example"></a>HTTP DELETE Example</h3><p><strong>HTTP DELETE REST APIs</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DeleteMapping</span>(<span class="string">"/delete/&#123;id&#125;"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">deleteByRestful</span><span class="params">(@PathVariable <span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">    System.out.println(String.format(<span class="string">"编号为 %s 的产品删除成功"</span>, id));</span><br><span class="line">    <span class="keyword">return</span> String.format(<span class="string">"编号为 %s 的产品删除成功"</span>, id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Consume REST API</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByRestful</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String url = URL + <span class="string">"/delete/&#123;id&#125;"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// DELETE RESTful 方法请求</span></span><br><span class="line">    restTemplate.delete(url, <span class="number">101</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output on the server: deleteByRestful()</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编号为 <span class="number">101</span> 的产品删除成功</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTTP-File-Upload-Example"><a href="#HTTP-File-Upload-Example" class="headerlink" title="HTTP File Upload Example"></a>HTTP File Upload Example</h3><p><strong>HTTP File Upload APIs</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/upload"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload</span><span class="params">(@RequestParam(<span class="string">"file"</span>)</span> MultipartFile file) <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    String name = file.getOriginalFilename();</span><br><span class="line">    System.out.println(String.format(<span class="string">"File name: %s"</span>, name));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//todo save to a file via multipartFile.getInputStream()</span></span><br><span class="line">    <span class="keyword">byte</span>[] bytes = file.getBytes();</span><br><span class="line">    System.out.println(String.format(<span class="string">"File uploaded content:\n%s"</span>, <span class="keyword">new</span> String(bytes)));</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"file uploaded"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PostMapping</span>(<span class="string">"/upload2"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload2</span><span class="params">(MultipartRequest request)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Spring MVC 使用 MultipartRequest 接受带文件的 HTTP 请求</span></span><br><span class="line">    MultipartFile file = request.getFile(<span class="string">"file"</span>);</span><br><span class="line">    String originalFilename = Optional.ofNullable(file).map(MultipartFile::getOriginalFilename).orElse(<span class="keyword">null</span>);</span><br><span class="line">    <span class="keyword">return</span> String.format(<span class="string">"upload success filename: %s"</span>, originalFilename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Consume File Upload API</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">upload</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// Controller 有两种接收方法</span></span><br><span class="line">        <span class="comment">// 1. @RequestParam("file") MultipartFile file</span></span><br><span class="line">        String url = URL + <span class="string">"/upload"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. MultipartRequest request</span></span><br><span class="line"><span class="comment">//        String url2 = URL + "/upload2";</span></span><br><span class="line"></span><br><span class="line">        MultiValueMap&lt;String, Object&gt; body = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line">        body.add(<span class="string">"file"</span>, getUserFileResource());</span><br><span class="line">        HttpHeaders headers = <span class="keyword">new</span> HttpHeaders();</span><br><span class="line">        headers.setContentType(MediaType.MULTIPART_FORM_DATA);</span><br><span class="line">        HttpEntity&lt;MultiValueMap&lt;String, Object&gt;&gt; request = <span class="keyword">new</span> HttpEntity&lt;&gt;(body, headers);</span><br><span class="line">        ResponseEntity&lt;String&gt; responseEntity = restTemplate.exchange(url, HttpMethod.POST, request, String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(<span class="string">"upload: "</span> + responseEntity);</span><br><span class="line">        System.out.println(<span class="string">"response body: "</span> + responseEntity.getBody());</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Resource <span class="title">getUserFileResource</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        Path path = Paths.get(<span class="string">"/Users/vincent/IDEA_Project/my_project/calling-third-party-api/src/test/java/com/vincent/callingthirdpartyapi/resttemplate"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// todo replace tempFile with a real file</span></span><br><span class="line">        Path tempFile = Files.createTempFile(path, <span class="string">"upload"</span>, <span class="string">".txt"</span>);</span><br><span class="line">        Files.write(tempFile, <span class="string">"some test content...\nline1\nline2"</span>.getBytes());</span><br><span class="line">        System.out.println(<span class="string">"uploading: "</span> + tempFile);</span><br><span class="line">        File file = tempFile.toFile();</span><br><span class="line">        <span class="comment">//to upload in-memory bytes use ByteArrayResource instead</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FileSystemResource(file);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output upload() Method:</strong></p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">uploading:</span> <span class="regexp">/Users/</span>vincent<span class="regexp">/IDEA_Project/</span>my_project<span class="regexp">/calling-third-party-api/</span>src<span class="regexp">/test/</span>java<span class="regexp">/com/</span>vincent<span class="regexp">/callingthirdpartyapi/</span>resttemplate/upload3398915595164176126.txt</span><br><span class="line"><span class="string">upload:</span> &lt;<span class="number">200</span>,file uploaded,[Content-<span class="string">Type:</span><span class="string">"text/plain;charset=UTF-8"</span>, Content-<span class="string">Length:</span><span class="string">"13"</span>, <span class="string">Date:</span><span class="string">"Tue, 17 Nov 2020 07:40:55 GMT"</span>, Keep-<span class="string">Alive:</span><span class="string">"timeout=60"</span>, <span class="string">Connection:</span><span class="string">"keep-alive"</span>]&gt;</span><br><span class="line">response <span class="string">body:</span> file uploaded</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output on the server: upload()</strong></p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">File</span> name: upload3398915595164176126.txt</span><br><span class="line"><span class="keyword">File</span> uploaded content:</span><br><span class="line"><span class="function"><span class="title">some</span></span> test content...</span><br><span class="line">line1</span><br><span class="line">line2</span><br></pre></td></tr></table></figure>
+
+<h2 id="Message-Conversion"><a href="#Message-Conversion" class="headerlink" title="Message Conversion"></a>Message Conversion</h2><p>Spring-Web 模块包含 HttpMessageConverter 协定，用于通过 InputStream 和 OutputStream 读取和写入 HTTP 请求和响应的正文。 HttpMessageConverter 实例在客户端（例如：RestTemplate）和服务器端（例如：Spring MVC REST）中被使用。 Spring 框架中提供了主流媒体（MIME）类型的具体实现，默认情况下，这些实现在客户端 RestTemplate 和服务器端的 RequestMethodHandlerAdapter 中被注册（详情参考 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-message-converters" target="_blank" rel="noopener">消息转换器配置</a>）。</p>
+<p>以下介绍 HttpMessageConverter 的具体实现。对于所有转换器，都使用默认的媒体类型，但是可以通过设置 supportedMediaTypes bean 属性来覆盖它。下表描述了每种实现：</p>
+<table id="rest-message-converters-tbl" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. HttpMessageConverter Implementations</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">MessageConverter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>StringHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write <code>String</code> instances from the HTTP
+request and response. By default, this converter supports all text media types
+(<code>text/*</code>) and writes with a <code>Content-Type</code> of <code>text/plain</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>FormHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write form data from the HTTP
+request and response. By default, this converter reads and writes the
+<code>application/x-www-form-urlencoded</code> media type. Form data is read from and written into a
+<code>MultiValueMap&lt;String, String&gt;</code>. The converter can also write (but not read) multipart
+data read from a <code>MultiValueMap&lt;String, Object&gt;</code>. By default, <code>multipart/form-data</code> is
+supported. As of Spring Framework 5.2, additional multipart subtypes can be supported for
+writing form data. Consult the javadoc for <code>FormHttpMessageConverter</code> for further details.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ByteArrayHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write byte arrays from the
+HTTP request and response. By default, this converter supports all media types (<code>*/*</code>)
+and writes with a <code>Content-Type</code> of <code>application/octet-stream</code>. You can override this
+by setting the <code>supportedMediaTypes</code> property and overriding <code>getContentType(byte[])</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MarshallingHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write XML by using Spring’s
+<code>Marshaller</code> and <code>Unmarshaller</code> abstractions from the <code>org.springframework.oxm</code> package.
+This converter requires a <code>Marshaller</code> and <code>Unmarshaller</code> before it can be used. You can inject these
+through constructor or bean properties. By default, this converter supports
+<code>text/xml</code> and <code>application/xml</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MappingJackson2HttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write JSON by using Jackson’s
+<code>ObjectMapper</code>. You can customize JSON mapping as needed through the use of Jackson’s
+provided annotations. When you need further control (for cases where custom JSON
+serializers/deserializers need to be provided for specific types), you can inject a custom <code>ObjectMapper</code>
+through the <code>ObjectMapper</code> property. By default, this
+converter supports <code>application/json</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MappingJackson2XmlHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write XML by using
+<a href="https://github.com/FasterXML/jackson-dataformat-xml" target="_blank" rel="noopener">Jackson XML</a> extension’s
+<code>XmlMapper</code>. You can customize XML mapping as needed through the use of JAXB
+or Jackson’s provided annotations. When you need further control (for cases where custom XML
+serializers/deserializers need to be provided for specific types), you can inject a custom <code>XmlMapper</code>
+through the <code>ObjectMapper</code> property. By default, this
+converter supports <code>application/xml</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SourceHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write
+<code>javax.xml.transform.Source</code> from the HTTP request and response. Only <code>DOMSource</code>,
+<code>SAXSource</code>, and <code>StreamSource</code> are supported. By default, this converter supports
+<code>text/xml</code> and <code>application/xml</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BufferedImageHttpMessageConverter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An <code>HttpMessageConverter</code> implementation that can read and write
+<code>java.awt.image.BufferedImage</code> from the HTTP request and response. This converter reads
+and writes the media type supported by the Java I/O API.</p></td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 id="Multipart"><a href="#Multipart" class="headerlink" title="Multipart"></a>Multipart</h2><p>要发送多部分数据，您需要提供一个 <code>MultiValueMap</code>，其值可能是某些部分内容的一个对象，一个文件资源或者是 headers 部分内容的 HttpEntity。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">MultiValueMap&lt;String, Object&gt; parts = <span class="keyword">new</span> LinkedMultiValueMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">parts.add(<span class="string">"fieldPart"</span>, <span class="string">"fieldValue"</span>);</span><br><span class="line">parts.add(<span class="string">"filePart"</span>, <span class="keyword">new</span> FileSystemResource(<span class="string">"...logo.png"</span>));</span><br><span class="line">parts.add(<span class="string">"jsonPart"</span>, <span class="keyword">new</span> Person(<span class="string">"Jason"</span>));</span><br><span class="line"></span><br><span class="line">HttpHeaders headers = <span class="keyword">new</span> HttpHeaders();</span><br><span class="line">headers.setContentType(MediaType.APPLICATION_XML);</span><br><span class="line">parts.add(<span class="string">"xmlPart"</span>, <span class="keyword">new</span> HttpEntity&lt;&gt;(myBean, headers));</span><br></pre></td></tr></table></figure>
+
+<p>在大多数情况下，您不必为每个部分指定 Content-Type。内容类型是根据 HttpMessageConverter 选择序列化的方式自动确定的，或者对于基于文件扩展名的 Resource 自动确定的。如有必要，可以为 MediaType 提供 HttpEntity 的包装器。准备好 MultiValueMap 之后，可以将其传递给 RestTemplate，如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MultiValueMap&lt;String, Object&gt; parts = ...;</span><br><span class="line">template.postForObject(<span class="string">"https://example.com/upload"</span>, parts, Void<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果 MultiValueMap 包含至少一个非 String 值，则 FormHttpMessageConverter 将 Content-Type 设置为 <code>multipart/form-data</code>。如果 MultiValueMap 具有字符串值，则 Content-Type 默认为 <code>application/x-www-form-urlencoded</code>。如有必要，还可以明确设置 Content-Type。</p>
+<h2 id="Using-AsyncRestTemplate-Deprecated"><a href="#Using-AsyncRestTemplate-Deprecated" class="headerlink" title="Using AsyncRestTemplate (Deprecated)"></a>Using AsyncRestTemplate (Deprecated)</h2><p>AsyncRestTemplate 已不被推荐使用。如果你需要异步 Http 请求的话，Spring 官方推荐 <code>WebClient</code>。WebClient 是从 Spring WebFlux 5.0 版本开始提供的一个非阻塞的基于响应式编程的进行 Http 请求的客户端工具。它的响应式编程的基于 Reactor 的。WebClient 中提供了标准 Http 请求方式对应的 get、post、put、delete 等方法，可以用来发起相应的请求。（详情参考 <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-client" target="_blank" rel="noopener">WebClient</a>）这里简单写个例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">webClientTest</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    WebClient webClient = WebClient.create(URL);</span><br><span class="line">    webClient.get()</span><br><span class="line">            .uri(<span class="string">"/getProductByNoParams"</span>)</span><br><span class="line">            .retrieve()</span><br><span class="line">            .bodyToMono(String<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">            .<span class="title">subscribe</span>(<span class="title">CheckedConsumer</span>.<span class="title">of</span>(<span class="title">s</span> -&gt; </span>&#123;</span><br><span class="line">                        TimeUnit.SECONDS.sleep(<span class="number">3</span>);</span><br><span class="line">                        System.out.println(String.format(<span class="string">"webClient 发出异步 http 请求，并且开始睡三秒。获取异步 http 请求后的返回值：%s"</span>, s));</span><br><span class="line">                    &#125;).unchecked()</span><br><span class="line">            );</span><br><span class="line">    System.out.println(<span class="string">"主线程阻塞开始睡 8 秒：======================================================"</span>);</span><br><span class="line">    TimeUnit.SECONDS.sleep(<span class="number">8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Output:</strong></p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主线程阻塞开始睡 <span class="number">8</span> 秒：======================================================</span><br><span class="line">webClient 发出异步 <span class="keyword">http</span> 请求，并且开始睡三秒。获取异步 <span class="keyword">http</span> 请求后的返回值：&#123;<span class="string">"id"</span>:<span class="number">1</span>,<span class="string">"name"</span>:<span class="string">"ProductA"</span>,<span class="string">"price"</span>:<span class="number">6666.0</span>,<span class="string">"date"</span>:<span class="string">"2020-11-17T08:40:58.337+00:00"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Reference：<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-client-access" target="_blank" rel="noopener">https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-client-access</a><br>Reference：<a href="https://www.baeldung.com/rest-template" target="_blank" rel="noopener">https://www.baeldung.com/rest-template</a><br>Reference：<a href="https://juejin.im/post/6844903842065154061#heading-8" target="_blank" rel="noopener">https://juejin.im/post/6844903842065154061#heading-8</a><br>Reference：<a href="https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/" target="_blank" rel="noopener">https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/</a><br>Reference：<a href="https://www.javaguides.net/2019/06/spring-resttemplate-get-post-put-and-delete-example.html" target="_blank" rel="noopener">https://www.javaguides.net/2019/06/spring-resttemplate-get-post-put-and-delete-example.html</a><br>Reference：<a href="https://www.logicbig.com/tutorials/spring-framework/spring-integration/rest-template-file-upload.html" target="_blank" rel="noopener">https://www.logicbig.com/tutorials/spring-framework/spring-integration/rest-template-file-upload.html</a></p>
+<p>Case Source Code：<a href="https://github.com/V-Vincen/calling-third-party-api" target="_blank" rel="noopener">https://github.com/V-Vincen/calling-third-party-api</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/Calling-Third-party-API-Apache-HttpClient-HttpClient-Tutorial/" data-toggle="tooltip" data-placement="top" title="[Calling Third-party API - Apache HttpClient] HttpClient Tutorial">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Java-杂记-表驱动法和-if-else，switch-case-优化/" data-toggle="tooltip" data-placement="top" title="[Java 杂记] 表驱动法和 if-else，switch-case 优化">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[Calling Third-party API - Spring RestTemplate] The Guide to RestTemplate&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c81ff43219a616c193e0',
+      clientSecret: '17312e25a3b3c592824c813bd537140f48ee2fcf',
+      repo: 'test-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Thu Nov 12 2020 18:37:48 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: ''
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RestTemplate-methods"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">RestTemplate methods</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Building-RestTemplate-Bean"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Building RestTemplate Bean</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Using-RestTemplateBuilder"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Using RestTemplateBuilder</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Using-SimpleClientHttpRequestFactory"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Using SimpleClientHttpRequestFactory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Using-Apache-HTTPClient"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Using Apache HTTPClient</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RestTemplate-Example"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">RestTemplate Example</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-GET-Example"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">HTTP GET Example</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-POST-Example"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">HTTP POST Example</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-PUT-Example"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">HTTP PUT Example</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-DELETE-Example"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">HTTP DELETE Example</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-File-Upload-Example"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">HTTP File Upload Example</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Message-Conversion"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Message Conversion</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Multipart"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Multipart</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Using-AsyncRestTemplate-Deprecated"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Using AsyncRestTemplate (Deprecated)</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
+            
+            <a class="tag" href="/tags/#Spring RestTemplate" title="Spring RestTemplate">Spring RestTemplate</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='[The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...]' color='[#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033]' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/Calling-Third-party-API-Spring-RestTemplate-The-Guide-to-RestTemplate/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+
+		
+
+
+
+		
+
+	</body>
+</html>
