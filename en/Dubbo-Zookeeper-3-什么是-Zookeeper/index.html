@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 3 什么是 Zookeeper - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -491,7 +491,7 @@
 
 <h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="判断节点是否存在"><a href="#判断节点是否存在" class="headerlink" title="判断节点是否存在"></a>判断节点是否存在</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exists</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断节点是否存在"><a href="#判断节点是否存在" class="headerlink" title="判断节点是否存在"></a>判断节点是否存在</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exists</span><br></pre></td></tr></table></figure>
 
 <h3 id="获得一个节点的数据"><a href="#获得一个节点的数据" class="headerlink" title="获得一个节点的数据"></a>获得一个节点的数据</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getData</span></span><br></pre></td></tr></table></figure>
 
@@ -695,7 +695,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-的数据模型"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Zookeeper 的数据模型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Znode-包含哪些元素"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Znode 包含哪些元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-的基本操作"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Zookeeper 的基本操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建节点"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">创建节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除节点"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">删除节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#判断节点是否存在"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">判断节点是否存在</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获得一个节点的数据"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">获得一个节点的数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置一个节点的数据"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">设置一个节点的数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取节点下的所有子节点"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">获取节点下的所有子节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-的事件通知"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Zookeeper 的事件通知</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-的一致性"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Zookeeper 的一致性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#什么是-ZAB"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">什么是 ZAB</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-协议定义的三种节点状态"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">ZAB 协议定义的三种节点状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#最大-ZXID"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">最大 ZXID</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-的崩溃恢复"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">ZAB 的崩溃恢复</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Leader-election"><span class="toc-nav-number">6.4.1.</span> <span class="toc-nav-text">Leader election</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Discovery"><span class="toc-nav-number">6.4.2.</span> <span class="toc-nav-text">Discovery</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Synchronization"><span class="toc-nav-number">6.4.3.</span> <span class="toc-nav-text">Synchronization</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-的数据写入"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">ZAB 的数据写入</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Broadcast"><span class="toc-nav-number">6.5.1.</span> <span class="toc-nav-text">Broadcast</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-的应用场景"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Zookeeper 的应用场景</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分布式锁"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">分布式锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#服务注册和发现"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">服务注册和发现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#共享配置和状态信息"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">共享配置和状态信息</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Zookeeper 的数据模型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Znode-%E5%8C%85%E5%90%AB%E5%93%AA%E4%BA%9B%E5%85%83%E7%B4%A0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Znode 包含哪些元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Zookeeper 的基本操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">创建节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">删除节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A4%E6%96%AD%E8%8A%82%E7%82%B9%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">判断节点是否存在</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%BE%97%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">获得一个节点的数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">设置一个节点的数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E8%8A%82%E7%82%B9%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E5%AD%90%E8%8A%82%E7%82%B9"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">获取节点下的所有子节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E7%9A%84%E4%BA%8B%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Zookeeper 的事件通知</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Zookeeper 的一致性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-ZAB"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">什么是 ZAB</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-%E5%8D%8F%E8%AE%AE%E5%AE%9A%E4%B9%89%E7%9A%84%E4%B8%89%E7%A7%8D%E8%8A%82%E7%82%B9%E7%8A%B6%E6%80%81"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">ZAB 协议定义的三种节点状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%80%E5%A4%A7-ZXID"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">最大 ZXID</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-%E7%9A%84%E5%B4%A9%E6%BA%83%E6%81%A2%E5%A4%8D"><span class="toc-nav-number">6.4.</span> <span class="toc-nav-text">ZAB 的崩溃恢复</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Leader-election"><span class="toc-nav-number">6.4.1.</span> <span class="toc-nav-text">Leader election</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Discovery"><span class="toc-nav-number">6.4.2.</span> <span class="toc-nav-text">Discovery</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Synchronization"><span class="toc-nav-number">6.4.3.</span> <span class="toc-nav-text">Synchronization</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ZAB-%E7%9A%84%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5"><span class="toc-nav-number">6.5.</span> <span class="toc-nav-text">ZAB 的数据写入</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Broadcast"><span class="toc-nav-number">6.5.1.</span> <span class="toc-nav-text">Broadcast</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Zookeeper 的应用场景</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">分布式锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E5%8F%91%E7%8E%B0"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">服务注册和发现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B1%E4%BA%AB%E9%85%8D%E7%BD%AE%E5%92%8C%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">共享配置和状态信息</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -881,7 +881,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

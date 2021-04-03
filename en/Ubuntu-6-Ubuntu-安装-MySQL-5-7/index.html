@@ -146,7 +146,7 @@
       [Ubuntu] 6 Ubuntu 安装 MySQL 5.7 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">588</span> In Total
+              Words <span class="post-count">594</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -489,13 +489,13 @@
 
 <h2 id="配置远程访问"><a href="#配置远程访问" class="headerlink" title="配置远程访问"></a>配置远程访问</h2><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
 
-<h3 id="注释掉-语句前面加上-即可-："><a href="#注释掉-语句前面加上-即可-：" class="headerlink" title="注释掉(语句前面加上 # 即可)："></a>注释掉(语句前面加上 # 即可)：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bind</span>-address = 127.0.0.1</span><br></pre></td></tr></table></figure>
+<h3 id="注释掉-语句前面加上-即可-："><a href="#注释掉-语句前面加上-即可-：" class="headerlink" title="注释掉(语句前面加上 # 即可)："></a>注释掉(语句前面加上 # 即可)：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind-address = 127.0.0.1</span><br></pre></td></tr></table></figure>
 
 <h3 id="重启-MySQL"><a href="#重启-MySQL" class="headerlink" title="重启 MySQL"></a>重启 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
 
 <h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
 
-<h3 id="授权-root-用户允许所有人连接"><a href="#授权-root-用户允许所有人连接" class="headerlink" title="授权 root 用户允许所有人连接"></a>授权 root 用户允许所有人连接</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">'root'</span>@<span class="string">'%'</span> identified by <span class="string">'你的 mysql root 账户密码'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="授权-root-用户允许所有人连接"><a href="#授权-root-用户允许所有人连接" class="headerlink" title="授权 root 用户允许所有人连接"></a>授权 root 用户允许所有人连接</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27;你的 mysql root 账户密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <h2 id="因弱口令无法成功授权解决步骤"><a href="#因弱口令无法成功授权解决步骤" class="headerlink" title="因弱口令无法成功授权解决步骤"></a>因弱口令无法成功授权解决步骤</h2><h3 id="查看和设置密码安全级别"><a href="#查看和设置密码安全级别" class="headerlink" title="查看和设置密码安全级别"></a>查看和设置密码安全级别</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_policy;</span><br><span class="line"><span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure>
 
@@ -662,7 +662,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#更新数据源"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">更新数据源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装-MySQL"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装 MySQL</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">测试</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置远程访问"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">配置远程访问</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改配置文件"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">修改配置文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#注释掉-语句前面加上-即可-："><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">注释掉(语句前面加上 # 即可)：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#重启-MySQL"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">重启 MySQL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#登录-MySQL"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">登录 MySQL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#授权-root-用户允许所有人连接"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">授权 root 用户允许所有人连接</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#因弱口令无法成功授权解决步骤"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">因弱口令无法成功授权解决步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看和设置密码安全级别"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">查看和设置密码安全级别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看和设置密码长度限制"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">查看和设置密码长度限制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用命令"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启动"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">启动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#停止"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">停止</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#重启"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">重启</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其它配置"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">其它配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置默认字符集"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">配置默认字符集</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置忽略数据库大小写敏感"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">配置忽略数据库大小写敏感</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">更新数据源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-MySQL"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装 MySQL</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">测试</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">配置远程访问</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">修改配置文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B3%A8%E9%87%8A%E6%8E%89-%E8%AF%AD%E5%8F%A5%E5%89%8D%E9%9D%A2%E5%8A%A0%E4%B8%8A-%E5%8D%B3%E5%8F%AF-%EF%BC%9A"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">注释掉(语句前面加上 # 即可)：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8D%E5%90%AF-MySQL"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">重启 MySQL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%99%BB%E5%BD%95-MySQL"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">登录 MySQL</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8E%88%E6%9D%83-root-%E7%94%A8%E6%88%B7%E5%85%81%E8%AE%B8%E6%89%80%E6%9C%89%E4%BA%BA%E8%BF%9E%E6%8E%A5"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">授权 root 用户允许所有人连接</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%A0%E5%BC%B1%E5%8F%A3%E4%BB%A4%E6%97%A0%E6%B3%95%E6%88%90%E5%8A%9F%E6%8E%88%E6%9D%83%E8%A7%A3%E5%86%B3%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">因弱口令无法成功授权解决步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E5%AE%89%E5%85%A8%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">查看和设置密码安全级别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E9%95%BF%E5%BA%A6%E9%99%90%E5%88%B6"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">查看和设置密码长度限制</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">常用命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">启动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%81%9C%E6%AD%A2"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">停止</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8D%E5%90%AF"><span class="toc-nav-number">6.3.</span> <span class="toc-nav-text">重启</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B6%E5%AE%83%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">其它配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">配置默认字符集</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E5%BF%BD%E7%95%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">配置忽略数据库大小写敏感</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -848,7 +848,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

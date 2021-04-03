@@ -146,7 +146,7 @@
       [Docker] 4.1 Docker 列出镜像 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -475,7 +475,7 @@
         <p>要想列出已经下载下来的镜像，可以使用 <code>docker image ls</code> 命令。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls</span><br><span class="line">REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">redis                latest              5f515359c7f8        5 days ago          183 MB</span><br><span class="line">nginx                latest              05a60462f8ba        5 days ago          181 MB</span><br><span class="line">mongo                3.2                 fe9198c04d62        5 days ago          342 MB</span><br><span class="line">&lt;none&gt;               &lt;none&gt;              00285df0df87        5 days ago          342 MB</span><br><span class="line">ubuntu               16.04               f753707788c5        4 weeks ago         127 MB</span><br><span class="line">ubuntu               latest              f753707788c5        4 weeks ago         127 MB</span><br><span class="line">ubuntu               14.04               1e0c3dd64ccd        4 weeks ago         188 MB</span><br></pre></td></tr></table></figure>
 <p>列表包含了 <code>仓库名</code>、<code>标签</code>、<code>镜像 ID</code>、<code>创建时间</code> 以及 <code>所占用的空间</code>。<br><code>其中仓库名、标签在之前的基础概念章节已经介绍过了。**镜像 ID** 则是镜像的唯一标识，一个镜像可以对应多个**标签**。因此，在上面的例子中，我们可以看到</code>ubuntu:16.04<code>和</code>ubuntu:latest` 拥有相同的 ID，因为它们对应的是同一个镜像。</p>
-<h2 id="镜像体积"><a href="#镜像体积" class="headerlink" title="镜像体积"></a>镜像体积</h2><p>如果仔细观察，会注意到，这里标识的所占用空间和在 Docker Hub 上看到的镜像大小不同。比如，<code>ubuntu:16.04</code> 镜像大小，在这里是 <code>127 MB</code>，但是在 <a href="https://hub.docker.com/r/library/ubuntu/tags/" target="_blank" rel="noopener">Docker Hub</a> 显示的却是 <code>50 MB</code>。这是因为 Docker Hub 中显示的体积是压缩后的体积。在镜像下载和上传过程中镜像是保持着压缩状态的，因此 Docker Hub 所显示的大小是网络传输中更关心的流量大小。而 <code>docker image ls</code> 显示的是镜像下载到本地后，展开的大小，准确说，是展开后的各层所占空间的总和，因为镜像到本地后，查看空间的时候，更关心的是本地磁盘空间占用的大小。</p>
+<h2 id="镜像体积"><a href="#镜像体积" class="headerlink" title="镜像体积"></a>镜像体积</h2><p>如果仔细观察，会注意到，这里标识的所占用空间和在 Docker Hub 上看到的镜像大小不同。比如，<code>ubuntu:16.04</code> 镜像大小，在这里是 <code>127 MB</code>，但是在 <a target="_blank" rel="noopener" href="https://hub.docker.com/r/library/ubuntu/tags/">Docker Hub</a> 显示的却是 <code>50 MB</code>。这是因为 Docker Hub 中显示的体积是压缩后的体积。在镜像下载和上传过程中镜像是保持着压缩状态的，因此 Docker Hub 所显示的大小是网络传输中更关心的流量大小。而 <code>docker image ls</code> 显示的是镜像下载到本地后，展开的大小，准确说，是展开后的各层所占空间的总和，因为镜像到本地后，查看空间的时候，更关心的是本地磁盘空间占用的大小。</p>
 <p>另外一个需要注意的问题是，<code>docker image ls</code> 列表中的镜像体积总和并非是所有镜像实际硬盘消耗。由于 Docker 镜像是多层存储结构，并且可以继承、复用，因此不同镜像可能会因为使用相同的基础镜像，从而拥有共同的层。由于 Docker 使用 Union FS，相同的层只需要保存一份即可，因此实际镜像硬盘占用空间很可能要比这个列表镜像大小的总和要小的多。</p>
 <p>你可以通过以下命令来便捷的查看镜像、容器、数据卷所占用的空间。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker system df</span><br><span class="line"></span><br><span class="line">TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE</span><br><span class="line">Images              24                  0                   1.992GB             1.992GB (100%)</span><br><span class="line">Containers          1                   0                   62.82MB             62.82MB (100%)</span><br><span class="line">Local Volumes       9                   0                   652.2MB             652.2MB (100%)</span><br><span class="line">Build Cache                                                 0B                  0B</span><br></pre></td></tr></table></figure>
@@ -509,12 +509,12 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls -q</span><br><span class="line">5f515359c7f8</span><br><span class="line">05a60462f8ba</span><br><span class="line">fe9198c04d62</span><br><span class="line">00285df0df87</span><br><span class="line">f753707788c5</span><br><span class="line">f753707788c5</span><br><span class="line">1e0c3dd64ccd</span><br></pre></td></tr></table></figure>
 
 <p><code>--filter</code> 配合 <code>-q</code> 产生出指定范围的 ID 列表，然后送给另一个 <code>docker</code> 命令作为参数，从而针对这组实体成批的进行某种操作的做法在 Docker 命令行使用过程中非常常见，不仅仅是镜像，将来我们会在各个命令中看到这类搭配以完成很强大的功能。因此每次在文档看到过滤器后，可以多注意一下它们的用法。</p>
-<p>另外一些时候，我们可能只是对表格的结构不满意，希望自己组织列；或者不希望有标题，这样方便其它程序解析结果等，这就用到了 <a href="https://gohugo.io/templates/go-templates/" target="_blank" rel="noopener">Go 的模板语法</a>。</p>
+<p>另外一些时候，我们可能只是对表格的结构不满意，希望自己组织列；或者不希望有标题，这样方便其它程序解析结果等，这就用到了 <a target="_blank" rel="noopener" href="https://gohugo.io/templates/go-templates/">Go 的模板语法</a>。</p>
 <p>比如，下面的命令会直接列出镜像结果，并且只包含镜像ID和仓库名：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls --format <span class="string">"&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;"</span></span><br><span class="line">5f515359c7f8: redis</span><br><span class="line">05a60462f8ba: nginx</span><br><span class="line">fe9198c04d62: mongo</span><br><span class="line">00285df0df87: &lt;none&gt;</span><br><span class="line">f753707788c5: ubuntu</span><br><span class="line">f753707788c5: ubuntu</span><br><span class="line">1e0c3dd64ccd: ubuntu</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls --format <span class="string">&quot;&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;&quot;</span></span><br><span class="line">5f515359c7f8: redis</span><br><span class="line">05a60462f8ba: nginx</span><br><span class="line">fe9198c04d62: mongo</span><br><span class="line">00285df0df87: &lt;none&gt;</span><br><span class="line">f753707788c5: ubuntu</span><br><span class="line">f753707788c5: ubuntu</span><br><span class="line">1e0c3dd64ccd: ubuntu</span><br></pre></td></tr></table></figure>
 
 <p>或者打算以表格等距显示，并且有标题行，和默认一样，不过自己定义列：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls --format <span class="string">"table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;"</span></span><br><span class="line">IMAGE ID            REPOSITORY          TAG</span><br><span class="line">5f515359c7f8        redis               latest</span><br><span class="line">05a60462f8ba        nginx               latest</span><br><span class="line">fe9198c04d62        mongo               3.2</span><br><span class="line">00285df0df87        &lt;none&gt;              &lt;none&gt;</span><br><span class="line">f753707788c5        ubuntu              16.04</span><br><span class="line">f753707788c5        ubuntu              latest</span><br><span class="line">1e0c3dd64ccd        ubuntu              14.04</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls --format <span class="string">&quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;&quot;</span></span><br><span class="line">IMAGE ID            REPOSITORY          TAG</span><br><span class="line">5f515359c7f8        redis               latest</span><br><span class="line">05a60462f8ba        nginx               latest</span><br><span class="line">fe9198c04d62        mongo               3.2</span><br><span class="line">00285df0df87        &lt;none&gt;              &lt;none&gt;</span><br><span class="line">f753707788c5        ubuntu              16.04</span><br><span class="line">f753707788c5        ubuntu              latest</span><br><span class="line">1e0c3dd64ccd        ubuntu              14.04</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -662,7 +662,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#镜像体积"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">镜像体积</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#虚悬镜像"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">虚悬镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#中间层镜像"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">中间层镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#列出部分镜像"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">列出部分镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#以特定格式显示"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">以特定格式显示</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%95%9C%E5%83%8F%E4%BD%93%E7%A7%AF"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">镜像体积</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%99%9A%E6%82%AC%E9%95%9C%E5%83%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">虚悬镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%AD%E9%97%B4%E5%B1%82%E9%95%9C%E5%83%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">中间层镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%97%E5%87%BA%E9%83%A8%E5%88%86%E9%95%9C%E5%83%8F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">列出部分镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A5%E7%89%B9%E5%AE%9A%E6%A0%BC%E5%BC%8F%E6%98%BE%E7%A4%BA"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">以特定格式显示</span></a></li></ol>
         
         </div>
       </aside>
@@ -848,7 +848,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

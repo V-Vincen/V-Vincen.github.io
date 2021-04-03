@@ -146,7 +146,7 @@
       [Git] 5 Git 实战总结 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -486,8 +486,8 @@
 <li>Git 没有一个全局的版本号，而 SVN 有：目前为止这是跟SVN相比 Git 缺少的最大的一个特征。</li>
 <li>Git 的内容完整性要优于 SVN：Git 的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</li>
 </ul>
-<h3 id="Git-安装配置"><a href="#Git-安装配置" class="headerlink" title="Git 安装配置"></a>Git 安装配置</h3><p>在使用 Git 前我们需要先安装 Git。Git 目前支持 Linux/Unix、Solaris、Mac 和 Windows 平台上运行。Git 各平台安装包下载地址为：<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">http://git-scm.com/downloads</a></p>
-<p><strong>Windows 平台上安装（不再赘述）</strong>：<a href="https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/" target="_blank" rel="noopener">https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</a></p>
+<h3 id="Git-安装配置"><a href="#Git-安装配置" class="headerlink" title="Git 安装配置"></a>Git 安装配置</h3><p>在使用 Git 前我们需要先安装 Git。Git 目前支持 Linux/Unix、Solaris、Mac 和 Windows 平台上运行。Git 各平台安装包下载地址为：<a target="_blank" rel="noopener" href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
+<p><strong>Windows 平台上安装（不再赘述）</strong>：<a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/">https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</a></p>
 <p><strong>Mac 上安装 Git</strong><br>通过 <code>Homebrew</code> 安装 Git：<code>brew install git</code></p>
 <p><strong>用户信息</strong><br>配置个人的用户名称和电子邮件地址：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
@@ -510,7 +510,7 @@
 <p>当执行 <code>git checkout .</code> 或者 <code>git checkout -- &lt;file&gt;</code> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。</p>
 <p>当执行 <code>git checkout HEAD .</code> 或者 <code>git checkout HEAD &lt;file&gt;</code> 命令时，会用 <code>HEAD</code> 指向的 <code>master</code> 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。</p>
 <h2 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h2><h3 id="创建新仓库"><a href="#创建新仓库" class="headerlink" title="创建新仓库"></a>创建新仓库</h3><p>创建新文件夹，打开，然后执行 </p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git init</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
 <p>以创建新的 git 仓库。</p>
 <h3 id="检出仓库"><a href="#检出仓库" class="headerlink" title="检出仓库"></a>检出仓库</h3><p>执行如下命令以创建一个本地仓库的克隆版本：</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">/path</span>/to/repository</span><br></pre></td></tr></table></figure>
@@ -518,26 +518,26 @@
 <p>如果是远端服务器上的仓库，你的命令会是这个样子：</p>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone username<span class="variable">@host</span><span class="symbol">:/path/to/repository</span></span><br></pre></td></tr></table></figure>
 <h3 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h3><p>你可以提出更改（把它们添加到暂存区），使用如下命令：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> &lt;filename&gt;</span></span><br><span class="line">git <span class="keyword">add</span><span class="bash"> *</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br><span class="line">git <span class="builtin-name">add</span> *</span><br></pre></td></tr></table></figure>
 <p>这是 git 基本工作流程的第一步；</p>
 <p>使用如下命令以实际提交改动：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">"代码提交信息"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;代码提交信息&quot;</span></span><br></pre></td></tr></table></figure>
 <p>现在，你的改动已经提交到了 <code>HEAD</code>，但是还没到你的远端仓库。</p>
 <h3 id="推送改动"><a href="#推送改动" class="headerlink" title="推送改动"></a>推送改动</h3><p>你的改动现在已经在本地仓库的 <code>HEAD</code> 中了。执行如下命令以将这些改动提交到远端仓库：</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure>
 <p>可以把 <code>master</code> 换成你想要推送的任何分支。</p>
 <p>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin &lt;server&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>&lt;server&gt;</span><br></pre></td></tr></table></figure>
 <p>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
 <h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，<code>master</code> 是“默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。</p>
 <p>创建一个叫做“feature_x”的分支，并切换过去：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b </span>feature_x</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> feature_x</span><br></pre></td></tr></table></figure>
 
 <p>切换回主分支：</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">master</span></span><br></pre></td></tr></table></figure>
 
 <p>再把新建的分支删掉：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d feature_x</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git branch -d feature_x</span></span><br></pre></td></tr></table></figure>
 
 <p>除非你将分支推送到远端仓库，不然该分支就是不为他人所见的：</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> &lt;branch&gt;</span><br></pre></td></tr></table></figure>
@@ -550,13 +550,13 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="tag">&lt;<span class="name">branch</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在这两种情况下，git 都会尝试去自动合并改动。遗憾的是，这可能并非每次都成功，并可能出现冲突（<code>conflicts</code>）。 这时候就需要你修改这些文件来手动合并这些冲突（<code>conflicts</code>）。改完之后，你需要执行如下命令以将它们标记为合并成功：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> &lt;filename&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 
 <p>在合并改动之前，你可以使用如下命令预览差异：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="tag">&lt;<span class="name">source_branch</span>&gt;</span> <span class="tag">&lt;<span class="name">target_branch</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>通常我们在发布版本的时候会打上标签。这个概念早已存在，在 SVN 中也有。你可以执行如下命令创建一个叫做 1.0.0 的标签：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag <span class="number">1.0</span><span class="number">.0</span> <span class="number">1</span>b2e1d63ff</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> tag <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span> <span class="number">1</span>b<span class="number">2</span>e<span class="number">1</span>d<span class="number">63</span>ff</span><br></pre></td></tr></table></figure>
 
 <p>1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。可以使用下列命令获取提交 ID：</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
@@ -621,7 +621,7 @@
 <h4 id="Feature-branches"><a href="#Feature-branches" class="headerlink" title="Feature branches"></a><code>Feature branches</code></h4><p><code>Feature branches</code>，起源于 <code>develop</code>分支，最终也会归于 <code>develop</code> 分支。</p>
 <p><code>Feature branches</code> 常用于开发一个独立的新功能，且其最终的结局必然只有两个，其一是合并入 <code>develop</code> 分支，其二是被抛弃。最典型的 <code>Fearture branches</code> 一定是存在于团队开发者那里，而不应该是 <code>中心版本库</code> 中。</p>
 <p><code>Feature branches</code> 起源于 <code>develop</code> 分支，实现方法是：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b </span>myfeature develop</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> myfeature develop</span><br></pre></td></tr></table></figure>
 
 <p><code>Feature branches</code> 最终将在开发完成后合并到 <code>develop</code> 分支，实现方式是：</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git checkout devleop</span><br><span class="line"></span><br><span class="line">git <span class="keyword">merge</span> --<span class="keyword">no</span>-ff myfeature</span><br><span class="line">（--<span class="keyword">no</span>-ff，即 not fast forward，其作用是：要求 git <span class="keyword">merge</span> 即使在 fast forward 条件下也要产生一个新的 <span class="keyword">merge</span> commit；</span><br><span class="line">此处，要求采用 --<span class="keyword">no</span>-ff 的方式进行分支合并，其目的在于，希望保持原有 Feature branches 整个提交链的完整性）</span><br><span class="line"></span><br><span class="line">git branch -<span class="keyword">d</span> myfeature</span><br><span class="line"></span><br><span class="line">git push origin develop</span><br></pre></td></tr></table></figure>
@@ -631,7 +631,7 @@
 <p><code>Relase branch</code> 通常负责 <code>短期的发布前准备工作</code>、<code>小 bug 的修复工作</code>、<code>版本号等元信息的准备工作</code>。与此同时，<code>develop</code> 分支又可以承接下一个新功能的开发工作了。</p>
 <p><code>Release branch</code> 产生新提交的最好时机是 <code>develop</code> 分支已经基本到达预期的状态，至少希望新功能已经完全从 <code>Feature branches</code> 合并到 <code>develop</code> 分支了。</p>
 <p>创建<code>Release branches</code>，方法是：</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="keyword">release</span><span class="number">-1.2</span> develop</span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span> （这个脚本用于将代码所有涉及版本信息的地方都统一修改到 <span class="number">1.2</span>，另外，需要用户根据自己的项目去编写适合的 bump-<span class="keyword">version</span>.sh ）</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -a -m "Bumped version number to 1.2"</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="keyword">release</span><span class="number">-1.2</span> develop</span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span> （这个脚本用于将代码所有涉及版本信息的地方都统一修改到 <span class="number">1.2</span>，另外，需要用户根据自己的项目去编写适合的 bump-<span class="keyword">version</span>.sh ）</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -a -m &quot;Bumped version number to 1.2&quot;</span><br></pre></td></tr></table></figure>
 
 <p>在一段短时间内，在 <code>Release branches</code> 上，我们可以继续修复 bug。在此阶段，严禁新功能的并入，新功能应该是被合并到 <code>develop</code> 分支的。</p>
 <p>经过若干 bug 修复后，<code>Release branches</code> 上的代码已经达到可发布状态，此时，需要完成三个动作：第一是将 <code>Release branches</code> 合并到 <code>master</code> 分支，第二是一定要为 <code>master</code> 上的这个新提交打 <code>TAG（记录里程碑）</code>，第三是要将 <code>Release branches</code> 合并回 <code>develop</code> 分支。</p>
@@ -642,10 +642,10 @@
 <p>建议设立 <code>Hotfix branches</code> 的原因是：希望避免 <code>develop分支</code> 新功能的开发必须为 bug 修复让路的情况。</p>
 <p><img src="7.png" alt="7"></p>
 <p>建立 <code>Hotfix branches</code>，方法是：</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hotfix<span class="number">-1.2</span><span class="number">.1</span> master</span><br><span class="line"></span><br><span class="line">./bump-version.sh <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">git commit -a -m <span class="string">"Bumpt version to 1.2.1"</span> （然后可以开始问题修复工作）</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"Fixed severe production problem"</span> （在问题修复后，进行第二次提交）</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hotfix-<span class="number">1.2</span>.<span class="number">1</span> <span class="literal">master</span></span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line">git commit -a -m <span class="string">&quot;Bumpt version to 1.2.1&quot;</span> （然后可以开始问题修复工作）</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;Fixed severe production problem&quot;</span> （在问题修复后，进行第二次提交）</span><br></pre></td></tr></table></figure>
 
 <p>bug 修复后，需要将 <code>Hotfix branches</code> 合并回 <code>master</code> 分支，同时也需要合并回 <code>develop</code> 分支，方法是：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line">git merge --no-ff hotfix<span class="number">-1.2</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">git tag -a <span class="number">1.2</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">git checkout develop</span><br><span class="line"></span><br><span class="line">git merge --no-ff hotfix<span class="number">-1.2</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">git branch -d hotfix<span class="number">-1.2</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> checkout master</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> tag -a <span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> checkout develop</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> branch -d hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><p>下面我们就在测试环境，进行一次实战演练。如下是涉及到的角色和权限：</p>
 <table>
@@ -696,7 +696,7 @@
 <p><code>release</code> 版本在测试完毕后，代码管理员将 <code>release</code> 代码 <code>merge</code> 到 <code>master</code>，同时打上 <code>tag 1.0</code>。</p>
 <p><img src="15.png" alt="15"></p>
 <p><code>tag1.0</code> 可用来进行生产发布。如果生产版本有问题，从对应版本的 <code>tag</code> 上拉出 <code>hotfix</code> 分支进行修复之后在 <code>hotfix</code> 分支上进行测试，完毕之后 <code>merge</code> 回 <code>develop</code> 和 <code>master</code>。</p>
-<p>参靠：<a href="https://www.jianshu.com/p/ed034b004255" target="_blank" rel="noopener">https://www.jianshu.com/p/ed034b004255</a></p>
+<p>参靠：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ed034b004255">https://www.jianshu.com/p/ed034b004255</a></p>
 
 
         <hr>
@@ -845,7 +845,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-介绍"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Git 介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-与-SVN-区别"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Git 与 SVN 区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-安装配置"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Git 安装配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-基本原理"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Git 基本原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-基本操作"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Git 基本操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建新仓库"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建新仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#检出仓库"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">检出仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加和提交"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">添加和提交</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推送改动"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">推送改动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分支"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分支更新与合并"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">分支更新与合并</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#标签"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#替换本地改动"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">替换本地改动</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-权限控制介绍"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Git 权限控制介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git角色介绍"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Git角色介绍</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-版本管理"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Git 版本管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#建立项目"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">建立项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分支管理"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">分支管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Feature-branches"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">Feature branches</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Release-branch"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">Release branch</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Hotfix-branches"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">Hotfix branches</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作流程"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">操作流程</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Git 介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-%E4%B8%8E-SVN-%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Git 与 SVN 区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Git 安装配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Git 基本原理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Git 基本操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建新仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A3%80%E5%87%BA%E4%BB%93%E5%BA%93"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">检出仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%92%8C%E6%8F%90%E4%BA%A4"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">添加和提交</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8E%A8%E9%80%81%E6%94%B9%E5%8A%A8"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">推送改动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E6%94%AF"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E6%94%AF%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%90%88%E5%B9%B6"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">分支更新与合并</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%BF%E6%8D%A2%E6%9C%AC%E5%9C%B0%E6%94%B9%E5%8A%A8"><span class="toc-nav-number">2.8.</span> <span class="toc-nav-text">替换本地改动</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Git 权限控制介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Git%E8%A7%92%E8%89%B2%E4%BB%8B%E7%BB%8D"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Git角色介绍</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Git-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Git 版本管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8B%E9%A1%B9%E7%9B%AE"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">建立项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">分支管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Feature-branches"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">Feature branches</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Release-branch"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">Release branch</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Hotfix-branches"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">Hotfix branches</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">操作流程</span></a></li></ol>
         
         </div>
       </aside>
@@ -1031,7 +1031,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 5.2 Linux 下手动安装 Zookeeper - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">562</span> In Total
+              Words <span class="post-count">568</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -474,7 +474,7 @@
 
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用手动安装的方式部署。</p>
 <p><strong>注意</strong>： 集群为大于等于3个奇数，如 3、5、7,不宜太多，集群机器多了选举和数据同步耗时长，不稳定。</p>
-<h2 id="单机模式"><a href="#单机模式" class="headerlink" title="单机模式"></a>单机模式</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>进入要下载的版本的目录，选择 <code>.tar.gz</code> 文件下载，下载链接：<a href="http://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">http://archive.apache.org/dist/zookeeper/</a></p>
+<h2 id="单机模式"><a href="#单机模式" class="headerlink" title="单机模式"></a>单机模式</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>进入要下载的版本的目录，选择 <code>.tar.gz</code> 文件下载，下载链接：<a target="_blank" rel="noopener" href="http://archive.apache.org/dist/zookeeper/">http://archive.apache.org/dist/zookeeper/</a></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>注意： 需要先安装 <code>Java</code></p>
 <p>使用 <code>tar</code> 解压要安装的目录即可，以 <code>3.5.6</code> 版本为例，解压到 <code>/usr/local/zookeeper-3.5.6</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper-3.5.6.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure>
@@ -494,19 +494,19 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper1/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper1/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
 
 <p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo '1' &gt; data/myid</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;1&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
 
 <h3 id="zookeeper2"><a href="#zookeeper2" class="headerlink" title="zookeeper2"></a>zookeeper2</h3><p><strong>修改配置文件</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper2/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper2/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
 
 <p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo '2' &gt; data/myid</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;2&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
 
 <h3 id="zookeeper3"><a href="#zookeeper3" class="headerlink" title="zookeeper3"></a>zookeeper3</h3><p><strong>修改配置文件</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper3/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper3/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
 
 <p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo '3' &gt; data/myid</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;3&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
 
 <h2 id="启动和停止-1"><a href="#启动和停止-1" class="headerlink" title="启动和停止"></a>启动和停止</h2><p>分别启动服务器，顺序无所谓</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br><span class="line">./zkServer.sh stop</span><br><span class="line">./zkServer.sh restart</span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
@@ -660,7 +660,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#单机模式"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单机模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#下载"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启动和停止"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">启动和停止</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#伪集群模式"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">伪集群模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">zookeeper1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">zookeeper2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">zookeeper3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#启动和停止-1"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">启动和停止</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#集群模式"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">集群模式</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单机模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">启动和停止</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">伪集群模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">zookeeper1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">zookeeper2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">zookeeper3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2-1"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">启动和停止</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">集群模式</span></a></li></ol>
         
         </div>
       </aside>
@@ -846,7 +846,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

@@ -146,7 +146,7 @@
       [IO] 1 IO 基础概念 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">900</span> In Total
+              Words <span class="post-count">910</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -505,10 +505,10 @@
 </tbody></table>
 <p>Java 语言默认是采用 UTF-8 来进行编码的，下面用 Java 来测试一下：</p>
 <ul>
-<li>测试 GBK 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">"Hello_安卓"</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        byteLen = str.getBytes(<span class="string">"gbk"</span>).length;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"字节长度："</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>测试 GBK 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        byteLen = str.getBytes(<span class="string">&quot;gbk&quot;</span>).length;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">10</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>测试 UTF-8 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">"Hello_安卓"</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = str.getBytes().length;</span><br><span class="line">    System.out.println(<span class="string">"字节长度："</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>测试 UTF-8 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = str.getBytes().length;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">12</span></span><br></pre></td></tr></table></figure>
 输出的结果，跟之前的规则是一致的，到这里，字节，编码方式，字符，以及他们之间的联系基本上介绍完了，理解了他们之间的关系，下面的 File 类跟 IO 之间的关系也就比较好理解了。</li>
 </ul>
@@ -660,7 +660,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#相关知识概念"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">相关知识概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基础概念"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基础概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#常见的编码方式"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">常见的编码方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#联系与区别"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">联系与区别</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">相关知识概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基础概念</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">常见的编码方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">联系与区别</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -846,7 +846,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

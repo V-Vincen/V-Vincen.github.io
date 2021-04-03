@@ -146,7 +146,7 @@
       [Java 杂记] Java 中 Char 数组转换为 List 集合 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">798</span> In Total
+              Words <span class="post-count">802</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,7 +473,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>近期在做公司需求的时候，碰到要将一个 String 转成 Char 数组再转换成 List 集合来操作的问题。在 Java 自带的 JDK 中并没有提供直接可以将 Char 数组转换成 List 集合的方法。刚开始我用了 <code>Arrays.asList(char[])</code> 来转换，但是这个方法转换后的结果是有问题的，并不是我想要的结果。那么我们接下来，来看下具体应该怎么做。直接看代码。</p>
-<h2 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">"小王Vincent"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span>[] chars = str.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> aChar : chars) &#123;</span><br><span class="line">        System.out.println(aChar);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    List&lt;<span class="keyword">char</span>[]&gt; charsArray = Arrays.asList(chars);</span><br><span class="line">    System.out.println(charsArray);</span><br><span class="line">    charsArray.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;小王Vincent&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span>[] chars = str.toCharArray();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">char</span> aChar : chars) &#123;</span><br><span class="line">        System.out.println(aChar);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    List&lt;<span class="keyword">char</span>[]&gt; charsArray = Arrays.asList(chars);</span><br><span class="line">    System.out.println(charsArray);</span><br><span class="line">    charsArray.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">小</span><br><span class="line">王</span><br><span class="line">V</span><br><span class="line">i</span><br><span class="line"><span class="built_in">n</span></span><br><span class="line">c</span><br><span class="line">e</span><br><span class="line"><span class="built_in">n</span></span><br><span class="line"><span class="built_in">t</span></span><br><span class="line"></span><br><span class="line">[[C@<span class="number">76</span>ccd017]</span><br><span class="line">小王Vincent</span><br></pre></td></tr></table></figure>
@@ -491,7 +491,7 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[小, 王, V, i, n, c, e, n, t]</span><br></pre></td></tr></table></figure>
 <p>没毛病，这就是我们要的结果，但是这样简单粗暴的写法完全体现不出我们编码上的逼格，那么如何写才能体现出我们高大上的编码逼格呢。如下例。</p>
 <h2 id="例四"><a href="#例四" class="headerlink" title="例四"></a>例四</h2><p>两种写法，第一种方法是 <code>Guava</code> jar 包提供的 <code>Chars.asList（</code>）方法；第二种方法是利用 JDK 8 提供的 <code>lambda</code> 流式编程。如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">"小王Vincent"</span>;</span><br><span class="line">    List&lt;Character&gt; characters = Chars.asList(str.toCharArray());</span><br><span class="line">    System.out.println(characters);</span><br><span class="line"></span><br><span class="line">    List&lt;Character&gt; characters2 = str.chars().mapToObj(c -&gt; (<span class="keyword">char</span>) c).collect(Collectors.toList());</span><br><span class="line">    System.out.println(characters2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;小王Vincent&quot;</span>;</span><br><span class="line">    List&lt;Character&gt; characters = Chars.asList(str.toCharArray());</span><br><span class="line">    System.out.println(characters);</span><br><span class="line"></span><br><span class="line">    List&lt;Character&gt; characters2 = str.chars().mapToObj(c -&gt; (<span class="keyword">char</span>) c).collect(Collectors.toList());</span><br><span class="line">    System.out.println(characters2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[小, 王, V, i, n, c, e, n, t]</span><br><span class="line">[小, 王, V, i, n, c, e, n, t]</span><br></pre></td></tr></table></figure>
@@ -644,7 +644,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#例一"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">例一</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#例二"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">例二</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#例三"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">例三</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#例四"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">例四</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E4%B8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">例一</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E4%BA%8C"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">例二</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E4%B8%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">例三</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E5%9B%9B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">例四</span></a></li></ol>
         
         </div>
       </aside>
@@ -830,7 +830,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

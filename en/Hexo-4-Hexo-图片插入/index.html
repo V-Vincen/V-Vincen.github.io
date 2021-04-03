@@ -146,7 +146,7 @@
       [Hexo] 4 Hexo 图片插入 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -475,20 +475,20 @@
         <p>在网上查了一下有以下几种方式往hexo文章中插入图片</p>
 <h3 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h3><hr>
 <p><strong>绝对路径</strong><br>当Hexo项目中只用到少量图片时，可以将图片统一放在<code>source/images</code>文件夹中，通过markdown语法访问它们。对于<code>source/images/image.jpg</code>这张图片可以用以下语法访问到</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(/images/image.jpg)</span><br></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="regexp">/images/im</span>age.jpg)</span><br></pre></td></tr></table></figure>
 <p>图片既可以在首页内容中访问到，也可以在文章正文中访问到。</p>
 <p><strong>相对路径</strong><br>图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置博客根目录下的<code>_config.yml</code>来生成。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>将<code>_config.yml</code>文件中的配置项<code>post_asset_folder</code>设为<code>true</code>后，执行命<code>令$ hexo new post_name</code>，在<code>source/_posts</code>中会生成文章<code>post_name.md</code>和同名文件夹<code>post_name</code>。</p>
 <p>将<code>_config.yml</code>文件中的配置项<code>relative_link</code>设为<code>true</code>后，将图片资源放在<code>post_name</code>中，文章就可以使用相对路径引用图片资源了。<code>_posts/post_name/image.jpg</code>这张照片可以用以下方式访问：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(<span class="selector-tag">image</span><span class="selector-class">.jpg</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(image.jpg)</span><br></pre></td></tr></table></figure>
 <p>上述markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。<br>如果希望图片在文章和首页中同时显示，可以使用标签插件语法。<code>_posts/post_name/image.jpg</code>这张照片可以用以下方式访问：</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="symbol">%</span> asset_img <span class="built_in">image</span>.jpg This <span class="built_in">is</span> an <span class="built_in">image</span> <span class="symbol">%</span>&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="CDN引用"><a href="#CDN引用" class="headerlink" title="CDN引用"></a>CDN引用</h3><hr>
-<p>除了在本地存储图片，还可以将图片上传到一些免费的CDN服务中。因国内访问github速度较慢，所以将突破放到国内图床上，然后引用外链是常用的方法。<br>常用图床总结：<a href="https://sspai.com/post/40499" target="_blank" rel="noopener">https://sspai.com/post/40499</a></p>
+<p>除了在本地存储图片，还可以将图片上传到一些免费的CDN服务中。因国内访问github速度较慢，所以将突破放到国内图床上，然后引用外链是常用的方法。<br>常用图床总结：<a target="_blank" rel="noopener" href="https://sspai.com/post/40499">https://sspai.com/post/40499</a></p>
 <blockquote>
 <p>图床，也就是专门提供存储图片的地方，我们只要通过图床提供的 API 接口，把图片上传上去，就可以通过外链访问了，根本不用操心图片是怎么存的，硬盘空间不够了，硬盘坏了，访问速度比较慢等等问题，这些图床都会帮我们搞定，他们会用各种技术帮我们做图片相 &gt; 关的优化和服务，比如多机互备、CDN 加速、图片处理、图片鉴黄、文本识别等等。</p>
 </blockquote>
@@ -502,7 +502,7 @@
 <li>微博图床（Chrome浏览器有个“新浪微博图床”插件，可以自动生成markdown链接）简单方便</li>
 <li>七牛：需要注册且实名认证等太麻烦，放弃</li>
 <li>腾讯云等云存储服务，需要先将照片放到云盘，然后找到超链接，然后粘贴到文章。太麻烦，放弃。</li>
-<li>【强烈推荐！！！】ipic 工具，具体用法请谷歌，支持监控剪贴板，一键上传到微博图床，免费版默认是微博图床，支持七牛云等，下载地址: <a href="https://itunes.apple.com/cn/app/id1101244278?mt=12" target="_blank" rel="noopener">https://itunes.apple.com/cn/app/id1101244278?mt=12</a></li>
+<li>【强烈推荐！！！】ipic 工具，具体用法请谷歌，支持监控剪贴板，一键上传到微博图床，免费版默认是微博图床，支持七牛云等，下载地址: <a target="_blank" rel="noopener" href="https://itunes.apple.com/cn/app/id1101244278?mt=12">https://itunes.apple.com/cn/app/id1101244278?mt=12</a></li>
 </ul>
 <h3 id="使用GitHub（亲测可用）"><a href="#使用GitHub（亲测可用）" class="headerlink" title="使用GitHub（亲测可用）"></a>使用GitHub（亲测可用）</h3><hr>
 <p>使用github存储博客图片</p>
@@ -510,7 +510,7 @@
 <li>创建一个空的repo</li>
 <li>然后将图片push到repo中</li>
 <li>点击图片进去，有个download，右键复制链接</li>
-<li>将链接插入文章<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">logo</span>](<span class="link">https://github.com/xxxx/xx.jpg</span>)</span><br></pre></td></tr></table></figure></li>
+<li>将链接插入文章<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![logo](https:<span class="regexp">//gi</span>thub.com<span class="regexp">/xxxx/</span>xx.jpg)</span><br></pre></td></tr></table></figure></li>
 </ul>
 
 
@@ -660,7 +660,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#本地引用"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本地引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CDN引用"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">CDN引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用GitHub（亲测可用）"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">使用GitHub（亲测可用）</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%95%E7%94%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">本地引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CDN%E5%BC%95%E7%94%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">CDN引用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8GitHub%EF%BC%88%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">使用GitHub（亲测可用）</span></a></li></ol>
         
         </div>
       </aside>
@@ -846,7 +846,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

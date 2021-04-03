@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 10 Dubbo + Kryo 实现高速序列化 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -501,10 +501,10 @@
 
 <h3 id="增加配置"><a href="#增加配置" class="headerlink" title="增加配置"></a>增加配置</h3><p><img src="1.png" alt="1"></p>
 <h3 id="注册被序列化类"><a href="#注册被序列化类" class="headerlink" title="注册被序列化类"></a>注册被序列化类</h3><p>要让 Kryo 和 FST 完全发挥出高性能，最好将那些需要被序列化的类注册到 dubbo 系统中，例如，我们可以实现如下回调接口：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SerializationOptimizerImpl</span> <span class="keyword">implements</span> <span class="title">SerializationOptimizer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Collection&lt;Class&gt; <span class="title">getSerializableClasses</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Class&gt; classes = <span class="keyword">new</span> LinkedList&lt;Class&gt;();</span><br><span class="line">        classes.add(BidRequest<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        classes.add(BidResponse<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        classes.add(Device<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        classes.add(Geo<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        classes.add(Impression<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        classes.add(SeatBid<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        <span class="keyword">return</span> classes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SerializationOptimizerImpl</span> <span class="keyword">implements</span> <span class="title">SerializationOptimizer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Collection&lt;Class&gt; <span class="title">getSerializableClasses</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;Class&gt; classes = <span class="keyword">new</span> LinkedList&lt;Class&gt;();</span><br><span class="line">        classes.add(BidRequest.class);</span><br><span class="line">        classes.add(BidResponse.class);</span><br><span class="line">        classes.add(Device.class);</span><br><span class="line">        classes.add(Geo.class);</span><br><span class="line">        classes.add(Impression.class);</span><br><span class="line">        classes.add(SeatBid.class);</span><br><span class="line">        <span class="keyword">return</span> classes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在注册这些类后，序列化的性能可能被大大提升，特别针对小数量的嵌套对象的时候。</p>
 <p>当然，在对一个类做序列化的时候，可能还级联引用到很多类，比如 Java 集合类。针对这种情况，我们已经自动将 JDK 中的常用类进行了注册，所以你不需要重复注册它们（当然你重复注册了也没有任何影响），包括：</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">GregorianCalendar</span><br><span class="line">InvocationHandler</span><br><span class="line">BigDecimal</span><br><span class="line">BigInteger</span><br><span class="line">Pattern</span><br><span class="line">BitSet</span><br><span class="line">URI</span><br><span class="line">UUID</span><br><span class="line">HashMap</span><br><span class="line">ArrayList</span><br><span class="line">LinkedList</span><br><span class="line">HashSet</span><br><span class="line">TreeSet</span><br><span class="line">Hashtable</span><br><span class="line">Date</span><br><span class="line">Calendar</span><br><span class="line">ConcurrentHashMap</span><br><span class="line">SimpleDateFormat</span><br><span class="line">Vector</span><br><span class="line">BitSet</span><br><span class="line">StringBuffer</span><br><span class="line">StringBuilder</span><br><span class="line"><span class="selector-tag">Object</span></span><br><span class="line"><span class="selector-tag">Object</span><span class="selector-attr">[]</span></span><br><span class="line">String<span class="selector-attr">[]</span></span><br><span class="line">byte<span class="selector-attr">[]</span></span><br><span class="line">char<span class="selector-attr">[]</span></span><br><span class="line">int<span class="selector-attr">[]</span></span><br><span class="line"><span class="attribute">float</span><span class="selector-attr">[]</span></span><br><span class="line">double<span class="selector-attr">[]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">GregorianCalendar</span><br><span class="line">InvocationHandler</span><br><span class="line">BigDecimal</span><br><span class="line">BigInteger</span><br><span class="line">Pattern</span><br><span class="line">BitSet</span><br><span class="line">URI</span><br><span class="line">UUID</span><br><span class="line">HashMap</span><br><span class="line">ArrayList</span><br><span class="line">LinkedList</span><br><span class="line">HashSet</span><br><span class="line">TreeSet</span><br><span class="line">Hashtable</span><br><span class="line">Date</span><br><span class="line">Calendar</span><br><span class="line">ConcurrentHashMap</span><br><span class="line">SimpleDateFormat</span><br><span class="line">Vector</span><br><span class="line">BitSet</span><br><span class="line">StringBuffer</span><br><span class="line">StringBuilder</span><br><span class="line"><span class="selector-tag">Object</span></span><br><span class="line"><span class="selector-tag">Object</span><span class="selector-attr">[]</span></span><br><span class="line">String<span class="selector-attr">[]</span></span><br><span class="line">byte<span class="selector-attr">[]</span></span><br><span class="line">char<span class="selector-attr">[]</span></span><br><span class="line">int<span class="selector-attr">[]</span></span><br><span class="line"><span class="attribute">float</span><span class="selector-attr">[]</span></span><br><span class="line">double<span class="selector-attr">[]</span></span><br></pre></td></tr></table></figure>
 
 <p>由于注册被序列化的类仅仅是出于性能优化的目的，所以即使你忘记注册某些类也没有关系。事实上，即使不注册任何类，Kryo 和 FST 的性能依然普遍优于 hessian 和 dubbo 序列化。</p>
 <h2 id="为什么需要手动注册"><a href="#为什么需要手动注册" class="headerlink" title="为什么需要手动注册"></a>为什么需要手动注册</h2><p>当然，有人可能会问为什么不用配置文件来注册这些类？这是因为要注册的类往往数量较多，导致配置文件冗长；而且在没有好的 IDE 支持的情况下，配置文件的编写和重构都比 Java 类麻烦得多；最后，这些注册的类一般是不需要在项目编译打包后还需要做动态修改的。</p>
@@ -513,7 +513,7 @@
 <p>当然，在自动注册机制中，特别需要考虑如何保证服务提供端和消费端都以同样的顺序（或者 ID）来注册类，避免错位，毕竟两端可被发现然后注册的类的数量可能都是不一样的。</p>
 <h2 id="无参构造函数和-Serializable-接口"><a href="#无参构造函数和-Serializable-接口" class="headerlink" title="无参构造函数和 Serializable 接口"></a>无参构造函数和 Serializable 接口</h2><p>如果被序列化的类中<strong>不包含无参的构造函数，则在 Kryo 的序列化中，性能将会大打折扣</strong>，因为此时我们在底层将用 Java 的序列化来透明的取代 Kryo 序列化。所以，<strong>尽可能为每一个被序列化的类添加无参构造函数是一种最佳实践</strong>（当然一个 Java 类如果不自定义构造函数，默认就有无参构造函数）。</p>
 <p>另外，Kryo 和 FST 都不需要被序列化类实现 Serializable 接口，但我们还是<strong>建议每个被序列化类都去实现 Serializable 接口，因为这样可以保持和 Java 序列化以及 dubbo 序列化的兼容性</strong>，另外也使我们未来采用上述某些自动注册机制带来可能。</p>
-<p>案例源码：<a href="https://github.com/V-Vincen/hello-dubbo" target="_blank" rel="noopener">https://github.com/V-Vincen/hello-dubbo</a></p>
+<p>案例源码：<a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hello-dubbo">https://github.com/V-Vincen/hello-dubbo</a></p>
 
 
         <hr>
@@ -662,7 +662,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-中的序列化"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Dubbo 中的序列化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#启用-Kryo"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">启用 Kryo</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#增加-Kryo-依赖"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">增加 Kryo 依赖</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#增加配置"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">增加配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#注册被序列化类"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">注册被序列化类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为什么需要手动注册"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">为什么需要手动注册</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#无参构造函数和-Serializable-接口"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">无参构造函数和 Serializable 接口</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-%E4%B8%AD%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Dubbo 中的序列化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E7%94%A8-Kryo"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">启用 Kryo</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0-Kryo-%E4%BE%9D%E8%B5%96"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">增加 Kryo 依赖</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">增加配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B3%A8%E5%86%8C%E8%A2%AB%E5%BA%8F%E5%88%97%E5%8C%96%E7%B1%BB"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">注册被序列化类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%89%8B%E5%8A%A8%E6%B3%A8%E5%86%8C"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">为什么需要手动注册</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%97%A0%E5%8F%82%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C-Serializable-%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">无参构造函数和 Serializable 接口</span></a></li></ol>
         
         </div>
       </aside>
@@ -848,7 +848,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

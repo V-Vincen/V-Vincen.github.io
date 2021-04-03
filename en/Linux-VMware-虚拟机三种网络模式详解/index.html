@@ -146,7 +146,7 @@
       [Linux] VMware 虚拟机三种网络模式详解 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -542,7 +542,7 @@
 <p>重启网卡，然后通过 远程工具测试能否联通外网以及与主机通信。</p>
 <p><img src="31.png" alt="31"></p>
 <p>测试结果证明可以使得虚拟机连接外网。以上就是关于 VMware 三种网络模式的工作原理及配置详解。</p>
-<p>参考：<a href="https://www.cnblogs.com/linjiaxin/p/6476480.html" target="_blank" rel="noopener">https://www.cnblogs.com/linjiaxin/p/6476480.html</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/linjiaxin/p/6476480.html">https://www.cnblogs.com/linjiaxin/p/6476480.html</a></p>
 
 
         <hr>
@@ -691,7 +691,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#VMware-三种网络模式"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">VMware 三种网络模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Bridged（桥接模式）"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Bridged（桥接模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#如何设置桥接模式"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">如何设置桥接模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NAT（地址转换模式）"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">NAT（地址转换模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#如何设置地址转换模式"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">如何设置地址转换模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Host-Only（仅主机模式）"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Host-Only（仅主机模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#如何设置仅主机模式"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">如何设置仅主机模式</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#VMware-%E4%B8%89%E7%A7%8D%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">VMware 三种网络模式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Bridged%EF%BC%88%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Bridged（桥接模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">如何设置桥接模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NAT%EF%BC%88%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">NAT（地址转换模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">如何设置地址转换模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Host-Only%EF%BC%88%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Host-Only（仅主机模式）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">如何设置仅主机模式</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -877,7 +877,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

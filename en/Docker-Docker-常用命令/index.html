@@ -146,7 +146,7 @@
       [Docker] Docker 常用命令 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">972</span> In Total
+              Words <span class="post-count">976</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -489,7 +489,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t &lt;image-name&gt; &lt;docker-file-location&gt;</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull <span class="tag">&lt;<span class="name">镜像名:版本号</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull <span class="attribute">&lt;镜像名:版本号&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull ubuntu:16.04</span><br></pre></td></tr></table></figure>
@@ -557,7 +557,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> [-it] &lt;NAMES&gt; bash</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">docker <span class="built_in">exec</span> [-it] &lt;CONTAINER ID&gt; bash</span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">69d137adef7a8a689cbcb059e94da5489d3cddd240ff675c640c8d96e84fe1f6</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">69d137adef7a        ubuntu:latest       <span class="string">"/bin/bash"</span>         18 seconds ago      Up 17 seconds                           zealous_swirles</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -i 69d1 bash</span><br><span class="line">ls</span><br><span class="line">bin</span><br><span class="line">boot</span><br><span class="line">dev</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -it 69d1 bash</span><br><span class="line">root@69d137adef7a:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">69d137adef7a8a689cbcb059e94da5489d3cddd240ff675c640c8d96e84fe1f6</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">69d137adef7a        ubuntu:latest       <span class="string">&quot;/bin/bash&quot;</span>         18 seconds ago      Up 17 seconds                           zealous_swirles</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -i 69d1 bash</span><br><span class="line">ls</span><br><span class="line">bin</span><br><span class="line">boot</span><br><span class="line">dev</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -it 69d1 bash</span><br><span class="line">root@69d137adef7a:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="停止运行容器"><a href="#停止运行容器" class="headerlink" title="停止运行容器"></a>停止运行容器</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker stop &lt;CONTAINER ID&gt;</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">docker stop &lt;NAMES&gt;</span><br></pre></td></tr></table></figure>
 
@@ -575,7 +575,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker container prune</span><br></pre></td></tr></table></figure>
 
 <p>例子：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~<span class="comment"># docker ps -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES</span><br><span class="line">ffaa86bd3601        tomcat              <span class="string">"bash"</span>              4 minutes ago       Exited (0) 3 minutes ago                       vigorous_bohr</span><br><span class="line"></span><br><span class="line">root@ubuntu:~<span class="comment"># docker rm vigorous_bohr</span></span><br><span class="line">vigorous_bohr</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~<span class="comment"># docker ps -a</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES</span><br><span class="line">ffaa86bd3601        tomcat              <span class="string">&quot;bash&quot;</span>              4 minutes ago       Exited (0) 3 minutes ago                       vigorous_bohr</span><br><span class="line"></span><br><span class="line">root@ubuntu:~<span class="comment"># docker rm vigorous_bohr</span></span><br><span class="line">vigorous_bohr</span><br></pre></td></tr></table></figure>
 
 <h2 id="数据卷命令"><a href="#数据卷命令" class="headerlink" title="数据卷命令"></a>数据卷命令</h2><h3 id="查看所有数据卷"><a href="#查看所有数据卷" class="headerlink" title="查看所有数据卷"></a>查看所有数据卷</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
 
@@ -731,7 +731,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看-Docker-版本"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">查看 Docker 版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#构建-Docker-镜像"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">构建 Docker 镜像</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#commit-构建"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">commit 构建</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#build-构建"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">build 构建</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#镜像命令"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">镜像命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#拉取镜像"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">拉取镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看镜像"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">查看镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除本地镜像"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">删除本地镜像</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#容器命令"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">容器命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#运行容器"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">运行容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#进入容器"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">进入容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#停止运行容器"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">停止运行容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看容器"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">查看容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除容器"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">删除容器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据卷命令"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">数据卷命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看所有数据卷"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">查看所有数据卷</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除数据卷"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">删除数据卷</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B-Docker-%E7%89%88%E6%9C%AC"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">查看 Docker 版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E5%BB%BA-Docker-%E9%95%9C%E5%83%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">构建 Docker 镜像</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#commit-%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">commit 构建</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#build-%E6%9E%84%E5%BB%BA"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">build 构建</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%95%9C%E5%83%8F%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">镜像命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">拉取镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">查看镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">删除本地镜像</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">容器命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">运行容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">进入容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%81%9C%E6%AD%A2%E8%BF%90%E8%A1%8C%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">停止运行容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">查看容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">删除容器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8D%B7%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">数据卷命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%8D%B7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">查看所有数据卷</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E5%8D%B7"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">删除数据卷</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -917,7 +917,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

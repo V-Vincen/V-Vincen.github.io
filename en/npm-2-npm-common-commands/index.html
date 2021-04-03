@@ -146,7 +146,7 @@
       [npm] 2 npm common commands - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -546,7 +546,7 @@
 <h3 id="npm-config（配置路径管理）"><a href="#npm-config（配置路径管理）" class="headerlink" title="npm config（配置路径管理）"></a><code>npm config</code>（配置路径管理）</h3><p>语法帮助：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">➜  jsDeliver git:(master) npm config -h</span><br><span class="line">npm config set &lt;key&gt; &lt;value&gt;</span><br><span class="line">npm config get [&lt;key&gt;]</span><br><span class="line">npm config delete &lt;key&gt;</span><br><span class="line">npm config list [--json]</span><br><span class="line">npm config edit</span><br><span class="line">npm set &lt;key&gt; &lt;value&gt;</span><br><span class="line">npm get [&lt;key&gt;]</span><br><span class="line"></span><br><span class="line">alias: c</span><br></pre></td></tr></table></figure>
 <ul>
-<li>语法介绍：所有 <code>npm</code> 配置参数可在官网查看（<a href="https://docs.npmjs.com/misc/config" target="_blank" rel="noopener">npm config</a>）<ul>
+<li>语法介绍：所有 <code>npm</code> 配置参数可在官网查看（<a target="_blank" rel="noopener" href="https://docs.npmjs.com/misc/config">npm config</a>）<ul>
 <li><code>npm config set &lt;key&gt; &lt;value&gt;</code>：或 <code>npm set &lt;key&gt; &lt;value&gt;</code>，设置或修改某项 <code>npm</code> 配置。如通过 <code>npm config set proxy=***</code> 设置代理来解决公司内网无法安装 <code>npm</code> 依赖，通过 <code>npm config set registry=&quot;https://registry.npm.taobao.org&quot;</code> 切换 <code>npm</code> 仓库源为淘宝镜像来解决无法访问 <code>npm</code> 源或下载依赖慢的问题</li>
 <li><code>npm config get &lt;key&gt;</code>：或 <code>npm get [&lt;key&gt;]</code>，查看某项 <code>npm</code> 配置</li>
 <li><code>npm config delete &lt;key&gt;</code>：删除某项 <code>npm</code> 配置</li>
@@ -585,7 +585,7 @@
 <li><code>npm login</code>：同 <code>npm adduser</code>，登录 <code>npm</code> 社区账号，如下所示：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  jsDeliver git:(master) npm login</span><br><span class="line">Username: vincent</span><br><span class="line">Password:</span><br><span class="line">Email:（this IS public）601521821@qq.com</span><br><span class="line">Logged in as vincent on https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;.</span><br></pre></td></tr></table></figure>
 </li>
 <li><code>npm publish</code>：发布 <code>npm</code> 包  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜  jsDeliver git:(master) npm publish -h</span><br><span class="line">npm publish [&lt;tarball&gt;|&lt;folder&gt;] [--tag &lt;tag&gt;] [--access &lt;public|restricted&gt;] [--dry-run]</span><br><span class="line"></span><br><span class="line">Publishes &#39;.&#39; if no argument supplied</span><br><span class="line"></span><br><span class="line">Sets tag &#96;latest&#96; if no --tag specified</span><br></pre></td></tr></table></figure>
-  参考：<a href="https://www.jianshu.com/p/a89a3a95046f" target="_blank" rel="noopener">https://www.jianshu.com/p/a89a3a95046f</a></li>
+  参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a89a3a95046f">https://www.jianshu.com/p/a89a3a95046f</a></li>
 </ul>
 
 
@@ -735,7 +735,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#npm-命令"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">npm 命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-init（初始化）"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">npm init（初始化）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-install（模块安装）"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">npm install（模块安装）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-uninstall（模块卸载）"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">npm uninstall（模块卸载）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-update（模块更新）"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">npm update（模块更新）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-outdated（检查模块是否过时）"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">npm outdated（检查模块是否过时）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-ls（查看安装的模块）"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">npm ls（查看安装的模块）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-config（配置路径管理）"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">npm config（配置路径管理）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-cache（缓存管理）"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">npm cache（缓存管理）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-version（查看版本）"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">npm version（查看版本）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-help"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">npm help</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-root（查看依赖包安装路径）"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">npm root（查看依赖包安装路径）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-run（执行脚本）"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">npm run（执行脚本）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-发布包相关命令"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">npm 发布包相关命令</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#npm-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">npm 命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-init%EF%BC%88%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">npm init（初始化）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-install%EF%BC%88%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">npm install（模块安装）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-uninstall%EF%BC%88%E6%A8%A1%E5%9D%97%E5%8D%B8%E8%BD%BD%EF%BC%89"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">npm uninstall（模块卸载）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-update%EF%BC%88%E6%A8%A1%E5%9D%97%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">npm update（模块更新）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-outdated%EF%BC%88%E6%A3%80%E6%9F%A5%E6%A8%A1%E5%9D%97%E6%98%AF%E5%90%A6%E8%BF%87%E6%97%B6%EF%BC%89"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">npm outdated（检查模块是否过时）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-ls%EF%BC%88%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E7%9A%84%E6%A8%A1%E5%9D%97%EF%BC%89"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">npm ls（查看安装的模块）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-config%EF%BC%88%E9%85%8D%E7%BD%AE%E8%B7%AF%E5%BE%84%E7%AE%A1%E7%90%86%EF%BC%89"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">npm config（配置路径管理）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-cache%EF%BC%88%E7%BC%93%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%89"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">npm cache（缓存管理）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-version%EF%BC%88%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%EF%BC%89"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">npm version（查看版本）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-help"><span class="toc-nav-number">1.10.</span> <span class="toc-nav-text">npm help</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-root%EF%BC%88%E6%9F%A5%E7%9C%8B%E4%BE%9D%E8%B5%96%E5%8C%85%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%EF%BC%89"><span class="toc-nav-number">1.11.</span> <span class="toc-nav-text">npm root（查看依赖包安装路径）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-run%EF%BC%88%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%EF%BC%89"><span class="toc-nav-number">1.12.</span> <span class="toc-nav-text">npm run（执行脚本）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#npm-%E5%8F%91%E5%B8%83%E5%8C%85%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.13.</span> <span class="toc-nav-text">npm 发布包相关命令</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -921,7 +921,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

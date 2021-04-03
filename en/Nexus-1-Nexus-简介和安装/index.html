@@ -146,7 +146,7 @@
       [Nexus] 1 Nexus 简介和安装 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">333</span> In Total
+              Words <span class="post-count">335</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -481,14 +481,14 @@
 <li>增加对 Docker, NeGet, npm, Bower 的支持。</li>
 <li>提供新的管理接口，以及增强对自动任务的管理。</li>
 </ul>
-<h2 id="基于-Docker-安装-Nexus"><a href="#基于-Docker-安装-Nexus" class="headerlink" title="基于 Docker 安装 Nexus"></a>基于 Docker 安装 Nexus</h2><p>GitLab 官网 Docker Hub 下载地址：<a href="https://hub.docker.com/r/sonatype/nexus3" target="_blank" rel="noopener">https://hub.docker.com/r/sonatype/nexus3</a></p>
+<h2 id="基于-Docker-安装-Nexus"><a href="#基于-Docker-安装-Nexus" class="headerlink" title="基于 Docker 安装 Nexus"></a>基于 Docker 安装 Nexus</h2><p>GitLab 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/sonatype/nexus3">https://hub.docker.com/r/sonatype/nexus3</a></p>
 <p>我们使用 Docker 来安装和运行 Nexus，配置版本为最新版 3.18 版。</p>
-<h3 id="docker-compose-yml-配置如下"><a href="#docker-compose-yml-配置如下" class="headerlink" title="docker-compose.yml 配置如下"></a><code>docker-compose.yml</code> 配置如下</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3.1'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nexus:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">sonatype/nexus3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8081</span><span class="string">:8081</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/nexus/data:/nexus-data</span></span><br></pre></td></tr></table></figure>
+<h3 id="docker-compose-yml-配置如下"><a href="#docker-compose-yml-配置如下" class="headerlink" title="docker-compose.yml 配置如下"></a><code>docker-compose.yml</code> 配置如下</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nexus:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">sonatype/nexus3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8081</span><span class="string">:8081</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/nexus/data:/nexus-data</span></span><br></pre></td></tr></table></figure>
 <p><font color=red>注意：</font>启动时如果出现权限问题可以使用：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /usr/<span class="built_in">local</span>/docker/nexus/data</span><br></pre></td></tr></table></figure>
 <p>赋予数据卷目录可读可写的权限</p>
 <h3 id="登录控制台验证安装"><a href="#登录控制台验证安装" class="headerlink" title="登录控制台验证安装"></a>登录控制台验证安装</h3><ul>
-<li>访问地址：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">http://ip:8081</a> （默认端口号8081）</li>
+<li>访问地址：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:8081</a> （默认端口号8081）</li>
 <li>默认用户名：<code>admin</code>，默认密码在 <code>/nexus-data/admin.password</code> 内（老版本默认密码：<code>admin123</code>）</li>
 </ul>
 <p><img src="1.png" alt="1"></p>
@@ -500,7 +500,7 @@
 <li>允许匿名访问</li>
 </ul>
 <p><img src="3.png" alt="3"></p>
-<p><a href="https://help.sonatype.com/repomanager3/security/anonymous-access" target="_blank" rel="noopener">更多配置</a></p>
+<p><a target="_blank" rel="noopener" href="https://help.sonatype.com/repomanager3/security/anonymous-access">更多配置</a></p>
 
 
         <hr>
@@ -649,7 +649,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基于-Docker-安装-Nexus"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">基于 Docker 安装 Nexus</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-compose-yml-配置如下"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">docker-compose.yml 配置如下</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#登录控制台验证安装"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">登录控制台验证安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#初始化设置"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">初始化设置</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E4%BA%8E-Docker-%E5%AE%89%E8%A3%85-Nexus"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">基于 Docker 安装 Nexus</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-compose-yml-%E9%85%8D%E7%BD%AE%E5%A6%82%E4%B8%8B"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">docker-compose.yml 配置如下</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%99%BB%E5%BD%95%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">登录控制台验证安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%BE%E7%BD%AE"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">初始化设置</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -835,7 +835,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

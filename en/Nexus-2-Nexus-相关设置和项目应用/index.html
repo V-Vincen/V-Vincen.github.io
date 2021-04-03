@@ -146,7 +146,7 @@
       [Nexus] 2 Nexus 相关设置和项目应用 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -513,7 +513,7 @@
 <p><strong>填写详细信息</strong></p>
 <ul>
 <li><code>Name</code>：maven-aliyun（为代理起个名字）</li>
-<li><code>Remote Storage</code>：<a href="http://maven.aliyun.com/nexus/content/groups/public" target="_blank" rel="noopener">http://maven.aliyun.com/nexus/content/groups/public</a> （代理的地址，Maven 仓库的地址）</li>
+<li><code>Remote Storage</code>：<a target="_blank" rel="noopener" href="http://maven.aliyun.com/nexus/content/groups/public">http://maven.aliyun.com/nexus/content/groups/public</a> （代理的地址，Maven 仓库的地址）</li>
 <li><code>Blob Store</code>: default （代理下载包的存放路径）</li>
 </ul>
 <p><img src="5.png" alt="5"></p>
@@ -543,7 +543,7 @@
 <li>建议在上传第三方 <code>JAR</code> 包时，创建单独的第三方 <code>JAR</code> 包管理仓库，便于管理有维护。（maven-3rd）</li>
 <li><code>-DrepositoryId=nexus-releases</code> 对应的是 <code>settings.xml</code> 中 <code>Servers</code> 配置的 <code>ID</code> 名称。（授权）</li>
 </ul>
-<p>更多 Nexus 使用说明：<a href="https://help.sonatype.com/repomanager3/release-notes" target="_blank" rel="noopener">https://help.sonatype.com/repomanager3/release-notes</a></p>
+<p>更多 Nexus 使用说明：<a target="_blank" rel="noopener" href="https://help.sonatype.com/repomanager3/release-notes">https://help.sonatype.com/repomanager3/release-notes</a></p>
 <h2 id="在项目中使用-Maven-私服"><a href="#在项目中使用-Maven-私服" class="headerlink" title="在项目中使用 Maven 私服"></a>在项目中使用 Maven 私服</h2><h3 id="配置认证信息"><a href="#配置认证信息" class="headerlink" title="配置认证信息"></a>配置认证信息</h3><p>在 Maven <code>settings.xml</code> 中添加 Nexus 认证信息（<code>servers</code> 节点下）：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-releases<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">username</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">password</span>&gt;</span>admin123<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-snapshots<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">username</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">password</span>&gt;</span>admin123<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -552,13 +552,13 @@
 <li><code>nexus-snapshots</code>: 用于发布 Snapshot 版本（快照版）</li>
 </ul>
 <p>Release 版本与 Snapshot 定义如下：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Release: <span class="number">1.0</span><span class="number">.0</span>/<span class="number">1.0</span><span class="number">.0</span>-RELEASE</span><br><span class="line">Snapshot: <span class="number">1.0</span><span class="number">.0</span>-SNAPSHOT</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Release</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span>/<span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span>-RELEASE</span><br><span class="line"><span class="attribute">Snapshot</span>: <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span>-SNAPSHOT</span><br></pre></td></tr></table></figure>
 <ul>
 <li>在项目 <code>pom.xml</code> 中设置的版本号添加 <code>SNAPSHOT</code> 标识的都会发布为 <code>SNAPSHOT</code> 版本，没有 <code>SNAPSHOT</code> 标识的都会发布为 <code>RELEASE</code> 版本。</li>
 <li><code>SNAPSHOT</code> 版本会自动加一个时间作为标识，如：<code>1.0.0-SNAPSHOT</code> 发布后为变成 <code>1.0.0-SNAPSHOT-20180522.123456-1.jar</code></li>
 </ul>
 <h3 id="配置自动化部署"><a href="#配置自动化部署" class="headerlink" title="配置自动化部署"></a>配置自动化部署</h3><p>在 <code>pom.xml</code> 中添加如下代码：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">distributionManagement</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">repository</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-releases<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Release Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://ip:8081/repository/maven-releases/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">repository</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">snapshotRepository</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-snapshots<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Snapshot Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://ip:8081/repository/maven-snapshots/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">snapshotRepository</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">distributionManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">distributionManagement</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">repository</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-releases<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Release Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://ip:8081/repository/maven-releases/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">repository</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">snapshotRepository</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-snapshots<span class="tag">&lt;/<span class="name">id</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Snapshot Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://ip:8081/repository/maven-snapshots/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">snapshotRepository</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">distributionManagement</span>&gt;</span> </span><br></pre></td></tr></table></figure>
 <p>注意事项：</p>
 <ul>
 <li><code>ID</code> 名称必须要与 <code>settings.xml</code> 中 Servers 配置的 <code>ID</code> 名称保持一致。</li>
@@ -713,7 +713,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-仓库分类"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Nexus 仓库分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#代理仓库（proxy）"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">代理仓库（proxy）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#宿主仓库（hosted）"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">宿主仓库（hosted）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#仓库组（group）"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">仓库组（group）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-创建仓库"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Nexus 创建仓库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建-proxy-类型-Repositories"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建 proxy 类型 Repositories</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建-hosted-类型-Repositories"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">创建 hosted 类型 Repositories</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改-group-类型-Repositories"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改 group 类型 Repositories</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-创建存储区"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Nexus 创建存储区</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-上传第三方-JAR-包"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Nexus 上传第三方 JAR 包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nexus-支持页面上传"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Nexus 支持页面上传</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#或采用-maven-命令上传"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">或采用 maven 命令上传</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在项目中使用-Maven-私服"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">在项目中使用 Maven 私服</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置认证信息"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">配置认证信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Snapshots-与-Releases-的区别"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">Snapshots 与 Releases 的区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置自动化部署"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">配置自动化部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#配置代理仓库"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">配置代理仓库</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-%E4%BB%93%E5%BA%93%E5%88%86%E7%B1%BB"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Nexus 仓库分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%A3%E7%90%86%E4%BB%93%E5%BA%93%EF%BC%88proxy%EF%BC%89"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">代理仓库（proxy）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%BF%E4%B8%BB%E4%BB%93%E5%BA%93%EF%BC%88hosted%EF%BC%89"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">宿主仓库（hosted）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%93%E5%BA%93%E7%BB%84%EF%BC%88group%EF%BC%89"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">仓库组（group）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Nexus 创建仓库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-proxy-%E7%B1%BB%E5%9E%8B-Repositories"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">创建 proxy 类型 Repositories</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-hosted-%E7%B1%BB%E5%9E%8B-Repositories"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">创建 hosted 类型 Repositories</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9-group-%E7%B1%BB%E5%9E%8B-Repositories"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">修改 group 类型 Repositories</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-%E5%88%9B%E5%BB%BA%E5%AD%98%E5%82%A8%E5%8C%BA"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Nexus 创建存储区</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nexus-%E4%B8%8A%E4%BC%A0%E7%AC%AC%E4%B8%89%E6%96%B9-JAR-%E5%8C%85"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Nexus 上传第三方 JAR 包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nexus-%E6%94%AF%E6%8C%81%E9%A1%B5%E9%9D%A2%E4%B8%8A%E4%BC%A0"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Nexus 支持页面上传</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%88%96%E9%87%87%E7%94%A8-maven-%E5%91%BD%E4%BB%A4%E4%B8%8A%E4%BC%A0"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">或采用 maven 命令上传</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8-Maven-%E7%A7%81%E6%9C%8D"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">在项目中使用 Maven 私服</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">配置认证信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Snapshots-%E4%B8%8E-Releases-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">Snapshots 与 Releases 的区别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">配置自动化部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E4%BB%93%E5%BA%93"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">配置代理仓库</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -899,7 +899,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

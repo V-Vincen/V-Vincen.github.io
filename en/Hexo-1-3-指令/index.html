@@ -146,7 +146,7 @@
       [Hexo] 1.3 指令 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">558</span> In Total
+              Words <span class="post-count">560</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -475,8 +475,8 @@
         <h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init [folder]</span></span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
 <h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new [layout] &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
-<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">_config.yml</a> 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">"post title with whitespace"</span></span></span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">_config.yml</a> 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">&quot;post title with whitespace&quot;</span></span></span><br></pre></td></tr></table></figure>
 
 <h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo generate</span></span><br></pre></td></tr></table></figure>
 <p>生成静态文件。</p>
@@ -558,7 +558,7 @@
 </tr>
 </tbody></table>
 <h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo migrate &lt;<span class="built_in">type</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>从其他博客系统 <a href="https://hexo.io/zh-cn/docs/migration" target="_blank" rel="noopener">迁移内容</a></p>
+<p>从其他博客系统 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/migration">迁移内容</a></p>
 <h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
 <p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
 <p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
@@ -570,7 +570,7 @@
 <h3 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo --safe</span></span><br></pre></td></tr></table></figure>
 <p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
 <h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo --debug</span></span><br></pre></td></tr></table></figure>
-<p>在终端中显示调试信息并记录到 <code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并 <a href="https://github.com/hexojs/hexo/issues/new" target="_blank" rel="noopener">提交调试信息到 GitHub</a>。</p>
+<p>在终端中显示调试信息并记录到 <code>debug.log</code>。当您碰到问题时，可以尝试用调试模式重新执行一次，并 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/new">提交调试信息到 GitHub</a>。</p>
 <h3 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo --silent</span></span><br></pre></td></tr></table></figure>
 <p>隐藏终端信息。</p>
 <h3 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo --config custom.yml</span></span><br></pre></td></tr></table></figure>
@@ -727,7 +727,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#init"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#new"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">new</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#generate"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">generate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#publish"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">publish</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#server"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">server</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#deploy"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">deploy</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#render"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">render</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#migrate"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">migrate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#clean"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">clean</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#list"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">list</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#version"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">version</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#选项"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">选项</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安全模式"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text">安全模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#调试模式"><span class="toc-nav-number">11.3.</span> <span class="toc-nav-text">调试模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#简洁模式"><span class="toc-nav-number">11.4.</span> <span class="toc-nav-text">简洁模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自定义配置文件的路径"><span class="toc-nav-number">11.5.</span> <span class="toc-nav-text">自定义配置文件的路径</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#显示草稿"><span class="toc-nav-number">11.6.</span> <span class="toc-nav-text">显示草稿</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自定义-CWD"><span class="toc-nav-number">11.7.</span> <span class="toc-nav-text">自定义 CWD</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#init"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#new"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">new</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#generate"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">generate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#publish"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">publish</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#server"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">server</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#deploy"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">deploy</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#render"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">render</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#migrate"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">migrate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#clean"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">clean</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#list"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">list</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#version"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">version</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%89%E9%A1%B9"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">选项</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text">安全模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">11.3.</span> <span class="toc-nav-text">调试模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E6%B4%81%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">11.4.</span> <span class="toc-nav-text">简洁模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-nav-number">11.5.</span> <span class="toc-nav-text">自定义配置文件的路径</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%98%BE%E7%A4%BA%E8%8D%89%E7%A8%BF"><span class="toc-nav-number">11.6.</span> <span class="toc-nav-text">显示草稿</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-CWD"><span class="toc-nav-number">11.7.</span> <span class="toc-nav-text">自定义 CWD</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -913,7 +913,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

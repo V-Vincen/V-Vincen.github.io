@@ -146,7 +146,7 @@
       [Logback] 1 Logback 介绍 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -472,9 +472,9 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 <a href="https://github.com/YLongo/logback-chinese-manual" target="_blank" rel="noopener">YLongo/logback-chinese-manual</a> 此项目为 <code>logback 中文手册</code>。</p>
-<p>项目在线地址：<a href="https://logbackcn.gitbook.io/logback" target="_blank" rel="noopener">https://logbackcn.gitbook.io/logback</a></p>
-<p>Logback 官网地址：<a href="https://logback.qos.ch/manual/index.html" target="_blank" rel="noopener">https://logback.qos.ch/manual/index.html</a></p>
+        <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 <a target="_blank" rel="noopener" href="https://github.com/YLongo/logback-chinese-manual">YLongo/logback-chinese-manual</a> 此项目为 <code>logback 中文手册</code>。</p>
+<p>项目在线地址：<a target="_blank" rel="noopener" href="https://logbackcn.gitbook.io/logback">https://logbackcn.gitbook.io/logback</a></p>
+<p>Logback 官网地址：<a target="_blank" rel="noopener" href="https://logback.qos.ch/manual/index.html">https://logback.qos.ch/manual/index.html</a></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Logback 继承自 log4j。</p>
 <p>Logback 的架构非常的通用，适用不同的使用场景。Logback 被分成三个不同的模块：logback-core，logback-classic，logback-access。</p>
 <p>logback-core 是其它两个模块的基础。logback-classic 模块可以看作是 log4j 的一个优化版本，它天然的支持 SLF4J，所以你可以随意的从其它日志框架（例如：log4j 或者 java.util.logging）切回到 logack。</p>
@@ -482,19 +482,19 @@
 <h2 id="什么是-logback"><a href="#什么是-logback" class="headerlink" title="什么是 logback"></a>什么是 logback</h2><p>logback 继承自 log4j，它建立在有十年工业经验的日志系统之上。它比其它所有的日志系统更快并且更小，包含了许多独特并且有用的特性。</p>
 <h2 id="天才第一步"><a href="#天才第一步" class="headerlink" title="天才第一步"></a>天才第一步</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>logback-classic 模块需要在 classpath 添加 slf4j-api.jar、logback-core.jar 以及 logback-classic.jar。</p>
 <p><em>Example 1.1: Basic template for logging</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.introduction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Logger logger = LoggerFactory.getLogger(<span class="string">"chapters.introduction.HelloWorld1"</span>);</span><br><span class="line">        logger.debug(<span class="string">"hello world"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.introduction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Logger logger = LoggerFactory.getLogger(<span class="string">&quot;chapters.introduction.HelloWorld1&quot;</span>);</span><br><span class="line">        logger.debug(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>类 <code>HelloWorld1</code> 定义在包 <code>chapters.introduction</code> 中，它导入了两个类 <code>Logger</code>、<code>LoggerFactory</code>，这两个类定义在 SLF4J API 中，在 org.slf4j 包中。</p>
 <p>在这个例子中，<code>main()</code> 包含了一个 DEBUG 级别的日志语句，输出信息为 “hello world”</p>
 <p>运行 <code>HelloWord1</code> 将会在控制台看到一行日志。由于 logback 默认的配置策略：当没有默认的配置时，logback 将会在 root logger 中新增一个 <code>ConsoleAppender</code> </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11<span class="selector-pseudo">:58</span><span class="selector-pseudo">:56.662</span> <span class="selector-attr">[main]</span> <span class="selector-tag">DEBUG</span> <span class="selector-tag">chapters</span><span class="selector-class">.introduction</span><span class="selector-class">.HelloWorld1</span> <span class="selector-tag">-</span> <span class="selector-tag">hello</span> <span class="selector-tag">world</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">11</span>:<span class="number">58</span>:<span class="number">56</span>.<span class="number">662</span><span class="meta"> [main] DEBUG chapters.introduction.HelloWorld1 - hello world</span></span><br></pre></td></tr></table></figure>
 
 <p>Logback 通过一个内部的状态系统来报告它本身的状态信息。发生在 logback 生命周期中的事件可以通过 <code>StatusManager</code> 来获取。</p>
 <p><em>Example: Printing Logger Status</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.introduction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Logger logger = LoggerFactory.getLogger(<span class="string">"chapters.introduction.HelloWorld2"</span>);</span><br><span class="line">        logger.debug(<span class="string">"Hello world"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 打印内部的状态</span></span><br><span class="line">        LoggerContext lc = (LoggerContext)LoggerFactory.getILoggerFactory();</span><br><span class="line">        StatusPrinter.print(lc);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.introduction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.LoggerContext;</span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.core.util.StatusPrinter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld2</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Logger logger = LoggerFactory.getLogger(<span class="string">&quot;chapters.introduction.HelloWorld2&quot;</span>);</span><br><span class="line">        logger.debug(<span class="string">&quot;Hello world&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 打印内部的状态</span></span><br><span class="line">        LoggerContext lc = (LoggerContext)LoggerFactory.getILoggerFactory();</span><br><span class="line">        StatusPrinter.print(lc);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49.324</span> [main] DEBUG chapters.introduction.HelloWorld2 - Hello world</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback-test.xml]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback.groovy]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback.xml]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">262</span> |-INFO in ch.qos.logback.classic.BasicConfigurator@<span class="number">2e5</span>d6d97 - Setting up <span class="keyword">default</span> configuration.</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49.324</span> [main] DEBUG chapters.introduction.HelloWorld2 - Hello world</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback-test.xml]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback.groovy]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">258</span> |-INFO in ch.qos.logback.classic.LoggerContext[<span class="keyword">default</span>] - Could NOT find resource [logback.xml]</span><br><span class="line"><span class="number">12</span>:<span class="number">23</span>:<span class="number">49</span>,<span class="number">262</span> |-INFO in ch.qos.logback.classic.BasicConfigurator@2e5d6d97 - Setting up <span class="keyword">default</span> configuration.</span><br></pre></td></tr></table></figure>
 
 <p>Logback 没有找到 <em>logback-test.xml</em> 和 <em>logback.xml</em> 配置文件，所以通过默认的配置策略-添加一个基本的 <code>ConsoleAppender</code> 来进行配置。<code>Appender</code> 类被看作为输出的目的地。Appenders 包括 console，files，Syslog，TCP Sockets，JMS 等等其它的日志输出目的地。用户可以根据自己的情况轻松的创建自己的 Appender。</p>
 <p>如果发生了错误，logback 会自动在控制台打印自己内部的状态信息。</p>
@@ -657,7 +657,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#声明"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">声明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#简介"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#什么是-logback"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">什么是 logback</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#天才第一步"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">天才第一步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#要求"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">要求</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#构建-logback"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">构建 logback</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">声明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-logback"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">什么是 logback</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A4%A9%E6%89%8D%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">天才第一步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A6%81%E6%B1%82"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">要求</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E5%BB%BA-logback"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">构建 logback</span></a></li></ol>
         
         </div>
       </aside>
@@ -843,7 +843,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

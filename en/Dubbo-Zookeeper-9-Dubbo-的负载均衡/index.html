@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 9 Dubbo 的负载均衡 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">662</span> In Total
+              Words <span class="post-count">666</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -488,7 +488,7 @@
 <h3 id="ConsistentHash-LoadBalance"><a href="#ConsistentHash-LoadBalance" class="headerlink" title="ConsistentHash LoadBalance"></a>ConsistentHash LoadBalance</h3><ul>
 <li><strong>一致性 Hash</strong>，相同参数的请求总是发到同一提供者。</li>
 <li>当某一台提供者挂时，原本发往该提供者的请求，基于虚拟节点，平摊到其它提供者，不会引起剧烈变动。</li>
-<li>算法参见：<a href="http://en.wikipedia.org/wiki/Consistent_hashing" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Consistent_hashing</a></li>
+<li>算法参见：<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Consistent_hashing">http://en.wikipedia.org/wiki/Consistent_hashing</a></li>
 <li>缺省只对第一个参数 Hash，如果要修改，请配置 <code>&lt;dubbo:parameter key=&quot;hash.arguments&quot; value=&quot;0,1&quot; /&gt;</code></li>
 <li>缺省用 160 份虚拟节点，如果要修改，请配置 <code>&lt;dubbo:parameter key=&quot;hash.nodes&quot; value=&quot;320&quot; /&gt;</code></li>
 </ul>
@@ -497,21 +497,21 @@
 <h3 id="客户端服务级别"><a href="#客户端服务级别" class="headerlink" title="客户端服务级别"></a>客户端服务级别</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">consumer:</span></span><br><span class="line">    <span class="attr">loadbalance:</span> <span class="string">leastactive</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="测试负载均衡"><a href="#测试负载均衡" class="headerlink" title="测试负载均衡"></a>测试负载均衡</h2><p>修改 <code>UserServiceImpl</code> 代码为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.service.user.api.UserService;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.Reference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Reference</span>(version = <span class="string">"$&#123;user.service.version&#125;"</span>)</span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/hi"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.service.user.api.UserService;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.Reference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Reference(version = &quot;$&#123;user.service.version&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(value = &quot;/hi&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>注入了端口属性，当消费者访问时可以看出是从哪个端口请求的数据。</p>
 <h3 id="修改负载均衡策略为轮询"><a href="#修改负载均衡策略为轮询" class="headerlink" title="修改负载均衡策略为轮询"></a>修改负载均衡策略为轮询</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">provider:</span></span><br><span class="line">    <span class="attr">loadbalance:</span> <span class="string">roundrobin</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h3><p>修改端口号并分别启动服务提供者，此时访问服务消费者：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">http://localhost:9090/hi</a></p>
+<h3 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h3><p>修改端口号并分别启动服务提供者，此时访问服务消费者：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://localhost:9090/hi</a></p>
 <p>浏览器会交替显示：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello Dubbo , i am <span class="keyword">from</span> port:<span class="number">12345</span></span><br><span class="line">Hello Dubbo , i am <span class="keyword">from</span> port:<span class="number">12346</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12345</span></span><br><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12346</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="附：在-IDEA-中配置一个工程启动多个实例"><a href="#附：在-IDEA-中配置一个工程启动多个实例" class="headerlink" title="附：在 IDEA 中配置一个工程启动多个实例"></a>附：在 IDEA 中配置一个工程启动多个实例</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>点击 <code>Run -&gt; Edit Configurations...</code></p>
 <p><img src="1.png" alt="1"></p>
 <h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>选择需要启动多实例的项目并勾上 <code>Allow parallel run</code> 前面的勾。</p>
 <p><img src="2.png" alt="2"></p>
 <h3 id="步骤三"><a href="#步骤三" class="headerlink" title="步骤三"></a>步骤三</h3><p>通过修改 <code>application.yml</code> 配置文件的 <code>dubbo.protocol.port</code> 的端口，启动多个实例，需要多个端口，分别进行启动即可。</p>
-<p>案例源码：<a href="https://github.com/V-Vincen/hello-dubbo" target="_blank" rel="noopener">https://github.com/V-Vincen/hello-dubbo</a></p>
+<p>案例源码：<a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hello-dubbo">https://github.com/V-Vincen/hello-dubbo</a></p>
 
 
         <hr>
@@ -660,7 +660,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#负载均衡策略"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">负载均衡策略</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Random-LoadBalance"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Random LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#RoundRobin-LoadBalance"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">RoundRobin LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#LeastActive-LoadBalance"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">LeastActive LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConsistentHash-LoadBalance"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">ConsistentHash LoadBalance</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#服务端服务级别"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">服务端服务级别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#客户端服务级别"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">客户端服务级别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试负载均衡"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">测试负载均衡</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改负载均衡策略为轮询"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">修改负载均衡策略为轮询</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#测试访问"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">测试访问</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#附：在-IDEA-中配置一个工程启动多个实例"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">附：在 IDEA 中配置一个工程启动多个实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#步骤一"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">步骤一</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#步骤二"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">步骤二</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#步骤三"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">步骤三</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">负载均衡策略</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Random-LoadBalance"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Random LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#RoundRobin-LoadBalance"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">RoundRobin LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#LeastActive-LoadBalance"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">LeastActive LoadBalance</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ConsistentHash-LoadBalance"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">ConsistentHash LoadBalance</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">服务端服务级别</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">客户端服务级别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">测试负载均衡</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BF%AE%E6%94%B9%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5%E4%B8%BA%E8%BD%AE%E8%AF%A2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">修改负载均衡策略为轮询</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E8%AE%BF%E9%97%AE"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">测试访问</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%99%84%EF%BC%9A%E5%9C%A8-IDEA-%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%E5%90%AF%E5%8A%A8%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">附：在 IDEA 中配置一个工程启动多个实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">步骤一</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">步骤二</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">步骤三</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -846,7 +846,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

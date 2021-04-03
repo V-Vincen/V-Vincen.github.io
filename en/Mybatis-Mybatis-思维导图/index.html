@@ -146,7 +146,7 @@
       [Mybatis] Mybatis 思维导图 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -472,7 +472,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>参考：<a href="https://www.jianshu.com/p/06b73e8d9f56" target="_blank" rel="noopener">https://www.jianshu.com/p/06b73e8d9f56</a></p>
+        <p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/06b73e8d9f56">https://www.jianshu.com/p/06b73e8d9f56</a></p>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Mybatis 与 Hibernate 相比：简单上手和掌握；sql 语句和代码分开，方便统一管理和优化；当然缺点也有：sql 工作量很大，尤其是字段多、关联表多时，更是如此。而且 sql 依赖于数据库，导致数据库移植性差。</p>
 <h2 id="Mybatis简介"><a href="#Mybatis简介" class="headerlink" title="Mybatis简介"></a>Mybatis简介</h2><p>MyBatis 是支持普通 SQL 查询，存储过程和高级映射的优秀持久层框架。MyBatis 消除了几乎所有的 JDBC 代码和参数的手工设置以及结果集的检索。MyBatis 使用简单的 XML 或注解用于配置和原始映射，将接口和 Java 的 POJOs（Plain Old Java Objects，普通的 Java 对象）映射成数据库中的记录。</p>
 <h2 id="直接上思维导图"><a href="#直接上思维导图" class="headerlink" title="直接上思维导图"></a>直接上思维导图</h2><h3 id="mybatis-简介"><a href="#mybatis-简介" class="headerlink" title="mybatis 简介"></a>mybatis 简介</h3><p><img src="1.png" alt="1"></p>
@@ -634,7 +634,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写在前面"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mybatis简介"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Mybatis简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#直接上思维导图"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">直接上思维导图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-简介"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">mybatis 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#与-hibernate-对比"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">与 hibernate 对比</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#几个关键类"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">几个关键类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-执行浅析"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">mybatis 执行浅析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MyBatis-框架整体设计"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">MyBatis 框架整体设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-初始化与执行-sql-过程"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">mybatis 初始化与执行 sql 过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-源码的几个主要部件"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">mybatis 源码的几个主要部件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-映射配置文件（一）"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">XML 映射配置文件（一）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-映射配置文件（二）"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">XML 映射配置文件（二）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-映射配置文件（三）"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">XML 映射配置文件（三）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#写在最后"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">写在最后</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mybatis%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Mybatis简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8A%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">直接上思维导图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">mybatis 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8E-hibernate-%E5%AF%B9%E6%AF%94"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">与 hibernate 对比</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%87%A0%E4%B8%AA%E5%85%B3%E9%94%AE%E7%B1%BB"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">几个关键类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-%E6%89%A7%E8%A1%8C%E6%B5%85%E6%9E%90"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">mybatis 执行浅析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#MyBatis-%E6%A1%86%E6%9E%B6%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">MyBatis 框架整体设计</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E6%89%A7%E8%A1%8C-sql-%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">3.6.</span> <span class="toc-nav-text">mybatis 初始化与执行 sql 过程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mybatis-%E6%BA%90%E7%A0%81%E7%9A%84%E5%87%A0%E4%B8%AA%E4%B8%BB%E8%A6%81%E9%83%A8%E4%BB%B6"><span class="toc-nav-number">3.7.</span> <span class="toc-nav-text">mybatis 源码的几个主要部件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-nav-number">3.8.</span> <span class="toc-nav-text">XML 映射配置文件（一）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-nav-number">3.9.</span> <span class="toc-nav-text">XML 映射配置文件（二）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%88%E4%B8%89%EF%BC%89"><span class="toc-nav-number">3.10.</span> <span class="toc-nav-text">XML 映射配置文件（三）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">写在最后</span></a></li></ol>
         
         </div>
       </aside>
@@ -820,7 +820,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

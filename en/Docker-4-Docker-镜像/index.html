@@ -146,7 +146,7 @@
       [Docker] 4 Docker 镜像 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -481,10 +481,10 @@
 <li>介绍镜像实现的基本原理。</li>
 </ul>
 <h2 id="镜像的实现原理"><a href="#镜像的实现原理" class="headerlink" title="镜像的实现原理"></a>镜像的实现原理</h2><p>Docker 镜像是怎么实现增量的修改和维护的？</p>
-<p>每个镜像都由很多层次构成，Docker 使用 <a href="http://en.wikipedia.org/wiki/UnionFS" target="_blank" rel="noopener">Union FS</a> 将这些不同的层结合到一个镜像中去。</p>
+<p>每个镜像都由很多层次构成，Docker 使用 <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/UnionFS">Union FS</a> 将这些不同的层结合到一个镜像中去。</p>
 <p>通常 Union FS 有两个用途, 一方面可以实现不借助 LVM、RAID 将多个 disk 挂到同一个目录下,另一个更常用的就是将一个只读的分支和一个可写的分支联合在一起，Live CD 正是基于此方法可以允许在镜像不变的基础上允许用户在其上进行一些写操作。</p>
 <p>Docker 在 AUFS 上构建的容器也是利用了类似的原理。</p>
-<h2 id="Docker-获取镜像"><a href="#Docker-获取镜像" class="headerlink" title="Docker 获取镜像"></a>Docker 获取镜像</h2><p>之前提到过，<a href="https://hub.docker.com/explore/" target="_blank" rel="noopener">Docker Hub</a> 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像。</p>
+<h2 id="Docker-获取镜像"><a href="#Docker-获取镜像" class="headerlink" title="Docker 获取镜像"></a>Docker 获取镜像</h2><p>之前提到过，<a target="_blank" rel="noopener" href="https://hub.docker.com/explore/">Docker Hub</a> 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像。</p>
 <p>从 Docker 镜像仓库获取镜像的命令是 <code>docker pull</code>。其命令格式为：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]</span><br></pre></td></tr></table></figure>
 <p>具体的选项可以通过 <code>docker pull --help</code> 命令看到，这里我们说一下镜像名称的格式。</p>
@@ -497,7 +497,7 @@
 <p>在使用上面命令的时候，你可能会发现，你所看到的层 ID 以及 <code>sha256</code> 的摘要和这里的不一样。这是因为官方镜像是一直在维护的，有任何新的 bug，或者版本更新，都会进行修复再以原来的标签发布，这样可以确保任何使用这个标签的用户可以获得更安全、更稳定的镜像。</p>
 <p>如果从 Docker Hub 下载镜像非常缓慢，可以参照 <code>镜像加速器</code> 一节配置加速器。</p>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>有了镜像后，我们就能够以这个镜像为基础启动并运行一个容器。以上面的 <code>ubuntu:16.04</code> 为例，如果我们打算启动里面的 <code>bash</code> 并且进行交互式操作的话，可以执行下面的命令。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it --rm \</span><br><span class="line">    ubuntu:16.04 \</span><br><span class="line">    bash</span><br><span class="line"></span><br><span class="line">root@e7009c6ce357:/<span class="comment"># cat /etc/os-release</span></span><br><span class="line">NAME=<span class="string">"Ubuntu"</span></span><br><span class="line">VERSION=<span class="string">"16.04.4 LTS, Trusty Tahr"</span></span><br><span class="line">ID=ubuntu</span><br><span class="line">ID_LIKE=debian</span><br><span class="line">PRETTY_NAME=<span class="string">"Ubuntu 16.04.4 LTS"</span></span><br><span class="line">VERSION_ID=<span class="string">"16.04"</span></span><br><span class="line">HOME_URL=<span class="string">"http://www.ubuntu.com/"</span></span><br><span class="line">SUPPORT_URL=<span class="string">"http://help.ubuntu.com/"</span></span><br><span class="line">BUG_REPORT_URL=<span class="string">"http://bugs.launchpad.net/ubuntu/"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it --rm \</span><br><span class="line">    ubuntu:16.04 \</span><br><span class="line">    bash</span><br><span class="line"></span><br><span class="line">root@e7009c6ce357:/<span class="comment"># cat /etc/os-release</span></span><br><span class="line">NAME=<span class="string">&quot;Ubuntu&quot;</span></span><br><span class="line">VERSION=<span class="string">&quot;16.04.4 LTS, Trusty Tahr&quot;</span></span><br><span class="line">ID=ubuntu</span><br><span class="line">ID_LIKE=debian</span><br><span class="line">PRETTY_NAME=<span class="string">&quot;Ubuntu 16.04.4 LTS&quot;</span></span><br><span class="line">VERSION_ID=<span class="string">&quot;16.04&quot;</span></span><br><span class="line">HOME_URL=<span class="string">&quot;http://www.ubuntu.com/&quot;</span></span><br><span class="line">SUPPORT_URL=<span class="string">&quot;http://help.ubuntu.com/&quot;</span></span><br><span class="line">BUG_REPORT_URL=<span class="string">&quot;http://bugs.launchpad.net/ubuntu/&quot;</span></span><br></pre></td></tr></table></figure>
 <p><code>docker run</code> 就是运行容器的命令，我们这里简要的说明一下上面用到的参数。</p>
 <ul>
 <li><code>-it</code>：这是两个参数，一个是 <code>-i</code>：交互式操作，一个是 <code>-t</code> 终端。我们这里打算进入 <code>bash</code> 执行一些命令并查看返回结果，因此我们需要交互式终端。</li>
@@ -655,7 +655,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#使用-Docker-镜像"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">使用 Docker 镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#镜像的实现原理"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">镜像的实现原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-获取镜像"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Docker 获取镜像</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#运行"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">运行</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-Docker-%E9%95%9C%E5%83%8F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">使用 Docker 镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%95%9C%E5%83%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">镜像的实现原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E8%8E%B7%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Docker 获取镜像</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">运行</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -841,7 +841,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

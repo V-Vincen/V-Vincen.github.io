@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 2 什么是分布式锁 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -496,18 +496,18 @@
 </ul>
 <h2 id="通过-Redis-分布式锁的实现理解基本概念"><a href="#通过-Redis-分布式锁的实现理解基本概念" class="headerlink" title="通过 Redis 分布式锁的实现理解基本概念"></a>通过 Redis 分布式锁的实现理解基本概念</h2><p>分布式锁实现的三个核心要素：</p>
 <h3 id="加锁"><a href="#加锁" class="headerlink" title="加锁"></a>加锁</h3><p>最简单的方法是使用 <code>setnx</code> 命令。<code>key</code> 是锁的唯一标识，按业务来决定命名。比如想要给一种商品的秒杀活动加锁，可以给 <code>key</code> 命名为 <code>lock_sale_商品ID</code> 。而 <code>value</code> 设置成什么呢？我们可以姑且设置成 1。加锁的伪代码如下：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setnx（lock_sale_商品ID，<span class="number">1</span>）</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setnx</span>（lock_sale_商品ID，<span class="number">1</span>）</span><br></pre></td></tr></table></figure>
 
 <p>当一个线程执行 <code>setnx</code> 返回 <code>1``，说明 </code>key<code>原本不存在，该线程成功得到了锁；当一个线程执行</code>setnx<code>返回</code>0<code>，说明 </code>key` 已经存在，该线程抢锁失败。</p>
 <h3 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h3><p>有加锁就得有解锁。当得到锁的线程执行完任务，需要释放锁，以便其他线程可以进入。释放锁的最简单方式是执行 <code>del</code> 指令，伪代码如下：</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">del</span>（lock_sale_商品ID）</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">del</span>（lock_sale_商品ID）</span><br></pre></td></tr></table></figure>
 
 <p>释放锁之后，其他线程就可以继续执行 <code>setnx</code> 命令来获得锁。</p>
 <h3 id="锁超时"><a href="#锁超时" class="headerlink" title="锁超时"></a>锁超时</h3><p>锁超时是什么意思呢？如果一个得到锁的线程在执行任务的过程中挂掉，来不及显式地释放锁，这块资源将会永远被锁住（<strong>死锁</strong>），别的线程再也别想进来。所以，<code>setnx</code> 的 <code>key</code> 必须设置一个超时时间，以保证即使没有被显式释放，这把锁也要在一定时间后自动释放。<code>setnx</code> 不支持超时参数，所以需要额外的指令，伪代码如下：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expire（lock_sale_商品ID， <span class="number">30</span>）</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">expire</span>（lock_sale_商品ID， <span class="number">30</span>）</span><br></pre></td></tr></table></figure>
 
 <p>综合伪代码如下：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（setnx（lock_sale_商品ID，<span class="number">1</span>） == <span class="number">1</span>）&#123;</span><br><span class="line">    expire（lock_sale_商品ID，<span class="number">30</span>）</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">do</span> something ......</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        del（lock_sale_商品ID）</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（setnx（lock_sale_商品ID，<span class="number">1</span>） == <span class="number">1</span>）&#123;</span><br><span class="line">    expire（lock_sale_商品ID，<span class="number">30</span>）</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">do</span> something ......</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="built_in">del</span>（lock_sale_商品ID）</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="存在什么问题"><a href="#存在什么问题" class="headerlink" title="存在什么问题"></a>存在什么问题</h3><p>以上伪代码中存在三个致命问题</p>
 <h4 id="setnx-和-expire-的非原子性"><a href="#setnx-和-expire-的非原子性" class="headerlink" title="setnx 和 expire 的非原子性"></a><code>setnx</code> 和 <code>expire</code> 的非原子性</h4><p>设想一个极端场景，当某线程执行 <code>setnx</code>，成功得到了锁：</p>
@@ -516,7 +516,7 @@
 <p><img src="4.png" alt="4"></p>
 <p>这样一来，这把锁就没有设置过期时间，变成<strong>死锁</strong>，别的线程再也无法获得锁了。</p>
 <p>怎么解决呢？<code>setnx</code> 指令本身是不支持传入超时时间的，<code>set</code> 指令增加了可选参数，伪代码如下：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>（lock_sale_商品ID，<span class="number">1</span>，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">set</span>（lock_sale_商品ID，<span class="number">1</span>，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure>
 
 <h4 id="del-导致误删"><a href="#del-导致误删" class="headerlink" title="del 导致误删"></a><code>del</code> 导致误删</h4><p>又是一个极端场景，假如某线程成功得到了锁，并且设置的超时时间是 30 秒。</p>
 <p><img src="5.png" alt="5"></p>
@@ -688,7 +688,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为什么要使用分布式锁"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">为什么要使用分布式锁</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分布式锁应该具备哪些条件"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">分布式锁应该具备哪些条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分布式锁的实现有哪些"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">分布式锁的实现有哪些</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#通过-Redis-分布式锁的实现理解基本概念"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">通过 Redis 分布式锁的实现理解基本概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#加锁"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">加锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解锁"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">解锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#锁超时"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">锁超时</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#存在什么问题"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">存在什么问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#setnx-和-expire-的非原子性"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">setnx 和 expire 的非原子性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#del-导致误删"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">del 导致误删</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#出现并发的可能性"><span class="toc-nav-number">5.4.3.</span> <span class="toc-nav-text">出现并发的可能性</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">为什么要使用分布式锁</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E5%BA%94%E8%AF%A5%E5%85%B7%E5%A4%87%E5%93%AA%E4%BA%9B%E6%9D%A1%E4%BB%B6"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">分布式锁应该具备哪些条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">分布式锁的实现有哪些</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%9A%E8%BF%87-Redis-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%90%86%E8%A7%A3%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">通过 Redis 分布式锁的实现理解基本概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%A0%E9%94%81"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">加锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%A7%A3%E9%94%81"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">解锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%94%81%E8%B6%85%E6%97%B6"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">锁超时</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AD%98%E5%9C%A8%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">存在什么问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#setnx-%E5%92%8C-expire-%E7%9A%84%E9%9D%9E%E5%8E%9F%E5%AD%90%E6%80%A7"><span class="toc-nav-number">5.4.1.</span> <span class="toc-nav-text">setnx 和 expire 的非原子性</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#del-%E5%AF%BC%E8%87%B4%E8%AF%AF%E5%88%A0"><span class="toc-nav-number">5.4.2.</span> <span class="toc-nav-text">del 导致误删</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%87%BA%E7%8E%B0%E5%B9%B6%E5%8F%91%E7%9A%84%E5%8F%AF%E8%83%BD%E6%80%A7"><span class="toc-nav-number">5.4.3.</span> <span class="toc-nav-text">出现并发的可能性</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -874,7 +874,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

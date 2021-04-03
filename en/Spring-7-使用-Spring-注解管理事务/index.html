@@ -146,7 +146,7 @@
       [Spring] 7 使用 Spring 注解管理事务 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">676</span> In Total
+              Words <span class="post-count">688</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,7 +473,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>通过 <code>@Transactional</code> 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 <code>tx</code> 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置事务管理器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">&lt;!-- 开启事务注解驱动 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"transactionManager"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置事务管理器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;transactionManager&quot;</span> <span class="attr">class</span>=<span class="string">&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">&lt;!-- 开启事务注解驱动 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">&quot;transactionManager&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Transactional-注解简介"><a href="#Transactional-注解简介" class="headerlink" title="@Transactional 注解简介"></a><code>@Transactional</code> 注解简介</h3><p><code>@Transactional</code> 的所有可选属性：</p>
 <ul>
@@ -489,7 +489,7 @@
 <p>需要注意的是，<code>@Transactional</code> 若用在方法上，只能用于 <code>public</code> 方法上。对于其他非 <code>public</code> 方法，如果加上了注解 <code>@Transactional</code>，虽然 Spring 不会报错，但不会将指定事务织入到该方法中。因为 Spring 会忽略掉所有非 <code>public</code> 方法上的 <code>@Transaction</code> 注解。</p>
 <p>若 @Transaction 注解在类上，则表示该类上所有的方法均将在执行时织入事务。</p>
 <h3 id="使用-Transactional-注解"><a href="#使用-Transactional-注解" class="headerlink" title="使用 @Transactional 注解"></a>使用 @Transactional 注解</h3><p>使用起来很简单，只需要在需要增加事务的业务类上增加 <code>@Transactional</code> 注解即可，案例代码如下：</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package com.hello.spring.transaction.aspectsj.aop.service.impl;</span><br><span class="line"></span><br><span class="line">import com.hello.spring.transaction.aspectsj.aop.dao.TbContentCategoryDao;</span><br><span class="line">import com.hello.spring.transaction.aspectsj.aop.domain.TbContent;</span><br><span class="line">import com.hello.spring.transaction.aspectsj.aop.domain.TbContentCategory;</span><br><span class="line">import com.hello.spring.transaction.aspectsj.aop.service.TbContentCategoryService;</span><br><span class="line">import com.hello.spring.transaction.aspectsj.aop.service.TbContentService;</span><br><span class="line">import org.springframework.beans.factory.<span class="keyword">annotation</span>.<span class="title">Autowired</span>;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line">import org.springframework.transaction.<span class="keyword">annotation</span>.<span class="title">Transactional</span>;</span><br><span class="line"></span><br><span class="line">@Transactional</span><br><span class="line">@Service(value = <span class="string">"tbContentCategoryService"</span>)</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">TbContentCategoryServiceImpl</span> <span class="title">implements</span> <span class="title">TbContentCategoryService</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    <span class="keyword">private</span> TbContentCategoryDao tbContentCategoryDao;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    <span class="keyword">private</span> TbContentService tbContentService;</span><br><span class="line"></span><br><span class="line">    public void save(TbContentCategory tbContentCategory, TbContent tbContent) &#123;</span><br><span class="line">        tbContentCategoryDao.insert(tbContentCategory);</span><br><span class="line">        tbContentService.save(tbContent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.hello.spring.transaction.aspectsj.aop.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.hello.spring.transaction.aspectsj.aop.dao.TbContentCategoryDao;</span><br><span class="line"><span class="keyword">import</span> com.hello.spring.transaction.aspectsj.aop.domain.TbContent;</span><br><span class="line"><span class="keyword">import</span> com.hello.spring.transaction.aspectsj.aop.domain.TbContentCategory;</span><br><span class="line"><span class="keyword">import</span> com.hello.spring.transaction.aspectsj.aop.service.TbContentCategoryService;</span><br><span class="line"><span class="keyword">import</span> com.hello.spring.transaction.aspectsj.aop.service.TbContentService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.Transactional;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span></span><br><span class="line"><span class="meta">@Service(value = &quot;tbContentCategoryService&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TbContentCategoryServiceImpl</span> <span class="keyword">implements</span> <span class="title">TbContentCategoryService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TbContentCategoryDao tbContentCategoryDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TbContentService tbContentService;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(TbContentCategory tbContentCategory, TbContent tbContent)</span> </span>&#123;</span><br><span class="line">        tbContentCategoryDao.insert(tbContentCategory);</span><br><span class="line">        tbContentService.save(tbContent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -637,7 +637,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Transactional-注解简介"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">@Transactional 注解简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用-Transactional-注解"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用 @Transactional 注解</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Transactional-%E6%B3%A8%E8%A7%A3%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">@Transactional 注解简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-Transactional-%E6%B3%A8%E8%A7%A3"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用 @Transactional 注解</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -823,7 +823,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

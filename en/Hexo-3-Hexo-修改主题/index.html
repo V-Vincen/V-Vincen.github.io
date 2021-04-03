@@ -146,7 +146,7 @@
       [Hexo] 3 Hexo 修改主题 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -472,14 +472,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>参考：<a href="https://lanmiao.oschina.io/2017/02/01/hexo4/" target="_blank" rel="noopener">hexo博客(四)：自定义主题并发布</a></p>
-<p><img src="5.png" alt="图片5"><br>这是 hexo 默认的主题，我们需要修改这个主题，那么我们可以去找一些符合我们个人爱好的一些主题<a href="https://hexo.io/themes/" target="_blank" rel="noopener">选择一个自己喜欢的 Hexo 主题</a><br>这个网站有很多主题可以供我们去选择，如下图所示。每一个主题都有对应网站可以预览，并且都有 Github 地址，我们可以照着 Github 的 wiki 就可以安装了，过程都比较简单。</p>
+        <p>参考：<a target="_blank" rel="noopener" href="https://lanmiao.oschina.io/2017/02/01/hexo4/">hexo博客(四)：自定义主题并发布</a></p>
+<p><img src="5.png" alt="图片5"><br>这是 hexo 默认的主题，我们需要修改这个主题，那么我们可以去找一些符合我们个人爱好的一些主题<a target="_blank" rel="noopener" href="https://hexo.io/themes/">选择一个自己喜欢的 Hexo 主题</a><br>这个网站有很多主题可以供我们去选择，如下图所示。每一个主题都有对应网站可以预览，并且都有 Github 地址，我们可以照着 Github 的 wiki 就可以安装了，过程都比较简单。</p>
 <p><img src="6.png" alt="图片6"></p>
 <blockquote>
 <p>我们这次安装主题也是上面这些主题中其中一个，它就是 <strong>LanMiao</strong> (A Pink and simple theme) 。</p>
 </blockquote>
 <h3 id="安装-LanMiao-主题"><a href="#安装-LanMiao-主题" class="headerlink" title="安装 LanMiao 主题"></a>安装 LanMiao 主题</h3><hr>
-<h5 id="下载：LanMiao-主题"><a href="#下载：LanMiao-主题" class="headerlink" title="下载：LanMiao 主题"></a>下载：<a href="https://github.com/hilanmiao/hexo-theme-lanmiao" target="_blank" rel="noopener">LanMiao 主题</a></h5><p>将主题克隆到 themes 目录下，以下截图就是 clone 之后的结果。</p>
+<h5 id="下载：LanMiao-主题"><a href="#下载：LanMiao-主题" class="headerlink" title="下载：LanMiao 主题"></a>下载：<a target="_blank" rel="noopener" href="https://github.com/hilanmiao/hexo-theme-lanmiao">LanMiao 主题</a></h5><p>将主题克隆到 themes 目录下，以下截图就是 clone 之后的结果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd &lt;博客存放的目录&gt;</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;hilanmiao&#x2F;hexo-theme-lanmiao</span><br></pre></td></tr></table></figure>
 <p><img src="7.png" alt="图片7"></p>
 <h5 id="使用：LanMiao-主题"><a href="#使用：LanMiao-主题" class="headerlink" title="使用：LanMiao 主题"></a>使用：LanMiao 主题</h5><p>打开在 Hexo 文件根目录下的 <code>_config.yml</code>，就是整个 hexo 框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。找到 <code>theme</code> 把 <code>landscape</code>修改为 <code>hexo-theme-lanmiao</code>：</p>
@@ -487,12 +487,12 @@
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">theme: hexo-theme-lanmiao</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Docs: https://hexo.io/docs/deployment.html</span></span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br></pre></td></tr></table></figure>
 
-<p>打开 Github 官网上 <a href="https://github.com/hilanmiao/hexo-theme-lanmiao" target="_blank" rel="noopener"><strong>LanMiao 主题</strong> 的地址</a>，认真阅读 <strong>LanMiao 主题</strong> 开发者的 README.md 文档：</p>
+<p>打开 Github 官网上 <a target="_blank" rel="noopener" href="https://github.com/hilanmiao/hexo-theme-lanmiao"><strong>LanMiao 主题</strong> 的地址</a>，认真阅读 <strong>LanMiao 主题</strong> 开发者的 README.md 文档：</p>
 <p><img src="8.png" alt="图片8"></p>
 <p>根据 <strong>README.md</strong> 文档，修改 Hexo 根目录下的 <code>_config.yml</code> 配置文件：</p>
 <p><img src="9.png" alt="图片9"></p>
 <p>然后在本地测试下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean &amp;  hexo g &amp; hexo s</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean &amp;  hexo g &amp; hexo s</span> </span><br></pre></td></tr></table></figure>
 
 <p>修改成功，推送到 Github 上：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean &amp;  hexo g &amp; hexo d</span></span><br></pre></td></tr></table></figure>
@@ -645,7 +645,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装-LanMiao-主题"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装 LanMiao 主题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#下载：LanMiao-主题"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">下载：LanMiao 主题</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#使用：LanMiao-主题"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">使用：LanMiao 主题</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-LanMiao-%E4%B8%BB%E9%A2%98"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装 LanMiao 主题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%EF%BC%9ALanMiao-%E4%B8%BB%E9%A2%98"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">下载：LanMiao 主题</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%EF%BC%9ALanMiao-%E4%B8%BB%E9%A2%98"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">使用：LanMiao 主题</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -831,7 +831,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

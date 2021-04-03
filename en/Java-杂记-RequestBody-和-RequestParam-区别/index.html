@@ -146,7 +146,7 @@
       [Java 杂记] @RequestBody 和 @RequestParam 区别 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -480,7 +480,7 @@
 </ul>
 <p>总而言之，这两个注解都可以在后台接收参数，但是使用场景不一样。继续往下看。</p>
 <h2 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a><code>@RequestParam</code></h2><p>先介绍一下 <code>@RequestParam</code> 的使用场景：</p>
-<p>注解 <code>@RequestParam</code> 接收的参数是<strong>来自 <code>requestHeader</code></strong> 中，即<strong>请求头</strong>。通常用于 <code>GET</code> 请求，比如常见的 <a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">url：http://localhost:8081/spring-boot-study/novel/findByAuthorAndType?author=唐家三少&amp;type=已完结</a> ，其在 Controller 层的写法如下图所示：</p>
+<p>注解 <code>@RequestParam</code> 接收的参数是<strong>来自 <code>requestHeader</code></strong> 中，即<strong>请求头</strong>。通常用于 <code>GET</code> 请求，比如常见的 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">url：http://localhost:8081/spring-boot-study/novel/findByAuthorAndType?author=唐家三少&amp;type=已完结</a> ，其在 Controller 层的写法如下图所示：</p>
 <p><img src="1.jpeg" alt="1.jpeg"></p>
 <p><code>@RequestParam</code> 有三个配置参数：</p>
 <ul>
@@ -661,7 +661,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#前言"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RequestParam"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">@RequestParam</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RequestBody"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">@RequestBody</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#案例：向表中批量插入数据"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">案例：向表中批量插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#后端解析-json-数据"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">后端解析 json 数据</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">总结</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RequestParam"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">@RequestParam</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RequestBody"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">@RequestBody</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%90%91%E8%A1%A8%E4%B8%AD%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">案例：向表中批量插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8E%E7%AB%AF%E8%A7%A3%E6%9E%90-json-%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">后端解析 json 数据</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -847,7 +847,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

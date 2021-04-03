@@ -146,7 +146,7 @@
       [Spring] 5 Spring 事务管理 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -504,8 +504,8 @@
 <h3 id="Spring-的回滚方式"><a href="#Spring-的回滚方式" class="headerlink" title="Spring 的回滚方式"></a>Spring 的回滚方式</h3><p>Spring 事务的默认回滚方式是：发生运行时异常回滚</p>
 <p><strong>例子：</strong></p>
 <ul>
-<li>多个异常类型，用数组：<code>@Transactional(rollbackFor={IOException.class,FileNoteFoundException})</code></li>
-<li>如果要指定遇到几个 RuntimeException 的时候不回滚：<code>@Transactional(noRollbackFor={NullPointerException.class,IndexOutOfBoundsException.class})</code></li>
+<li>多个异常类型，用数组：<code>@Transactional(rollbackFor=&#123;IOException.class,FileNoteFoundException&#125;)</code></li>
+<li>如果要指定遇到几个 RuntimeException 的时候不回滚：<code>@Transactional(noRollbackFor=&#123;NullPointerException.class,IndexOutOfBoundsException.class&#125;)</code></li>
 </ul>
 <h3 id="事务定义接口"><a href="#事务定义接口" class="headerlink" title="事务定义接口"></a>事务定义接口</h3><p>事务定义接口 TransactionDefinition 中定义了事务描述相关的三类常量：<strong>事务隔离级别（isolation）</strong>、<strong>事务传播行为（propagation）</strong>、<strong>事务默认超时时限</strong>，及对它们的操作。</p>
 <h4 id="事务的四种隔离级别"><a href="#事务的四种隔离级别" class="headerlink" title="事务的四种隔离级别"></a>事务的四种隔离级别</h4><ul>
@@ -707,7 +707,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事务特性：ACID"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">事务特性：ACID</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Spring-框架的事务管理支持两种方式"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Spring 框架的事务管理支持两种方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#编程式事务"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">编程式事务</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#申明式事务"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">申明式事务</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Spring-事务管理-API"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Spring 事务管理 API</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事务管理器接口"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">事务管理器接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Spring-的回滚方式"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">Spring 的回滚方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事务定义接口"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">事务定义接口</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#事务的四种隔离级别"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">事务的四种隔离级别</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#事务的七种传播行为"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">事务的七种传播行为</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事务注解例子："><span class="toc-nav-number">5.</span> <span class="toc-nav-text">事务注解例子：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Transactianal-注解有一些属性"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">@Transactianal 注解有一些属性</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7%EF%BC%9AACID"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">事务特性：ACID</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Spring-%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86%E6%94%AF%E6%8C%81%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Spring 框架的事务管理支持两种方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">编程式事务</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%B3%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">申明式事务</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Spring-%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86-API"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Spring 事务管理 API</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">事务管理器接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Spring-%E7%9A%84%E5%9B%9E%E6%BB%9A%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">Spring 的回滚方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E5%AE%9A%E4%B9%89%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">事务定义接口</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E7%A7%8D%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-nav-number">4.3.1.</span> <span class="toc-nav-text">事务的四种隔离级别</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E4%BC%A0%E6%92%AD%E8%A1%8C%E4%B8%BA"><span class="toc-nav-number">4.3.2.</span> <span class="toc-nav-text">事务的七种传播行为</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E5%8A%A1%E6%B3%A8%E8%A7%A3%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">事务注解例子：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Transactianal-%E6%B3%A8%E8%A7%A3%E6%9C%89%E4%B8%80%E4%BA%9B%E5%B1%9E%E6%80%A7"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">@Transactianal 注解有一些属性</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -893,7 +893,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

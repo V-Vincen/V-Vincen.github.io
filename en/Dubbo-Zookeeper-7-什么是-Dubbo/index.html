@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 7 什么是 Dubbo - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -473,7 +473,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>Apache Dubbo (incubating) |ˈdʌbəʊ|</code> 是一款高性能、轻量级的开源 <code>Java RPC</code> 分布式服务框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。她最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，<code>Dubbo</code> 采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（<code>Provider</code>）和服务消费方（<code>Consumer</code>）两个角色。</p>
-<p>官网：<a href="http://dubbo.apache.org/zh-cn" target="_blank" rel="noopener">http://dubbo.apache.org/zh-cn</a><br>GitHub：<a href="https://github.com/apache/incubator-dubbo" target="_blank" rel="noopener">https://github.com/apache/incubator-dubbo</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="http://dubbo.apache.org/zh-cn">http://dubbo.apache.org/zh-cn</a><br>GitHub：<a target="_blank" rel="noopener" href="https://github.com/apache/incubator-dubbo">https://github.com/apache/incubator-dubbo</a></p>
 <h2 id="Dubbo-的服务治理"><a href="#Dubbo-的服务治理" class="headerlink" title="Dubbo 的服务治理"></a>Dubbo 的服务治理</h2><p><img src="1.png" alt="1"></p>
 <table>
 <thead>
@@ -555,9 +555,9 @@
 <li>服务消费者 <code>Consumer</code> 和提供者 <code>Provider</code>，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心 <code>Monitor</code>。</li>
 </ul>
 <h2 id="Dubbo-Admin-管理控制台"><a href="#Dubbo-Admin-管理控制台" class="headerlink" title="Dubbo Admin 管理控制台"></a>Dubbo Admin 管理控制台</h2><p>管理控制台为内部裁剪版本，开源部分主要包含：路由规则，动态配置，服务降级，访问控制，权重调整，负载均衡，等管理功能。</p>
-<p>GitHub：<a href="https://github.com/apache/incubator-dubbo-ops" target="_blank" rel="noopener">https://github.com/apache/incubator-dubbo-ops</a></p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/apache/incubator-dubbo-ops">https://github.com/apache/incubator-dubbo-ops</a></p>
 <p><img src="3.png" alt="3"></p>
-<h3 id="项目运行方法"><a href="#项目运行方法" class="headerlink" title="项目运行方法"></a>项目运行方法</h3><p><strong>GitHub README 说明：<a href="https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md" target="_blank" rel="noopener">https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md</a></strong></p>
+<h3 id="项目运行方法"><a href="#项目运行方法" class="headerlink" title="项目运行方法"></a>项目运行方法</h3><p><strong>GitHub README 说明：<a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md">https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md</a></strong></p>
 <ul>
 <li>下载代码: <code>git clone https://github.com/apache/dubbo-admin.git</code></li>
 <li>在 <code>dubbo-admin-server/src/main/resources/application.properties</code> 中指定注册中心地址</li>
@@ -572,8 +572,8 @@
 <h3 id="遇到的问题处理"><a href="#遇到的问题处理" class="headerlink" title="遇到的问题处理"></a>遇到的问题处理</h3><p><strong>NodeJS</strong></p>
 <ul>
 <li>现象：使用 <code>mvn clean package</code> 构建 DubboAdmin 控制台时会出现 <code>npm install</code> 操作</li>
-<li>解决：新版控制台已改为前后分离模式，前端采用 Vue.js 开发，故需要 NodeJS 支持，请自行安装（运行到此处时会自动下载安装）。官网地址：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></li>
-<li>其他：配置淘宝镜像加速。官网地址：<a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 cnpm 命令行工具</span></span><br><span class="line">npm <span class="keyword">install</span> -g cnpm <span class="comment">--registry=https://registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装模块</span></span><br><span class="line">cnpm <span class="keyword">install</span> [<span class="keyword">name</span>]</span><br></pre></td></tr></table></figure></li>
+<li>解决：新版控制台已改为前后分离模式，前端采用 Vue.js 开发，故需要 NodeJS 支持，请自行安装（运行到此处时会自动下载安装）。官网地址：<a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a></li>
+<li>其他：配置淘宝镜像加速。官网地址：<a target="_blank" rel="noopener" href="http://npm.taobao.org/">http://npm.taobao.org/</a><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 安装 cnpm 命令行工具</span></span><br><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 安装模块</span></span><br><span class="line">cnpm install [name]</span><br></pre></td></tr></table></figure></li>
 </ul>
 
 
@@ -723,7 +723,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-的服务治理"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Dubbo 的服务治理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-的核心功能"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Dubbo 的核心功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-的组件角色"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Dubbo 的组件角色</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-Admin-管理控制台"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Dubbo Admin 管理控制台</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#项目运行方法"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">项目运行方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#遇到的问题处理"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">遇到的问题处理</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Dubbo 的服务治理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Dubbo 的核心功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-%E7%9A%84%E7%BB%84%E4%BB%B6%E8%A7%92%E8%89%B2"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Dubbo 的组件角色</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dubbo-Admin-%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Dubbo Admin 管理控制台</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%A1%8C%E6%96%B9%E6%B3%95"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">项目运行方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">遇到的问题处理</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -909,7 +909,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

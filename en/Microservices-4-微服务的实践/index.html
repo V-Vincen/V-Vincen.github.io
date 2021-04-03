@@ -146,7 +146,7 @@
       [Microservices] 4 微服务的实践 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -662,7 +662,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#客户端如何访问这些服务"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">客户端如何访问这些服务</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#每个服务之间如何通信"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">每个服务之间如何通信</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#同步调用"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">同步调用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#异步消息调用"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">异步消息调用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#如此多的服务，如何实现？"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">如此多的服务，如何实现？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基于客户端的服务注册与发现"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">基于客户端的服务注册与发现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基于服务端的服务注册与发现"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">基于服务端的服务注册与发现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#服务挂了，如何解决？"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">服务挂了，如何解决？</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E8%AE%BF%E9%97%AE%E8%BF%99%E4%BA%9B%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">客户端如何访问这些服务</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%AF%8F%E4%B8%AA%E6%9C%8D%E5%8A%A1%E4%B9%8B%E9%97%B4%E5%A6%82%E4%BD%95%E9%80%9A%E4%BF%A1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">每个服务之间如何通信</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">同步调用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%82%E6%AD%A5%E6%B6%88%E6%81%AF%E8%B0%83%E7%94%A8"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">异步消息调用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A6%82%E6%AD%A4%E5%A4%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">如此多的服务，如何实现？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">基于客户端的服务注册与发现</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">基于服务端的服务注册与发现</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E6%8C%82%E4%BA%86%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">服务挂了，如何解决？</span></a></li></ol>
         
         </div>
       </aside>
@@ -848,7 +848,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

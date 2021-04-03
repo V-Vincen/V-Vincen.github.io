@@ -146,7 +146,7 @@
       [Reflect] 1 反射 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -552,7 +552,7 @@
 <li>前提：若已知具体的类，通过类的 class 属性获取，该方法最为安全可靠， 程序性能最高。例：<code>Class clazz = String.class;</code></li>
 <li>前提：已知某个类的实例，调用该实例的 <code>getClass()</code> 方法获取 Class 对象。例：<code>Class clazz = “www.atguigu.com”.getClass();</code> </li>
 <li>前提：已知一个类的全类名，且该类在类路径下，可通过 Class 类的静态方法 <code>forName()</code> 获取，可能抛出 <code>ClassNotFoundException</code>。例：<code>Class clazz = Class.forName(“java.lang.String”);</code></li>
-<li>其他方式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClassLoader cl = <span class="keyword">this</span>.getClass().getClassLoader();</span><br><span class="line">Class clazz4 = cl.loadClass(<span class="string">"类的全类名"</span>);</span><br></pre></td></tr></table></figure></li>
+<li>其他方式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClassLoader cl = <span class="keyword">this</span>.getClass().getClassLoader();</span><br><span class="line">Class clazz4 = cl.loadClass(<span class="string">&quot;类的全类名&quot;</span>); </span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="哪些类型可以有-Class-对象？"><a href="#哪些类型可以有-Class-对象？" class="headerlink" title="哪些类型可以有 Class 对象？"></a>哪些类型可以有 Class 对象？</h3><ul>
 <li>class： 外部类，成员(成员内部类，静态内部类)，局部内部类，匿名内部类</li>
@@ -563,7 +563,7 @@
 <li>primitive type：基本数据类型</li>
 <li>void</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Class c1 = Object<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c2 = Comparable<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c3 = String[]<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c4 = <span class="keyword">int</span>[][]<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c5 = ElementType<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c6 = Override<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c7 = <span class="keyword">int</span><span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">Class c8 = <span class="keyword">void</span><span class="class">.<span class="keyword">class</span></span>; Class c9 = Class<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]; </span><br><span class="line"><span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>]; </span><br><span class="line">Class c10 = a.getClass(); </span><br><span class="line">Class c11 = b.getClass(); </span><br><span class="line"><span class="comment">// 只要元素类型与维度一样，就是同一个 Class</span></span><br><span class="line">System.out.println(c10 == c11);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Class c1 = Object.class;</span><br><span class="line">Class c2 = Comparable.class;</span><br><span class="line">Class c3 = String[].class;</span><br><span class="line">Class c4 = <span class="keyword">int</span>[][].class;</span><br><span class="line">Class c5 = ElementType.class;</span><br><span class="line">Class c6 = Override.class;</span><br><span class="line">Class c7 = <span class="keyword">int</span>.class;</span><br><span class="line">Class c8 = <span class="keyword">void</span>.class; Class c9 = Class.class;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]; </span><br><span class="line"><span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>]; </span><br><span class="line">Class c10 = a.getClass(); </span><br><span class="line">Class c11 = b.getClass(); </span><br><span class="line"><span class="comment">// 只要元素类型与维度一样，就是同一个 Class</span></span><br><span class="line">System.out.println(c10 == c11);</span><br></pre></td></tr></table></figure>
 
 <h2 id="创建运行时类的对象"><a href="#创建运行时类的对象" class="headerlink" title="创建运行时类的对象"></a>创建运行时类的对象</h2><p>有了 Class 对象，能做什么？<br>创建类的对象：调用 Class 对象的 <code>newInstance()</code> 方法。要求：</p>
 <ul>
@@ -577,7 +577,7 @@
 <li>通过 <code>Constructor</code> 实例化对象。</li>
 </ul>
 <p>示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 根据全类名获取对应的 Class 对象 </span></span><br><span class="line">String name = <span class="string">"atguigu.java.Person"</span>;</span><br><span class="line">Class clazz = Class.forName(name);</span><br><span class="line"><span class="comment">//2. 调用指定参数结构的构造器，生成 Constructor 的实例</span></span><br><span class="line">Constructor con = clazz.getConstructor(String<span class="class">.<span class="keyword">class</span>,<span class="title">Integer</span>.<span class="title">class</span>)</span>; </span><br><span class="line"><span class="comment">//3. 通过 Constructor 的实例创建对应类的对象，并初始化类属性</span></span><br><span class="line">Person p2 = (Person) con.newInstance(<span class="string">"Peter"</span>,<span class="number">20</span>);</span><br><span class="line">System.out.println(p2);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 根据全类名获取对应的 Class 对象 </span></span><br><span class="line">String name = <span class="string">&quot;atguigu.java.Person&quot;</span>;</span><br><span class="line">Class clazz = Class.forName(name);</span><br><span class="line"><span class="comment">//2. 调用指定参数结构的构造器，生成 Constructor 的实例</span></span><br><span class="line">Constructor con = clazz.getConstructor(String.class,Integer.class); </span><br><span class="line"><span class="comment">//3. 通过 Constructor 的实例创建对应类的对象，并初始化类属性</span></span><br><span class="line">Person p2 = (Person) con.newInstance(<span class="string">&quot;Peter&quot;</span>,<span class="number">20</span>);</span><br><span class="line">System.out.println(p2);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -727,7 +727,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#反射机制概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">反射机制概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#反射机制研究及应用"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">反射机制研究及应用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#反射相关的主要-API"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">反射相关的主要 API</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#理解-Class-类并获取-Class-的实例"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">理解 Class 类并获取 Class 的实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Class-类的常用方法"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Class 类的常用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取-Class-类的实例（四种方法）"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">获取 Class 类的实例（四种方法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#哪些类型可以有-Class-对象？"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">哪些类型可以有 Class 对象？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建运行时类的对象"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">创建运行时类的对象</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">反射机制概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%A0%94%E7%A9%B6%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">反射机制研究及应用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%8D%E5%B0%84%E7%9B%B8%E5%85%B3%E7%9A%84%E4%B8%BB%E8%A6%81-API"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">反射相关的主要 API</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%90%86%E8%A7%A3-Class-%E7%B1%BB%E5%B9%B6%E8%8E%B7%E5%8F%96-Class-%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">理解 Class 类并获取 Class 的实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Class-%E7%B1%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Class 类的常用方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96-Class-%E7%B1%BB%E7%9A%84%E5%AE%9E%E4%BE%8B%EF%BC%88%E5%9B%9B%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">获取 Class 类的实例（四种方法）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%93%AA%E4%BA%9B%E7%B1%BB%E5%9E%8B%E5%8F%AF%E4%BB%A5%E6%9C%89-Class-%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">哪些类型可以有 Class 对象？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">创建运行时类的对象</span></a></li></ol>
         
         </div>
       </aside>
@@ -913,7 +913,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

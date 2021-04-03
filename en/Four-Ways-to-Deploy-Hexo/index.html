@@ -146,7 +146,7 @@
       Four Ways to Deploy Hexo - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -474,8 +474,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Github-Pages-部署"><a href="#Github-Pages-部署" class="headerlink" title="Github Pages 部署"></a><code>Github Pages</code> 部署</h2><p>如果对 <code>Github Pages</code> 还不是很了解的话，可以先参考 <a href="https://v_vincen.gitee.io/2019/06/08/Hexo-2-%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA-Github-Pages/" target="_blank" rel="noopener">[Hexo] 2 开始搭建 Github Pages</a>。很多同学都不会满足于让其他人用 <code>username.github.io</code> 这样奇奇怪怪的域名来访问自己的个人博客。</p>
-<h3 id="购买个性域名"><a href="#购买个性域名" class="headerlink" title="购买个性域名"></a>购买个性域名</h3><p>这里推荐 <a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云</a>，毕竟国内大公司，另外还有很多人推荐的 <a href="https://sg.godaddy.com/" target="_blank" rel="noopener">GoDaddy</a> 也可以，这里再推荐一个 <a href="https://www.namesilo.com/" target="_blank" rel="noopener">NameSilo</a>。本篇以阿里云为例。</p>
+        <h2 id="Github-Pages-部署"><a href="#Github-Pages-部署" class="headerlink" title="Github Pages 部署"></a><code>Github Pages</code> 部署</h2><p>如果对 <code>Github Pages</code> 还不是很了解的话，可以先参考 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2019/06/08/Hexo-2-%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA-Github-Pages/">[Hexo] 2 开始搭建 Github Pages</a>。很多同学都不会满足于让其他人用 <code>username.github.io</code> 这样奇奇怪怪的域名来访问自己的个人博客。</p>
+<h3 id="购买个性域名"><a href="#购买个性域名" class="headerlink" title="购买个性域名"></a>购买个性域名</h3><p>这里推荐 <a target="_blank" rel="noopener" href="https://www.aliyun.com/">阿里云</a>，毕竟国内大公司，另外还有很多人推荐的 <a target="_blank" rel="noopener" href="https://sg.godaddy.com/">GoDaddy</a> 也可以，这里再推荐一个 <a target="_blank" rel="noopener" href="https://www.namesilo.com/">NameSilo</a>。本篇以阿里云为例。</p>
 <ul>
 <li>首先注册阿里云账号，如果有淘宝账号的，可以直接登录。</li>
 <li>登录以后，先进行实名认证（购买域名要用到）。</li>
@@ -491,14 +491,14 @@
 <p>  <img src="2.png" alt="2"></p>
 </li>
 <li><p>第一个红框不解释了，第二个红框是你的博客站点的 ip 地址，ip 获取方式如下，再终端输入命令：</p>
-  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ping</span> <span class="selector-tag">username</span><span class="selector-class">.github</span><span class="selector-class">.io</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ping</span> username.github.io</span><br></pre></td></tr></table></figure></li>
 <li><p>解析配置好了以后，登录 github，进入到博客站点对应的仓库，对域名进行设置：</p>
 <p>  <img src="3.png" alt="3"></p>
 </li>
 <li><p>另外记住把，<code>Enforce HTTPS</code> 给勾选上。到这儿还没结束，在你的本地博客站点路径下的 source 文件夹里，创建一个名为 <code>CNAME</code> 的文件（注意要大写），里面写上你之前购买的域名。文件里的域名前加不加 www 都可以。</p>
 </li>
 </ul>
-<p>另外说一句，在你绑定了新域名之后，原来的你的 <code>username.github.io</code> 并没有失效，而是会自动跳转到你的新域名。由于种种原因访问 <code>github</code> 的用户体验并不是很好，可参看 <a href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE" target="_blank" rel="noopener">Github 加速优化</a> 来提高静态资源的访问速度。</p>
+<p>另外说一句，在你绑定了新域名之后，原来的你的 <code>username.github.io</code> 并没有失效，而是会自动跳转到你的新域名。由于种种原因访问 <code>github</code> 的用户体验并不是很好，可参看 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE">Github 加速优化</a> 来提高静态资源的访问速度。</p>
 <h2 id="Gitee-Pages-部署"><a href="#Gitee-Pages-部署" class="headerlink" title="Gitee Pages 部署"></a><code>Gitee Pages</code> 部署</h2><p><code>Gitee Pages</code> 类似 <code>Github Pages</code>。<code>Gitee Pages</code> 是面向码云用户开放的静态页面搭建托管服务，用户可以通过默认提供的域名 <code>username.gitee.io</code> 来发布自己的站点。目前，<code>Gitee Pages</code> 已支持 Jekyll、Hugo、Hexo 等静态网站生成引擎，可以很方便的在线编译这几类静态站点项目。当然，原始的 HTML 也是支持的。<code>Gitee Pages Pro</code> 是支持自定义域名版本的 <code>Gitee Pages</code>。目前在码云GVP、码云推荐项目和码云付费企业版中可以免费使用。</p>
 <h3 id="开启-Gitee-Pages"><a href="#开启-Gitee-Pages" class="headerlink" title="开启 Gitee Pages"></a>开启 <code>Gitee Pages</code></h3><p>以 <a href="https://v-vincen.life/">Live My Life</a> 个人博客为例 ，通过「项目主页」-&gt;「服务」-&gt;「Gitee Pages」打开 Gitee Pages 服务。默认操作下直接点击「启动」并确认，即可开启服务。</p>
 <p><img src="4.png" alt="4"></p>
@@ -528,7 +528,7 @@
 </ul>
 <p>这一步就结束了，托管在 <code>gitee</code> 或 <code>github</code> 上的静态博客不需要备案。回到码云，进入你 hexo 博客的项目的 pages 页面，在左侧选择购买 <code>Gitee Pages Pro</code> 试用版，可以有一个月的试用期。如果你用的是 <code>Gitee Pages</code> 而不是 <code>Pro</code>，貌似是不支持域名绑定。<code>Gitee Pages Pro</code> 不但可以绑定独立域名，还可以直接实现博客自动部署，也就是执行完了 <code>hexo d</code> 命令之后，页面直接部署到码云上了，不需要在到 <code>Pages</code> 页面手工点击更新。（但是 <code>Gitee Pages Pro</code> 每年收费 99 元。）</p>
 <p><code>Gitee Pages Pro</code> 有一个缺点，不支持 <code>HTTP</code> 到 <code>HTTPS</code> 之间的转换。而 <code>Github Pages</code> 自带转换功能，第一节中提到过 <code>Github Pages</code> 设置中，勾选 <code>Enforce HTTPS</code>，勾选上后我们就可以用 <code>HTTPS</code> 访问我的博客地址了 。如果你用的是 <code>Gitee Pages Pro</code> 进行博客部署，同时希望自己的域名是安全访问的话，就需要我们自己去申请 <code>HTTPS</code> 证书。接下来我们就来看看如何申请 <code>HTTPS</code> 证书。</p>
-<h3 id="申请-HTTPS-证书"><a href="#申请-HTTPS-证书" class="headerlink" title="申请 HTTPS 证书"></a>申请 <code>HTTPS</code> 证书</h3><p>在这里我们使用的是 <a href="https://freessl.cn/" target="_blank" rel="noopener">Freessl</a> 提供的免费 <code>SSL</code> 服务（也是 <code>Gitee Pages</code> 官方推荐，当然 <code>SSL</code> 服务偶尔会有不稳定，毕竟免费的肯定比不上收费的香）。如何使用 <code>FreeSSL</code> 申请免费证书视频：<a href="https://blog.freessl.cn/how-to-use-freessl-issue-free-certificates/" target="_blank" rel="noopener">https://blog.freessl.cn/how-to-use-freessl-issue-free-certificates/</a></p>
+<h3 id="申请-HTTPS-证书"><a href="#申请-HTTPS-证书" class="headerlink" title="申请 HTTPS 证书"></a>申请 <code>HTTPS</code> 证书</h3><p>在这里我们使用的是 <a target="_blank" rel="noopener" href="https://freessl.cn/">Freessl</a> 提供的免费 <code>SSL</code> 服务（也是 <code>Gitee Pages</code> 官方推荐，当然 <code>SSL</code> 服务偶尔会有不稳定，毕竟免费的肯定比不上收费的香）。如何使用 <code>FreeSSL</code> 申请免费证书视频：<a target="_blank" rel="noopener" href="https://blog.freessl.cn/how-to-use-freessl-issue-free-certificates/">https://blog.freessl.cn/how-to-use-freessl-issue-free-certificates/</a></p>
 <ul>
 <li><p>访问 <code>Freessl</code> ，在首页输入自己的域名，此处可以根据使用需求选择证书的类型。以 <code>TrustAsia</code> 为例，在输入申请域名后，点击创建按钮，进入下一步。</p>
 <p>  <img src="9.png" alt="9"></p>
@@ -554,24 +554,24 @@
 </li>
 </ul>
 <p>稍等一段时间，就可以用域名访问我们的博客了。有人可能会说 <code>Gitee Pages</code> 配置起来这么麻烦，而且还要收费，为什么不直接用 <code>Github Pages</code>呢？</p>
-<p>原因很简单（由于中国国情），<code>Github Pages</code> 在国内访问速度相当慢，我们经常会遇到访问 <code>Github Pages</code> 部署的博客地址，打开页面都需要等好半天的时间，这点对于博主我来说实在无法忍受（如果你能接受，你当然可以直接用 <code>Github Pages</code> 来部署博客），所以博主我花了 99 元，开通了 <code>Gitee Pages Pro</code>。由于博主我比较穷，在购买 <code>Gitee Pages Pro</code> 前，还是挣扎了一番，找了一些优化 <code>Github Pages</code> 访问速度的方法，但是感觉都收效甚微。（感兴趣的童靴，可以查看 <a href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE" target="_blank" rel="noopener">Github 加速优化</a>）甚至我都尝试了 <code>GitLab Pages</code> 来进行博客部署，但是最终的效果都差强人意。接下来我将记录，用 <code>GitLab Pages</code> 来部署的方式。</p>
+<p>原因很简单（由于中国国情），<code>Github Pages</code> 在国内访问速度相当慢，我们经常会遇到访问 <code>Github Pages</code> 部署的博客地址，打开页面都需要等好半天的时间，这点对于博主我来说实在无法忍受（如果你能接受，你当然可以直接用 <code>Github Pages</code> 来部署博客），所以博主我花了 99 元，开通了 <code>Gitee Pages Pro</code>。由于博主我比较穷，在购买 <code>Gitee Pages Pro</code> 前，还是挣扎了一番，找了一些优化 <code>Github Pages</code> 访问速度的方法，但是感觉都收效甚微。（感兴趣的童靴，可以查看 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE">Github 加速优化</a>）甚至我都尝试了 <code>GitLab Pages</code> 来进行博客部署，但是最终的效果都差强人意。接下来我将记录，用 <code>GitLab Pages</code> 来部署的方式。</p>
 <h2 id="Gitlab-Pages-部署"><a href="#Gitlab-Pages-部署" class="headerlink" title="Gitlab Pages 部署"></a><code>Gitlab Pages</code> 部署</h2><p>使用 <code>Gitlab Pages + Hexo</code>搭建个人博客，与 <code>Github Pages</code> 和 <code>Gitee Pages</code> 进行搭建，略有不同。用 <code>Github Pages</code> 或 <code>Gitee Pages</code> 搭建 <code>Hexo</code> 都是在本地生成静态网页，然后我们把生成好的静态网页提交到 <code>Github Pages</code> 或 <code>Gitee Pages</code> 上即可。而用 <code>Gitlab Pages</code> 搭建，我们则是把 <code>Hexo</code> 博客源代码提交到 <code>Gitlab</code> 上，然后利用 <code>Gitlab 的 CI/CD</code> 功能发布到 <code>Gitlab Pages</code> 上。</p>
 <h3 id="创建-Gitlab-Pages-仓库"><a href="#创建-Gitlab-Pages-仓库" class="headerlink" title="创建 Gitlab Pages 仓库"></a>创建 <code>Gitlab Pages</code> 仓库</h3><p>首先在 <code>Gitlab</code> 上注册一个账号，或者直接用 <code>Github</code> 账号登录也可以。<code>Gitlab</code> 支持 <strong>project page</strong> 和 <strong>user page</strong> 两种 page，只需要创建对应的仓库即可。</p>
 <ul>
-<li><p>如果你要创建一个 <strong>project page</strong>，假设 project name：blog，那么你的 <strong>project url</strong>：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">https://gitlab.com/username/blog/</a>。启用 <code>GitLab Pages</code> 并构建了站点，<strong>站点访问 url</strong>：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">https://uesrname.gitlab.io/blog/</a>。</p>
+<li><p>如果你要创建一个 <strong>project page</strong>，假设 project name：blog，那么你的 <strong>project url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://gitlab.com/username/blog/</a>。启用 <code>GitLab Pages</code> 并构建了站点，<strong>站点访问 url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://uesrname.gitlab.io/blog/</a>。</p>
 </li>
-<li><p>如果你要创建一个 <strong>user page</strong>，假设 project name：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">john.gitlab.io</a> （john 为你的 <code>Gitlab</code> 账号名），则你的 <strong>project url</strong>：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">https://gitlab.com/john/john.gitlab.io</a>。启用了 <code>GitLab Pages</code> 并构建了站点，<strong>站点访问 url</strong>：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">https://john.gitlab.io</a>。</p>
+<li><p>如果你要创建一个 <strong>user page</strong>，假设 project name：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">john.gitlab.io</a> （john 为你的 <code>Gitlab</code> 账号名），则你的 <strong>project url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://gitlab.com/john/john.gitlab.io</a>。启用了 <code>GitLab Pages</code> 并构建了站点，<strong>站点访问 url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://john.gitlab.io</a>。</p>
 </li>
 </ul>
 <h3 id="Gitlab-账号添加-SSH-Keys"><a href="#Gitlab-账号添加-SSH-Keys" class="headerlink" title="Gitlab 账号添加 SSH-Keys"></a><code>Gitlab</code> 账号添加 <code>SSH-Keys</code></h3><p>点击你的 <code>Gitlab</code> 账号右上角头像，选择 settings，然后在左侧菜单选择 SSH Keys。然后检查一下你的本地 SSH Keys 的情况。</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.ssh</span></span><br><span class="line"><span class="keyword">ls</span> <span class="comment">#此时会显示一些文件</span></span><br></pre></td></tr></table></figure>
 
-<p>打开 <code>id_rsa.pub</code> 文件，将里面的所有内容添加到上面 <code>Gitlab</code> 账号 settings 中的 SSH  Keys中。如果没有 <code>id_rsa.pub</code> 文件的话话，请参看 <a href="https://v_vincen.gitee.io/2019/08/23/Git-3-Git-%E5%91%BD%E4%BB%A4/" target="_blank" rel="noopener">[Git] 3 Git 命令</a> 生成秘钥。</p>
-<h3 id="添加-gitlab-ci-yml-文件"><a href="#添加-gitlab-ci-yml-文件" class="headerlink" title="添加 .gitlab-ci.yml 文件"></a>添加 <code>.gitlab-ci.yml</code> 文件</h3><p>上面我们也说了 <code>Gitlab Pages</code> 搭建 <code>Hexo</code>，我们需要把 <code>Hexo</code> 博客源代码提交到 <code>Gitlab</code> 上，然后利用 <code>Gitlab 的 CI/CD</code> 来完成自动部署。因此我们需要添加一个 <code>.gitlab-ci.yml</code> 配置文件用来指导服务器如何处理我们提交的源代码。最新的 <code>.gitlab-ci.yml</code> 官方版本：<a href="https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml" target="_blank" rel="noopener">https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml</a> 。</p>
+<p>打开 <code>id_rsa.pub</code> 文件，将里面的所有内容添加到上面 <code>Gitlab</code> 账号 settings 中的 SSH  Keys中。如果没有 <code>id_rsa.pub</code> 文件的话话，请参看 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2019/08/23/Git-3-Git-%E5%91%BD%E4%BB%A4/">[Git] 3 Git 命令</a> 生成秘钥。</p>
+<h3 id="添加-gitlab-ci-yml-文件"><a href="#添加-gitlab-ci-yml-文件" class="headerlink" title="添加 .gitlab-ci.yml 文件"></a>添加 <code>.gitlab-ci.yml</code> 文件</h3><p>上面我们也说了 <code>Gitlab Pages</code> 搭建 <code>Hexo</code>，我们需要把 <code>Hexo</code> 博客源代码提交到 <code>Gitlab</code> 上，然后利用 <code>Gitlab 的 CI/CD</code> 来完成自动部署。因此我们需要添加一个 <code>.gitlab-ci.yml</code> 配置文件用来指导服务器如何处理我们提交的源代码。最新的 <code>.gitlab-ci.yml</code> 官方版本：<a target="_blank" rel="noopener" href="https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml">https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml</a> 。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">image:</span> <span class="string">node:10.15.3</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">node_modules/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">test</span> <span class="string">-e</span> <span class="string">package.json</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="推送源码到-Gitlab-Pages-仓库"><a href="#推送源码到-Gitlab-Pages-仓库" class="headerlink" title="推送源码到 Gitlab Pages 仓库"></a>推送源码到 <code>Gitlab Pages</code> 仓库</h3><p>进入你的 <code>Hexo</code> 目录下执行下面命令：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git <span class="keyword">add</span><span class="bash"> -A</span></span><br><span class="line">git commit -m <span class="string">"init blog"</span></span><br><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin git@gitlab.com:username/username.gitlab.io.git</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git <span class="builtin-name">add</span> -A</span><br><span class="line">git commit -m <span class="string">&quot;init blog&quot;</span></span><br><span class="line">git remote <span class="builtin-name">add</span> origin git@gitlab.com:username/username.gitlab.io.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <p>这样我们就将 <code>Hexo</code> 博客本地源码推送到 <code>Gitlab Pages</code> 仓库上了。</p>
 <h3 id="CI-CD-生成-Gitlab-pages"><a href="#CI-CD-生成-Gitlab-pages" class="headerlink" title="CI/CD 生成 Gitlab pages"></a><code>CI/CD</code> 生成 <code>Gitlab pages</code></h3><p>上传后，然后 <code>Gitlab</code> 服务器会自动检查 <code>.gitlab-ci.yml</code> 脚本是否有效，校验通过后，会自动开始执行脚本。<br>点击左侧菜单中的 <code>CI/CD-&gt;pipeline</code> 可以查看脚本的执行情况。</p>
 <p><img src="17.png" alt="17"></p>
@@ -582,7 +582,7 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
 <li><code>Gitee Pages</code> 部署：如果你博客的访问者大多是国人的话，同时也无所谓是否需要个性域名的话，那你不妨使用 <code>Gitee Pages</code>（根据上文 <code>Gitee Pages</code> 部署，只需开启 <code>Gitee Pages</code> 即可）。</li>
 <li><code>Gitee Pages Pro</code> 部署：如果你博客的访问者大多是国人的话，但是希望有自己的个性域名，那你可以根据上文的 <code>Gitee Pages</code> 部署，配置自己的个性域名和申请 <code>HTTPS</code> 证书。</li>
-<li><code>Github Pages</code> 部署：如果你觉得申请 <code>HTTPS</code> 证书比较麻烦，同时你又希望有自己的个性域名（当然你可以忍受访问 github 的速度缓慢，这里说的访问慢只是国内访问 github 慢，对于国外来说访问并不会向国内这么缓慢），那么你不妨使用 <code>Github Pages</code> 部署，同时加上 <a href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE" target="_blank" rel="noopener">Github 加速优化</a> 方案（虽说这个加速优化的方案，效果并不显著，但总好过聊胜于无）。</li>
+<li><code>Github Pages</code> 部署：如果你觉得申请 <code>HTTPS</code> 证书比较麻烦，同时你又希望有自己的个性域名（当然你可以忍受访问 github 的速度缓慢，这里说的访问慢只是国内访问 github 慢，对于国外来说访问并不会向国内这么缓慢），那么你不妨使用 <code>Github Pages</code> 部署，同时加上 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2020/07/15/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE">Github 加速优化</a> 方案（虽说这个加速优化的方案，效果并不显著，但总好过聊胜于无）。</li>
 <li>至个人服务器并配置 <code>Nginx</code>：如果你更喜欢自己自己折腾，并且享受折腾成功后所带来的成就感，那你不妨来个私人订制，自己购买个服务器来搭建自己的博客。</li>
 </ul>
 
@@ -733,7 +733,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Github-Pages-部署"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Github Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#购买个性域名"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">购买个性域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#绑定域名"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">绑定域名</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Gitee-Pages-部署"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Gitee Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#开启-Gitee-Pages"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">开启 Gitee Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gitee-Pages-配置"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Gitee Pages 配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#域名解析"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">域名解析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#申请-HTTPS-证书"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">申请 HTTPS 证书</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Gitlab-Pages-部署"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Gitlab Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建-Gitlab-Pages-仓库"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">创建 Gitlab Pages 仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gitlab-账号添加-SSH-Keys"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Gitlab 账号添加 SSH-Keys</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加-gitlab-ci-yml-文件"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">添加 .gitlab-ci.yml 文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推送源码到-Gitlab-Pages-仓库"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">推送源码到 Gitlab Pages 仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CI-CD-生成-Gitlab-pages"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">CI&#x2F;CD 生成 Gitlab pages</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#上传至个人服务器，配置-Nginx"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">上传至个人服务器，配置 Nginx</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">总结</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Github-Pages-%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Github Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B4%AD%E4%B9%B0%E4%B8%AA%E6%80%A7%E5%9F%9F%E5%90%8D"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">购买个性域名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">绑定域名</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Gitee-Pages-%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Gitee Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BC%80%E5%90%AF-Gitee-Pages"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">开启 Gitee Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gitee-Pages-%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Gitee Pages 配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">域名解析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%B3%E8%AF%B7-HTTPS-%E8%AF%81%E4%B9%A6"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">申请 HTTPS 证书</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Gitlab-Pages-%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Gitlab Pages 部署</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-Gitlab-Pages-%E4%BB%93%E5%BA%93"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">创建 Gitlab Pages 仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Gitlab-%E8%B4%A6%E5%8F%B7%E6%B7%BB%E5%8A%A0-SSH-Keys"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Gitlab 账号添加 SSH-Keys</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0-gitlab-ci-yml-%E6%96%87%E4%BB%B6"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">添加 .gitlab-ci.yml 文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8E%A8%E9%80%81%E6%BA%90%E7%A0%81%E5%88%B0-Gitlab-Pages-%E4%BB%93%E5%BA%93"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">推送源码到 Gitlab Pages 仓库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CI-CD-%E7%94%9F%E6%88%90-Gitlab-pages"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">CI&#x2F;CD 生成 Gitlab pages</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%87%B3%E4%B8%AA%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E9%85%8D%E7%BD%AE-Nginx"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">上传至个人服务器，配置 Nginx</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">总结</span></a></li></ol>
         
         </div>
       </aside>
@@ -921,7 +921,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

@@ -146,7 +146,7 @@
       [Charles] 2 How to Use Charles - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -474,7 +474,7 @@
 
         <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
 <li><p>安装 <code>JDK</code></p>
-<p>  Charles 由 Java 开发，请先安装好 <a href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html" target="_blank" rel="noopener">JDK</a>（笔者 JDK 版本为 1.8.0_91）。</p>
+<p>  Charles 由 Java 开发，请先安装好 <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase-jdk8-downloads.html">JDK</a>（笔者 JDK 版本为 1.8.0_91）。</p>
 </li>
 <li><p>关闭 VPN/代理</p>
 <p>  <strong>切记：</strong> 为了正常使用 Charles，请关闭自己的 VPN 或者其他代理设置。</p>
@@ -500,13 +500,13 @@
 <p><img src="11.png" alt="11"></p>
 <h3 id="抓取-HTTPS-包-1"><a href="#抓取-HTTPS-包-1" class="headerlink" title="抓取 HTTPS 包"></a>抓取 HTTPS 包</h3><p>在菜单栏选择 <code>Help -&gt; SSL Proxying -&gt; Install Charles Root Certificate on a Mobile Device or a Remote Browser</code>，弹出提示框。</p>
 <p><img src="12.png" alt="12"></p>
-<p>根据上述提示，在 iOS 设备上使用 Safari 浏览器访问 <a href="http://chls.pro/ssl%EF%BC%8CSafari" target="_blank" rel="noopener">http://chls.pro/ssl，Safari</a> 浏览器会自动下载证书并提示安装，根据提示一步一步安装好，证书会被添加到 <code>设置 -&gt; 通用 -&gt; 描述文件</code> 中。</p>
+<p>根据上述提示，在 iOS 设备上使用 Safari 浏览器访问 <a target="_blank" rel="noopener" href="http://chls.pro/ssl%EF%BC%8CSafari">http://chls.pro/ssl，Safari</a> 浏览器会自动下载证书并提示安装，根据提示一步一步安装好，证书会被添加到 <code>设置 -&gt; 通用 -&gt; 描述文件</code> 中。</p>
 <p><img src="13.png" alt="13"></p>
 <p>进入 <code>设置 -&gt; 通用 -&gt; 关于本机 -&gt; 证书信任设置</code>，对上一步安装的 Charles 证书启用完全信任。</p>
 <p><img src="14.png" alt="14"></p>
 <p>在 iOS 设备上访问 HTTPS 数据链接，可以开始抓取 HTTPS 包。抓包域名端口设置和 macOS 应用程序相同。</p>
 <p><img src="15.png" alt="15"></p>
-<p>参考：<a href="https://zhuanlan.zhihu.com/p/26182135" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26182135</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26182135">https://zhuanlan.zhihu.com/p/26182135</a></p>
 
 
         <hr>
@@ -655,7 +655,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#准备工作"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">准备工作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Charles-客户端配置"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Charles 客户端配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#抓-MacOS-应用程序包"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">抓 MacOS 应用程序包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#抓取-HTTP-包"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">抓取 HTTP 包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#抓取-HTTPS-包"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">抓取 HTTPS 包</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#抓-iOS-应用程序包"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">抓 iOS 应用程序包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#抓取-HTTP-包-1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">抓取 HTTP 包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#抓取-HTTPS-包-1"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">抓取 HTTPS 包</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">准备工作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Charles-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Charles 客户端配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8A%93-MacOS-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%8C%85"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">抓 MacOS 应用程序包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%93%E5%8F%96-HTTP-%E5%8C%85"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">抓取 HTTP 包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%93%E5%8F%96-HTTPS-%E5%8C%85"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">抓取 HTTPS 包</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8A%93-iOS-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%8C%85"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">抓 iOS 应用程序包</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%93%E5%8F%96-HTTP-%E5%8C%85-1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">抓取 HTTP 包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8A%93%E5%8F%96-HTTPS-%E5%8C%85-1"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">抓取 HTTPS 包</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -841,7 +841,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

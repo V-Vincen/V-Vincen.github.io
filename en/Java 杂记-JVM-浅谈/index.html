@@ -146,7 +146,7 @@
       [Java 杂记] JVM 浅谈 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -685,7 +685,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#什么是-JVM"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 JVM</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-的组成"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JVM 的组成</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Class-Loader-类加载器"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Class Loader 类加载器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Execution-Engine-执行引擎"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Execution Engine 执行引擎</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Native-Interface-本地接口"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Native Interface 本地接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Runtime-data-area-运行数据区"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Runtime data area 运行数据区</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-的内存管理"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">JVM 的内存管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Stack-栈"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Stack 栈</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Heap-堆内存"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Heap 堆内存</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Method-Area-方法区"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text"> Method Area 方法区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#PC-Register-程序计数器"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">PC Register 程序计数器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Native-Method-Stack-本地方法栈"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Native Method Stack 本地方法栈</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-垃圾回收"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM 垃圾回收</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-相关问题"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">JVM 相关问题</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-JVM"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 JVM</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JVM 的组成</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Class-Loader-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">Class Loader 类加载器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Execution-Engine-%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">Execution Engine 执行引擎</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Native-Interface-%E6%9C%AC%E5%9C%B0%E6%8E%A5%E5%8F%A3"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">Native Interface 本地接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Runtime-data-area-%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%8C%BA"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">Runtime data area 运行数据区</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">JVM 的内存管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Stack-%E6%A0%88"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Stack 栈</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Heap-%E5%A0%86%E5%86%85%E5%AD%98"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">Heap 堆内存</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Method-Area-%E6%96%B9%E6%B3%95%E5%8C%BA"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text"> Method Area 方法区</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#PC-Register-%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">PC Register 程序计数器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Native-Method-Stack-%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">Native Method Stack 本地方法栈</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM 垃圾回收</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JVM-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">JVM 相关问题</span></a></li></ol>
         
         </div>
       </aside>
@@ -871,7 +871,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

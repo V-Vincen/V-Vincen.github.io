@@ -146,7 +146,7 @@
       [Ubuntu] Ubuntu 常用命令 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">778</span> In Total
+              Words <span class="post-count">780</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -478,14 +478,14 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw default deny </span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
 <p>通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。<br>对于大部分防火墙操作来说， 其实无非就是的打开关闭端口。</p>
 <p><strong>关闭</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span> </span><br></pre></td></tr></table></figure>
 
 <p><strong>查看防火墙状态</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status </span><br></pre></td></tr></table></figure>
 
 <p><strong>开启/禁用相应端口或服务举例</strong><br> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 允许外部访问80端口</span></span><br><span class="line">sudo ufw allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问80端口</span></span><br><span class="line">sudo ufw delete allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许此 IP 访问所有的本机端口</span></span><br><span class="line">sudo ufw allow from 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问 smtp 服务</span></span><br><span class="line">sudo ufw deny smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除上面建立的某条规则</span></span><br><span class="line">sudo ufw delete allow smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要拒绝所有的 TCP 流量从10.0.0.0/8 到192.168.0.1地址的22端口</span></span><br><span class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以允许所有 RFC 1918网络（局域网/无线局域网的）访问这个主机（/8,/16,/12是一种网络分级）</span></span><br><span class="line">sudo ufw allow from 10.0.0.0/8</span><br><span class="line">sudo ufw allow from 172.16.0.0/12</span><br><span class="line">sudo ufw allow from 192.168.0.0/16</span><br></pre></td></tr></table></figure></p>
 <p>推荐设置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny </span><br></pre></td></tr></table></figure>
 <p>这样设置已经很安全，如果有特殊需要，可以使用 <code>sudo ufw allow</code> 开启相应服务。</p>
 <h2 id="进程命令"><a href="#进程命令" class="headerlink" title="进程命令"></a>进程命令</h2><p><strong>查看进程</strong></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep mysql</span><br><span class="line">ps -ef | grep tomcat-8</span><br></pre></td></tr></table></figure>
@@ -506,7 +506,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 端口已被监听</span></span><br><span class="line">tcp6       0      0 :::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
 
 <p><strong>方法二</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.189.137 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口已打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">Connected to 192.168.189.137.</span><br><span class="line">Escape character is <span class="string">'^]'</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口未打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">telnet: Unable to connect to remote host: Connection refused</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.189.137 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口已打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">Connected to 192.168.189.137.</span><br><span class="line">Escape character is <span class="string">&#x27;^]&#x27;</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口未打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">telnet: Unable to connect to remote host: Connection refused</span><br></pre></td></tr></table></figure>
 
 <h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>先切换到你的 <code>tomcat</code> 下的 <code>logs：cd usr/local/tomcat/logs</code> 控制台执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f catalina.out</span><br></pre></td></tr></table></figure>
@@ -668,7 +668,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#防火墙相关命令（Ubuntu）"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">防火墙相关命令（Ubuntu）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装方法"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">安装方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用方法"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进程命令"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">进程命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看端口"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">查看端口</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看日志"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">查看日志</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#网络命令"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">网络命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MySQL-命令"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">MySQL 命令</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4%EF%BC%88Ubuntu%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">防火墙相关命令（Ubuntu）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">安装方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%BF%9B%E7%A8%8B%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">进程命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">查看端口</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">查看日志</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">网络命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MySQL-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">MySQL 命令</span></a></li></ol>
         
         </div>
       </aside>
@@ -854,7 +854,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

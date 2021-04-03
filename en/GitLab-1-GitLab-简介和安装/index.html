@@ -146,7 +146,7 @@
       [GitLab] 1 GitLab 简介和安装 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">450</span> In Total
+              Words <span class="post-count">472</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,12 +473,12 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个自托管的 Git 项目仓库，可通过 Web 界面进行访问公开的或者私人项目。它拥有与 Github 类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序（Wall）进行交流。它还提供一个代码片段收集功能可以轻松实现代码复用，便于日后有需要的时候进行查找。</p>
-<h2 id="基于-Docker-安装-GitLab"><a href="#基于-Docker-安装-GitLab" class="headerlink" title="基于 Docker 安装 GitLab"></a>基于 Docker 安装 GitLab</h2><p>GitLab 官网 Docker Hub 下载地址：<a href="https://hub.docker.com/r/twang2218/gitlab-ce-zh" target="_blank" rel="noopener">https://hub.docker.com/r/twang2218/gitlab-ce-zh</a></p>
+<h2 id="基于-Docker-安装-GitLab"><a href="#基于-Docker-安装-GitLab" class="headerlink" title="基于 Docker 安装 GitLab"></a>基于 Docker 安装 GitLab</h2><p>GitLab 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/twang2218/gitlab-ce-zh">https://hub.docker.com/r/twang2218/gitlab-ce-zh</a></p>
 <p>我们使用 Docker 来安装和运行 GitLab 中文版，配置版本为最新版 11.1 版。（由于新版本可能会有问题，我们也可以使用目前相对稳定的 10.5 版本）</p>
-<h3 id="docker-compose-yml-配置如下"><a href="#docker-compose-yml-配置如下" class="headerlink" title="docker-compose.yml 配置如下"></a><code>docker-compose.yml</code> 配置如下</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">image:</span> <span class="string">'twang2218/gitlab-ce-zh'</span></span><br><span class="line">      <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">      <span class="attr">hostname:</span> <span class="string">'192.168.189.135'</span></span><br><span class="line">      <span class="attr">environment:</span></span><br><span class="line">        <span class="attr">TZ:</span> <span class="string">'Asia/Shanghai'</span></span><br><span class="line">        <span class="attr">GITLAB_OMNIBUS_CONFIG:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">external_url</span> <span class="string">'http://192.168.189.135'</span></span><br><span class="line">          <span class="string">gitlab_rails['gitlab_shell_ssh_port']</span> <span class="string">=</span> <span class="number">2222</span></span><br><span class="line">          <span class="string">unicorn['port']</span> <span class="string">=</span> <span class="number">8888</span></span><br><span class="line">          <span class="string">nginx['listen_port']</span> <span class="string">=</span> <span class="number">80</span></span><br><span class="line">      <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'80:80'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'8443:443'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'2222:22'</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/config:/etc/gitlab</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/data:/var/opt/gitlab</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/logs:/var/log/gitlab</span></span><br></pre></td></tr></table></figure>
+<h3 id="docker-compose-yml-配置如下"><a href="#docker-compose-yml-配置如下" class="headerlink" title="docker-compose.yml 配置如下"></a><code>docker-compose.yml</code> 配置如下</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">image:</span> <span class="string">&#x27;twang2218/gitlab-ce-zh&#x27;</span></span><br><span class="line">      <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">      <span class="attr">hostname:</span> <span class="string">&#x27;192.168.189.135&#x27;</span></span><br><span class="line">      <span class="attr">environment:</span></span><br><span class="line">        <span class="attr">TZ:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br><span class="line">        <span class="attr">GITLAB_OMNIBUS_CONFIG:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">external_url</span> <span class="string">&#x27;http://192.168.189.135&#x27;</span></span><br><span class="line">          <span class="string">gitlab_rails[&#x27;gitlab_shell_ssh_port&#x27;]</span> <span class="string">=</span> <span class="number">2222</span></span><br><span class="line">          <span class="string">unicorn[&#x27;port&#x27;]</span> <span class="string">=</span> <span class="number">8888</span></span><br><span class="line">          <span class="string">nginx[&#x27;listen_port&#x27;]</span> <span class="string">=</span> <span class="number">80</span></span><br><span class="line">      <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&#x27;80:80&#x27;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&#x27;8443:443&#x27;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&#x27;2222:22&#x27;</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/config:/etc/gitlab</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/data:/var/opt/gitlab</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">/usr/local/docker/gitlab/logs:/var/log/gitlab</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="安装完成后的工作"><a href="#安装完成后的工作" class="headerlink" title="安装完成后的工作"></a>安装完成后的工作</h3><ul>
-<li>访问地址：<a href="https://v_vincen.gitee.io/404.html" target="_blank" rel="noopener">http://ip:80</a></li>
+<li>访问地址：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:80</a></li>
 <li>端口 80 是因为我在配置中设置的外部访问地址为 80，默认也是 80</li>
 <li>初始化安装完成后效果如下：</li>
 </ul>
@@ -637,7 +637,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基于-Docker-安装-GitLab"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">基于 Docker 安装 GitLab</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-compose-yml-配置如下"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">docker-compose.yml 配置如下</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装完成后的工作"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装完成后的工作</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E4%BA%8E-Docker-%E5%AE%89%E8%A3%85-GitLab"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">基于 Docker 安装 GitLab</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-compose-yml-%E9%85%8D%E7%BD%AE%E5%A6%82%E4%B8%8B"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">docker-compose.yml 配置如下</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装完成后的工作</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -823,7 +823,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

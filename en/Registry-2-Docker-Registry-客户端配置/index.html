@@ -146,7 +146,7 @@
       [Registry] 2 Docker Registry 客户端配置 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">390</span> In Total
+              Words <span class="post-count">398</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,7 +473,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 <code>systemd</code> 系统，需要在 <code>/etc/docker/daemon.json</code> 中增加如下内容（如果文件不存在请新建该文件）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [</span><br><span class="line">    <span class="string">"https://registry.docker-cn.com"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"insecure-registries"</span>: [</span><br><span class="line">    <span class="string">"ip:5000"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;registry-mirrors&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;https://registry.docker-cn.com&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;insecure-registries&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;ip:5000&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意：该文件必须符合 <code>json</code> 规范，否则 Docker 将不能启动。</p>
 <p>之后重新启动服务</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line">$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
@@ -494,9 +494,9 @@
 
 <p><font color=red>注意：</font>目前的配置只能做到本服务器拉取、推送，如果在其他主机上试图推送镜像到上来，结果是失败的。如果想做到 <code>externally-accessible</code>（外部可访问），可参考：</p>
 <ul>
-<li><p><a href="https://blog.csdn.net/egworkspace/article/details/80518647" target="_blank" rel="noopener">手把手教你搭建 Docker Registry 私服</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/egworkspace/article/details/80518647">手把手教你搭建 Docker Registry 私服</a></p>
 </li>
-<li><p><a href="https://www.funtl.com/zh/docs-docker/Docker-%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.html" target="_blank" rel="noopener">Docker 私有仓库高级配置</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://www.funtl.com/zh/docs-docker/Docker-%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.html">Docker 私有仓库高级配置</a></p>
 </li>
 </ul>
 
@@ -647,7 +647,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#概述"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#检查客户端配置是否生效"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">检查客户端配置是否生效</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试镜像上传"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">测试镜像上传</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看全部镜像"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">查看全部镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试拉取镜像"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">测试拉取镜像</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A3%80%E6%9F%A5%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE%E6%98%AF%E5%90%A6%E7%94%9F%E6%95%88"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">检查客户端配置是否生效</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E9%95%9C%E5%83%8F%E4%B8%8A%E4%BC%A0"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">测试镜像上传</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%85%A8%E9%83%A8%E9%95%9C%E5%83%8F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">查看全部镜像</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">测试拉取镜像</span></a></li></ol>
         
         </div>
       </aside>
@@ -833,7 +833,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

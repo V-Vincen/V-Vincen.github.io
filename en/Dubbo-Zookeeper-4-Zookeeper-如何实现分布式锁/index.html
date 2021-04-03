@@ -146,7 +146,7 @@
       [Dubbo Zookeeper] 4 Zookeeper 如何实现分布式锁 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -658,7 +658,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#什么是临时顺序节点？"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是临时顺序节点？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Znode-分为四种类型："><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Znode 分为四种类型：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#持久节点（PERSISTENT）"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">持久节点（PERSISTENT）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#持久节点顺序节点（PERSISTENT-SEQUENTIAL）"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">持久节点顺序节点（PERSISTENT_SEQUENTIAL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#临时节点（EPHEMERAL）"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">临时节点（EPHEMERAL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#临时顺序节点（EPHEMERAL-SEQUENTIAL）"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">临时顺序节点（EPHEMERAL_SEQUENTIAL）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-分布式锁的原理"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Zookeeper 分布式锁的原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取锁"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">获取锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#释放锁"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">释放锁</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#任务完成，客户端显示释放"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">任务完成，客户端显示释放</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#任务执行过程中，客户端崩溃"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">任务执行过程中，客户端崩溃</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-和-Redis-分布式锁的比较"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Zookeeper 和 Redis 分布式锁的比较</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%B4%E6%97%B6%E9%A1%BA%E5%BA%8F%E8%8A%82%E7%82%B9%EF%BC%9F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是临时顺序节点？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Znode-%E5%88%86%E4%B8%BA%E5%9B%9B%E7%A7%8D%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Znode 分为四种类型：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%81%E4%B9%85%E8%8A%82%E7%82%B9%EF%BC%88PERSISTENT%EF%BC%89"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">持久节点（PERSISTENT）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%81%E4%B9%85%E8%8A%82%E7%82%B9%E9%A1%BA%E5%BA%8F%E8%8A%82%E7%82%B9%EF%BC%88PERSISTENT-SEQUENTIAL%EF%BC%89"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">持久节点顺序节点（PERSISTENT_SEQUENTIAL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%B4%E6%97%B6%E8%8A%82%E7%82%B9%EF%BC%88EPHEMERAL%EF%BC%89"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">临时节点（EPHEMERAL）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%B4%E6%97%B6%E9%A1%BA%E5%BA%8F%E8%8A%82%E7%82%B9%EF%BC%88EPHEMERAL-SEQUENTIAL%EF%BC%89"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">临时顺序节点（EPHEMERAL_SEQUENTIAL）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Zookeeper 分布式锁的原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E9%94%81"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">获取锁</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8A%E6%94%BE%E9%94%81"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">释放锁</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%AE%8C%E6%88%90%EF%BC%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%98%BE%E7%A4%BA%E9%87%8A%E6%94%BE"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">任务完成，客户端显示释放</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E4%B8%AD%EF%BC%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B4%A9%E6%BA%83"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">任务执行过程中，客户端崩溃</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Zookeeper-%E5%92%8C-Redis-%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Zookeeper 和 Redis 分布式锁的比较</span></a></li></ol>
         
         </div>
       </aside>
@@ -844,7 +844,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

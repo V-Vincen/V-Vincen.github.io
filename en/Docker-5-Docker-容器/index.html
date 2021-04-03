@@ -146,7 +146,7 @@
       [Docker] 5 Docker 容器 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -406,7 +406,7 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">7</span> Minutes
+              Estimated Reading Time <span class="post-count">8</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
@@ -479,7 +479,7 @@
 <p>因为 Docker 的容器实在太轻量级了，很多时候用户都是随时删除和新创建容器。</p>
 <h3 id="新建并启动"><a href="#新建并启动" class="headerlink" title="新建并启动"></a>新建并启动</h3><p>所需要的命令主要为 <code>docker run</code>。</p>
 <p>例如，下面的命令输出一个 “Hello World”，之后终止容器。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:14.04 /bin/<span class="built_in">echo</span> <span class="string">'Hello world'</span></span><br><span class="line">Hello world</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:14.04 /bin/<span class="built_in">echo</span> <span class="string">&#x27;Hello world&#x27;</span></span><br><span class="line">Hello world</span><br></pre></td></tr></table></figure>
 <p>这跟在本地直接执行 <code>/bin/echo &#39;hello world&#39;</code> 几乎感觉不出任何区别。</p>
 <p>下面的命令则启动一个 bash 终端，允许用户进行交互。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -t -i ubuntu:14.04 /bin/bash</span><br><span class="line">root@af8bae53bdd3:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
@@ -503,14 +503,14 @@
 <h2 id="Docker-守护态运行"><a href="#Docker-守护态运行" class="headerlink" title="Docker 守护态运行"></a>Docker 守护态运行</h2><p>更多的时候，需要让 Docker 在后台运行而不是直接把执行命令的结果输出在当前宿主机下。此时，可以通过添加 -d 参数来实现。</p>
 <p>下面举两个例子来说明一下。</p>
 <p>如果不使用 <code>-d</code> 参数运行容器。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:17.10 /bin/sh -c <span class="string">"while true; do echo hello world; sleep 1; done"</span></span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:17.10 /bin/sh -c <span class="string">&quot;while true; do echo hello world; sleep 1; done&quot;</span></span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
 <p>容器会把输出的结果 (STDOUT) 打印到宿主机上面</p>
 <p>如果使用了 <code>-d</code> 参数运行容器。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d ubuntu:17.10 /bin/sh -c <span class="string">"while true; do echo hello world; sleep 1; done"</span></span><br><span class="line">77b2dc01fe0f3f1265df143181e7b9af5e05279a884f4776ee75350ea9d8017a</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d ubuntu:17.10 /bin/sh -c <span class="string">&quot;while true; do echo hello world; sleep 1; done&quot;</span></span><br><span class="line">77b2dc01fe0f3f1265df143181e7b9af5e05279a884f4776ee75350ea9d8017a</span><br></pre></td></tr></table></figure>
 <p>此时容器会在后台运行并不会把输出的结果 (STDOUT) 打印到宿主机上面(输出结果可以用 <code>docker logs</code> 查看)。</p>
 <p><strong>注</strong>：容器是否会长久运行，是和 <code>docker run</code> 指定的命令有关，和 <code>-d</code> 参数无关。</p>
 <p>使用 <code>-d</code> 参数启动后会返回一个唯一的 id，也可以通过 <code>docker container ls</code> 命令来查看容器信息。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID  IMAGE         COMMAND               CREATED        STATUS       PORTS NAMES</span><br><span class="line">77b2dc01fe0f  ubuntu:17.10  /bin/sh -c <span class="string">'while tr  2 minutes ago  Up 1 minute        agitated_wright</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID  IMAGE         COMMAND               CREATED        STATUS       PORTS NAMES</span><br><span class="line">77b2dc01fe0f  ubuntu:17.10  /bin/sh -c <span class="string">&#x27;while tr  2 minutes ago  Up 1 minute        agitated_wright</span></span><br></pre></td></tr></table></figure>
 
 <p>要获取容器的输出信息，可以通过 <code>docker container logs</code> 命令。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker container logs [container ID or NAMES]</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">hello world</span><br><span class="line">. . .</span><br></pre></td></tr></table></figure>
@@ -520,25 +520,25 @@
 <p>此外，当 Docker 容器中指定的应用终结时，容器也自动终止。</p>
 <p>例如对于上一章节中只启动了一个终端的容器，用户通过 <code>exit</code> 命令或 <code>Ctrl+d</code> 来退出终端时，所创建的容器立刻终止。</p>
 <p>终止状态的容器可以用 <code>docker container ls -a</code> 命令看到。例如</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker container ls -a</span><br><span class="line">CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS                          PORTS               NAMES</span><br><span class="line">ba267838cc1b        ubuntu:14.04             <span class="string">"/bin/bash"</span>            30 minutes ago      Exited (0) About a minute ago                       trusting_newton</span><br><span class="line">98e5efa7d997        training/webapp:latest   <span class="string">"python app.py"</span>        About an hour ago   Exited (0) 34 minutes ago                           backstabbing_pike</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker container ls -a</span><br><span class="line">CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS                          PORTS               NAMES</span><br><span class="line">ba267838cc1b        ubuntu:14.04             <span class="string">&quot;/bin/bash&quot;</span>            30 minutes ago      Exited (0) About a minute ago                       trusting_newton</span><br><span class="line">98e5efa7d997        training/webapp:latest   <span class="string">&quot;python app.py&quot;</span>        About an hour ago   Exited (0) 34 minutes ago                           backstabbing_pike</span><br></pre></td></tr></table></figure>
 
 <p>处于终止状态的容器，可以通过 <code>docker container start</code> 命令来重新启动。</p>
 <p>此外，<code>docker container restart</code> 命令会将一个运行态的容器终止，然后再重新启动它。</p>
 <h2 id="Docker-进入容器"><a href="#Docker-进入容器" class="headerlink" title="Docker 进入容器"></a>Docker 进入容器</h2><p>在使用 <code>-d</code> 参数时，容器启动后会进入后台。</p>
 <p>某些时候需要进入容器进行操作，包括使用 <code>docker attach</code> 命令或 <code>docker exec</code> 命令，推荐大家使用 <code>docker exec</code> 命令，原因会在下面说明。</p>
 <h3 id="attach-命令"><a href="#attach-命令" class="headerlink" title="attach 命令"></a><code>attach</code> 命令</h3><p><code>docker attach</code> 是 Docker 自带的命令。下面示例如何使用该命令。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">243c32535da7d142fb0e6df616a3c3ada0b8ab417937c853a9e1c251f499f550</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">243c32535da7        ubuntu:latest       <span class="string">"/bin/bash"</span>         18 seconds ago      Up 17 seconds                           nostalgic_hypatia</span><br><span class="line"></span><br><span class="line">$ docker attach 243c</span><br><span class="line">root@243c32535da7:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">243c32535da7d142fb0e6df616a3c3ada0b8ab417937c853a9e1c251f499f550</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">243c32535da7        ubuntu:latest       <span class="string">&quot;/bin/bash&quot;</span>         18 seconds ago      Up 17 seconds                           nostalgic_hypatia</span><br><span class="line"></span><br><span class="line">$ docker attach 243c</span><br><span class="line">root@243c32535da7:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>注意</strong>： 如果从这个 stdin 中 exit，会导致容器的停止。</p>
 <h3 id="exec-命令"><a href="#exec-命令" class="headerlink" title="exec 命令"></a>exec 命令</h3><p><strong>-i -t 参数</strong><br><code>docker exec</code> 后边可以跟多个参数，这里主要说明 <code>-i</code> <code>-t</code> 参数。</p>
 <p>只用 <code>-i</code> 参数时，由于没有分配伪终端，界面没有我们熟悉的 Linux 命令提示符，但命令执行结果仍然可以返回。</p>
 <p>当 <code>-i</code> <code>-t</code> 参数一起使用时，则可以看到我们熟悉的 Linux 命令提示符。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">69d137adef7a8a689cbcb059e94da5489d3cddd240ff675c640c8d96e84fe1f6</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">69d137adef7a        ubuntu:latest       <span class="string">"/bin/bash"</span>         18 seconds ago      Up 17 seconds                           zealous_swirles</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -i 69d1 bash</span><br><span class="line">ls</span><br><span class="line">bin</span><br><span class="line">boot</span><br><span class="line">dev</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -it 69d1 bash</span><br><span class="line">root@69d137adef7a:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -dit ubuntu</span><br><span class="line">69d137adef7a8a689cbcb059e94da5489d3cddd240ff675c640c8d96e84fe1f6</span><br><span class="line"></span><br><span class="line">$ docker container ls</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span><br><span class="line">69d137adef7a        ubuntu:latest       <span class="string">&quot;/bin/bash&quot;</span>         18 seconds ago      Up 17 seconds                           zealous_swirles</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -i 69d1 bash</span><br><span class="line">ls</span><br><span class="line">bin</span><br><span class="line">boot</span><br><span class="line">dev</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> -it 69d1 bash</span><br><span class="line">root@69d137adef7a:/<span class="comment">#</span></span><br></pre></td></tr></table></figure>
 
 <p>如果从这个 stdin 中 exit，不会导致容器的停止。这就是为什么推荐大家使用 <code>docker exec</code> 的原因。</p>
 <p>更多参数说明请使用 <code>docker exec --help</code> 查看。</p>
 <h2 id="Docker-导出和导入容器"><a href="#Docker-导出和导入容器" class="headerlink" title="Docker 导出和导入容器"></a>Docker 导出和导入容器</h2><h3 id="导出容器"><a href="#导出容器" class="headerlink" title="导出容器"></a>导出容器</h3><p>如果要导出本地某个容器，可以使用 <code>docker export</code> 命令。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls -a</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                    PORTS               NAMES</span><br><span class="line">7691a814370e        ubuntu:14.04        <span class="string">"/bin/bash"</span>         36 hours ago        Exited (0) 21 hours ago                       <span class="built_in">test</span></span><br><span class="line">$ docker <span class="built_in">export</span> 7691a814370e &gt; ubuntu.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls -a</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                    PORTS               NAMES</span><br><span class="line">7691a814370e        ubuntu:14.04        <span class="string">&quot;/bin/bash&quot;</span>         36 hours ago        Exited (0) 21 hours ago                       <span class="built_in">test</span></span><br><span class="line">$ docker <span class="built_in">export</span> 7691a814370e &gt; ubuntu.tar</span><br></pre></td></tr></table></figure>
 <p>这样将导出容器快照到本地文件。</p>
 <h3 id="导入容器快照"><a href="#导入容器快照" class="headerlink" title="导入容器快照"></a>导入容器快照</h3><p>可以使用 <code>docker import</code> 从容器快照文件中再导入为镜像，例如</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cat ubuntu.tar | docker import - <span class="built_in">test</span>/ubuntu:v1.0</span><br><span class="line">$ docker image ls</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE</span><br><span class="line"><span class="built_in">test</span>/ubuntu         v1.0                9d37a6082e97        About a minute ago   171.3 MB</span><br></pre></td></tr></table></figure>
@@ -697,7 +697,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#操作-Docker-容器"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">操作 Docker 容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-启动容器"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Docker 启动容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#新建并启动"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">新建并启动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启动已终止容器"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">启动已终止容器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-守护态运行"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Docker 守护态运行</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-终止容器"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Docker 终止容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-进入容器"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Docker 进入容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#attach-命令"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">attach 命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exec-命令"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">exec 命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-导出和导入容器"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Docker 导出和导入容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#导出容器"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">导出容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#导入容器快照"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">导入容器快照</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-删除容器"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Docker 删除容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#清理所有处于终止状态的容器"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">清理所有处于终止状态的容器</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%93%8D%E4%BD%9C-Docker-%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">操作 Docker 容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Docker 启动容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B0%E5%BB%BA%E5%B9%B6%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">新建并启动</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%B7%B2%E7%BB%88%E6%AD%A2%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">启动已终止容器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E5%AE%88%E6%8A%A4%E6%80%81%E8%BF%90%E8%A1%8C"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Docker 守护态运行</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E7%BB%88%E6%AD%A2%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Docker 终止容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Docker 进入容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#attach-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">attach 命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exec-%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">exec 命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Docker 导出和导入容器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%87%BA%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">导出容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%BC%E5%85%A5%E5%AE%B9%E5%99%A8%E5%BF%AB%E7%85%A7"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">导入容器快照</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Docker-%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Docker 删除容器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B8%85%E7%90%86%E6%89%80%E6%9C%89%E5%A4%84%E4%BA%8E%E7%BB%88%E6%AD%A2%E7%8A%B6%E6%80%81%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">清理所有处于终止状态的容器</span></a></li></ol>
         
         </div>
       </aside>
@@ -883,7 +883,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

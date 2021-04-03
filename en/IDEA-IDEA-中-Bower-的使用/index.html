@@ -146,7 +146,7 @@
       [IDEA] IDEA 中 Bower 的使用 - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -481,7 +481,7 @@
 
 <h2 id="创建-bower-json"><a href="#创建-bower-json" class="headerlink" title="创建 bower.json"></a>创建 bower.json</h2><p>1.打开嵌入式终端（查看|工具窗口|终端或 Alt + F12）。</p>
 <p>2.在命令提示符下键入：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cd</span> <span class="string">&lt;your project folder&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">bower</span> <span class="string">init</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="tag">&lt;<span class="name">your</span> <span class="attr">project</span> <span class="attr">folder</span>&gt;</span></span><br><span class="line"></span><br><span class="line">bower init</span><br></pre></td></tr></table></figure>
 
 <p>回答问题以指定以下基本设置：</p>
 <ul>
@@ -658,7 +658,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装和配置-Bower（请在-Bower-的安装和配置中查看）"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装和配置 Bower（请在 Bower 的安装和配置中查看）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装-Bower"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装 Bower</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建-bower-json"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">创建 bower.json</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在-WebStorm-中配置-Bower"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在 WebStorm 中配置 Bower</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#管理-Bower-包"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">管理 Bower 包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在终端中安装软件包"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">在终端中安装软件包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#在-Bower-页面上处理包"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">在 Bower 页面上处理包</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE-Bower%EF%BC%88%E8%AF%B7%E5%9C%A8-Bower-%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%9F%A5%E7%9C%8B%EF%BC%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装和配置 Bower（请在 Bower 的安装和配置中查看）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Bower"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装 Bower</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-bower-json"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">创建 bower.json</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8-WebStorm-%E4%B8%AD%E9%85%8D%E7%BD%AE-Bower"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">在 WebStorm 中配置 Bower</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%A1%E7%90%86-Bower-%E5%8C%85"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">管理 Bower 包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">在终端中安装软件包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9C%A8-Bower-%E9%A1%B5%E9%9D%A2%E4%B8%8A%E5%A4%84%E7%90%86%E5%8C%85"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">在 Bower 页面上处理包</span></a></li></ol>
         
         </div>
       </aside>
@@ -844,7 +844,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>

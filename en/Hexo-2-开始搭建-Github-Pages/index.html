@@ -146,7 +146,7 @@
       [Hexo] 2 开始搭建 Github Pages - JavaDev | 一如Java深似海
     
   </title>
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -248,6 +248,17 @@
           
           
           <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -262,17 +273,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              ABOUT
               
               
             </a>
@@ -473,29 +473,29 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h3 id="什么是-Github-Pages"><a href="#什么是-Github-Pages" class="headerlink" title="什么是 Github Pages"></a>什么是 Github Pages</h3><hr>
-<p><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 本用于介绍托管在 GitHub 的项目，不过，由于他的空间免费稳定，用来做搭建一个博客再好不过了。</p>
-<p>每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是 username/username.github.io，这是特殊的命名约定。你可以通过 <a href="http://username.github.io/" target="_blank" rel="noopener">http://username.github.io</a> 来访问你的个人主页。</p>
+<p><a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> 本用于介绍托管在 GitHub 的项目，不过，由于他的空间免费稳定，用来做搭建一个博客再好不过了。</p>
+<p>每个帐号只能有一个仓库来存放个人主页，而且仓库的名字必须是 username/username.github.io，这是特殊的命名约定。你可以通过 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> 来访问你的个人主页。</p>
 <p>这里特别提醒一下，需要注意的个人主页的网站内容是在 master 分支下的。</p>
 <h3 id="创建自己的-Github-Pages"><a href="#创建自己的-Github-Pages" class="headerlink" title="创建自己的 Github Pages"></a>创建自己的 Github Pages</h3><hr>
-<p>在 Github 首页右上角头像左侧加号点选择 New repository (新存储库)或 <a href="https://github.com/new" target="_blank" rel="noopener">点击这里</a> 进行创建一个仓库。<br><img src="1.png" alt="图片1"></p>
+<p>在 Github 首页右上角头像左侧加号点选择 New repository (新存储库)或 <a target="_blank" rel="noopener" href="https://github.com/new">点击这里</a> 进行创建一个仓库。<br><img src="1.png" alt="图片1"></p>
 <p>开启 Github Pages，进入设置</p>
 <p><img src="2.png" alt="图片2"></p>
 <p>找到这一块</p>
 <p><img src="3.png" alt="图片3"></p>
 <p>当你的仓库名为：用户名.github.io 之后默认开启 Github Pages。</p>
 <p>现在随便选择一个主题,选择上图的 Choose a theme 之后会跳转到下面这个页面（可以不选）<br><img src="4.png" alt="图片4"><br>设置完毕后你就可以通过 username.github.io（username 为你的用户名访问你的博客了）</p>
-<p><strong>在这里我创建了一个 github repo 叫做 <a href="https://v_vincen.gitee.io/" target="_blank" rel="noopener">v_vincen.gitee.io</a> 创建完成之后，需要有一次提交（git commit）操作，然后就可以通过链接 <a href="https://v_vincen.gitee.io/" target="_blank" rel="noopener">v_vincen.gitee.io</a> 访问了。</strong></p>
+<p><strong>在这里我创建了一个 github repo 叫做 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/">v_vincen.gitee.io</a> 创建完成之后，需要有一次提交（git commit）操作，然后就可以通过链接 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/">v_vincen.gitee.io</a> 访问了。</strong></p>
 <h3 id="部署-Hexo-到-Github-Pages"><a href="#部署-Hexo-到-Github-Pages" class="headerlink" title="部署 Hexo 到 Github Pages"></a>部署 Hexo 到 Github Pages</h3><hr>
-<p>这一步恐怕是最关键的一步了，让我们把在本地 web 环境下预览到的博客部署到 github 上，然后就可以直接通过 <a href="https://v_vincen.gitee.io/" target="_blank" rel="noopener">v_vincen.gitee.io</a> 访问了。不过很多教程文章对这个步骤语焉不详，这里着重说下。</p>
+<p>这一步恐怕是最关键的一步了，让我们把在本地 web 环境下预览到的博客部署到 github 上，然后就可以直接通过 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/">v_vincen.gitee.io</a> 访问了。不过很多教程文章对这个步骤语焉不详，这里着重说下。</p>
 <p>首先需要明白所谓部署到 github 的原理。</p>
 <ul>
-<li>之前步骤中在 Github 上创建的那个特别的 repo (v-vincen.gitee.io) 一个最大的特点就是其master 中的 html 静态文件，可以通过链接 <a href="https://v_vincen.gitee.io/" target="_blank" rel="noopener">v_vincen.gitee.io</a> 来直接访问。</li>
+<li>之前步骤中在 Github 上创建的那个特别的 repo (v-vincen.gitee.io) 一个最大的特点就是其master 中的 html 静态文件，可以通过链接 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/">v_vincen.gitee.io</a> 来直接访问。</li>
 <li>Hexo -g 会生成一个静态网站（第一次会生成一个 public 目录），这个静态文件可以直接访问。</li>
 <li>需要将 hexo 生成的静态网站，提交 (git commit) 到 github 上。</li>
 </ul>
 <p>明白了原理，怎么做自然就清晰了。</p>
 <h3 id="使用-hexo-deploy-部署"><a href="#使用-hexo-deploy-部署" class="headerlink" title="使用 hexo deploy 部署"></a>使用 hexo deploy 部署</h3><hr>
-<p>hexo deploy 可以部署到很多平台，具体可以 <a href="https://hexo.io/zh-cn/docs/github-pages" target="_blank" rel="noopener">参考这个链接</a>。</p>
+<p>hexo deploy 可以部署到很多平台，具体可以 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages">参考这个链接</a>。</p>
 <p>这一步，我们就可以将 hexo 和 GitHub 关联起来，也就是将 hexo 生成的文章部署到 GitHub 上，打开站点配置文件 <code>_config.yml</code>，翻到最后，修改为 YourgithubName 就是你的 GitHub 账户。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
@@ -510,10 +510,10 @@
 <li>hexo deploy 部署文章，可以用 hexo d 缩写</li>
 </ul>
 <p>注意 deploy 时可能要你输入 username 和 password。</p>
-<p>之后你就可以在 <a href="https://v_vincen.gitee.io/404/html" target="_blank" rel="noopener">http://yourname.github.io</a> 这个网站看到你的博客了！！<br><img src="5.png" alt="图片5"></p>
-<p>参考：<a href="https://www.cnblogs.com/jackyroc/p/7681938.html" target="_blank" rel="noopener">我是如何利用Github Pages搭建起我的博客，细数一路的坑</a></p>
-<p>参考：<a href="https://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
-<p>参考：<a href="https://blog.csdn.net/KNIGH_YUN/article/details/79774344" target="_blank" rel="noopener">搭建 Github Pages 个人博客网站</a></p>
+<p>之后你就可以在 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404/html">http://yourname.github.io</a> 这个网站看到你的博客了！！<br><img src="5.png" alt="图片5"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jackyroc/p/7681938.html">我是如何利用Github Pages搭建起我的博客，细数一路的坑</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/05289a4bc8b2">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/KNIGH_YUN/article/details/79774344">搭建 Github Pages 个人博客网站</a></p>
 <p>可以选择阅读完以上三篇教程后倒回来看不懂的地方。</p>
 
 
@@ -663,7 +663,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#什么是-Github-Pages"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建自己的-Github-Pages"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">创建自己的 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#部署-Hexo-到-Github-Pages"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">部署 Hexo 到 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用-hexo-deploy-部署"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用 hexo deploy 部署</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Github-Pages"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84-Github-Pages"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">创建自己的 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2-Hexo-%E5%88%B0-Github-Pages"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">部署 Hexo 到 Github Pages</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-hexo-deploy-%E9%83%A8%E7%BD%B2"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用 hexo deploy 部署</span></a></li></ol>
         
         </div>
       </aside>
@@ -849,7 +849,7 @@
           2021
           <br>
           Theme by
-          <a href="http://beantech.org" target="_blank" rel="noopener">BeanTech</a>
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
           <span style="display: inline-block; margin: 0 5px;">
             <i class="fa fa-heart"></i>
           </span>
