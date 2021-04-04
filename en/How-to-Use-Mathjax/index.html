@@ -259,6 +259,17 @@
           
           
           <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -273,17 +284,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/tags/">
-              
-              TAGS
               
               
             </a>
@@ -489,18 +489,18 @@ No more setup for readers. It just works.</p>
 <p>改成：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果小伙伴你用的是博主本人写的 <code>hexo-theme-livemylife</code> 主题的话，那么上述步骤，博主本人已经帮你完成了。那接下来让我们一起看几个渲染后的 mathjax 案例：</p>
-<p>*Example1: *</p>
+<p><em>Example1:</em></p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When <span class="symbol">$</span>a \<span class="keyword">ne</span> <span class="number">0</span><span class="symbol">$</span>, there are two solutions to \(ax^<span class="number">2</span> + bx + c = <span class="number">0</span>\) <span class="keyword">and</span> they are</span><br><span class="line"><span class="symbol">$</span><span class="symbol">$</span>x = &#123;-b \pm \<span class="built_in">sqrt</span>&#123;b^<span class="number">2</span><span class="number">-4</span>ac&#125; \over <span class="number">2</span>a&#125;.<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure>
-<p>*Preview: *<br>
+<p><em>Preview:</em><br>
 When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
-<p>*Example2: *</p>
+<p><em>Example2:</em></p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">$$f(<span class="params">x_1</span>,<span class="params">x_2</span>,\<span class="params">underbrace</span>&#123;\<span class="params">ldots</span>&#125;<span class="params">_</span>&#123;\<span class="params">rm</span> <span class="params">ldots</span>&#125; ,<span class="params">x_n</span>)</span> = x_1^<span class="number">2</span> + x_2^<span class="number">2</span> + \underbrace&#123;\cdots&#125;_&#123;\rm cdots&#125; + x_n^<span class="number">2</span>$$</span><br></pre></td></tr></table></figure>
-<p>*Preview: *<br>
+<p><em>Preview:</em><br>
 $$f(x_1,x_2,\underbrace{\ldots}<em>{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}</em>{\rm cdots} + x_n^2$$</p>
-<p>*Example4: *</p>
+<p><em>Example4:</em></p>
 <figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">vmatrix ||、Bmatrix&#123;&#125;、pmatrix()</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p>*Preview: *<br>
+<p><em>Preview:</em><br>
 $$<br>
 \begin{bmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{bmatrix}<br>
 \<br>
@@ -508,9 +508,9 @@ $$<br>
 \<br>
 vmatrix ||、Bmatrix{}、pmatrix()<br>
 $$</p>
-<p>*Example5: *</p>
+<p><em>Example5:</em></p>
 <figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">f(x)=</span><br><span class="line"><span class="symbol">\b</span>egin&#123;cases&#125;</span><br><span class="line">0&amp; <span class="symbol">\t</span>ext&#123;x=0&#125;<span class="symbol">\\</span><span class="symbol">\\</span></span><br><span class="line">1&amp; <span class="symbol">\t</span>ext&#123;x!=0&#125;</span><br><span class="line"><span class="symbol">\e</span>nd&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p>*Preview: *<br>
+<p><em>Preview:</em><br>
 $$<br>
 f(x)=<br>
 \begin{cases}<br>
@@ -518,9 +518,9 @@ f(x)=<br>
 1&amp; \text{x!=0}<br>
 \end{cases}<br>
 $$</p>
-<p>*Example6: *</p>
+<p><em>Example6:</em></p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span><span class="symbol">$</span>\lim_&#123;n \rightarrow +\infty&#125; \<span class="built_in">frac</span>&#123;<span class="number">1</span>&#125;&#123;n(n+<span class="number">1</span>)&#125;<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure>
-<p>*Preview: *<br>
+<p><em>Preview:</em><br>
 $$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$</p>
 <p>更多用法可参考 mathjax 官网：<a target="_blank" rel="noopener" href="https://www.mathjax.org/">https://www.mathjax.org/</a><br>
 或者参考：<a target="_blank" rel="noopener" href="https://rmshadows.gitee.io/2020/Markdown/#%E6%9D%A5%E6%BA%90-2">https://rmshadows.gitee.io/2020/Markdown/#来源-2</a></p>
