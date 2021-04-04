@@ -472,7 +472,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="什么是-Docker"><a href="#什么是-Docker" class="headerlink" title="什么是 Docker"></a>什么是 Docker</h2><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Docker_(software)">2013 年 3 月以 Apache 2.0 授权协议开源</a>，主要项目代码在 <a target="_blank" rel="noopener" href="https://github.com/moby/moby">GitHub</a> 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 <a target="_blank" rel="noopener" href="https://www.opencontainers.org/">开放容器联盟（OCI）</a>。</p>
+        <h2 id="什么是-Docker"><a href="#什么是-Docker" class="headerlink" title="什么是 Docker"></a>什么是 Docker</h2><p>Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Docker_(software">2013 年 3 月以 Apache 2.0 授权协议开源</a>)，主要项目代码在 <a target="_blank" rel="noopener" href="https://github.com/moby/moby">GitHub</a> 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 <a target="_blank" rel="noopener" href="https://www.opencontainers.org/">开放容器联盟（OCI）</a>。</p>
 <p>Docker 自开源后受到广泛的关注和讨论，至今其 GitHub 项目已经超过 4 万 6 千个星标和一万多个 fork。甚至由于 Docker 项目的火爆，在 2013 年底，<a target="_blank" rel="noopener" href="https://blog.docker.com/2013/10/dotcloud-is-becoming-docker-inc/">dotCloud 公司决定改名为 Docker</a>。Docker 最初是在 Ubuntu 12.04 上开发实现的；Red Hat 则从 RHEL 6.5 开始对 Docker 进行支持；Google 也在其 PaaS 产品中广泛应用 Docker。</p>
 <p>Docker 使用 Google 公司推出的 <a target="_blank" rel="noopener" href="https://golang.org/">Go 语言</a> 进行开发实现，基于 Linux 内核的 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Cgroups">cgroup</a>，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_namespaces">namespace</a>，以及 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Aufs">AUFS</a> 类的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Union_mount">Union FS</a> 等技术，对进程进行封装隔离，属于 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization">操作系统层面的虚拟化技术</a>。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 <a target="_blank" rel="noopener" href="https://linuxcontainers.org/lxc/introduction/">LXC</a>，从 0.7 版本以后开始去除 LXC，转而使用自行开发的 <a target="_blank" rel="noopener" href="https://github.com/docker/libcontainer">libcontainer</a>，从 1.11 开始，则进一步演进为使用 <a target="_blank" rel="noopener" href="https://github.com/opencontainers/runc">runC</a> 和 <a target="_blank" rel="noopener" href="https://github.com/containerd/containerd">containerd</a>。</p>
 <p>Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。</p>
@@ -487,7 +487,8 @@
 <p>而且使用 Dockerfile 使镜像构建透明化，不仅仅开发团队可以理解应用运行环境，也方便运维团队理解应用运行所需条件，帮助更好的生产环境中部署该镜像。</p>
 <h3 id="更轻松的迁移"><a href="#更轻松的迁移" class="headerlink" title="更轻松的迁移"></a>更轻松的迁移</h3><p>由于 Docker 确保了执行环境的一致性，使得应用的迁移更加容易。Docker 可以在很多平台上运行，无论是物理机、虚拟机、公有云、私有云，甚至是笔记本，其运行结果是一致的。因此用户可以很轻易的将在一个平台上运行的应用，迁移到另一个平台上，而不用担心运行环境的变化导致应用无法正常运行的情况。</p>
 <h3 id="更轻松的维护和扩展"><a href="#更轻松的维护和扩展" class="headerlink" title="更轻松的维护和扩展"></a>更轻松的维护和扩展</h3><p>Docker 使用的分层存储以及镜像的技术，使得应用重复部分的复用更为容易，也使得应用的维护更新更加简单，基于基础镜像进一步扩展镜像也变得非常简单。此外，Docker 团队同各个开源项目团队一起维护了一大批高质量的 官方镜像，既可以直接在生产环境使用，又可以作为基础进一步定制，大大的降低了应用服务的镜像制作成本。</p>
-<h3 id="对比传统虚拟机总结"><a href="#对比传统虚拟机总结" class="headerlink" title="对比传统虚拟机总结"></a>对比传统虚拟机总结</h3><table>
+<h3 id="对比传统虚拟机总结"><a href="#对比传统虚拟机总结" class="headerlink" title="对比传统虚拟机总结"></a>对比传统虚拟机总结</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>特性</th>
@@ -495,7 +496,8 @@
 <th>虚拟机</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>启动</td>
 <td>秒级</td>
 <td>分钟级</td>
@@ -515,7 +517,9 @@
 <td>单机支持上千个容器</td>
 <td>一般几十个</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
 
         <hr>
@@ -1001,7 +1005,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1316,5 +1320,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

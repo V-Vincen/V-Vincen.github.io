@@ -391,8 +391,6 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-              
               <a class="tag" href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
               
             </div>
@@ -491,7 +489,8 @@
 <p>  <img src="2.png" alt="2"></p>
 </li>
 <li><p>第一个红框不解释了，第二个红框是你的博客站点的 ip 地址，ip 获取方式如下，再终端输入命令：</p>
-  <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ping</span> username.github.io</span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ping</span> username.github.io</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>解析配置好了以后，登录 github，进入到博客站点对应的仓库，对域名进行设置：</p>
 <p>  <img src="3.png" alt="3"></p>
 </li>
@@ -504,14 +503,10 @@
 <p><img src="4.png" alt="4"></p>
 <h3 id="Gitee-Pages-配置"><a href="#Gitee-Pages-配置" class="headerlink" title="Gitee Pages 配置"></a><code>Gitee Pages</code> 配置</h3><p>对于一个项目来说，项目的 Pages 可能存在于不同的分支上， 或存在于某个分支的二级目录。比如「docs」、「pages」目录等。通过指定部署分支和部署目录，我们就可以很方便的完成 Pages 的自定义部署。</p>
 <ul>
-<li><p><code>部署分支</code>：用于部署 <code>Pages</code> 的分支</p>
-</li>
-<li><p><code>部署目录</code>：自定义 <code>Pages</code> 源文件的目录</p>
-</li>
-<li><p><code>个性域名</code>：用户自定义域名，需要解析 <code>CNAME</code> 到 <code>gitee.gitee.io</code> 生效后使用</p>
-</li>
-<li><p><code>配置域名证书</code>：用于配置自定义域名 <code>HTTPS 证书</code></p>
-</li>
+<li><code>部署分支</code>：用于部署 <code>Pages</code> 的分支</li>
+<li><code>部署目录</code>：自定义 <code>Pages</code> 源文件的目录</li>
+<li><code>个性域名</code>：用户自定义域名，需要解析 <code>CNAME</code> 到 <code>gitee.gitee.io</code> 生效后使用</li>
+<li><code>配置域名证书</code>：用于配置自定义域名 <code>HTTPS 证书</code></li>
 <li><p><code>启动/暂停</code>：启动/暂停 <code>Gitee Pages</code> 服务</p>
 <p>  <img src="5.png" alt="5"></p>
 </li>
@@ -563,16 +558,10 @@
 <li><p>如果你要创建一个 <strong>user page</strong>，假设 project name：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">john.gitlab.io</a> （john 为你的 <code>Gitlab</code> 账号名），则你的 <strong>project url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://gitlab.com/john/john.gitlab.io</a>。启用了 <code>GitLab Pages</code> 并构建了站点，<strong>站点访问 url</strong>：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">https://john.gitlab.io</a>。</p>
 </li>
 </ul>
-<h3 id="Gitlab-账号添加-SSH-Keys"><a href="#Gitlab-账号添加-SSH-Keys" class="headerlink" title="Gitlab 账号添加 SSH-Keys"></a><code>Gitlab</code> 账号添加 <code>SSH-Keys</code></h3><p>点击你的 <code>Gitlab</code> 账号右上角头像，选择 settings，然后在左侧菜单选择 SSH Keys。然后检查一下你的本地 SSH Keys 的情况。</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.ssh</span></span><br><span class="line"><span class="keyword">ls</span> <span class="comment">#此时会显示一些文件</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="Gitlab-账号添加-SSH-Keys"><a href="#Gitlab-账号添加-SSH-Keys" class="headerlink" title="Gitlab 账号添加 SSH-Keys"></a><code>Gitlab</code> 账号添加 <code>SSH-Keys</code></h3><p>点击你的 <code>Gitlab</code> 账号右上角头像，选择 settings，然后在左侧菜单选择 SSH Keys。然后检查一下你的本地 SSH Keys 的情况。<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~<span class="string">/.ssh</span></span><br><span class="line"><span class="keyword">ls</span> <span class="comment">#此时会显示一些文件</span></span><br></pre></td></tr></table></figure></p>
 <p>打开 <code>id_rsa.pub</code> 文件，将里面的所有内容添加到上面 <code>Gitlab</code> 账号 settings 中的 SSH  Keys中。如果没有 <code>id_rsa.pub</code> 文件的话话，请参看 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/2019/08/23/Git-3-Git-%E5%91%BD%E4%BB%A4/">[Git] 3 Git 命令</a> 生成秘钥。</p>
-<h3 id="添加-gitlab-ci-yml-文件"><a href="#添加-gitlab-ci-yml-文件" class="headerlink" title="添加 .gitlab-ci.yml 文件"></a>添加 <code>.gitlab-ci.yml</code> 文件</h3><p>上面我们也说了 <code>Gitlab Pages</code> 搭建 <code>Hexo</code>，我们需要把 <code>Hexo</code> 博客源代码提交到 <code>Gitlab</code> 上，然后利用 <code>Gitlab 的 CI/CD</code> 来完成自动部署。因此我们需要添加一个 <code>.gitlab-ci.yml</code> 配置文件用来指导服务器如何处理我们提交的源代码。最新的 <code>.gitlab-ci.yml</code> 官方版本：<a target="_blank" rel="noopener" href="https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml">https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml</a> 。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">image:</span> <span class="string">node:10.15.3</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">node_modules/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">test</span> <span class="string">-e</span> <span class="string">package.json</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="推送源码到-Gitlab-Pages-仓库"><a href="#推送源码到-Gitlab-Pages-仓库" class="headerlink" title="推送源码到 Gitlab Pages 仓库"></a>推送源码到 <code>Gitlab Pages</code> 仓库</h3><p>进入你的 <code>Hexo</code> 目录下执行下面命令：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git <span class="builtin-name">add</span> -A</span><br><span class="line">git commit -m <span class="string">&quot;init blog&quot;</span></span><br><span class="line">git remote <span class="builtin-name">add</span> origin git@gitlab.com:username/username.gitlab.io.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-<p>这样我们就将 <code>Hexo</code> 博客本地源码推送到 <code>Gitlab Pages</code> 仓库上了。</p>
+<h3 id="添加-gitlab-ci-yml-文件"><a href="#添加-gitlab-ci-yml-文件" class="headerlink" title="添加 .gitlab-ci.yml 文件"></a>添加 <code>.gitlab-ci.yml</code> 文件</h3><p>上面我们也说了 <code>Gitlab Pages</code> 搭建 <code>Hexo</code>，我们需要把 <code>Hexo</code> 博客源代码提交到 <code>Gitlab</code> 上，然后利用 <code>Gitlab 的 CI/CD</code> 来完成自动部署。因此我们需要添加一个 <code>.gitlab-ci.yml</code> 配置文件用来指导服务器如何处理我们提交的源代码。最新的 <code>.gitlab-ci.yml</code> 官方版本：<a target="_blank" rel="noopener" href="https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml">https://gitlab.com/pages/hexo/blob/master/.gitlab-ci.yml</a> 。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">image:</span> <span class="string">node:10.15.3</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">node_modules/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">test</span> <span class="string">-e</span> <span class="string">package.json</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">hexo</span> <span class="string">generate</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="推送源码到-Gitlab-Pages-仓库"><a href="#推送源码到-Gitlab-Pages-仓库" class="headerlink" title="推送源码到 Gitlab Pages 仓库"></a>推送源码到 <code>Gitlab Pages</code> 仓库</h3><p>进入你的 <code>Hexo</code> 目录下执行下面命令：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git <span class="builtin-name">add</span> -A</span><br><span class="line">git commit -m <span class="string">&quot;init blog&quot;</span></span><br><span class="line">git remote <span class="builtin-name">add</span> origin git@gitlab.com:username/username.gitlab.io.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><br>这样我们就将 <code>Hexo</code> 博客本地源码推送到 <code>Gitlab Pages</code> 仓库上了。</p>
 <h3 id="CI-CD-生成-Gitlab-pages"><a href="#CI-CD-生成-Gitlab-pages" class="headerlink" title="CI/CD 生成 Gitlab pages"></a><code>CI/CD</code> 生成 <code>Gitlab pages</code></h3><p>上传后，然后 <code>Gitlab</code> 服务器会自动检查 <code>.gitlab-ci.yml</code> 脚本是否有效，校验通过后，会自动开始执行脚本。<br>点击左侧菜单中的 <code>CI/CD-&gt;pipeline</code> 可以查看脚本的执行情况。</p>
 <p><img src="17.png" alt="17"></p>
 <p>此时已可以访问我们的个人博客站点：<code>https://username.gitlab.io</code>。有时构建完成时马上访问可能会出现404页面，因为 <code>Gitlab</code> 的服务器构建速度比较慢，等5-10分钟再重新访问页面就正常了。</p>
@@ -755,8 +744,6 @@
             <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
-            
-            <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
             
             <a class="tag" href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
             
@@ -1072,7 +1059,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1387,5 +1374,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

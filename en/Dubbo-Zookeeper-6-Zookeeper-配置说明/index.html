@@ -482,18 +482,14 @@
 <li><code>3888</code>：选举 leader 使用。</li>
 <li><code>2888</code>：集群内机器通讯使用（Leader 和 Follower 之间数据同步使用的端口号，Leader 监听此端口）。</li>
 </ul>
-<h2 id="Zookeeper-单机模式配置文件"><a href="#Zookeeper-单机模式配置文件" class="headerlink" title="Zookeeper 单机模式配置文件"></a>Zookeeper 单机模式配置文件</h2><p>配置文件路径：<code>/conf/zoo.cfg</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clientPort=2181</span><br><span class="line">dataDir=/data</span><br><span class="line">dataLogDir=/datalog</span><br><span class="line">tickTime=2000</span><br></pre></td></tr></table></figure>
-
+<h2 id="Zookeeper-单机模式配置文件"><a href="#Zookeeper-单机模式配置文件" class="headerlink" title="Zookeeper 单机模式配置文件"></a>Zookeeper 单机模式配置文件</h2><p>配置文件路径：<code>/conf/zoo.cfg</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clientPort=2181</span><br><span class="line">dataDir=/data</span><br><span class="line">dataLogDir=/datalog</span><br><span class="line">tickTime=2000</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>clientPort</code>：这个端口就是客户端连接 Zookeeper 服务器的端口，Zookeeper 会监听这个端口，接受客户端的访问请求。</li>
 <li><code>dataDir</code>：Zookeeper 保存数据的目录。</li>
 <li><code>dataLogDir</code>：Zookeeper 保存日志的目录。</li>
 <li><code>tickTime</code>：这个时间是作为 Zookeeper 服务器之间或客户端与服务器之间维持心跳的时间间隔，也就是每隔 tickTime 时间就会发送一个心跳。</li>
 </ul>
-<h2 id="Zookeeper-集群模式配置文件"><a href="#Zookeeper-集群模式配置文件" class="headerlink" title="Zookeeper 集群模式配置文件"></a>Zookeeper 集群模式配置文件</h2><p>配置文件路径：<code>/conf/zoo.cfg</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">clientPort=2181</span><br><span class="line">dataDir=/data</span><br><span class="line">dataLogDir=/datalog</span><br><span class="line">tickTime=2000</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">autopurge.snapRetainCount=3</span><br><span class="line">autopurge.purgeInterval=0</span><br><span class="line">maxClientCnxns=60</span><br><span class="line">server.1=192.168.0.1:2888:3888</span><br><span class="line">server.2=192.168.0.2:2888:3888</span><br><span class="line">server.3=192.168.0.3:2888:3888</span><br></pre></td></tr></table></figure>
-
+<h2 id="Zookeeper-集群模式配置文件"><a href="#Zookeeper-集群模式配置文件" class="headerlink" title="Zookeeper 集群模式配置文件"></a>Zookeeper 集群模式配置文件</h2><p>配置文件路径：<code>/conf/zoo.cfg</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">clientPort=2181</span><br><span class="line">dataDir=/data</span><br><span class="line">dataLogDir=/datalog</span><br><span class="line">tickTime=2000</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">autopurge.snapRetainCount=3</span><br><span class="line">autopurge.purgeInterval=0</span><br><span class="line">maxClientCnxns=60</span><br><span class="line">server.1=192.168.0.1:2888:3888</span><br><span class="line">server.2=192.168.0.2:2888:3888</span><br><span class="line">server.3=192.168.0.3:2888:3888</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><code>initLimit</code>：配置 Zookeeper 接受客户端（这里所说的客户端不是用户连接 Zookeeper 服务器的客户端，而是 Zookeeper 服务器集群中连接到 Leader 的 Follower 服务器）初始化连接时最长能忍受多少个心跳时间间隔数。当已经超过 initLimit（默认为 10） 个心跳的时间（也就是 tickTime）长度后 Zookeeper 服务器还没有收到客户端的返回信息，那么表明这个客户端连接失败。总的时间长度就是 5 * 2000 = 10 秒</li>
 <li><code>syncLimit</code>：配置 Leader 与 Follower 之间发送消息，请求和应答时间长度，最长不能超过多少个 tickTime 的时间长度，总的时间长度就是 2 * 2000 = 4 秒</li>
@@ -519,28 +515,14 @@
 </li>
 </ul>
 <p><strong>注意</strong>： <code>server.A</code> 中的 <code>A</code> 是在 <code>dataDir</code> 配置的目录中创建一个名为 <code>myid</code> 的文件里的值（如：1）</p>
-<h2 id="Zookeeper-常用命令"><a href="#Zookeeper-常用命令" class="headerlink" title="Zookeeper 常用命令"></a>Zookeeper 常用命令</h2><h3 id="zkServer"><a href="#zkServer" class="headerlink" title="zkServer"></a>zkServer</h3><p><strong>启动服务</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br></pre></td></tr></table></figure>
-
-<p><strong>停止服务</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh stop</span><br></pre></td></tr></table></figure>
-
-<p><strong>重启服务</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh restart</span><br></pre></td></tr></table></figure>
-
-<p><strong>执行状态</strong></p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh <span class="keyword">status</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="zkClient"><a href="#zkClient" class="headerlink" title="zkClient"></a>zkClient</h3><p><strong>客户端连接服务器并进入 <code>Bash</code> 模式</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">./zkCli.sh -server &lt;ip&gt;:&lt;port&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 命令参数</span></span><br><span class="line">ZooKeeper -server host:port cmd args</span><br><span class="line">	stat path [watch]</span><br><span class="line">	set path data [version]</span><br><span class="line">	ls path [watch]</span><br><span class="line">	delquota [-n|-b] path</span><br><span class="line">	ls2 path [watch]</span><br><span class="line">	setAcl path acl</span><br><span class="line">	setquota -n|-b val path</span><br><span class="line">	history </span><br><span class="line">	redo cmdno</span><br><span class="line">	printwatches on|off</span><br><span class="line">	delete path [version]</span><br><span class="line">	sync path</span><br><span class="line">	listquota path</span><br><span class="line">	rmr path</span><br><span class="line">	get path [watch]</span><br><span class="line">	create [-s] [-e] path data acl</span><br><span class="line">	addauth scheme auth</span><br><span class="line">	quit </span><br><span class="line">	getAcl path</span><br><span class="line">	close </span><br><span class="line">	connect host:port</span><br></pre></td></tr></table></figure>
-<p><strong>创建节点（Bash 模式）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create /test &quot;hello zookeeper&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>查询节点（Bash 模式）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">get /test</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下</span></span><br><span class="line">Hello Zookeeper</span><br><span class="line">cZxid = 0x100000004</span><br><span class="line">ctime = Fri Oct 19 05:11:47 GMT 2018</span><br><span class="line">mZxid = 0x100000004</span><br><span class="line">mtime = Fri Oct 19 05:11:47 GMT 2018</span><br><span class="line">pZxid = 0x100000004</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 15</span><br><span class="line">numChildren = 0</span><br></pre></td></tr></table></figure>
-
-<p><strong>删除节点（Bash 模式）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete /test</span><br></pre></td></tr></table></figure>
+<h2 id="Zookeeper-常用命令"><a href="#Zookeeper-常用命令" class="headerlink" title="Zookeeper 常用命令"></a>Zookeeper 常用命令</h2><h3 id="zkServer"><a href="#zkServer" class="headerlink" title="zkServer"></a>zkServer</h3><p><strong>启动服务</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br></pre></td></tr></table></figure></p>
+<p><strong>停止服务</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh stop</span><br></pre></td></tr></table></figure></p>
+<p><strong>重启服务</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh restart</span><br></pre></td></tr></table></figure></p>
+<p><strong>执行状态</strong><br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh <span class="keyword">status</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="zkClient"><a href="#zkClient" class="headerlink" title="zkClient"></a>zkClient</h3><p><strong>客户端连接服务器并进入 <code>Bash</code> 模式</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">./zkCli.sh -server &lt;ip&gt;:&lt;port&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 命令参数</span></span><br><span class="line">ZooKeeper -server host:port cmd args</span><br><span class="line">	stat path [watch]</span><br><span class="line">	set path data [version]</span><br><span class="line">	ls path [watch]</span><br><span class="line">	delquota [-n|-b] path</span><br><span class="line">	ls2 path [watch]</span><br><span class="line">	setAcl path acl</span><br><span class="line">	setquota -n|-b val path</span><br><span class="line">	history </span><br><span class="line">	redo cmdno</span><br><span class="line">	printwatches on|off</span><br><span class="line">	delete path [version]</span><br><span class="line">	sync path</span><br><span class="line">	listquota path</span><br><span class="line">	rmr path</span><br><span class="line">	get path [watch]</span><br><span class="line">	create [-s] [-e] path data acl</span><br><span class="line">	addauth scheme auth</span><br><span class="line">	quit </span><br><span class="line">	getAcl path</span><br><span class="line">	close </span><br><span class="line">	connect host:port</span><br></pre></td></tr></table></figure></p>
+<p><strong>创建节点（Bash 模式）</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create /test &quot;hello zookeeper&quot;</span><br></pre></td></tr></table></figure></p>
+<p><strong>查询节点（Bash 模式）</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">get /test</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 输出如下</span></span><br><span class="line">Hello Zookeeper</span><br><span class="line">cZxid = 0x100000004</span><br><span class="line">ctime = Fri Oct 19 05:11:47 GMT 2018</span><br><span class="line">mZxid = 0x100000004</span><br><span class="line">mtime = Fri Oct 19 05:11:47 GMT 2018</span><br><span class="line">pZxid = 0x100000004</span><br><span class="line">cversion = 0</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 0</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 15</span><br><span class="line">numChildren = 0</span><br></pre></td></tr></table></figure></p>
+<p><strong>删除节点（Bash 模式）</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete /test</span><br></pre></td></tr></table></figure></p>
 
 
         <hr>
@@ -1026,7 +1008,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1341,5 +1323,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

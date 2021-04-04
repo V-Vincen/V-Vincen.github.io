@@ -476,13 +476,9 @@
 <p>IntelliJ IDEA 与 Bower 软件包管理器（Bower Package Manager）集成，这样您就可以在不离开IDE 的情况下安装、定位、升级和删除包含 HTML、CSS、JavaScript、字体、图像文件等的客户端库和组件。” Bower “页提供了用于管理包的专用 UI 。当然, 您也可以在内置终端的命令行中执行此操作。</p>
 <h2 id="安装和配置-Bower（请在-Bower-的安装和配置中查看）"><a href="#安装和配置-Bower（请在-Bower-的安装和配置中查看）" class="headerlink" title="安装和配置 Bower（请在 Bower 的安装和配置中查看）"></a>安装和配置 Bower（请在 Bower 的安装和配置中查看）</h2><h2 id="安装-Bower"><a href="#安装-Bower" class="headerlink" title="安装 Bower"></a>安装 Bower</h2><p>打开内置的IntelliJ IDEA终端（Alt+F12），并在命令提示符下键入：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g bower</span><br></pre></td></tr></table></figure>
-
-
-
 <h2 id="创建-bower-json"><a href="#创建-bower-json" class="headerlink" title="创建 bower.json"></a>创建 bower.json</h2><p>1.打开嵌入式终端（查看|工具窗口|终端或 Alt + F12）。</p>
 <p>2.在命令提示符下键入：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="tag">&lt;<span class="name">your</span> <span class="attr">project</span> <span class="attr">folder</span>&gt;</span></span><br><span class="line"></span><br><span class="line">bower init</span><br></pre></td></tr></table></figure>
-
 <p>回答问题以指定以下基本设置：</p>
 <ul>
 <li>要使用的测试框架。</li>
@@ -496,9 +492,6 @@
 <h2 id="在终端中安装软件包"><a href="#在终端中安装软件包" class="headerlink" title="在终端中安装软件包"></a>在终端中安装软件包</h2><p>1.打开嵌入式终端（查看|工具窗口|终端，或使用 Alt + F12）。</p>
 <p>2.在命令提示符处，键入：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bower install --save &lt;package_name&gt; # 将程序包安装为项目依赖项</span><br><span class="line">bower install --save-dev &lt;package_name&gt; # 或开发依赖项</span><br></pre></td></tr></table></figure>
-
-
-
 <h2 id="在-Bower-页面上处理包"><a href="#在-Bower-页面上处理包" class="headerlink" title="在 Bower 页面上处理包"></a>在 Bower 页面上处理包</h2><p>1.在”设置/首选项”对话框（Ctrl + Alt + S）中，单击”语言和框架”下的” JavaScript “ ，然后单击”  Bower “。</p>
 <p>2.在打开的 Bower 页面上，Packages 区域显示项目中当前安装的所有 Bower 软件包。</p>
 <ul>
@@ -995,7 +988,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1310,5 +1303,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -488,6 +488,7 @@
 <h2 id="Docker-系统架构"><a href="#Docker-系统架构" class="headerlink" title="Docker 系统架构"></a>Docker 系统架构</h2><p>Docker 使用客户端-服务器 (C/S) 架构模式，使用远程 API 来管理和创建 Docker 容器。</p>
 <p>Docker 容器通过 Docker 镜像来创建。</p>
 <p>容器与镜像的关系类似于面向对象编程中的对象与类。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -495,7 +496,8 @@
 <th>面向对象</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>容器</td>
 <td>对象</td>
 </tr>
@@ -503,8 +505,11 @@
 <td>镜像</td>
 <td>类</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p><img src="2.png" alt="2"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -512,7 +517,8 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>镜像(Images)</td>
 <td>Docker 镜像是用于创建 Docker 容器的模板。</td>
 </tr>
@@ -522,7 +528,7 @@
 </tr>
 <tr>
 <td>客户端(Client)</td>
-<td>Docker 客户端通过命令行或者其他工具使用 Docker API (<a target="_blank" rel="noopener" href="https://docs/.docker/.com/reference/api/docker/_remote/_api">https://docs\.docker\.com/reference/api/docker\_remote\_api</a> ) 与 Docker 的守护进程通信。</td>
+<td>Docker 客户端通过命令行或者其他工具使用 Docker API (<a target="_blank" rel="noopener" href="https://docs\.docker\.com/reference/api/docker\_remote\_api">https://docs\.docker\.com/reference/api/docker\_remote\_api</a> ) 与 Docker 的守护进程通信。</td>
 </tr>
 <tr>
 <td>主机(Host)</td>
@@ -530,13 +536,15 @@
 </tr>
 <tr>
 <td>仓库(Registry)</td>
-<td>Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。Docker Hub(<a target="_blank" rel="noopener" href="https://hub/.docker/.com">https://hub\.docker\.com</a> ) 提供了庞大的镜像集合供使用。</td>
+<td>Docker 仓库用来保存镜像，可以理解为代码控制中的代码仓库。Docker Hub(<a target="_blank" rel="noopener" href="https://hub\.docker\.com">https://hub\.docker\.com</a> ) 提供了庞大的镜像集合供使用。</td>
 </tr>
 <tr>
 <td>Docker Machine</td>
 <td>Docker Machine是一个简化Docker安装的命令行工具，通过一个简单的命令行即可在相应的平台上安装Docker，比如VirtualBox、 Digital Ocean、Microsoft Azure。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="Docker-镜像"><a href="#Docker-镜像" class="headerlink" title="Docker 镜像"></a>Docker 镜像</h2><p>我们都知道，操作系统分为内核和用户空间。对于 Linux 而言，内核启动后，会挂载 <code>root</code> 文件系统为其提供用户空间支持。而 Docker 镜像（Image），就相当于是一个 <code>root</code> 文件系统。比如官方镜像 <code>ubuntu:16.04</code> 就包含了完整的一套 Ubuntu 16.04 最小系统的 <code>root</code> 文件系统。</p>
 <p>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
 <h3 id="分层存储"><a href="#分层存储" class="headerlink" title="分层存储"></a>分层存储</h3><p>因为镜像包含操作系统完整的 <code>root</code> 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Union_mount">Union FS</a> 的技术，将其设计为分层存储的架构。所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
@@ -1046,7 +1054,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1361,5 +1369,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

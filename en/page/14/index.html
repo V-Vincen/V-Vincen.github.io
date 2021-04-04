@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="en/page/14/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -485,6 +480,79 @@
   <!-- top end -->
   
 
+  <a href="/en/Thread-2-线程的安全问题/">
+    <h2 class="post-title">
+      [Thread] 2 线程的安全问题
+    </h2>
+    <h3 class="post-subtitle">
+      线程的安全问题
+    </h3>
+    <div class="post-content-preview">
+      假设一个场景需求：创建三个窗口卖票，总票数为100张。
+线程安全问题：卖票过程中，出现了重票、错票。
+问题的原因：当某个线程操作车票的过程中，尚未操作完成时，其他线程参与进来，也操作车票。
+如何解决：当一个线程a 在操作 ticket 的时候，其他线程不能参与进来。直到线程a 操作完 ticket 时，其他线程才可以操作 ticket 。这种情况即使线程a 出现了阻塞，也不能改变。
+在 Ja......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-09-06
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Thread" title="Thread">Thread</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Thread-1-线程的基本概念/">
+    <h2 class="post-title">
+      [Thread] 1 线程的基本概念
+    </h2>
+    <h3 class="post-subtitle">
+      线程的基本概念
+    </h3>
+    <div class="post-content-preview">
+      基本的进程线程概念进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
+系统中的进程线程模型是这样的：
+进程从操作系统获得基本的内存空间，所有的线程共享着进程的内存地址空间。当然，每个线程也会拥有自己私有的内存地址范围，其他线程不能访问。
+由于所有的线程共享进程的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-09-05
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Thread" title="Thread">Thread</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Registry-2-Docker-Registry-客户端配置/">
     <h2 class="post-title">
       [Registry] 2 Docker Registry 客户端配置
@@ -493,8 +561,7 @@
       Docker Registry 客户端配置
     </h3>
     <div class="post-content-preview">
-      概述我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）
-12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&quo......
+      概述我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&quot......
     </div>
   </a>
   
@@ -650,7 +717,7 @@ Permissive：宽松
       GitLab 初始化设置和项目创建
     </h3>
     <div class="post-content-preview">
-      GitLab 的基本设置第一次使用时需要做一些初始化设置，点击 管理区域 –&gt; 设置
+      GitLab 的基本设置第一次使用时需要做一些初始化设置，点击 管理区域 —&gt; 设置
 帐户和限制关闭头像功能，由于 Gravatar 头像为网络头像，在网络情况不理想时可能导致访问时卡顿
 
 注册限制由于是内部代码托管服务器，可以直接关闭注册功能，由管理员统一创建用户即可
@@ -722,12 +789,11 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     </h3>
     <div class="post-content-preview">
       查看 Docker 版本1docker version
-
 构建 Docker 镜像commit 构建
 先启动一个基本容器生成，然后在该容器中完成自己所需的操作，最后用 commit 命令来生成一个新的 image。
 下命令中：
 &lt;CONTAINER ID&gt;：为在基础容器中完成需求后的容器 id；
-&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 img......
+&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 imga......
     </div>
   </a>
   
@@ -768,92 +834,6 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Mr.Vincent on
     2019-08-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-3-Git-命令/">
-    <h2 class="post-title">
-      [Git] 3 Git 命令
-    </h2>
-    <h3 class="post-subtitle">
-      Git 命令
-    </h3>
-    <div class="post-content-preview">
-      基本命令先来看张流程图，具体命令如下：
-配置用户信息
-12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
-
-查看配置
-1git config --list
-
-初始化
-1git init
-
-新增提交 
-12git addgit commit -m &#39;......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-2-Git-的一般工作流程/">
-    <h2 class="post-title">
-      [Git] 2 Git 的一般工作流程
-    </h2>
-    <h3 class="post-subtitle">
-      Git 的一般工作流程
-    </h3>
-    <div class="post-content-preview">
-      工作流程
-克隆 Git 资源作为工作目录。
-在克隆的资源上添加或修改文件。
-如果其他人修改了，你可以更新资源。
-在提交前查看修改。
-提交修改。
-在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。
-
-
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-22
   </p>
   <div class="tags">
     
@@ -916,6 +896,14 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
 <div class="widget">
   <ul>
     
+    <a href="../../How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -926,14 +914,6 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     
     <a href="../../Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1048,11 +1028,7 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1101,6 +1077,10 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1297,7 +1277,7 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1612,7 +1592,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1927,5 +1907,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

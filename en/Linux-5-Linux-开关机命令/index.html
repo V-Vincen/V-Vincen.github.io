@@ -476,6 +476,7 @@
 <li>shutdown 命令可以用来进行关机程序，并且在关机以前传送讯息给所有使用者正在执行的程序</li>
 <li>shutdown 也可以用来重开机。</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -485,7 +486,8 @@
 <th>参数说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>shutdown</td>
 <td>shutdown [-t seconds] [-rkhncfF] time [message]</td>
 <td></td>
@@ -551,7 +553,9 @@
 <td>message</td>
 <td>传送给所有使用者的警告讯息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><ul>
 <li>reboot</li>
 <li>shutdown -r now</li>
@@ -1044,7 +1048,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1359,5 +1363,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

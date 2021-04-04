@@ -477,7 +477,7 @@
 <h2 id="JRebel-安装"><a href="#JRebel-安装" class="headerlink" title="JRebel 安装"></a>JRebel 安装</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p><img src="1.png" alt="1"></p>
 <h3 id="在线生成-GUID"><a href="#在线生成-GUID" class="headerlink" title="在线生成 GUID"></a>在线生成 GUID</h3><p>网址：<a target="_blank" rel="noopener" href="https://www.guidgen.com/">在线GUID地址</a></p>
 <p><img src="2.png" alt="2"></p>
-<p>如果失效刷新 GUID 替换就可以！连接到在线授权服务器：<a target="_blank" rel="noopener" href="https://jrebel.qekang.com/%7BGUID%7D">https://jrebel.qekang.com/{GUID}</a></p>
+<p>如果失效刷新 GUID 替换就可以！连接到在线授权服务器：<a target="_blank" rel="noopener" href="https://jrebel.qekang.com/{GUID}">https://jrebel.qekang.com/{GUID}</a></p>
 <h3 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h3><p>打开 JRebel &amp; XRebel 如下所示面板，填写上面的授权地址。</p>
 <p><img src="3.png" alt="3"></p>
 <p><img src="4.png" alt="4"></p>
@@ -490,9 +490,10 @@
 <li><p>设置 <code>compiler.automake.allow.when.app.running</code></p>
 <ul>
 <li>Windows 快捷键：<code>ctrl + shift + A</code>，搜索：<code>Registry</code> 或者快捷键：<code>Ctrl + Shift + Alt + /</code>，选择 <code>Registry</code></li>
-<li>Mac 快捷键：<code>shift + option + command + /</code></li>
+<li><p>Mac 快捷键：<code>shift + option + command + /</code></p>
+<p><img src="8.png" alt="8"></p>
+</li>
 </ul>
-<p>  <img src="8.png" alt="8"></p>
 </li>
 </ul>
 <h2 id="JRebel-使用"><a href="#JRebel-使用" class="headerlink" title="JRebel 使用"></a>JRebel 使用</h2><p>运行项目时要点击图中红框中的按钮，即可运行。</p>
@@ -1013,7 +1014,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1328,5 +1329,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

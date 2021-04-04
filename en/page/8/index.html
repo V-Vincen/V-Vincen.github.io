@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="en/page/8/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -497,8 +492,7 @@
       Practice something...
     </h3>
     <div class="post-content-preview">
-      先来写个基本类
-1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age;......
+      先来写个基本类1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age; ......
     </div>
   </a>
   
@@ -509,6 +503,82 @@
   <div class="tags">
     
     <a href="/tags/#JDK8" title="JDK8">JDK8</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Reflect-2-获取运行时类的结构/">
+    <h2 class="post-title">
+      [Reflect] 2 获取运行时类的结构
+    </h2>
+    <h3 class="post-subtitle">
+      获取运行时类的结构
+    </h3>
+    <div class="post-content-preview">
+      通过反射获取运行时类的完整结构Field、Method、Constructor、Superclass、Interface、Annotation
+
+实现的全部接口
+所继承的父类
+全部的构造器
+全部的方法
+全部的属性
+
+实现的全部接口public Class&lt;?&gt;[] getInterfaces()：确定此对象所表示的类或接口实现的接口。
+所继承的父类public Class&lt;......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-04-09
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Reflect" title="Reflect">Reflect</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Reflect-1-反射/">
+    <h2 class="post-title">
+      [Reflect] 1 反射
+    </h2>
+    <h3 class="post-subtitle">
+      Reflect
+    </h3>
+    <div class="post-content-preview">
+      反射机制概述Reflection（反射）是被视为动态语言的关键，反射机制允许程序在执行期借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。
+加载完类之后，在堆内存的方法区中就产生了一个 Class 类型的对象（ 一个类只有一个 Class 对象），这个对象就包含了完整的类的结构信息 。我们可以通过这个对象看到类的结构。这个对象就像一面镜子 ，透......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-04-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Reflect" title="Reflect">Reflect</a>
     
   </div>
   
@@ -567,12 +637,9 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
     </h3>
     <div class="post-content-preview">
       进程命令Mac 查看进程号12ps -ef | grep 软件或者进程号ps aux | grep 软件或者进程号
-
 查看进程监听的端口12sudo lsof -nP -p 进程号 | grep LISTENsudo lsof -nP | grep LISTEN | grep 进程号
-或者
-1netstat -ltnp | grep 进程号
-
-端口命令Mac 查看端口号1sudo lsof ......
+或者1netstat -ltnp | grep 进程号
+端口命令Mac 查看端口号1sudo lsof -i:......
     </div>
   </a>
   
@@ -606,14 +673,10 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
     </h3>
     <div class="post-content-preview">
       用 Homebrew 来安装 Nginx安装1brew install nginx
-
 查看 nginx 版本1nginx -v
-
 启动 nginx1nginx
-也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：
-1brew services start nginx
-
-查看 nginx 是否启动成功在浏览器中访问：在浏览器中访问：http:......
+也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：1brew services start nginx
+查看 nginx 是否启动成功在浏览器中访问：在浏览器中访问：http://lo......
     </div>
   </a>
   
@@ -647,8 +710,7 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
     </h3>
     <div class="post-content-preview">
       JAX-WS 规范AX-WS（Java API For XML Web Service），JAX-WS 规范是一组 XML web services 的 JAVA API，它运行时实现会将这些 API 的调用转换成为对应的 SOAP 消息，是 Sun 公司提出的一套关于 WebService 的开发标准。
-CXF 开发客户端创建 Maven 工程pom.xml
-123456789101112......
+CXF 开发客户端创建 Maven 工程pom.xml1234567891011121......
     </div>
   </a>
   
@@ -685,8 +747,7 @@ CXF 开发客户端创建 Maven 工程pom.xml
     <div class="post-content-preview">
       SOAP 消息的调试抓取使用 Postman 测试 WebService 接口
 
-request
-12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.exa......
+request12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.exam......
     </div>
   </a>
   
@@ -780,75 +841,6 @@ Web Service 技术，能使得......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Annotation-自定义注解/">
-    <h2 class="post-title">
-      [Annotation] 自定义注解
-    </h2>
-    <h3 class="post-subtitle">
-      Annotation
-    </h3>
-    <div class="post-content-preview">
-      什么是注解（Annotation）Java注解是什么，以下是引用自维基百科的内容：
-
-Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的特殊语法元数据。Java 语言中的类、方法、变量、参数和包等都可以被标注。和 Javadoc 不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时可......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-03-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Annotation" title="Annotation">Annotation</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/JDK8-5-Optional-类/">
-    <h2 class="post-title">
-      [JDK8] 5 Optional 类
-    </h2>
-    <h3 class="post-subtitle">
-      A container object which may or may not contain a non-null value.
-    </h3>
-    <div class="post-content-preview">
-      概述到目前为止，臭名昭著的空指针异常是导致 Java 应用程序失败的最常见原因。以前，为了解决空指针异常，Google 公司著名的 Guava 项目引入了 Optional 类， Guava 通过使用检查空值的方式来防止代码污染，它鼓励程序员写更干净的代码。受到 Google Guava 的启发，Optional 类已经成为 Java 8 类库的一部分。
-Optional&lt;T&gt; ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-03-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JDK8" title="JDK8">JDK8</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -900,6 +892,14 @@ Optional&lt;T&gt; ......
 <div class="widget">
   <ul>
     
+    <a href="../../How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -910,14 +910,6 @@ Optional&lt;T&gt; ......
     
     <a href="../../Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1032,11 +1024,7 @@ Optional&lt;T&gt; ......
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1085,6 +1073,10 @@ Optional&lt;T&gt; ......
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1281,7 +1273,7 @@ Optional&lt;T&gt; ......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1596,7 +1588,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1911,5 +1903,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -476,18 +476,10 @@
 <p><img src="1.png" alt="1"></p>
 <p><img src="2.png" alt="2"></p>
 <p>下载完成之后双击打开可以看到有一个 <code>apk</code> 文件，双击按照步骤安装即可。</p>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>安装好的 <code>JDK</code> 大概路径为：<code>/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home</code> 实际路径以自己为准。使用终端 <code>cd</code> 到 <code>Home</code> 路径中。使用 <code>vim</code> 打开 <code>JDK</code> 配置文件 <code>.bash_profile</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim .bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>输入以下内容，路径以自己实际路径为准：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
-
-<p>验证 <code>JDK</code> 是否安装成功可以在终端输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p>出现</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)</span><br></pre></td></tr></table></figure>
-
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>安装好的 <code>JDK</code> 大概路径为：<code>/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home</code> 实际路径以自己为准。使用终端 <code>cd</code> 到 <code>Home</code> 路径中。使用 <code>vim</code> 打开 <code>JDK</code> 配置文件 <code>.bash_profile</code>：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim .bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>输入以下内容，路径以自己实际路径为准：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home</span><br></pre></td></tr></table></figure></p>
+<p>验证 <code>JDK</code> 是否安装成功可以在终端输入：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></p>
+<p>出现<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)</span><br></pre></td></tr></table></figure></p>
 <h2 id="Homebrew-安装"><a href="#Homebrew-安装" class="headerlink" title="Homebrew 安装"></a><code>Homebrew</code> 安装</h2><p>可以使用 <code>brew</code> 安装很多应用，比如 <code>java</code>，<code>idea</code>，<code>iterms</code>，<code>sublime</code>等。</p>
 <ul>
 <li><p>安装新的 <code>brew</code> 仓库源：<code>brew tap caskroom/versions</code></p>
@@ -498,7 +490,7 @@
 </li>
 </ul>
 <p><strong>注意：使用 <code>brew install java</code> 是找不到 java 的安装源的</strong></p>
-<p>搜索 <code>JDK</code> 版本信息：<code>brew cask search java </code><br>如果出现下图中的错误：</p>
+<p>搜索 <code>JDK</code> 版本信息：<code>brew cask search java</code><br>如果出现下图中的错误：</p>
 <p><img src="3.png" alt="3"></p>
 <ul>
 <li><p>搜索 java <code>brew search java</code>  </p>
@@ -992,7 +984,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1307,5 +1299,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

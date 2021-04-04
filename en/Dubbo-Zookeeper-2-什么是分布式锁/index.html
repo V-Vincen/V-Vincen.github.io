@@ -495,29 +495,19 @@
 <li><code>Chubby</code>：Google 公司实现的粗粒度分布式锁服务，底层利用了 Paxos 一致性算法。</li>
 </ul>
 <h2 id="通过-Redis-分布式锁的实现理解基本概念"><a href="#通过-Redis-分布式锁的实现理解基本概念" class="headerlink" title="通过 Redis 分布式锁的实现理解基本概念"></a>通过 Redis 分布式锁的实现理解基本概念</h2><p>分布式锁实现的三个核心要素：</p>
-<h3 id="加锁"><a href="#加锁" class="headerlink" title="加锁"></a>加锁</h3><p>最简单的方法是使用 <code>setnx</code> 命令。<code>key</code> 是锁的唯一标识，按业务来决定命名。比如想要给一种商品的秒杀活动加锁，可以给 <code>key</code> 命名为 <code>lock_sale_商品ID</code> 。而 <code>value</code> 设置成什么呢？我们可以姑且设置成 1。加锁的伪代码如下：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setnx</span>（lock_sale_商品ID，<span class="number">1</span>）</span><br></pre></td></tr></table></figure>
-
-<p>当一个线程执行 <code>setnx</code> 返回 <code>1``，说明 </code>key<code>原本不存在，该线程成功得到了锁；当一个线程执行</code>setnx<code>返回</code>0<code>，说明 </code>key` 已经存在，该线程抢锁失败。</p>
-<h3 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h3><p>有加锁就得有解锁。当得到锁的线程执行完任务，需要释放锁，以便其他线程可以进入。释放锁的最简单方式是执行 <code>del</code> 指令，伪代码如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">del</span>（lock_sale_商品ID）</span><br></pre></td></tr></table></figure>
-
+<h3 id="加锁"><a href="#加锁" class="headerlink" title="加锁"></a>加锁</h3><p>最简单的方法是使用 <code>setnx</code> 命令。<code>key</code> 是锁的唯一标识，按业务来决定命名。比如想要给一种商品的秒杀活动加锁，可以给 <code>key</code> 命名为 <code>lock_sale_商品ID</code> 。而 <code>value</code> 设置成什么呢？我们可以姑且设置成 1。加锁的伪代码如下：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setnx</span>（lock_sale_商品ID，<span class="number">1</span>）</span><br></pre></td></tr></table></figure></p>
+<p>当一个线程执行 <code>setnx</code> 返回 <code>1``，说明</code>key<code>原本不存在，该线程成功得到了锁；当一个线程执行</code>setnx<code>返回</code>0<code>，说明</code>key` 已经存在，该线程抢锁失败。</p>
+<h3 id="解锁"><a href="#解锁" class="headerlink" title="解锁"></a>解锁</h3><p>有加锁就得有解锁。当得到锁的线程执行完任务，需要释放锁，以便其他线程可以进入。释放锁的最简单方式是执行 <code>del</code> 指令，伪代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">del</span>（lock_sale_商品ID）</span><br></pre></td></tr></table></figure></p>
 <p>释放锁之后，其他线程就可以继续执行 <code>setnx</code> 命令来获得锁。</p>
-<h3 id="锁超时"><a href="#锁超时" class="headerlink" title="锁超时"></a>锁超时</h3><p>锁超时是什么意思呢？如果一个得到锁的线程在执行任务的过程中挂掉，来不及显式地释放锁，这块资源将会永远被锁住（<strong>死锁</strong>），别的线程再也别想进来。所以，<code>setnx</code> 的 <code>key</code> 必须设置一个超时时间，以保证即使没有被显式释放，这把锁也要在一定时间后自动释放。<code>setnx</code> 不支持超时参数，所以需要额外的指令，伪代码如下：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">expire</span>（lock_sale_商品ID， <span class="number">30</span>）</span><br></pre></td></tr></table></figure>
-
-<p>综合伪代码如下：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（setnx（lock_sale_商品ID，<span class="number">1</span>） == <span class="number">1</span>）&#123;</span><br><span class="line">    expire（lock_sale_商品ID，<span class="number">30</span>）</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">do</span> something ......</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="built_in">del</span>（lock_sale_商品ID）</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="锁超时"><a href="#锁超时" class="headerlink" title="锁超时"></a>锁超时</h3><p>锁超时是什么意思呢？如果一个得到锁的线程在执行任务的过程中挂掉，来不及显式地释放锁，这块资源将会永远被锁住（<strong>死锁</strong>），别的线程再也别想进来。所以，<code>setnx</code> 的 <code>key</code> 必须设置一个超时时间，以保证即使没有被显式释放，这把锁也要在一定时间后自动释放。<code>setnx</code> 不支持超时参数，所以需要额外的指令，伪代码如下：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">expire</span>（lock_sale_商品ID， <span class="number">30</span>）</span><br></pre></td></tr></table></figure></p>
+<p>综合伪代码如下：<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（setnx（lock_sale_商品ID，<span class="number">1</span>） == <span class="number">1</span>）&#123;</span><br><span class="line">    expire（lock_sale_商品ID，<span class="number">30</span>）</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">do</span> something ......</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="built_in">del</span>（lock_sale_商品ID）</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="存在什么问题"><a href="#存在什么问题" class="headerlink" title="存在什么问题"></a>存在什么问题</h3><p>以上伪代码中存在三个致命问题</p>
 <h4 id="setnx-和-expire-的非原子性"><a href="#setnx-和-expire-的非原子性" class="headerlink" title="setnx 和 expire 的非原子性"></a><code>setnx</code> 和 <code>expire</code> 的非原子性</h4><p>设想一个极端场景，当某线程执行 <code>setnx</code>，成功得到了锁：</p>
 <p><img src="3.png" alt="3"></p>
 <p><code>setnx</code> 刚执行成功，还未来得及执行 <code>expire</code> 指令，节点 1 挂掉了。</p>
 <p><img src="4.png" alt="4"></p>
 <p>这样一来，这把锁就没有设置过期时间，变成<strong>死锁</strong>，别的线程再也无法获得锁了。</p>
-<p>怎么解决呢？<code>setnx</code> 指令本身是不支持传入超时时间的，<code>set</code> 指令增加了可选参数，伪代码如下：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">set</span>（lock_sale_商品ID，<span class="number">1</span>，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure>
-
+<p>怎么解决呢？<code>setnx</code> 指令本身是不支持传入超时时间的，<code>set</code> 指令增加了可选参数，伪代码如下：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">set</span>（lock_sale_商品ID，<span class="number">1</span>，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure></p>
 <h4 id="del-导致误删"><a href="#del-导致误删" class="headerlink" title="del 导致误删"></a><code>del</code> 导致误删</h4><p>又是一个极端场景，假如某线程成功得到了锁，并且设置的超时时间是 30 秒。</p>
 <p><img src="5.png" alt="5"></p>
 <p>如果某些原因导致线程 A 执行的很慢很慢，过了 30 秒都没执行完，这时候锁过期自动释放，线程 B 得到了锁。</p>
@@ -525,12 +515,8 @@
 <p>随后，线程 A 执行完了任务，线程 A 接着执行 <code>del</code> 指令来释放锁。但这时候线程 B 还没执行完，线程 A 实际上<strong>删除的是线程 B 加的锁</strong>。</p>
 <p><img src="7.png" alt="7"></p>
 <p>怎么避免这种情况呢？可以在 <code>del</code> 释放锁之前做一个判断，验证当前的锁是不是自己加的锁。至于具体的实现，可以在加锁的时候把当前的线程 ID 当做 <code>value</code>，并在删除之前验证 <code>key</code> 对应的 <code>value</code> 是不是自己线程的 ID。</p>
-<p>加锁：</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String threadId = <span class="module-access"><span class="module"><span class="identifier">Thread</span>.</span></span>current<span class="constructor">Thread()</span>.get<span class="constructor">Id()</span></span><br><span class="line">set（key，threadId ，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure>
-
-<p>解锁：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（threadId .equals(redisClient.<span class="built_in">get</span>(<span class="built_in">key</span>))）&#123;</span><br><span class="line">    <span class="built_in">del</span>(<span class="built_in">key</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>加锁：<br><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String threadId = <span class="module-access"><span class="module"><span class="identifier">Thread</span>.</span></span>current<span class="constructor">Thread()</span>.get<span class="constructor">Id()</span></span><br><span class="line">set（key，threadId ，<span class="number">30</span>，NX）</span><br></pre></td></tr></table></figure></p>
+<p>解锁：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>（threadId .equals(redisClient.<span class="built_in">get</span>(<span class="built_in">key</span>))）&#123;</span><br><span class="line">    <span class="built_in">del</span>(<span class="built_in">key</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>但是，这样做又隐含了一个新的问题，判断和释放锁是两个独立操作，不是原子性。</p>
 <h4 id="出现并发的可能性"><a href="#出现并发的可能性" class="headerlink" title="出现并发的可能性"></a>出现并发的可能性</h4><p>还是刚才第二点所描述的场景，虽然我们避免了线程 A 误删掉 key 的情况，但是同一时间有 A，B 两个线程在访问代码块，仍然是不完美的。怎么办呢？我们可以让获得锁的线程开启一个<strong>守护线程</strong>，用来给快要过期的锁“续航”。</p>
 <p><img src="8.png" alt="8"></p>
@@ -1025,7 +1011,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1340,5 +1326,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

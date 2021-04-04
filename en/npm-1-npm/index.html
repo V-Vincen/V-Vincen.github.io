@@ -477,14 +477,9 @@
 <p><img src="1.png" alt="1"></p>
 <p>装完后，查看 <code>node</code> 版本 <code>node -v</code> 没有问题。但是查看 <code>npm</code> 版本 <code>npm -v</code>，一直显示 <code>zsh: command not found: npm</code>。网上找了很多解决方案都说是环境变量没有配置，后来配置了环境变量，但依旧没有 <code>npm</code> 可用。其实不是环境变量没有配置的原因，而是如上图系统提示 <code>Warning: The post-install step did not complete successfully</code>，多方查询后，有人提到可能是 <code>brew</code> 安装目录的权限问题，解决办法是：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami) $(brew --prefix)/*</span><br></pre></td></tr></table></figure>
-
 <p>运行上面的命令后，再次重新安装 <code>node</code>，问题解决了。</p>
-<p><strong>查看 <code>npm</code> 版本</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p><strong>更新 <code>npm</code> 版本</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure>
-
+<p><strong>查看 <code>npm</code> 版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
+<p><strong>更新 <code>npm</code> 版本</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure></p>
 <h2 id="npm-init"><a href="#npm-init" class="headerlink" title="npm init"></a><code>npm init</code></h2><p>该命令的原理是调用脚本（<a target="_blank" rel="noopener" href="https://github.com/npm/init-package-json/blob/latest/default-input.js"><code>init-package-json</code></a>），输出一个初始化的 <code>package.json</code> 文件，<code>package.json</code> 中记录了项目中的依赖包的信息（如名称、版本等）。</p>
 <p><img src="2.png" alt="2"></p>
 <p><img src="3.png" alt="3"></p>
@@ -525,9 +520,7 @@
 <li>删除依赖包：<code>npm uninstall &lt;package&gt;</code></li>
 <li>当提交了 <code>package.json</code>，<code>package-lock.json</code> 的更新后，应及时拉取更新，并重新 <code>npm install</code> 重新安装更新后的依赖</li>
 </ul>
-<h2 id="npm-scripts"><a href="#npm-scripts" class="headerlink" title="npm scripts"></a><code>npm scripts</code></h2><p><code>npm scripts</code> 可以在 <code>package.json</code> 文件中自定义脚本。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;script&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">    &quot;test&quot;: &quot;react-scripts test --env=jsdom&quot;,</span><br><span class="line">    &quot;eject&quot;: &quot;react-scripts eject&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上代码片段是 <code>create-react-app</code> 脚手架生成的 <code>React</code> 项目中的 <code>scripts</code>，可以使用 <code>npm run</code> 命令来执行上面的 <code>scripts</code>，执行 <code>npm run build</code> 就等同于执行对应的npm脚本：<code>react-scripts build</code>。</p>
+<h2 id="npm-scripts"><a href="#npm-scripts" class="headerlink" title="npm scripts"></a><code>npm scripts</code></h2><p><code>npm scripts</code> 可以在 <code>package.json</code> 文件中自定义脚本。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;script&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;react-scripts start&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;react-scripts build&quot;,</span><br><span class="line">    &quot;test&quot;: &quot;react-scripts test --env=jsdom&quot;,</span><br><span class="line">    &quot;eject&quot;: &quot;react-scripts eject&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>以上代码片段是 <code>create-react-app</code> 脚手架生成的 <code>React</code> 项目中的 <code>scripts</code>，可以使用 <code>npm run</code> 命令来执行上面的 <code>scripts</code>，执行 <code>npm run build</code> 就等同于执行对应的npm脚本：<code>react-scripts build</code>。</p>
 <h3 id="npm-脚本原理"><a href="#npm-脚本原理" class="headerlink" title="npm 脚本原理"></a><code>npm</code> 脚本原理</h3><p>当执行 <code>npm run</code> 命令时，会自动新建一个 shell 去执行里面的脚本，shell 会将 <code>./node_modules./bin</code> 目录添加到 <code>PATH</code> 变量中。也就是说，如果 <code>./node_modules./.bin</code> 目录中的脚本，可以直接调用脚本名，不用去写完整的脚本路径或是全局安装脚本了。</p>
 <h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><ul>
 <li><code>npm start</code>：是 <code>npm run start</code> 的简写</li>
@@ -1021,7 +1014,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1336,5 +1329,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

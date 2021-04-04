@@ -391,8 +391,6 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
-              
               <a class="tag" href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
               
             </div>
@@ -475,12 +473,12 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="Google-Analytics-Settings"><a href="#Google-Analytics-Settings" class="headerlink" title="Google Analytics Settings"></a>Google Analytics Settings</h2><h3 id="代码（脚本）嵌入网站中"><a href="#代码（脚本）嵌入网站中" class="headerlink" title="代码（脚本）嵌入网站中"></a>代码（脚本）嵌入网站中</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="https://analytics.google.com/">登录谷歌分析平台</a>，创建用户。</p>
-</li>
+<li><a target="_blank" rel="noopener" href="https://analytics.google.com/">登录谷歌分析平台</a>，创建用户。</li>
 <li><p>获取代码（脚本）。<br>  <img src="1.png" alt="1"></p>
 </li>
 <li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;https://www.googletagmanager.com/gtag/js?id=UA-164526897-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">window</span>.dataLayer = <span class="built_in">window</span>.dataLayer || [];</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">gtag</span>(<span class="params"></span>)</span>&#123;dataLayer.push(<span class="built_in">arguments</span>);&#125;</span></span><br><span class="line"><span class="javascript">  gtag(<span class="string">&#x27;js&#x27;</span>, <span class="keyword">new</span> <span class="built_in">Date</span>());</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">  gtag(<span class="string">&#x27;config&#x27;</span>, <span class="string">&#x27;UA-xxxxxx-xx&#x27;</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;https://www.googletagmanager.com/gtag/js?id=UA-164526897-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  window.dataLayer = window.dataLayer || [];</span><br><span class="line">  function gtag()&#123;dataLayer.push(arguments);&#125;</span><br><span class="line">  gtag(&#x27;js&#x27;, new Date());</span><br><span class="line"></span><br><span class="line">  gtag(&#x27;config&#x27;, &#x27;UA-xxxxxx-xx&#x27;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ga_track_id</code> 为 <strong>跟踪 ID</strong>。</p>
 <p>  <img src="2.png" alt="2"></p>
 </li>
@@ -495,7 +493,8 @@
 <p>  <img src="4.png" alt="4"></p>
 </li>
 <li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> _hmt = _hmt || [];</span></span><br><span class="line"><span class="javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> hm = <span class="built_in">document</span>.createElement(<span class="string">&quot;script&quot;</span>);</span></span><br><span class="line"><span class="javascript">  hm.src = <span class="string">&quot;https://hm.baidu.com/hm.js?ba_track_id&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;script&quot;</span>)[<span class="number">0</span>]; </span></span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">  var hm = document.createElement(&quot;script&quot;);</span><br><span class="line">  hm.src = &quot;https://hm.baidu.com/hm.js?ba_track_id&quot;;</span><br><span class="line">  var s = document.getElementsByTagName(&quot;script&quot;)[0]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ba_track_id</code> 为脚本中的 <strong>ba_track_id</strong>。</p>
   <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ba_track_id:</span> b<span class="built_in">a_track</span>_id</span><br></pre></td></tr></table></figure>
 </li>
@@ -508,16 +507,17 @@
 <p>  <img src="6.png" alt="6"></p>
 </li>
 <li><p>修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;X7_M3eeaLhvjhG34NuQBgu2gdyRlAtMB4utP5AgEBc&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;X7_M3eeaLhvjhG34NuQBgu2gdyRlAtMB4utP5AgEBc&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>把上面红框的内容复制下来，并粘贴到 <code>head.ejs</code> 文件中，通过验证。</p>
 </li>
 </ul>
 <h3 id="安装-sitemap-插件"><a href="#安装-sitemap-插件" class="headerlink" title="安装 sitemap 插件"></a>安装 sitemap 插件</h3><ul>
-<li><p>在 hexo 根目录执行下面两个命令。</p>
-  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure></li>
+<li>在 hexo 根目录执行下面两个命令。  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure></li>
 <li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>sitemap</code> 配置。</p>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don&#x27;t forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
-  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>sitemap.xml</code> 文件。</p>
 <p>  <img src="7.png" alt="7"></p>
 </li>
@@ -535,16 +535,17 @@
 <p>  <img src="10.png" alt="10"></p>
 </li>
 <li><p>验证有三种方式：文件、html标签、cname。这里采用的是 html 标签的形式，修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;baidu-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;PpzM9WxOJU&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;baidu-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;PpzM9WxOJU&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>添加完相应的标签之后，上传到自己的博客之中，百度站点验证通过。</p>
 </li>
 </ul>
 <h3 id="安装-baidu-sitemap-插件"><a href="#安装-baidu-sitemap-插件" class="headerlink" title="安装 baidu-sitemap 插件"></a>安装 baidu-sitemap 插件</h3><ul>
-<li><p>在 hexo 根目录执行下面两个命令。</p>
-  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure></li>
+<li>在 hexo 根目录执行下面两个命令。  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure></li>
 <li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>Baidusitemap</code> 配置。</p>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don&#x27;t forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
-  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>baidusitemap.xml</code> 文件。</p>
 </li>
 </ul>
@@ -555,12 +556,14 @@
 <li><p>接下来要做的就是等待了，过上一两天就会在这里看到提取的 url 数量了。</p>
 </li>
 </ul>
-<h3 id="自动推送（可添加）"><a href="#自动推送（可添加）" class="headerlink" title="自动推送（可添加）"></a>自动推送（可添加）</h3><p><a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title9">自动推送</a>：是轻量级链接提交组件，将自动推送的 JS 代码放置在站点每一个页面源代码中，当页面被访问时，页面链接会自动推送给百度，有利于新页面更快被百度发现。</p>
+<h3 id="自动推送（可添加）"><a href="#自动推送（可添加）" class="headerlink" title="自动推送（可添加）"></a>自动推送（可添加）</h3><p><a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2#h2_article_title9">自动推送</a>：是轻量级链接提交组件，将自动推送的 JS 代码放置在站点每一个页面源代码中，当页面被访问时，页面链接会自动推送给百度，有利于新页面更快被百度发现。</p>
 <ul>
 <li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 代码。</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>];</span></span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> (curProtocol === <span class="string">&#x27;https&#x27;</span>)&#123;</span></span><br><span class="line"><span class="javascript">   bp.src = <span class="string">&#x27;https://zz.bdstatic.com/linksubmit/push.js&#x27;</span>;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="javascript">  <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">  bp.src = <span class="string">&#x27;http://push.zhanzhang.baidu.com/push.js&#x27;</span>;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&quot;script&quot;</span>)[<span class="number">0</span>];</span></span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">(function()&#123;</span><br><span class="line">    var bp = document.createElement(&#x27;script&#x27;);</span><br><span class="line">    var curProtocol = window.location.protocol.split(&#x27;:&#x27;)[0];</span><br><span class="line">    if (curProtocol === &#x27;https&#x27;)&#123;</span><br><span class="line">   bp.src = &#x27;https://zz.bdstatic.com/linksubmit/push.js&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">  else&#123;</span><br><span class="line">  bp.src = &#x27;http://push.zhanzhang.baidu.com/push.js&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>Baidusitemap.baidu_push</code> 为 <code>true</code>。</p>
-  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line">    <span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line">    <span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
 
@@ -732,8 +735,6 @@
             <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
-            
-            <a class="tag" href="/tags/#Hexo" title="Hexo">Hexo</a>
             
             <a class="tag" href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife">Hexo-Theme-LiveMyLife</a>
             
@@ -1049,7 +1050,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1364,5 +1365,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

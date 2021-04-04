@@ -475,25 +475,15 @@
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>此处以 JDK 1.8.0_152 为例</p>
 <p>下载地址：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
 <h2 id="解压缩并移动到指定目录"><a href="#解压缩并移动到指定目录" class="headerlink" title="解压缩并移动到指定目录"></a>解压缩并移动到指定目录</h2><h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u152-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
 <h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /usr/<span class="built_in">local</span>/java</span><br></pre></td></tr></table></figure>
-
 <h3 id="移动安装包"><a href="#移动安装包" class="headerlink" title="移动安装包"></a>移动安装包</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv jdk1.8.0_152/ /usr/<span class="built_in">local</span>/java/</span><br></pre></td></tr></table></figure>
-
 <h3 id="设置所有者"><a href="#设置所有者" class="headerlink" title="设置所有者"></a>设置所有者</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R root:root /usr/<span class="built_in">local</span>/java/</span><br></pre></td></tr></table></figure>
-
 <h2 id="配置环境变"><a href="#配置环境变" class="headerlink" title="配置环境变"></a>配置环境变</h2><h3 id="配置系统环境变量"><a href="#配置系统环境变量" class="headerlink" title="配置系统环境变量"></a>配置系统环境变量</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/environment</span><br></pre></td></tr></table></figure>
-
 <h3 id="添加如下语句"><a href="#添加如下语句" class="headerlink" title="添加如下语句"></a>添加如下语句</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PATH=<span class="string">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games&quot;</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_152</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_152/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=<span class="variable">$CLASSPATH</span>:<span class="variable">$JAVA_HOME</span>/lib:<span class="variable">$JAVA_HOME</span>/jre/lib</span><br></pre></td></tr></table></figure>
-
 <h3 id="配置用户环境变量"><a href="#配置用户环境变量" class="headerlink" title="配置用户环境变量"></a>配置用户环境变量</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/profile</span><br></pre></td></tr></table></figure>
-
 <h3 id="添加如下语句-1"><a href="#添加如下语句-1" class="headerlink" title="添加如下语句"></a>添加如下语句</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$PS1</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$BASH</span>&quot;</span> ] &amp;&amp; [ <span class="string">&quot;<span class="variable">$BASH</span>&quot;</span> != <span class="string">&quot;/bin/sh&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># The file bash.bashrc already sets the default PS1.</span></span><br><span class="line">    <span class="comment"># PS1=&#x27;\h:\w\$ &#x27;</span></span><br><span class="line">    <span class="keyword">if</span> [ -f /etc/bash.bashrc ]; <span class="keyword">then</span></span><br><span class="line">      . /etc/bash.bashrc</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">&quot;`id -u`&quot;</span> -eq 0 ]; <span class="keyword">then</span></span><br><span class="line">      PS1=<span class="string">&#x27;# &#x27;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      PS1=<span class="string">&#x27;$ &#x27;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_152</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=/usr/<span class="built_in">local</span>/java/jdk1.8.0_152/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=<span class="variable">$CLASSPATH</span>:<span class="variable">$JAVA_HOME</span>/lib:<span class="variable">$JAVA_HOME</span>/jre/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$JAVA_HOME</span>/jre/bin:<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -d /etc/profile.d ]; <span class="keyword">then</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> /etc/profile.d/*.sh; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ -r <span class="variable">$i</span> ]; <span class="keyword">then</span></span><br><span class="line">      . <span class="variable">$i</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line">  <span class="built_in">unset</span> i</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="使用户环境变量生效"><a href="#使用户环境变量生效" class="headerlink" title="使用户环境变量生效"></a>使用户环境变量生效</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
-
 <h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@UbuntuBase:/usr/<span class="built_in">local</span>/java<span class="comment"># java -version</span></span><br><span class="line">java version <span class="string">&quot;1.8.0_152&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_152-b16)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.152-b16, mixed mode)</span><br></pre></td></tr></table></figure>
-
 <h2 id="为其他用户更新用户环境变量"><a href="#为其他用户更新用户环境变量" class="headerlink" title="为其他用户更新用户环境变量"></a>为其他用户更新用户环境变量</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su lusifer</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 
         <hr>
@@ -979,7 +969,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1294,5 +1284,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

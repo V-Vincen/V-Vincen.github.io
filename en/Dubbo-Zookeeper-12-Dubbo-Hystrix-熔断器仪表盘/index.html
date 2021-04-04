@@ -474,17 +474,14 @@
 
         <h2 id="使用熔断器仪表盘监控"><a href="#使用熔断器仪表盘监控" class="headerlink" title="使用熔断器仪表盘监控"></a>使用熔断器仪表盘监控</h2><p>在 Provider 和 Consumer 项目增加 Hystrix 仪表盘功能，两个项目的改造方式相同（这里以 Consumer 为例）</p>
 <h3 id="在-pom-xml-中增加依赖"><a href="#在-pom-xml-中增加依赖" class="headerlink" title="在 pom.xml 中增加依赖"></a>在 pom.xml 中增加依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-hystrix-dashboard<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.0.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="在-Application-中增加-EnableHystrixDashboard-注解"><a href="#在-Application-中增加-EnableHystrixDashboard-注解" class="headerlink" title="在 Application 中增加 @EnableHystrixDashboard 注解"></a>在 Application 中增加 <code>@EnableHystrixDashboard</code> 注解</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.hystrix.EnableHystrix;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;</span><br><span class="line"></span><br><span class="line"><span class="meta">@EnableHystrix</span></span><br><span class="line"><span class="meta">@EnableHystrixDashboard</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloDubboServiceUserConsumerApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(HelloDubboServiceUserConsumerApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建-hystrix-stream-的-Servlet-配置"><a href="#创建-hystrix-stream-的-Servlet-配置" class="headerlink" title="创建 hystrix.stream 的 Servlet 配置"></a>创建 <code>hystrix.stream</code> 的 Servlet 配置</h3><p>Spring Boot 2.x 版本开启 Hystrix Dashboard 与 Spring Boot 1.x 的方式略有不同，需要增加一个 <code>HystrixMetricsStreamServlet</code> 的配置，代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.web.servlet.ServletRegistrationBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HystrixDashboardConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">getServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HystrixMetricsStreamServlet streamServlet = <span class="keyword">new</span> HystrixMetricsStreamServlet();</span><br><span class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean(streamServlet);</span><br><span class="line">        registrationBean.setLoadOnStartup(<span class="number">1</span>);</span><br><span class="line">        registrationBean.addUrlMappings(<span class="string">&quot;/hystrix.stream&quot;</span>);</span><br><span class="line">        registrationBean.setName(<span class="string">&quot;HystrixMetricsStreamServlet&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> registrationBean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="创建-hystrix-stream-的-Servlet-配置"><a href="#创建-hystrix-stream-的-Servlet-配置" class="headerlink" title="创建 hystrix.stream 的 Servlet 配置"></a>创建 <code>hystrix.stream</code> 的 Servlet 配置</h3><p>Spring Boot 2.x 版本开启 Hystrix Dashboard 与 Spring Boot 1.x 的方式略有不同，需要增加一个 <code>HystrixMetricsStreamServlet</code> 的配置，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.web.servlet.ServletRegistrationBean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HystrixDashboardConfiguration</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ServletRegistrationBean <span class="title">getServlet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        HystrixMetricsStreamServlet streamServlet = <span class="keyword">new</span> HystrixMetricsStreamServlet();</span><br><span class="line">        ServletRegistrationBean registrationBean = <span class="keyword">new</span> ServletRegistrationBean(streamServlet);</span><br><span class="line">        registrationBean.setLoadOnStartup(<span class="number">1</span>);</span><br><span class="line">        registrationBean.addUrlMappings(<span class="string">&quot;/hystrix.stream&quot;</span>);</span><br><span class="line">        registrationBean.setName(<span class="string">&quot;HystrixMetricsStreamServlet&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> registrationBean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="测试-Hystrix-Dashboard"><a href="#测试-Hystrix-Dashboard" class="headerlink" title="测试 Hystrix Dashboard"></a>测试 Hystrix Dashboard</h3><p>浏览器端访问 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://localhost:9090/hystrix</a> 界面如下：</p>
 <p><img src="1.png" alt="1"></p>
 <p>点击 Monitor Stream，进入下一个界面，访问 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://localhost:9090/hi</a> 触发熔断后，监控界面显示效果如下：</p>
 <p><img src="2.png" alt="2"></p>
-<h2 id="附：Hystrix-说明"><a href="#附：Hystrix-说明" class="headerlink" title="附：Hystrix 说明"></a>附：Hystrix 说明</h2><h3 id="什么情况下会触发-fallback-方法"><a href="#什么情况下会触发-fallback-方法" class="headerlink" title="什么情况下会触发 fallback 方法"></a>什么情况下会触发 <code>fallback</code> 方法</h3><table>
+<h2 id="附：Hystrix-说明"><a href="#附：Hystrix-说明" class="headerlink" title="附：Hystrix 说明"></a>附：Hystrix 说明</h2><h3 id="什么情况下会触发-fallback-方法"><a href="#什么情况下会触发-fallback-方法" class="headerlink" title="什么情况下会触发 fallback 方法"></a>什么情况下会触发 <code>fallback</code> 方法</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>名字</th>
@@ -492,7 +489,8 @@
 <th>触发fallback</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>EMIT</td>
 <td>值传递</td>
 <td>NO</td>
@@ -532,8 +530,11 @@
 <td>信号量拒绝，不尝试执行</td>
 <td>YES</td>
 </tr>
-</tbody></table>
-<h3 id="fallback-方法在什么情况下会抛出异常"><a href="#fallback-方法在什么情况下会抛出异常" class="headerlink" title="fallback 方法在什么情况下会抛出异常"></a><code>fallback</code> 方法在什么情况下会抛出异常</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="fallback-方法在什么情况下会抛出异常"><a href="#fallback-方法在什么情况下会抛出异常" class="headerlink" title="fallback 方法在什么情况下会抛出异常"></a><code>fallback</code> 方法在什么情况下会抛出异常</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>名字</th>
@@ -541,7 +542,8 @@
 <th>抛异常</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>FALLBACK_EMIT</td>
 <td>Fallback值传递</td>
 <td>NO</td>
@@ -566,7 +568,9 @@
 <td>没有Fallback实例</td>
 <td>YES</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="Hystrix-Dashboard-界面监控参数"><a href="#Hystrix-Dashboard-界面监控参数" class="headerlink" title="Hystrix Dashboard 界面监控参数"></a>Hystrix Dashboard 界面监控参数</h3><p><img src="3.png" alt="3"></p>
 <h3 id="Hystrix-常用配置信息"><a href="#Hystrix-常用配置信息" class="headerlink" title="Hystrix 常用配置信息"></a>Hystrix 常用配置信息</h3><h4 id="超时时间（默认1000ms，单位：ms）"><a href="#超时时间（默认1000ms，单位：ms）" class="headerlink" title="超时时间（默认1000ms，单位：ms）"></a>超时时间（默认1000ms，单位：ms）</h4><ul>
 <li><code>hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds</code>：在调用方配置，被该调用方的所有方法的超时时间都是该值，优先级低于下边的指定配置</li>
@@ -1078,7 +1082,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1393,5 +1397,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

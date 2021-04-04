@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="page/10/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -477,6 +472,77 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Dubbo-Zookeeper-11-Dubbo-Hystrix-实现服务熔断/">
+    <h2 class="post-title">
+      [Dubbo Zookeeper] 11 Dubbo + Hystrix 实现服务熔断
+    </h2>
+    <h3 class="post-subtitle">
+      Dubbo + Hystrix 实现服务熔断
+    </h3>
+    <div class="post-content-preview">
+      熔断器简介在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以通过 RPC 相互调用。为了保证其高可用，单个服务通常会集群部署。由于网络原因或者自身的原因，服务并不能保证 100% 可用，如果单个服务出现问题，调用这个服务就会出现线程阻塞，此时若有大量的请求涌入，Servlet 容器的线程资源会被消耗完毕，导致服务瘫痪。服务与服务之间的依赖性，故障会传播，会对整个微服务系统造成灾......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-01-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Dubbo-Zookeeper-10-Dubbo-Kryo-实现高速序列化/">
+    <h2 class="post-title">
+      [Dubbo Zookeeper] 10 Dubbo + Kryo 实现高速序列化
+    </h2>
+    <h3 class="post-subtitle">
+      Dubbo + Kryo 实现高速序列化
+    </h3>
+    <div class="post-content-preview">
+      Dubbo 中的序列化Dubbo RPC 是 Dubbo 体系中最核心的一种高性能、高吞吐量的远程调用方式，可以称之为多路复用的 TCP 长连接调用：
+
+长连接：避免了每次调用新建 TCP 连接，提高了调用的响应速度
+多路复用：单个 TCP 连接可交替传输多个请求和响应的消息，降低了连接的等待闲置时间，从而减少了同样并发数下的网络连接数，提高了系统吞吐量
+
+Dubbo RPC 主要用于两个 ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-01-20
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -770,83 +836,6 @@ Zookeeper 的数据模型Zookeeper 的数据模型是什么样子呢？它很像
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-2-什么是分布式锁/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 2 什么是分布式锁
-    </h2>
-    <h3 class="post-subtitle">
-      什么是分布式锁
-    </h3>
-    <div class="post-content-preview">
-      概述为了防止分布式系统中的多个进程之间相互干扰，我们需要一种分布式协调技术来对这些进程进行调度。而这个分布式协调技术的核心就是来实现这个分布式锁。
-为什么要使用分布式锁
-
-成员变量 A 存在 JVM1、JVM2、JVM3 三个 JVM 内存中
-成员变量 A 同时都会在 JVM 分配一块内存，三个请求发过来同时对这个变量操作，显然结果是不对的
-不是同时发过来，三个请求分别操作三个不同 JVM ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-1-Apache-Dubbo-Zookeeper/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 1 Apache Dubbo Zookeeper
-    </h2>
-    <h3 class="post-subtitle">
-      Apache Dubbo Zookeeper
-    </h3>
-    <div class="post-content-preview">
-      目前市场上主流的套微服务架构解决方案：
-Spring Boot + Spring Cloud Netflix = Java 原生云开发
-Spring Boot + Dubbo + Zookeeper
-
-概述
-Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源 Java RPC 框架。
-ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-15
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -898,6 +887,14 @@ ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
 <div class="widget">
   <ul>
     
+    <a href="../../en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../en/How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -908,14 +905,6 @@ ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
     
     <a href="../../en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1030,11 +1019,7 @@ ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1083,6 +1068,10 @@ ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1279,7 +1268,7 @@ ZooKeeper 是一种分布式协调服务，用于管理大型主机。在......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1594,7 +1583,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1909,5 +1898,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -517,19 +517,19 @@
 </ul>
 <p><strong>例子：属性 isolation</strong><br>事务隔离级别是数据库的概念，在多个事务对一批记录进行操作的时候，可能出现各种冲突的情况该属性的可能值有：</p>
 <ul>
-<li><p>**<code>Isolation.DEFAULT</code>**：数据库默认隔离级别</p>
+<li><p><strong><code>Isolation.DEFAULT</code></strong>：数据库默认隔离级别</p>
 </li>
-<li><p>**<code>Isolation.READ_UNCOMMITED</code>**：读未提交。可以读到其他事务未提交的数据。导致脏读（dirty read）</p>
+<li><p><strong><code>Isolation.READ_UNCOMMITED</code></strong>：读未提交。可以读到其他事务未提交的数据。导致脏读（dirty read）</p>
 </li>
-<li><p>**<code>Isolation.READ_COMMITED</code>**：读已提交。这是很多数据库的默认隔离级别，但不是 MySQL 的。不能读到其他事务未提交的数据，只能读到已提交的数据。解决了脏读，可导致不可重复读和幻读。</p>
+<li><p><strong><code>Isolation.READ_COMMITED</code></strong>：读已提交。这是很多数据库的默认隔离级别，但不是 MySQL 的。不能读到其他事务未提交的数据，只能读到已提交的数据。解决了脏读，可导致不可重复读和幻读。</p>
 <ul>
 <li>不可重复读：在预读之后，commit 之前，其他事务更新了数据，导致两次读到的数据不相同</li>
 <li>幻读：在预读之后，commit 之前，其他事务插入数据，导致两次读到的数据条数不相同</li>
 </ul>
 </li>
-<li><p>**<code>Isolation.REPEATABLE_READ</code>**：可重复读。这是 MySQL 的默认事务隔离级别。解决了脏读，不可重复读，但依然存在幻读问题。</p>
+<li><p><strong><code>Isolation.REPEATABLE_READ</code></strong>：可重复读。这是 MySQL 的默认事务隔离级别。解决了脏读，不可重复读，但依然存在幻读问题。</p>
 </li>
-<li><p>**<code>Isolation.SERIALIZABLE</code>**：可串行化。最高的事务隔离级别。解决了脏读、不可重复读、幻读，但导致大量的超时和锁竞争。</p>
+<li><p><strong><code>Isolation.SERIALIZABLE</code></strong>：可串行化。最高的事务隔离级别。解决了脏读、不可重复读、幻读，但导致大量的超时和锁竞争。</p>
 </li>
 </ul>
 <h4 id="事务的七种传播行为"><a href="#事务的七种传播行为" class="headerlink" title="事务的七种传播行为"></a>事务的七种传播行为</h4><p>所谓事务传播行为是指，处于不同事务中的方法在相互调用时，执行期间事务的维护情况。如，A 事务中的方法 a() 调用 B 事务中的方法 b()，在调用执行期间事务的维护情况，就称为事务传播行为。事务传播行为是加在方法上的。</p>
@@ -549,13 +549,13 @@
 </blockquote>
 <p>当 A.f1() 调用 B.f2() 的时候，B.f2() 中的代码执行哪个事务<br>该属性可能的值有（以下属性值加在 B.f2() 上来理解）：</p>
 <ul>
-<li>**<code>Propagation.REQUIRED</code>**：如果 A.f1() 调用 B.f2() ，那么执行 A  事务；如果 A 没有事务，那就执行自己的事务 B 。接受，给就收下，不给就用自己的。</li>
-<li>**<code>Propagation.SUPPORTS</code>**：如果 A.f1() 调用 B.f2()，那么执行 A  事务；如果被没有事务的方法调用，那么就在没有事务的环境下执行。接受，给就收下，不给也不要。</li>
-<li>**<code>Propagation.MANDATORY</code>**：B.f2() 不能开启自己的事务，只能被开启了事务的 A.f1() 调用，如果被没有开启事务其他的方法调用，则抛异常。自己没有，给，必须给，不给就哭。</li>
-<li>**<code>Propagation.REQUIRES_NEW</code>**：如果 A.f1() 调用 B.f2() ，那么事务 A 被挂起，重新创建一个事务 B ，B.f2() 在事务 B 中执行，B 执行完毕再继续 A 事务。接受，给的不收，用自己的。</li>
-<li>**<code>Propagation.NOT_SUPPORTED</code>**：B.f2() 不需要在事务中执行。如果被需要事务 A 的 A.f1() 调用，那么事务 A 被挂起，B.f2() 执行完毕 A 才恢复。不接受，硬给也不收。</li>
-<li>**<code>Propagation.NEVER</code>**：B.f2() 不能在任何事务下执行，如果 A.f1()  调用它，那么抛异常。绝不接受，硬给就拼命。</li>
-<li>**<code>Propagation.NESTED</code>**：如果 A.f1() 调用 B.f2() ，那么 B 嵌套在 A 中执行，形成嵌套事务。</li>
+<li><strong><code>Propagation.REQUIRED</code></strong>：如果 A.f1() 调用 B.f2() ，那么执行 A  事务；如果 A 没有事务，那就执行自己的事务 B 。接受，给就收下，不给就用自己的。</li>
+<li><strong><code>Propagation.SUPPORTS</code></strong>：如果 A.f1() 调用 B.f2()，那么执行 A  事务；如果被没有事务的方法调用，那么就在没有事务的环境下执行。接受，给就收下，不给也不要。</li>
+<li><strong><code>Propagation.MANDATORY</code></strong>：B.f2() 不能开启自己的事务，只能被开启了事务的 A.f1() 调用，如果被没有开启事务其他的方法调用，则抛异常。自己没有，给，必须给，不给就哭。</li>
+<li><strong><code>Propagation.REQUIRES_NEW</code></strong>：如果 A.f1() 调用 B.f2() ，那么事务 A 被挂起，重新创建一个事务 B ，B.f2() 在事务 B 中执行，B 执行完毕再继续 A 事务。接受，给的不收，用自己的。</li>
+<li><strong><code>Propagation.NOT_SUPPORTED</code></strong>：B.f2() 不需要在事务中执行。如果被需要事务 A 的 A.f1() 调用，那么事务 A 被挂起，B.f2() 执行完毕 A 才恢复。不接受，硬给也不收。</li>
+<li><strong><code>Propagation.NEVER</code></strong>：B.f2() 不能在任何事务下执行，如果 A.f1()  调用它，那么抛异常。绝不接受，硬给就拼命。</li>
+<li><strong><code>Propagation.NESTED</code></strong>：如果 A.f1() 调用 B.f2() ，那么 B 嵌套在 A 中执行，形成嵌套事务。</li>
 </ul>
 <h2 id="事务注解例子："><a href="#事务注解例子：" class="headerlink" title="事务注解例子："></a>事务注解例子：</h2><h3 id="Transactianal-注解有一些属性"><a href="#Transactianal-注解有一些属性" class="headerlink" title="@Transactianal 注解有一些属性"></a><code>@Transactianal</code> 注解有一些属性</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//控制事务传播。默认是Propagation.REQUIRED</span></span><br><span class="line"><span class="variable">@Transactional</span>(propagation=Propagation.REQUIRED)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务隔离级别。默认跟数据库的默认隔离级别相同</span></span><br><span class="line"><span class="variable">@Transactional</span>(isolation=Isolation.DEFAULT)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务可读写(默认可读写)</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=false)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只可读，这样可以节约一些资源开销</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=true)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务的超时时间，单位秒。默认跟数据库的事务控制系统相同，又说是30秒</span></span><br><span class="line"><span class="variable">@Transactional</span>(timeout=<span class="number">30</span>)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常才会回滚。默认是RuntimeException</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackFor=RuntimeException.class) </span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackForClassName=RuntimeException)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常不会回滚。默认遇到非RuntimeException不会回滚</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackFor=NullPointerException.class)   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackForClassName=NullPointerException)</span><br></pre></td></tr></table></figure>
 <p><strong><font color=red>注意</font>：<code>@Transactional</code> 应当添加在具体的实现类而不是接口上</strong></p>
@@ -1044,7 +1044,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1359,5 +1359,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -412,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">790</span> In Total
+              Words <span class="post-count">788</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -476,12 +476,8 @@
 
         <h2 id="SOAP-消息的调试抓取"><a href="#SOAP-消息的调试抓取" class="headerlink" title="SOAP 消息的调试抓取"></a>SOAP 消息的调试抓取</h2><h3 id="使用-Postman-测试-WebService-接口"><a href="#使用-Postman-测试-WebService-接口" class="headerlink" title="使用 Postman 测试 WebService 接口"></a>使用 Postman 测试 WebService 接口</h3><p><img src="3.png" alt="3"></p>
 <p><img src="4.png" alt="4"></p>
-<p><strong>request</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soapenv:Envelope</span> <span class="attr">xmlns:soapenv</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:ser</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Header</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">         <span class="comment">&lt;!--Optional:--&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">arg0</span>&gt;</span>vincent<span class="tag">&lt;/<span class="name">arg0</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>response</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soap:Envelope</span> <span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">soap:Body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ns2:sayHelloResponse</span> <span class="attr">xmlns:ns2</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">return</span>&gt;</span>sayHellovincent<span class="tag">&lt;/<span class="name">return</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ns2:sayHelloResponse</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">soap:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soap:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p><strong>request</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soapenv:Envelope</span> <span class="attr">xmlns:soapenv</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> </span></span><br><span class="line">xmlns:ser=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Header</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">         <span class="comment">&lt;!--Optional:--&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">arg0</span>&gt;</span>vincent<span class="tag">&lt;/<span class="name">arg0</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>response</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soap:Envelope</span> <span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">soap:Body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ns2:sayHelloResponse</span> <span class="attr">xmlns:ns2</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">return</span>&gt;</span>sayHellovincent<span class="tag">&lt;/<span class="name">return</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ns2:sayHelloResponse</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">soap:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soap:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="SoapUI-工具测试-WebService-接口"><a href="#SoapUI-工具测试-WebService-接口" class="headerlink" title="SoapUI 工具测试 WebService 接口"></a>SoapUI 工具测试 WebService 接口</h3><p>SoapUI Pro 是需要付费的，对于日常的测试，开源版的功能已经够用了。这里把两个版本的下载地址都分享一下：</p>
 <ul>
 <li><p>SoapUI Pro破解版下载地址：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ">https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ</a> （密码：epyh）</p>
@@ -496,9 +492,8 @@
 <p><img src="7.png" alt="7"></p>
 <h2 id="WSDL-文件解析"><a href="#WSDL-文件解析" class="headerlink" title="WSDL 文件解析"></a>WSDL 文件解析</h2><h3 id="wsdl-报文总体概述"><a href="#wsdl-报文总体概述" class="headerlink" title="wsdl 报文总体概述"></a>wsdl 报文总体概述</h3><p><img src="8.png" alt="8"></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">definitions</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">types</span>&gt;</span></span><br><span class="line">	  	定义 web service 使用的数据类型。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">types</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="tag">&lt;<span class="name">message</span>&gt;</span></span><br><span class="line">		每个消息均由一个或多个部件组成。可以把它当做 java 中一个函数调用的参数。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">portType</span>&gt;</span></span><br><span class="line">		它类似 Java 中的一个函数库（或一个模块、或一个类）。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">portType</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">binding</span>&gt;</span></span><br><span class="line">		为每个端口定义消息格式和协议细节。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">binding</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="wsdl-definitions"><a href="#wsdl-definitions" class="headerlink" title="wsdl:definitions"></a><code>wsdl:definitions</code></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wsdl:definitions</span> <span class="attr">xmlns:xsd</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:wsdl</span>=<span class="string">&quot;http://schemas.xmlsoap.org/wsdl/&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:tns</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:ns1</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/http&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">name</span>=<span class="string">&quot;WebServiceIService&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">targetNamespace</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">wsdl:definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<h3 id="wsdl-definitions"><a href="#wsdl-definitions" class="headerlink" title="wsdl:definitions"></a><code>wsdl:definitions</code></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wsdl:definitions</span> <span class="attr">xmlns:xsd</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line">xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;</span><br><span class="line">xmlns:tns=&quot;http://service.cxf.wsservice.example.com/&quot;</span><br><span class="line">xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;</span><br><span class="line">xmlns:ns1=&quot;http://schemas.xmlsoap.org/soap/http&quot;</span><br><span class="line">name=&quot;WebServiceIService&quot;</span><br><span class="line">targetNamespace=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">wsdl:definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -506,7 +501,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>name</td>
 <td>我们 java 程序中服务接口的实现类，SEI 定义是：服务接口类 + Service 后缀，Service 自动追加</td>
 </tr>
@@ -522,7 +518,9 @@
 <td>xmlns:tns</td>
 <td>相当于 Java 里面的 import，   包名反转</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="wsdl-types"><a href="#wsdl-types" class="headerlink" title="wsdl:types"></a><code>wsdl:types</code></h3><p>我们 java 定义的服务接口中某方法的输入参数和返回值。</p>
 <p><img src="9.png" alt="9"></p>
 <h3 id="wsdl-message"><a href="#wsdl-message" class="headerlink" title="wsdl:message"></a><code>wsdl:message</code></h3><p>通信消息的数据结构的抽象类型化定义。使用 Types 所定义的类型来定义整个消息的数据结构。</p>
@@ -1030,7 +1028,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1345,5 +1343,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

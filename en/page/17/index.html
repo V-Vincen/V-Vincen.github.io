@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="en/page/17/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -485,6 +480,83 @@
   <!-- top end -->
   
 
+  <a href="/en/Java-杂记-六大设计原则/">
+    <h2 class="post-title">
+      [Java 杂记] 六大设计原则
+    </h2>
+    <h3 class="post-subtitle">
+      六大设计原则
+    </h3>
+    <div class="post-content-preview">
+      设计模式的6大原则，单一职责原则，开放封闭原则，里式替换原则，依赖导致原则，迪米特原则 和 接口隔离原则。
+单一职责原则（Single Responsibility Principle，SRP）就一个类而言，应该仅有一个引起它变化的原因
+
+通俗的讲就是我们不要让一个承担过多的职责，如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java 杂记" title="Java 杂记">Java 杂记</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Docker-7-2-Docker-数据管理深入/">
+    <h2 class="post-title">
+      [Docker] 7.2 Docker 数据管理深入
+    </h2>
+    <h3 class="post-subtitle">
+      Docker 数据管理深入
+    </h3>
+    <div class="post-content-preview">
+      Docker 数据卷数据卷 是一个可供一个或多个容器使用的特殊目录，它绕过 UFS，可以提供很多有用的特性：
+
+数据卷 可以在容器之间共享和重用
+对 数据卷 的修改会立马生效
+对 数据卷 的更新，不会影响镜像
+数据卷 默认会一直存在，即使容器被删除
+
+
+注意：数据卷的使用，类似于 Linux 下对目录或文件进行 mount，镜像中的被指定为挂载点的目录中的文件会隐藏掉，能显示看的是挂载的数据......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-18
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Docker-7-1-Docker-数据管理简洁/">
     <h2 class="post-title">
       [Docker] 7.1 Docker 数据管理简洁
@@ -499,13 +571,9 @@
 挂载主机目录 (Bind mounts)
 
 数据卷数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。
-创建数据卷
-1docker volume create my-vol
-
-数据卷列表
-1docker volume ls
-
-......
+创建数据卷1docker volume create my-vol
+数据卷列表1docker volume ls
+查看数据......
     </div>
   </a>
   
@@ -612,8 +680,10 @@ Docker 启动容器启动容器有两种方式，一种是基于镜像新建一�
 组成部分
 
 
+
 部分
 命令
+
 
 
 
@@ -629,7 +699,7 @@ MAINTAINER
 RUN、COPY、ADD、EXPOSE、WORKDIR、ONBUILD、USER、VOLUME等
 
 
-容器启动时执行......
+容器启动时......
     </div>
   </a>
   
@@ -696,12 +766,9 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 删除本地镜像
     </h3>
     <div class="post-content-preview">
-      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：
-1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
-
+      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
 用 ID、镜像名、摘要删除镜像其中，&lt;镜像&gt; 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
-比如我们有这么一些镜像：
-123456$ docker image lsREPOS......
+比如我们有这么一些镜像：123456$ docker image lsREPOSITO......
     </div>
   </a>
   
@@ -734,8 +801,7 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 列出镜像
     </h3>
     <div class="post-content-preview">
-      要想列出已经下载下来的镜像，可以使用 docker image ls 命令。
-123456789$ docker image lsREPOSITORY           TAG                 IMAGE ID            CREATED             SIZEredis                latest              5f5153......
+      要想列出已经下载下来的镜像，可以使用 docker image ls 命令。123456789$ docker image lsREPOSITORY           TAG                 IMAGE ID            CREATED             SIZEredis                latest              5f51535......
     </div>
   </a>
   
@@ -778,104 +844,6 @@ Docker 运行容器前需要本地存在对应的镜像，如果本地不存在�
 
 镜像的实现原理Docker 镜像是怎么实现增量的修改和维护的？
 每个镜像都由很多层次构......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Docker-3-Docker-安装/">
-    <h2 class="post-title">
-      [Docker] 3 Docker 安装
-    </h2>
-    <h3 class="post-subtitle">
-      Docker 安装
-    </h3>
-    <div class="post-content-preview">
-      安装 DockerDocker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
-
-
-
-项目
-说明
-
-
-
-版本格式
-YY.MM
-
-
-Stable 版本
-每个季度发行
-
-
-Edge 版本
-每个月发行
-
-
-同时 Docker 划分为 CE 和 EE。CE 即社区版（免费，支持周期三个月），EE 即企业版，强调安全，付费使用。
-Docker CE 每月发布一个......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Docker-2-Docker-基本概念/">
-    <h2 class="post-title">
-      [Docker] 2 Docker 基本概念
-    </h2>
-    <h3 class="post-subtitle">
-      Docker 基本概念
-    </h3>
-    <div class="post-content-preview">
-      Docker 包括三个基本概念
-镜像（Image）
-容器（Container）
-仓库（Repository）
-
-理解了这三个概念，就理解了 Docker 的整个生命周期。
-Docker 引擎Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
-
-一种服务器，它是一种称为守护进程并且长时间运行的程序。
-REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。
-一个......
     </div>
   </a>
   
@@ -944,6 +912,14 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
 <div class="widget">
   <ul>
     
+    <a href="../../How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -954,14 +930,6 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
     
     <a href="../../Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1076,11 +1044,7 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1129,6 +1093,10 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1325,7 +1293,7 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1640,7 +1608,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1955,5 +1923,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

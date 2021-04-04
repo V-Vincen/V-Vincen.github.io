@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">3</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.1k</span> In Total
+              Words <span class="post-count">946</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -504,7 +504,7 @@
 <p><img src="5.jpeg" alt="5.jpeg"></p>
 <p>批量向表中插入两条数据，这里的 <strong>saveBatchNovel()</strong> 方法已经封装了 <strong>JPA</strong> 的 <strong>saveAll()</strong> 方法。<code>body</code> 里面的 <code>json</code> 语句的 <code>key</code> 值要与后端实体类的属性<strong>一一对应</strong>。</p>
 <p><strong>注意：</strong> 前端使用 <code>$.ajax</code> 的话，一定要指定 <code>contentType: &quot;application/json;charset=utf-8;&quot;</code>，默认为 <code>application/x-www-form-urlencoded</code>。</p>
-<h3 id="后端解析-json-数据"><a href="#后端解析-json-数据" class="headerlink" title="后端解析 json 数据"></a>后端解析 <code>json</code> 数据</h3><p>上述示例是传递到实体类中的具体写法，那么如果传递到非实体类中，<code>body</code> 里面的 <code>json</code> 数据需要怎么解析呢？我们再来看下面这个例子，在 <code>body</code> 中，我们还是输入上面的 <code>json</code> 数据，根据分析，上面的 <code>json</code> 数据是一个 <strong>List</strong> 数组内嵌套着map对象，那么在后台的接收形式可写为 **List&lt;Map&lt;String, String&gt;&gt;**，具体代码如下图所示：</p>
+<h3 id="后端解析-json-数据"><a href="#后端解析-json-数据" class="headerlink" title="后端解析 json 数据"></a>后端解析 <code>json</code> 数据</h3><p>上述示例是传递到实体类中的具体写法，那么如果传递到非实体类中，<code>body</code> 里面的 <code>json</code> 数据需要怎么解析呢？我们再来看下面这个例子，在 <code>body</code> 中，我们还是输入上面的 <code>json</code> 数据，根据分析，上面的 <code>json</code> 数据是一个 <strong>List</strong> 数组内嵌套着map对象，那么在后台的接收形式可写为 <strong>List<Map<String, String>&gt;</strong>，具体代码如下图所示：</p>
 <p><img src="6.jpeg" alt="6.jpeg"></p>
 <p><strong>postman</strong> 请求：</p>
 <p><img src="7.jpeg" alt="7.jpeg"></p>
@@ -998,7 +998,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1313,5 +1313,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

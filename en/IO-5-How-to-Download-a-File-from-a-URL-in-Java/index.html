@@ -479,7 +479,6 @@
 <p>Before we dive deeper into the coding aspect let’s take an overview of the classes and the individual functions we will be using in the process.</p>
 <p>The <code>java.net.URL</code> class in Java is a built-in library that offers multiple methods to access and manipulate data on the internet. In this case, we will be using the <code>openStream()</code> function of the <code>URL</code> class. The method signature for the <code>openStream()</code> function is:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> InputStream <span class="title">openStream</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span></span><br></pre></td></tr></table></figure>
-
 <p>The <code>openStream()</code> function works on an object of the <code>URL</code> class. The <code>URL</code> class opens up a connection to the given URL and the <code>openStream()</code> method returns an input stream which is used to read data from the connection.</p>
 <p>The second class we will be using is the <code>BufferedInputStreamReader</code> and the <code>FileOutputStream</code>. These classes are used for reading from a file and writing to it, respectively.</p>
 <p>Here is the complete code:</p>
@@ -488,15 +487,11 @@
 <p>As you can see we open up a connection using the <code>URL</code> object and then read it via the <code>BufferedInputStreamReader</code> object. The contents are read as bytes and copied to a file in the local directory using the <code>FileOutputStream</code>.</p>
 <p>To lower the number of lines of code we can use the <code>Files</code> class available from Java 7. The <code>Files</code> class contains methods that read all the bytes at once and then copies it into another file. Here is how you can use it:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputStream inputStream = <span class="keyword">new</span> URL(<span class="string">&quot;http://example.com/my-file-path.txt&quot;</span>).openStream();</span><br><span class="line">Files.copy(inputStream, Paths.get(<span class="string">&quot;/Users/username/Documents/file_name.txt&quot;</span>), StandardCopyOption.REPLACE_EXISTING);</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Java-NIO"><a href="#Java-NIO" class="headerlink" title="Java NIO"></a>Java NIO</h2><p>Java NIO is an alternative package to handle networking and input-output operations in Java. The main advantage that the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Non-blocking_I/O_(Java)">Java NIO</a> package offers is that it’s non-blocking, and has channeling and buffering capabilities. When we use the Java IO library we work with streams that read data byte by byte. However, the Java NIO package uses channels and buffers. The buffering and channeling capabilities allow the system to copy contents from a URL directly into the intended file without needing to save the bytes in application memory, which would be an intermediary step. The ability to work with channels boosts performance.</p>
+<h2 id="Java-NIO"><a href="#Java-NIO" class="headerlink" title="Java NIO"></a>Java NIO</h2><p>Java NIO is an alternative package to handle networking and input-output operations in Java. The main advantage that the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Non-blocking_I/O_(Java">Java NIO</a>) package offers is that it’s non-blocking, and has channeling and buffering capabilities. When we use the Java IO library we work with streams that read data byte by byte. However, the Java NIO package uses channels and buffers. The buffering and channeling capabilities allow the system to copy contents from a URL directly into the intended file without needing to save the bytes in application memory, which would be an intermediary step. The ability to work with channels boosts performance.</p>
 <p>In order to download the contents of a URL, we will use the <code>ReadableByteChannel</code> and the <code>FileChannel</code> classes.</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReadableByteChannel readChannel = <span class="module-access"><span class="module"><span class="identifier">Channels</span>.</span></span><span class="keyword">new</span><span class="constructor">Channel(<span class="params">new</span> URL(<span class="string">&quot;http://example.com/my-file-path.txt&quot;</span>)</span>.<span class="keyword">open</span><span class="constructor">Stream()</span>);</span><br></pre></td></tr></table></figure>
-
 <p>The <code>ReadableByteChannel</code> class creates a stream to read content from the URL. The downloaded contents will be transferred to a file on the local system via the corresponding file channel.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream fileOS = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;/Users/username/Documents/file_name.txt&quot;</span>);</span><br><span class="line">FileChannel writeChannel = fileOS.getChannel();</span><br></pre></td></tr></table></figure>
-
 <p>After defining the file channel we will use the <code>transferFrom()</code> method to copy the contents read from the <code>readChannel</code> object to the file destination using the <code>writeChannel</code> object.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">writeChannel</span><br><span class="line">  .transferFrom(readChannel, <span class="number">0</span>, Long.MAX_VALUE);</span><br></pre></td></tr></table></figure>
 <p>The <code>transferFrom()</code> and <code>transferTo()</code> methods are much more efficient than working with streams using a buffer. The transfer methods enable us to directly copy the contents of the file system cache to the file on the system. Thus direct channeling restricts the number of context switches required and enhances the overall code performance.</p>
@@ -505,34 +500,25 @@
 <p>In order to start using the Apache Commons IO library, you will need to download the jar files from the <a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-io/download_io.cgi">official website</a>. When you are done downloading the jar files, you need to add them to use them. If you are using an Integrated Development Environment (IDE) such as <a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release/oxygen/3a/eclipse-ide-java-developers">Eclipse</a>, you will need to add the files to the build path of your project. To add files to your project you would need to right click on it, select build path option by navigating through “configure build path-&gt; build path”, and then choose the add external archives option.</p>
 <p>To download a file from a given URL using the Apache Commons IO we will require the <code>FileUtils</code> class of the package. There is only a single line of code required to download a file, which looks like:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FileUtils.copyURLToFile(</span><br><span class="line">  <span class="keyword">new</span> URL(<span class="string">&quot;http://example.com/my-file-path.txt&quot;</span>), </span><br><span class="line">  <span class="keyword">new</span> File(<span class="string">&quot;/Users/username/Documents/file_name.txt&quot;</span>), </span><br><span class="line">  CONNECTION_TIMEOUT, </span><br><span class="line">  READ_TIMEOUT);</span><br></pre></td></tr></table></figure>
-
 <p>The connection and read timeouts convey the permissible time for which either the connection may stay idle or reading from the URL may stop.</p>
-<p>Another class of the Apache Commons IO package that can be used to download a file over the internet is the <a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html#copy(java.io.InputStream,%20java.io.OutputStream)">IOUtils</a> class. We will use the <code>copy(inputStream, fileOS)</code> method to download a file into the local system.</p>
+<p>Another class of the Apache Commons IO package that can be used to download a file over the internet is the <a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html#copy(java.io.InputStream,%20java.io.OutputStream">IOUtils</a>) class. We will use the <code>copy(inputStream, fileOS)</code> method to download a file into the local system.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">InputStream inputStream = <span class="keyword">new</span> URL(<span class="string">&quot;http://example.com/my-file-path.txt&quot;</span>).openStream();</span><br><span class="line">FileOutputStream fileOS = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;/Users/username/Documents/file_name.txt&quot;</span>);</span><br><span class="line"><span class="keyword">int</span> i = IOUtils.copy(inpuStream, fileOS);</span><br></pre></td></tr></table></figure>
-
 <p>The function returns the number of bytes copied. If the value of the variable i is -1, then it indicates that the contents of the file are over 2GB. When the returned value is -1, you can use the function <code>copyLarge(inputStream, fileOS)</code> in place of the <code>copy(inputstream, fileOS)</code> function to handle this load. Both of these functions buffer the <code>inputstream</code> internally. The internal buffer means we do not have to use the <code>BufferedInputStream</code> class to enhance our code performance and helps us avoid writing boilerplate code.</p>
 <h2 id="Using-Apache-HTTP-Components"><a href="#Using-Apache-HTTP-Components" class="headerlink" title="Using Apache HTTP Components"></a>Using Apache HTTP Components</h2><p>Another library managed by the Apache organization is the <a target="_blank" rel="noopener" href="https://hc.apache.org/">HttpComponents</a> package. This library uses the request-response mechanism to download the file from a given URL.</p>
 <p>The first step to downloading a file is to create an HTTP client object that would issue the request to the server. For this, we will be using the <code>CloseableHttpClient</code> class. The <code>CloseableHttpClient</code> class is an abstract class that requires <code>HttpClientBuilder</code> class to create instances. The code snippet that creates a new HTTP client is as follows:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CloseableHttpClient client = HttpClientBuilder.create().build();</span><br></pre></td></tr></table></figure>
-
 <p>We then need to create an <code>HttpGet</code> or <code>HttpPost</code> object to send the request to the server. The request is created by the following line of code:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HttpGet request = <span class="keyword">new</span> HttpGet(<span class="string">&quot;url from where the file is intended to be downloaded&quot;</span>);</span><br></pre></td></tr></table></figure>
-
 <p>The <code>execute(request)</code> function is applied to the client object and returns with a response from the server. Once the request is sent to the server we need a response object to receive the data sent from the server. To catch the response from the server we use the <code>HttpResponse</code> class object.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HttpResponse response = client.execute(request);</span><br></pre></td></tr></table></figure>
-
 <p>The data sent by the server in the form of a message is obtained through the <code>getEntity()</code> function.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HttpEntity entity = response.getEntity();</span><br></pre></td></tr></table></figure>
-
 <p>You can also obtain the response code sent by the server through the <code>response</code> object and use it to your specific need.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> responseCode = response.getStatusLine().getStatusCode();</span><br></pre></td></tr></table></figure>
-
 <p>The data to be downloaded is encapsulated within the <code>entity</code> object and can be extracted using the <code>getContent()</code> function. The <code>getContent()</code> function returns an <code>InputStream</code> object that can be further used with a <code>BufferedInputStreamReader</code> to enhance performance.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream inputStream = entity.getContent();</span><br></pre></td></tr></table></figure>
-
 <p>Now all you need to do is read from the stream byte by byte and write the contents into a file using the <code>FileOutputStream</code> class.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String fileName = <span class="string">&quot;D:\\Demo\file.txt&quot;</span>;</span><br><span class="line">FileOutputStream fos = <span class="keyword">new</span> FileOutputStream(filename);</span><br><span class="line">Int <span class="keyword">byte</span>;</span><br><span class="line"><span class="keyword">while</span>((<span class="keyword">byte</span> = inputStream.read()) != -<span class="number">1</span>) &#123;</span><br><span class="line">    fos.write(<span class="keyword">byte</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>The last thing required to be done is closing all the open resources in order to ensure that the system resources are not overutilized and that there are no memory leaks.</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>So there you have it - these are the simplest ways to download a file using the basic Java code and other third party libraries. Now that we are done with the basics, you can be as creative as you want and utilize the knowledge to suit your needs. So see you next time with a new set of concepts to help you become a better coder. We wish you happy coding till then.</p>
 <p>Reference：<a target="_blank" rel="noopener" href="https://stackabuse.com/how-to-download-a-file-from-a-url-in-java">https://stackabuse.com/how-to-download-a-file-from-a-url-in-java</a><br>Reference：<a target="_blank" rel="noopener" href="https://www.journaldev.com/924/java-download-file-url">https://www.journaldev.com/924/java-download-file-url</a></p>
@@ -1021,7 +1007,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1336,5 +1322,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

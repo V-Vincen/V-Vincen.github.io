@@ -477,6 +477,7 @@
 <p>目前市面上较知名的发行版有：<code>Ubuntu</code>、<code>RedHat</code>、<code>CentOS</code>、<code>Debian</code>、<code>Fedora</code>、<code>SuSE</code>、<code>OpenSUSE</code>、<code>TurboLinux</code>、<code>BluePoint</code>、<code>RedFlag</code>、<code>Xterm</code>、<code>SlackWare</code>等。</p>
 <p><img src="1.png" alt="1"></p>
 <h2 id="Linux-与-Windows-比较"><a href="#Linux-与-Windows-比较" class="headerlink" title="Linux 与 Windows 比较"></a>Linux 与 Windows 比较</h2><p>目前国内 Linux 更多的是应用于服务器上，而桌面操作系统更多使用的是 Windows。主要区别如下</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -485,7 +486,8 @@
 <th>Linux</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>界面</td>
 <td>界面统一，外壳程序固定所有 Windows 程序菜单几乎一致，快捷键也几乎相同</td>
 <td>图形界面风格依发布版不同而不同，可能互不兼容。GNU/Linux 的终端机是从 UNIX 传承下来，基本命令和操作方法也几乎一致。</td>
@@ -510,7 +512,9 @@
 <td>每一种特定功能可能都需要商业软件的支持，需要购买相应的授权。</td>
 <td>大部分软件都可以自由获取，同样功能的软件选择较少。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
 
         <hr>
@@ -996,7 +1000,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1311,5 +1315,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

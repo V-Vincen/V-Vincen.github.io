@@ -476,17 +476,12 @@
 <p><img src="1.png" alt="1"></p>
 <p>解压：<code>tar -zxvf apache-maven-3.5.0-bin.tar.gz</code></p>
 <h3 id="配置-Maven-环境变量"><a href="#配置-Maven-环境变量" class="headerlink" title="配置 Maven 环境变量"></a>配置 <code>Maven</code> 环境变量</h3><p>打开终端 ，输入 <code>vim ~/.bash_profile</code></p>
-<p>配置 <code>Maven</code> 的环境变量：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export M2_HOME=&quot;/Users/during/Documents/Software/apache-maven-3.5.0&quot;</span><br><span class="line">export PATH=&quot;$M2_HOME/bin:$PATH&quot;</span><br></pre></td></tr></table></figure>
-
-<p>通过 <code>echo $JAVA_HOME</code> 查看是否配置过 <code>JAVA_HOME</code> ，如果 <code>JAVA_HOME</code> 没有配置，还需要导入 <code>JAVA_HOME</code> 环境变量：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
-
+<p>配置 <code>Maven</code> 的环境变量：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export M2_HOME=&quot;/Users/during/Documents/Software/apache-maven-3.5.0&quot;</span><br><span class="line">export PATH=&quot;$M2_HOME/bin:$PATH&quot;</span><br></pre></td></tr></table></figure></p>
+<p>通过 <code>echo $JAVA_HOME</code> 查看是否配置过 <code>JAVA_HOME</code> ，如果 <code>JAVA_HOME</code> 没有配置，还需要导入 <code>JAVA_HOME</code> 环境变量：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home</span><br></pre></td></tr></table></figure></p>
 <p>输入 <code>source ~/.bash_profile</code> 使环境变量生效</p>
 <p>输入 <code>mvn -v</code> 查看 <code>Maven</code> 否安装成功</p>
 <h3 id="配置-Maven-仓库"><a href="#配置-Maven-仓库" class="headerlink" title="配置 Maven 仓库"></a>配置 <code>Maven</code> 仓库</h3><p>在 <code>apache-maven-3.6.2/conf</code> 下找到 <code>settings.xml</code>，设置 <code>&lt;localRepository&gt;/Users/xxx/maven_repo&lt;/localRepository&gt;</code></p>
 <h2 id="Homebrew-安装"><a href="#Homebrew-安装" class="headerlink" title="Homebrew 安装"></a><code>Homebrew</code> 安装</h2><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew search maven</span><br><span class="line">brew info maven</span><br><span class="line">brew install maven</span><br></pre></td></tr></table></figure>
-
 <h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>验证 <code>Maven</code> 是否安装成功，输入 <code>mvn -v</code> </p>
 <h3 id="配置-Maven-仓库-1"><a href="#配置-Maven-仓库-1" class="headerlink" title="配置 Maven 仓库"></a>配置 <code>Maven</code> 仓库</h3><p>在路径 <code>/usr/local/Cellar/maven/3.5.0/libexec/conf</code> 下找到 <code>setting.xml</code>，设置 <code>&lt;localRepository&gt;/Users/xxx/maven_repo&lt;/localRepository&gt;</code></p>
 
@@ -974,7 +969,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1289,5 +1284,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

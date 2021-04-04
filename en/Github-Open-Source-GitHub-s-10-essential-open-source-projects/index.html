@@ -486,7 +486,7 @@
 <p><img src="adminlte.png" alt="adminlte"></p>
 <h2 id="ant-design-pro"><a href="#ant-design-pro" class="headerlink" title="ant-design-pro"></a>ant-design-pro</h2><p>Github Star：27.7K</p>
 <p>Github Repo：<a target="_blank" rel="noopener" href="https://github.com/ant-design/ant-design-pro">https://github.com/ant-design/ant-design-pro</a></p>
-<p>Preview：<a target="_blank" rel="noopener" href="http://preview.pro.ant.design/">http://preview.pro.ant.design</a></p>
+<p>Preview：<a target="_blank" rel="noopener" href="http://preview.pro.ant.design">http://preview.pro.ant.design</a></p>
 <p>开箱即用的中台前端/设计解决方案。</p>
 <p><img src="ant_design_pro.png" alt="ant_design_pro"></p>
 <h2 id="Tabler"><a href="#Tabler" class="headerlink" title="Tabler"></a>Tabler</h2><p>Github Star：22.6K</p>
@@ -1009,7 +1009,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1324,5 +1324,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

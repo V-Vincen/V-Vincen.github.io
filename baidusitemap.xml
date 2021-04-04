@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://v-vincen.life/en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/</loc>
+    <lastmod>2021-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://v-vincen.life/en/How-to-Use-Mathjax/</loc>
+    <lastmod>2021-04-03</lastmod>
+  </url>
+  <url>
     <loc>https://v-vincen.life/en/Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2021-03-03</lastmod>
   </url>

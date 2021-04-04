@@ -473,24 +473,13 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="回顾-Homebrew-的命令"><a href="#回顾-Homebrew-的命令" class="headerlink" title="回顾 Homebrew 的命令"></a>回顾 <code>Homebrew</code> 的命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew search **    //查找某个软件包</span><br><span class="line">brew list         //列出已经安装的软件的包</span><br><span class="line">brew install **   //安装某个软件包,默认安装的是稳定版本</span><br><span class="line">brew uninstall ** //卸载某个软件的包</span><br><span class="line">brew upgrade **   //更新某个软件包</span><br><span class="line">brew info **      //查看指定软件包的说明</span><br><span class="line">brew cleanup      //清理缓存(自动移除旧版本的软件包)</span><br></pre></td></tr></table></figure>
+<p>另外，如果嫌麻烦的话，可以按下面的方式添加命令别名：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias brewski=&#x27;brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup; brew doctor&#x27;</span><br></pre></td></tr></table></figure></p>
+<h2 id="用-Homebrew-来安装-Redis"><a href="#用-Homebrew-来安装-Redis" class="headerlink" title="用 Homebrew 来安装 Redis"></a>用 <code>Homebrew</code> 来安装 <code>Redis</code></h2><p>首先我们查看下已有的 <code>Redis</code> 各个版本：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search redis</span><br></pre></td></tr></table></figure></p>
+<p>输出如下，我们以安装 <code>Redis</code> 版本为例进行说明：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==&gt; Formulae</span><br><span class="line">hiredis         redis ✔         redis-leveldb   redis@3.2       redis@4.0</span><br><span class="line"></span><br><span class="line">==&gt; Casks</span><br><span class="line">another-redis-desktop-manager            redis</span><br></pre></td></tr></table></figure></p>
+<p>安装命令：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install redis</span><br></pre></td></tr></table></figure></p>
+<p>启动 <code>Redis</code>：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者（后台启动）</span></span><br><span class="line">brew services start redis</span><br></pre></td></tr></table></figure></p>
+<p>最后可以采用如下命令检查 <code>Redis</code> 是否启动成功：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看端口是否在</span></span><br><span class="line">lsof -i:6379</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看进程是否存在</span></span><br><span class="line"> ps -ef | grep redis</span><br></pre></td></tr></table></figure></p>
 
-<p>另外，如果嫌麻烦的话，可以按下面的方式添加命令别名：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias brewski=&#x27;brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup; brew doctor&#x27;</span><br></pre></td></tr></table></figure>
-
-<h2 id="用-Homebrew-来安装-Redis"><a href="#用-Homebrew-来安装-Redis" class="headerlink" title="用 Homebrew 来安装 Redis"></a>用 <code>Homebrew</code> 来安装 <code>Redis</code></h2><p>首先我们查看下已有的 <code>Redis</code> 各个版本：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search redis</span><br></pre></td></tr></table></figure>
-
-<p>输出如下，我们以安装 <code>Redis</code> 版本为例进行说明：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==&gt; Formulae</span><br><span class="line">hiredis         redis ✔         redis-leveldb   redis@3.2       redis@4.0</span><br><span class="line"></span><br><span class="line">==&gt; Casks</span><br><span class="line">another-redis-desktop-manager            redis</span><br></pre></td></tr></table></figure>
-
-<p>安装命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install redis</span><br></pre></td></tr></table></figure>
-
-<p>启动 <code>Redis</code>：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者（后台启动）</span></span><br><span class="line">brew services start redis</span><br></pre></td></tr></table></figure>
-
-<p>最后可以采用如下命令检查 <code>Redis</code> 是否启动成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看端口是否在</span></span><br><span class="line">lsof -i:6379</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看进程是否存在</span></span><br><span class="line"> ps -ef | grep redis</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -975,7 +964,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1290,5 +1279,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -476,9 +476,7 @@
 <h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近于原本的值，这就导致了在后来的运算会出现不正确结果的情况。</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>Java 提供了 <code>BigDecimal</code> 方法。具体用法如下（假设传入和设置的值的类型均为 <code>Double</code>）：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;40964.38&quot;</span>;</span><br><span class="line">    <span class="keyword">double</span> parseDouble = Double.parseDouble(str);</span><br><span class="line">    System.out.println(parseDouble);</span><br><span class="line">    Double valueOf = parseDouble * <span class="number">100D</span>;</span><br><span class="line">    <span class="keyword">int</span> intValue = valueOf.intValue();</span><br><span class="line">    System.out.println(intValue);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    BigDecimal bigDecimal = <span class="keyword">new</span> BigDecimal(str);</span><br><span class="line">    System.out.println(bigDecimal);</span><br><span class="line">    BigDecimal multiply = BigDecimalUtils.multiply(bigDecimal, <span class="number">100</span>);</span><br><span class="line">    System.out.println(multiply);</span><br><span class="line">    <span class="keyword">int</span> intValue2 = multiply.intValue();</span><br><span class="line">    System.out.println(intValue2);</span><br><span class="line">    System.out.println();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> value = BigDecimalUtils.multiply(<span class="keyword">new</span> BigDecimal(str), <span class="number">100</span>).intValue();</span><br><span class="line">    System.out.println(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>显示结果：</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">40964.38</span></span><br><span class="line"><span class="number">4096437</span></span><br><span class="line"></span><br><span class="line"><span class="number">40964.38</span></span><br><span class="line"><span class="number">4096438.00</span></span><br><span class="line"><span class="number">4096438</span></span><br><span class="line"></span><br><span class="line"><span class="number">4096438</span></span><br></pre></td></tr></table></figure>
+<p>显示结果：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">40964.38</span></span><br><span class="line"><span class="number">4096437</span></span><br><span class="line"></span><br><span class="line"><span class="number">40964.38</span></span><br><span class="line"><span class="number">4096438.00</span></span><br><span class="line"><span class="number">4096438</span></span><br><span class="line"></span><br><span class="line"><span class="number">4096438</span></span><br></pre></td></tr></table></figure></p>
 
 
         <hr>
@@ -964,7 +962,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1279,5 +1277,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -473,17 +473,18 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="查看文件和目录的权限"><a href="#查看文件和目录的权限" class="headerlink" title="查看文件和目录的权限"></a>查看文件和目录的权限</h2><p><code>ls –al</code>：使用<code>ls</code>不带参数只显示文件名称，通过<code>ls –al</code> 可以显示文件或者目录的权限信息。</p>
-<p><code>ls -l 文件名</code>：显示信息包括–文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：<code>-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile</code></p>
+<p><code>ls -l 文件名</code>：显示信息包括—文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：<code>-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile</code></p>
 <ul>
 <li><code>-</code>：普通文件</li>
 <li><code>rw-</code>：说明用户lusifer有读写权限，没有运行权限</li>
 <li><code>r--</code>：表示用户组lusifer只有读权限，没有写和运行的权限</li>
 <li><code>r--</code>：其他用户只有读权限，没有写权限和运行的权限</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>-rw-r–r–</th>
+<th>-rw-r—r—</th>
 <th>1</th>
 <th>lusifer</th>
 <th>lusifer</th>
@@ -492,7 +493,8 @@
 <th>.profile</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>文档类型及权限</td>
 <td>连接数</td>
 <td>文档所属用户</td>
@@ -501,23 +503,29 @@
 <td>文档最后被修改日期</td>
 <td>文档名称</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>-</th>
 <th>rw-</th>
-<th>r–</th>
-<th>r–</th>
+<th>r—</th>
+<th>r—</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>文档类型</td>
 <td>文档所有者权限（user）</td>
 <td>文档所属用户组权限（group）</td>
 <td>其他用户权限（other）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="文档类型"><a href="#文档类型" class="headerlink" title="文档类型"></a>文档类型</h3><p>d 表示目录<br>l 表示软连接<br>– 表示文件<br>c 表示串行端口字符设备文件<br>b 表示可供存储的块设备文件<br>余下的字符 3 个字符为一组。r 只读，w 可写，x 可执行，- 表示无此权限</p>
 <h3 id="连接数"><a href="#连接数" class="headerlink" title="连接数"></a>连接数</h3><p>指有多少个文件指向同一个索引节点。</p>
 <h3 id="文档所属用户和所属组"><a href="#文档所属用户和所属组" class="headerlink" title="文档所属用户和所属组"></a>文档所属用户和所属组</h3><p>就是文档属于哪个用户和用户组。文件所属用户和组是可以更改的</p>
@@ -546,9 +554,7 @@
 <p>表示可执行的权限，可以是 r、w、x</p>
 <p><strong>文件名</strong></p>
 <p>文件名可以使空格分开的文件列表</p>
-<p><strong>示例</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rw-rw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$ chmod u=rwx,g+r,o+r test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$</span><br></pre></td></tr></table></figure>
-
+<p><strong>示例</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rw-rw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$ chmod u=rwx,g+r,o+r test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$</span><br></pre></td></tr></table></figure></p>
 <h2 id="数字设定法"><a href="#数字设定法" class="headerlink" title="数字设定法"></a><font color=red />数字设定法</font></h2><h3 id="数字设定法中数字表示的含义："><a href="#数字设定法中数字表示的含义：" class="headerlink" title="数字设定法中数字表示的含义："></a>数字设定法中数字表示的含义：</h3><ul>
 <li>0 表示没有任何权限</li>
 <li>1 表示有可执行权限 = <code>x</code></li>
@@ -556,6 +562,7 @@
 <li>4 表示有可读权限 = <code>r</code></li>
 </ul>
 <p>也可以用数字来表示权限如：<code>chmod 755 file_name</code></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -564,7 +571,8 @@
 <th>r    -    x</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>4    2    1</td>
 <td>4    -    1</td>
 <td>4    -    1</td>
@@ -574,14 +582,16 @@
 <td>group</td>
 <td>others</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>若要 rwx 属性则 4+2+1=7</li>
 <li>若要 rw- 属性则 4+2=6</li>
 <li>若要 r-x 属性则 4+1=5</li>
 </ul>
-<p><strong>例：</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ chmod 777 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwxrwx 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line"></span><br><span class="line">lusifer@UbuntuBase:~$ chmod 770 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwx--- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br></pre></td></tr></table></figure>
+<p><strong>例：</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ chmod 777 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwxrwx 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line"></span><br><span class="line">lusifer@UbuntuBase:~$ chmod 770 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwx--- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->
@@ -1066,7 +1076,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1381,5 +1391,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

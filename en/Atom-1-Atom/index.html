@@ -486,7 +486,7 @@
 <li>原生 Markdown 支持（实时预览、代码高亮，比 Mou 的代码高亮效果好很多）</li>
 <li>主题插件越来越丰富</li>
 </ul>
-<h2 id="Atom-的安装使用"><a href="#Atom-的安装使用" class="headerlink" title="Atom 的安装使用"></a>Atom 的安装使用</h2><h3 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h3><p>Atom 官网下载地址：<a target="_blank" rel="noopener" href="https://atom.io./">https://atom.io。</a></p>
+<h2 id="Atom-的安装使用"><a href="#Atom-的安装使用" class="headerlink" title="Atom 的安装使用"></a>Atom 的安装使用</h2><h3 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h3><p>Atom 官网下载地址：<a target="_blank" rel="noopener" href="https://atom.io。">https://atom.io。</a></p>
 <p>Atom 文本编辑器支持 Windows、Mac、Linux 三大桌面平台，完全免费，并且已经在 GitHub 上开放了全部的源代码。功能设置和插件安装直接在设置选项里面即可设置，默认的很多设置选项已经很不错了，也不需要太多地修改。主题插件的安装也很简单。点击顶部菜单 <code>File -&gt; Settings</code>。在出现的下图安装界面中，输入自己的需要安装的主题或者插件的部分名称即可匹配搜索，点击 <code>INSTALL</code> 即可安装成功使用了（主题需要切换到 <code>Themes</code> 选项卡上）</p>
 <p><img src="2.png" alt="2"></p>
 <h3 id="原生-Markdown-书写和预览"><a href="#原生-Markdown-书写和预览" class="headerlink" title="原生 Markdown 书写和预览"></a>原生 <code>Markdown</code> 书写和预览</h3><blockquote>
@@ -524,7 +524,9 @@
 <ul>
 <li><code>autocomplete-paths</code>：填写路径的时候有 Sug 提示</li>
 <li><code>autocomplete-php</code>：php 代码提示补全</li>
-<li><code>autocomplete-java</code>：java 代码提示补全  <img src="6.gif" alt="6"></li>
+<li><p><code>autocomplete-java</code>：java 代码提示补全</p>
+<p>  <img src="6.gif" alt="6"></p>
+</li>
 </ul>
 <h3 id="pigments"><a href="#pigments" class="headerlink" title="pigments"></a><code>pigments</code></h3><p><code>pigments</code> 是项目文件中，样式显色显示的的插件。在 Atom 中的下载量可是相当的高。对于前端人员来讲还是很重要的一个插件。</p>
 <p><img src="7.gif" alt="7"></p>
@@ -1042,7 +1044,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1357,5 +1359,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

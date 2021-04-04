@@ -475,9 +475,7 @@
         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>ZooKeeper 是一种分布式协调服务，用于管理大型主机。在分布式环境中协调和管理服务是一个复杂的过程。ZooKeeper 通过其简单的架构和 API 解决了这个问题。ZooKeeper 允许开发人员专注于核心应用程序逻辑，而不必担心应用程序的分布式特性。</p>
 <h2 id="Zookeeper-的数据模型"><a href="#Zookeeper-的数据模型" class="headerlink" title="Zookeeper 的数据模型"></a>Zookeeper 的数据模型</h2><p>Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树，也很像文件系统的目录。</p>
 <p><img src="1.png" alt="1"></p>
-<p>树是由节点所组成，Zookeeper 的数据存储也同样是基于节点，这种节点叫做 <strong>Znode</strong>。但是，不同于树的节点，Znode 的引用方式是路径引用，类似于文件路径：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/动物/</span>猫</span><br><span class="line"><span class="regexp">/汽车/</span>宝马</span><br></pre></td></tr></table></figure>
-
+<p>树是由节点所组成，Zookeeper 的数据存储也同样是基于节点，这种节点叫做 <strong>Znode</strong>。但是，不同于树的节点，Znode 的引用方式是路径引用，类似于文件路径：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/动物/</span>猫</span><br><span class="line"><span class="regexp">/汽车/</span>宝马</span><br></pre></td></tr></table></figure></p>
 <p>这样的层级结构，让每一个 Znode 节点拥有唯一的路径，就像命名空间一样对不同信息作出清晰的隔离。</p>
 <h2 id="Znode-包含哪些元素"><a href="#Znode-包含哪些元素" class="headerlink" title="Znode 包含哪些元素"></a>Znode 包含哪些元素</h2><p><img src="2.png" alt="2"></p>
 <ul>
@@ -488,17 +486,11 @@
 </ul>
 <p>这里需要注意一点，Zookeeper 是为读多写少的场景所设计。Znode 并不是用来存储大规模业务数据，而是用于存储少量的状态和配置信息，<strong>每个节点的数据最大不能超过 1MB</strong>。</p>
 <h2 id="Zookeeper-的基本操作"><a href="#Zookeeper-的基本操作" class="headerlink" title="Zookeeper 的基本操作"></a>Zookeeper 的基本操作</h2><h3 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">create</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="判断节点是否存在"><a href="#判断节点是否存在" class="headerlink" title="判断节点是否存在"></a>判断节点是否存在</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exists</span><br></pre></td></tr></table></figure>
-
 <h3 id="获得一个节点的数据"><a href="#获得一个节点的数据" class="headerlink" title="获得一个节点的数据"></a>获得一个节点的数据</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getData</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="设置一个节点的数据"><a href="#设置一个节点的数据" class="headerlink" title="设置一个节点的数据"></a>设置一个节点的数据</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setData</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="获取节点下的所有子节点"><a href="#获取节点下的所有子节点" class="headerlink" title="获取节点下的所有子节点"></a>获取节点下的所有子节点</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getChildren</span></span><br></pre></td></tr></table></figure>
-
 <p>这其中，<code>exists</code>，<code>getData</code>，<code>getChildren</code> 属于读操作。Zookeeper 客户端在请求读操作的时候，可以选择是否设置 <strong>Watch</strong>。</p>
 <h2 id="Zookeeper-的事件通知"><a href="#Zookeeper-的事件通知" class="headerlink" title="Zookeeper 的事件通知"></a>Zookeeper 的事件通知</h2><p>我们可以把 <strong>Watch</strong> 理解成是注册在特定 Znode 上的触发器。当这个 Znode 发生改变，也就是调用了 <code>create</code>，<code>delete</code>，<code>setData</code> 方法的时候，将会触发 Znode 上注册的对应事件，请求 Watch 的客户端会接收到异步通知。</p>
 <p>具体交互过程如下：</p>
@@ -1032,7 +1024,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1347,5 +1339,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

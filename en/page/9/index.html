@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="en/page/9/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -485,6 +480,75 @@
   <!-- top end -->
   
 
+  <a href="/en/Annotation-自定义注解/">
+    <h2 class="post-title">
+      [Annotation] 自定义注解
+    </h2>
+    <h3 class="post-subtitle">
+      Annotation
+    </h3>
+    <div class="post-content-preview">
+      什么是注解（Annotation）Java注解是什么，以下是引用自维基百科的内容：
+
+Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的特殊语法元数据。Java 语言中的类、方法、变量、参数和包等都可以被标注。和 Javadoc 不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时可......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-03-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Annotation" title="Annotation">Annotation</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/JDK8-5-Optional-类/">
+    <h2 class="post-title">
+      [JDK8] 5 Optional 类
+    </h2>
+    <h3 class="post-subtitle">
+      A container object which may or may not contain a non-null value.
+    </h3>
+    <div class="post-content-preview">
+      概述到目前为止，臭名昭著的空指针异常是导致 Java 应用程序失败的最常见原因。以前，为了解决空指针异常，Google 公司著名的 Guava 项目引入了 Optional 类， Guava 通过使用检查空值的方式来防止代码污染，它鼓励程序员写更干净的代码。受到 Google Guava 的启发，Optional 类已经成为 Java 8 类库的一部分。
+Optional&lt;T&gt; ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-03-10
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JDK8" title="JDK8">JDK8</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/JDK8-4-Stream-API/">
     <h2 class="post-title">
       [JDK8] 4 Stream API
@@ -597,8 +661,7 @@ Strea......
     </h3>
     <div class="post-content-preview">
       Mac ifconfig1Mac:➜  ~ ifconfig
-
-1234567# loopback 本机主机地址lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; mtu 16384        options=1203&lt;RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP&gt;        inet 127......
+1234567# loopback 本机主机地址lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; mtu 16384        options=1203&lt;RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP&gt;        inet 127.......
     </div>
   </a>
   
@@ -634,9 +697,9 @@ Strea......
       先来上张 git 命令总结图（记住它 git 命令不是事）：
 
 回顾 git 分区和工作流Git 的区域分为 工作区、暂存区、本地仓库区。
-**工作区（work Tree）**：当前的工作区域。
-**暂存区（Stage or Index）**：暂存区域，和 git stash 命令暂存的地方不一样。使用 git add xx，就可以将 xx 添加近 Stage 里面。
-**本地仓库（Repo......
+工作区（work Tree）：当前的工作区域。
+暂存区（Stage or Index）：暂存区域，和 git stash 命令暂存的地方不一样。使用 git add xx，就可以将 xx 添加近 Stage 里面。
+本地仓库（Repository）：我们......
     </div>
   </a>
   
@@ -673,12 +736,9 @@ Strea......
 得到输出信息
 
 用 Homebrew 来安装 Zookeeper1brew install zookeeper
+查看配置文件缺省的配置文件在以下目录中1cd /usr/local/etc/zookeeper/
 
-查看配置文件缺省的配置文件在以下目录中
-1cd /usr/local/etc/zookeeper/
-
-
-修改配置文件 zoo.cfg （可保持默认状态）1234tickTime=2000dat......
+修改配置文件 zoo.cfg（可保持默认状态）1234tickTime=2000dataDir......
     </div>
   </a>
   
@@ -763,84 +823,6 @@ Strea......
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-10-Dubbo-Kryo-实现高速序列化/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 10 Dubbo + Kryo 实现高速序列化
-    </h2>
-    <h3 class="post-subtitle">
-      Dubbo + Kryo 实现高速序列化
-    </h3>
-    <div class="post-content-preview">
-      Dubbo 中的序列化Dubbo RPC 是 Dubbo 体系中最核心的一种高性能、高吞吐量的远程调用方式，可以称之为多路复用的 TCP 长连接调用：
-
-长连接：避免了每次调用新建 TCP 连接，提高了调用的响应速度
-多路复用：单个 TCP 连接可交替传输多个请求和响应的消息，降低了连接的等待闲置时间，从而减少了同样并发数下的网络连接数，提高了系统吞吐量
-
-Dubbo RPC 主要用于两个 ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-9-Dubbo-的负载均衡/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 9 Dubbo 的负载均衡
-    </h2>
-    <h3 class="post-subtitle">
-      Dubbo 的负载均衡
-    </h3>
-    <div class="post-content-preview">
-      概述在集群负载均衡时，Dubbo 提供了多种均衡策略，缺省为 random 随机调用。
-负载均衡策略Random LoadBalance
-随机，按权重设置随机概率。
-在一个截面上碰撞的概率高，但调用量越大分布越均匀，而且按概率使用权重后也比较均匀，有利于动态调整提供者权重。
-
-RoundRobin LoadBalance
-轮询，按公约后的权重设置轮询比率。
-存在慢的提供者累积请求的问题，比如......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -892,6 +874,14 @@ RoundRobin LoadBalance
 <div class="widget">
   <ul>
     
+    <a href="../../How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -902,14 +892,6 @@ RoundRobin LoadBalance
     
     <a href="../../Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1024,11 +1006,7 @@ RoundRobin LoadBalance
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1077,6 +1055,10 @@ RoundRobin LoadBalance
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1273,7 +1255,7 @@ RoundRobin LoadBalance
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1588,7 +1570,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1903,5 +1885,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -508,6 +508,7 @@
 <p>当使用处理流进行输入/输出时，程序并不会直接连接到实际的数据源，没有和实际的输入/输出节点连接。使用处理流的一个明显好处是，只要使用相同的处理流，程序就可以采用完全相同的输入/输出代码来访问不同的数据源，随着处理流所包装节点流的变化，程序实际所访问的数据源也相应地发生变化。</p>
 </blockquote>
 <h3 id="IO-流体系"><a href="#IO-流体系" class="headerlink" title="IO 流体系"></a>IO 流体系</h3><p><img src="io.png" alt="io.png"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -518,7 +519,8 @@
 <th>字符输出流</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>抽象基类</td>
 <td>InputStream</td>
 <td>OutputStream</td>
@@ -600,9 +602,10 @@
 <td>DataInputStream</td>
 <td>DataOutputStream</td>
 <td></td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="流中主要方法梳理"><a href="#流中主要方法梳理" class="headerlink" title="流中主要方法梳理"></a>流中主要方法梳理</h2><h3 id="InputStream-中的主要方法"><a href="#InputStream-中的主要方法" class="headerlink" title="InputStream 中的主要方法"></a><code>InputStream</code> 中的主要方法</h3><p><img src="inputstream_uml.png" alt="inputstream_uml"></p>
 <ul>
 <li><code>abstract int read()</code>：从流中读取数据，读取一个字节，返回值为所读得字节</li>
@@ -1135,7 +1138,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1450,5 +1453,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

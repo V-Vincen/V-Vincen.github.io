@@ -493,19 +493,12 @@
 <li>缺省用 160 份虚拟节点，如果要修改，请配置 <code>&lt;dubbo:parameter key=&quot;hash.nodes&quot; value=&quot;320&quot; /&gt;</code></li>
 </ul>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="服务端服务级别"><a href="#服务端服务级别" class="headerlink" title="服务端服务级别"></a>服务端服务级别</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">provider:</span></span><br><span class="line">    <span class="attr">loadbalance:</span> <span class="string">leastactive</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="客户端服务级别"><a href="#客户端服务级别" class="headerlink" title="客户端服务级别"></a>客户端服务级别</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">consumer:</span></span><br><span class="line">    <span class="attr">loadbalance:</span> <span class="string">leastactive</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="测试负载均衡"><a href="#测试负载均衡" class="headerlink" title="测试负载均衡"></a>测试负载均衡</h2><p>修改 <code>UserServiceImpl</code> 代码为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.service.user.api.UserService;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.Reference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Reference(version = &quot;$&#123;user.service.version&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(value = &quot;/hi&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="测试负载均衡"><a href="#测试负载均衡" class="headerlink" title="测试负载均衡"></a>测试负载均衡</h2><p>修改 <code>UserServiceImpl</code> 代码为<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.hello.dubbo.service.user.consumer.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.example.service.user.api.UserService;</span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.Reference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Reference(version = &quot;$&#123;user.service.version&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(value = &quot;/hi&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHi</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userService.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>注入了端口属性，当消费者访问时可以看出是从哪个端口请求的数据。</p>
 <h3 id="修改负载均衡策略为轮询"><a href="#修改负载均衡策略为轮询" class="headerlink" title="修改负载均衡策略为轮询"></a>修改负载均衡策略为轮询</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">dubbo:</span></span><br><span class="line">  <span class="attr">provider:</span></span><br><span class="line">    <span class="attr">loadbalance:</span> <span class="string">roundrobin</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h3><p>修改端口号并分别启动服务提供者，此时访问服务消费者：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://localhost:9090/hi</a></p>
-<p>浏览器会交替显示：</p>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12345</span></span><br><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12346</span></span><br></pre></td></tr></table></figure>
-
+<p>浏览器会交替显示：<br><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12345</span></span><br><span class="line">Hello Dubbo , i am <span class="keyword">from</span> <span class="keyword">port</span>:<span class="number">12346</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="附：在-IDEA-中配置一个工程启动多个实例"><a href="#附：在-IDEA-中配置一个工程启动多个实例" class="headerlink" title="附：在 IDEA 中配置一个工程启动多个实例"></a>附：在 IDEA 中配置一个工程启动多个实例</h2><h3 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h3><p>点击 <code>Run -&gt; Edit Configurations...</code></p>
 <p><img src="1.png" alt="1"></p>
 <h3 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h3><p>选择需要启动多实例的项目并勾上 <code>Allow parallel run</code> 前面的勾。</p>
@@ -997,7 +990,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1312,5 +1305,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="page/25/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -477,6 +472,74 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Spring-MVC-3-Controller-控制器-例子/">
+    <h2 class="post-title">
+      [Spring MVC] 3 Controller 控制器(例子)
+    </h2>
+    <h3 class="post-subtitle">
+      Spring MVC 注解
+    </h3>
+    <div class="post-content-preview">
+      概述
+12345678910111213141516171819202122232425package com.funtl.my.shop.web.controller;import com.funtl.my.shop.service.UserService;import org.springframework.beans.factory.annotation.Autowired;impor......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-06-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring MVC" title="Spring MVC">Spring MVC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Spring-MVC-2-Spring-整合-Spring-MVC/">
+    <h2 class="post-title">
+      [Spring MVC] 2 Spring 整合 Spring MVC
+    </h2>
+    <h3 class="post-subtitle">
+      Spring MVC 配置
+    </h3>
+    <div class="post-content-preview">
+      POM
+在 pom.xml 配置文件中增加 org.springframework:spring-webmvc 依赖12345&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &lt;......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-06-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring MVC" title="Spring MVC">Spring MVC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -682,8 +745,10 @@ Log4j 日志输出控制文件
       JUnit 4 注解
 
 
+
 注解
 描述
+
 
 
 
@@ -695,7 +760,7 @@ Log4j 日志输出控制文件
 Before 注释表示，该方法必须在类中的每个测试之前执行，以便执行测试某些必要的先决条件。
 
 
-@BeforeClass  public static void meth......
+@BeforeClass  public static void me......
     </div>
   </a>
   
@@ -728,8 +793,7 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring @Transactional
     </h3>
     <div class="post-content-preview">
-      概述通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。
-1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org.......
+      概述通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org.s......
     </div>
   </a>
   
@@ -763,85 +827,13 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
     </h3>
     <div class="post-content-preview">
       概述AspectJ 主要是使用 XML 配置顾问方式自动为每个符合切入点表达式的类生成事务代理。创建测试操作步骤如下：
-创建测试项目创建一个名为 aspectj-aop 项目，pom.xml 文件如下：
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152......
+创建测试项目创建一个名为 aspectj-aop 项目，pom.xml 文件如下：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Mr.Vincent on
     2019-06-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Spring-5-Spring-事务管理/">
-    <h2 class="post-title">
-      [Spring] 5 Spring 事务管理
-    </h2>
-    <h3 class="post-subtitle">
-      Spring 事务管理
-    </h3>
-    <div class="post-content-preview">
-      概述事务原本是数据库中的概念，用于数据访问层。但一般情况下，需要将事务提升到业务层，即 Service 层。这样做是为了能够使用事务的特性来管理具体的业务。
-事务特性：ACID
-原子性（Atomicity）：原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。
-一致性（Consistency）：事务前后数据的完整性必须保持一致。
-隔离性（Isolation）：事务的......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-06-24
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Spring-2-Spring-IoC/">
-    <h2 class="post-title">
-      [Spring] 2 Spring IoC
-    </h2>
-    <h3 class="post-subtitle">
-      Spring IoC
-    </h3>
-    <div class="post-content-preview">
-      POM创建一个工程名为 spring-ioc-demo 的项目，pom.xml 文件如下：
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-06-23
   </p>
   <div class="tags">
     
@@ -904,6 +896,14 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
 <div class="widget">
   <ul>
     
+    <a href="../../en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../en/How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -914,14 +914,6 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
     
     <a href="../../en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1036,11 +1028,7 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1089,6 +1077,10 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1285,7 +1277,7 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1600,7 +1592,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1915,5 +1907,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

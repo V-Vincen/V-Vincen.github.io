@@ -475,9 +475,7 @@
         <h2 id="安装-Docker-Registry-私服"><a href="#安装-Docker-Registry-私服" class="headerlink" title="安装 Docker Registry 私服"></a>安装 Docker Registry 私服</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Registry 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/_/registry">https://hub.docker.com/_/registry</a></p>
 <p>我们使用 Docker 来安装和运行 Registry，配置版本为最新版 2.7 版。</p>
-<p>在之前的 <a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/07/18/Docker-6-Docker-%E4%BB%93%E5%BA%93/">Docker 私有仓库</a> 章节中已经提到过如何配置和使用容器运行私有仓库，这里我们使用 <code>docker-compose</code> 配置如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5000</span><span class="string">:5000</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/registry/data:/var/lib/registry</span></span><br></pre></td></tr></table></figure>
-
+<p>在之前的 <a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/07/18/Docker-6-Docker-%E4%BB%93%E5%BA%93/">Docker 私有仓库</a> 章节中已经提到过如何配置和使用容器运行私有仓库，这里我们使用 <code>docker-compose</code> 配置如下：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5000</span><span class="string">:5000</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/registry/data:/var/lib/registry</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动成功后需要测试服务端是否能够正常提供服务，有两种方式</p>
 <ul>
 <li>浏览器端访问</li>
@@ -485,7 +483,8 @@
 <p><a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:5000/v2/</a></p>
 <p><img src="1.png" alt="1"></p>
 <ul>
-<li>终端访问<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://ip:5000/v2/</span><br></pre></td></tr></table></figure></li>
+<li>终端访问<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://ip:5000/v2/</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <p><font color=red>注意：</font>如想搭建一个拥有权限认证、TLS 的私有仓库，Docker 私服高级配置可参考：</p>
 <ul>
@@ -500,9 +499,7 @@
 <li><a target="_blank" rel="noopener" href="https://hub.docker.com/r/hyper/docker-registry-web/">docker-registry-web</a></li>
 </ul>
 <p>两个工具的功能和界面都差不多，我们以 <code>docker-registry-fontend</code> 为例讲解</p>
-<h3 id="docker-registry-frontend"><a href="#docker-registry-frontend" class="headerlink" title="docker-registry-frontend"></a>docker-registry-frontend</h3><p>我们使用 docker-compose 来安装和运行，<code>docker-compose.yml</code> 配置如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">frontend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">konradkleine/docker-registry-frontend:v2</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.crt:/etc/apache2/server.crt:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.key:/etc/apache2/server.key:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_HOST=ip</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_PORT=5000</span></span><br></pre></td></tr></table></figure>
-<p>注意：请将配置文件中的主机和端口换成自己仓库的地址</p>
+<h3 id="docker-registry-frontend"><a href="#docker-registry-frontend" class="headerlink" title="docker-registry-frontend"></a>docker-registry-frontend</h3><p>我们使用 docker-compose 来安装和运行，<code>docker-compose.yml</code> 配置如下：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">frontend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">konradkleine/docker-registry-frontend:v2</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.crt:/etc/apache2/server.crt:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.key:/etc/apache2/server.key:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_HOST=ip</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_PORT=5000</span></span><br></pre></td></tr></table></figure><br>注意：请将配置文件中的主机和端口换成自己仓库的地址</p>
 <p>运行成功后在浏览器访问：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:5000</a></p>
 <p><img src="2.png" alt="2"></p>
 <p><img src="3.png" alt="3"></p>
@@ -991,7 +988,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1306,5 +1303,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

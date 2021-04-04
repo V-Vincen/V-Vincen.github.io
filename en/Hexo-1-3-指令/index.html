@@ -475,11 +475,10 @@
         <h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init [folder]</span></span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
 <h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new [layout] &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
-<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">_config.yml</a> 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">&quot;post title with whitespace&quot;</span></span></span><br></pre></td></tr></table></figure>
-
+<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">_config.yml</a> 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">&quot;post title with whitespace&quot;</span></span></span><br></pre></td></tr></table></figure></p>
 <h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo generate</span></span><br></pre></td></tr></table></figure>
 <p>生成静态文件。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -487,7 +486,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-d, --deploy</td>
 <td>文件生成后立即部署网站</td>
 </tr>
@@ -495,17 +495,15 @@
 <td>-w, --watch</td>
 <td>监视文件变动</td>
 </tr>
-<tr>
-<td>该命令可以简写为</td>
-<td></td>
-</tr>
-</tbody></table>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br></pre></td></tr></table></figure>
-
+</tbody>
+</table>
+</div>
+<p>该命令可以简写为<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo publish [layout] &lt;filename&gt;</span></span><br></pre></td></tr></table></figure>
 <p>发表草稿。</p>
 <h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo server</span></span><br></pre></td></tr></table></figure>
 <p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -513,7 +511,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-p, --port</td>
 <td>重设端口</td>
 </tr>
@@ -525,9 +524,12 @@
 <td>-l, --log</td>
 <td>启动日记记录，使用覆盖记录格式</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo deploy</span></span><br></pre></td></tr></table></figure>
 <p>部署网站。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -535,16 +537,18 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-g, --generate</td>
 <td>部署之前预先生成静态文件</td>
 </tr>
-</tbody></table>
-<p>该命令可以简写为：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure>
-
+</tbody>
+</table>
+</div>
+<p>该命令可以简写为：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo render &lt;file1&gt; [file2] ...</span></span><br></pre></td></tr></table></figure>
 <p>渲染文件。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -552,11 +556,14 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>-o, --output</td>
 <td>设置输出路径</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo migrate &lt;<span class="built_in">type</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>从其他博客系统 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/migration">迁移内容</a></p>
 <h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
@@ -1064,7 +1071,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1379,5 +1386,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

@@ -501,9 +501,9 @@
 </ul>
 <h2 id="动态-WEB"><a href="#动态-WEB" class="headerlink" title="动态 WEB"></a>动态 WEB</h2><p>所谓的动态不是指页面会动，主要的特性的是：“ WEB 的页面展示效果因时因人而变”，而且动态 WEB 具有交互性，WEB 的页面的内容可以动态更新。整个动态 WEB 操作的过程图如下：</p>
 <p><img src="2.png" alt="图片2"></p>
-<p>动态 WEB 中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox 等），通过网络（Network）连接到服务器上，使用 HTTP 协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源（*.htm 或者是* .htm）还是动态资源。</p>
-<p>如果 WEB Server Plugin 发现客户端请求的是静态资源（*.htm或者是*.htm），则将请求直接转交给 WEB 服务器，之后 WEB 服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</p>
-<p>如果 WEB Server Plugin 发现客户端请求的是动态资源（*.jsp、*.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container（WEB容器），在 WEB Container 中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给 WEB 服务器，之后通过 WEB 服务器将内容发送回客户端浏览器进行解析执行。</p>
+<p>动态 WEB 中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox 等），通过网络（Network）连接到服务器上，使用 HTTP 协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源（<em>.htm 或者是</em> .htm）还是动态资源。</p>
+<p>如果 WEB Server Plugin 发现客户端请求的是静态资源（<em>.htm或者是</em>.htm），则将请求直接转交给 WEB 服务器，之后 WEB 服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</p>
+<p>如果 WEB Server Plugin 发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container（WEB容器），在 WEB Container 中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给 WEB 服务器，之后通过 WEB 服务器将内容发送回客户端浏览器进行解析执行。</p>
 <h2 id="动态-WEB-应用的实现手段"><a href="#动态-WEB-应用的实现手段" class="headerlink" title="动态 WEB 应用的实现手段"></a>动态 WEB 应用的实现手段</h2><p>动态 WEB 现在的实现手段非常多，较为常见的有以下几种：</p>
 <blockquote>
 <ul>
@@ -548,7 +548,7 @@
 </li>
 </ul>
 <p><strong>下载和安装 Tomcat 服务器</strong></p>
-<p>Tomcat 官方站点：<a target="_blank" rel="noopener" href="http://jakarta.apache.org/">http://jakarta.apache.org</a></p>
+<p>Tomcat 官方站点：<a target="_blank" rel="noopener" href="http://jakarta.apache.org">http://jakarta.apache.org</a></p>
 <p>下载 Tomcat 安装程序包：<a target="_blank" rel="noopener" href="http://tomcat.apache.org/">http://tomcat.apache.org/</a></p>
 <p><img src="9.png" alt="图片9"></p>
 <p>点击【Download】跳转到如下图所示的下载页面</p>
@@ -1062,7 +1062,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1377,5 +1377,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

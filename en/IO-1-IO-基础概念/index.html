@@ -484,6 +484,7 @@
 <li>UTF-8 编码：UTF-8 最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。UTF-8 就是在互联网上使用最广的一种 Unicode 的实现方式。其他实现方式还包括 UTF-16（字符用两个字节或四个字节表示）和 UTF-32（字符用四个字节表示），不过在互联网上基本不用。重复一遍，这里的关系是，UTF-8 是 Unicode 的实现方式之一。</li>
 </ul>
 <h3 id="联系与区别"><a href="#联系与区别" class="headerlink" title="联系与区别"></a>联系与区别</h3><p>很多时候我们经常提及到字符跟字节之间的关系，这个问题的前提是基于某一种编程语言比如说 Java 或者 C 来说的，因为字符跟字节之间的关系跟字符编码是有着紧密联系的，所以单独讨论字符跟字节之间的关系没有意义，下面简单来看一下他们在不同编码上的的对应关系：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -492,7 +493,8 @@
 <th>英文字符</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>GBK</td>
 <td>2个字节</td>
 <td>1个字节</td>
@@ -502,15 +504,20 @@
 <td>2个字节</td>
 <td>2个字节</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>Java 语言默认是采用 UTF-8 来进行编码的，下面用 Java 来测试一下：</p>
 <ul>
-<li>测试 GBK 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        byteLen = str.getBytes(<span class="string">&quot;gbk&quot;</span>).length;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>测试 GBK 编码</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        byteLen = str.getBytes(<span class="string">&quot;gbk&quot;</span>).length;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">10</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>测试 UTF-8 编码  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = str.getBytes().length;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>测试 UTF-8 编码</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = str.getBytes().length;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">12</span></span><br></pre></td></tr></table></figure>
-输出的结果，跟之前的规则是一致的，到这里，字节，编码方式，字符，以及他们之间的联系基本上介绍完了，理解了他们之间的关系，下面的 File 类跟 IO 之间的关系也就比较好理解了。</li>
+<p>输出的结果，跟之前的规则是一致的，到这里，字节，编码方式，字符，以及他们之间的联系基本上介绍完了，理解了他们之间的关系，下面的 File 类跟 IO 之间的关系也就比较好理解了。</p>
+</li>
 </ul>
 
 
@@ -997,7 +1004,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1312,5 +1319,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

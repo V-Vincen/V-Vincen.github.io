@@ -473,8 +473,8 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <h2 id="转发是服务器行为，重定向是客户端行为"><a href="#转发是服务器行为，重定向是客户端行为" class="headerlink" title="转发是服务器行为，重定向是客户端行为"></a><font color=red>转发是服务器行为，重定向是客户端行为</font></h2><p>为什么这样说呢，这就要看两个动作的工作流程：</p>
-<h3 id="转发过程：转发是浏览器上的网址不变"><a href="#转发过程：转发是浏览器上的网址不变" class="headerlink" title="转发过程：转发是浏览器上的网址不变"></a><font color=red>转发过程：转发是浏览器上的网址不变</font></h3><p>客户浏览器发送 http 请求 –&gt; web 服务器接受此请求 –&gt; 调用内部的一个方法在容器内部完成请求处理和转发动作 –&gt; 将目标资源发送给客户；在这里，转发的路径必须是同一个 web 容器下的 url ，其不能转向到其他的 web 路径上去，中间传递的是自己的容器内的 request 。在客户浏览器路径栏显示的仍然是其第一次访问的路径，也就是说客户是感觉不到服务器做了转发的。转发行为是浏览器只做了一次访问请求。</p>
-<h3 id="重定向过程：重定向时浏览器上的网址改变"><a href="#重定向过程：重定向时浏览器上的网址改变" class="headerlink" title="重定向过程：重定向时浏览器上的网址改变"></a><font color=red>重定向过程：重定向时浏览器上的网址改变</font></h3><p>客户浏览器发送 http 请求 –&gt; web 服务器接受后发送302状态码响应及对应新的 location 给客户浏览器 –&gt; 客户浏览器发现是302响应，则自动再发送一个新的 http 请求，请求 url 是新的 location 地址 –&gt; 服务器根据此请求寻找资源并发送给客户。在这里 location 可以重定向到任意 url ，既然是浏览器重新发出了请求，则就没有什么 request 传递的概念了。在客户浏览器路径栏显示的是其重定向的路径，客户可以观察到地址的变化的。重定向行为是浏览器做了至少两次的访问请求的。</p>
+<h3 id="转发过程：转发是浏览器上的网址不变"><a href="#转发过程：转发是浏览器上的网址不变" class="headerlink" title="转发过程：转发是浏览器上的网址不变"></a><font color=red>转发过程：转发是浏览器上的网址不变</font></h3><p>客户浏览器发送 http 请求 —&gt; web 服务器接受此请求 —&gt; 调用内部的一个方法在容器内部完成请求处理和转发动作 —&gt; 将目标资源发送给客户；在这里，转发的路径必须是同一个 web 容器下的 url ，其不能转向到其他的 web 路径上去，中间传递的是自己的容器内的 request 。在客户浏览器路径栏显示的仍然是其第一次访问的路径，也就是说客户是感觉不到服务器做了转发的。转发行为是浏览器只做了一次访问请求。</p>
+<h3 id="重定向过程：重定向时浏览器上的网址改变"><a href="#重定向过程：重定向时浏览器上的网址改变" class="headerlink" title="重定向过程：重定向时浏览器上的网址改变"></a><font color=red>重定向过程：重定向时浏览器上的网址改变</font></h3><p>客户浏览器发送 http 请求 —&gt; web 服务器接受后发送302状态码响应及对应新的 location 给客户浏览器 —&gt; 客户浏览器发现是302响应，则自动再发送一个新的 http 请求，请求 url 是新的 location 地址 —&gt; 服务器根据此请求寻找资源并发送给客户。在这里 location 可以重定向到任意 url ，既然是浏览器重新发出了请求，则就没有什么 request 传递的概念了。在客户浏览器路径栏显示的是其重定向的路径，客户可以观察到地址的变化的。重定向行为是浏览器做了至少两次的访问请求的。</p>
 <h2 id="请求转发和重定向的区别"><a href="#请求转发和重定向的区别" class="headerlink" title="请求转发和重定向的区别"></a>请求转发和重定向的区别</h2><h3 id="请求转发：转发只有一次请求"><a href="#请求转发：转发只有一次请求" class="headerlink" title="请求转发：转发只有一次请求"></a>请求转发：<font color=red>转发只有一次请求</font></h3><p>是服务器内部把对一个 request/response 的处理权，移交给另外一个。对于客户端而言，它只知道自己最早请求的那个 A ，而不知道中间的 B ，甚至 C、D 。<font color=red>传输的信息不会丢失。</font></p>
 <p>例子：<br>request.getRequestDispatcher(“loginsuccess.jsp”).forward(request,response);</p>
 <h3 id="重定向：重定向实际上产生了两次请求"><a href="#重定向：重定向实际上产生了两次请求" class="headerlink" title="重定向：重定向实际上产生了两次请求"></a>重定向：<font color=red>重定向实际上产生了两次请求</font></h3><p>其实是两次 request 。第一次，客户端 request A ,服务器响应，并 response 回来，告诉浏览器，你应该去 B 。这个时候 IE 可以看到地址变了，而且历史的回退按钮也亮了。重定向可以访问自己 web 应用以外的资源。<font color=red>在重定向的过程中，传输的信息会被丢失。</font></p>
@@ -482,11 +482,11 @@
 <ul>
 <li>重定向：</li>
 </ul>
-<p>　　发送请求 –&gt; 服务器运行 –&gt; 响应请求，返回给浏览器一个新的地址与响应码 –&gt; 浏览器根据响应码，判定该响应为重定向，自动发送一个新的请求给服务器，请求地址为之前返回的地址 –&gt; 服务器运行 –&gt; 响应请求给浏览器</p>
+<p>　　发送请求 —&gt; 服务器运行 —&gt; 响应请求，返回给浏览器一个新的地址与响应码 —&gt; 浏览器根据响应码，判定该响应为重定向，自动发送一个新的请求给服务器，请求地址为之前返回的地址 —&gt; 服务器运行 —&gt; 响应请求给浏览器</p>
 <ul>
 <li>转发：</li>
 </ul>
-<p>　　发送请求 –&gt; 服务器运行 –&gt; 进行请求的重新设置，例如通过 request.setAttribute(name,value) –&gt;  根据转发的地址，获取该地址的网页 –&gt;  响应请求给浏览器 </p>
+<p>　　发送请求 —&gt; 服务器运行 —&gt; 进行请求的重新设置，例如通过 request.setAttribute(name,value) —&gt;  根据转发的地址，获取该地址的网页 —&gt;  响应请求给浏览器 </p>
 <h2 id="重定向时的网址可以是任何网址，转发的网址必须是本站点的网址"><a href="#重定向时的网址可以是任何网址，转发的网址必须是本站点的网址" class="headerlink" title="重定向时的网址可以是任何网址，转发的网址必须是本站点的网址"></a><font color=red>重定向时的网址可以是任何网址，转发的网址必须是本站点的网址</font></h2><h3 id="重定向与请求转发使用"><a href="#重定向与请求转发使用" class="headerlink" title="重定向与请求转发使用"></a>重定向与请求转发使用</h3><p>前后两个页面有数据传递，用请求转发，没有则用重定向。</p>
 <ul>
 <li>比如：servlet  查询了数据需要在页面显示，就用请求转发。</li>
@@ -978,7 +978,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1293,5 +1293,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

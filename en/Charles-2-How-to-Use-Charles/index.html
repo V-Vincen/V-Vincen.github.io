@@ -500,7 +500,7 @@
 <p><img src="11.png" alt="11"></p>
 <h3 id="抓取-HTTPS-包-1"><a href="#抓取-HTTPS-包-1" class="headerlink" title="抓取 HTTPS 包"></a>抓取 HTTPS 包</h3><p>在菜单栏选择 <code>Help -&gt; SSL Proxying -&gt; Install Charles Root Certificate on a Mobile Device or a Remote Browser</code>，弹出提示框。</p>
 <p><img src="12.png" alt="12"></p>
-<p>根据上述提示，在 iOS 设备上使用 Safari 浏览器访问 <a target="_blank" rel="noopener" href="http://chls.pro/ssl%EF%BC%8CSafari">http://chls.pro/ssl，Safari</a> 浏览器会自动下载证书并提示安装，根据提示一步一步安装好，证书会被添加到 <code>设置 -&gt; 通用 -&gt; 描述文件</code> 中。</p>
+<p>根据上述提示，在 iOS 设备上使用 Safari 浏览器访问 <a target="_blank" rel="noopener" href="http://chls.pro/ssl，Safari">http://chls.pro/ssl，Safari</a> 浏览器会自动下载证书并提示安装，根据提示一步一步安装好，证书会被添加到 <code>设置 -&gt; 通用 -&gt; 描述文件</code> 中。</p>
 <p><img src="13.png" alt="13"></p>
 <p>进入 <code>设置 -&gt; 通用 -&gt; 关于本机 -&gt; 证书信任设置</code>，对上一步安装的 Charles 证书启用完全信任。</p>
 <p><img src="14.png" alt="14"></p>
@@ -992,7 +992,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1307,5 +1307,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

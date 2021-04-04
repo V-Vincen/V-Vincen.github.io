@@ -484,7 +484,7 @@
 <p>安装完成，点击 Finish 按钮即可<br><img src="7.png" alt="7"></p>
 <h3 id="安装语言包"><a href="#安装语言包" class="headerlink" title="安装语言包"></a>安装语言包</h3><p>双击打开语言包安装程序<br><img src="8.png" alt="8"></p>
 <p>点击下一步（Alt+N），语言包会自动安装完成<br><img src="9.png" alt="9"></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在空白处点击鼠标右键，选择 –&gt; TortoiseGit –&gt; Settings，然后就可以看到配置界面<br><img src="10.png" alt="10"></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在空白处点击鼠标右键，选择 —&gt; TortoiseGit —&gt; Settings，然后就可以看到配置界面<br><img src="10.png" alt="10"></p>
 <p>选中 General，在右边的 Language 中选择中文。 不勾选自动升级的复选框，可能还需要指定 Git.exe 文件的路径</p>
 <p>再次点击鼠标右键，可以看到弹出菜单中已经变成中文。<br><img src="11.png" alt="11"></p>
 
@@ -972,7 +972,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1287,5 +1287,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

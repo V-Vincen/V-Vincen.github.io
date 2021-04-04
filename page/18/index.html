@@ -306,22 +306,17 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      
       English
-      
     </span>
     <select id="lang-select" data-canonical="page/18/index.html">
       
+      
       <option value="en"  selected >
-        
         English
-        
       </option>
       
       <option value="cn" >
-        
         简体中文
-        
       </option>
       
     </select>
@@ -485,6 +480,107 @@
   <!-- top end -->
   
 
+  <a href="/en/Docker-4-Docker-镜像/">
+    <h2 class="post-title">
+      [Docker] 4 Docker 镜像
+    </h2>
+    <h3 class="post-subtitle">
+      Docker 获取镜像
+    </h3>
+    <div class="post-content-preview">
+      使用 Docker 镜像在之前的介绍中，我们知道镜像是 Docker 的三大组件之一。
+Docker 运行容器前需要本地存在对应的镜像，如果本地不存在该镜像，Docker 会从镜像仓库下载该镜像。
+本章将介绍更多关于镜像的内容，包括：
+
+从仓库获取镜像；
+管理本地主机上的镜像；
+介绍镜像实现的基本原理。
+
+镜像的实现原理Docker 镜像是怎么实现增量的修改和维护的？
+每个镜像都由很多层次构......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Docker-3-Docker-安装/">
+    <h2 class="post-title">
+      [Docker] 3 Docker 安装
+    </h2>
+    <h3 class="post-subtitle">
+      Docker 安装
+    </h3>
+    <div class="post-content-preview">
+      安装 DockerDocker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
+
+
+
+
+项目
+说明
+
+
+
+
+版本格式
+YY.MM
+
+
+Stable 版本
+每个季度发行
+
+
+Edge 版本
+每个月发行
+
+
+
+
+同时 Docker 划分为 CE 和 EE。CE 即社区版（免费，支持周期三个月），EE 即企业版，强调安全，付费使用。
+Docker CE 每月......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Docker-2-Docker-基本概念/">
     <h2 class="post-title">
       [Docker] 2 Docker 基本概念
@@ -536,8 +632,8 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
       Docker 简介
     </h3>
     <div class="post-content-preview">
-      什么是 DockerDocker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
-Do......
+      什么是 DockerDocker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
+D......
     </div>
   </a>
   
@@ -571,10 +667,7 @@ Do......
     </h3>
     <div class="post-content-preview">
       防火墙相关命令（Ubuntu）安装方法1sudo apt-get install ufw
-
-使用方法启用
-12sudo ufw default deny sudo ufw enable
-通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。对于大部分防火墙操作来说， 其实无非......
+使用方法启用12sudo ufw default deny sudo ufw enable通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。对于大部分防火墙操作来说， 其实无非就是的......
     </div>
   </a>
   
@@ -646,10 +739,9 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
     </h3>
     <div class="post-content-preview">
       安装更新数据源1apt-get update
-
 安装 MySQL1apt-get install mysql-server
 系统将提示您在安装过程中创建 root 密码。选择一个安全的密码，并确保你记住它，因为你以后需要它。接下来，我们将完成 MySQL 的配置。
-配置因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 M......
+配置因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 My......
     </div>
   </a>
   
@@ -685,12 +777,9 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       概述此处以 Tomcat 8.5.23 为例
 下载地址：https://tomcat.apache.org/
 解压缩并移动到指定目录解压缩1tar -zxvf apache-tomcat-8.5.23.tar.gz
-
 变更目录名1mv apache-tomcat-8.5.23 tomcat
-
 移动目录1mv tomcat/ /usr/local/
-
-常用命令启动1/usr/local/tom......
+常用命令启动1/usr/local/tomcat......
     </div>
   </a>
   
@@ -726,10 +815,8 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       概述此处以 JDK 1.8.0_152 为例
 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html
 解压缩并移动到指定目录解压缩1tar -zxvf jdk-8u152-linux-x64.tar.gz
-
 创建目录1mkdir -p /usr/local/java
-
-移动安装包1mv jdk1.8.0_......
+移动安装包1mv jdk1.8.0_15......
     </div>
   </a>
   
@@ -763,76 +850,8 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
     </h3>
     <div class="post-content-preview">
       查看文件和目录的权限ls –al：使用ls不带参数只显示文件名称，通过ls –al 可以显示文件或者目录的权限信息。
-ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile
+ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile
 ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Ubuntu-2-Ubuntu-用户和组管理/">
-    <h2 class="post-title">
-      [Ubuntu] 2 Ubuntu 用户和组管理
-    </h2>
-    <h3 class="post-subtitle">
-      Ubuntu 用户和组管理
-    </h3>
-    <div class="post-content-preview">
-      概述Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。
-使用 Root 用户在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们使用......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Ubuntu-1-Ubuntu-软件包管理/">
-    <h2 class="post-title">
-      [Ubuntu] 1 Ubuntu 软件包管理
-    </h2>
-    <h3 class="post-subtitle">
-      Ubuntu 软件包管理
-    </h3>
-    <div class="post-content-preview">
-      概述APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 /etc/apt/ 目录下的 sources.list 文件。
-修改数据源由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改为国......
     </div>
   </a>
   
@@ -901,6 +920,14 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
 <div class="widget">
   <ul>
     
+    <a href="../../en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
+      <li>How to Use Internationalization（i18n）</li>
+    </a>
+    
+    <a href="../../en/How-to-Use-Mathjax/">
+      <li>How to Use Mathjax</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Netflix-Spring-Cloud-%E6%80%BB%E7%BB%93/">
       <li>[Spring Cloud Netflix] Spring Cloud 总结</li>
     </a>
@@ -911,14 +938,6 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
     
     <a href="../../en/Calling-Third-party-API-OpenFeign-4-Feign-Spring-Cloud-CircuitBreaker-Fallbacks/">
       <li>[Calling Third-party API - OpenFeign] 4 Feign Spring Cloud CircuitBreaker Fallbacks</li>
-    </a>
-    
-    <a href="../../en/Calling-Third-party-API-OpenFeign-3-Feign-Call-Case/">
-      <li>[Calling Third-party API - OpenFeign] 3 Feign Call Case</li>
-    </a>
-    
-    <a href="../../en/IO-5-How-to-Download-a-File-from-a-URL-in-Java/">
-      <li>[IO] 5 How to Download a File from a URL in Java</li>
     </a>
     
   </ul>
@@ -1033,11 +1052,7 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
   <div class="tags">
     
     
-    <a href="/tags/#Hexo" title="Hexo" rel="12">Hexo</a>
-    
-    
-    
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="5">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="7">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1086,6 +1101,10 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
+    
+    
+    
+    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1282,7 +1301,7 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1597,7 +1616,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1912,5 +1931,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

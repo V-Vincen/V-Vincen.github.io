@@ -474,6 +474,7 @@
 
         <p>您可以在 _config.yml 中修改大部分的配置。</p>
 <h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -481,7 +482,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>title</td>
 <td>网站标题</td>
 </tr>
@@ -505,12 +507,12 @@
 <td>timezone</td>
 <td>网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</td>
 </tr>
-<tr>
-<td>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</td>
-<td></td>
-</tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
+<p>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
 <h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -519,7 +521,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>url</td>
 <td>网址</td>
 <td></td>
@@ -537,13 +540,15 @@
 <tr>
 <td>permalink_defaults</td>
 <td>永久链接中各部分的默认值</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p><strong>网站存放在子目录</strong><br>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
 </blockquote>
 <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -552,7 +557,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>source_dir</td>
 <td>资源文件夹，这个文件夹用来存放内容。</td>
 <td>source</td>
@@ -590,13 +596,15 @@
 <tr>
 <td>skip_render</td>
 <td>跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p><strong>提示</strong><br>如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</p>
 </blockquote>
 <h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -605,7 +613,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>new_post_name</td>
 <td>新文章的文件名称</td>
 <td>:title.md</td>
@@ -658,13 +667,15 @@
 <tr>
 <td>highlight</td>
 <td>代码块的设置</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p><strong>相对地址</strong><br>默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站&gt; 域名为<code>example.com</code>,您有一篇文章名为<code>hello</code>，那么绝对链接可能像这样：<code>http://example.com/hello.html</code>，它是绝对于域名的。相对链接像这样：<code>/hello.html</code>，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议用绝对地址。</p>
 </blockquote>
 <h3 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -673,7 +684,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>default_category</td>
 <td>默认分类</td>
 <td>uncategorized</td>
@@ -686,11 +698,13 @@
 <tr>
 <td>tag_map</td>
 <td>标签别名</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h3><hr>
 <p>Hexo 使用 <a target="_blank" rel="noopener" href="http://momentjs.com/">Moment.js</a> 来解析和显示时间。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -699,7 +713,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>date_format</td>
 <td>日期格式</td>
 <td>YYYY-MM-DD</td>
@@ -709,8 +724,11 @@
 <td>时间格式</td>
 <td>H:mm:ss</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -719,7 +737,8 @@
 <th>默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>per_page</td>
 <td>每页显示的文章量 (0 = 关闭分页功能)</td>
 <td>10</td>
@@ -729,8 +748,11 @@
 <td>分页目录</td>
 <td>page</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -738,7 +760,8 @@
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>theme</td>
 <td>当前主题名称。值为false时禁用主题</td>
 </tr>
@@ -746,7 +769,9 @@
 <td>deploy</td>
 <td>部署部分的设置</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
 
         <hr>
@@ -1232,7 +1257,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1547,5 +1572,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>

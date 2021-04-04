@@ -472,7 +472,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><table>
+        <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -482,7 +483,8 @@
 <th>参数说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ls</td>
 <td>显示文件和目录列表</td>
 <td>ls [-alrtAFR] [name…]</td>
@@ -541,7 +543,7 @@
 <tr>
 <td>cat</td>
 <td>显示文本文件内容</td>
-<td>cat [-AbeEnstTuv] [–help] [–version] fileName</td>
+<td>cat [-AbeEnstTuv] [—help] [—version] fileName</td>
 <td></td>
 <td></td>
 </tr>
@@ -650,7 +652,9 @@
 <td>-f</td>
 <td>跟踪输出</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
 
         <hr>
@@ -1136,7 +1140,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
@@ -1451,5 +1455,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
 </html>
