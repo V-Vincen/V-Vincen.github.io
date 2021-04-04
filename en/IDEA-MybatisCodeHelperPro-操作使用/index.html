@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -474,7 +474,8 @@
 
         <p>MybatisCodeHelperPro（V2.6） 插件使用视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av50632948">https://www.bilibili.com/video/av50632948</a></p>
 <p>支持 mysql + oracle + sqlite</p>
-<h2 id="具体操作使用"><a href="#具体操作使用" class="headerlink" title="具体操作使用"></a>具体操作使用</h2><p>根据 java 对象一键生成 Dao 接口、Service接口、Xml、数据库建表 Sql 文件，提供 dao 与 xml 的跳转，支持创建多字段索引、多字段唯一约束</p>
+<h2 id="具体操作使用">具体操作使用</h2>
+<p>根据 java 对象一键生成 Dao 接口、Service接口、Xml、数据库建表 Sql 文件，提供 dao 与 xml 的跳转，支持创建多字段索引、多字段唯一约束</p>
 <p><img src="1.gif" alt="1"></p>
 <p>根据 mapper 中方法名直接生成 sql 并补全方法（可生成大部分单表操作的 sql ）</p>
 <p><img src="2.gif" alt="2"></p>
@@ -483,7 +484,7 @@
 <p>支持使用 mybatis - generator</p>
 <p><img src="4.gif" alt="4"></p>
 <p>另外还有 mybatis 接口方法名重构支持，property refid resultMap 等的自动补全 mybatis 中 sql 自动补全等功能</p>
-<p>再来一张通过方法名直接生成 sql </p>
+<p>再来一张通过方法名直接生成 sql</p>
 <p><img src="5.gif" alt="5"></p>
 <p>注意这个是收费版一年 29 元 ，地址： <a target="_blank" rel="noopener" href="https://github.com/gejun123456/MyBatisCodeHelper-Pro">https://github.com/gejun123456/MyBatisCodeHelper-Pro</a></p>
 

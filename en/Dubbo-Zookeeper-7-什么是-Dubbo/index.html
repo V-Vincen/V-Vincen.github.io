@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,10 +472,12 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>Apache Dubbo (incubating) |ˈdʌbəʊ|</code> 是一款高性能、轻量级的开源 <code>Java RPC</code> 分布式服务框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。她最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，<code>Dubbo</code> 采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（<code>Provider</code>）和服务消费方（<code>Consumer</code>）两个角色。</p>
-<p>官网：<a target="_blank" rel="noopener" href="http://dubbo.apache.org/zh-cn">http://dubbo.apache.org/zh-cn</a><br>GitHub：<a target="_blank" rel="noopener" href="https://github.com/apache/incubator-dubbo">https://github.com/apache/incubator-dubbo</a></p>
-<h2 id="Dubbo-的服务治理"><a href="#Dubbo-的服务治理" class="headerlink" title="Dubbo 的服务治理"></a>Dubbo 的服务治理</h2><p><img src="1.png" alt="1"></p>
-<div class="table-container">
+        <h2 id="概述">概述</h2>
+<p><code>Apache Dubbo (incubating) |ˈdʌbəʊ|</code> 是一款高性能、轻量级的开源 <code>Java RPC</code> 分布式服务框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。她最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，<code>Dubbo</code> 采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象出服务提供方（<code>Provider</code>）和服务消费方（<code>Consumer</code>）两个角色。</p>
+<p>官网：<a target="_blank" rel="noopener" href="http://dubbo.apache.org/zh-cn">http://dubbo.apache.org/zh-cn</a><br>
+GitHub：<a target="_blank" rel="noopener" href="https://github.com/apache/incubator-dubbo">https://github.com/apache/incubator-dubbo</a></p>
+<h2 id="Dubbo-的服务治理">Dubbo 的服务治理</h2>
+<p><img src="1.png" alt="1"></p>
 <table>
 <thead>
 <tr>
@@ -514,14 +516,14 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="Dubbo-的核心功能"><a href="#Dubbo-的核心功能" class="headerlink" title="Dubbo 的核心功能"></a>Dubbo 的核心功能</h2><ul>
+<h2 id="Dubbo-的核心功能">Dubbo 的核心功能</h2>
+<ul>
 <li><code>Remoting</code>：远程通讯，提供对多种 <code>NIO</code> 框架抽象封装，包括“同步转异步”和“请求-响应”模式的信息交换方式。</li>
 <li><code>Cluster</code>：服务框架，提供基于接口方法的透明远程过程调用，包括多协议支持，以及软负载均衡，失败容错，地址路由，动态配置等集群支持。</li>
 <li><code>Registry</code>：服务注册中心，服务自动发现: 基于注册中心目录服务，使服务消费方能动态的查找服务提供方，使地址透明，使服务提供方可以平滑增加或减少机器。</li>
 </ul>
-<h2 id="Dubbo-的组件角色"><a href="#Dubbo-的组件角色" class="headerlink" title="Dubbo 的组件角色"></a>Dubbo 的组件角色</h2><p><img src="2.png" alt="2"></p>
-<div class="table-container">
+<h2 id="Dubbo-的组件角色">Dubbo 的组件角色</h2>
+<p><img src="2.png" alt="2"></p>
 <table>
 <thead>
 <tr>
@@ -552,7 +554,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p>调用关系说明：</p>
 <ul>
 <li>服务容器 <code>Container</code> 负责启动，加载，运行服务提供者。</li>
@@ -562,28 +563,32 @@
 <li>服务消费者 <code>Consumer</code>，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</li>
 <li>服务消费者 <code>Consumer</code> 和提供者 <code>Provider</code>，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心 <code>Monitor</code>。</li>
 </ul>
-<h2 id="Dubbo-Admin-管理控制台"><a href="#Dubbo-Admin-管理控制台" class="headerlink" title="Dubbo Admin 管理控制台"></a>Dubbo Admin 管理控制台</h2><p>管理控制台为内部裁剪版本，开源部分主要包含：路由规则，动态配置，服务降级，访问控制，权重调整，负载均衡，等管理功能。</p>
+<h2 id="Dubbo-Admin-管理控制台">Dubbo Admin 管理控制台</h2>
+<p>管理控制台为内部裁剪版本，开源部分主要包含：路由规则，动态配置，服务降级，访问控制，权重调整，负载均衡，等管理功能。</p>
 <p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/apache/incubator-dubbo-ops">https://github.com/apache/incubator-dubbo-ops</a></p>
 <p><img src="3.png" alt="3"></p>
-<h3 id="项目运行方法"><a href="#项目运行方法" class="headerlink" title="项目运行方法"></a>项目运行方法</h3><p><strong>GitHub README 说明：<a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md">https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md</a></strong></p>
+<h3 id="项目运行方法">项目运行方法</h3>
+<p><strong>GitHub README 说明：<a target="_blank" rel="noopener" href="https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md">https://github.com/apache/dubbo-admin/blob/develop/README_ZH.md</a></strong></p>
 <ul>
 <li>下载代码: <code>git clone https://github.com/apache/dubbo-admin.git</code></li>
 <li>在 <code>dubbo-admin-server/src/main/resources/application.properties</code> 中指定注册中心地址</li>
 <li>构建 <code>mvn clean package</code></li>
-<li>启动<ul>
-<li>mvn —projects dubbo-admin-server spring-boot:run</li>
+<li>启动
+<ul>
+<li>mvn --projects dubbo-admin-server spring-boot:run</li>
 <li>或者 <code>cd dubbo-admin-distribution/target; java -jar dubbo-admin-0.1.jar</code></li>
 </ul>
 </li>
 <li>访问 <code>http://localhost:8080</code></li>
 </ul>
-<h3 id="遇到的问题处理"><a href="#遇到的问题处理" class="headerlink" title="遇到的问题处理"></a>遇到的问题处理</h3><p><strong>NodeJS</strong></p>
+<h3 id="遇到的问题处理">遇到的问题处理</h3>
+<p><strong>NodeJS</strong></p>
 <ul>
 <li>现象：使用 <code>mvn clean package</code> 构建 DubboAdmin 控制台时会出现 <code>npm install</code> 操作</li>
 <li>解决：新版控制台已改为前后分离模式，前端采用 Vue.js 开发，故需要 NodeJS 支持，请自行安装（运行到此处时会自动下载安装）。官网地址：<a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a></li>
-<li>其他：配置淘宝镜像加速。官网地址：<a target="_blank" rel="noopener" href="http://npm.taobao.org/">http://npm.taobao.org/</a><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 安装 cnpm 命令行工具</span></span><br><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 安装模块</span></span><br><span class="line">cnpm install [name]</span><br></pre></td></tr></table></figure>
-</li>
+<li>其他：配置淘宝镜像加速。官网地址：<a target="_blank" rel="noopener" href="http://npm.taobao.org/">http://npm.taobao.org/</a></li>
 </ul>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 安装 cnpm 命令行工具</span></span><br><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># 安装模块</span></span><br><span class="line">cnpm install [name]</span><br></pre></td></tr></table></figure>
 
 
         <hr>

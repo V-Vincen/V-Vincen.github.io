@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,14 +472,16 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong><code>@ModelAttribute</code></strong> 具有如下三个作用：</p>
+        <h2 id="简介">简介</h2>
+<p><strong><code>@ModelAttribute</code></strong> 具有如下三个作用：</p>
 <ul>
 <li>绑定请求参数到命令对象：放在功能处理方法的入参上时，用于将多个请求参数绑定到一个命令对象，从而简化绑定流程，而且自动暴露为模型数据用于视图页面展示时使用</li>
 <li>暴露 @RequestMapping 方法返回值为模型数据：放在功能处理方法的返回值上时，是暴露功能处理方法的返回值为模型数据，用于视图页面展示时使用</li>
 <li>暴露表单引用对象为模型数据：放在处理器的一般方法（非功能处理方法）上时，是为表单准备要展示的表单引用对象，如注册时需要选择的所在城市等，而且在执行功能处理方法（@RequestMapping 注解的方法）之前，自动添加到模型对象中，用于视图页面展示时使用</li>
 </ul>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>暴露表单引用对象为模型数据的例子<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">get</span><span class="params">(<span class="meta">@RequestParam(required = false)</span> String id)</span> </span>&#123;</span><br><span class="line">    User entity = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isNotBlank(id)) &#123;</span><br><span class="line">        entity = userService.get(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (entity == <span class="keyword">null</span>) &#123;</span><br><span class="line">        entity = <span class="keyword">new</span> User();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> entity;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<h2 id="例子">例子</h2>
+<p>暴露表单引用对象为模型数据的例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ModelAttribute</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">get</span><span class="params">(<span class="meta">@RequestParam(required = false)</span> String id)</span> </span>&#123;</span><br><span class="line">    User entity = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isNotBlank(id)) &#123;</span><br><span class="line">        entity = userService.get(id);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (entity == <span class="keyword">null</span>) &#123;</span><br><span class="line">        entity = <span class="keyword">new</span> User();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> entity;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->

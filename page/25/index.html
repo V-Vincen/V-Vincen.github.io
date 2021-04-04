@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -489,12 +489,14 @@
     </h3>
     <div class="post-content-preview">
       拦截器简介
+
 Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 Filter，用于对处理器进行预处理和后处理。
 常见应用场景
 
+
 日志记录：记录请求信息的日志，以便进行信息监控、信息统计、计算 PV（Page View）等
 权限检查：如登录检测，进入处理器检测检测是否登录，如果没有直接返回到登录页面
-性能监控：有时候系统在某段时间莫名其妙的慢，可以通过拦截器在......
+性能监控：有时候系统在某段时间莫名其妙的慢，可以通过拦截......
     </div>
   </a>
   
@@ -528,7 +530,8 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     </h3>
     <div class="post-content-preview">
       概述
-12345678910111213141516171819202122232425package com.funtl.my.shop.web.controller;import com.funtl.my.shop.service.UserService;import org.springframework.beans.factory.annotation.Autowired;impor......
+
+12345678910111213141516171819202122232425package com.funtl.my.shop.web.controller;import com.funtl.my.shop.service.UserService;import org.springframework.beans.factory.annotation.Autowired;impo......
     </div>
   </a>
   
@@ -562,7 +565,9 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     </h3>
     <div class="post-content-preview">
       POM
-在 pom.xml 配置文件中增加 org.springframework:spring-webmvc 依赖12345&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &lt;......
+
+在 pom.xml 配置文件中增加 org.springframework:spring-webmvc 依赖
+12345&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &l......
     </div>
   </a>
   
@@ -595,10 +600,11 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
       Spring MVC 简介
     </h3>
     <div class="post-content-preview">
-      概述Spring MVC 也叫 Spring Web MVC ，属于展示层框架。SpringMVC 是 Spring 框架的一部分。
+      概述
+Spring MVC 也叫 Spring Web MVC ，属于展示层框架。SpringMVC 是 Spring 框架的一部分。
 Spring Web MVC 框架提供了 MVC (模型 - 视图 - 控制器) 架构和用于开发灵活和松散耦合的 Web 应用程序的组件。 MVC 模式导致应用程序的不同方面(输入逻辑，业务逻辑和 UI 逻辑)分离，同时提供这些元素之间的松散耦合。
 
-模型 (......
+模型 ......
     </div>
   </a>
   
@@ -632,7 +638,8 @@ Spring Web MVC 框架提供了 MVC (模型 - 视图 - 控制器) 架构和用于
     </h3>
     <div class="post-content-preview">
       Slf4j 简介
-slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java 程序提供日志输出的统一接口，并不是一个具体的日志实现方案，就比如 JDBC 一样，只是一种规则而已。所以单独的 slf4j 是不能工作的，必须搭配其他具体的日志实现方案，比如 apache 的 org.apache.log4j.Logger，JDK 自带的 java......
+
+slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java 程序提供日志输出的统一接口，并不是一个具体的日志实现方案，就比如 JDBC 一样，只是一种规则而已。所以单独的 slf4j 是不能工作的，必须搭配其他具体的日志实现方案，比如 apache 的 org.apache.log4j.Logger，JDK 自带的 jav......
     </div>
   </a>
   
@@ -665,8 +672,10 @@ slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java
       基于注解的装配方式
     </h3>
     <div class="post-content-preview">
-      概述截止目前为止，咱们 Bean 的装配方式是通过代码 getBean() 的方式从容器获取指定的 Bean 实例，容器首先会调用 Bean 类的无参构造器，创建空值的实例对象。除了使用 getBean() 的装配方式外，还可以使用注解的装配方式。
-容器中 Bean 的作用域在学习 Bean 的装配方式之前，我们先了解一下 Bean 的作用域。当通过 Spring 容器创建一个 Bean 实......
+      概述
+截止目前为止，咱们 Bean 的装配方式是通过代码 getBean() 的方式从容器获取指定的 Bean 实例，容器首先会调用 Bean 类的无参构造器，创建空值的实例对象。除了使用 getBean() 的装配方式外，还可以使用注解的装配方式。
+容器中 Bean 的作用域
+在学习 Bean 的装配方式之前，我们先了解一下 Bean 的作用域。当通过 Spring 容器创建一个 Bean......
     </div>
   </a>
   
@@ -700,6 +709,7 @@ slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java
     </h3>
     <div class="post-content-preview">
       Log4j 日志级别
+
 为了方便对于日志信息的输出显示，对日志内容进行了分级管理。日志级别由高到低，共分 6 个级别：
 
 fatal(致命的)
@@ -710,10 +720,12 @@ debug
 trace(堆栈)
 
 Log4j 日志输出控制文件
-日志输出简介Log4j 的日志输出控制文件，主要由三个部分构成：
+
+日志输出简介
+Log4j 的日志输出控制文件，主要由三个部分构成：
 
 日志信息的输出位置：控制日志信息将要输出的位置，是控制台还是文件等。
-日志信息的输出格式......
+日志信息的输......
     </div>
   </a>
   
@@ -747,8 +759,9 @@ Log4j 日志输出控制文件
     </h3>
     <div class="post-content-preview">
       什么是断言
+
 断言是编程术语，表示为一些布尔表达式，程序员相信在程序中的某个特定点该表达式值为真，可以在任何时候启用和禁用断言验证，因此可以在测试时启用断言而在部署时禁用断言。同样，程序投入运行后，最终用户在遇到问题时可以重新启用断言。
-使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 false 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/Jun......
+使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 false 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/Ju......
     </div>
   </a>
   
@@ -832,7 +845,9 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring @Transactional
     </h3>
     <div class="post-content-preview">
-      概述通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org.s......
+      概述
+通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。
+1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org......
     </div>
   </a>
   
@@ -1037,11 +1052,11 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1225,11 +1240,11 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

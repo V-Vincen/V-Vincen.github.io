@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">367</span> In Total
+              Words <span class="post-count">369</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,28 +472,37 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="删除历史版本-MySQL"><a href="#删除历史版本-MySQL" class="headerlink" title="删除历史版本 MySQL"></a>删除历史版本 MySQL</h2><p><code>sudo apt-get remove mysql-*</code></p>
+        <h2 id="删除历史版本-MySQL">删除历史版本 MySQL</h2>
+<p><code>sudo apt-get remove mysql-*</code></p>
 <p>然后清理残留的数据</p>
-<p><code>dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P</code></p>
+<p><code>dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P</code></p>
 <p>它会跳出一个对话框，你选择 yes 就好了</p>
-<h2 id="安装-MySQL-8-0"><a href="#安装-MySQL-8-0" class="headerlink" title="安装 MySQL 8.0"></a>安装 MySQL 8.0</h2><h3 id="下载deb包"><a href="#下载deb包" class="headerlink" title="下载deb包"></a><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/apt/">下载deb包</a></h3><p><img src="1.png" alt="1"></p>
-<h3 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i mysql-apt-config_0.*.****_all.deb</span><br></pre></td></tr></table></figure>
+<h2 id="安装-MySQL-8-0">安装 MySQL 8.0</h2>
+<h3 id="下载deb包"><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/apt/">下载deb包</a></h3>
+<p><img src="1.png" alt="1"></p>
+<h3 id="运行命令">运行命令</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i mysql-apt-config_0.*.****_all.deb</span><br></pre></td></tr></table></figure>
 <ol>
 <li>安装执行，然后会出现一个紫色框界面。</li>
 <li>它有四个选项：选择第一个，enter 确定。</li>
 <li>然后又会出现一个紫色框界面，选择 8.0 那个，enter 确定。</li>
 <li>会回到第一个紫色框，此时按上下键选择 ok，enter 确定。</li>
 </ol>
-<h3 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+<h3 id="执行">执行</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt-get install mysql-server</span><br></pre></td></tr></table></figure>
 <ol>
 <li>安装过程中会询问，都选择 yes 。</li>
 <li>安装最后会出现紫色框，让你输入密码，输入完成之后，会再让你输入一遍，确定。</li>
 <li>输入完成之后，会出现紫色框问你选择密码的加密方式：因为第一种加密方式Ubuntu不支持，所以我们选择第二个加密方式（密码加密方式选择 5.x）。enter确定。</li>
 </ol>
-<h3 id="启动-MySQL"><a href="#启动-MySQL" class="headerlink" title="启动 MySQL"></a>启动 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
-<h3 id="进入-MySQL"><a href="#进入-MySQL" class="headerlink" title="进入 MySQL"></a>进入 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
-<h3 id="允许远程登录"><a href="#允许远程登录" class="headerlink" title="允许远程登录"></a>允许远程登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D;&#39;root&#39;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>解决：<code>Could not get lock /var/cache/apt/archives/lock</code></p>
+<h3 id="启动-MySQL">启动 MySQL</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
+<h3 id="进入-MySQL">进入 MySQL</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+<h3 id="允许远程登录">允许远程登录</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set host &#x3D; &#39;%&#39; where user &#x3D;&#39;root&#39;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+<h2 id="遇到的问题">遇到的问题</h2>
+<p>解决：<code>Could not get lock /var/cache/apt/archives/lock</code></p>
 <p>在 <code>apt-get update</code> 的时候，遇到：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">E: Could not get lock /var/cache/</span><br><span class="line"></span><br><span class="line">apt/archives/lock - open (11 Resource temporarily unavailable)</span><br><span class="line">E: Unable to lock the download directory</span><br></pre></td></tr></table></figure>
 <p>解决办法如下：</p>

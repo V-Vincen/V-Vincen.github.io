@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -475,11 +475,15 @@
         <p><code>Compose</code> 支持 Linux、macOS、Windows 10 三大平台。</p>
 <p><code>Compose</code> 可以通过 Python 的包管理工具 <code>pip</code> 进行安装，也可以直接下载编译好的二进制文件使用，甚至能够直接在 Docker 容器中运行。</p>
 <p>前两种方式是传统方式，适合本地环境下安装使用；最后一种方式则不破坏系统环境，更适合云计算场景。</p>
-<p><code>Docker for Mac</code> 、<code>Docker for Windows</code> 自带 <code>docker-compose</code> 二进制文件，安装 Docker 之后可以直接使用。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~<span class="comment"># docker-compose --version</span></span><br><span class="line"></span><br><span class="line">docker-compose version 1.24.1, build 4667896b</span><br></pre></td></tr></table></figure></p>
-<h2 id="二进制包"><a href="#二进制包" class="headerlink" title="二进制包"></a>二进制包</h2><p>在 Linux 上的也安装十分简单，从 <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">官方 GitHub Release</a> 处直接下载编译好的二进制文件即可。</p>
-<p>例如，在 Linux 64 位系统上直接下载对应的二进制包。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure></p>
-<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>如果是二进制包方式安装的，删除二进制文件即可。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure></p>
-
+<p><code>Docker for Mac</code> 、<code>Docker for Windows</code> 自带 <code>docker-compose</code> 二进制文件，安装 Docker 之后可以直接使用。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~<span class="comment"># docker-compose --version</span></span><br><span class="line"></span><br><span class="line">docker-compose version 1.24.1, build 4667896b</span><br></pre></td></tr></table></figure>
+<h2 id="二进制包">二进制包</h2>
+<p>在 Linux 上的也安装十分简单，从 <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">官方 GitHub Release</a> 处直接下载编译好的二进制文件即可。</p>
+<p>例如，在 Linux 64 位系统上直接下载对应的二进制包。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<h2 id="卸载">卸载</h2>
+<p>如果是二进制包方式安装的，删除二进制文件即可。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->

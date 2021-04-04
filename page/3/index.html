@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -488,8 +488,9 @@
       Layout...
     </h3>
     <div class="post-content-preview">
-      什么是 layout？layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
-12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  St......
+      什么是 layout？
+layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
+12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  S......
     </div>
   </a>
   
@@ -522,7 +523,8 @@
       Encoder...
     </h3>
     <div class="post-content-preview">
-      什么是 encoderencoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 Pa......
+      什么是 encoder
+encoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 P......
     </div>
   </a>
   
@@ -555,8 +557,9 @@
       Appenders...
     </h3>
     <div class="post-content-preview">
-      什么是 Appenderlogback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
-1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;imp......
+      什么是 Appender
+logback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
+1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;im......
     </div>
   </a>
   
@@ -590,8 +593,9 @@
     </h3>
     <div class="post-content-preview">
       我们开始通过多种配置 logback，以及许多示例的配置脚本。logback 依赖的配置框架 - Joran 将会在之后的章节介绍
-配置 logback在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
-可以通过编程或者配置 XML 脚本或者 ......
+配置 logback
+在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
+可以通过编程或者配置 XML 脚本或者......
     </div>
   </a>
   
@@ -624,9 +628,11 @@
       Architecture...
     </h3>
     <div class="post-content-preview">
-      logback 的架构跟 简介 类似
-Logger, Appender 和 LayoutsLogback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
-Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logback-......
+      logback 的架构
+跟 简介 类似
+Logger, Appender 和 Layouts
+Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
+Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logbac......
     </div>
   </a>
   
@@ -659,10 +665,12 @@ Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接�
       Introduction to logback...
     </h3>
     <div class="post-content-preview">
-      声明博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
+      声明
+博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
 项目在线地址：https://logbackcn.gitbook.io/logback
 Logback 官网地址：https://logback.qos.ch/manual/index.html
-简介Logback ......
+简介
+Logbac......
     </div>
   </a>
   
@@ -695,7 +703,8 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
       JRebel is a productivity tool that allows developers to reload code changes instantly... XRebel is a performance tool for Java development which gives developers real time performance insights to help them understand and resolve potential issues faster and earlier, during the development phase...
     </h3>
     <div class="post-content-preview">
-      JRebel 简介JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任何......
+      JRebel 简介
+JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任......
     </div>
   </a>
   
@@ -729,6 +738,7 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     </h3>
     <div class="post-content-preview">
       IDEA 配置
+
 添加一个运行配置（Remote JVM Debug 项）
 打开 Remote 项配置对话框
 远程 JVM 参数配置提示
@@ -736,7 +746,10 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
 
 
 
-远程 Java 程序配置Springboot 项目配置启动命令：1java -agentlib:jdwp=transpo......
+远程 Java 程序配置
+Springboot 项目配置
+启动命令：
+1java -agentlib:jdwp=tra......
     </div>
   </a>
   
@@ -802,7 +815,8 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      OpenFeign 简介Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Service 客户端变得很简单。使用 Feign 只需要创建一个接口加上对应的注解，比如：FeignClient 注解。Feign 有可插拔的注解，包括 Feign 注解和 JAX-RS 注解。Feign 也支持编码器和解码器，Spring Cloud Open Feign 对 Fe......
+      OpenFeign 简介
+Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Service 客户端变得很简单。使用 Feign 只需要创建一个接口加上对应的注解，比如：FeignClient 注解。Feign 有可插拔的注解，包括 Feign 注解和 JAX-RS 注解。Feign 也支持编码器和解码器，Spring Cloud Open Feign 对 F......
     </div>
   </a>
   
@@ -1009,11 +1023,11 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1197,11 +1211,11 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

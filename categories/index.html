@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -818,26 +818,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-3-Docker-安装/">
-            <h2 class="post-title">
-              [Docker] 3 Docker 安装
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              Docker 安装
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
           <a href="/en/Docker-4-1-Docker-列出镜像/">
             <h2 class="post-title">
               [Docker] 4.1 Docker 列出镜像
@@ -898,14 +878,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-4-4-Dockerfile-指令详解/">
+          <a href="/en/Docker-4-Docker-镜像/">
             <h2 class="post-title">
-              [Docker] 4.4 Dockerfile 指令详解
+              [Docker] 4 Docker 镜像
               
             </h2>
             
             <h3 class="post-subtitle">
-              Dockerfile 指令详解
+              Docker 获取镜像
             </h3>
             
           </a>
@@ -918,14 +898,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-4-Docker-镜像/">
+          <a href="/en/Docker-3-Docker-安装/">
             <h2 class="post-title">
-              [Docker] 4 Docker 镜像
+              [Docker] 3 Docker 安装
               
             </h2>
             
             <h3 class="post-subtitle">
-              Docker 获取镜像
+              Docker 安装
             </h3>
             
           </a>
@@ -958,6 +938,26 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
+          <a href="/en/Docker-4-4-Dockerfile-指令详解/">
+            <h2 class="post-title">
+              [Docker] 4.4 Dockerfile 指令详解
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Dockerfile 指令详解
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
           <a href="/en/Docker-6-Docker-仓库/">
             <h2 class="post-title">
               [Docker] 6 Docker 仓库
@@ -978,14 +978,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-7-2-Docker-数据管理深入/">
+          <a href="/en/Docker-7-1-Docker-数据管理简洁/">
             <h2 class="post-title">
-              [Docker] 7.2 Docker 数据管理深入
+              [Docker] 7.1 Docker 数据管理简洁
               
             </h2>
             
             <h3 class="post-subtitle">
-              Docker 数据管理深入
+              Docker 数据管理简洁
             </h3>
             
           </a>
@@ -998,14 +998,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-7-1-Docker-数据管理简洁/">
+          <a href="/en/Docker-7-2-Docker-数据管理深入/">
             <h2 class="post-title">
-              [Docker] 7.1 Docker 数据管理简洁
+              [Docker] 7.2 Docker 数据管理深入
               
             </h2>
             
             <h3 class="post-subtitle">
-              Docker 数据管理简洁
+              Docker 数据管理深入
             </h3>
             
           </a>
@@ -1165,14 +1165,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-Compose-4-2-Docker-Compose-部署-MySQL/">
+          <a href="/en/Docker-Compose-4-1-Docker-Compose-部署-Tomcat/">
             <h2 class="post-title">
-              [Docker Compose] 4.2 Docker Compose 部署 MySQL
+              [Docker Compose] 4.1 Docker Compose 部署 Tomcat
               
             </h2>
             
             <h3 class="post-subtitle">
-              Docker Compose 部署 MySQL
+              Docker Compose 部署 Tomcat
             </h3>
             
           </a>
@@ -1185,14 +1185,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Docker-Compose-4-1-Docker-Compose-部署-Tomcat/">
+          <a href="/en/Docker-Compose-4-2-Docker-Compose-部署-MySQL/">
             <h2 class="post-title">
-              [Docker Compose] 4.1 Docker Compose 部署 Tomcat
+              [Docker Compose] 4.2 Docker Compose 部署 MySQL
               
             </h2>
             
             <h3 class="post-subtitle">
-              Docker Compose 部署 Tomcat
+              Docker Compose 部署 MySQL
             </h3>
             
           </a>
@@ -2077,14 +2077,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Mac-2-Mac-终端神器-iTerm2-告别黑白/">
+          <a href="/en/Mac-3-Mac-安装配置-JDK/">
             <h2 class="post-title">
-              [Mac] 2 Mac 终端神器 iTerm2 -- 告别黑白
+              [Mac] 3 Mac 安装配置 JDK
               
             </h2>
             
             <h3 class="post-subtitle">
-              Mac 终端神器 iTerm2
+              Mac 安装配置 JDK
             </h3>
             
           </a>
@@ -2097,14 +2097,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Mac-3-Mac-安装配置-JDK/">
+          <a href="/en/Mac-2-Mac-终端神器-iTerm2-告别黑白/">
             <h2 class="post-title">
-              [Mac] 3 Mac 安装配置 JDK
+              [Mac] 2 Mac 终端神器 iTerm2 -- 告别黑白
               
             </h2>
             
             <h3 class="post-subtitle">
-              Mac 安装配置 JDK
+              Mac 终端神器 iTerm2
             </h3>
             
           </a>
@@ -2498,14 +2498,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Ubuntu-5-Ubuntu-安装-Tomcat/">
+          <a href="/en/Ubuntu-6-1-Ubuntu-安装-MySQL-8-0/">
             <h2 class="post-title">
-              [Ubuntu] 5 Ubuntu 安装 Tomcat
+              [Ubuntu] 6.1 Ubuntu 安装 MySQL 8.0
               
             </h2>
             
             <h3 class="post-subtitle">
-              Ubuntu 安装 Tomcat
+              Ubuntu 安装 MySQL 8.0
             </h3>
             
           </a>
@@ -2518,14 +2518,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Ubuntu-6-1-Ubuntu-安装-MySQL-8-0/">
+          <a href="/en/Ubuntu-Ubuntu-Server（16.04）安装/">
             <h2 class="post-title">
-              [Ubuntu] 6.1 Ubuntu 安装 MySQL 8.0
+              [Ubuntu] Ubuntu Server（16.04）安装
               
             </h2>
             
             <h3 class="post-subtitle">
-              Ubuntu 安装 MySQL 8.0
+              Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT...
             </h3>
             
           </a>
@@ -2558,14 +2558,14 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Ubuntu-Ubuntu-Server（16.04）安装/">
+          <a href="/en/Ubuntu-5-Ubuntu-安装-Tomcat/">
             <h2 class="post-title">
-              [Ubuntu] Ubuntu Server（16.04）安装
+              [Ubuntu] 5 Ubuntu 安装 Tomcat
               
             </h2>
             
             <h3 class="post-subtitle">
-              Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT...
+              Ubuntu 安装 Tomcat
             </h3>
             
           </a>

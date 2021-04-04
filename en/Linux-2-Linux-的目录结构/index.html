@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,8 +472,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><img src="1.png" alt="1"></p>
-<div class="table-container">
+        <h2 id="概述">概述</h2>
+<p><img src="1.png" alt="1"></p>
 <table>
 <thead>
 <tr>
@@ -540,7 +540,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 
 
         <hr>

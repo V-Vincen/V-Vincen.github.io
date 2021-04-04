@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,51 +472,81 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为 linux 系统的忠实粉丝，我们都很喜欢 (Debian/Ubuntu) 系列的 <code>apt</code> 包管理系统和 (Redhat/Fedora) 系列的 <code>yum</code> 包管理系统。 包括 Windows 用户都有多种方便的软件管理工具，如：360软件管理，QQ 软件管理，迅雷软件管理等多种。 Mac OS X系统下面之前有老牌的 Macports，Fink包管理系统，包括 apple 的官方Mac App Store。所以我们也向在苹果下找到一款比较新的，方便的包管理系统，没错，她就是 <code>Homebrew</code> 。</p>
+        <h2 id="前言">前言</h2>
+<p>作为 linux 系统的忠实粉丝，我们都很喜欢 (Debian/Ubuntu) 系列的 <code>apt</code> 包管理系统和 (Redhat/Fedora) 系列的 <code>yum</code> 包管理系统。 包括 Windows 用户都有多种方便的软件管理工具，如：360软件管理，QQ 软件管理，迅雷软件管理等多种。 Mac OS X系统下面之前有老牌的 Macports，Fink包管理系统，包括 apple 的官方Mac App Store。所以我们也向在苹果下找到一款比较新的，方便的包管理系统，没错，她就是 <code>Homebrew</code> 。</p>
 <p>什么是 <code>Homebrew</code> 呢？</p>
 <p>Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X。官方的解释非常明了，<code>Homebrew</code> 是一个包管理器，用于在 Mac 上安装一些 OS X 没有的 UNIX 工具（比如著名的 <code>wget</code>）。<code>Homebrew</code> 将这些工具统统安装到了 <code>/usr/local/Cellar</code> 目录中，并在 <code>/usr/local/bin</code> 中创建符号链接。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入官网获取下载命令，官网地址：<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn">https://brew.sh/index_zh-cn</a></p>
+<h2 id="安装">安装</h2>
+<p>进入官网获取下载命令，官网地址：<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn">https://brew.sh/index_zh-cn</a></p>
 <p><img src="1.png" alt="1"></p>
-<p>图中命令即为：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>图中命令即为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
 <p><code>Homebrew</code> 安装成功后，会自动创建目录 <code>/usr/local/Cellar</code> 来存放 <code>Homebrew</code> 安装的程序。 这时你在命令行状态下面就可以使用 <code>brew</code> 命令了。</p>
-<h2 id="设置国内镜像"><a href="#设置国内镜像" class="headerlink" title="设置国内镜像"></a>设置国内镜像</h2><p><strong>替换 <code>brew.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 阿里巴巴的 brew.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 中国科学技术大学的 brew.git 仓库地址</span></span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin </span><br></pre></td></tr></table></figure></p>
-<p><strong>替换 <code>homebrew-core.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 替换成阿里巴巴的 homebrew-core.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 替换中国科学技术大学的 homebrew-core.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</span><br></pre></td></tr></table></figure></p>
-<p><strong>替换 <code>homebrew-cask.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 中国科学技术大学的 homebrew-cask 仓库地址：</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-cask&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</span><br></pre></td></tr></table></figure></p>
-<p><strong>替换 <code>homebrew-bottles</code> 访问地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 替换阿里巴巴的 homebrew-bottles 访问 URL:</span></span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 替换中国科学技术大学的 homebrew-bottles 访问 URL:</span></span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<h2 id="还原官方镜像"><a href="#还原官方镜像" class="headerlink" title="还原官方镜像"></a>还原官方镜像</h2><p><strong>还原为官方提供的 <code>brew.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/brew.git</span><br></pre></td></tr></table></figure></p>
-<p><strong>还原为官方提供的 <code>homebrew-core.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/homebrew-core.git</span><br></pre></td></tr></table></figure></p>
-<p><strong>还原为官方提供的 <code>homebrew-cask.git</code> 仓库地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-cask&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/homebrew-cask.git</span><br></pre></td></tr></table></figure></p>
-<p><strong>还原为官方提供的 <code>homebrew-bottles</code> 访问地址</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<p>然后，删除 <code>HOMEBREW_BOTTLE_DOMAIN</code> 这一行配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><ul>
-<li><p>安装软件：<code>brew install 软件名</code>，例：</p>
+<h2 id="设置国内镜像">设置国内镜像</h2>
+<p><strong>替换 <code>brew.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 阿里巴巴的 brew.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 中国科学技术大学的 brew.git 仓库地址</span></span><br><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin </span><br></pre></td></tr></table></figure>
+<p><strong>替换 <code>homebrew-core.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 替换成阿里巴巴的 homebrew-core.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 替换中国科学技术大学的 homebrew-core.git 仓库地址:</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</span><br></pre></td></tr></table></figure>
+<p><strong>替换 <code>homebrew-cask.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 中国科学技术大学的 homebrew-cask 仓库地址：</span></span><br><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-cask&quot;</span><br><span class="line">git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</span><br></pre></td></tr></table></figure>
+<p><strong>替换 <code>homebrew-bottles</code> 访问地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 替换阿里巴巴的 homebrew-bottles 访问 URL:</span></span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 替换中国科学技术大学的 homebrew-bottles 访问 URL:</span></span><br><span class="line">echo &#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27; &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h2 id="还原官方镜像">还原官方镜像</h2>
+<p><strong>还原为官方提供的 <code>brew.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/brew.git</span><br></pre></td></tr></table></figure>
+<p><strong>还原为官方提供的 <code>homebrew-core.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-core&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/homebrew-core.git</span><br></pre></td></tr></table></figure>
+<p><strong>还原为官方提供的 <code>homebrew-cask.git</code> 仓库地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$(brew --repo)/Library/Taps/homebrew/homebrew-cask&quot;</span><br><span class="line">git remote set-url origin https://github.com/Homebrew/homebrew-cask.git</span><br></pre></td></tr></table></figure>
+<p><strong>还原为官方提供的 <code>homebrew-bottles</code> 访问地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>然后，删除 <code>HOMEBREW_BOTTLE_DOMAIN</code> 这一行配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h2 id="简单使用">简单使用</h2>
+<ul>
+<li>安装软件：<code>brew install 软件名</code>，例：</li>
+</ul>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>wget</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>搜索软件：<code>brew search 软件名</code>，例：</p>
+<ul>
+<li>搜索软件：<code>brew search 软件名</code>，例：</li>
+</ul>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">brew search wget</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>卸载软件：<code>brew uninstall 软件名</code>，例：</p>
+<ul>
+<li>卸载软件：<code>brew uninstall 软件名</code>，例：</li>
+</ul>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">brew uninstall wget</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>更新所有软件：<code>brew update</code></p>
 </li>
-<li><p>更新所有软件：<code>brew update</code></p>
-</li>
-<li><p>更新具体软件：<code>brew upgrade 软件名</code> ，例：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">brew upgrade git</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示已安装软件：<code>brew list</code></p>
-</li>
-<li><p>查看软件信息：<code>brew info／home 软件名</code> ，例：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>info git ／ <span class="keyword">brew </span>home git</span><br></pre></td></tr></table></figure>
-<p>PS：<code>brew home</code>：指令是用浏览器打开官方网页查看软件信息</p>
-</li>
-<li><p>查看哪些已安装的程序需要更新： <code>brew outdated</code></p>
-</li>
-<li><p>显示包依赖：<code>brew deps *</code></p>
-</li>
-<li><p>显示帮助：<code>brew help</code></p>
+<li>
+<p>更新具体软件：<code>brew upgrade 软件名</code> ，例：</p>
 </li>
 </ul>
-<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>官方脚本</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">brew upgrade git</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>显示已安装软件：<code>brew list</code></p>
+</li>
+<li>
+<p>查看软件信息：<code>brew info／home 软件名</code> ，例：</p>
+</li>
+</ul>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>info git ／ <span class="keyword">brew </span>home git</span><br></pre></td></tr></table></figure>
+<p>PS：<code>brew home</code>：指令是用浏览器打开官方网页查看软件信息</p>
+<ul>
+<li>
+<p>查看哪些已安装的程序需要更新： <code>brew outdated</code></p>
+</li>
+<li>
+<p>显示包依赖：<code>brew deps *</code></p>
+</li>
+<li>
+<p>显示帮助：<code>brew help</code></p>
+</li>
+</ul>
+<h2 id="卸载">卸载</h2>
+<p>官方脚本</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;  </span><br></pre></td></tr></table></figure>
 
 

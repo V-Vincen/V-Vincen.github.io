@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,44 +472,59 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Zsh-是什么"><a href="#Zsh-是什么" class="headerlink" title="Zsh 是什么"></a><code>Zsh</code> 是什么</h2><ul>
+        <h2 id="Zsh-是什么"><code>Zsh</code> 是什么</h2>
+<ul>
 <li><code>Zsh</code> 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可以作为一个脚本语言的交互解析器。</li>
 <li>打开终端，在终端上输入 <code>zsh --version</code> 这个命令来查看我们的电脑上是否安装了 <code>Zsh</code>，终端查询版本为： <code>zsh 5.3 (x86_64-apple-darwin18.0)</code></li>
 <li>查看系统当前 <code>shell</code>：</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ cat /etc/shells</span><br><span class="line"><span class="meta">#</span><span class="bash"> List of acceptable shells <span class="keyword">for</span> chpass(1).</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Ftpd will not allow users to connect who are not using</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> one of these shells.</span></span><br><span class="line"></span><br><span class="line">/bin/bash</span><br><span class="line">/bin/csh</span><br><span class="line">/bin/ksh</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/zsh</span><br><span class="line">➜  ~</span><br></pre></td></tr></table></figure>
-<h2 id="iTerm2-简介"><a href="#iTerm2-简介" class="headerlink" title="iTerm2 简介"></a><code>iTerm2</code> 简介</h2><p>Mac OS 自带的终端，系统默认使用 <code>dash</code> 作为终端，用起来虽然有些不太方便，界面也不够友好,<code>iTerm2</code> 是一款相对比较好用的终端工具。安装完成后，在 <code>/bin</code> 目录下会多出一个 <code>zsh</code> 的文件。我们可以使用命令修改默认使用 <code>zsh</code>：</p>
+<h2 id="iTerm2-简介"><code>iTerm2</code> 简介</h2>
+<p>Mac OS 自带的终端，系统默认使用 <code>dash</code> 作为终端，用起来虽然有些不太方便，界面也不够友好,<code>iTerm2</code> 是一款相对比较好用的终端工具。安装完成后，在 <code>/bin</code> 目录下会多出一个 <code>zsh</code> 的文件。我们可以使用命令修改默认使用 <code>zsh</code>：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
 <p>同时 <code>iTerm2</code> 还有一些常用操作包括主题选择、声明高亮、自动填充建议、隐藏用户名和主机名、分屏效果等。</p>
 <p>先来看效果图：</p>
 <p><img src="1.png" alt="1"></p>
-<h2 id="下载及安装"><a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h2><p><code>iTerm2</code> 官网下载地址：<a target="_blank" rel="noopener" href="https://www.iterm2.com/downloads.html">https://www.iterm2.com/downloads.html</a></p>
+<h2 id="下载及安装">下载及安装</h2>
+<p><code>iTerm2</code> 官网下载地址：<a target="_blank" rel="noopener" href="https://www.iterm2.com/downloads.html">https://www.iterm2.com/downloads.html</a></p>
 <p>下载的是压缩文件，解压后直接双击执行程序文件，或者直接将它拖到 Applications 目录下。</p>
-<p>也可以直接使用Homebrew进行安装：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew cask install iterm2</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="配置-iTerm2-主题"><a href="#配置-iTerm2-主题" class="headerlink" title="配置 iTerm2 主题"></a>配置 <code>iTerm2</code> 主题</h3><p><code>iTerm2</code> 最常用的主题是 <code>Solarized Dark</code> theme，下载地址：<a target="_blank" rel="noopener" href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
+<p>也可以直接使用Homebrew进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> brew cask install iterm2</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置-iTerm2-主题">配置 <code>iTerm2</code> 主题</h3>
+<p><code>iTerm2</code> 最常用的主题是 <code>Solarized Dark</code> theme，下载地址：<a target="_blank" rel="noopener" href="http://ethanschoonover.com/solarized">http://ethanschoonover.com/solarized</a></p>
 <p>下载的是压缩文件，解压，然后打开 <code>iTerm2</code>，按 <code>Command + ，键</code> ，打开 <code>Preferences</code> 配置界面，然后 <code>Profiles -&gt; Colors -&gt; Color Presets</code>，在下拉列表中选择 <code>Import</code> ，选择刚才解压的 <code>solarized-&gt;iterm2-colors-solarized-&gt;Solarized Dark.itermcolors</code> 文件，导入成功后,在 <code>Color Presets</code> 下选择 <code>Solarized Dark</code> 主题，就可以了。（新版本的 <code>iTerm2</code> 默认已经安装好了 <code>Solarized Dark</code> 主题）</p>
 <p><img src="2.png" alt="2"></p>
 <p><img src="3.png" alt="3"></p>
-<h2 id="设置-iTerm2-背景图片"><a href="#设置-iTerm2-背景图片" class="headerlink" title="设置 iTerm2 背景图片"></a>设置 <code>iTerm2</code> 背景图片</h2><p>打开 <code>iTerm2</code>，按 <code>Command + ，键</code> ，打开 <code>Preferences</code> 配置界面 <code>Profiles -&gt; Window-&gt;Background mage</code>，选择一张自己喜欢的背景图。</p>
+<h2 id="设置-iTerm2-背景图片">设置 <code>iTerm2</code> 背景图片</h2>
+<p>打开 <code>iTerm2</code>，按 <code>Command + ，键</code> ，打开 <code>Preferences</code> 配置界面 <code>Profiles -&gt; Window-&gt;Background mage</code>，选择一张自己喜欢的背景图。</p>
 <p><img src="4.png" alt="4"></p>
-<h2 id="配置-Oh-My-Zsh"><a href="#配置-Oh-My-Zsh" class="headerlink" title="配置 Oh My Zsh"></a>配置 <code>Oh My Zsh</code></h2><p>那我们先来了解下 <code>Oh My Zsh</code> 是什么：</p>
+<h2 id="配置-Oh-My-Zsh">配置 <code>Oh My Zsh</code></h2>
+<p>那我们先来了解下 <code>Oh My Zsh</code> 是什么：</p>
 <p><code>Oh My Zsh</code> 是一款社区驱动的命令行工具，正如它的主页上说的，<code>Oh My Zsh</code> 是一种生活方式。它基于 <code>zsh</code> 命令行，提供了主题配置，插件机制，已经内置的便捷操作。给我们一种全新的方式使用命令行。它是基于 <code>zsh</code> 命令行的一个扩展工具集，提供了丰富的扩展功能。安装 <code>Oh My Zsh</code> 前提条件：必须已安装 <code>zsh</code>，<code>zsh</code> 的功能极其强大，只是配置过于复杂。所以我们通过 <code>Oh my zsh</code> 可以很快配置 <code>zsh</code>。</p>
 <p>官网地址：<a target="_blank" rel="noopener" href="https://ohmyz.sh/">https://ohmyz.sh/</a></p>
-<p>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">https://github.com/ohmyzsh/ohmyzsh</a> </p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装方法有两种，可以使用 <code>curl</code> 或 <code>wget</code>，看自己环境或喜好：</p>
+<p>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">https://github.com/ohmyzsh/ohmyzsh</a></p>
+<h3 id="安装">安装</h3>
+<p>安装方法有两种，可以使用 <code>curl</code> 或 <code>wget</code>，看自己环境或喜好：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> curl 安装方式</span></span><br><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wget 安装方式</span></span><br><span class="line">sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;</span><br></pre></td></tr></table></figure>
-<p>安装好之后，需要把 <code>Zsh</code> 设置为当前用户的默认 <code>Shell</code>（这样新建标签的时候才会使用 <code>Zsh</code>）：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chsh -s /bin/zsh</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p><code>Oh My Zsh</code> 默认自带了一些默认主题，存放在 <code>~/.oh-my-zsh/themes</code> 目录中。我们可以查看这些主题，终端输入：</p>
+<p>安装好之后，需要把 <code>Zsh</code> 设置为当前用户的默认 <code>Shell</code>（这样新建标签的时候才会使用 <code>Zsh</code>）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chsh -s /bin/zsh</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="修改主题">修改主题</h3>
+<p><code>Oh My Zsh</code> 默认自带了一些默认主题，存放在 <code>~/.oh-my-zsh/themes</code> 目录中。我们可以查看这些主题，终端输入：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.oh-my-zsh/themes &amp;&amp; ls</span><br></pre></td></tr></table></figure>
-<p>将主题修改为 <code>ZSH_THEME=&quot;robbyrussell&quot;</code>。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vim ~<span class="regexp">/.zshrc</span></span><br></pre></td></tr></table></figure><br>输入 <code>i</code> 进入编辑模式,将 <code>ZSH_THEME=&quot;&quot;</code> 编辑为 <code>ZSH_THEME=&quot;robbyrussell&quot;</code>，按下 <code>esc</code> 键，退出并保存 <code>:wq</code>。</p>
+<p>将主题修改为 <code>ZSH_THEME=&quot;robbyrussell&quot;</code>。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vim ~<span class="regexp">/.zshrc</span></span><br></pre></td></tr></table></figure>
+<p>输入 <code>i</code> 进入编辑模式,将 <code>ZSH_THEME=&quot;&quot;</code> 编辑为 <code>ZSH_THEME=&quot;robbyrussell&quot;</code>，按下 <code>esc</code> 键，退出并保存 <code>:wq</code>。</p>
 <p><img src="5.png" alt="5"></p>
 <p><code>Oh My Zsh</code> 也对主题的进一步扩展,下载地址：<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</a></p>
-<h3 id="自动建议填充"><a href="#自动建议填充" class="headerlink" title="自动建议填充"></a>自动建议填充</h3><p>这个功能是非常实用的，可以方便我们快速的敲命令。</p>
-<p>配置步骤，先克隆 <code>zsh-autosuggestions</code> 项目，到指定目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-autosuggestions ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins&#x2F;zsh-autosuggestions</span><br></pre></td></tr></table></figure></p>
+<h3 id="自动建议填充">自动建议填充</h3>
+<p>这个功能是非常实用的，可以方便我们快速的敲命令。</p>
+<p>配置步骤，先克隆 <code>zsh-autosuggestions</code> 项目，到指定目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;zsh-users&#x2F;zsh-autosuggestions ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins&#x2F;zsh-autosuggestions</span><br></pre></td></tr></table></figure>
 <p>然后编辑 <code>vim ~/.zshrc</code> 文件，找到 <code>plugins</code> 配置，增加 <code>zsh-autosuggestions</code> 插件。</p>
 <p><img src="6.png" alt="6"></p>
-<h2 id="iTerm2-快捷命令"><a href="#iTerm2-快捷命令" class="headerlink" title="iTerm2 快捷命令"></a><code>iTerm2</code> 快捷命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">command + t 新建标签</span><br><span class="line">command + w 关闭标签</span><br><span class="line">command + 数字 command + 左右方向键    切换标签</span><br><span class="line">command + enter 切换全屏</span><br><span class="line">command + f 查找</span><br><span class="line">command + d 水平分屏</span><br><span class="line">command + shift + d 垂直分屏</span><br><span class="line">command + option + 方向键 command + [ 或 command + ]    切换屏幕</span><br><span class="line">command + ; 查看历史命令</span><br><span class="line">command + shift + h 查看剪贴板历史</span><br><span class="line">ctrl + u    清除当前行</span><br><span class="line">ctrl + l    清屏</span><br><span class="line">ctrl + a    到行首</span><br><span class="line">ctrl + e    到行尾</span><br><span class="line">ctrl + f/b  前进后退</span><br><span class="line">ctrl + p    上一条命令</span><br><span class="line">ctrl + r    搜索命令历史</span><br></pre></td></tr></table></figure>
+<h2 id="iTerm2-快捷命令"><code>iTerm2</code> 快捷命令</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">command + t 新建标签</span><br><span class="line">command + w 关闭标签</span><br><span class="line">command + 数字 command + 左右方向键    切换标签</span><br><span class="line">command + enter 切换全屏</span><br><span class="line">command + f 查找</span><br><span class="line">command + d 水平分屏</span><br><span class="line">command + shift + d 垂直分屏</span><br><span class="line">command + option + 方向键 command + [ 或 command + ]    切换屏幕</span><br><span class="line">command + ; 查看历史命令</span><br><span class="line">command + shift + h 查看剪贴板历史</span><br><span class="line">ctrl + u    清除当前行</span><br><span class="line">ctrl + l    清屏</span><br><span class="line">ctrl + a    到行首</span><br><span class="line">ctrl + e    到行尾</span><br><span class="line">ctrl + f/b  前进后退</span><br><span class="line">ctrl + p    上一条命令</span><br><span class="line">ctrl + r    搜索命令历史</span><br></pre></td></tr></table></figure>
 
 
         <hr>

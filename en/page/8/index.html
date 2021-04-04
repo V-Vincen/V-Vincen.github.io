@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -492,7 +492,8 @@
       Practice something...
     </h3>
     <div class="post-content-preview">
-      先来写个基本类1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age; ......
+      先来写个基本类
+1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age;......
     </div>
   </a>
   
@@ -529,8 +530,9 @@
       反射相关练习
     </h3>
     <div class="post-content-preview">
-      先来写几个基本类：12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
-12345678910111213/** * @author vincent */@Datapublic class ......
+      先来写几个基本类：
+12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
+12345678910111213/** * @author vincent */@Datapublic class......
     </div>
   </a>
   
@@ -563,7 +565,8 @@
       获取运行时类的结构
     </h3>
     <div class="post-content-preview">
-      通过反射获取运行时类的完整结构Field、Method、Constructor、Superclass、Interface、Annotation
+      通过反射获取运行时类的完整结构
+Field、Method、Constructor、Superclass、Interface、Annotation
 
 实现的全部接口
 所继承的父类
@@ -571,8 +574,10 @@
 全部的方法
 全部的属性
 
-实现的全部接口public Class&lt;?&gt;[] getInterfaces()：确定此对象所表示的类或接口实现的接口。
-所继承的父类public Class&lt;......
+实现的全部接口
+public Class&lt;?&gt;[] getInterfaces()：确定此对象所表示的类或接口实现的接口。
+所继承的父类
+public Class&......
     </div>
   </a>
   
@@ -605,8 +610,9 @@
       Reflect
     </h3>
     <div class="post-content-preview">
-      反射机制概述Reflection（反射）是被视为动态语言的关键，反射机制允许程序在执行期借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。
-加载完类之后，在堆内存的方法区中就产生了一个 Class 类型的对象（ 一个类只有一个 Class 对象），这个对象就包含了完整的类的结构信息 。我们可以通过这个对象看到类的结构。这个对象就像一面镜子 ，透......
+      反射机制概述
+Reflection（反射）是被视为动态语言的关键，反射机制允许程序在执行期借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。
+加载完类之后，在堆内存的方法区中就产生了一个 Class 类型的对象（ 一个类只有一个 Class 对象），这个对象就包含了完整的类的结构信息 。我们可以通过这个对象看到类的结构。这个对象就像一面镜子 ，......
     </div>
   </a>
   
@@ -639,9 +645,12 @@
       FastJson 的用法
     </h3>
     <div class="post-content-preview">
-      前言FastJson的介绍JSON 协议使用方便，越来越流行，JSON 的处理器有很多,这里我介绍一下 FastJson，FastJson 是阿里的开源框架，被不少企业使用,是一个极其优秀的Json 框架，Github 地址: https://github.com/alibaba/fastjson
+      前言
+FastJson的介绍
+JSON 协议使用方便，越来越流行，JSON 的处理器有很多,这里我介绍一下 FastJson，FastJson 是阿里的开源框架，被不少企业使用,是一个极其优秀的Json 框架，Github 地址: https://github.com/alibaba/fastjson
 FastJson 的特点
-FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa......
+
+FastJson 速度快，无论序列化和反序列化，都是当之无愧的......
     </div>
   </a>
   
@@ -674,10 +683,16 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
       Mac 进程、端口、上传下载等命令
     </h3>
     <div class="post-content-preview">
-      进程命令Mac 查看进程号12ps -ef | grep 软件或者进程号ps aux | grep 软件或者进程号
-查看进程监听的端口12sudo lsof -nP -p 进程号 | grep LISTENsudo lsof -nP | grep LISTEN | grep 进程号
-或者1netstat -ltnp | grep 进程号
-端口命令Mac 查看端口号1sudo lsof -i:......
+      进程命令
+Mac 查看进程号
+12ps -ef | grep 软件或者进程号ps aux | grep 软件或者进程号
+查看进程监听的端口
+12sudo lsof -nP -p 进程号 | grep LISTENsudo lsof -nP | grep LISTEN | grep 进程号
+或者
+1netstat -ltnp | grep 进程号
+端口命令
+Mac 查看端口号
+1sudo ls......
     </div>
   </a>
   
@@ -710,11 +725,18 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
       Mac 安装配置 Nginx
     </h3>
     <div class="post-content-preview">
-      用 Homebrew 来安装 Nginx安装1brew install nginx
-查看 nginx 版本1nginx -v
-启动 nginx1nginx
-也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：1brew services start nginx
-查看 nginx 是否启动成功在浏览器中访问：在浏览器中访问：http://lo......
+      用 Homebrew 来安装 Nginx
+安装
+1brew install nginx
+查看 nginx 版本
+1nginx -v
+启动 nginx
+1nginx
+也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：
+1brew services start nginx
+
+查看 nginx 是否启动成功
+在浏览器中访问：在浏览器中访问：ht......
     </div>
   </a>
   
@@ -747,8 +769,12 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa..
       CXF、AXIS 客户端开发
     </h3>
     <div class="post-content-preview">
-      JAX-WS 规范AX-WS（Java API For XML Web Service），JAX-WS 规范是一组 XML web services 的 JAVA API，它运行时实现会将这些 API 的调用转换成为对应的 SOAP 消息，是 Sun 公司提出的一套关于 WebService 的开发标准。
-CXF 开发客户端创建 Maven 工程pom.xml1234567891011121......
+      JAX-WS 规范
+AX-WS（Java API For XML Web Service），JAX-WS 规范是一组 XML web services 的 JAVA API，它运行时实现会将这些 API 的调用转换成为对应的 SOAP 消息，是 Sun 公司提出的一套关于 WebService 的开发标准。
+CXF 开发客户端
+创建 Maven 工程
+pom.xml
+123456789101......
     </div>
   </a>
   
@@ -783,9 +809,12 @@ CXF 开发客户端创建 Maven 工程pom.xml1234567891011121......
       SOAP 消息和 WSDL 文件解析
     </h3>
     <div class="post-content-preview">
-      SOAP 消息的调试抓取使用 Postman 测试 WebService 接口
+      SOAP 消息的调试抓取
+使用 Postman 测试 WebService 接口
 
-request12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.exam......
+
+request
+12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.e......
     </div>
   </a>
   
@@ -821,8 +850,9 @@ request12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoa
     </h3>
     <div class="post-content-preview">
       CXF 简介
+
 Apache CXF = Celtix + XFire
-Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache CXF 了，以下简称为 CXF。CXF 继承了 Celtix 和 XFire 两大开源项目的精华，提供了对 JAX-WS 全面的支持，并且提供了多种 Binding 、DataBinding、Transport 以及各种 ......
+Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache CXF 了，以下简称为 CXF。CXF 继承了 Celtix 和 XFire 两大开源项目的精华，提供了对 JAX-WS 全面的支持，并且提供了多种 Binding 、DataBinding、Transport 以及各种......
     </div>
   </a>
   
@@ -1029,11 +1059,11 @@ Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache C
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1217,11 +1247,11 @@ Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache C
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

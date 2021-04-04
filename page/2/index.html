@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -521,7 +521,8 @@
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      Summary根据 GitHub OpenFeign 官方文档，博主在这里对 Feign.builder() 模式进行了简要的封装。 同时对 Feign.builder() 配置协约 .contract(Contract contract) 做了进一步的说明和举例。contract 我暂时把它翻译为协约，这个属性在构造 Feign 对象实例时，用于定义 Feign 对象实例与之配合使用的注解......
+      Summary
+根据 GitHub OpenFeign 官方文档，博主在这里对 Feign.builder() 模式进行了简要的封装。 同时对 Feign.builder() 配置协约 .contract(Contract contract) 做了进一步的说明和举例。contract 我暂时把它翻译为协约，这个属性在构造 Feign 对象实例时，用于定义 Feign 对象实例与之配合使用的注......
     </div>
   </a>
   
@@ -556,14 +557,17 @@
       Profiles are a core feature of the framework — allowing us to map our beans to different profiles — for example, dev, test, and prod....
     </h3>
     <div class="post-content-preview">
-      简介Profile 的意思是配置，对于应用程序来说，不同的环境需要不同的配置。比如：
+      简介
+Profile 的意思是配置，对于应用程序来说，不同的环境需要不同的配置。
+比如：
 
 开发环境，应用需要连接一个可供调试的数据库单机进程
 生产环境，应用需要使用正式发布的数据库，通常是高可用的集群
 测试环境，应用只需要使用内存式的模拟数据库
 
 Spring 框架提供了多 profile 的管理功能，我们可以使用 profile 功能来区分不同环境的配置。
-区分 Bean 对象首先，我们先看......
+区分 Bean 对象
+首先，我......
     </div>
   </a>
   
@@ -596,10 +600,11 @@ Spring 框架提供了多 profile 的管理功能，我们可以使用 profile �
       Case and Summary...
     </h3>
     <div class="post-content-preview">
-      为什么使用 Logback记得前几年工作的时候，公司使用的日志框架还是 log4j，大约从16年中到现在，日志框架基本都换成了logback，总结一下，logback 大约有以下的一些优点：
+      为什么使用 Logback
+记得前几年工作的时候，公司使用的日志框架还是 log4j，大约从16年中到现在，日志框架基本都换成了logback，总结一下，logback 大约有以下的一些优点：
 
 内核重写、测试充分、初始化内存加载更小，这一切让 logback 性能和 log4j 相比有诸多倍的提升。
-logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点，只是这样，再理解 ......
+logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点，只是这样，再理解......
     </div>
   </a>
   
@@ -632,15 +637,17 @@ logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点
       ParallelStream...
     </h3>
     <div class="post-content-preview">
-      前言在 Java7 之前，如果想要并行处理一个集合，我们需要以下几步
+      前言
+在 Java7 之前，如果想要并行处理一个集合，我们需要以下几步
 
 手动分成几部分
 为每部分创建线程
 在适当的时候合并
 
 并且还需要关注多个线程之间共享变量的修改问题。而 Java8 为我们提供了并行流，可以一键开启并行模式。是不是很酷呢？让我们来看看吧。
-认识和开启并行流什么是并行流： 并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
-例如有这么一个需......
+认识和开启并行流
+什么是并行流： 并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
+例如有这么一......
     </div>
   </a>
   
@@ -673,8 +680,11 @@ logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点
       Lambda 总结
     </h3>
     <div class="post-content-preview">
-      引言Java8 最大的特性就是引入 Lambda 表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。
-Java 重要的函数式接口什么是函数式接口函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用 @FunctionalInterface 注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。......
+      引言
+Java8 最大的特性就是引入 Lambda 表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。
+Java 重要的函数式接口
+什么是函数式接口
+函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用 @FunctionalInterface 注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会......
     </div>
   </a>
   
@@ -707,13 +717,16 @@ Java 重要的函数式接口什么是函数式接口函数接口是只有一个
       The difference between http and rpc...
     </h3>
     <div class="post-content-preview">
-      区别传输协议
+      区别
+传输协议
+
 RPC：可以基于 TCP 协议，也可以基于 HTTP 协议。
 HTTP：基于 HTTP 协议。
 
 传输效率
-RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。    
-HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀......
+
+RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。
+HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀个......
     </div>
   </a>
   
@@ -747,8 +760,9 @@ HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内�
     </h3>
     <div class="post-content-preview">
       Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top 10。
-vue-Element-AdminGithub Star：63.7K
-Github Repo：https://github.com/PanJ......
+vue-Element-Admin
+Github Star：63.7K
+Github Repo：https://github.com/Pan......
     </div>
   </a>
   
@@ -817,7 +831,8 @@ Github Repo：https://github.com/PanJ......
     <div class="post-content-preview">
       在之前的章节中介绍的 方法打印以及基本选择规则 是 logback-classic 的核心。在这章中，将介绍其它的过滤方法。
 logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组成一个任意复杂的过滤策略。它们在很大程度上受到 Linux iptables 的启发。
-在 logback-classic 中在 logback-classic 中，有两种类型的过滤器，regular 过......
+在 logback-classic 中
+在 logback-classic 中，有两种类型的过滤器，regular ......
     </div>
   </a>
   
@@ -1022,11 +1037,11 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1210,11 +1225,11 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -488,7 +488,8 @@
       Provides highly reusable static utility methods, chiefly concerned with adding value to the java.lang classes...
     </h3>
     <div class="post-content-preview">
-      概述org.apache.commons.lang3.StringUtils 中方法的操作对象是 java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的（即如果输入参数 String 为 null 则不会抛出 NullPointerException，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等，......
+      概述
+org.apache.commons.lang3.StringUtils 中方法的操作对象是 java.lang.String 类型的对象，是 JDK 提供的 String 类型操作方法的补充，并且是 null 安全的（即如果输入参数 String 为 null 则不会抛出 NullPointerException，而是做了相应处理，例如，如果输入为 null 则返回也是 null 等......
     </div>
   </a>
   
@@ -521,9 +522,10 @@
       Provides utility methods and decorators for Collection instances...
     </h3>
     <div class="post-content-preview">
-      概述commons-collections4 是一款处理集合的工具，封装了很多操作集合的方法，可以大大简化我们处理集合的代码。从 commons-collections4 的官方使用文档可以看出，它主要分为工具类、集合类、行迭代器、属性类、比较器、队列等。
+      概述
+commons-collections4 是一款处理集合的工具，封装了很多操作集合的方法，可以大大简化我们处理集合的代码。从 commons-collections4 的官方使用文档可以看出，它主要分为工具类、集合类、行迭代器、属性类、比较器、队列等。
 官网地址：http://commons.apache.org/proper/commons-collections/
-下载：http:/......
+下载：http:......
     </div>
   </a>
   
@@ -556,8 +558,9 @@
       This class consists exclusively of static methods that operate on files, directories, or other types of files...
     </h3>
     <div class="post-content-preview">
-      概述JDK1.7引入了新的IO操作类。java.nio 包下定义了一些操作文件和文件系统的接口和类。java.nio.file.Files 类具有对文件、目录和其他类型的文件进行操作的静态实用程序方法。在这篇文章中，我们将学习 java.nio 文件 API。Files 类在 java.nio.file 包下。这篇文章将介绍有关文件操作的 NIO Files 类。
-Java NIO Path......
+      概述
+JDK1.7引入了新的IO操作类。java.nio 包下定义了一些操作文件和文件系统的接口和类。java.nio.file.Files 类具有对文件、目录和其他类型的文件进行操作的静态实用程序方法。在这篇文章中，我们将学习 java.nio 文件 API。Files 类在 java.nio.file 包下。这篇文章将介绍有关文件操作的 NIO Files 类。
+Java NIO Pat......
     </div>
   </a>
   
@@ -590,9 +593,10 @@ Java NIO Path......
       This package defines utility classes for working with streams, readers, writers and files...
     </h3>
     <div class="post-content-preview">
-      概述Apache commons 包括 Apache commons-io。它是一个实用程序库，用于帮助实现各种 IO 功能。有很多实用程序类，IOUtils 就是其中之一。在这篇文章中，我们将了解 Apache commons-io 的 IOUtils 类和其中的静态实用程序方法。
+      概述
+Apache commons 包括 Apache commons-io。它是一个实用程序库，用于帮助实现各种 IO 功能。有很多实用程序类，IOUtils 就是其中之一。在这篇文章中，我们将了解 Apache commons-io 的 IOUtils 类和其中的静态实用程序方法。
 官网地址：http://commons.apache.org/proper/commons-io/
-下载：h......
+下载：......
     </div>
   </a>
   
@@ -625,10 +629,12 @@ Java NIO Path......
       This class contains various methods for manipulating arrays...
     </h3>
     <div class="post-content-preview">
-      Arrays 类的定义Arrays 类位于 java.util 包中，主要包含了操纵数组的各种方法。使用时导包：import java.util.Arrays
+      Arrays 类的定义
+Arrays 类位于 java.util 包中，主要包含了操纵数组的各种方法。使用时导包：import java.util.Arrays
 
-数组转字符串12int[] array = new int[]&#123;1, 2, 3&#125;;out.println(Arrays.toString(array)); //[1, 2, 3]
-如果是一维数组，toString......
+数组转字符串
+12int[] array = new int[]&#123;1, 2, 3&#125;;out.println(Arrays.toString(array)); //[1, 2, 3]
+如果是一维数组，toStri......
     </div>
   </a>
   
@@ -661,7 +667,8 @@ Java NIO Path......
       This package defines utility classes for working with streams, readers, writers and files...
     </h3>
     <div class="post-content-preview">
-      概述这是一个 Java 操作文件的常用库，是 Apache 对 Java 的 IO 包的封装，这里面有两个非常核心的类 FileUtils 和 FilenameUtils，其中 FileUtils 是文件封装；FilenameUtils 是对文件名操作的封装。开发中对文件的操作，几乎都可以在这个框架里面找到，非常的好用。上一章节已经总结过了 FileUtils，今天我就来总结下 Filena......
+      概述
+这是一个 Java 操作文件的常用库，是 Apache 对 Java 的 IO 包的封装，这里面有两个非常核心的类 FileUtils 和 FilenameUtils，其中 FileUtils 是文件封装；FilenameUtils 是对文件名操作的封装。开发中对文件的操作，几乎都可以在这个框架里面找到，非常的好用。上一章节已经总结过了 FileUtils，今天我就来总结下 Filen......
     </div>
   </a>
   
@@ -695,7 +702,8 @@ Java NIO Path......
     </h3>
     <div class="post-content-preview">
       近期在做公司需求的时候，碰到要将一个 String 转成 Char 数组再转换成 List 集合来操作的问题。在 Java 自带的 JDK 中并没有提供直接可以将 Char 数组转换成 List 集合的方法。刚开始我用了 Arrays.asList(char[]) 来转换，但是这个方法转换后的结果是有问题的，并不是我想要的结果。那么我们接下来，来看下具体应该怎么做。直接看代码。
-例一1234......
+例一
+123......
     </div>
   </a>
   
@@ -728,9 +736,10 @@ Java NIO Path......
       This package defines utility classes for working with streams, readers, writers and files...
     </h3>
     <div class="post-content-preview">
-      概述commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文件的方法，可以大大简化我们处理 IO 流和操作文件的代码。从 commons-io 的官方使用文档可以看出，它主要分为工具类、尾端类、行迭代器、文件过滤器、文件比较器和扩展流。
+      概述
+commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文件的方法，可以大大简化我们处理 IO 流和操作文件的代码。从 commons-io 的官方使用文档可以看出，它主要分为工具类、尾端类、行迭代器、文件过滤器、文件比较器和扩展流。
 官网地址：http://commons.apache.org/proper/commons-io/
-下载：http://commons......
+下载：http://common......
     </div>
   </a>
   
@@ -764,17 +773,21 @@ Java NIO Path......
     </h3>
     <div class="post-content-preview">
       流的分类
+
 字节流和字符流
+
 字节流：以字节为单位，每次次读入或读出是8位数据。可以读任何类型数据。
 字符流：以字符为单位，每次次读入或读出是16位数据。其只能读取字符类型数据。
 
 输出流和输入流
+
 输入流：从文件读入到内存。只能进行读操作。
 输出流：从内存读出到文件。只能进行写操作。
 
 节点流和处理流
+
 节点流：直接与数据源相连，读入或读出。
-处理流：与节点流一块使用，在节点流的基础上，再套接一层......
+处理流：与节点流一块使用，在节点流的基础上，再......
     </div>
   </a>
   
@@ -808,10 +821,11 @@ Java NIO Path......
     </h3>
     <div class="post-content-preview">
       IO 流原理
+
 I/O 是 Input/Output 的缩写，I/O技术是非常实用的技术，用于处理设备之间的数据传输。如读/写文件，网络通讯等。
 Java 程序中，对于数据的输入/输出操作以流（stream） 的方式进行。
 java.io 包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过标准的方法输入或输出数据。
-输入 input：读取外部数据（磁 盘、光盘等存储设备的数据）到程序......
+输入 input：读取外部数据（磁 盘、光盘等存储设备的数据）到程......
     </div>
   </a>
   
@@ -1016,11 +1030,11 @@ java.io 包下提供了各种“流”类和接口，用以获取不同种类的
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1204,11 +1218,11 @@ java.io 包下提供了各种“流”类和接口，用以获取不同种类的
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

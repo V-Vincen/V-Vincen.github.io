@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -488,8 +488,10 @@
       Ubuntu 用户和组管理
     </h3>
     <div class="post-content-preview">
-      概述Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。
-使用 Root 用户在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们使用......
+      概述
+Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。
+使用 Root 用户
+在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们......
     </div>
   </a>
   
@@ -522,8 +524,10 @@
       Ubuntu 软件包管理
     </h3>
     <div class="post-content-preview">
-      概述APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 /etc/apt/ 目录下的 sources.list 文件。
-修改数据源由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改为国......
+      概述
+APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 /etc/apt/ 目录下的 sources.list 文件。
+修改数据源
+由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改......
     </div>
   </a>
   
@@ -556,13 +560,16 @@
       Ubuntu is the modern, open source operating system on Linux for the enterprise server, desktop, cloud, and IoT...
     </h3>
     <div class="post-content-preview">
-      下载官网下载（中文）：http://www.ubuntu.org.cn/download
+      下载
+官网下载（中文）：http://www.ubuntu.org.cn/download
 官网下载：https://ubuntu.com/download
-安装进入系统安装的第一个界面，开始系统的安装操作。每一步的操作，左下角都会提示操作方式。
+安装
+进入系统安装的第一个界面，开始系统的安装操作。每一步的操作，左下角都会提示操作方式。
 选择系统语言 - English
+
 选择操作 - Install Ubuntu Server
-选择安装过程和系统的默认语言 - English
-选择区......
+
+选择安装过程和系统的默认语言 - English......
     </div>
   </a>
   
@@ -595,12 +602,15 @@
       Linux 编辑器
     </h3>
     <div class="post-content-preview">
-      vim运行模式
+      vim
+运行模式
+
 编辑模式：等待编辑命令输入
 插入模式：编辑模式下，输入 i 进入插入模式，插入文本信息
 命令模式：在编辑模式下，输入 : 进行命令模式
 
 命令
+
 :q：直接退出vi
 :wq：保存后退出vi ，并可以新建文件
 :q!：强制退出
@@ -608,7 +618,8 @@
 :set number：在编辑文件显示行号
 :set nonumber：在编辑文件不显示行号
 
-nanonano......
+nano
+......
     </div>
   </a>
   
@@ -732,9 +743,9 @@ tar [-cxzjvf] 压缩打包文档的名称 欲打包目录
     </h3>
     <div class="post-content-preview">
       shutdown 命令
+
 shutdown 命令可以用来进行关机程序，并且在关机以前传送讯息给所有使用者正在执行的程序
 shutdown 也可以用来重开机。
-
 
 
 
@@ -1032,8 +1043,10 @@ opt
       Linux 远程控制管理
     </h3>
     <div class="post-content-preview">
-      概述传统的网络服务程序，FTP、POP、telnet 本质上都是不安全的，因为它们在网络上通过明文传送口令和数据，这些数据非常容易被截获。SSH 叫做 Secure Shell。通过 SSH，可以把传输数据进行加密，预防攻击，传输的数据进行了压缩，可以加快传输速度。
-OpenSSHSSH 是芬兰一家公司开发。但是受到版权和加密算法限制，现在很多人都使用 OpenSSH。OpenSSH 是 S......
+      概述
+传统的网络服务程序，FTP、POP、telnet 本质上都是不安全的，因为它们在网络上通过明文传送口令和数据，这些数据非常容易被截获。SSH 叫做 Secure Shell。通过 SSH，可以把传输数据进行加密，预防攻击，传输的数据进行了压缩，可以加快传输速度。
+OpenSSH
+SSH 是芬兰一家公司开发。但是受到版权和加密算法限制，现在很多人都使用 OpenSSH。OpenSSH 是......
     </div>
   </a>
   
@@ -1238,11 +1251,11 @@ OpenSSHSSH 是芬兰一家公司开发。但是受到版权和加密算法限制
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
-    
-    
-    
     <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1426,11 +1439,11 @@ OpenSSHSSH 是芬兰一家公司开发。但是受到版权和加密算法限制
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

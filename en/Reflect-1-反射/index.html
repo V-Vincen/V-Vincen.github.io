@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,24 +472,28 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="反射机制概述"><a href="#反射机制概述" class="headerlink" title="反射机制概述"></a>反射机制概述</h2><p>Reflection（反射）是被视为动态语言的关键，反射机制允许程序在执行期借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。</p>
+        <h2 id="反射机制概述">反射机制概述</h2>
+<p>Reflection（反射）是被视为动态语言的关键，反射机制允许程序在执行期借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。</p>
 <p>加载完类之后，在堆内存的方法区中就产生了一个 Class 类型的对象（ 一个类只有一个 Class 对象），这个对象就包含了完整的类的结构信息 。我们可以通过这个对象看到类的结构。这个对象就像一面镜子 ，透过这个镜子看到类的结构，所以我们形象的称之为：反射。</p>
-<h3 id="反射机制研究及应用"><a href="#反射机制研究及应用" class="headerlink" title="反射机制研究及应用"></a>反射机制研究及应用</h3><ul>
+<h3 id="反射机制研究及应用">反射机制研究及应用</h3>
+<ul>
 <li>在运行时判断任意一个对象所属的类</li>
 <li>在运行时构造任意一个类的对象</li>
 <li>在运行时判断任意一个类所具有的成员变量和方法</li>
 <li>在运行时获取泛型信息</li>
 <li>在运行时调用任意一个对象的成员变量和方法</li>
-<li>在运行时处理注解 </li>
+<li>在运行时处理注解</li>
 <li>生成动态代理</li>
 </ul>
-<h3 id="反射相关的主要-API"><a href="#反射相关的主要-API" class="headerlink" title="反射相关的主要 API"></a>反射相关的主要 API</h3><ul>
+<h3 id="反射相关的主要-API">反射相关的主要 API</h3>
+<ul>
 <li><code>java.lang.Class</code>：代表一个类</li>
 <li><code>java.lang.reflect.Method</code>：代表类的方法</li>
 <li><code>java.lang.reflect.Field</code>：代表类的成员变量</li>
 <li><code>java.lang.reflect.Constructor</code>：代表类的构造器</li>
 </ul>
-<h2 id="理解-Class-类并获取-Class-的实例"><a href="#理解-Class-类并获取-Class-的实例" class="headerlink" title="理解 Class 类并获取 Class 的实例"></a>理解 Class 类并获取 Class 的实例</h2><p>在 Object 类中定义了以下的方法，此方法 将被所有子类继承：<code>public final Class getClass()</code>。这个方法返回值的类型是一个 Class 类， 此类是Java反射的源头，实际上所谓反射从程序的运行结果来看也很好理解，即：可以通过对象反射求出类的名称。</p>
+<h2 id="理解-Class-类并获取-Class-的实例">理解 Class 类并获取 Class 的实例</h2>
+<p>在 Object 类中定义了以下的方法，此方法 将被所有子类继承：<code>public final Class getClass()</code>。这个方法返回值的类型是一个 Class 类， 此类是Java反射的源头，实际上所谓反射从程序的运行结果来看也很好理解，即：可以通过对象反射求出类的名称。</p>
 <p>对象照镜子后可以得到的信息：某个类的属性、方法和构造器、某个类到底实现了哪些接口。对于每个类而言，JRE 都为其保留一个不变的 Class 类型的对象。一个 Class 对象包含了特定某个结构（<code>class/interface/enum/annotation/primitive type/void/[]</code>）的有关信息。</p>
 <ul>
 <li>Class 本身也是一个类</li>
@@ -500,7 +504,7 @@
 <li>通过 Class 可以完整地得到一个类中的所有被加载的结构</li>
 <li>Class 类是 Reflection 的根源，针对任何你想动态加载、运行的类，唯有先获得相应的 Class 对象</li>
 </ul>
-<h3 id="Class-类的常用方法"><a href="#Class-类的常用方法" class="headerlink" title="Class 类的常用方法"></a>Class 类的常用方法</h3><div class="table-container">
+<h3 id="Class-类的常用方法">Class 类的常用方法</h3>
 <table>
 <thead>
 <tr>
@@ -551,15 +555,16 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="获取-Class-类的实例（四种方法）"><a href="#获取-Class-类的实例（四种方法）" class="headerlink" title="获取 Class 类的实例（四种方法）"></a>获取 Class 类的实例（四种方法）</h3><ol>
+<h3 id="获取-Class-类的实例（四种方法）">获取 Class 类的实例（四种方法）</h3>
+<ol>
 <li>前提：若已知具体的类，通过类的 class 属性获取，该方法最为安全可靠， 程序性能最高。例：<code>Class clazz = String.class;</code></li>
-<li>前提：已知某个类的实例，调用该实例的 <code>getClass()</code> 方法获取 Class 对象。例：<code>Class clazz = “www.atguigu.com”.getClass();</code> </li>
+<li>前提：已知某个类的实例，调用该实例的 <code>getClass()</code> 方法获取 Class 对象。例：<code>Class clazz = “www.atguigu.com”.getClass();</code></li>
 <li>前提：已知一个类的全类名，且该类在类路径下，可通过 Class 类的静态方法 <code>forName()</code> 获取，可能抛出 <code>ClassNotFoundException</code>。例：<code>Class clazz = Class.forName(“java.lang.String”);</code></li>
-<li>其他方式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClassLoader cl = <span class="keyword">this</span>.getClass().getClassLoader();</span><br><span class="line">Class clazz4 = cl.loadClass(<span class="string">&quot;类的全类名&quot;</span>); </span><br></pre></td></tr></table></figure>
-</li>
+<li>其他方式</li>
 </ol>
-<h3 id="哪些类型可以有-Class-对象？"><a href="#哪些类型可以有-Class-对象？" class="headerlink" title="哪些类型可以有 Class 对象？"></a>哪些类型可以有 Class 对象？</h3><ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ClassLoader cl = <span class="keyword">this</span>.getClass().getClassLoader();</span><br><span class="line">Class clazz4 = cl.loadClass(<span class="string">&quot;类的全类名&quot;</span>); </span><br></pre></td></tr></table></figure>
+<h3 id="哪些类型可以有-Class-对象？">哪些类型可以有 Class 对象？</h3>
+<ul>
 <li>class： 外部类，成员(成员内部类，静态内部类)，局部内部类，匿名内部类</li>
 <li>interface：接口</li>
 <li>[]：数组</li>
@@ -569,7 +574,9 @@
 <li>void</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Class c1 = Object.class;</span><br><span class="line">Class c2 = Comparable.class;</span><br><span class="line">Class c3 = String[].class;</span><br><span class="line">Class c4 = <span class="keyword">int</span>[][].class;</span><br><span class="line">Class c5 = ElementType.class;</span><br><span class="line">Class c6 = Override.class;</span><br><span class="line">Class c7 = <span class="keyword">int</span>.class;</span><br><span class="line">Class c8 = <span class="keyword">void</span>.class; Class c9 = Class.class;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>]; </span><br><span class="line"><span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>]; </span><br><span class="line">Class c10 = a.getClass(); </span><br><span class="line">Class c11 = b.getClass(); </span><br><span class="line"><span class="comment">// 只要元素类型与维度一样，就是同一个 Class</span></span><br><span class="line">System.out.println(c10 == c11);</span><br></pre></td></tr></table></figure>
-<h2 id="创建运行时类的对象"><a href="#创建运行时类的对象" class="headerlink" title="创建运行时类的对象"></a>创建运行时类的对象</h2><p>有了 Class 对象，能做什么？<br>创建类的对象：调用 Class 对象的 <code>newInstance()</code> 方法。要求：</p>
+<h2 id="创建运行时类的对象">创建运行时类的对象</h2>
+<p>有了 Class 对象，能做什么？<br>
+创建类的对象：调用 Class 对象的 <code>newInstance()</code> 方法。要求：</p>
 <ul>
 <li>类必须有一个无参数的构造器。</li>
 <li>类的构造器的访问权限需要足够。</li>
@@ -580,7 +587,8 @@
 <li>向构造器的形参中传递一个对象数组进去，里面包含了构造器中所需的各个参数。</li>
 <li>通过 <code>Constructor</code> 实例化对象。</li>
 </ul>
-<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 根据全类名获取对应的 Class 对象 </span></span><br><span class="line">String name = <span class="string">&quot;atguigu.java.Person&quot;</span>;</span><br><span class="line">Class clazz = Class.forName(name);</span><br><span class="line"><span class="comment">//2. 调用指定参数结构的构造器，生成 Constructor 的实例</span></span><br><span class="line">Constructor con = clazz.getConstructor(String.class,Integer.class); </span><br><span class="line"><span class="comment">//3. 通过 Constructor 的实例创建对应类的对象，并初始化类属性</span></span><br><span class="line">Person p2 = (Person) con.newInstance(<span class="string">&quot;Peter&quot;</span>,<span class="number">20</span>);</span><br><span class="line">System.out.println(p2);</span><br></pre></td></tr></table></figure></p>
+<p>示例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 根据全类名获取对应的 Class 对象 </span></span><br><span class="line">String name = <span class="string">&quot;atguigu.java.Person&quot;</span>;</span><br><span class="line">Class clazz = Class.forName(name);</span><br><span class="line"><span class="comment">//2. 调用指定参数结构的构造器，生成 Constructor 的实例</span></span><br><span class="line">Constructor con = clazz.getConstructor(String.class,Integer.class); </span><br><span class="line"><span class="comment">//3. 通过 Constructor 的实例创建对应类的对象，并初始化类属性</span></span><br><span class="line">Person p2 = (Person) con.newInstance(<span class="string">&quot;Peter&quot;</span>,<span class="number">20</span>);</span><br><span class="line">System.out.println(p2);</span><br></pre></td></tr></table></figure>
 
 
         <hr>

@@ -151,7 +151,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -185,7 +185,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -472,7 +472,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="IDEA-配置"><a href="#IDEA-配置" class="headerlink" title="IDEA 配置"></a>IDEA 配置</h2><ul>
+        <h2 id="IDEA-配置">IDEA 配置</h2>
+<ul>
 <li>添加一个运行配置（Remote JVM Debug 项）</li>
 <li>打开 Remote 项配置对话框</li>
 <li>远程 JVM 参数配置提示</li>
@@ -480,17 +481,26 @@
 </ul>
 <p><img src="1.png" alt="1"></p>
 <p><img src="2.png" alt="2"></p>
-<h2 id="远程-Java-程序配置"><a href="#远程-Java-程序配置" class="headerlink" title="远程 Java 程序配置"></a>远程 Java 程序配置</h2><h3 id="Springboot-项目配置"><a href="#Springboot-项目配置" class="headerlink" title="Springboot 项目配置"></a>Springboot 项目配置</h3><p>启动命令：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">java </span>-agentlib:<span class="keyword">jdwp=transport=dt_socket,server=y,suspend=n,address=5005 </span>-<span class="keyword">jar </span>******.<span class="keyword">jar</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Tomcat-配置"><a href="#Tomcat-配置" class="headerlink" title="Tomcat 配置"></a>Tomcat 配置</h3><ul>
-<li><p><strong>Linux 系统</strong><br>  在 tomcat 的 bin 目录中，在 <code>catalina.sh</code> 文件，输入： </p>
+<h2 id="远程-Java-程序配置">远程 Java 程序配置</h2>
+<h3 id="Springboot-项目配置">Springboot 项目配置</h3>
+<p>启动命令：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">java </span>-agentlib:<span class="keyword">jdwp=transport=dt_socket,server=y,suspend=n,address=5005 </span>-<span class="keyword">jar </span>******.<span class="keyword">jar</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tomcat-配置">Tomcat 配置</h3>
+<ul>
+<li>
+<p><strong>Linux 系统</strong><br>
+在 tomcat 的 bin 目录中，在 <code>catalina.sh</code> 文件，输入：</p>
   <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">CATALINA_OPTS</span>=<span class="string">&quot;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&quot;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>Windows 系统</strong><br>  在 tomcat 的 bin 目录中，在 <code>catalina.bat</code> 文件，输入： </p>
+<li>
+<p><strong>Windows 系统</strong><br>
+在 tomcat 的 bin 目录中，在 <code>catalina.bat</code> 文件，输入：</p>
   <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">SET</span> <span class="attribute">CATALINA_OPTS</span>=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</span><br></pre></td></tr></table></figure>
-<p>  tomcat 启动后会自动调用 <code>catalina.sh 或者 catalina.bat</code> 文件，进行 JVM 参数设置。</p>
+<p>tomcat 启动后会自动调用 <code>catalina.sh 或者 catalina.bat</code> 文件，进行 JVM 参数设置。</p>
 </li>
 </ul>
-<h2 id="启动调试"><a href="#启动调试" class="headerlink" title="启动调试"></a>启动调试</h2><p>点击调试按钮，控制台输出如下提示就成功了。</p>
+<h2 id="启动调试">启动调试</h2>
+<p>点击调试按钮，控制台输出如下提示就成功了。</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connected <span class="keyword">to</span> the target VM, addres<span class="variable">s:</span> <span class="string">&#x27;ip:5005&#x27;</span>, transpor<span class="variable">t:</span> <span class="string">&#x27;socket&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>然后先在代码处打上断点，然后操作 Java 程序即可进入断点。</p>
 
