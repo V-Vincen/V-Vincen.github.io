@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,27 +472,19 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="MyBatis-中何时使用-jdbcType">MyBatis 中何时使用 jdbcType</h2>
-<p>这个 <code>SQL</code> 有时候这样写：<code>select * from user where name = #&#123;name&#125;</code> ,有时候可以这样写: <code>select * from user where name = #&#123;name,jdbcType=VARCHAR&#125;</code> ,到底什么时候使用 <code>jdbcType</code> 呢,什么时候不使用呢?</p>
+        <h2 id="MyBatis-中何时使用-jdbcType"><a href="#MyBatis-中何时使用-jdbcType" class="headerlink" title="MyBatis 中何时使用 jdbcType"></a>MyBatis 中何时使用 jdbcType</h2><p>这个 <code>SQL</code> 有时候这样写：<code>select * from user where name = #&#123;name&#125;</code> ,有时候可以这样写: <code>select * from user where name = #&#123;name,jdbcType=VARCHAR&#125;</code> ,到底什么时候使用 <code>jdbcType</code> 呢,什么时候不使用呢?</p>
 <ul>
-<li>
-<p>当传入的参数 <code>name</code>  的值为空的时候,这个需要带上 <code>jdbcType=VARCHAR</code> 这个,其他不为空的情况下就不用带<br>
-<code>jdbcType=VARCHAR</code></p>
+<li><p>当传入的参数 <code>name</code>  的值为空的时候,这个需要带上 <code>jdbcType=VARCHAR</code> 这个,其他不为空的情况下就不用带<br><code>jdbcType=VARCHAR</code></p>
 </li>
-<li>
-<p>如果参入的参数 <code>name</code> 的值为空,而没有加上 <code>jdbcType</code> 这个来限定类型的话,执行的 <code>SQL</code> 会报异常：</p>
+<li><p>如果参入的参数 <code>name</code> 的值为空,而没有加上 <code>jdbcType</code> 这个来限定类型的话,执行的 <code>SQL</code> 会报异常：</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error </span>querying database.  Cause: org.postgresql.util.PSQLException: ERROR: could not determine data type of parameter $1</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Error </span>querying database.  Cause: org.postgresql.util.PSQLException: ERROR: could not determine data type of parameter $1</span><br></pre></td></tr></table></figure>
-<h2 id="MyBatis-的-jdbcType-和-javaType-什么时候用"><code>MyBatis</code> 的 <code>jdbcType</code> 和 <code>javaType</code> 什么时候用</h2>
-<p>如果数据库 <code>id</code> 字段是 <code>int</code> 类型，那么它的 <code>jdbc</code> 就是 <code>Integer</code> 类型。当实体类的这个映射属性 <code>id</code> 为 <code>Long</code> 类型时，如果不设置 <code>jdbcType</code> 和 <code>javaType</code> 的话，查询的结果返回给实体时就会转换错误，写了这两个 <code>mybatis</code> 就会帮我们转换成相应的类型，从来避免发生错误。</p>
-<h2 id="ofType-和-javaType-的区别"><code>ofType</code> 和 <code>javaType</code> 的区别</h2>
-<p><code>JavaType</code> 和 <code>ofType</code> 都是用来指定对象类型的，但是 <code>JavaType</code>  是用来指定 <code>pojo</code> 中属性的类型，而 <code>ofType</code> 指定的是映射到 <code>list</code> 集合属性中 <code>pojo</code> 的类型。</p>
-<h3 id="pojo-类："><code>pojo</code> 类：</h3>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">publicclass User &#123;</span><br><span class="line">    privateint id<span class="comment">;</span></span><br><span class="line">    privateString username<span class="comment">;</span></span><br><span class="line">    privateString mobile<span class="comment">;</span></span><br><span class="line">    privateList&lt;Post&gt;posts<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="user-xml："><code>user.xml</code>：</h3>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;resultUserMap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_id&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;username&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">column</span>=<span class="string">&quot;username&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;mobile&quot;</span>  <span class="attr">column</span>=<span class="string">&quot;mobile&quot;</span> /&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--javatype指定的是user对象的属性的类型（例如id，posts），而oftype指定的是映射到list集合属性中pojo的类型（本例指的是post类型）--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">collection</span> <span class="attr">property</span>=<span class="string">&quot;posts&quot;</span> <span class="attr">ofType</span>=<span class="string">&quot;com.spenglu.Post&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;java.util.ArrayList&quot;</span> <span class="attr">column</span>=<span class="string">&quot;userid&quot;</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;post_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;INTEGER&quot;</span>/&gt;</span>   </span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;title&quot;</span> <span class="attr">column</span>=<span class="string">&quot;title&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;content&quot;</span> <span class="attr">column</span>=<span class="string">&quot;content&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">collection</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Mybatis-中-jdbcType-和-javaType-以及数据库类型的对应关系"><code>Mybatis</code> 中 <code>jdbcType</code> 和 <code>javaType</code> 以及数据库类型的对应关系</h2>
+<h2 id="MyBatis-的-jdbcType-和-javaType-什么时候用"><a href="#MyBatis-的-jdbcType-和-javaType-什么时候用" class="headerlink" title="MyBatis 的 jdbcType 和 javaType 什么时候用"></a><code>MyBatis</code> 的 <code>jdbcType</code> 和 <code>javaType</code> 什么时候用</h2><p>如果数据库 <code>id</code> 字段是 <code>int</code> 类型，那么它的 <code>jdbc</code> 就是 <code>Integer</code> 类型。当实体类的这个映射属性 <code>id</code> 为 <code>Long</code> 类型时，如果不设置 <code>jdbcType</code> 和 <code>javaType</code> 的话，查询的结果返回给实体时就会转换错误，写了这两个 <code>mybatis</code> 就会帮我们转换成相应的类型，从来避免发生错误。</p>
+<h2 id="ofType-和-javaType-的区别"><a href="#ofType-和-javaType-的区别" class="headerlink" title="ofType 和 javaType 的区别"></a><code>ofType</code> 和 <code>javaType</code> 的区别</h2><p><code>JavaType</code> 和 <code>ofType</code> 都是用来指定对象类型的，但是 <code>JavaType</code>  是用来指定 <code>pojo</code> 中属性的类型，而 <code>ofType</code> 指定的是映射到 <code>list</code> 集合属性中 <code>pojo</code> 的类型。</p>
+<h3 id="pojo-类："><a href="#pojo-类：" class="headerlink" title="pojo 类："></a><code>pojo</code> 类：</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">publicclass User &#123;</span><br><span class="line">    privateint id<span class="comment">;</span></span><br><span class="line">    privateString username<span class="comment">;</span></span><br><span class="line">    privateString mobile<span class="comment">;</span></span><br><span class="line">    privateList&lt;Post&gt;posts<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="user-xml："><a href="#user-xml：" class="headerlink" title="user.xml："></a><code>user.xml</code>：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;User&quot;</span> <span class="attr">id</span>=<span class="string">&quot;resultUserMap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">column</span>=<span class="string">&quot;user_id&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;username&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">column</span>=<span class="string">&quot;username&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;mobile&quot;</span>  <span class="attr">column</span>=<span class="string">&quot;mobile&quot;</span> /&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--javatype指定的是user对象的属性的类型（例如id，posts），而oftype指定的是映射到list集合属性中pojo的类型（本例指的是post类型）--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">collection</span> <span class="attr">property</span>=<span class="string">&quot;posts&quot;</span> <span class="attr">ofType</span>=<span class="string">&quot;com.spenglu.Post&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;java.util.ArrayList&quot;</span> <span class="attr">column</span>=<span class="string">&quot;userid&quot;</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;post_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;int&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;INTEGER&quot;</span>/&gt;</span>   </span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;title&quot;</span> <span class="attr">column</span>=<span class="string">&quot;title&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;content&quot;</span> <span class="attr">column</span>=<span class="string">&quot;content&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;string&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">collection</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Mybatis-中-jdbcType-和-javaType-以及数据库类型的对应关系"><a href="#Mybatis-中-jdbcType-和-javaType-以及数据库类型的对应关系" class="headerlink" title="Mybatis 中 jdbcType 和 javaType 以及数据库类型的对应关系"></a><code>Mybatis</code> 中 <code>jdbcType</code> 和 <code>javaType</code> 以及数据库类型的对应关系</h2><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -673,6 +665,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
 
         <hr>

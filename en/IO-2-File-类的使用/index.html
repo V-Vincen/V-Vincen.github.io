@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,51 +472,37 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>File 类的使用</h1>
-<h2 id="概念">概念</h2>
-<p>File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本身，则需要使用输入/输出流。下面看一下 File 类的继承关系：</p>
+        <h1 id="File-类的使用"><a href="#File-类的使用" class="headerlink" title="File 类的使用"></a>File 类的使用</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本身，则需要使用输入/输出流。下面看一下 File 类的继承关系：</p>
 <p><img src="1.png" alt="1"></p>
-<h2 id="构造函数">构造函数</h2>
-<ul>
-<li>
-<p><code>public File(String pathname)</code>：以 pathname 为路径创建 File 对象，可以是绝对路径或者相对路径，如果 pathname 是相对路径，则默认的当前路径在系统属性 user.dir 中存储。</p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><ul>
+<li><p><code>public File(String pathname)</code>：以 pathname 为路径创建 File 对象，可以是绝对路径或者相对路径，如果 pathname 是相对路径，则默认的当前路径在系统属性 user.dir 中存储。</p>
 <ul>
 <li>绝对路径：是一个固定的路径，从盘符开始</li>
 <li>相对路径：是相对于某个位置开始</li>
 </ul>
 </li>
-<li>
-<p><code>public File(String parent,String child)</code>：以 parent 为父路径，child 为子路径创建 File 对象。</p>
+<li><p><code>public File(String parent,String child)</code>：以 parent 为父路径，child 为子路径创建 File 对象。</p>
 </li>
-<li>
-<p><code>public File(File parent,String child)</code>：根据一个父 File 对象和子文件路径创建 File 对象。</p>
+<li><p><code>public File(File parent,String child)</code>：根据一个父 File 对象和子文件路径创建 File 对象。</p>
 </li>
 </ul>
-<p>因为 Java 命名比较规范，所以很好理解，有一点需要注意的是，这个方法不能保证文件一定会创建成功，但是即使失败也不会报异常，所以一般我们在文件创建之后需要判断一下当前文件是否创建成功，调用一下 exists() 方法来判断文件是否创建成功，不成功则调用 createNewFile()，此方法失败会抛异常，归纳起来如下。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"> * <span class="number">1.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String pathname)</span>：以 pathname 为路径创建 File 对象，可以是绝对路径或者相对路径，如果 pathname 是相对路径，则默认的当前路径在系统属性 user.dir 中存储。</span></span><br><span class="line"> * 绝对路径：是一个固定的路径,从盘符开始</span><br><span class="line"> * 相对路径：是相对于某个位置开始</span><br><span class="line"> * <span class="number">2.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String parent,String child)</span>：以 parent 为父路径，child 为子路径创建 File 对象。</span></span><br><span class="line"> * <span class="number">3.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(File parent,String child)</span>：根据一个父 File 对象和子文件路径创建 File 对象。</span></span><br><span class="line"> */</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    File dir = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO/dir&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir.exists()) &#123;</span><br><span class="line">        dir.mkdir();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir2 = <span class="keyword">new</span> File(<span class="string">&quot;dir2&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir2.exists()) &#123;</span><br><span class="line">        dir2.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir3 = <span class="keyword">new</span> File(<span class="string">&quot;dir3&quot;</span>, <span class="string">&quot;dir3.1&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir3.exists()) &#123;</span><br><span class="line">        dir3.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir2_1 = <span class="keyword">new</span> File(dir2, <span class="string">&quot;dir2.1&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir2_1.exists()) &#123;</span><br><span class="line">        dir2_1.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File file = <span class="keyword">new</span> File(dir, <span class="string">&quot;a.txt&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">        file.createNewFile();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO&quot;</span>, <span class="string">&quot;a.txt&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (file.exists()) &#123;</span><br><span class="line">        <span class="comment">//继续文件的操作</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">boolean</span> result = file.createNewFile();</span><br><span class="line">            System.out.println(result);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="路径分隔符">路径分隔符</h2>
-<ul>
-<li>
-<p>路径中的每级目录之间用一个路径分隔符隔开。</p>
+<p>因为 Java 命名比较规范，所以很好理解，有一点需要注意的是，这个方法不能保证文件一定会创建成功，但是即使失败也不会报异常，所以一般我们在文件创建之后需要判断一下当前文件是否创建成功，调用一下 exists() 方法来判断文件是否创建成功，不成功则调用 createNewFile()，此方法失败会抛异常，归纳起来如下。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"> * <span class="number">1.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String pathname)</span>：以 pathname 为路径创建 File 对象，可以是绝对路径或者相对路径，如果 pathname 是相对路径，则默认的当前路径在系统属性 user.dir 中存储。</span></span><br><span class="line"> * 绝对路径：是一个固定的路径,从盘符开始</span><br><span class="line"> * 相对路径：是相对于某个位置开始</span><br><span class="line"> * <span class="number">2.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String parent,String child)</span>：以 parent 为父路径，child 为子路径创建 File 对象。</span></span><br><span class="line"> * <span class="number">3.</span> <span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(File parent,String child)</span>：根据一个父 File 对象和子文件路径创建 File 对象。</span></span><br><span class="line"> */</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    File dir = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO/dir&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir.exists()) &#123;</span><br><span class="line">        dir.mkdir();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir2 = <span class="keyword">new</span> File(<span class="string">&quot;dir2&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir2.exists()) &#123;</span><br><span class="line">        dir2.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir3 = <span class="keyword">new</span> File(<span class="string">&quot;dir3&quot;</span>, <span class="string">&quot;dir3.1&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir3.exists()) &#123;</span><br><span class="line">        dir3.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File dir2_1 = <span class="keyword">new</span> File(dir2, <span class="string">&quot;dir2.1&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!dir2_1.exists()) &#123;</span><br><span class="line">        dir2_1.mkdirs();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    File file = <span class="keyword">new</span> File(dir, <span class="string">&quot;a.txt&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!file.exists()) &#123;</span><br><span class="line">        file.createNewFile();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO&quot;</span>, <span class="string">&quot;a.txt&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (file.exists()) &#123;</span><br><span class="line">        <span class="comment">//继续文件的操作</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">boolean</span> result = file.createNewFile();</span><br><span class="line">            System.out.println(result);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="路径分隔符"><a href="#路径分隔符" class="headerlink" title="路径分隔符"></a>路径分隔符</h2><ul>
+<li><p>路径中的每级目录之间用一个路径分隔符隔开。</p>
 </li>
-<li>
-<p>路径中路径分隔符和系统有关：</p>
+<li><p>路径中路径分隔符和系统有关：</p>
 <ul>
 <li>Windows 和 DOS 系统默认使用“\”来表示</li>
 <li>UNIX 和 URL 使用“/”来表示</li>
 </ul>
 </li>
-<li>
-<p>Java 程序支持跨平台运行，因此路径分隔符要慎用。</p>
+<li><p>Java 程序支持跨平台运行，因此路径分隔符要慎用。</p>
 </li>
-<li>
-<p>为了解决这个隐患，File 类提供了一个常量：<code>public static final String separator</code> 根据操作系统，动态的提供分隔符。举例：</p>
+<li><p>为了解决这个隐患，File 类提供了一个常量：<code>public static final String separator</code> 根据操作系统，动态的提供分隔符。举例：</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File file1 = <span class="keyword">new</span> File(<span class="string">&quot;d:\\atguigu\\info.txt&quot;</span>);</span><br><span class="line">File file2 = <span class="keyword">new</span> File(<span class="string">&quot;d:&quot;</span> + File.separator + <span class="string">&quot;atguigu&quot;</span> + File.separator + <span class="string">&quot;info.txt&quot;</span>);</span><br><span class="line">File file3 = <span class="keyword">new</span> File(<span class="string">&quot;d:/atguigu&quot;</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="File-类常用方法">File 类常用方法</h2>
-<h3 id="创建与删除">创建与删除</h3>
-<ul>
+<h2 id="File-类常用方法"><a href="#File-类常用方法" class="headerlink" title="File 类常用方法"></a>File 类常用方法</h2><h3 id="创建与删除"><a href="#创建与删除" class="headerlink" title="创建与删除"></a>创建与删除</h3><ul>
 <li><code>public boolean createNewFile()</code>：创建文件。若文件存在，则不创建，返回 false。</li>
 <li><code>public boolean mkdir()</code>：创建文件目录。如果此文件目录存在，就不创建了。如果此文件目录的上层目录不存在，也不创建。</li>
 <li><code>public boolean mkdirs()</code>：创建文件目录。如果上层文件目录不存在，一并创建。</li>
@@ -526,8 +512,7 @@
 <li><code>public boolean delete()</code>：删除文件或者文件夹。</li>
 </ul>
 <p>删除注意事项： Java 中的删除不走回收站。要删除一个文件目录，请注意该文件目录内不能包含文件或者文件目录。</p>
-<h3 id="判断方法">判断方法</h3>
-<ul>
+<h3 id="判断方法"><a href="#判断方法" class="headerlink" title="判断方法"></a>判断方法</h3><ul>
 <li><code>public boolean isDirectory()</code>：判断是否是文件目录。</li>
 <li><code>public boolean isFile()</code>：判断是否是文件。</li>
 <li><code>public boolean exists()</code>：判断是否存在。</li>
@@ -536,8 +521,7 @@
 <li><code>public boolean isHidden()</code>：判断是否隐藏。</li>
 <li><code>public boolean isAbsolute()</code>：判断是否是绝对路径。</li>
 </ul>
-<h3 id="获取方法">获取方法</h3>
-<ul>
+<h3 id="获取方法"><a href="#获取方法" class="headerlink" title="获取方法"></a>获取方法</h3><ul>
 <li><code>public String getAbsolutePath()</code>：获取绝对路径。</li>
 <li><code>public String getPath()</code>：获取路径。</li>
 <li><code>public String getName()</code>：获取名称。</li>
@@ -547,13 +531,10 @@
 <li><code>public String[] list()</code>：获取指定目录下的所有文件或者文件目录的名称数组。</li>
 <li><code>public File[] listFiles()</code>：获取指定目录下的所有文件或者文件目录的 File 数组。</li>
 </ul>
-<h3 id="重命名方法">重命名方法</h3>
-<ul>
+<h3 id="重命名方法"><a href="#重命名方法" class="headerlink" title="重命名方法"></a>重命名方法</h3><ul>
 <li><code>public boolean renameTo(File dest)</code>：把文件重命名为指定的文件路径。</li>
 </ul>
-<h3 id="文件过滤">文件过滤</h3>
-<p><code>File[] listFiles(FilenameFilter filter)</code>：返回满足过滤器要求的一个文件对象数组，其中包含了一个重要的接口 FileNameFilter，该接口是个文件过滤器，包含了一个 <code>accept(File dir,String name)</code> 方法，该方法依次对指定 File 的所有子目录或者文件进行迭代，按照指定条件，进行过滤，过滤出满足条件的所有文件。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO&quot;</span>);</span><br><span class="line">    File[] files = file.listFiles(<span class="keyword">new</span> FilenameFilter() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File dir, String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> name.endsWith(<span class="string">&quot;.apk&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    Arrays.stream(files).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="文件过滤"><a href="#文件过滤" class="headerlink" title="文件过滤"></a>文件过滤</h3><p><code>File[] listFiles(FilenameFilter filter)</code>：返回满足过滤器要求的一个文件对象数组，其中包含了一个重要的接口 FileNameFilter，该接口是个文件过滤器，包含了一个 <code>accept(File dir,String name)</code> 方法，该方法依次对指定 File 的所有子目录或者文件进行迭代，按照指定条件，进行过滤，过滤出满足条件的所有文件。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">&quot;/Users/vincent/IDEA_Project/my_project/IO&quot;</span>);</span><br><span class="line">    File[] files = file.listFiles(<span class="keyword">new</span> FilenameFilter() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File dir, String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> name.endsWith(<span class="string">&quot;.apk&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    Arrays.stream(files).forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>file 目录下的所有子文件如果满足后缀是 <code>.apk</code> 的条件的文件都会被过滤出来。</p>
 
 
@@ -703,7 +684,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">File 类的使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">构造函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E5%BE%84%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">路径分隔符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#File-%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">File 类常用方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%88%A0%E9%99%A4"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">创建与删除</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">判断方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">获取方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">重命名方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E8%BF%87%E6%BB%A4"><span class="toc-nav-number">1.4.5.</span> <span class="toc-nav-text">文件过滤</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#File-%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">File 类的使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">构造函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E5%BE%84%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">路径分隔符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#File-%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">File 类常用方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%88%A0%E9%99%A4"><span class="toc-nav-number">1.4.1.</span> <span class="toc-nav-text">创建与删除</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.2.</span> <span class="toc-nav-text">判断方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.3.</span> <span class="toc-nav-text">获取方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95"><span class="toc-nav-number">1.4.4.</span> <span class="toc-nav-text">重命名方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E8%BF%87%E6%BB%A4"><span class="toc-nav-number">1.4.5.</span> <span class="toc-nav-text">文件过滤</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

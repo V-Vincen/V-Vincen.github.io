@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -531,8 +531,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       Practice something...
     </h3>
     <div class="post-content-preview">
-      先来写个基本类
-1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age;......
+      先来写个基本类1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age; ......
     </div>
   </a>
   
@@ -569,9 +568,8 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       反射相关练习
     </h3>
     <div class="post-content-preview">
-      先来写几个基本类：
-12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
-12345678910111213/** * @author vincent */@Datapublic class......
+      先来写几个基本类：12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
+12345678910111213/** * @author vincent */@Datapublic class ......
     </div>
   </a>
   
@@ -604,7 +602,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       A free CDN for Open Source fast, reliable, and automated...
     </h3>
     <div class="post-content-preview">
-      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 – 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
+      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 — 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
 今天博主想在这里讲一下，在 hexo-theme-livemylife 主题中，JsDelivr CDN 应用加速。众所周知，国内访问 Github 的体验一直不是很好，具体原因就不在这里阐述了。而......
     </div>
   </a>
@@ -707,9 +705,7 @@ Mathjax......
       
     </h3>
     <div class="post-content-preview">
-      Spring Cloud 基础
-什么是 Spring Cloud？
-Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如 服务发现注册、配置中心、智能路由、消息总线、负载均衡、断路器、数据监控 等，都可以用 Spring Boot 的开发风格做到一键启动和部署。Spring Cloud 并没有重复制造轮子，它......
+      Spring Cloud 基础什么是 Spring Cloud？Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如 服务发现注册、配置中心、智能路由、消息总线、负载均衡、断路器、数据监控 等，都可以用 Spring Boot 的开发风格做到一键启动和部署。Spring Cloud 并没有重复制造轮子，它只是......
     </div>
   </a>
   
@@ -742,10 +738,8 @@ Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开�
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      前言
-上文中讲到了 Feign 结合 SpringBoot 注解的具体用法以及 CircuitBreaker Fallbacks 的用法。具体可阅览 Feign Spring Cloud CircuitBreaker Fallbacks。今天博主要总结的是如何运用 Spring Cloud Feign 来实现文件上传下载功能。还是老规矩直接上案例代码。
-Serveer
-pom.xml 和 C......
+      前言上文中讲到了 Feign 结合 SpringBoot 注解的具体用法以及 CircuitBreaker Fallbacks 的用法。具体可阅览 Feign Spring Cloud CircuitBreaker Fallbacks。今天博主要总结的是如何运用 Spring Cloud Feign 来实现文件上传下载功能。还是老规矩直接上案例代码。
+Serveerpom.xml 和 Com......
     </div>
   </a>
   
@@ -781,10 +775,9 @@ pom.xml 和 C......
     </h3>
     <div class="post-content-preview">
       前言
-
 Feign makes writing java http clients easier ：主要讲述了 Feign 的基本用法。
 DefaultFeignClient Case and Summary：主要举例 Feign 原生注解调用第三方服务、Feign 结合 SpringMvc 注解调用第三方服务，并且简要封装了一个创建 Feign 构造器的工具类。
-Feign Call Ca......
+Feign Call Cas......
     </div>
   </a>
   
@@ -820,10 +813,7 @@ Feign Call Ca......
     </h3>
     <div class="post-content-preview">
       上文博主已经举例并总结了 Feign 的大部分用法。那么接下来，博主结合实际真正开发中的情况，简单模拟了一个案例。需求大致如下：A 公司需要对接并获取 B 公司的用户信息和部门信息。在这里可以把 A 公司看做是调用方，B 公司是被调用方。或者说 A 公司是客户端，B 公司是服务端。那么直接上代码。
-Server
-Commons
-ResponseDto
-12345678910111213141......
+ServerCommonsResponseDto12345678910111213141516......
     </div>
   </a>
   
@@ -1022,7 +1012,7 @@ ResponseDto
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1030,7 +1020,11 @@ ResponseDto
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    <a href="/tags/#Hexo" title="Hexo" rel="10">Hexo</a>
+    
+    
+    
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1042,11 +1036,11 @@ ResponseDto
     
     
     
-    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="16">Docker</a>
+    
+    
+    
+    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
     
     
     
@@ -1071,10 +1065,6 @@ ResponseDto
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1283,20 +1273,20 @@ ResponseDto
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
     <a href="/categories/#Atom">
       <li>Atom</li>
     </a>
     
-    <a href="/categories/#Charles">
-      <li>Charles</li>
+    <a href="/categories/#Hexo-Theme-LiveMyLife">
+      <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
     <a href="/categories/#Docker">
       <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#Charles">
+      <li>Charles</li>
     </a>
     
     <a href="/categories/#Docker Compose">

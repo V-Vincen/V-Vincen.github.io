@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">847</span> In Total
+              Words <span class="post-count">846</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,19 +472,19 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="查看文件和目录的权限">查看文件和目录的权限</h2>
-<p><code>ls –al</code>：使用<code>ls</code>不带参数只显示文件名称，通过<code>ls –al</code> 可以显示文件或者目录的权限信息。</p>
-<p><code>ls -l 文件名</code>：显示信息包括–文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：<code>-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile</code></p>
+        <h2 id="查看文件和目录的权限"><a href="#查看文件和目录的权限" class="headerlink" title="查看文件和目录的权限"></a>查看文件和目录的权限</h2><p><code>ls –al</code>：使用<code>ls</code>不带参数只显示文件名称，通过<code>ls –al</code> 可以显示文件或者目录的权限信息。</p>
+<p><code>ls -l 文件名</code>：显示信息包括—文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：<code>-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile</code></p>
 <ul>
 <li><code>-</code>：普通文件</li>
 <li><code>rw-</code>：说明用户lusifer有读写权限，没有运行权限</li>
 <li><code>r--</code>：表示用户组lusifer只有读权限，没有写和运行的权限</li>
 <li><code>r--</code>：其他用户只有读权限，没有写权限和运行的权限</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th>-rw-r–r–</th>
+<th>-rw-r—r—</th>
 <th>1</th>
 <th>lusifer</th>
 <th>lusifer</th>
@@ -505,13 +505,15 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>-</th>
 <th>rw-</th>
-<th>r–</th>
-<th>r–</th>
+<th>r—</th>
+<th>r—</th>
 </tr>
 </thead>
 <tbody>
@@ -523,27 +525,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="文档类型">文档类型</h3>
-<p>d 表示目录<br>
-l 表示软连接<br>
-– 表示文件<br>
-c 表示串行端口字符设备文件<br>
-b 表示可供存储的块设备文件<br>
-余下的字符 3 个字符为一组。r 只读，w 可写，x 可执行，- 表示无此权限</p>
-<h3 id="连接数">连接数</h3>
-<p>指有多少个文件指向同一个索引节点。</p>
-<h3 id="文档所属用户和所属组">文档所属用户和所属组</h3>
-<p>就是文档属于哪个用户和用户组。文件所属用户和组是可以更改的</p>
-<h3 id="文档大小">文档大小</h3>
-<p>默认是 bytes</p>
-<h2 id="改操作权限">改操作权限</h2>
-<h3 id="chown">chown</h3>
-<p>是change owner的意思，主要作用就是改变文件或者目录所有者，所有者包含用户和用户组。</p>
+</div>
+<h3 id="文档类型"><a href="#文档类型" class="headerlink" title="文档类型"></a>文档类型</h3><p>d 表示目录<br>l 表示软连接<br>– 表示文件<br>c 表示串行端口字符设备文件<br>b 表示可供存储的块设备文件<br>余下的字符 3 个字符为一组。r 只读，w 可写，x 可执行，- 表示无此权限</p>
+<h3 id="连接数"><a href="#连接数" class="headerlink" title="连接数"></a>连接数</h3><p>指有多少个文件指向同一个索引节点。</p>
+<h3 id="文档所属用户和所属组"><a href="#文档所属用户和所属组" class="headerlink" title="文档所属用户和所属组"></a>文档所属用户和所属组</h3><p>就是文档属于哪个用户和用户组。文件所属用户和组是可以更改的</p>
+<h3 id="文档大小"><a href="#文档大小" class="headerlink" title="文档大小"></a>文档大小</h3><p>默认是 bytes</p>
+<h2 id="改操作权限"><a href="#改操作权限" class="headerlink" title="改操作权限"></a>改操作权限</h2><h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h3><p>是change owner的意思，主要作用就是改变文件或者目录所有者，所有者包含用户和用户组。</p>
 <p><code>chown [-R] 用户名称 文件或者目录</code></p>
 <p><code>chown [-R] 用户名称 用户组名称 文件或目录</code></p>
 <p><code>-R</code>：进行递归式的权限更改，将目录下的所有文件、子目录更新为指定用户组权限</p>
-<h3 id="chmod">chmod</h3>
-<p>改变访问权限</p>
+<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><p>改变访问权限</p>
 <p><code>chmod [who] [+ | - | =] [mode] 文件名</code></p>
 <p><strong>who</strong></p>
 <p>表示操作对象可以是以下字母的一个或者组合</p>
@@ -563,17 +554,15 @@ b 表示可供存储的块设备文件<br>
 <p>表示可执行的权限，可以是 r、w、x</p>
 <p><strong>文件名</strong></p>
 <p>文件名可以使空格分开的文件列表</p>
-<p><strong>示例</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rw-rw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$ chmod u=rwx,g+r,o+r test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$</span><br></pre></td></tr></table></figure>
-<h2 id="font-color-red-数字设定法-font"><font color=red />数字设定法</font></h2>
-<h3 id="数字设定法中数字表示的含义：">数字设定法中数字表示的含义：</h3>
-<ul>
+<p><strong>示例</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rw-rw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$ chmod u=rwx,g+r,o+r test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrw-r-- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line">lusifer@UbuntuBase:~$</span><br></pre></td></tr></table></figure></p>
+<h2 id="数字设定法"><a href="#数字设定法" class="headerlink" title="数字设定法"></a><font color=red />数字设定法</font></h2><h3 id="数字设定法中数字表示的含义："><a href="#数字设定法中数字表示的含义：" class="headerlink" title="数字设定法中数字表示的含义："></a>数字设定法中数字表示的含义：</h3><ul>
 <li>0 表示没有任何权限</li>
 <li>1 表示有可执行权限 = <code>x</code></li>
 <li>2 表示有可写权限 = <code>w</code></li>
 <li>4 表示有可读权限 = <code>r</code></li>
 </ul>
 <p>也可以用数字来表示权限如：<code>chmod 755 file_name</code></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -595,13 +584,14 @@ b 表示可供存储的块设备文件<br>
 </tr>
 </tbody>
 </table>
+</div>
 <ul>
 <li>若要 rwx 属性则 4+2+1=7</li>
 <li>若要 rw- 属性则 4+2=6</li>
 <li>若要 r-x 属性则 4+1=5</li>
 </ul>
-<p><strong>例：</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ chmod 777 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwxrwx 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line"></span><br><span class="line">lusifer@UbuntuBase:~$ chmod 770 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwx--- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br></pre></td></tr></table></figure>
+<p><strong>例：</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lusifer@UbuntuBase:~$ chmod 777 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwxrwx 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br><span class="line"></span><br><span class="line">lusifer@UbuntuBase:~$ chmod 770 test.txt </span><br><span class="line">lusifer@UbuntuBase:~$ ls -al test.txt </span><br><span class="line">-rwxrwx--- 1 lusifer lusifer 6 Nov  2 21:47 test.txt</span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->
@@ -749,7 +739,7 @@ b 表示可供存储的块设备文件<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">查看文件和目录的权限</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">文档类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">连接数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E6%89%80%E5%B1%9E%E7%94%A8%E6%88%B7%E5%92%8C%E6%89%80%E5%B1%9E%E7%BB%84"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">文档所属用户和所属组</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E5%A4%A7%E5%B0%8F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">文档大小</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%94%B9%E6%93%8D%E4%BD%9C%E6%9D%83%E9%99%90"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">改操作权限</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#chown"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">chown</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#chmod"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">chmod</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#font-color-red-%E6%95%B0%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%B3%95-font"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">数字设定法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%B0%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%B3%95%E4%B8%AD%E6%95%B0%E5%AD%97%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">数字设定法中数字表示的含义：</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">查看文件和目录的权限</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">文档类型</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">连接数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E6%89%80%E5%B1%9E%E7%94%A8%E6%88%B7%E5%92%8C%E6%89%80%E5%B1%9E%E7%BB%84"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">文档所属用户和所属组</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E6%A1%A3%E5%A4%A7%E5%B0%8F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">文档大小</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%94%B9%E6%93%8D%E4%BD%9C%E6%9D%83%E9%99%90"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">改操作权限</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#chown"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">chown</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#chmod"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">chmod</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%B3%95"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">数字设定法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%B0%E5%AD%97%E8%AE%BE%E5%AE%9A%E6%B3%95%E4%B8%AD%E6%95%B0%E5%AD%97%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%90%AB%E4%B9%89%EF%BC%9A"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">数字设定法中数字表示的含义：</span></a></li></ol></li></ol>
         
         </div>
       </aside>

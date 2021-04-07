@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,49 +472,26 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 <code>/etc/apt/</code> 目录下的 <code>sources.list</code> 文件。</p>
-<h2 id="修改数据源">修改数据源</h2>
-<p>由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改为国内数据源，操作步骤如下：</p>
-<h3 id="查看系统版本">查看系统版本</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
-<p>输出结果为</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID:	Ubuntu</span><br><span class="line">Description:	Ubuntu 16.04 LTS</span><br><span class="line">Release:	16.04</span><br><span class="line">Codename:	xenial</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong>： Codename 为 <code>xenial</code>，该名称为我们 Ubuntu 系统的名称，修改数据源需要用到该名称</p>
-<h3 id="编辑数据源">编辑数据源</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-<p>删除全部内容并修改为</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-<h3 id="更新数据源">更新数据源</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
-<h2 id="常用-APT-命令">常用 APT 命令</h2>
-<h3 id="安装软件包">安装软件包</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install packagename</span><br></pre></td></tr></table></figure>
-<h3 id="删除软件包">删除软件包</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove packagename</span><br></pre></td></tr></table></figure>
-<h3 id="更新软件包列表">更新软件包列表</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
-<h3 id="升级有可用更新的系统（慎用）">升级有可用更新的系统（慎用）</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get upgrade</span><br></pre></td></tr></table></figure>
-<h2 id="其它-APT-命令">其它 APT 命令</h2>
-<h3 id="搜索">搜索</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache search package</span><br></pre></td></tr></table></figure>
-<h3 id="获取包信息">获取包信息</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache show package</span><br></pre></td></tr></table></figure>
-<h3 id="删除包及配置文件">删除包及配置文件</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove package --purge</span><br></pre></td></tr></table></figure>
-<h3 id="了解使用依赖">了解使用依赖</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache depends package</span><br></pre></td></tr></table></figure>
-<h3 id="查看被哪些包依赖">查看被哪些包依赖</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache rdepends package</span><br></pre></td></tr></table></figure>
-<h3 id="安装相关的编译环境">安装相关的编译环境</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get build-dep package</span><br></pre></td></tr></table></figure>
-<h3 id="下载源代码">下载源代码</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get <span class="built_in">source</span> package</span><br></pre></td></tr></table></figure>
-<h3 id="清理无用的包">清理无用的包</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get clean &amp;&amp; apt-get autoclean</span><br></pre></td></tr></table></figure>
-<h3 id="检查是否有损坏的依赖">检查是否有损坏的依赖</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get check</span><br></pre></td></tr></table></figure>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 <code>/etc/apt/</code> 目录下的 <code>sources.list</code> 文件。</p>
+<h2 id="修改数据源"><a href="#修改数据源" class="headerlink" title="修改数据源"></a>修改数据源</h2><p>由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改为国内数据源，操作步骤如下：</p>
+<h3 id="查看系统版本"><a href="#查看系统版本" class="headerlink" title="查看系统版本"></a>查看系统版本</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
+<p>输出结果为<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID:	Ubuntu</span><br><span class="line">Description:	Ubuntu 16.04 LTS</span><br><span class="line">Release:	16.04</span><br><span class="line">Codename:	xenial</span><br></pre></td></tr></table></figure><br><strong>注意</strong>： Codename 为 <code>xenial</code>，该名称为我们 Ubuntu 系统的名称，修改数据源需要用到该名称</p>
+<h3 id="编辑数据源"><a href="#编辑数据源" class="headerlink" title="编辑数据源"></a>编辑数据源</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>删除全部内容并修改为<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></p>
+<h3 id="更新数据源"><a href="#更新数据源" class="headerlink" title="更新数据源"></a>更新数据源</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<h2 id="常用-APT-命令"><a href="#常用-APT-命令" class="headerlink" title="常用 APT 命令"></a>常用 APT 命令</h2><h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install packagename</span><br></pre></td></tr></table></figure>
+<h3 id="删除软件包"><a href="#删除软件包" class="headerlink" title="删除软件包"></a>删除软件包</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove packagename</span><br></pre></td></tr></table></figure>
+<h3 id="更新软件包列表"><a href="#更新软件包列表" class="headerlink" title="更新软件包列表"></a>更新软件包列表</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<h3 id="升级有可用更新的系统（慎用）"><a href="#升级有可用更新的系统（慎用）" class="headerlink" title="升级有可用更新的系统（慎用）"></a>升级有可用更新的系统（慎用）</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get upgrade</span><br></pre></td></tr></table></figure>
+<h2 id="其它-APT-命令"><a href="#其它-APT-命令" class="headerlink" title="其它 APT 命令"></a>其它 APT 命令</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache search package</span><br></pre></td></tr></table></figure>
+<h3 id="获取包信息"><a href="#获取包信息" class="headerlink" title="获取包信息"></a>获取包信息</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache show package</span><br></pre></td></tr></table></figure>
+<h3 id="删除包及配置文件"><a href="#删除包及配置文件" class="headerlink" title="删除包及配置文件"></a>删除包及配置文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove package --purge</span><br></pre></td></tr></table></figure>
+<h3 id="了解使用依赖"><a href="#了解使用依赖" class="headerlink" title="了解使用依赖"></a>了解使用依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache depends package</span><br></pre></td></tr></table></figure>
+<h3 id="查看被哪些包依赖"><a href="#查看被哪些包依赖" class="headerlink" title="查看被哪些包依赖"></a>查看被哪些包依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-cache rdepends package</span><br></pre></td></tr></table></figure>
+<h3 id="安装相关的编译环境"><a href="#安装相关的编译环境" class="headerlink" title="安装相关的编译环境"></a>安装相关的编译环境</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get build-dep package</span><br></pre></td></tr></table></figure>
+<h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get <span class="built_in">source</span> package</span><br></pre></td></tr></table></figure>
+<h3 id="清理无用的包"><a href="#清理无用的包" class="headerlink" title="清理无用的包"></a>清理无用的包</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get clean &amp;&amp; apt-get autoclean</span><br></pre></td></tr></table></figure>
+<h3 id="检查是否有损坏的依赖"><a href="#检查是否有损坏的依赖" class="headerlink" title="检查是否有损坏的依赖"></a>检查是否有损坏的依赖</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get check</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->

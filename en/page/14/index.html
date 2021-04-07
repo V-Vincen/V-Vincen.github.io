@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -488,15 +488,13 @@
       线程的通信
     </h3>
     <div class="post-content-preview">
-      假设一个场景
-需求：使用两个线程打印 1-100。线程1、线程2交替打印。
+      假设一个场景需求：使用两个线程打印 1-100。线程1、线程2交替打印。
 涉及到三个方法
-
 wait()：一旦执行此方法，当前线程就进入阻塞状态，并释放同步监视器。
 notify()：一旦执行此方法，就会唤醒被 wait() 的一个线程。如果有多个线程被 wait()，就唤醒优先级高的那个。
 notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
 
-12345678......
+1234567891......
     </div>
   </a>
   
@@ -529,12 +527,11 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       线程的安全问题
     </h3>
     <div class="post-content-preview">
-      假设一个场景
-需求：创建三个窗口卖票，总票数为100张。
+      假设一个场景需求：创建三个窗口卖票，总票数为100张。
 线程安全问题：卖票过程中，出现了重票、错票。
 问题的原因：当某个线程操作车票的过程中，尚未操作完成时，其他线程参与进来，也操作车票。
 如何解决：当一个线程a 在操作 ticket 的时候，其他线程不能参与进来。直到线程a 操作完 ticket 时，其他线程才可以操作 ticket 。这种情况即使线程a 出现了阻塞，也不能改变。
-在 J......
+在 Ja......
     </div>
   </a>
   
@@ -567,12 +564,10 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       线程的基本概念
     </h3>
     <div class="post-content-preview">
-      基本的进程线程概念
-进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
+      基本的进程线程概念进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
 系统中的进程线程模型是这样的：
-
 进程从操作系统获得基本的内存空间，所有的线程共享着进程的内存地址空间。当然，每个线程也会拥有自己私有的内存地址范围，其他线程不能访问。
-由于所有的线程共享进......
+由于所有的线程共享进程的......
     </div>
   </a>
   
@@ -605,9 +600,7 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       Docker Registry 客户端配置
     </h3>
     <div class="post-content-preview">
-      概述
-我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）
-12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&qu......
+      概述我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&quot......
     </div>
   </a>
   
@@ -640,11 +633,8 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       Docker Registry 私服和 WebUI 安装
     </h3>
     <div class="post-content-preview">
-      安装 Docker Registry 私服
-概述
-官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。
-安装
-Registry 官网 Docker Hub 下载地址......
+      安装 Docker Registry 私服概述官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。
+安装Registry 官网 Docker Hub 下载地址：ht......
     </div>
   </a>
   
@@ -678,9 +668,7 @@ Registry 官网 Docker Hub 下载地址......
     </h3>
     <div class="post-content-preview">
       Nexus 仓库分类
-
-代理仓库（proxy）
-意为第三方仓库，如：
+代理仓库（proxy）意为第三方仓库，如：
 
 maven-central：默认 maven 中央仓库代理
 nuget.org-proxy
@@ -696,7 +684,7 @@ Mixed: 混合模式
 Strict：严格
 Permissive：宽松
 
-宿主......
+宿主仓库......
     </div>
   </a>
   
@@ -729,14 +717,13 @@ Permissive：宽松
       Nexus 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述
-Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。
+      概述Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。
 2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
 
 对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
 升级界面，极大的简化了用户界面的操作和管理。
 提供新的安装包，让部署更加简单。
-增加对 Docker, NeGet, npm, Bower......
+增加对 Docker, NeGet, npm, Bower ......
     </div>
   </a>
   
@@ -769,16 +756,12 @@ Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维�
       GitLab 初始化设置和项目创建
     </h3>
     <div class="post-content-preview">
-      GitLab 的基本设置
-第一次使用时需要做一些初始化设置，点击 管理区域 --&gt; 设置
-帐户和限制
-关闭头像功能，由于 Gravatar 头像为网络头像，在网络情况不理想时可能导致访问时卡顿
+      GitLab 的基本设置第一次使用时需要做一些初始化设置，点击 管理区域 —&gt; 设置
+帐户和限制关闭头像功能，由于 Gravatar 头像为网络头像，在网络情况不理想时可能导致访问时卡顿
 
-注册限制
-由于是内部代码托管服务器，可以直接关闭注册功能，由管理员统一创建用户即可
+注册限制由于是内部代码托管服务器，可以直接关闭注册功能，由管理员统一创建用户即可
 
-GitLab 的账户管理
-使用时请不要直接通过 root 用户操作，需要先创建用户，然后通过创建的用户操作......
+GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要先创建用户，然后通过创建的用户操作，如果你是......
     </div>
   </a>
   
@@ -811,8 +794,7 @@ GitLab 的账户管理
       GitLab 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述
-GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个自托管的 Git 项目仓库，可通过 Web 界面进行访问公开的或者私人项目。它拥有与 Github 类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序（Wall）进行交流。它还提供一个代码片段收集功能可以......
+      概述GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个自托管的 Git 项目仓库，可通过 Web 界面进行访问公开的或者私人项目。它拥有与 Github 类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序（Wall）进行交流。它还提供一个代码片段收集功能可以轻......
     </div>
   </a>
   
@@ -845,15 +827,12 @@ GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个�
       Docker 常用命令
     </h3>
     <div class="post-content-preview">
-      查看 Docker 版本
-1docker version
-构建 Docker 镜像
-commit 构建
-
+      查看 Docker 版本1docker version
+构建 Docker 镜像commit 构建
 先启动一个基本容器生成，然后在该容器中完成自己所需的操作，最后用 commit 命令来生成一个新的 image。
 下命令中：
 &lt;CONTAINER ID&gt;：为在基础容器中完成需求后的容器 id；
-&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 i......
+&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 imga......
     </div>
   </a>
   
@@ -1054,7 +1033,7 @@ commit 构建
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1062,7 +1041,11 @@ commit 构建
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    <a href="/tags/#Hexo" title="Hexo" rel="10">Hexo</a>
+    
+    
+    
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1074,11 +1057,11 @@ commit 构建
     
     
     
-    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="16">Docker</a>
+    
+    
+    
+    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
     
     
     
@@ -1103,10 +1086,6 @@ commit 构建
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1315,20 +1294,20 @@ commit 构建
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
     <a href="/categories/#Atom">
       <li>Atom</li>
     </a>
     
-    <a href="/categories/#Charles">
-      <li>Charles</li>
+    <a href="/categories/#Hexo-Theme-LiveMyLife">
+      <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
     <a href="/categories/#Docker">
       <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#Charles">
+      <li>Charles</li>
     </a>
     
     <a href="/categories/#Docker Compose">

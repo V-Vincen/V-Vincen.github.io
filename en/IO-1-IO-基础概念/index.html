@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,23 +472,19 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。</p>
-<h2 id="相关知识概念">相关知识概念</h2>
-<h3 id="基础概念">基础概念</h3>
-<ul>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。</p>
+<h2 id="相关知识概念"><a href="#相关知识概念" class="headerlink" title="相关知识概念"></a>相关知识概念</h2><h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><ul>
 <li>字符：是指人们使用的记号，抽象意义上的一个符号，比如1、2、3、·#￥%。</li>
 <li>字节：是计算机中存储数据的单元，一个8位的二进制数，是一个很具体的存储空间。</li>
 <li>字符编码（Character encoding）：是一套法则，使用该法则能够对自然语言的字符的一个集合（如字母表或音节表），与其他东西的一个集合进行配对。各个国家和地区所制定的不同 ANSI 编码标准中，都只规定了各自语言所需的字符。</li>
 </ul>
-<h3 id="常见的编码方式">常见的编码方式</h3>
-<ul>
+<h3 id="常见的编码方式"><a href="#常见的编码方式" class="headerlink" title="常见的编码方式"></a>常见的编码方式</h3><ul>
 <li>ASCII 编码：美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为 ASCII 码，一直沿用至今。</li>
 <li>非 ASCII 编码：英语用128个符号编码就够了，但是用来表示其他语言，128个符号是不够的，所以在别的国家编码符号会比128要多，所以问题就出现了，不同的国家有不同的字母，因此，哪怕它们都使用256个符号的编码方式，代表的字母却不一样。</li>
 <li>UTF-8 编码：UTF-8 最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。UTF-8 就是在互联网上使用最广的一种 Unicode 的实现方式。其他实现方式还包括 UTF-16（字符用两个字节或四个字节表示）和 UTF-32（字符用四个字节表示），不过在互联网上基本不用。重复一遍，这里的关系是，UTF-8 是 Unicode 的实现方式之一。</li>
 </ul>
-<h3 id="联系与区别">联系与区别</h3>
-<p>很多时候我们经常提及到字符跟字节之间的关系，这个问题的前提是基于某一种编程语言比如说 Java 或者 C 来说的，因为字符跟字节之间的关系跟字符编码是有着紧密联系的，所以单独讨论字符跟字节之间的关系没有意义，下面简单来看一下他们在不同编码上的的对应关系：</p>
+<h3 id="联系与区别"><a href="#联系与区别" class="headerlink" title="联系与区别"></a>联系与区别</h3><p>很多时候我们经常提及到字符跟字节之间的关系，这个问题的前提是基于某一种编程语言比如说 Java 或者 C 来说的，因为字符跟字节之间的关系跟字符编码是有着紧密联系的，所以单独讨论字符跟字节之间的关系没有意义，下面简单来看一下他们在不同编码上的的对应关系：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -510,20 +506,19 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>Java 语言默认是采用 UTF-8 来进行编码的，下面用 Java 来测试一下：</p>
 <ul>
-<li>
-<p>测试 GBK 编码</p>
+<li><p>测试 GBK 编码</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        byteLen = str.getBytes(<span class="string">&quot;gbk&quot;</span>).length;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">10</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>测试 UTF-8 编码</p>
+<li><p>测试 UTF-8 编码</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">t2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String str = <span class="string">&quot;Hello_安卓&quot;</span>;</span><br><span class="line">    <span class="keyword">int</span> byteLen = str.getBytes().length;</span><br><span class="line">    System.out.println(<span class="string">&quot;字节长度：&quot;</span> + byteLen);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字节长度：<span class="number">12</span></span><br></pre></td></tr></table></figure>
+<p>输出的结果，跟之前的规则是一致的，到这里，字节，编码方式，字符，以及他们之间的联系基本上介绍完了，理解了他们之间的关系，下面的 File 类跟 IO 之间的关系也就比较好理解了。</p>
 </li>
 </ul>
-<p>输出的结果，跟之前的规则是一致的，到这里，字节，编码方式，字符，以及他们之间的联系基本上介绍完了，理解了他们之间的关系，下面的 File 类跟 IO 之间的关系也就比较好理解了。</p>
 
 
         <hr>

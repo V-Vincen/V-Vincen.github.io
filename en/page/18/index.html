@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -488,8 +488,7 @@
       Docker 获取镜像
     </h3>
     <div class="post-content-preview">
-      使用 Docker 镜像
-在之前的介绍中，我们知道镜像是 Docker 的三大组件之一。
+      使用 Docker 镜像在之前的介绍中，我们知道镜像是 Docker 的三大组件之一。
 Docker 运行容器前需要本地存在对应的镜像，如果本地不存在该镜像，Docker 会从镜像仓库下载该镜像。
 本章将介绍更多关于镜像的内容，包括：
 
@@ -497,9 +496,8 @@ Docker 运行容器前需要本地存在对应的镜像，如果本地不存在�
 管理本地主机上的镜像；
 介绍镜像实现的基本原理。
 
-镜像的实现原理
-Docker 镜像是怎么实现增量的修改和维护的？
-每个镜像都由很多层......
+镜像的实现原理Docker 镜像是怎么实现增量的修改和维护的？
+每个镜像都由很多层次构......
     </div>
   </a>
   
@@ -532,8 +530,8 @@ Docker 镜像是怎么实现增量的修改和维护的？
       Docker 安装
     </h3>
     <div class="post-content-preview">
-      安装 Docker
-Docker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
+      安装 DockerDocker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
+
 
 
 
@@ -556,8 +554,9 @@ Edge 版本
 
 
 
+
 同时 Docker 划分为 CE 和 EE。CE 即社区版（免费，支持周期三个月），EE 即企业版，强调安全，付费使用。
-Docker CE 每月发......
+Docker CE 每月......
     </div>
   </a>
   
@@ -591,18 +590,16 @@ Docker CE 每月发......
     </h3>
     <div class="post-content-preview">
       Docker 包括三个基本概念
-
 镜像（Image）
 容器（Container）
 仓库（Repository）
 
 理解了这三个概念，就理解了 Docker 的整个生命周期。
-Docker 引擎
-Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
+Docker 引擎Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
 
 一种服务器，它是一种称为守护进程并且长时间运行的程序。
 REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。
-......
+一个......
     </div>
   </a>
   
@@ -635,8 +632,7 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
       Docker 简介
     </h3>
     <div class="post-content-preview">
-      什么是 Docker
-Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
+      什么是 DockerDocker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
 D......
     </div>
   </a>
@@ -670,14 +666,8 @@ D......
       Ubuntu 常用命令
     </h3>
     <div class="post-content-preview">
-      防火墙相关命令（Ubuntu）
-安装方法
-1sudo apt-get install ufw
-使用方法
-启用
-12sudo ufw default deny sudo ufw enable
-通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。
-对于大部分防火墙操作来说， 其......
+      防火墙相关命令（Ubuntu）安装方法1sudo apt-get install ufw
+使用方法启用12sudo ufw default deny sudo ufw enable通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。对于大部分防火墙操作来说， 其实无非就是的......
     </div>
   </a>
   
@@ -710,16 +700,12 @@ D......
       Ubuntu 安装 MySQL 8.0
     </h3>
     <div class="post-content-preview">
-      删除历史版本 MySQL
-sudo apt-get remove mysql-*
+      删除历史版本 MySQLsudo apt-get remove mysql-*
 然后清理残留的数据
-dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
+dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
 它会跳出一个对话框，你选择 yes 就好了
-安装 MySQL 8.0
-下载deb包
-
-运行命令
-1sudo dpkg -i mysql-apt-config_0.......
+安装 MySQL 8.0下载deb包
+运行命令1sudo dpkg -i mysql-apt-confi......
     </div>
   </a>
   
@@ -752,14 +738,10 @@ dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
       Ubuntu 安装 MySQL 5.7
     </h3>
     <div class="post-content-preview">
-      安装
-更新数据源
-1apt-get update
-安装 MySQL
-1apt-get install mysql-server
+      安装更新数据源1apt-get update
+安装 MySQL1apt-get install mysql-server
 系统将提示您在安装过程中创建 root 密码。选择一个安全的密码，并确保你记住它，因为你以后需要它。接下来，我们将完成 MySQL 的配置。
-配置
-因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本......
+配置因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 My......
     </div>
   </a>
   
@@ -792,19 +774,12 @@ dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
       Ubuntu 安装 Tomcat
     </h3>
     <div class="post-content-preview">
-      概述
-此处以 Tomcat 8.5.23 为例
+      概述此处以 Tomcat 8.5.23 为例
 下载地址：https://tomcat.apache.org/
-解压缩并移动到指定目录
-解压缩
-1tar -zxvf apache-tomcat-8.5.23.tar.gz
-变更目录名
-1mv apache-tomcat-8.5.23 tomcat
-移动目录
-1mv tomcat/ /usr/local/
-常用命令
-启动
-1/usr/local......
+解压缩并移动到指定目录解压缩1tar -zxvf apache-tomcat-8.5.23.tar.gz
+变更目录名1mv apache-tomcat-8.5.23 tomcat
+移动目录1mv tomcat/ /usr/local/
+常用命令启动1/usr/local/tomcat......
     </div>
   </a>
   
@@ -837,16 +812,11 @@ dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
       The Java Development Kit (JDK) is one of three core technology packages used in Java programming, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment)...
     </h3>
     <div class="post-content-preview">
-      概述
-此处以 JDK 1.8.0_152 为例
+      概述此处以 JDK 1.8.0_152 为例
 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html
-解压缩并移动到指定目录
-解压缩
-1tar -zxvf jdk-8u152-linux-x64.tar.gz
-创建目录
-1mkdir -p /usr/local/java
-移动安装包
-1mv jdk1.8......
+解压缩并移动到指定目录解压缩1tar -zxvf jdk-8u152-linux-x64.tar.gz
+创建目录1mkdir -p /usr/local/java
+移动安装包1mv jdk1.8.0_15......
     </div>
   </a>
   
@@ -879,9 +849,9 @@ dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
       Ubuntu 文件权限管理
     </h3>
     <div class="post-content-preview">
-      查看文件和目录的权限
-ls –al：使用ls不带参数只显示文件名称，通过ls –al 可以显示文件或者目录的权限信息。
-ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile......
+      查看文件和目录的权限ls –al：使用ls不带参数只显示文件名称，通过ls –al 可以显示文件或者目录的权限信息。
+ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile
+......
     </div>
   </a>
   
@@ -1082,7 +1052,7 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
   <div class="tags">
     
     
-    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
+    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
     
     
     
@@ -1090,7 +1060,11 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
     
     
     
-    <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    <a href="/tags/#Hexo" title="Hexo" rel="10">Hexo</a>
+    
+    
+    
+    <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
     
     
     
@@ -1102,11 +1076,11 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
     
     
     
-    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="16">Docker</a>
+    
+    
+    
+    <a href="/tags/#Charles" title="Charles" rel="2">Charles</a>
     
     
     
@@ -1131,10 +1105,6 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
     
     
     <a href="/tags/#Guava Retrying" title="Guava Retrying" rel="1">Guava Retrying</a>
-    
-    
-    
-    <a href="/tags/#Hexo" title="Hexo" rel="7">Hexo</a>
     
     
     
@@ -1343,20 +1313,20 @@ ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件�
 <div class="widget">
   <ul>
     
-    <a href="/categories/#Hexo-Theme-LiveMyLife">
-      <li>Hexo-Theme-LiveMyLife</li>
-    </a>
-    
     <a href="/categories/#Atom">
       <li>Atom</li>
     </a>
     
-    <a href="/categories/#Charles">
-      <li>Charles</li>
+    <a href="/categories/#Hexo-Theme-LiveMyLife">
+      <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
     <a href="/categories/#Docker">
       <li>Docker</li>
+    </a>
+    
+    <a href="/categories/#Charles">
+      <li>Charles</li>
     </a>
     
     <a href="/categories/#Docker Compose">

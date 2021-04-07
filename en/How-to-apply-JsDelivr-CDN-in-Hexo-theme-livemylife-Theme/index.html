@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,28 +472,20 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 – <a target="_blank" rel="noopener" href="https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/">免费 CDN 提速 Github 静态资源访问</a> ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。</p>
+        <p>在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 — <a target="_blank" rel="noopener" href="https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/">免费 CDN 提速 Github 静态资源访问</a> ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。</p>
 <p>今天博主想在这里讲一下，在 <code>hexo-theme-livemylife</code> 主题中，JsDelivr CDN 应用加速。众所周知，国内访问 Github 的体验一直不是很好，具体原因就不在这里阐述了。而现在时下流行的许多博客框架，再生成博客静态页面后，往往大家都会选择将其部署在 Github 上。原因当然是因为 Github Page 是免费的，如果你的博客是自己部署在服务器其上的，那请土豪你给博主一个打赏吧，玩笑下。</p>
 <p>但是我刚才也说了 Github 国内访问速度真心慢。当然你也可以选择别的部署方式，博主在 <a target="_blank" rel="noopener" href="https://v-vincen.github.io/en/Four-Ways-to-Deploy-Hexo/">Four Ways to Deploy Hexo</a> 一文中，有相关的其他方案。在该文中博主也阐述了，最终还是选择 Github Page 部署个人博客的原因。</p>
 <p>博主本人在开始写 <code>hexo-theme-livemylife</code> 主题的时候，就希望能够给用该主题的小伙伴带来更好的体验。所以对于 Github 国内访问速度慢这一情况，在 <code>hexo-theme-livemylife</code> 主题中，博主本人添加了 JsDelivr CDN 的配置。</p>
-<h2 id="JsDelivr-CDN-Settings">JsDelivr CDN Settings</h2>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># CDN Setting</span></span><br><span class="line"><span class="comment"># Docs: https://www.jsdelivr.com/?docs=gh</span></span><br><span class="line"><span class="comment"># If Github Pages deploy，you can ues jsdelivr settings</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="attr">jsdelivr:</span></span><br><span class="line">  <span class="attr">jsdelivr_url:</span> <span class="string">https://cdn.jsdelivr.net/gh/</span></span><br><span class="line">  <span class="attr">github_username:</span> <span class="string">V-Vincen</span></span><br></pre></td></tr></table></figure>
+<h2 id="JsDelivr-CDN-Settings"><a href="#JsDelivr-CDN-Settings" class="headerlink" title="JsDelivr CDN Settings"></a>JsDelivr CDN Settings</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># CDN Setting</span></span><br><span class="line"><span class="comment"># Docs: https://www.jsdelivr.com/?docs=gh</span></span><br><span class="line"><span class="comment"># If Github Pages deploy，you can ues jsdelivr settings</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="attr">jsdelivr:</span></span><br><span class="line">  <span class="attr">jsdelivr_url:</span> <span class="string">https://cdn.jsdelivr.net/gh/</span></span><br><span class="line">  <span class="attr">github_username:</span> <span class="string">V-Vincen</span></span><br></pre></td></tr></table></figure>
 <p>在 <code>hexo-theme-livemylife</code> 主题最新的版本中，博主对这一功能做了进一步的升级完善。上一个版本 <code>hexo-theme-livemylife</code> 主题只是对博客中的全部图片做了 CDN 加速处理。而最新版本的 <code>hexo-theme-livemylife</code> 主题，对博客中的全部静态资源（css、img、js）都做了 CDN 加速处理。</p>
-<p><em>Preview:</em><br>
-<img src="cdn.png" alt="cdn"></p>
+<p><em>Preview:</em><br><img src="cdn.png" alt="cdn"></p>
 <p><strong>注意：</strong> 这个配置仅适用于，你是以 Github Page 方式来部署博客的。其实说的在简单点，<code>hexo-theme-livemylife</code> 主题，将博客 Github Page 整个仓库做了 CDN 的加速。如下图这是博主本人自己的博客。</p>
-<p><em>Preview:</em><br>
-<img src="githubpage.png" alt="githubpage"></p>
+<p><em>Preview:</em><br><img src="githubpage.png" alt="githubpage"></p>
 <p><strong>最后还有一点需要注意：</strong> 如果你在本地调试自己写的博客时，切记先将该配置先注释掉，再 <code>hexo s</code>。因为如果你不注释掉的话，<code>localhost:4000</code> 启动后的静态资源路径，全部是指向你的 Github 博客仓库的，会导致你无法实时读取到本地静态资源。所以切记先注释掉该配置，再启动，等调试完成后再开启配置，然后生成静态页面，最后推送到远程仓库。</p>
-<h2 id="JsDelivr-CDN-缓存刷新">JsDelivr CDN 缓存刷新</h2>
-<p>博主在使用 JsDelivr CDN 时，曾遇到了这样一个问题。在一次调整 <code>hexo-theme-livemylife</code> 主题 css 样式时，我修改了某个 css 文件，然后提交到了 Github 仓库，当我部署完成了自己的博客后。在游览器中预览自己的博客时，发现刚才修改的样式并没有生效。进过一系类的排查，终于找到了问题所在 <strong>JsDelivr CDN 缓存是有时效性的</strong>。</p>
+<h2 id="JsDelivr-CDN-缓存刷新"><a href="#JsDelivr-CDN-缓存刷新" class="headerlink" title="JsDelivr CDN 缓存刷新"></a>JsDelivr CDN 缓存刷新</h2><p>博主在使用 JsDelivr CDN 时，曾遇到了这样一个问题。在一次调整 <code>hexo-theme-livemylife</code> 主题 css 样式时，我修改了某个 css 文件，然后提交到了 Github 仓库，当我部署完成了自己的博客后。在游览器中预览自己的博客时，发现刚才修改的样式并没有生效。进过一系类的排查，终于找到了问题所在 <strong>JsDelivr CDN 缓存是有时效性的</strong>。</p>
 <p>在网上看到谋篇文章里是这样说的：JsDelivr 提供的全球 CDN 加速，CDN 的分流作用不仅减少了用户的访问延时，也减少的源站的负载。但其缺点也很明显：当网站更新时，如果 CDN 节点上数据没有及时更新，即便用户再浏览器使用 <code>Ctrl +F5</code> 的方式使浏览器端的缓存失效，也会因为 CDN 边缘节点没有同步最新数据而导致用户端未能及时更新。</p>
 <p>CDN 边缘节点对开发者是透明的，相比于浏览器 <code>Ctrl+F5</code> 的强制刷新来使浏览器本地缓存失效，开发者可以通过 CDN 服务商提供的“刷新缓存”接口来达到清理 CDN 边缘节点缓存的目的。这样开发者在更新数据后，可以使用“刷新缓存”功能来强制 CDN 节点上的数据缓存过期，保证客户端在访问时，拉取到最新的数据。</p>
-<p>对于 JsDelivr，缓存刷新的方式也很简单，只需将想刷新的链接的开头，如下：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>cdn.jsdelivr.net/...</span><br></pre></td></tr></table></figure>
-<p>替换成：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>purge.jsdelivr.net/...</span><br></pre></td></tr></table></figure>
-<p>即可实时刷新。</p>
+<p>对于 JsDelivr，缓存刷新的方式也很简单，只需将想刷新的链接的开头，如下：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>cdn.jsdelivr.net/...</span><br></pre></td></tr></table></figure><br>替换成：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>purge.jsdelivr.net/...</span><br></pre></td></tr></table></figure><br>即可实时刷新。</p>
 <p>所以当你更新了自己博客到 Github 仓库后，<strong>记得及时更新 JsDelivr CDN 缓存</strong>。</p>
 
 

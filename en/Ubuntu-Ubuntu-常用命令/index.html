@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,56 +472,30 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="防火墙相关命令（Ubuntu）">防火墙相关命令（Ubuntu）</h2>
-<h3 id="安装方法">安装方法</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br></pre></td></tr></table></figure>
-<h3 id="使用方法">使用方法</h3>
-<p><strong>启用</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw default deny </span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
-<p>通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。<br>
-对于大部分防火墙操作来说， 其实无非就是的打开关闭端口。</p>
-<p><strong>关闭</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span> </span><br></pre></td></tr></table></figure>
-<p><strong>查看防火墙状态</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status </span><br></pre></td></tr></table></figure>
-<p><strong>开启/禁用相应端口或服务举例</strong></p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 允许外部访问80端口</span></span><br><span class="line">sudo ufw allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问80端口</span></span><br><span class="line">sudo ufw delete allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许此 IP 访问所有的本机端口</span></span><br><span class="line">sudo ufw allow from 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问 smtp 服务</span></span><br><span class="line">sudo ufw deny smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除上面建立的某条规则</span></span><br><span class="line">sudo ufw delete allow smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要拒绝所有的 TCP 流量从10.0.0.0/8 到192.168.0.1地址的22端口</span></span><br><span class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以允许所有 RFC 1918网络（局域网/无线局域网的）访问这个主机（/8,/16,/12是一种网络分级）</span></span><br><span class="line">sudo ufw allow from 10.0.0.0/8</span><br><span class="line">sudo ufw allow from 172.16.0.0/12</span><br><span class="line">sudo ufw allow from 192.168.0.0/16</span><br></pre></td></tr></table></figure>
-<p>推荐设置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny </span><br></pre></td></tr></table></figure>
-<p>这样设置已经很安全，如果有特殊需要，可以使用 <code>sudo ufw allow</code> 开启相应服务。</p>
-<h2 id="进程命令">进程命令</h2>
-<p><strong>查看进程</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep mysql</span><br><span class="line">ps -ef | grep tomcat-8</span><br></pre></td></tr></table></figure>
-<p><strong>结束进程</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kill -9 进程号</span><br></pre></td></tr></table></figure>
+        <h2 id="防火墙相关命令（Ubuntu）"><a href="#防火墙相关命令（Ubuntu）" class="headerlink" title="防火墙相关命令（Ubuntu）"></a>防火墙相关命令（Ubuntu）</h2><h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br></pre></td></tr></table></figure>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p><strong>启用</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw default deny </span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure><br>通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。<br>对于大部分防火墙操作来说， 其实无非就是的打开关闭端口。</p>
+<p><strong>关闭</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span> </span><br></pre></td></tr></table></figure></p>
+<p><strong>查看防火墙状态</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status </span><br></pre></td></tr></table></figure></p>
+<p><strong>开启/禁用相应端口或服务举例</strong><br> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 允许外部访问80端口</span></span><br><span class="line">sudo ufw allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问80端口</span></span><br><span class="line">sudo ufw delete allow 80</span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许此 IP 访问所有的本机端口</span></span><br><span class="line">sudo ufw allow from 192.168.1.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁止外部访问 smtp 服务</span></span><br><span class="line">sudo ufw deny smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除上面建立的某条规则</span></span><br><span class="line">sudo ufw delete allow smtp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要拒绝所有的 TCP 流量从10.0.0.0/8 到192.168.0.1地址的22端口</span></span><br><span class="line">sudo ufw deny proto tcp from 10.0.0.0/8 to 192.168.0.1 port 22</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以允许所有 RFC 1918网络（局域网/无线局域网的）访问这个主机（/8,/16,/12是一种网络分级）</span></span><br><span class="line">sudo ufw allow from 10.0.0.0/8</span><br><span class="line">sudo ufw allow from 172.16.0.0/12</span><br><span class="line">sudo ufw allow from 192.168.0.0/16</span><br></pre></td></tr></table></figure></p>
+<p>推荐设置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ufw</span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br><span class="line">sudo ufw default deny </span><br></pre></td></tr></table></figure><br>这样设置已经很安全，如果有特殊需要，可以使用 <code>sudo ufw allow</code> 开启相应服务。</p>
+<h2 id="进程命令"><a href="#进程命令" class="headerlink" title="进程命令"></a>进程命令</h2><p><strong>查看进程</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep mysql</span><br><span class="line">ps -ef | grep tomcat-8</span><br></pre></td></tr></table></figure></p>
+<p><strong>结束进程</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Kill -9 进程号</span><br></pre></td></tr></table></figure></p>
 <p>补充：</p>
 <ol>
-<li>
-<p>我们经常会用到 <code>kill</code> 命令去杀死一个进程，但是有时会出现 <code>kill</code> 不成功的现象，这是就要用到 <code>kill -9</code>。</p>
+<li><p>我们经常会用到 <code>kill</code> 命令去杀死一个进程，但是有时会出现 <code>kill</code> 不成功的现象，这是就要用到 <code>kill -9</code>。</p>
 </li>
-<li>
-<p>之所以这两个命令会有区别是因为所发送的信号( Signal )是不同的：<br>
-默认情况下 <code>kill</code> 命令的参数为 -15，信号为 <code>SIGTERM</code>，这是告诉进程你需要被关闭，请自行停止运行并退出；而 <code>kill -9</code> 代表的信号是 <code>SIGKILL</code>，表示进程被终止，需要立即退出。</p>
+<li><p>之所以这两个命令会有区别是因为所发送的信号( Signal )是不同的：<br>默认情况下 <code>kill</code> 命令的参数为 -15，信号为 <code>SIGTERM</code>，这是告诉进程你需要被关闭，请自行停止运行并退出；而 <code>kill -9</code> 代表的信号是 <code>SIGKILL</code>，表示进程被终止，需要立即退出。</p>
 </li>
-<li>
-<p>因此 <code>kill -9</code> 表示强制杀死该进程，这个信号不能被捕获也不能被忽略。</p>
+<li><p>因此 <code>kill -9</code> 表示强制杀死该进程，这个信号不能被捕获也不能被忽略。</p>
 </li>
 </ol>
-<h2 id="查看端口">查看端口</h2>
-<p><strong>方法一</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 端口已被监听</span></span><br><span class="line">tcp6       0      0 :::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure>
-<p><strong>方法二</strong></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.189.137 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口已打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">Connected to 192.168.189.137.</span><br><span class="line">Escape character is <span class="string">&#x27;^]&#x27;</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口未打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">telnet: Unable to connect to remote host: Connection refused</span><br></pre></td></tr></table></figure>
-<h2 id="查看日志">查看日志</h2>
-<p>先切换到你的 <code>tomcat</code> 下的 <code>logs：cd usr/local/tomcat/logs</code> 控制台执行：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f catalina.out</span><br></pre></td></tr></table></figure>
-<p>这样运行时就可以实时查看运行日志了</p>
-<h2 id="网络命令">网络命令</h2>
-<p>查看网路链接的状态：<code>systemctl status networking.service</code></p>
+<h2 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h2><p><strong>方法一</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 端口已被监听</span></span><br><span class="line">tcp6       0      0 :::8080                 :::*                    LISTEN</span><br></pre></td></tr></table></figure></p>
+<p><strong>方法二</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">telnet 192.168.189.137 8080</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口已打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">Connected to 192.168.189.137.</span><br><span class="line">Escape character is <span class="string">&#x27;^]&#x27;</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表端口未打开</span></span><br><span class="line">Trying 192.168.189.137...</span><br><span class="line">telnet: Unable to connect to remote host: Connection refused</span><br></pre></td></tr></table></figure></p>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>先切换到你的 <code>tomcat</code> 下的 <code>logs：cd usr/local/tomcat/logs</code> 控制台执行：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f catalina.out</span><br></pre></td></tr></table></figure><br>这样运行时就可以实时查看运行日志了</p>
+<h2 id="网络命令"><a href="#网络命令" class="headerlink" title="网络命令"></a>网络命令</h2><p>查看网路链接的状态：<code>systemctl status networking.service</code></p>
 <p>重启网路链接：<code>systemctl restart networking.service</code></p>
 <p>关闭网路链接：<code>systemctl stop networking.service</code></p>
-<h2 id="MySQL-命令">MySQL 命令</h2>
-<p>启动 mysql 服务：<code>systemctl start mysqld.service</code></p>
+<h2 id="MySQL-命令"><a href="#MySQL-命令" class="headerlink" title="MySQL 命令"></a>MySQL 命令</h2><p>启动 mysql 服务：<code>systemctl start mysqld.service</code></p>
 <p>停止 mysql 服务：<code>systemctl stop mysqld.service</code></p>
 <p>重启 mysql 服务：<code>systemctl restart mysqld.service</code></p>
 <p>查看 mysql 服务当前状态：<code>systemctl status mysqld.service</code></p>

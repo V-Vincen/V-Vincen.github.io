@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -472,46 +472,34 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="安装-Docker-Registry-私服">安装 Docker Registry 私服</h2>
-<h3 id="概述">概述</h3>
-<p>官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。</p>
-<h3 id="安装">安装</h3>
-<p>Registry 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/_/registry">https://hub.docker.com/_/registry</a></p>
+        <h2 id="安装-Docker-Registry-私服"><a href="#安装-Docker-Registry-私服" class="headerlink" title="安装 Docker Registry 私服"></a>安装 Docker Registry 私服</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Registry 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/_/registry">https://hub.docker.com/_/registry</a></p>
 <p>我们使用 Docker 来安装和运行 Registry，配置版本为最新版 2.7 版。</p>
-<p>在之前的 <a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/07/18/Docker-6-Docker-%E4%BB%93%E5%BA%93/">Docker 私有仓库</a> 章节中已经提到过如何配置和使用容器运行私有仓库，这里我们使用 <code>docker-compose</code> 配置如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5000</span><span class="string">:5000</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/registry/data:/var/lib/registry</span></span><br></pre></td></tr></table></figure>
-<h3 id="测试">测试</h3>
-<p>启动成功后需要测试服务端是否能够正常提供服务，有两种方式</p>
+<p>在之前的 <a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/07/18/Docker-6-Docker-%E4%BB%93%E5%BA%93/">Docker 私有仓库</a> 章节中已经提到过如何配置和使用容器运行私有仓库，这里我们使用 <code>docker-compose</code> 配置如下：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5000</span><span class="string">:5000</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/registry/data:/var/lib/registry</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动成功后需要测试服务端是否能够正常提供服务，有两种方式</p>
 <ul>
 <li>浏览器端访问</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:5000/v2/</a></p>
 <p><img src="1.png" alt="1"></p>
 <ul>
-<li>终端访问</li>
+<li>终端访问<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://ip:5000/v2/</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://ip:5000/v2/</span><br></pre></td></tr></table></figure>
 <p><font color=red>注意：</font>如想搭建一个拥有权限认证、TLS 的私有仓库，Docker 私服高级配置可参考：</p>
 <ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/egworkspace/article/details/80518647">手把手教你搭建 Docker Registry 私服</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/egworkspace/article/details/80518647">手把手教你搭建 Docker Registry 私服</a></p>
 </li>
-<li>
-<p><a target="_blank" rel="noopener" href="https://www.funtl.com/zh/docs-docker/Docker-%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.html">Docker 私有仓库高级配置</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://www.funtl.com/zh/docs-docker/Docker-%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE.html">Docker 私有仓库高级配置</a></p>
 </li>
 </ul>
-<h2 id="安装-Docker-Registry-WebUI">安装 Docker Registry WebUI</h2>
-<h3 id="概述-2">概述</h3>
-<p>私服安装成功后就可以使用 docker 命令行工具对 registry 做各种操作了。然而不太方便的地方是不能直观的查看 registry 中的资源情况。如果可以使用 UI 工具管理镜像就更好了。这里介绍两个 Docker Registry WebUI 工具：</p>
+<h2 id="安装-Docker-Registry-WebUI"><a href="#安装-Docker-Registry-WebUI" class="headerlink" title="安装 Docker Registry WebUI"></a>安装 Docker Registry WebUI</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>私服安装成功后就可以使用 docker 命令行工具对 registry 做各种操作了。然而不太方便的地方是不能直观的查看 registry 中的资源情况。如果可以使用 UI 工具管理镜像就更好了。这里介绍两个 Docker Registry WebUI 工具：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/kwk/docker-registry-frontend">docker-registry-frontend</a></li>
 <li><a target="_blank" rel="noopener" href="https://hub.docker.com/r/hyper/docker-registry-web/">docker-registry-web</a></li>
 </ul>
 <p>两个工具的功能和界面都差不多，我们以 <code>docker-registry-fontend</code> 为例讲解</p>
-<h3 id="docker-registry-frontend">docker-registry-frontend</h3>
-<p>我们使用 docker-compose 来安装和运行，<code>docker-compose.yml</code> 配置如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">frontend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">konradkleine/docker-registry-frontend:v2</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.crt:/etc/apache2/server.crt:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.key:/etc/apache2/server.key:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_HOST=ip</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_PORT=5000</span></span><br></pre></td></tr></table></figure>
-<p>注意：请将配置文件中的主机和端口换成自己仓库的地址</p>
+<h3 id="docker-registry-frontend"><a href="#docker-registry-frontend" class="headerlink" title="docker-registry-frontend"></a>docker-registry-frontend</h3><p>我们使用 docker-compose 来安装和运行，<code>docker-compose.yml</code> 配置如下：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">frontend:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">konradkleine/docker-registry-frontend:v2</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.crt:/etc/apache2/server.crt:ro</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs/frontend.key:/etc/apache2/server.key:ro</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_HOST=ip</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ENV_DOCKER_REGISTRY_PORT=5000</span></span><br></pre></td></tr></table></figure><br>注意：请将配置文件中的主机和端口换成自己仓库的地址</p>
 <p>运行成功后在浏览器访问：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:5000</a></p>
 <p><img src="2.png" alt="2"></p>
 <p><img src="3.png" alt="3"></p>
@@ -663,7 +651,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Docker-Registry-%E7%A7%81%E6%9C%8D"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装 Docker Registry 私服</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">测试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Docker-Registry-WebUI"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装 Docker Registry WebUI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0-2"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-registry-frontend"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">docker-registry-frontend</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Docker-Registry-%E7%A7%81%E6%9C%8D"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装 Docker Registry 私服</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">测试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Docker-Registry-WebUI"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装 Docker Registry WebUI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#docker-registry-frontend"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">docker-registry-frontend</span></a></li></ol></li></ol>
         
         </div>
       </aside>

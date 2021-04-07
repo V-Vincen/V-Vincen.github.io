@@ -259,17 +259,6 @@
           
           
           <li>
-            <a href="/about/">
-              
-              ABOUT
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -284,6 +273,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">568</span> In Total
+              Words <span class="post-count">561</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,47 +472,24 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用手动安装的方式部署。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用手动安装的方式部署。</p>
 <p><strong>注意</strong>： 集群为大于等于3个奇数，如 3、5、7,不宜太多，集群机器多了选举和数据同步耗时长，不稳定。</p>
-<h2 id="单机模式">单机模式</h2>
-<h3 id="下载">下载</h3>
-<p>进入要下载的版本的目录，选择 <code>.tar.gz</code> 文件下载，下载链接：<a target="_blank" rel="noopener" href="http://archive.apache.org/dist/zookeeper/">http://archive.apache.org/dist/zookeeper/</a></p>
-<h3 id="安装">安装</h3>
-<p>注意： 需要先安装 <code>Java</code></p>
-<p>使用 <code>tar</code> 解压要安装的目录即可，以 <code>3.5.6</code> 版本为例，解压到 <code>/usr/local/zookeeper-3.5.6</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper-3.5.6.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure>
-<h3 id="配置">配置</h3>
-<p>在根目录下创建 <code>data</code> 和 <code>logs</code> 两个目录用于存储数据和日志</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/zookeeper-3.5.6</span><br><span class="line">mkdir data</span><br><span class="line">mkdir logs</span><br></pre></td></tr></table></figure>
-<p>在 <code>conf</code> 目录下新建 <code>zoo.cfg</code> 文件，写入以下内容保存</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper-3.5.6/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper-3.5.6/logs</span><br><span class="line">clientPort=2181</span><br></pre></td></tr></table></figure>
-<h3 id="启动和停止">启动和停止</h3>
-<p>进入 <code>bin</code> 目录，启动、停止、重启和查看当前节点状态</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br><span class="line">./zkServer.sh stop</span><br><span class="line">./zkServer.sh restart</span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
-<h2 id="伪集群模式">伪集群模式</h2>
-<p>伪集群模式就是在同一主机启动多个 zookeeper 并组成集群，下边以在 192.168.10.134 主机上创 3 个 zookeeper 组集群为例。</p>
+<h2 id="单机模式"><a href="#单机模式" class="headerlink" title="单机模式"></a>单机模式</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>进入要下载的版本的目录，选择 <code>.tar.gz</code> 文件下载，下载链接：<a target="_blank" rel="noopener" href="http://archive.apache.org/dist/zookeeper/">http://archive.apache.org/dist/zookeeper/</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>注意： 需要先安装 <code>Java</code></p>
+<p>使用 <code>tar</code> 解压要安装的目录即可，以 <code>3.5.6</code> 版本为例，解压到 <code>/usr/local/zookeeper-3.5.6</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper-3.5.6.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在根目录下创建 <code>data</code> 和 <code>logs</code> 两个目录用于存储数据和日志<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/zookeeper-3.5.6</span><br><span class="line">mkdir data</span><br><span class="line">mkdir logs</span><br></pre></td></tr></table></figure></p>
+<p>在 <code>conf</code> 目录下新建 <code>zoo.cfg</code> 文件，写入以下内容保存<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper-3.5.6/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper-3.5.6/logs</span><br><span class="line">clientPort=2181</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动和停止"><a href="#启动和停止" class="headerlink" title="启动和停止"></a>启动和停止</h3><p>进入 <code>bin</code> 目录，启动、停止、重启和查看当前节点状态<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br><span class="line">./zkServer.sh stop</span><br><span class="line">./zkServer.sh restart</span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure></p>
+<h2 id="伪集群模式"><a href="#伪集群模式" class="headerlink" title="伪集群模式"></a>伪集群模式</h2><p>伪集群模式就是在同一主机启动多个 zookeeper 并组成集群，下边以在 192.168.10.134 主机上创 3 个 zookeeper 组集群为例。</p>
 <p>将通过单机模式安装的 zookeeper，复制成 zookeeper1、zookeeper2、zookeeper3 三份。</p>
-<h3 id="zookeeper1">zookeeper1</h3>
-<p><strong>修改配置文件</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper1/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper1/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
-<p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;1&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
-<h3 id="zookeeper2">zookeeper2</h3>
-<p><strong>修改配置文件</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper2/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper2/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
-<p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;2&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
-<h3 id="zookeeper3">zookeeper3</h3>
-<p><strong>修改配置文件</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper3/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper3/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure>
-<p><strong>设置服务器 ID</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;3&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure>
-<h2 id="启动和停止-2">启动和停止</h2>
-<p>分别启动服务器，顺序无所谓</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br><span class="line">./zkServer.sh stop</span><br><span class="line">./zkServer.sh restart</span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
-<h2 id="集群模式">集群模式</h2>
-<p>集群模式就是在不同主机上安装 zookeeper 然后组成集群的模式，操作步骤同上，此处不再赘述。</p>
+<h3 id="zookeeper1"><a href="#zookeeper1" class="headerlink" title="zookeeper1"></a>zookeeper1</h3><p><strong>修改配置文件</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper1/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper1/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure></p>
+<p><strong>设置服务器 ID</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;1&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure></p>
+<h3 id="zookeeper2"><a href="#zookeeper2" class="headerlink" title="zookeeper2"></a>zookeeper2</h3><p><strong>修改配置文件</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper2/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper2/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure></p>
+<p><strong>设置服务器 ID</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;2&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure></p>
+<h3 id="zookeeper3"><a href="#zookeeper3" class="headerlink" title="zookeeper3"></a>zookeeper3</h3><p><strong>修改配置文件</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">dataDir=/usr/local/zookeeper3/data</span><br><span class="line">dataLogDir=/usr/local/zookeeper3/logs</span><br><span class="line">clientPort=2181</span><br><span class="line">initLimit=5</span><br><span class="line">syncLimit=2</span><br><span class="line">server.1=192.168.10.134:2888:3888</span><br><span class="line">server.2=192.168.10.134:4888:5888</span><br><span class="line">server.3=192.168.10.134:6888:7888</span><br></pre></td></tr></table></figure></p>
+<p><strong>设置服务器 ID</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;3&#x27; &gt; data/myid</span><br></pre></td></tr></table></figure></p>
+<h2 id="启动和停止-1"><a href="#启动和停止-1" class="headerlink" title="启动和停止"></a>启动和停止</h2><p>分别启动服务器，顺序无所谓<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br><span class="line">./zkServer.sh stop</span><br><span class="line">./zkServer.sh restart</span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure></p>
+<h2 id="集群模式"><a href="#集群模式" class="headerlink" title="集群模式"></a>集群模式</h2><p>集群模式就是在不同主机上安装 zookeeper 然后组成集群的模式，操作步骤同上，此处不再赘述。</p>
 
 
         <hr>
@@ -661,7 +638,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单机模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">启动和停止</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">伪集群模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">zookeeper1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">zookeeper2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">zookeeper3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2-2"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">启动和停止</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">集群模式</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">单机模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">启动和停止</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%AA%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">伪集群模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper1"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">zookeeper1</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper2"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">zookeeper2</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#zookeeper3"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">zookeeper3</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2-1"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">启动和停止</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">集群模式</span></a></li></ol>
         
         </div>
       </aside>
