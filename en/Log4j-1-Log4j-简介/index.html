@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,8 +472,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Log4j-日志级别">Log4j 日志级别</h2>
-<hr>
+        <h2 id="Log4j-日志级别"><a href="#Log4j-日志级别" class="headerlink" title="Log4j 日志级别"></a>Log4j 日志级别</h2><hr>
 <p>为了方便对于日志信息的输出显示，对日志内容进行了分级管理。日志级别由高到低，共分 6 个级别：</p>
 <ul>
 <li>fatal(致命的)</li>
@@ -483,18 +482,15 @@
 <li>debug</li>
 <li>trace(堆栈)</li>
 </ul>
-<h2 id="Log4j-日志输出控制文件">Log4j 日志输出控制文件</h2>
-<hr>
-<h3 id="日志输出简介">日志输出简介</h3>
-<p>Log4j 的日志输出控制文件，主要由三个部分构成：</p>
+<h2 id="Log4j-日志输出控制文件"><a href="#Log4j-日志输出控制文件" class="headerlink" title="Log4j 日志输出控制文件"></a>Log4j 日志输出控制文件</h2><hr>
+<h3 id="日志输出简介"><a href="#日志输出简介" class="headerlink" title="日志输出简介"></a>日志输出简介</h3><p>Log4j 的日志输出控制文件，主要由三个部分构成：</p>
 <ul>
 <li>日志信息的输出位置：控制日志信息将要输出的位置，是控制台还是文件等。</li>
 <li>日志信息的输出格式：控制日志信息的显示格式，即以怎样的字符串形式显示。</li>
 <li>日志信息的输出级别：控制日志信息的显示内容，即显示哪些级别的日志信息。</li>
 </ul>
 <p>有了日志输出控制文件，代码中只要设置好日志信息内容及其级别即可，通过控制文件便可控制这些日志信息的输出了。</p>
-<h3 id="日志属性配置文件">日志属性配置文件</h3>
-<p>日志属性文件 log4j.properties 是专门用于控制日志输出的。其主要进行三方面控制：</p>
+<h3 id="日志属性配置文件"><a href="#日志属性配置文件" class="headerlink" title="日志属性配置文件"></a>日志属性配置文件</h3><p>日志属性文件 log4j.properties 是专门用于控制日志输出的。其主要进行三方面控制：</p>
 <ul>
 <li>输出位置：控制日志将要输出的位置，是控制台还是文件等。</li>
 <li>输出布局：控制日志信息的显示形式。</li>
@@ -503,17 +499,14 @@
 <p>日志属性文件由两个对象组成：日志附加器与根日志。</p>
 <p>根日志，即为 Java 代码中的日志记录器，其主要由两个属性构成：日志输出级别与日志附加器。</p>
 <p>日志附加器，则由日志输出位置定义，由其它很多属性进行修饰，如输出布局、文件位置、文件大小等。</p>
-<h3 id="什么是日志附加器？">什么是日志附加器？</h3>
-<p>所谓日志附加器，就是为日志记录器附加上很多其它设置信息。附加器的本质是一个接口，其定义语法为： <code>log4j.appender.appenderName</code> = <code>输出位置</code></p>
-<h3 id="常用的附加器实现类">常用的附加器实现类</h3>
-<ul>
+<h3 id="什么是日志附加器？"><a href="#什么是日志附加器？" class="headerlink" title="什么是日志附加器？"></a>什么是日志附加器？</h3><p>所谓日志附加器，就是为日志记录器附加上很多其它设置信息。附加器的本质是一个接口，其定义语法为： <code>log4j.appender.appenderName</code> = <code>输出位置</code></p>
+<h3 id="常用的附加器实现类"><a href="#常用的附加器实现类" class="headerlink" title="常用的附加器实现类"></a>常用的附加器实现类</h3><ul>
 <li><code>org.apache.log4j.ConsoleAppender</code>：日志输出到控制台</li>
 <li><code>org.apache.log4j.FileAppender</code>：日志输出到文件</li>
 <li><code>org.apache.log4j.RollingFileAppender</code>：当日志文件大小到达指定尺寸的时候将产生一个新的日志文件</li>
 <li><code>org.apache.log4j.DailyRollingFileAppender</code>：每天产生一个日志文件</li>
 </ul>
-<h3 id="常用布局类型">常用布局类型</h3>
-<ul>
+<h3 id="常用布局类型"><a href="#常用布局类型" class="headerlink" title="常用布局类型"></a>常用布局类型</h3><ul>
 <li><code>org.apache.log4j.HTMLLayout</code>：网页布局，以 HTML 表格形式布局</li>
 <li><code>org.apache.log4j.SimpleLayout</code>：简单布局，包含日志信息的级别和信息字符串</li>
 <li><code>org.apache.log4j.PatternLayout</code>：匹配器布局，可以灵活地指定布局模式。其主要是通过设置 PatternLayout 的 ConversionPattern 属性值来控制具体输出格式的 。</li>
@@ -1329,21 +1322,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

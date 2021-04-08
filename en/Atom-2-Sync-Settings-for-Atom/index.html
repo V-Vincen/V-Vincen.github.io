@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">449</span> In Total
+              Words <span class="post-count">448</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -473,32 +473,26 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>在 <a href="https://v-vincen.life/2020/05/13/Atom-1-Atom/">[Atom] 1 Atom</a> 中，对 Atom 已经有了大致的了解。今天我重点介绍一个插件，我们千辛万苦才配置好的 Atom，哪天电脑出了问题，需要重新安装配置 Atom，相信这个过程你一定不想来第二遍，所以我们的备份插件 <code>sync-settings</code> 就闪亮登场了，它的配置不麻烦，但过程比较曲折，所以提出来详细说明。</p>
-<h2 id="sync-settings"><code>sync-settings</code></h2>
-<p><code>sync-settings</code> 的备份，其实是把 Atom 的配置文件备份在 GitHub上。所以首先需要在 GitHub 上获取两样东西，Access Token 和 Gist Id。</p>
-<h3 id="generate-access-token"><code>generate access token</code></h3>
-<p>看图操作：</p>
+<h2 id="sync-settings"><a href="#sync-settings" class="headerlink" title="sync-settings"></a><code>sync-settings</code></h2><p><code>sync-settings</code> 的备份，其实是把 Atom 的配置文件备份在 GitHub上。所以首先需要在 GitHub 上获取两样东西，Access Token 和 Gist Id。</p>
+<h3 id="generate-access-token"><a href="#generate-access-token" class="headerlink" title="generate access token"></a><code>generate access token</code></h3><p>看图操作：</p>
 <p><img src="1.png" alt="1"></p>
 <p><img src="2.png" alt="2"></p>
 <p><img src="3.png" alt="3"></p>
 <p><img src="4.png" alt="4"></p>
 <p><img src="5.png" alt="5"></p>
-<p>注：切记复制下你生成的 <code>Access Token</code>，因为只会显示一次，以后不会再显示了，<br>
-那有人可能会问，那要是没记录下来怎么办？没记录下来也没关系，把它删了后再重新生成就行了。</p>
-<h3 id="create-gist"><code>create gist</code></h3>
-<p>看图操作：</p>
+<p>注：切记复制下你生成的 <code>Access Token</code>，因为只会显示一次，以后不会再显示了，<br>那有人可能会问，那要是没记录下来怎么办？没记录下来也没关系，把它删了后再重新生成就行了。</p>
+<h3 id="create-gist"><a href="#create-gist" class="headerlink" title="create gist"></a><code>create gist</code></h3><p>看图操作：</p>
 <p><img src="6.png" alt="6"></p>
 <p><img src="7.png" alt="7"></p>
 <p><img src="8.png" alt="8"></p>
 <p><img src="9.png" alt="9"></p>
-<h3 id="sync-settings-configuration"><code>sync-settings configuration</code></h3>
-<p>然后将 Access Token 和 Gist Id 填入 <code>sync-settings</code> 插件的配置页面。</p>
+<h3 id="sync-settings-configuration"><a href="#sync-settings-configuration" class="headerlink" title="sync-settings configuration"></a><code>sync-settings configuration</code></h3><p>然后将 Access Token 和 Gist Id 填入 <code>sync-settings</code> 插件的配置页面。</p>
 <p><img src="10.png" alt="10"></p>
 <p>使用快捷键 <code>Shift + Command + P</code> 呼出命令栏，输入 <code>sync backup</code>，回车。</p>
 <p><img src="11.png" alt="11"></p>
 <p>最后会提示以下信息，那么恭喜你将自己的 Atom 所有信息都备份了，下次恢复备份只需要按照上一步输入 <code>sync restore</code> 就行了。</p>
 <p><img src="12.png" alt="12"></p>
-<h2 id="总结">总结</h2>
-<p>Atom 是一款现代化的文本编辑器，界面设计赏心悦目，让人在使用中神清气爽，优秀的第三方插件使其工作效率可以大大增强；但它的缺点也是非常明显的，性能和流畅度比之于 Vim 或 Sublime 还有待提高。对于 Atom，笔者的使用场景是做一些简单的代码编辑和 markdown 的编写，使用起来非常顺手，所以这里也推荐给各位。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Atom 是一款现代化的文本编辑器，界面设计赏心悦目，让人在使用中神清气爽，优秀的第三方插件使其工作效率可以大大增强；但它的缺点也是非常明显的，性能和流畅度比之于 Vim 或 Sublime 还有待提高。对于 Atom，笔者的使用场景是做一些简单的代码编辑和 markdown 的编写，使用起来非常顺手，所以这里也推荐给各位。</p>
 
 
         <hr>
@@ -1299,21 +1293,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

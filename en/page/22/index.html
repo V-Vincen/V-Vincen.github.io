@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -489,11 +489,8 @@
     </h3>
     <div class="post-content-preview">
       在实际的项目开发中，常常需要使用到分页，分页方式分为两种：前端分页和后端分页。
-前端分页
-一次 ajax 请求数据的所有记录，然后在前端缓存并且计算 count 和分页逻辑，一般前端组件（例如 dataTable）会提供分页动作。
-特点是：简单，很适合小规模的 web 平台；当数据量大的时候会产生性能问题，在查询和网络传输的时间会很长。
-后端分页
-在 ajax 请求中指定页码 pageNum......
+前端分页一次 ajax 请求数据的所有记录，然后在前端缓存并且计算 count 和分页逻辑，一般前端组件（例如 dataTable）会提供分页动作。特点是：简单，很适合小规模的 web 平台；当数据量大的时候会产生性能问题，在查询和网络传输的时间会很长。
+后端分页在 ajax 请求中指定页码 pageNum 和每......
     </div>
   </a>
   
@@ -526,13 +523,11 @@
       Spring Boot 测试 MyBatis 案例
     </h3>
     <div class="post-content-preview">
-      使用 tk.mybatis 操作数据库
-经过之前章节一系列的配置之后，我们已经满足了使用 MyBaits 操作数据库的必要条件，下面是使用 tk.mybatis 操作数据库的例子。
+      使用 tk.mybatis 操作数据库经过之前章节一系列的配置之后，我们已经满足了使用 MyBaits 操作数据库的必要条件，下面是使用 tk.mybatis 操作数据库的例子。
 我们以测试操作用户表为例（tb_user）
 修改入口类
-
 需要使用 @MapperScan 注解来指定 Mapper 接口的路径
-PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spri......
+PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring......
     </div>
   </a>
   
@@ -567,9 +562,7 @@ PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spri......
     <div class="post-content-preview">
       我们无需手动编写 实体类、DAO、XML 配置文件，只需要使用 MyBatis 提供的一个 Maven 插件就可以自动生成所需的各种文件便能够满足基本的业务需求，如果业务比较复杂只需要修改相关文件即可。
 配置插件
-
-在 pom.xml 文件中增加 mybatis-generator-maven-plugin 插件
-123456789101112131415161718192021222324......
+在 pom.xml 文件中增加 mybatis-generator-maven-plugin 插件12345678910111213141516171819202122232425......
     </div>
   </a>
   
@@ -604,10 +597,8 @@ PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spri......
       整合 Druid、MyBatis 和 PageHelper
     </h3>
     <div class="post-content-preview">
-      Spring Boot 整合 Druid
-概述
-Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
-Druid 是目前最好的数据库连......
+      Spring Boot 整合 Druid概述Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
+Druid 是目前最好的数据库连接池......
     </div>
   </a>
   
@@ -645,9 +636,7 @@ Druid 是目前最好的数据库连......
     </h3>
     <div class="post-content-preview">
       本章为 Thymeleaf 语法参考，主要介绍如：循环、判断、模板布局、内置对象等。
-声明
-修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法。
-12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&......
+声明修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法。12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&qu......
     </div>
   </a>
   
@@ -680,9 +669,7 @@ Druid 是目前最好的数据库连......
       Thymeleaf 常用语法
     </h3>
     <div class="post-content-preview">
-      引入 Thymeleaf
-修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法，这是下面语法的前提。
-12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;&lt;html xmlns......
+      引入 Thymeleaf修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法，这是下面语法的前提。12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;&lt;html xmlns=&......
     </div>
   </a>
   
@@ -715,11 +702,9 @@ Druid 是目前最好的数据库连......
       什么是 Thymeleaf
     </h3>
     <div class="post-content-preview">
-      Thymeleaf 简介
-概述
-Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点
+      Thymeleaf 简介概述Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点
 
-Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签......
+Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签里增......
     </div>
   </a>
   
@@ -753,14 +738,10 @@ Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美�
     </h3>
     <div class="post-content-preview">
       引入依赖
-
 主要增加spring-boot-starter-thymeleaf 和 nekohtml 这两个依赖
 
 spring-boot-starter-thymeleaf：Thymeleaf 自动配置
-nekohtml：允许使用非严格的 HTML 语法
-完整的 pom.xml 如下：
-
-123456789101112131415161718192021222324252627282930......
+nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：1234567891011121314151617181920212223242526272829303132......
     </div>
   </a>
   
@@ -795,13 +776,9 @@ nekohtml：允许使用非严格的 HTML 语法
       Spring Boot 常用配置
     </h3>
     <div class="post-content-preview">
-      Spring Boot 常用配置
-概述
-本章节主要介绍一下Spring Boot中的一些常用配置，比如：自定义Banner、配置日志、关闭特定的自动配置等。
+      Spring Boot 常用配置概述本章节主要介绍一下Spring Boot中的一些常用配置，比如：自定义Banner、配置日志、关闭特定的自动配置等。
 自定义 Banner
-
-在Spring Boot启动的时候会有一个默认的启动图案
-1234567  .   ____          _            __ _ _ /\\ / ___&#x27;_ __ _ _(_)_ __......
+在Spring Boot启动的时候会有一个默认的启动图案1234567  .   ____          _            __ _ _ /\\ / ___&#x27;_ __ _ _(_)_ __  __......
     </div>
   </a>
   
@@ -834,9 +811,8 @@ nekohtml：允许使用非严格的 HTML 语法
       Spring Boot 单元测试
     </h3>
     <div class="post-content-preview">
-      概述
-主要是通过@RunWith和@SpringBootTest注解来开启单元测试功能
-1234567891011121314151617181920212223242526272829303132333435363738394041package com.funtl.hello.spring.boot;import org.junit.Before;import org.junit.Tes......
+      概述主要是通过@RunWith和@SpringBootTest注解来开启单元测试功能
+1234567891011121314151617181920212223242526272829303132333435363738394041package com.funtl.hello.spring.boot;import org.junit.Before;import org.junit.Test......
     </div>
   </a>
   
@@ -1916,21 +1892,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

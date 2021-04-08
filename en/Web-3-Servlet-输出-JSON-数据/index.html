@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -412,7 +412,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">247</span> In Total
+              Words <span class="post-count">246</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -474,14 +474,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="依赖jar包">依赖jar包</h2>
-<p>gson-2.8.5： 对象和 json 字符串之间相互转换。</p>
-<h2 id="代码实现-–-普通字符串返回">代码实现 – 普通字符串返回</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/jsonServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JsonServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span>     ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 解决json中文乱码</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/json;charset=UTF-8&quot;</span>);</span><br><span class="line">        response.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        String str =<span class="string">&quot;&#123;\&quot;姓名\&quot;:\&quot;HaHa先生\&quot;,\&quot;年龄\&quot;:\&quot;18岁啦\&quot;&#125;&quot;</span>;</span><br><span class="line">        out.println(str);</span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码实现-–-对象-–-使用-Gson-对象转字符串">代码实现 – 对象 – 使用 Gson 对象转字符串</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">    <span class="comment">// 解决json中文乱码</span></span><br><span class="line">    response.setContentType(<span class="string">&quot;text/json;charset=UTF-8&quot;</span>);</span><br><span class="line">    response.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    PrintWriter out = response.getWriter();</span><br><span class="line">    List&lt;Client&gt; list = clientService.findList(<span class="keyword">new</span> Client());</span><br><span class="line">    Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">    String json = gson.toJson(list);</span><br><span class="line">    out.println(json);</span><br><span class="line">    out.flush();</span><br><span class="line">    out.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="使用-ajax-获取-json-数据">使用 ajax 获取 json 数据</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url:<span class="string">&#x27;$&#123;ctx&#125;/jsonServlet&#x27;</span>,</span><br><span class="line">        type:<span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">        data:&#123;&#125;,</span><br><span class="line">        dataType:<span class="string">&#x27;json&#x27;</span>,</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> str =<span class="built_in">JSON</span>.stringify(data);</span><br><span class="line">            alert(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+        <h2 id="依赖jar包"><a href="#依赖jar包" class="headerlink" title="依赖jar包"></a>依赖jar包</h2><p>gson-2.8.5： 对象和 json 字符串之间相互转换。</p>
+<h2 id="代码实现-—-普通字符串返回"><a href="#代码实现-—-普通字符串返回" class="headerlink" title="代码实现 — 普通字符串返回"></a>代码实现 — 普通字符串返回</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/jsonServlet&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JsonServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span>     ServletException, IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 解决json中文乱码</span></span><br><span class="line">        response.setContentType(<span class="string">&quot;text/json;charset=UTF-8&quot;</span>);</span><br><span class="line">        response.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        PrintWriter out = response.getWriter();</span><br><span class="line">        String str =<span class="string">&quot;&#123;\&quot;姓名\&quot;:\&quot;HaHa先生\&quot;,\&quot;年龄\&quot;:\&quot;18岁啦\&quot;&#125;&quot;</span>;</span><br><span class="line">        out.println(str);</span><br><span class="line">        out.flush();</span><br><span class="line">        out.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现-—-对象-—-使用-Gson-对象转字符串"><a href="#代码实现-—-对象-—-使用-Gson-对象转字符串" class="headerlink" title="代码实现 — 对象 — 使用 Gson 对象转字符串"></a>代码实现 — 对象 — 使用 Gson 对象转字符串</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">    <span class="comment">// 解决json中文乱码</span></span><br><span class="line">    response.setContentType(<span class="string">&quot;text/json;charset=UTF-8&quot;</span>);</span><br><span class="line">    response.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    PrintWriter out = response.getWriter();</span><br><span class="line">    List&lt;Client&gt; list = clientService.findList(<span class="keyword">new</span> Client());</span><br><span class="line">    Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">    String json = gson.toJson(list);</span><br><span class="line">    out.println(json);</span><br><span class="line">    out.flush();</span><br><span class="line">    out.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用-ajax-获取-json-数据"><a href="#使用-ajax-获取-json-数据" class="headerlink" title="使用 ajax 获取 json 数据"></a>使用 ajax 获取 json 数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        url:<span class="string">&#x27;$&#123;ctx&#125;/jsonServlet&#x27;</span>,</span><br><span class="line">        type:<span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">        data:&#123;&#125;,</span><br><span class="line">        dataType:<span class="string">&#x27;json&#x27;</span>,</span><br><span class="line">        success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> str =<span class="built_in">JSON</span>.stringify(data);</span><br><span class="line">            alert(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->
@@ -629,7 +625,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%9D%E8%B5%96jar%E5%8C%85"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">依赖jar包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E2%80%93-%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%94%E5%9B%9E"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">代码实现 – 普通字符串返回</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E2%80%93-%E5%AF%B9%E8%B1%A1-%E2%80%93-%E4%BD%BF%E7%94%A8-Gson-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">代码实现 – 对象 – 使用 Gson 对象转字符串</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-ajax-%E8%8E%B7%E5%8F%96-json-%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用 ajax 获取 json 数据</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%9D%E8%B5%96jar%E5%8C%85"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">依赖jar包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E2%80%94-%E6%99%AE%E9%80%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%94%E5%9B%9E"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">代码实现 — 普通字符串返回</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-%E2%80%94-%E5%AF%B9%E8%B1%A1-%E2%80%94-%E4%BD%BF%E7%94%A8-Gson-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">代码实现 — 对象 — 使用 Gson 对象转字符串</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-ajax-%E8%8E%B7%E5%8F%96-json-%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用 ajax 获取 json 数据</span></a></li></ol>
         
         </div>
       </aside>
@@ -1283,21 +1279,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

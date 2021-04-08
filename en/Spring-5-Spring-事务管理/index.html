@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,31 +472,23 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>事务原本是数据库中的概念，用于数据访问层。但一般情况下，需要将事务提升到业务层，即 Service 层。这样做是为了能够使用事务的特性来管理具体的业务。</p>
-<h2 id="事务特性：ACID">事务特性：<code>ACID</code></h2>
-<ul>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>事务原本是数据库中的概念，用于数据访问层。但一般情况下，需要将事务提升到业务层，即 Service 层。这样做是为了能够使用事务的特性来管理具体的业务。</p>
+<h2 id="事务特性：ACID"><a href="#事务特性：ACID" class="headerlink" title="事务特性：ACID"></a>事务特性：<code>ACID</code></h2><ul>
 <li><code>原子性（Atomicity）</code>：原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。</li>
 <li><code>一致性（Consistency）</code>：事务前后数据的完整性必须保持一致。</li>
 <li><code>隔离性（Isolation）</code>：事务的隔离性是多个用户并发访问数据库时，数据库为每一个用户开启的事务，不能被其他事务的操作数据所干扰，多个并发事务之间要相互隔离。</li>
 <li><code>持久性（Durability）</code>：持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来即使数据库发生故障也不应该对其有任何影响。</li>
 </ul>
-<h2 id="Spring-框架的事务管理支持两种方式">Spring 框架的事务管理支持两种方式</h2>
-<h3 id="编程式事务">编程式事务</h3>
-<p>编程式事务就是指通过在代码中嵌入事务控制代码来手动控制事务，这个方式的优点是可以在方法体中的代码块级别进行控制事务，粒度较细，缺点是要侵入我们的业务代码，不推荐使用。</p>
-<h3 id="申明式事务">申明式事务</h3>
-<p>申明式事务是基于 Spring 的框架 AOP 技术，把事务当做一个“切面”,在需要做事务控制的代码上织入，可以控制到方法层面，其优点是无需侵入目标代码，而且 Spring 针对不同的底层持久层实现提供了不同的事务管理 API ，非常方便。</p>
+<h2 id="Spring-框架的事务管理支持两种方式"><a href="#Spring-框架的事务管理支持两种方式" class="headerlink" title="Spring 框架的事务管理支持两种方式"></a>Spring 框架的事务管理支持两种方式</h2><h3 id="编程式事务"><a href="#编程式事务" class="headerlink" title="编程式事务"></a>编程式事务</h3><p>编程式事务就是指通过在代码中嵌入事务控制代码来手动控制事务，这个方式的优点是可以在方法体中的代码块级别进行控制事务，粒度较细，缺点是要侵入我们的业务代码，不推荐使用。</p>
+<h3 id="申明式事务"><a href="#申明式事务" class="headerlink" title="申明式事务"></a>申明式事务</h3><p>申明式事务是基于 Spring 的框架 AOP 技术，把事务当做一个“切面”,在需要做事务控制的代码上织入，可以控制到方法层面，其优点是无需侵入目标代码，而且 Spring 针对不同的底层持久层实现提供了不同的事务管理 API ，非常方便。</p>
 <p>而在 Spring 申明式事务中通常可以通过以下三种方式来实现对事务的管理：</p>
 <ul>
 <li>使用 Spring 的事务代理工厂管理事务（已过时）</li>
 <li>使用 Spring 的事务注解管理事务</li>
 <li>使用 AspectJ 的 AOP 配置管理事务</li>
 </ul>
-<h2 id="Spring-事务管理-API">Spring 事务管理 API</h2>
-<p>下面的图示可以很清晰地展示 Spring 框架的事务 API 结构：<br>
-<img src="1.jpg" alt="1"></p>
-<h3 id="事务管理器接口">事务管理器接口</h3>
-<p><code>PlatformTransactionManager</code>：是事务管理器接口对象。其主要用于完成事务的提交、回滚，及获取事务的状态信息。该接口定义了 3 个事务方法：</p>
+<h2 id="Spring-事务管理-API"><a href="#Spring-事务管理-API" class="headerlink" title="Spring 事务管理 API"></a>Spring 事务管理 API</h2><p>下面的图示可以很清晰地展示 Spring 框架的事务 API 结构：<br><img src="1.jpg" alt="1"></p>
+<h3 id="事务管理器接口"><a href="#事务管理器接口" class="headerlink" title="事务管理器接口"></a>事务管理器接口</h3><p><code>PlatformTransactionManager</code>：是事务管理器接口对象。其主要用于完成事务的提交、回滚，及获取事务的状态信息。该接口定义了 3 个事务方法：</p>
 <ul>
 <li><code>getTransaction</code>：获取事务的状态</li>
 <li><code>commit</code>：事务的提交</li>
@@ -504,55 +496,43 @@
 </ul>
 <p>Spring并不直接管理事务，而是提供了多种事务管理器，常用的两个实现类：</p>
 <ul>
-<li>
-<p><code>DataSourceTransactionManager</code>：使用 <code>JDBC</code> 或 <code>MyBatis</code> 进行持久化数据时使用。</p>
+<li><p><code>DataSourceTransactionManager</code>：使用 <code>JDBC</code> 或 <code>MyBatis</code> 进行持久化数据时使用。</p>
 </li>
-<li>
-<p><code>HibernateTransactionManager</code>：使用 <code>Hibernate</code> 进行持久化数据时使用。</p>
+<li><p><code>HibernateTransactionManager</code>：使用 <code>Hibernate</code> 进行持久化数据时使用。</p>
 </li>
 </ul>
-<h3 id="Spring-的回滚方式">Spring 的回滚方式</h3>
-<p>Spring 事务的默认回滚方式是：发生运行时异常回滚</p>
+<h3 id="Spring-的回滚方式"><a href="#Spring-的回滚方式" class="headerlink" title="Spring 的回滚方式"></a>Spring 的回滚方式</h3><p>Spring 事务的默认回滚方式是：发生运行时异常回滚</p>
 <p><strong>例子：</strong></p>
 <ul>
 <li>多个异常类型，用数组：<code>@Transactional(rollbackFor=&#123;IOException.class,FileNoteFoundException&#125;)</code></li>
 <li>如果要指定遇到几个 RuntimeException 的时候不回滚：<code>@Transactional(noRollbackFor=&#123;NullPointerException.class,IndexOutOfBoundsException.class&#125;)</code></li>
 </ul>
-<h3 id="事务定义接口">事务定义接口</h3>
-<p>事务定义接口 TransactionDefinition 中定义了事务描述相关的三类常量：<strong>事务隔离级别（isolation）</strong>、<strong>事务传播行为（propagation）</strong>、<strong>事务默认超时时限</strong>，及对它们的操作。</p>
-<h4 id="事务的四种隔离级别">事务的四种隔离级别</h4>
-<ul>
+<h3 id="事务定义接口"><a href="#事务定义接口" class="headerlink" title="事务定义接口"></a>事务定义接口</h3><p>事务定义接口 TransactionDefinition 中定义了事务描述相关的三类常量：<strong>事务隔离级别（isolation）</strong>、<strong>事务传播行为（propagation）</strong>、<strong>事务默认超时时限</strong>，及对它们的操作。</p>
+<h4 id="事务的四种隔离级别"><a href="#事务的四种隔离级别" class="headerlink" title="事务的四种隔离级别"></a>事务的四种隔离级别</h4><ul>
 <li>DEFAULT：采用 DB 默认的事务隔离级别。MySql 默认为 REPEATABLE_READ；Oracle 默认为：READ_COMMITTED；</li>
 <li>READ_UNCOMMITTED：读未提交。未解决任何并发问题。</li>
 <li>READ_COMMITTED：读已提交。解决脏读，存在不可重复读与幻读。</li>
 <li>REPEATABLE_READ：可重复读。解决脏读、不可重复读。存在幻读。</li>
 <li>SERIALIZABLE：串行化。不存在并发问题。</li>
 </ul>
-<p><strong>例子：属性 isolation</strong><br>
-事务隔离级别是数据库的概念，在多个事务对一批记录进行操作的时候，可能出现各种冲突的情况该属性的可能值有：</p>
+<p><strong>例子：属性 isolation</strong><br>事务隔离级别是数据库的概念，在多个事务对一批记录进行操作的时候，可能出现各种冲突的情况该属性的可能值有：</p>
 <ul>
-<li>
-<p><strong><code>Isolation.DEFAULT</code></strong>：数据库默认隔离级别</p>
+<li><p><strong><code>Isolation.DEFAULT</code></strong>：数据库默认隔离级别</p>
 </li>
-<li>
-<p><strong><code>Isolation.READ_UNCOMMITED</code></strong>：读未提交。可以读到其他事务未提交的数据。导致脏读（dirty read）</p>
+<li><p><strong><code>Isolation.READ_UNCOMMITED</code></strong>：读未提交。可以读到其他事务未提交的数据。导致脏读（dirty read）</p>
 </li>
-<li>
-<p><strong><code>Isolation.READ_COMMITED</code></strong>：读已提交。这是很多数据库的默认隔离级别，但不是 MySQL 的。不能读到其他事务未提交的数据，只能读到已提交的数据。解决了脏读，可导致不可重复读和幻读。</p>
+<li><p><strong><code>Isolation.READ_COMMITED</code></strong>：读已提交。这是很多数据库的默认隔离级别，但不是 MySQL 的。不能读到其他事务未提交的数据，只能读到已提交的数据。解决了脏读，可导致不可重复读和幻读。</p>
 <ul>
 <li>不可重复读：在预读之后，commit 之前，其他事务更新了数据，导致两次读到的数据不相同</li>
 <li>幻读：在预读之后，commit 之前，其他事务插入数据，导致两次读到的数据条数不相同</li>
 </ul>
 </li>
-<li>
-<p><strong><code>Isolation.REPEATABLE_READ</code></strong>：可重复读。这是 MySQL 的默认事务隔离级别。解决了脏读，不可重复读，但依然存在幻读问题。</p>
+<li><p><strong><code>Isolation.REPEATABLE_READ</code></strong>：可重复读。这是 MySQL 的默认事务隔离级别。解决了脏读，不可重复读，但依然存在幻读问题。</p>
 </li>
-<li>
-<p><strong><code>Isolation.SERIALIZABLE</code></strong>：可串行化。最高的事务隔离级别。解决了脏读、不可重复读、幻读，但导致大量的超时和锁竞争。</p>
+<li><p><strong><code>Isolation.SERIALIZABLE</code></strong>：可串行化。最高的事务隔离级别。解决了脏读、不可重复读、幻读，但导致大量的超时和锁竞争。</p>
 </li>
 </ul>
-<h4 id="事务的七种传播行为">事务的七种传播行为</h4>
-<p>所谓事务传播行为是指，处于不同事务中的方法在相互调用时，执行期间事务的维护情况。如，A 事务中的方法 a() 调用 B 事务中的方法 b()，在调用执行期间事务的维护情况，就称为事务传播行为。事务传播行为是加在方法上的。</p>
+<h4 id="事务的七种传播行为"><a href="#事务的七种传播行为" class="headerlink" title="事务的七种传播行为"></a>事务的七种传播行为</h4><p>所谓事务传播行为是指，处于不同事务中的方法在相互调用时，执行期间事务的维护情况。如，A 事务中的方法 a() 调用 B 事务中的方法 b()，在调用执行期间事务的维护情况，就称为事务传播行为。事务传播行为是加在方法上的。</p>
 <ul>
 <li>REQUIRED：指定的方法必须在事务内执行。若当前存在事务，就加入到当前事务中；若当前没有事务，则创建一个新事务。这种传播行为是最常见的选择，也是 Spring 默认的事务传播行为。</li>
 <li>SUPPORTS：指定的方法支持当前事务，但若当前没有事务，也可以以非事务方式执行。</li>
@@ -567,8 +547,7 @@
 <p>A.f1() 有事务 A</p>
 <p>B.f2() 有事务 B</p>
 </blockquote>
-<p>当 A.f1() 调用 B.f2() 的时候，B.f2() 中的代码执行哪个事务<br>
-该属性可能的值有（以下属性值加在 B.f2() 上来理解）：</p>
+<p>当 A.f1() 调用 B.f2() 的时候，B.f2() 中的代码执行哪个事务<br>该属性可能的值有（以下属性值加在 B.f2() 上来理解）：</p>
 <ul>
 <li><strong><code>Propagation.REQUIRED</code></strong>：如果 A.f1() 调用 B.f2() ，那么执行 A  事务；如果 A 没有事务，那就执行自己的事务 B 。接受，给就收下，不给就用自己的。</li>
 <li><strong><code>Propagation.SUPPORTS</code></strong>：如果 A.f1() 调用 B.f2()，那么执行 A  事务；如果被没有事务的方法调用，那么就在没有事务的环境下执行。接受，给就收下，不给也不要。</li>
@@ -578,9 +557,7 @@
 <li><strong><code>Propagation.NEVER</code></strong>：B.f2() 不能在任何事务下执行，如果 A.f1()  调用它，那么抛异常。绝不接受，硬给就拼命。</li>
 <li><strong><code>Propagation.NESTED</code></strong>：如果 A.f1() 调用 B.f2() ，那么 B 嵌套在 A 中执行，形成嵌套事务。</li>
 </ul>
-<h2 id="事务注解例子：">事务注解例子：</h2>
-<h3 id="Transactianal-注解有一些属性"><code>@Transactianal</code> 注解有一些属性</h3>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//控制事务传播。默认是Propagation.REQUIRED</span></span><br><span class="line"><span class="variable">@Transactional</span>(propagation=Propagation.REQUIRED)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务隔离级别。默认跟数据库的默认隔离级别相同</span></span><br><span class="line"><span class="variable">@Transactional</span>(isolation=Isolation.DEFAULT)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务可读写(默认可读写)</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=false)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只可读，这样可以节约一些资源开销</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=true)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务的超时时间，单位秒。默认跟数据库的事务控制系统相同，又说是30秒</span></span><br><span class="line"><span class="variable">@Transactional</span>(timeout=<span class="number">30</span>)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常才会回滚。默认是RuntimeException</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackFor=RuntimeException.class) </span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackForClassName=RuntimeException)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常不会回滚。默认遇到非RuntimeException不会回滚</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackFor=NullPointerException.class)   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackForClassName=NullPointerException)</span><br></pre></td></tr></table></figure>
+<h2 id="事务注解例子："><a href="#事务注解例子：" class="headerlink" title="事务注解例子："></a>事务注解例子：</h2><h3 id="Transactianal-注解有一些属性"><a href="#Transactianal-注解有一些属性" class="headerlink" title="@Transactianal 注解有一些属性"></a><code>@Transactianal</code> 注解有一些属性</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//控制事务传播。默认是Propagation.REQUIRED</span></span><br><span class="line"><span class="variable">@Transactional</span>(propagation=Propagation.REQUIRED)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务隔离级别。默认跟数据库的默认隔离级别相同</span></span><br><span class="line"><span class="variable">@Transactional</span>(isolation=Isolation.DEFAULT)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务可读写(默认可读写)</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=false)</span><br><span class="line"></span><br><span class="line"><span class="comment">//只可读，这样可以节约一些资源开销</span></span><br><span class="line"><span class="variable">@Transactional</span>(readOnly=true)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务的超时时间，单位秒。默认跟数据库的事务控制系统相同，又说是30秒</span></span><br><span class="line"><span class="variable">@Transactional</span>(timeout=<span class="number">30</span>)        </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常才会回滚。默认是RuntimeException</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackFor=RuntimeException.class) </span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(rollbackForClassName=RuntimeException)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//控制事务遇到哪些异常不会回滚。默认遇到非RuntimeException不会回滚</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackFor=NullPointerException.class)   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//同上</span></span><br><span class="line"><span class="variable">@Transactional</span>(noRollbackForClassName=NullPointerException)</span><br></pre></td></tr></table></figure>
 <p><strong><font color=red>注意</font>：<code>@Transactional</code> 应当添加在具体的实现类而不是接口上</strong></p>
 
 
@@ -1382,21 +1359,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

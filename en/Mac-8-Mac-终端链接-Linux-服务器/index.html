@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,13 +472,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="远程链接">远程链接</h2>
-<p>打开 <code>iTerm2</code>，通过 <code>ssh</code> 命令连接 <code>linux</code> 服务器，命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> root 是服务器账户名，@ 后面的是购买的公网 ip 地址</span></span><br><span class="line">ssh root@127.0.0.1</span><br></pre></td></tr></table></figure>
-<h2 id="ssh-配置-config-快速登录服务器"><code>ssh</code> 配置 <code>config</code> 快速登录服务器</h2>
-<p>可先通过 <code>ssh-keygen -t rsa</code> 生成密钥。客户端（自己 Mac 的配置）：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ cd ~/.ssh</span><br><span class="line">➜  .ssh ls</span><br><span class="line">config      id_rsa      id_rsa.pub  known_hosts</span><br><span class="line"></span><br><span class="line">➜  .ssh cat config</span><br><span class="line">Host ubuntu</span><br><span class="line">HostName 10.211.55.3</span><br><span class="line">Port 22</span><br><span class="line">User vincent</span><br></pre></td></tr></table></figure>
-<p>配置 <code>config</code> （没有的话自己新建一个）</p>
+        <h2 id="远程链接"><a href="#远程链接" class="headerlink" title="远程链接"></a>远程链接</h2><p>打开 <code>iTerm2</code>，通过 <code>ssh</code> 命令连接 <code>linux</code> 服务器，命令：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> root 是服务器账户名，@ 后面的是购买的公网 ip 地址</span></span><br><span class="line">ssh root@127.0.0.1</span><br></pre></td></tr></table></figure></p>
+<h2 id="ssh-配置-config-快速登录服务器"><a href="#ssh-配置-config-快速登录服务器" class="headerlink" title="ssh 配置 config 快速登录服务器"></a><code>ssh</code> 配置 <code>config</code> 快速登录服务器</h2><p>可先通过 <code>ssh-keygen -t rsa</code> 生成密钥。客户端（自己 Mac 的配置）：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ cd ~/.ssh</span><br><span class="line">➜  .ssh ls</span><br><span class="line">config      id_rsa      id_rsa.pub  known_hosts</span><br><span class="line"></span><br><span class="line">➜  .ssh cat config</span><br><span class="line">Host ubuntu</span><br><span class="line">HostName 10.211.55.3</span><br><span class="line">Port 22</span><br><span class="line">User vincent</span><br></pre></td></tr></table></figure><br>配置 <code>config</code> （没有的话自己新建一个）</p>
 <ul>
 <li><code>Host</code>：是别名 <code>ubuntu</code></li>
 <li><code>HostName</code> ：为 <code>IP</code></li>
@@ -1286,21 +1281,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>

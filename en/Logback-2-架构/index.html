@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,13 +472,10 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="logback-的架构">logback 的架构</h2>
-<p>跟 <a target="_blank" rel="noopener" href="https://v-vincen.github.io/2020/12/31/Logback-1-Logback-%E4%BB%8B%E7%BB%8D/#%E7%AE%80%E4%BB%8B">简介</a> 类似</p>
-<h2 id="Logger-Appender-和-Layouts">Logger, Appender 和 Layouts</h2>
-<p>Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。</p>
+        <h2 id="logback-的架构"><a href="#logback-的架构" class="headerlink" title="logback 的架构"></a>logback 的架构</h2><p>跟 <a target="_blank" rel="noopener" href="https://v-vincen.github.io/2020/12/31/Logback-1-Logback-%E4%BB%8B%E7%BB%8D/#%E7%AE%80%E4%BB%8B">简介</a> 类似</p>
+<h2 id="Logger-Appender-和-Layouts"><a href="#Logger-Appender-和-Layouts" class="headerlink" title="Logger, Appender 和 Layouts"></a>Logger, Appender 和 Layouts</h2><p>Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。</p>
 <p><code>Logger</code> 类作为 logback-classic 模块的一部分。<code>Appender</code> 与 <code>Layouts</code> 接口作为 logback-core 的一部分。作为一个通用的模块，logback-core 没有 logger 的概念。</p>
-<h3 id="Logger-上下文">Logger 上下文</h3>
-<p>任何日志 API 的优势在于它能够禁止某些日志的输出，但是又不会妨碍另一些日志的输出。通过假定一个日志空间，这个空间包含所有可能的日志语句，这些日志语句根据开发人员设定的标准来进行分类。在 logback-classic 中，分类是 logger 的一部分，每一个 logger 都依附在 <code>LoggerContext</code> 上，它负责产生 logger，并且通过一个树状的层级结构来进行管理。</p>
+<h3 id="Logger-上下文"><a href="#Logger-上下文" class="headerlink" title="Logger 上下文"></a>Logger 上下文</h3><p>任何日志 API 的优势在于它能够禁止某些日志的输出，但是又不会妨碍另一些日志的输出。通过假定一个日志空间，这个空间包含所有可能的日志语句，这些日志语句根据开发人员设定的标准来进行分类。在 logback-classic 中，分类是 logger 的一部分，每一个 logger 都依附在 <code>LoggerContext</code> 上，它负责产生 logger，并且通过一个树状的层级结构来进行管理。</p>
 <p>一个 Logger 被当作为一个实体，它们的命名是大小写敏感的，并且遵循以下规则：</p>
 <blockquote>
 <p>命名层次结构</p>
@@ -489,15 +486,15 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Logger rootLogger = LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME)</span><br></pre></td></tr></table></figure>
 <p>所有其它的 logger 通过 <code>org.slf4j.LoggerFactory</code> 类的静态方法 <code>getLogger</code> 去获取，这个方法需要传入一个 logger 的名字。下面是 <code>Logger</code> 接口一些基本的方法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.slf4j; </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Logger</span> </span>&#123; </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">trace</span><span class="params">(String message)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">debug</span><span class="params">(String message)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">info</span><span class="params">(String message)</span></span>; </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">warn</span><span class="params">(String message)</span></span>; </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">error</span><span class="params">(String message)</span></span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="有效等级又称为等级继承">有效等级又称为等级继承</h3>
-<p>Logger 能够被分成不同的等级。不同的等级（TRACE, DEBUG, INFO, WARN, ERROR）定义在 <code>ch.qos.logback.classic.Level</code> 类中。在 logback 中，类 <code>Level</code> 使用 final 修饰的，所以它不能用来被继承。一种更灵活的方式是使用 <code>Marker</code> 对象。</p>
+<h3 id="有效等级又称为等级继承"><a href="#有效等级又称为等级继承" class="headerlink" title="有效等级又称为等级继承"></a>有效等级又称为等级继承</h3><p>Logger 能够被分成不同的等级。不同的等级（TRACE, DEBUG, INFO, WARN, ERROR）定义在 <code>ch.qos.logback.classic.Level</code> 类中。在 logback 中，类 <code>Level</code> 使用 final 修饰的，所以它不能用来被继承。一种更灵活的方式是使用 <code>Marker</code> 对象。</p>
 <p>如果一个给定的 logger 没有指定一个层级，那么它就会继承离它最近的一个祖先的层级。更正式的说法是：</p>
 <blockquote>
 <p>对于一个给定的名为 <em>L</em> 的 logger，它的有效层级为从自身一直回溯到 root logger，直到找到第一个不为空的层级作为自己的层级。</p>
 </blockquote>
-<p>为了确保所有的 logger 都有一个层级，root logger 会有一个默认层级 — DEBUG</p>
+<p>为了确保所有的 logger 都有一个层级，root logger 会有一个默认层级 —- DEBUG</p>
 <p>以下四个例子指定不同的层级，以及根据继承规则得到的最终有效层级</p>
 <p><em>Example 1</em></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -529,8 +526,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>在这个例子中，只有 root logger 被指定了层级，所以 logger <strong>X</strong>，<strong>X.Y</strong>，<strong>X.Y.Z</strong> 的有效层级都是 DEBUG。</p>
 <p><em>Example 2</em></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -562,8 +561,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>在这个例子中，每个 logger 都分配了层级，所以有效层级就是指定的层级。</p>
 <p><em>Example 3</em></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -595,8 +596,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>在这个例子中，logger <strong>root</strong>，<strong>X</strong>，<strong>X.Y.Z</strong> 都分别分配了层级。logger <strong>X.Y</strong> 继承它的父级 logger <strong>X</strong>。</p>
 <p><em>Example 4</em></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -628,9 +631,9 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>在这个例子中，logger <strong>root</strong>，<strong>X</strong> 都分配了层级。logger <strong>X.Y</strong>，<strong>X.Y.Z</strong> 的层级继承它们最近的父级 <strong>X</strong>。</p>
-<h3 id="方法打印以及基本选择规则">方法打印以及基本选择规则</h3>
-<p>根据定义，打印的方法决定的日志的级别。例如：<strong>L</strong> 是一个 logger 实例，<code>L.info(&quot;...&quot;)</code> 的日志级别就是 INFO。</p>
+<h3 id="方法打印以及基本选择规则"><a href="#方法打印以及基本选择规则" class="headerlink" title="方法打印以及基本选择规则"></a>方法打印以及基本选择规则</h3><p>根据定义，打印的方法决定的日志的级别。例如：<strong>L</strong> 是一个 logger 实例，<code>L.info(&quot;...&quot;)</code> 的日志级别就是 INFO。</p>
 <p>如果一条的日志的打印级别大于 logger 的有效级别，该条日志才可以被打印出来。这条规则总结如下：</p>
 <blockquote>
 <p><strong>基本选择规则</strong></p>
@@ -641,18 +644,16 @@
 <p><img src="basic-selection-rule.png" alt="basic selection rule"></p>
 <p>例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.architecture;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> ch.qos.logback.classic.Level;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelectionRule</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// ch.qos.logback.classic.Logger 可以设置日志的级别</span></span><br><span class="line">        <span class="comment">// 获取一个名为 &quot;com.foo&quot; 的 logger 实例</span></span><br><span class="line">        ch.qos.logback.classic.Logger logger = </span><br><span class="line">                (ch.qos.logback.classic.Logger)LoggerFactory.getLogger(<span class="string">&quot;com.foo&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置 logger 的级别为 INFO</span></span><br><span class="line">        logger.setLevel(Level.INFO);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 这条日志可以打印，因为 WARN &gt;= INFO</span></span><br><span class="line">        logger.warn(<span class="string">&quot;警告信息&quot;</span>);</span><br><span class="line">        <span class="comment">// 这条日志不会打印，因为 DEBUG &lt; INFO</span></span><br><span class="line">        logger.debug(<span class="string">&quot;调试信息&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// &quot;com.foo.bar&quot; 会继承 &quot;com.foo&quot; 的有效级别</span></span><br><span class="line">        Logger barLogger = LoggerFactory.getLogger(<span class="string">&quot;com.foo.bar&quot;</span>);</span><br><span class="line">        <span class="comment">// 这条日志会打印，因为 INFO &gt;= INFO</span></span><br><span class="line">        barLogger.info(<span class="string">&quot;子级信息&quot;</span>);</span><br><span class="line">        <span class="comment">// 这条日志不会打印，因为 DEBUG &lt; INFO</span></span><br><span class="line">        barLogger.debug(<span class="string">&quot;子级调试信息&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="获取-Logger">获取 Logger</h3>
-<p>通过 <code>LoggerFactory.getLogger()</code> 可以获取到具体的 logger 实例，名字相同则返回的 logger 实例也相同。</p>
+<h3 id="获取-Logger"><a href="#获取-Logger" class="headerlink" title="获取 Logger"></a>获取 Logger</h3><p>通过 <code>LoggerFactory.getLogger()</code> 可以获取到具体的 logger 实例，名字相同则返回的 logger 实例也相同。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Logger x = LoggerFactory.getLogger(<span class="string">&quot;wombat&quot;</span>);</span><br><span class="line">Logger y = LoggerFactory.getLogger(<span class="string">&quot;wombat&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p><strong>x</strong>，<strong>y</strong> 是同一个 logger 对象。</p>
 <p>可以通过配置一个 logger，然后在其它地方获取，而不需要传递引用。父级 logger 总是优于子级 logger，并且父级 logger 会自动寻找并关联子级 logger，即使父级 logger 在子级 logger 之后实例化。</p>
 <p>logback 环境的配置会在应用初始化的时候完成。最优的方式是通过读取配置文件。</p>
 <p>在每个类里面通过指定全限定类名为 logger 的名字来实例化一个 logger 是最好也是最简单的方式。因为日志能够输出这个 logger 的名字，所以这个命名策略能够看出日志的来源是哪里。虽然这是命名 logger 常见的策略，但是 logback 不会严格限制 logger 的命名，你完全可以根据自己的喜好来，你开心就好。</p>
 <p>但是，根据类的全限定名来对 logger 进行命名，是目前最好的方式，没有之一。</p>
-<h3 id="Appender-与-Layout">Appender 与 Layout</h3>
-<p>有选择的启用或者禁用日志的输出只是 logger 的一部分功能。logback 允许日志在多个地方进行输出。站在 logback 的角度来说，输出目的地叫做 appender。appender 包括console、file、remote socket server、MySQL、PostgreSQL、Oracle 或者其它的数据库、JMS、remote UNIX Syslog daemons 中。</p>
+<h3 id="Appender-与-Layout"><a href="#Appender-与-Layout" class="headerlink" title="Appender 与 Layout"></a>Appender 与 Layout</h3><p>有选择的启用或者禁用日志的输出只是 logger 的一部分功能。logback 允许日志在多个地方进行输出。站在 logback 的角度来说，输出目的地叫做 appender。appender 包括console、file、remote socket server、MySQL、PostgreSQL、Oracle 或者其它的数据库、JMS、remote UNIX Syslog daemons 中。</p>
 <p>一个 logger 可以有多个 appender。</p>
-<p>logger 通过 <code>addAppender</code> 方法来新增一个 appender。对于给定的 logger，每一个允许输出的日志都会被转发到该 logger 的所有 appender 中去。换句话说，appender 从 logger 的层级结构中去继承叠加性。例如：如果 root logger 添加了一个 console appender，所有允许输出的日志至少会在控制台打印出来。如果再给一个叫做 <em><strong>L</strong></em> 的 logger 添加了一个 file appender，那么 <em><strong>L</strong></em> 以及 <em><strong>L</strong></em> 的子级 logger 都可以在文件和控制台打印日志。可以通过设置 additivity = false 来改写默认的设置，这样 appender 将不再具有叠加性。</p>
+<p>logger 通过 <code>addAppender</code> 方法来新增一个 appender。对于给定的 logger，每一个允许输出的日志都会被转发到该 logger 的所有 appender 中去。换句话说，appender 从 logger 的层级结构中去继承叠加性。例如：如果 root logger 添加了一个 console appender，所有允许输出的日志至少会在控制台打印出来。如果再给一个叫做 <strong><em>L</em></strong> 的 logger 添加了一个 file appender，那么 <strong><em>L</em></strong> 以及 <strong><em>L</em></strong> 的子级 logger 都可以在文件和控制台打印日志。可以通过设置 additivity = false 来改写默认的设置，这样 appender 将不再具有叠加性。</p>
 <p>appender 的叠加性规则如下：</p>
 <blockquote>
 <p>appender 的叠加性</p>
@@ -660,6 +661,7 @@
 <p>如果 <em>L</em> 的某个上级 logger 为 <em>P</em>，且 <em>P</em> 设置了 additivity = false，那么 <em>L</em> 的日志会在层级在 <em>L</em> 到 <em>P</em> 之间的所有 logger 的 appender，包括 <em>P</em> 本身的 appender 中输出，但是不会在 <em>P</em> 的上级 appender 中输出。</p>
 <p>logger 默认设置 additivity = true。</p>
 </blockquote>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -667,68 +669,67 @@
 <th style="text-align:left"><strong>Attached Appenders</strong></th>
 <th style="text-align:left"><strong>Additivity Flag</strong></th>
 <th style="text-align:left"><strong>Output Targets</strong></th>
-<th style="text-align:left"><strong>Comment</strong></th>
+<th style="text-align:left"><strong>Comment</strong>                                                           </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">root</td>
+<td style="text-align:left"> root</td>
 <td style="text-align:left">A1</td>
 <td style="text-align:left">不适用</td>
 <td style="text-align:left">A1</td>
-<td style="text-align:left">root logger 为 logger 层级中的最高层，additivity 对它不适用</td>
+<td style="text-align:left">root logger 为 logger 层级中的最高层，additivity 对它不适用                         </td>
 </tr>
 <tr>
-<td style="text-align:left">x</td>
+<td style="text-align:left"> x</td>
 <td style="text-align:left">A-x1, A-x2</td>
 <td style="text-align:left">true</td>
 <td style="text-align:left">A1, A-x1, A-x2</td>
-<td style="text-align:left">x 与 root 的 appender</td>
+<td style="text-align:left">x 与 root 的 appender                                                   </td>
 </tr>
 <tr>
-<td style="text-align:left">x.y</td>
+<td style="text-align:left"> x.y</td>
 <td style="text-align:left">none</td>
 <td style="text-align:left">true</td>
 <td style="text-align:left">A1, A-x1, A-x2</td>
-<td style="text-align:left">x 与 root 的 appender</td>
+<td style="text-align:left">x 与 root 的 appender                                                   </td>
 </tr>
 <tr>
-<td style="text-align:left">x.y.z</td>
+<td style="text-align:left"> x.y.z</td>
 <td style="text-align:left">A-xyz1</td>
 <td style="text-align:left">true</td>
 <td style="text-align:left">A1, A-x1, A-x2, A-xyz1</td>
-<td style="text-align:left">x 与 x.y 与 root 的 appender</td>
+<td style="text-align:left">x 与 x.y 与 root 的 appender                                             </td>
 </tr>
 <tr>
-<td style="text-align:left">security</td>
+<td style="text-align:left"> security</td>
 <td style="text-align:left">A-sec</td>
 <td style="text-align:left">false</td>
 <td style="text-align:left">A-sec</td>
-<td style="text-align:left">因为 additivity = false，所以只有 A-sec 这个 appender</td>
+<td style="text-align:left">因为 additivity = false，所以只有 A-sec 这个 appender                          </td>
 </tr>
 <tr>
-<td style="text-align:left">security.access</td>
+<td style="text-align:left"> security.access</td>
 <td style="text-align:left">node</td>
 <td style="text-align:left">true</td>
 <td style="text-align:left">A-sec</td>
-<td style="text-align:left">因为它的父级 logger security 设置了 additivity = false，所以只有 A-sec 这一个 appender</td>
+<td style="text-align:left">因为它的父级 logger security 设置了 additivity = false，所以只有 A-sec 这一个 appender </td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>通常，用户既想自定义日志的输出地，也想自定义日志的输出格式。通过给 appender 添加一个 <em>layout</em> 可以做到。layout 的作用是将日志格式化，而 appender 的作用是将格式化后的日志输出到指定的目的地。<strong>PatternLayout</strong> 能够根据用户指定的格式来格式化日志，类似于 C 语言的 printf 函数。</p>
 <p>例：PatternLayout 通过格式化串 “%-4relative [%thread] %-5level %logger{32} - %msg%n” 会将日志格式化成如下结果：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">176</span>  [main] DEBUG manual.architecture.HelloWorld2 - Hello world.</span><br></pre></td></tr></table></figure>
 <p>第一个参数表示程序启动以来的耗时，单位为毫秒。第二个参数表示当前的线程号。第三个参数表示当前日志的级别。第四个参数是 logger 的名字。“-” 之后是具体的日志信息。</p>
-<h3 id="参数化日志">参数化日志</h3>
-<p>考虑到 logback-classic 实现了 SLF4J 的 Logger 接口，一些打印方法可以接收多个传参。这些打印方法的变体主要是为了提高性能以及减少对代码可读性的影响。</p>
+<h3 id="参数化日志"><a href="#参数化日志" class="headerlink" title="参数化日志"></a>参数化日志</h3><p>考虑到 logback-classic 实现了 SLF4J 的 Logger 接口，一些打印方法可以接收多个传参。这些打印方法的变体主要是为了提高性能以及减少对代码可读性的影响。</p>
 <p>对于一些 Logger 如下输出日志：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logger.debug(<span class="string">&quot;Entry number: &quot;</span> + i + <span class="string">&quot; is &quot;</span> + String.valueOf(entry[i]));</span><br></pre></td></tr></table></figure>
 <p>会产生构建消息参数的成本，是因为需要将整数转为字符串，然后再将字符串拼接起来。但是我们是不需要关心 debug 信息是否被记录（强行曲解作者的意思）。</p>
 <p>为了避免构建参数带来的损耗，可以在日志记录之前做一个判断，如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(logger.isDebugEnabled()) &#123; </span><br><span class="line">  logger.debug(<span class="string">&quot;Entry number: &quot;</span> + i + <span class="string">&quot; is &quot;</span> + String.valueOf(entry[i]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在这种情况下，如果 <strong>logger</strong>没有开启 debug 模式，不会有构建参数带来的性能损耗。换句话说，如果 logger 在 debug 级别，将会有两次性能的损耗，一次是判断是否启用了 debug 模式，一次是打印 debug 日志。在实际应用当中，这种性能上的损耗是可以忽略不计的，因为它所花费的时间小于打印一条日志的时间的 1%。</p>
-<h4 id="更好的选择">更好的选择</h4>
-<p>有一种更好的方式去格式化日志信息。假设 <strong>entry</strong> 是一个 Object 对象：</p>
+<h4 id="更好的选择"><a href="#更好的选择" class="headerlink" title="更好的选择"></a>更好的选择</h4><p>有一种更好的方式去格式化日志信息。假设 <strong>entry</strong> 是一个 Object 对象：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object entry = <span class="keyword">new</span> SomeObject();</span><br><span class="line">logger.debug(<span class="string">&quot;The entry is &#123;&#125;&quot;</span>, entry);</span><br></pre></td></tr></table></figure>
 <p>只有在需要打印 debug 信息的时候，才会去格式化日志信息，将 ‘{}’ 替换成 entry 的字符串形式。也就是说在这种情况下，如果禁止了日志的打印，也不会有构建参数上的性能消耗。</p>
 <p>下面两行输出的结果是一样的，但是一旦禁止日志打印，第二个变量的性能至少比第一个变量好上 30 倍。</p>
@@ -737,11 +738,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">logger.debug(<span class="string">&quot;The new entry is &#123;&#125;, It replaces &#123;&#125;.&quot;</span>, entry, oldEntry);</span><br></pre></td></tr></table></figure>
 <p>如果需要使用三个或三个以上的参数，可以采用如下的形式：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object[] paramArray = &#123;newVal, below, above&#125;;</span><br><span class="line">logger.debug(<span class="string">&quot;Value &#123;&#125; was inserted between &#123;&#125; and &#123;&#125;.&quot;</span>, paramArray);</span><br></pre></td></tr></table></figure>
-<h3 id="底层实现初探">底层实现初探</h3>
-<p>在介绍了基本的 logback 组件之后，我们准备介绍一下，当用户调用日志的打印方法时，logback 所执行的步骤。现在我们来分析一下当用户通过一个名为 <em>com.wombat</em> 的 logger 调用了 <strong>info()</strong> 方法时，logback 执行了哪些步骤。</p>
+<h3 id="底层实现初探"><a href="#底层实现初探" class="headerlink" title="底层实现初探"></a>底层实现初探</h3><p>在介绍了基本的 logback 组件之后，我们准备介绍一下，当用户调用日志的打印方法时，logback 所执行的步骤。现在我们来分析一下当用户通过一个名为 <em>com.wombat</em> 的 logger 调用了 <strong>info()</strong> 方法时，logback 执行了哪些步骤。</p>
 <p><strong>第一步：获取过滤器链</strong></p>
 <p>如果存在，则 <strong>TurboFilter</strong> 过滤器会被调用，Turbo 过滤器会设置一个上下文的阀值，或者根据每一条相关的日志请求信息，例如：<strong>Marker</strong>，<strong>Level</strong>，<strong>Logger</strong>，消息，<strong>Throwable</strong> 来过滤某些事件。如果过滤器链的响应是 <em>FilterReply.DENY</em>，那么这条日志请求将会被丢弃。如果是 <em>FilterReply.NEUTRAL</em>，则会继续执行下一步，例如：第二步。如果响应 <em>FilterRerply.ACCEPT</em>，则会直接跳到第三步。</p>
-<p><strong>第二步：应用<a href="#%E6%96%B9%E6%B3%95%E6%89%93%E5%8D%B0%E4%BB%A5%E5%8F%8A%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E8%A7%84%E5%88%99">基本选择规则</a></strong></p>
+<p><strong>第二步：应用<a href="#方法打印以及基本选择规则">基本选择规则</a></strong></p>
 <p>在这步，logback 会比较有效级别与日志请求的级别，如果日志请求被禁止，那么 logback 将会丢弃调这条日志请求，并不会再做进一步的处理，否则的话，则进行下一步的处理。</p>
 <p><strong>第三步：创建一个 LoggingEvent 对象</strong></p>
 <p>如果日志请求通过了之前的过滤器，logback 将会创建一个 ch.qos.logback.classic.LoggingEvent 对象，这个对象包含了日志请求所有相关的参数，请求的 logger，日志请求的级别，日志信息，与日志一同传递的异常信息，当前时间，当前线程，以及当前类的各种信息和 MDC。MDC 将会在后续章节进行讨论。</p>
@@ -754,20 +754,16 @@
 <p>当日志事件被完全格式化之后将会通过每个 appender 发送到具体的目的地。</p>
 <p>下图是 logback 执行步骤的 UML 图：</p>
 <p><img src="underTheHoodSequence2.gif" alt="点击查看大图"></p>
-<h3 id="性能">性能</h3>
-<p>记录日志经常被提到的一个点是它的计算代价。这是一个合理的考虑，因为一个中等大小的应用都可以产生成千上万的日志。我们的大部分努力都花在了测量以及调整 logback 的性能。但是用户还是应该知道以下有关性能的问题。</p>
-<h4 id="当日志记录被关闭时记录日志的性能">当日志记录被关闭时记录日志的性能</h4>
-<p>通过设置 root logger 的日志级别为 Level.OFF 来完全关闭日志的打印。当日志完全关闭的时候，日志请求的成本为方法的调用以及整数的比较。在 3.2Ghz 奔腾 D 的电脑上的耗时大约为 20 纳秒。</p>
+<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>记录日志经常被提到的一个点是它的计算代价。这是一个合理的考虑，因为一个中等大小的应用都可以产生成千上万的日志。我们的大部分努力都花在了测量以及调整 logback 的性能。但是用户还是应该知道以下有关性能的问题。</p>
+<h4 id="当日志记录被关闭时记录日志的性能"><a href="#当日志记录被关闭时记录日志的性能" class="headerlink" title="当日志记录被关闭时记录日志的性能"></a>当日志记录被关闭时记录日志的性能</h4><p>通过设置 root logger 的日志级别为 Level.OFF 来完全关闭日志的打印。当日志完全关闭的时候，日志请求的成本为方法的调用以及整数的比较。在 3.2Ghz 奔腾 D 的电脑上的耗时大约为 20 纳秒。</p>
 <p>任何方法的调用都有参数构建这个隐含的成本在里面。例如下面这个例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.debug(<span class="string">&quot;Entry number: &quot;</span> + i + <span class="string">&quot;is &quot;</span> + entry[i]);</span><br></pre></td></tr></table></figure>
 <p>把整数 i、entry[i] 转变为字符串，并且连接在一起，而不管这条日志是否会被打印。</p>
 <p>构建参数的成本取决于参数的大小，为了避免不必要的性能损耗，可以使用 SLF4J’s 的参数化构建：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.debug(<span class="string">&quot;Entry number: &#123;&#125; is &#123;&#125;&quot;</span>, i, entry[i]);</span><br></pre></td></tr></table></figure>
 <p>这种形式不会有构建参数的成本在里面。与上一个例子做比较，这个的速度会更快。只有当日志信息传递给了附加的 appender 时才会被格式化，而且格式化日志信息的组件也是被优化过的。</p>
-<h4 id="当日记记录被打开时是否记录日志的性能">当日记记录被打开时是否记录日志的性能</h4>
-<p>在 logback 中，不需要遍历 logger 的层次结构。logger 在创建的时候就知道自己的有效级别。如果父级 logger 的级别被更改，则会通知所有子级 logger 注意这个更改。因此，在基于有效级别的基础上，logger 能够准实时的做出决定是否接受或者拒绝日志请求，而不需要考虑它的祖先的级别。</p>
-<h4 id="日记记录的实际情况（格式化输出到指定设备）">日记记录的实际情况（格式化输出到指定设备）</h4>
-<p>这是指格式化日志输出以及发送指定的目的地所需要的成本。我们尽可能快的让 layout（格式化）以及 appender 执行。在本地机器上，将日志输出到文件大概耗费 9-12 微秒的时间。当把日志输出到数据库或者远程服务器上时会上升到几毫秒。</p>
+<h4 id="当日记记录被打开时是否记录日志的性能"><a href="#当日记记录被打开时是否记录日志的性能" class="headerlink" title="当日记记录被打开时是否记录日志的性能"></a>当日记记录被打开时是否记录日志的性能</h4><p>在 logback 中，不需要遍历 logger 的层次结构。logger 在创建的时候就知道自己的有效级别。如果父级 logger 的级别被更改，则会通知所有子级 logger 注意这个更改。因此，在基于有效级别的基础上，logger 能够准实时的做出决定是否接受或者拒绝日志请求，而不需要考虑它的祖先的级别。</p>
+<h4 id="日记记录的实际情况（格式化输出到指定设备）"><a href="#日记记录的实际情况（格式化输出到指定设备）" class="headerlink" title="日记记录的实际情况（格式化输出到指定设备）"></a>日记记录的实际情况（格式化输出到指定设备）</h4><p>这是指格式化日志输出以及发送指定的目的地所需要的成本。我们尽可能快的让 layout（格式化）以及 appender 执行。在本地机器上，将日志输出到文件大概耗费 9-12 微秒的时间。当把日志输出到数据库或者远程服务器上时会上升到几毫秒。</p>
 <p>尽管 logback 功能丰富，但是它最重要的目标之一是处理速度，这是仅次于可靠性的要求。为了提高性能，一些 logback 的组件被重写了几次。</p>
 
 
@@ -1569,21 +1565,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-</body>
+	</body>
 </html>
