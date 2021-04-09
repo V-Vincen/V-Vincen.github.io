@@ -472,17 +472,14 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="IO-流原理">IO 流原理</h2>
-<ul>
+        <h2 id="IO-流原理"><a href="#IO-流原理" class="headerlink" title="IO 流原理"></a>IO 流原理</h2><ul>
 <li><code>I/O</code> 是 <code>Input/Output</code> 的缩写，I/O技术是非常实用的技术，用于<strong>处理设备之间的数据传输</strong>。如读/写文件，网络通讯等。</li>
 <li>Java 程序中，对于数据的输入/输出操作以<strong>流（stream）</strong> 的方式进行。</li>
 <li><code>java.io</code> 包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过<strong>标准的方法</strong>输入或输出数据。</li>
 <li>输入 <strong>input</strong>：读取外部数据（磁 盘、光盘等存储设备的数据）到程序（内存）中。</li>
 <li>输出 <strong>output</strong>：将程序（内存）数据输出到磁盘、光盘等存储设备中。</li>
 </ul>
-<h2 id="流的分类">流的分类</h2>
-<h3 id="按照数据流向分">按照数据流向分</h3>
-<p><img src="2.png" alt="2"></p>
+<h2 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a>流的分类</h2><h3 id="按照数据流向分"><a href="#按照数据流向分" class="headerlink" title="按照数据流向分"></a>按照数据流向分</h3><p><img src="2.png" alt="2"></p>
 <ul>
 <li><strong>字节流</strong>：字节流主要是操作byte类型数据。</li>
 <li><strong>字符流</strong>：因为数据编码的不同，而有了对字符进行高效操作的流对象。本质其实就是基于字节流读取时，去查了指定的码表。</li>
@@ -497,14 +494,12 @@
 </blockquote>
 <p><strong>结论：</strong></p>
 <p>只要是处理纯文本数据，就优先考虑使用字符流。换句话说，能使用字符流的一定也可以使用字节流。</p>
-<h3 id="按照数据流向分-2">按照数据流向分</h3>
-<p><img src="3.png" alt="3"></p>
+<h3 id="按照数据流向分-1"><a href="#按照数据流向分-1" class="headerlink" title="按照数据流向分"></a>按照数据流向分</h3><p><img src="3.png" alt="3"></p>
 <ul>
 <li><strong>输入流</strong>：<code>InputStream</code> 或者 <code>Reader</code> 从文件中读到程序中。</li>
 <li><strong>输出流</strong>：<code>OutputStream</code> 或者 <code>Writer</code> 从程序中输出到文件中。</li>
 </ul>
-<h3 id="按照流的角色分">按照流的角色分</h3>
-<p><img src="4.png" alt="4"></p>
+<h3 id="按照流的角色分"><a href="#按照流的角色分" class="headerlink" title="按照流的角色分"></a>按照流的角色分</h3><p><img src="4.png" alt="4"></p>
 <ul>
 <li><strong>节点流</strong>：直接与数据源相连，读入或读出，可以从/向一个特定的 IO 设备（如磁盘、网络）读/写数据的流，称为节点流，节点流也被成为低级流。</li>
 <li><strong>处理流</strong>：处理流是对一个已存在的流进行连接或封装，通过封装后的流来实现数据读/写功能，处理流也被称为高级流。</li>
@@ -512,8 +507,8 @@
 <blockquote>
 <p>当使用处理流进行输入/输出时，程序并不会直接连接到实际的数据源，没有和实际的输入/输出节点连接。使用处理流的一个明显好处是，只要使用相同的处理流，程序就可以采用完全相同的输入/输出代码来访问不同的数据源，随着处理流所包装节点流的变化，程序实际所访问的数据源也相应地发生变化。</p>
 </blockquote>
-<h3 id="IO-流体系">IO 流体系</h3>
-<p><img src="io.png" alt="io.png"></p>
+<h3 id="IO-流体系"><a href="#IO-流体系" class="headerlink" title="IO 流体系"></a>IO 流体系</h3><p><img src="io.png" alt="io.png"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -607,13 +602,11 @@
 <td>DataInputStream</td>
 <td>DataOutputStream</td>
 <td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="流中主要方法梳理">流中主要方法梳理</h2>
-<h3 id="InputStream-中的主要方法"><code>InputStream</code> 中的主要方法</h3>
-<p><img src="inputstream_uml.png" alt="inputstream_uml"></p>
+</div>
+<h2 id="流中主要方法梳理"><a href="#流中主要方法梳理" class="headerlink" title="流中主要方法梳理"></a>流中主要方法梳理</h2><h3 id="InputStream-中的主要方法"><a href="#InputStream-中的主要方法" class="headerlink" title="InputStream 中的主要方法"></a><code>InputStream</code> 中的主要方法</h3><p><img src="inputstream_uml.png" alt="inputstream_uml"></p>
 <ul>
 <li><code>abstract int read()</code>：从流中读取数据，读取一个字节，返回值为所读得字节</li>
 <li><code>int read(byte b[])</code>：从流中读取数据，读取多个字节，放置到字节数组 b 中，通常读取的字节数量为 b 的长度，返回值为实际独取的字节的数量。</li>
@@ -626,8 +619,7 @@
 <li><code>boolean markSupported()</code>：当前的流是否支持读指针的记录功能。</li>
 </ul>
 <p><strong>注意</strong>：其中 <code>read()</code> 返回的是读入的一个字节所对应的 int 值(0-255),而 <code>read(byte[] b)</code> 和 <code>read(byte[] b, int off, int len)</code> 返回的是读入的字节数。</p>
-<h3 id="OutputStream-中的主要方法"><code>OutputStream</code> 中的主要方法</h3>
-<p><img src="outputstream_uml.png" alt="outputstream_uml"></p>
+<h3 id="OutputStream-中的主要方法"><a href="#OutputStream-中的主要方法" class="headerlink" title="OutputStream 中的主要方法"></a><code>OutputStream</code> 中的主要方法</h3><p><img src="outputstream_uml.png" alt="outputstream_uml"></p>
 <ul>
 <li><code>abstract void write(int b)</code>：输出数据，往流中写一个字节 b。</li>
 <li><code>void write(byte b[])</code>：输出数据，往流中写一个字节数组 b。</li>
@@ -635,8 +627,7 @@
 <li><code>void flush()</code>：刷空输出流，并输出所有被缓存的字节。由于某些流支持缓存功能，该方法将把缓存中所有内容强制输出到流中。</li>
 <li><code>void close()</code>：关闭输出流。</li>
 </ul>
-<h3 id="Reader-中的主要方法"><code>Reader</code> 中的主要方法</h3>
-<p><img src="reader_uml.png" alt="reader_uml"></p>
+<h3 id="Reader-中的主要方法"><a href="#Reader-中的主要方法" class="headerlink" title="Reader 中的主要方法"></a><code>Reader</code> 中的主要方法</h3><p><img src="reader_uml.png" alt="reader_uml"></p>
 <ul>
 <li><code>int read(java.nio.CharBuffer target)</code>：试图读取字符入指定的字符缓冲区。</li>
 <li><code>int read()</code>：读取单个字符。</li>
@@ -649,8 +640,7 @@
 <li><code>void reset()</code>：重置流。</li>
 <li><code>void close()</code>：关闭该流并释放与之关联的所有系统资源。</li>
 </ul>
-<h3 id="Writer-中的主要方法"><code>Writer</code> 中的主要方法</h3>
-<p><img src="writer_uml.png" alt="writer_uml"></p>
+<h3 id="Writer-中的主要方法"><a href="#Writer-中的主要方法" class="headerlink" title="Writer 中的主要方法"></a><code>Writer</code> 中的主要方法</h3><p><img src="writer_uml.png" alt="writer_uml"></p>
 <ul>
 <li><code>void write(int c)</code>：写入单个字符。</li>
 <li><code>void write(char cbuf[])</code>：写入字符数组。</li>
@@ -811,7 +801,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#IO-%E6%B5%81%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">IO 流原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">流的分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%88%86"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">按照数据流向分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%88%86-2"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">按照数据流向分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%B5%81%E7%9A%84%E8%A7%92%E8%89%B2%E5%88%86"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">按照流的角色分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#IO-%E6%B5%81%E4%BD%93%E7%B3%BB"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">IO 流体系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%81%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%E6%A2%B3%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">流中主要方法梳理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#InputStream-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">InputStream 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#OutputStream-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">OutputStream 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Reader-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Reader 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Writer-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Writer 中的主要方法</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#IO-%E6%B5%81%E5%8E%9F%E7%90%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">IO 流原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">流的分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%88%86"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">按照数据流向分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91%E5%88%86-1"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">按照数据流向分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8C%89%E7%85%A7%E6%B5%81%E7%9A%84%E8%A7%92%E8%89%B2%E5%88%86"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">按照流的角色分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#IO-%E6%B5%81%E4%BD%93%E7%B3%BB"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">IO 流体系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B5%81%E4%B8%AD%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95%E6%A2%B3%E7%90%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">流中主要方法梳理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#InputStream-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">InputStream 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#OutputStream-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">OutputStream 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Reader-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Reader 中的主要方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Writer-%E4%B8%AD%E7%9A%84%E4%B8%BB%E8%A6%81%E6%96%B9%E6%B3%95"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">Writer 中的主要方法</span></a></li></ol></li></ol>
         
         </div>
       </aside>

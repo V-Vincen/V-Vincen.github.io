@@ -488,9 +488,8 @@
       多线程练习
     </h3>
     <div class="post-content-preview">
-      ReentrantLock
-练习一：
-1234567891011121314151617181920212223242526272829303132333435/** * ReentrantLock 用于替代 Synchronized，本例中由于 m1 锁定 this，只有 m1 执行完毕的时候，m2 才能执行， * 这里是复习 Synchronized 最原始的语义。 */public c......
+      ReentrantLock练习一：
+1234567891011121314151617181920212223242526272829303132333435/** * ReentrantLock 用于替代 Synchronized，本例中由于 m1 锁定 this，只有 m1 执行完毕的时候，m2 才能执行， * 这里是复习 Synchronized 最原始的语义。 */public cl......
     </div>
   </a>
   
@@ -523,9 +522,7 @@
       多线程练习
     </h3>
     <div class="post-content-preview">
-      synchronized
-练习一：
-12345678910111213//synchronized 关键词：对某个对象加锁public class _001_Synchronized_O &#123;        private int count = 10;    private Object o = new Object();    public void m() &#123;    ......
+      synchronized练习一：12345678910111213//synchronized 关键词：对某个对象加锁public class _001_Synchronized_O &#123;        private int count = 10;    private Object o = new Object();    public void m() &#123;      ......
     </div>
   </a>
   
@@ -558,10 +555,8 @@
       Java 并发容器
     </h3>
     <div class="post-content-preview">
-      ArrayBlockingQueue
-概述
-ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要指定长度的，所以使用 ArrayBlockingQueue 时必须指定长度，也就是它是一个有界阻塞队列。（有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。）
-它实现了 BlockingQueue接口，有着队列、集合以及阻塞队列的所有方法。它内部使用......
+      ArrayBlockingQueue概述ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要指定长度的，所以使用 ArrayBlockingQueue 时必须指定长度，也就是它是一个有界阻塞队列。（有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。）
+它实现了 BlockingQueue接口，有着队列、集合以及阻塞队列的所有方法。它内部使用 R......
     </div>
   </a>
   
@@ -594,12 +589,11 @@ ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要�
       Queue 队列总结
     </h3>
     <div class="post-content-preview">
-      简介
-Queue（队列）：一种特殊的线性表，它只允许在表的前端（front）进行删除操作，只允许在表的后端（rear）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。
+      简介Queue（队列）：一种特殊的线性表，它只允许在表的前端（front）进行删除操作，只允许在表的后端（rear）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。
 每个元素总是从队列的 rear 端进入队列，然后等待该元素之前的所有元素出队之后，当前元素才能出对，遵循先进先出（FIFO）原则。
 下面是 Queue 类的继承关系图：
 
-图中我们可以看到，最上层是 Coll......
+图中我们可以看到，最上层是 Colle......
     </div>
   </a>
   
@@ -636,8 +630,7 @@ Queue（队列）：一种特殊的线性表，它只允许在表的前端（fro
 并发容器虽然数量非常多，但依然是前面我们提到的四大类：List、Map、Set 和 Queue。
 
 并发容器关系图。
-List
-CopyOnWri......
+ListCopyOnWrit......
     </div>
   </a>
   
@@ -706,11 +699,9 @@ Java 中的集合包括三大类，它们是 Set（集）、List（列表）和 
     </h3>
     <div class="post-content-preview">
       Java 中的容器主要可以分为四个大类，分别是 List、Map、Set 和 Queue，但并不是所有的 Java 容器都是线程安全的。说到线程安全的问题，我们先来理解两个名词 同步容器 和 并发容器。
-同步容器
-在 Java 中，同步容器主要包括 2 类：
+同步容器在 Java 中，同步容器主要包括 2 类：
 Vector、Stack、HashTable
-
-Vector 实现了 List 接口，Vector 实际上就是一个数组，和 Array......
+Vector 实现了 List 接口，Vector 实际上就是一个数组，和 ArrayLi......
     </div>
   </a>
   
@@ -743,11 +734,9 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 Array...
       方法引用与构造方法引用
     </h3>
     <div class="post-content-preview">
-      方法引用
-什么是方法引用
-当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用。
+      方法引用什么是方法引用当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用。
 方法引用可以看做是 Lambda 表达式深层次的表达。换句话说，方法引用就是 Lambda 表达式，也就是函数式接口的一个实例，通过方法的名字来指向一个方法，可以认为是 Lambda 表达式的一个语法糖。
-要求：实现接口的抽象方法的参数类列和返回值类型，必须与方法引用的方法的参数列表和返回值......
+要求：实现接口的抽象方法的参数类列和返回值类型，必须与方法引用的方法的参数列表和返回值类型......
     </div>
   </a>
   
@@ -781,10 +770,9 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 Array...
     </h3>
     <div class="post-content-preview">
       什么是函数式（Functional）接口
-
 只包含一个抽象方法的接口，称为函数式接口
-你可以通过 Lambda 表达式来创建接口的对象。（若 Lambda 表达式抛出一个受检异常 – 即：非运行时异常，那么该异常需要在目标接口的抽象方法上进行声明）。
-我们可以在一个接口上使用 @FunctionalInterface 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含......
+你可以通过 Lambda 表达式来创建接口的对象。（若 Lambda 表达式抛出一个受检异常 — 即：非运行时异常，那么该异常需要在目标接口的抽象方法上进行声明）。
+我们可以在一个接口上使用 @FunctionalInterface 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含一......
     </div>
   </a>
   
@@ -817,10 +805,8 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 Array...
       Lambda 表达式
     </h3>
     <div class="post-content-preview">
-      Lambda 表达式简介
-Lambda 是一个简洁匿名函数，我们可以把 Lambda 表达式理解为是一段可以传递的代码（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使 Java 的语言表达能力得到了提升。
-Lambda 表达式的应用范围
-Lambda 表达式本质：作为函数式接口（只有一个抽象方法的接口）的实例，Lambda 表达式和方法引用,只能用在函......
+      Lambda 表达式简介Lambda 是一个简洁匿名函数，我们可以把 Lambda 表达式理解为是一段可以传递的代码（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使 Java 的语言表达能力得到了提升。
+Lambda 表达式的应用范围Lambda 表达式本质：作为函数式接口（只有一个抽象方法的接口）的实例，Lambda 表达式和方法引用,只能用在函数式......
     </div>
   </a>
   
@@ -1213,11 +1199,11 @@ Lambda 表达式本质：作为函数式接口（只有一个抽象方法的接�
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

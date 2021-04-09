@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">601</span> In Total
+              Words <span class="post-count">599</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,62 +472,31 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="git-tag"><code>git tag</code></h2>
-<h3 id="查看标签">查看标签</h3>
-<p><strong>查看本地所以标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br><span class="line">git tag -l</span><br><span class="line">git tag --list</span><br></pre></td></tr></table></figure>
-<p><strong>查看远程所有标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git ls-remote --tags</span><br><span class="line">git ls-remote --tag</span><br></pre></td></tr></table></figure>
-<h3 id="给分支打标签">给分支打标签</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagname&gt; &#x2F;&#x2F;tagname 标签名</span><br><span class="line">&#x2F;&#x2F;例：git tag v1.1.0</span><br></pre></td></tr></table></figure>
+        <h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a><code>git tag</code></h2><h3 id="查看标签"><a href="#查看标签" class="headerlink" title="查看标签"></a>查看标签</h3><p><strong>查看本地所以标签</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br><span class="line">git tag -l</span><br><span class="line">git tag --list</span><br></pre></td></tr></table></figure></p>
+<p><strong>查看远程所有标签</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git ls-remote --tags</span><br><span class="line">git ls-remote --tag</span><br></pre></td></tr></table></figure></p>
+<h3 id="给分支打标签"><a href="#给分支打标签" class="headerlink" title="给分支打标签"></a>给分支打标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagname&gt; &#x2F;&#x2F;tagname 标签名</span><br><span class="line">&#x2F;&#x2F;例：git tag v1.1.0</span><br></pre></td></tr></table></figure>
 <p><strong>给特定的某个 <code>commit</code> 版本打标签，比如现在某次提交的 id 为 <code>039bf8b</code></strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0.0 039bf8b</span><br><span class="line"></span><br><span class="line">或者可以添加注释</span><br><span class="line"></span><br><span class="line">git tag v1.0.0 -m &quot;add tags information&quot; 039bf8b</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">git tag v1.0.0 039bf8b -m &quot;add tags information&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="删除标签">删除标签</h3>
-<p><strong>删除本地某个标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag --delete &lt;tagname&gt;      &#x2F;&#x2F;例 tagname：v1.0.0</span><br><span class="line">git tag -d &lt;tagname&gt;        </span><br><span class="line">git tag --d &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>删除远程某个标签</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push -d origin &lt;tagname&gt;       &#x2F;&#x2F;例 tagname：v1.0.0</span><br><span class="line">git push --delete origin &lt;tagname&gt;</span><br><span class="line">git push origin -d &lt;tagname&gt;</span><br><span class="line">git push origin --delete &lt;tagname&gt;</span><br><span class="line">git push origin :&lt;tagname&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="推送本地标签到远程">推送本地标签到远程</h3>
-<p><strong>一次性全部推送</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br><span class="line">git push origin --tag</span><br><span class="line">git push --tags</span><br><span class="line">git push --tag</span><br></pre></td></tr></table></figure>
-<p><strong>推送某个特定标签到远程</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="查看某标签的提交信息">查看某标签的提交信息</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="git-branch"><code>git branch</code></h2>
-<h3 id="查看分支">查看分支</h3>
-<p><strong>查看全部分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-<p><strong>查看本地分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-<p><strong>查看远程分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
-<h3 id="新建切换分支">新建切换分支</h3>
-<p><strong>新建分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branchname&gt; &#x2F;&#x2F;branchname 分支名</span><br><span class="line">&#x2F;&#x2F;例：git branch test</span><br></pre></td></tr></table></figure>
-<p><strong>切换分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>新建并切换分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="删除分支">删除分支</h3>
-<p><strong>删除本地分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (-d | -D) &lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>删除远程分支</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d -r &lt;branchname&gt;   &#x2F;&#x2F;删除后推送</span><br><span class="line">git push origin :&lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="推送本地分支到远程">推送本地分支到远程</h3>
-<p><strong>推送本地分支到远程</strong></p>
-<p>一般我们在本地创建完新的分支后，把本地分支推送到远程仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branchname&gt;</span><br><span class="line">git push origin &lt;branchname&gt;:&lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<p>注：<code>:</code> 前的 <code>&lt;branchname&gt;</code> 为本地创建的新分支，<code>:</code> 后的 <code>&lt;branchname&gt;</code> 为推送到远程仓库后所对应的分支。</p>
+<h3 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h3><p><strong>删除本地某个标签</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag --delete &lt;tagname&gt;      &#x2F;&#x2F;例 tagname：v1.0.0</span><br><span class="line">git tag -d &lt;tagname&gt;        </span><br><span class="line">git tag --d &lt;tagname&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>删除远程某个标签</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push -d origin &lt;tagname&gt;       &#x2F;&#x2F;例 tagname：v1.0.0</span><br><span class="line">git push --delete origin &lt;tagname&gt;</span><br><span class="line">git push origin -d &lt;tagname&gt;</span><br><span class="line">git push origin --delete &lt;tagname&gt;</span><br><span class="line">git push origin :&lt;tagname&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="推送本地标签到远程"><a href="#推送本地标签到远程" class="headerlink" title="推送本地标签到远程"></a>推送本地标签到远程</h3><p><strong>一次性全部推送</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push origin --tags</span><br><span class="line">git push origin --tag</span><br><span class="line">git push --tags</span><br><span class="line">git push --tag</span><br></pre></td></tr></table></figure></p>
+<p><strong>推送某个特定标签到远程</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;tagname&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="查看某标签的提交信息"><a href="#查看某标签的提交信息" class="headerlink" title="查看某标签的提交信息"></a>查看某标签的提交信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a><code>git branch</code></h2><h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><p><strong>查看全部分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure></p>
+<p><strong>查看本地分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure></p>
+<p><strong>查看远程分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure></p>
+<h3 id="新建切换分支"><a href="#新建切换分支" class="headerlink" title="新建切换分支"></a>新建切换分支</h3><p><strong>新建分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branchname&gt; &#x2F;&#x2F;branchname 分支名</span><br><span class="line">&#x2F;&#x2F;例：git branch test</span><br></pre></td></tr></table></figure></p>
+<p><strong>切换分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>新建并切换分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><strong>删除本地分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (-d | -D) &lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>删除远程分支</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d -r &lt;branchname&gt;   &#x2F;&#x2F;删除后推送</span><br><span class="line">git push origin :&lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --delete &lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="推送本地分支到远程"><a href="#推送本地分支到远程" class="headerlink" title="推送本地分支到远程"></a>推送本地分支到远程</h3><p><strong>推送本地分支到远程</strong></p>
+<p>一般我们在本地创建完新的分支后，把本地分支推送到远程仓库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;branchname&gt;</span><br><span class="line">git push origin &lt;branchname&gt;:&lt;branchname&gt;</span><br></pre></td></tr></table></figure><br>注：<code>:</code> 前的 <code>&lt;branchname&gt;</code> 为本地创建的新分支，<code>:</code> 后的 <code>&lt;branchname&gt;</code> 为推送到远程仓库后所对应的分支。</p>
 <p><strong>另一个推送命令</strong></p>
-<p>下面这个命令意思是，推送一个<strong>空分支</strong>到远程分支，这也是<strong>删除远程分支</strong>的简便写法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :&lt;branchname&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="重命名分支">重命名分支</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (-m | -M) &lt;oldbranch&gt; &lt;newbranch&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="git-中一些选项解释">git 中一些选项解释</h2>
-<p><code>-d  --delete</code>：删除</p>
+<p>下面这个命令意思是，推送一个<strong>空分支</strong>到远程分支，这也是<strong>删除远程分支</strong>的简便写法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :&lt;branchname&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="重命名分支"><a href="#重命名分支" class="headerlink" title="重命名分支"></a>重命名分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch (-m | -M) &lt;oldbranch&gt; &lt;newbranch&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="git-中一些选项解释"><a href="#git-中一些选项解释" class="headerlink" title="git 中一些选项解释"></a>git 中一些选项解释</h2><p><code>-d  --delete</code>：删除</p>
 <p><code>-D  --delete --force</code> 的快捷键</p>
 <p><code>-f  --force</code>：强制</p>
 <p><code>-m  --move</code>：移动或重命名</p>

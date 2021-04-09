@@ -488,15 +488,12 @@
       Docker 常用命令
     </h3>
     <div class="post-content-preview">
-      查看 Docker 版本
-1docker version
-构建 Docker 镜像
-commit 构建
-
+      查看 Docker 版本1docker version
+构建 Docker 镜像commit 构建
 先启动一个基本容器生成，然后在该容器中完成自己所需的操作，最后用 commit 命令来生成一个新的 image。
 下命令中：
 &lt;CONTAINER ID&gt;：为在基础容器中完成需求后的容器 id；
-&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 i......
+&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 imga......
     </div>
   </a>
   
@@ -529,11 +526,8 @@ commit 构建
       TortoiseGit 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述
-TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git 只支持 Windows 系统，有一个前辈海龟 SVN，TortoiseSVN 和 TortoiseGit 都是非常优秀的开源的版本库客户端。 分为 32 位版与 64 位版。并且支持各种语言，包括简体中文。
-安装 TortoiseGit
-下载
-下载地址：https://tortoisegit.org/......
+      概述TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git 只支持 Windows 系统，有一个前辈海龟 SVN，TortoiseSVN 和 TortoiseGit 都是非常优秀的开源的版本库客户端。 分为 32 位版与 64 位版。并且支持各种语言，包括简体中文。
+安装 TortoiseGit下载下载地址：https://tortoisegit.org/dow......
     </div>
   </a>
   
@@ -566,17 +560,12 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
       Git 命令
     </h3>
     <div class="post-content-preview">
-      基本命令
-
-先来看张流程图，具体命令如下：
-配置用户信息
-12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
-查看配置
-1git config --list
+      基本命令先来看张流程图，具体命令如下：
+配置用户信息12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
+查看配置1git config --list
 初始化
 1git init
-新增提交
-12git addgit commit -m &#39;me......
+新增提交12git addgit commit -m &#39;message......
     </div>
   </a>
   
@@ -610,7 +599,6 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     </h3>
     <div class="post-content-preview">
       工作流程
-
 克隆 Git 资源作为工作目录。
 在克隆的资源上添加或修改文件。
 如果其他人修改了，你可以更新资源。
@@ -653,14 +641,11 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     </h3>
     <div class="post-content-preview">
       概述
-
 Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
 
-安装 Git
-下载
-Git 官网下载安装说明：https://git......
+安装 Git下载Git 官网下载安装说明：https://git-sc......
     </div>
   </a>
   
@@ -693,8 +678,7 @@ Git 官网下载安装说明：https://git......
       Docker Compose 部署 MySQL
     </h3>
     <div class="post-content-preview">
-      MySQL5：docker-compose.yml
-1234567891011121314151617181920212223version: &#x27;3.1&#x27;services:  mysql:    restart: always    image: mysql:5.7.22    container_name: mysql    ports:      - 3306:330......
+      MySQL5：docker-compose.yml1234567891011121314151617181920212223version: &#x27;3.1&#x27;services:  mysql:    restart: always    image: mysql:5.7.22    container_name: mysql    ports:      - 3306:3306......
     </div>
   </a>
   
@@ -728,8 +712,7 @@ Git 官网下载安装说明：https://git......
     </h3>
     <div class="post-content-preview">
       启动一个 tomcat，先在 /usr/local/docker/tomcat/ 目录下创建一个 docker-compose.yml 配置文件。
-docker-compose.yml
-123456789101112version: &#x27;3.1&#x27;services:  tomcat:    restart: always    image: tomcat    contain......
+docker-compose.yml123456789101112version: &#x27;3.1&#x27;services:  tomcat:    restart: always    image: tomcat    containe......
     </div>
   </a>
   
@@ -762,10 +745,9 @@ docker-compose.yml
       Docker Compose 命令说明
     </h3>
     <div class="post-content-preview">
-      命令对象与格式
-对于 Compose 来说，大部分命令的对象既可以是项目本身，也可以指定为项目中的服务或者容器。如果没有特别的说明，命令对象将是项目，这意味着项目中所有的服务都会受到命令影响。
+      命令对象与格式对于 Compose 来说，大部分命令的对象既可以是项目本身，也可以指定为项目中的服务或者容器。如果没有特别的说明，命令对象将是项目，这意味着项目中所有的服务都会受到命令影响。
 执行 docker-compose [COMMAND] --help 或者 docker-compose help [COMMAND] 可以查看具体某个命令的使用格式。
-docker-compose ......
+docker-compose 命......
     </div>
   </a>
   
@@ -1229,11 +1211,11 @@ Compose 定位是 「定义和运行多个 Docker 容器的应用（Defining and
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

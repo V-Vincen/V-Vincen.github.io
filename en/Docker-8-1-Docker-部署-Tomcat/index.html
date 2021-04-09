@@ -410,7 +410,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">191</span> In Total
+              Words <span class="post-count">190</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,23 +472,16 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="搜索-tomcat-镜像">搜索 <code>tomcat</code> 镜像</h2>
-<p>docker 官网：<a target="_blank" rel="noopener" href="https://hub.docker.com/_/tomcat">https://hub.docker.com/_/tomcat</a></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search tomcat</span><br></pre></td></tr></table></figure>
-<h2 id="下载-tomcat-镜像">下载 <code>tomcat</code> 镜像</h2>
-<p>默认最新版本</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
-<h2 id="运行-tomcat-容器">运行 <code>tomcat</code> 容器</h2>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name tomcat \</span><br><span class="line">-p 8080:8080 \</span><br><span class="line">-v <span class="variable">$PWD</span>/ROOT:/usr/<span class="built_in">local</span>/tomcat/webapps/ROOT \</span><br><span class="line">-d tomcat</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name tomcat \</span><br><span class="line">-p 8080:8080 \</span><br><span class="line">-v /usr/<span class="built_in">local</span>/docker/web/ROOT:/usr/<span class="built_in">local</span>/tomcat/webapps/ROOT \</span><br><span class="line">-d tomcat</span><br></pre></td></tr></table></figure>
-<p>命令说明：</p>
+        <h2 id="搜索-tomcat-镜像"><a href="#搜索-tomcat-镜像" class="headerlink" title="搜索 tomcat 镜像"></a>搜索 <code>tomcat</code> 镜像</h2><p>docker 官网：<a target="_blank" rel="noopener" href="https://hub.docker.com/_/tomcat">https://hub.docker.com/_/tomcat</a><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search tomcat</span><br></pre></td></tr></table></figure></p>
+<h2 id="下载-tomcat-镜像"><a href="#下载-tomcat-镜像" class="headerlink" title="下载 tomcat 镜像"></a>下载 <code>tomcat</code> 镜像</h2><p>默认最新版本<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure></p>
+<h2 id="运行-tomcat-容器"><a href="#运行-tomcat-容器" class="headerlink" title="运行 tomcat 容器"></a>运行 <code>tomcat</code> 容器</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name tomcat \</span><br><span class="line">-p 8080:8080 \</span><br><span class="line">-v <span class="variable">$PWD</span>/ROOT:/usr/<span class="built_in">local</span>/tomcat/webapps/ROOT \</span><br><span class="line">-d tomcat</span><br></pre></td></tr></table></figure>
+<p>或者<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">--name tomcat \</span><br><span class="line">-p 8080:8080 \</span><br><span class="line">-v /usr/<span class="built_in">local</span>/docker/web/ROOT:/usr/<span class="built_in">local</span>/tomcat/webapps/ROOT \</span><br><span class="line">-d tomcat</span><br></pre></td></tr></table></figure><br>命令说明：</p>
 <ul>
 <li><code>-p 8080:8080</code>：将容器的8080端口映射到主机的8080端口</li>
 <li><code>-v $PWD/ROOT:/usr/local/tomcat/webapps/ROOT</code>：将主机中当前目录下的 <code>ROOT</code> 挂载到容器的 <code>/ROOT</code>  或者 <code>-v /usr/local/docker/web/ROOT:/usr/local/tomcat/webapps/ROOT</code>：直接指定宿主机的绝对路径</li>
 </ul>
-<p>查看容器启动情况</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/usr/<span class="built_in">local</span>/docker<span class="comment"># docker ps</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES</span><br><span class="line">65bed88bc006        tomcat              <span class="string">&quot;catalina.sh run&quot;</span>   41 seconds ago      Up 40 seconds       0.0.0.0:8080-&gt;8080/tcp   tomcat</span><br></pre></td></tr></table></figure>
+<p>查看容器启动情况<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/usr/<span class="built_in">local</span>/docker<span class="comment"># docker ps</span></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES</span><br><span class="line">65bed88bc006        tomcat              <span class="string">&quot;catalina.sh run&quot;</span>   41 seconds ago      Up 40 seconds       0.0.0.0:8080-&gt;8080/tcp   tomcat</span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->

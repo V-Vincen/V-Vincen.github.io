@@ -472,83 +472,61 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="JRebel-简介">JRebel 简介</h2>
-<p>JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任何一个类或者资源作出修改的时候，这个变化会直接反应在部署好的应用程序上，从而跳过了构建和部署的过程，可以省去大量的部署用的时间。</p>
+        <h2 id="JRebel-简介"><a href="#JRebel-简介" class="headerlink" title="JRebel 简介"></a>JRebel 简介</h2><p>JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任何一个类或者资源作出修改的时候，这个变化会直接反应在部署好的应用程序上，从而跳过了构建和部署的过程，可以省去大量的部署用的时间。</p>
 <p>JRebel 是一款 JVM 插件，它使得 Java 代码修改后不用重启系统，立即生效。IDEA 上原生是不支持热部署的，一般更新了 Java 文件后要手动重启 Tomcat 服务器，才能生效，浪费时间浪费生命。目前对于 IDEA 热部署最好的解决方案就是安装 JRebel 插件。</p>
-<h2 id="JRebel-安装">JRebel 安装</h2>
-<h3 id="安装插件">安装插件</h3>
-<p><img src="1.png" alt="1"></p>
-<h3 id="在线生成-GUID">在线生成 GUID</h3>
-<p>网址：<a target="_blank" rel="noopener" href="https://www.guidgen.com/">在线GUID地址</a></p>
+<h2 id="JRebel-安装"><a href="#JRebel-安装" class="headerlink" title="JRebel 安装"></a>JRebel 安装</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p><img src="1.png" alt="1"></p>
+<h3 id="在线生成-GUID"><a href="#在线生成-GUID" class="headerlink" title="在线生成 GUID"></a>在线生成 GUID</h3><p>网址：<a target="_blank" rel="noopener" href="https://www.guidgen.com/">在线GUID地址</a></p>
 <p><img src="2.png" alt="2"></p>
-<p>如果失效刷新 GUID 替换就可以！连接到在线授权服务器：<a target="_blank" rel="noopener" href="https://jrebel.qekang.com/%7BGUID%7D">https://jrebel.qekang.com/{GUID}</a></p>
-<h3 id="激活">激活</h3>
-<p>打开 JRebel &amp; XRebel 如下所示面板，填写上面的授权地址。</p>
+<p>如果失效刷新 GUID 替换就可以！连接到在线授权服务器：<a target="_blank" rel="noopener" href="https://jrebel.qekang.com/{GUID}">https://jrebel.qekang.com/{GUID}</a></p>
+<h3 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h3><p>打开 JRebel &amp; XRebel 如下所示面板，填写上面的授权地址。</p>
 <p><img src="3.png" alt="3"></p>
 <p><img src="4.png" alt="4"></p>
-<h3 id="设置离线模式">设置离线模式</h3>
-<p><img src="5.png" alt="5"></p>
+<h3 id="设置离线模式"><a href="#设置离线模式" class="headerlink" title="设置离线模式"></a>设置离线模式</h3><p><img src="5.png" alt="5"></p>
 <p><img src="6.png" alt="6"></p>
-<h3 id="设置自动编译">设置自动编译</h3>
-<p>要想实现热部署，还需要对 IDEA 按如下进行设置。</p>
+<h3 id="设置自动编译"><a href="#设置自动编译" class="headerlink" title="设置自动编译"></a>设置自动编译</h3><p>要想实现热部署，还需要对 IDEA 按如下进行设置。</p>
 <ul>
-<li>
-<p>由于 JRebel 是实时监控 <code>.class</code> 文件的变化来实现热部署的，所以在 IDEA 环境下需要打开自动变编译功能才能实现随时修改，随时生效。<br>
-<img src="7.png" alt="7"></p>
+<li><p>由于 JRebel 是实时监控 <code>.class</code> 文件的变化来实现热部署的，所以在 IDEA 环境下需要打开自动变编译功能才能实现随时修改，随时生效。<br>  <img src="7.png" alt="7"></p>
 </li>
-<li>
-<p>设置 <code>compiler.automake.allow.when.app.running</code></p>
+<li><p>设置 <code>compiler.automake.allow.when.app.running</code></p>
 <ul>
 <li>Windows 快捷键：<code>ctrl + shift + A</code>，搜索：<code>Registry</code> 或者快捷键：<code>Ctrl + Shift + Alt + /</code>，选择 <code>Registry</code></li>
-<li>Mac 快捷键：<code>shift + option + command + /</code></li>
-</ul>
+<li><p>Mac 快捷键：<code>shift + option + command + /</code></p>
 <p><img src="8.png" alt="8"></p>
 </li>
 </ul>
-<h2 id="JRebel-使用">JRebel 使用</h2>
-<p>运行项目时要点击图中红框中的按钮，即可运行。</p>
-<p><img src="9.png" alt="9"></p>
-<h2 id="XRebel-简介">XRebel 简介</h2>
-<p>XRebel 是用于 Java 开发的性能工具，可为开发人员提供实时性能见解，以帮助他们在开发阶段更快，更早地理解和解决潜在问题。XRebel 可以做传统的分析工具无法完成的工作。它使开发人员可以从头到尾跟踪其代码的影响-即使是在分布式应用程序中。 结合实时 Java 性能指标，XRebel 成为任何 Java 开发人员必备的工具。借助 XRebel，开发人员可以创建性能更好的应用程序，从而带来更好的最终用户体验。</p>
-<h2 id="启动">启动</h2>
-<p>如下图：</p>
-<p><img src="10.png" alt="10"></p>
-<ul>
-<li>
-<p>如果你是直接在 <code>IDEA Plugins Marketplace</code> 中下载的那无需多余配置。</p>
-</li>
-<li>
-<p>如果你是第三方下载的话，在启动前则需要配置 <code>VM options</code>：<code>-javaagent:[/path/to/]xrebel.jar</code> 启动参数。<code>[/path/to/]</code> 为你 XRebel 插件实际放置路径。</p>
-<p><img src="11.png" alt="11"></p>
 </li>
 </ul>
-<h3 id="激活-2">激活</h3>
-<p>项目启动后，在项目根 url 后面输入 <code>/xrebel</code>，会弹出 <code>XRebel activation</code>框。如激活 JRebel 插件一样，填写上面获取授权地址。</p>
+<h2 id="JRebel-使用"><a href="#JRebel-使用" class="headerlink" title="JRebel 使用"></a>JRebel 使用</h2><p>运行项目时要点击图中红框中的按钮，即可运行。</p>
+<p> <img src="9.png" alt="9"></p>
+<h2 id="XRebel-简介"><a href="#XRebel-简介" class="headerlink" title="XRebel 简介"></a>XRebel 简介</h2><p>XRebel 是用于 Java 开发的性能工具，可为开发人员提供实时性能见解，以帮助他们在开发阶段更快，更早地理解和解决潜在问题。XRebel 可以做传统的分析工具无法完成的工作。它使开发人员可以从头到尾跟踪其代码的影响-即使是在分布式应用程序中。 结合实时 Java 性能指标，XRebel 成为任何 Java 开发人员必备的工具。借助 XRebel，开发人员可以创建性能更好的应用程序，从而带来更好的最终用户体验。</p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>如下图：</p>
+<p><img src="10.png" alt="10"></p>
+<ul>
+<li><p>如果你是直接在 <code>IDEA Plugins Marketplace</code> 中下载的那无需多余配置。</p>
+</li>
+<li><p>如果你是第三方下载的话，在启动前则需要配置 <code>VM options</code>：<code>-javaagent:[/path/to/]xrebel.jar</code> 启动参数。<code>[/path/to/]</code> 为你 XRebel 插件实际放置路径。</p>
+<p>  <img src="11.png" alt="11"></p>
+</li>
+</ul>
+<h3 id="激活-1"><a href="#激活-1" class="headerlink" title="激活"></a>激活</h3><p>项目启动后，在项目根 url 后面输入 <code>/xrebel</code>，会弹出 <code>XRebel activation</code>框。如激活 JRebel 插件一样，填写上面获取授权地址。</p>
 <p><img src="12.png" alt="12"></p>
 <p><img src="13.png" alt="13"></p>
-<h3 id="设置离线模式-2">设置离线模式</h3>
-<p><img src="14.png" alt="14"></p>
-<h3 id="功能简介">功能简介</h3>
-<ul>
-<li>
-<p>开始</p>
-<p><img src="15.png" alt="15"></p>
+<h3 id="设置离线模式-1"><a href="#设置离线模式-1" class="headerlink" title="设置离线模式"></a>设置离线模式</h3><p><img src="14.png" alt="14"></p>
+<h3 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h3><ul>
+<li><p>开始</p>
+<p>  <img src="15.png" alt="15"></p>
 </li>
-<li>
-<p>查看 I/O</p>
-<p><img src="16.png" alt="16"></p>
+<li><p>查看 I/O </p>
+<p>  <img src="16.png" alt="16"></p>
 </li>
-<li>
-<p>日志查看</p>
-<p><img src="17.png" alt="17"></p>
+<li><p>日志查看</p>
+<p>  <img src="17.png" alt="17"></p>
 </li>
-<li>
-<p>异常查看</p>
-<p><img src="18.png" alt="18"></p>
+<li><p>异常查看</p>
+<p>  <img src="18.png" alt="18"></p>
 </li>
-<li>
-<p>其他设置</p>
-<p><img src="19.png" alt="19"></p>
+<li><p>其他设置</p>
+<p>  <img src="19.png" alt="19"></p>
 </li>
 </ul>
 
@@ -699,7 +677,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">JRebel 简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JRebel 安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90-GUID"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">在线生成 GUID</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">激活</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">设置离线模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">设置自动编译</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">JRebel 使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#XRebel-%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">XRebel 简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">启动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%BF%80%E6%B4%BB-2"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">激活</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%BC%8F-2"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">设置离线模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">功能简介</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">JRebel 简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JRebel 安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90-GUID"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">在线生成 GUID</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">激活</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">设置离线模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">设置自动编译</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JRebel-%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">JRebel 使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#XRebel-%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">XRebel 简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">启动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%BF%80%E6%B4%BB-1"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">激活</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%A6%BB%E7%BA%BF%E6%A8%A1%E5%BC%8F-1"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">设置离线模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">功能简介</span></a></li></ol></li></ol>
         
         </div>
       </aside>

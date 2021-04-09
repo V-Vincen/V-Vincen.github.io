@@ -488,14 +488,9 @@
       Docker 部署 MySQL 8.0.17
     </h3>
     <div class="post-content-preview">
-      搜索 MySQL 镜像
-docker 官网：https://hub.docker.com/_/mysql
-1docker search mysql
-下载 MySQL 镜像
-默认最新版本
-1docker pull mysql
-运行 MySQL 容器
-123456docker run -p 3306:3306 --name mysql \-v /usr/local/docker/mysql/co......
+      搜索 MySQL 镜像docker 官网：https://hub.docker.com/_/mysql1docker search mysql
+下载 MySQL 镜像默认最新版本1docker pull mysql
+运行 MySQL 容器123456docker run -p 3306:3306 --name mysql \-v /usr/local/docker/mysql/conf:/e......
     </div>
   </a>
   
@@ -528,14 +523,9 @@ docker 官网：https://hub.docker.com/_/mysql
       Docker 部署 Tomcat
     </h3>
     <div class="post-content-preview">
-      搜索 tomcat 镜像
-docker 官网：https://hub.docker.com/_/tomcat
-1docker search tomcat
-下载 tomcat 镜像
-默认最新版本
-1docker pull tomcat
-运行 tomcat 容器
-12345docker run \--name tomcat \-p 8080:8080 \-v $PWD/ROOT:/usr/loc......
+      搜索 tomcat 镜像docker 官网：https://hub.docker.com/_/tomcat1docker search tomcat
+下载 tomcat 镜像默认最新版本1docker pull tomcat
+运行 tomcat 容器12345docker run \--name tomcat \-p 8080:8080 \-v $PWD/ROOT:/usr/local/to......
     </div>
   </a>
   
@@ -569,8 +559,7 @@ docker 官网：https://hub.docker.com/_/tomcat
     </h3>
     <div class="post-content-preview">
       在传统的单服务架构中，一般来说，只有一个服务器，那么不存在 Session 共享问题，但是在分布式/集群项目中，Session 共享则是一个必须面对的问题，先看一个简单的架构图：
-
-在这样的架构中，会出现一些单服务中不存在的问题，例如客户端发起一个请求，这个请求到达 Nginx 上之后，被 Nginx 转发到 Tomcat A 上，然后在 Tomcat A 上往 session 中保存了一份......
+在这样的架构中，会出现一些单服务中不存在的问题，例如客户端发起一个请求，这个请求到达 Nginx 上之后，被 Nginx 转发到 Tomcat A 上，然后在 Tomcat A 上往 session 中保存了一份数......
     </div>
   </a>
   
@@ -603,12 +592,11 @@ docker 官网：https://hub.docker.com/_/tomcat
       单例模式
     </h3>
     <div class="post-content-preview">
-      简介
-单例对象（Singleton）是一种常用的设计模式。在Java应用中，单例对象能保证在一个 JVM 中，该对象只有一个实例存在。这样的模式有几个好处：
+      简介单例对象（Singleton）是一种常用的设计模式。在Java应用中，单例对象能保证在一个 JVM 中，该对象只有一个实例存在。这样的模式有几个好处：
 单例模式的优点：
 
 由于单例模式只生产一个实例，减少了系统性能开销，当一个对象的产生需要比较多的资源时，如读取配置、产生其他依赖对象时，则可以通过在应用启动时直接产生一个单例对象，然后永久驻留内存的方式来解决
-单例模式可以在系统设置全局......
+单例模式可以在系统设置全局的......
     </div>
   </a>
   
@@ -642,11 +630,10 @@ docker 官网：https://hub.docker.com/_/tomcat
     </h3>
     <div class="post-content-preview">
       GoF（“四人帮”，又称 Gang of Four，即 Erich Gamma, Richard Helm, Ralph Johnson &amp; John Vlissides）
-设计模式的分类
-总体来说设计模式分为三大类：
+设计模式的分类总体来说设计模式分为三大类：
 
 创建型模式（5个）：单例模式、原型模式、建造者模式、工厂模式、抽象工厂模式。
-结构型模式（7个）：桥接模式、外观模式、组合模式、装饰模式、适配器模式、代理模式、享元......
+结构型模式（7个）：桥接模式、外观模式、组合模式、装饰模式、适配器模式、代理模式、享元模......
     </div>
   </a>
   
@@ -679,10 +666,9 @@ docker 官网：https://hub.docker.com/_/tomcat
       注解配置整合
     </h3>
     <div class="post-content-preview">
-      基本概念
-SSM：Spring+SpringMVC+MyBatis
+      基本概念SSM：Spring+SpringMVC+MyBatis
 Spring
-Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring......
+Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring ......
     </div>
   </a>
   
@@ -715,10 +701,9 @@ Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Ja
       xml 配置整合
     </h3>
     <div class="post-content-preview">
-      基本概念
-SSM：Spring+SpringMVC+MyBatis
+      基本概念SSM：Spring+SpringMVC+MyBatis
 Spring
-Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring......
+Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring ......
     </div>
   </a>
   
@@ -751,12 +736,10 @@ Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Ja
       脏读、不可重复读、幻读
     </h3>
     <div class="post-content-preview">
-      脏读、不可重复读、幻读
-理解这三种由于并发访问导致的数据读取问题，再理解事务隔离级别就简单多了。
-脏读
-脏读：读取未提交数据
+      脏读、不可重复读、幻读理解这三种由于并发访问导致的数据读取问题，再理解事务隔离级别就简单多了。
+脏读脏读：读取未提交数据
 例：
-A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误并执行回滚操作，那么 A 事务读取到的数据就是脏数据。就好像原本的数据比较干净、纯粹，此时由于 B 事务更改了它，这个数据变得不再纯粹。这个时候 A 事务立即读取了这个脏数据，但事务 B 良心发现，......
+A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误并执行回滚操作，那么 A 事务读取到的数据就是脏数据。就好像原本的数据比较干净、纯粹，此时由于 B 事务更改了它，这个数据变得不再纯粹。这个时候 A 事务立即读取了这个脏数据，但事务 B 良心发现，又用......
     </div>
   </a>
   
@@ -791,10 +774,9 @@ A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误
     <div class="post-content-preview">
       AOP 简介
 
-
 AOP（Aspect-Oriented Programming, 面向切面编程）: 是一种新的方法论，是对传统 OOP（Object-Oriented Programming，面向对象编程） 的补充。
 AOP 的主要编程对象是切面（aspect），而切面是模块化的横切关注点。
-在应用 AOP 编程时， 仍然需要定义公共功能，但可以明确的定义这个功能在哪里， 以什么方式应用,......
+在应用 AOP 编程时， 仍然需要定义公共功能，但可以明确的定义这个功能在哪里， 以什么方式应用, ......
     </div>
   </a>
   
@@ -827,10 +809,9 @@ AOP 的主要编程对象是切面（aspect），而切面是模块化的横切�
       jdbcType、javaType、ofType 的区别
     </h3>
     <div class="post-content-preview">
-      MyBatis 中何时使用 jdbcType
-这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
+      MyBatis 中何时使用 jdbcType这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
 
-......
+当......
     </div>
   </a>
   
@@ -1223,11 +1204,11 @@ AOP 的主要编程对象是切面（aspect），而切面是模块化的横切�
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     

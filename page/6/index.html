@@ -488,10 +488,9 @@
       This package defines utility classes for working with streams, readers, writers and files...
     </h3>
     <div class="post-content-preview">
-      概述
-commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文件的方法，可以大大简化我们处理 IO 流和操作文件的代码。从 commons-io 的官方使用文档可以看出，它主要分为工具类、尾端类、行迭代器、文件过滤器、文件比较器和扩展流。
+      概述commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文件的方法，可以大大简化我们处理 IO 流和操作文件的代码。从 commons-io 的官方使用文档可以看出，它主要分为工具类、尾端类、行迭代器、文件过滤器、文件比较器和扩展流。
 官网地址：http://commons.apache.org/proper/commons-io/
-下载：http://common......
+下载：http://commons......
     </div>
   </a>
   
@@ -525,21 +524,17 @@ commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文�
     </h3>
     <div class="post-content-preview">
       流的分类
-
 字节流和字符流
-
 字节流：以字节为单位，每次次读入或读出是8位数据。可以读任何类型数据。
 字符流：以字符为单位，每次次读入或读出是16位数据。其只能读取字符类型数据。
 
 输出流和输入流
-
 输入流：从文件读入到内存。只能进行读操作。
 输出流：从内存读出到文件。只能进行写操作。
 
 节点流和处理流
-
 节点流：直接与数据源相连，读入或读出。
-处理流：与节点流一块使用，在节点流的基础上，再......
+处理流：与节点流一块使用，在节点流的基础上，再套接一层......
     </div>
   </a>
   
@@ -573,11 +568,10 @@ commons-io 是一款处理 IO 流的工具，封装了很多处理 IO 流和文�
     </h3>
     <div class="post-content-preview">
       IO 流原理
-
 I/O 是 Input/Output 的缩写，I/O技术是非常实用的技术，用于处理设备之间的数据传输。如读/写文件，网络通讯等。
 Java 程序中，对于数据的输入/输出操作以流（stream） 的方式进行。
 java.io 包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过标准的方法输入或输出数据。
-输入 input：读取外部数据（磁 盘、光盘等存储设备的数据）到程......
+输入 input：读取外部数据（磁 盘、光盘等存储设备的数据）到程序......
     </div>
   </a>
   
@@ -610,9 +604,7 @@ java.io 包下提供了各种“流”类和接口，用以获取不同种类的
       An abstract representation of file and directory pathnames...
     </h3>
     <div class="post-content-preview">
-      File 类的使用
-概念
-File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本......
+      File 类的使用概念File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本身，......
     </div>
   </a>
   
@@ -645,12 +637,9 @@ File 类翻译过来是一个文件，实际上它并不是一个文件，定义
       Provides for system input and output through data streams, serialization and the file system...
     </h3>
     <div class="post-content-preview">
-      概述
-流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。
-相关知识概念
-基础概念
-
-字符：是指人们使用的记号，抽象......
+      概述流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。
+相关知识概念基础概念
+字符：是指人们使用的记号，抽象意义上......
     </div>
   </a>
   
@@ -683,9 +672,8 @@ File 类翻译过来是一个文件，实际上它并不是一个文件，定义
       Generics
     </h3>
     <div class="post-content-preview">
-      概述
-泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
-泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。......
+      概述泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
+泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。也......
     </div>
   </a>
   
@@ -718,9 +706,8 @@ File 类翻译过来是一个文件，实际上它并不是一个文件，定义
       Reflect、Annotation and Lambda
     </h3>
     <div class="post-content-preview">
-      比较同一类型，两个对象中不同的属性值
-12345678/** * @author vincent */@Retention(RetentionPolicy.RUNTIME)public @interface TransferETC &#123;    String name();    boolean required() default true;&#125;
-12345678910111......
+      比较同一类型，两个对象中不同的属性值12345678/** * @author vincent */@Retention(RetentionPolicy.RUNTIME)public @interface TransferETC &#123;    String name();    boolean required() default true;&#125;
+123456789101112......
     </div>
   </a>
   
@@ -758,8 +745,7 @@ File 类翻译过来是一个文件，实际上它并不是一个文件，定义
     </h3>
     <div class="post-content-preview">
       Java 开发过程中我们有时会遇到一些有必要的运算，而一些项目尤其是金融相关的项目对这些运算的精度要求较高。那么为什么会出现精度丢失的情况，我们又该如何解决这种问题呢？
-问题原因
-首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近......
+问题原因首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近于......
     </div>
   </a>
   
@@ -792,19 +778,12 @@ File 类翻译过来是一个文件，实际上它并不是一个文件，定义
       How to use analytics and sitemap...
     </h3>
     <div class="post-content-preview">
-      Google Analytics Settings
-代码（脚本）嵌入网站中
-
-
+      Google Analytics Settings代码（脚本）嵌入网站中
 登录谷歌分析平台，创建用户。
-
-
-获取代码（脚本）。
-
-
+获取代码（脚本）。  
 
 hexo-theme-livemylife 主题 head.ejs 文件中，已经添加了下面的 js 脚本。
-  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt......
+  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt;scri......
     </div>
   </a>
   
@@ -1237,11 +1216,11 @@ CDN：CDN 的全称是 Content Delivery Network，即内容分发网络。CDN �
     
     
     
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
-    
-    
-    
     <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
+    
+    
+    
+    <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
     
     
     
