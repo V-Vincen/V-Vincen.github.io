@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -488,7 +488,9 @@
       An abstract representation of file and directory pathnames...
     </h3>
     <div class="post-content-preview">
-      File 类的使用概念File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本身，......
+      File 类的使用
+概念
+File 类翻译过来是一个文件，实际上它并不是一个文件，定义为 Path 更为合适，这个 Path 可以是文件的路径也可以是文件夹的路径，因为当我们 new File 的时候，只是创建了一个路径，这个路径如果创建成功，没有后缀名就是文件夹，有后缀名则创建了一个空文件。File 能新建、删除、重命名文件和目录，但 File 不能访问文件内容本身。如果需要访问文件内容本......
     </div>
   </a>
   
@@ -521,9 +523,12 @@
       Provides for system input and output through data streams, serialization and the file system...
     </h3>
     <div class="post-content-preview">
-      概述流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。
-相关知识概念基础概念
-字符：是指人们使用的记号，抽象意义上......
+      概述
+流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。IO 其实有两类，一类是 BIO（BlockingIO），一类是 NIO（Non-BlockingIO），不过我们通常说的是 IO 默认指的是 BIO。
+相关知识概念
+基础概念
+
+字符：是指人们使用的记号，抽象......
     </div>
   </a>
   
@@ -556,8 +561,9 @@
       Generics
     </h3>
     <div class="post-content-preview">
-      概述泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
-泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。也......
+      概述
+泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。
+泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。......
     </div>
   </a>
   
@@ -590,8 +596,9 @@
       Reflect、Annotation and Lambda
     </h3>
     <div class="post-content-preview">
-      比较同一类型，两个对象中不同的属性值12345678/** * @author vincent */@Retention(RetentionPolicy.RUNTIME)public @interface TransferETC &#123;    String name();    boolean required() default true;&#125;
-123456789101112......
+      比较同一类型，两个对象中不同的属性值
+12345678/** * @author vincent */@Retention(RetentionPolicy.RUNTIME)public @interface TransferETC &#123;    String name();    boolean required() default true;&#125;
+12345678910111......
     </div>
   </a>
   
@@ -629,7 +636,8 @@
     </h3>
     <div class="post-content-preview">
       Java 开发过程中我们有时会遇到一些有必要的运算，而一些项目尤其是金融相关的项目对这些运算的精度要求较高。那么为什么会出现精度丢失的情况，我们又该如何解决这种问题呢？
-问题原因首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近于......
+问题原因
+首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近......
     </div>
   </a>
   
@@ -662,12 +670,19 @@
       How to use analytics and sitemap...
     </h3>
     <div class="post-content-preview">
-      Google Analytics Settings代码（脚本）嵌入网站中
+      Google Analytics Settings
+代码（脚本）嵌入网站中
+
+
 登录谷歌分析平台，创建用户。
-获取代码（脚本）。  
+
+
+获取代码（脚本）。
+
+
 
 hexo-theme-livemylife 主题 head.ejs 文件中，已经添加了下面的 js 脚本。
-  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt;scri......
+  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt......
     </div>
   </a>
   
@@ -740,8 +755,10 @@ CDN：CDN 的全称是 Content Delivery Network，即内容分发网络。CDN �
       How to deploy hexo...
     </h3>
     <div class="post-content-preview">
-      Github Pages 部署如果对 Github Pages 还不是很了解的话，可以先参考 [Hexo] 2 开始搭建 Github Pages。很多同学都不会满足于让其他人用 username.github.io 这样奇奇怪怪的域名来访问自己的个人博客。
-购买个性域名这里推荐 阿里云，毕竟国内大公司，另外还有很多人推荐的 GoDaddy 也可以，这里再推荐一个 NameSilo。本篇以阿......
+      Github Pages 部署
+如果对 Github Pages 还不是很了解的话，可以先参考 [Hexo] 2 开始搭建 Github Pages。很多同学都不会满足于让其他人用 username.github.io 这样奇奇怪怪的域名来访问自己的个人博客。
+购买个性域名
+这里推荐 阿里云，毕竟国内大公司，另外还有很多人推荐的 GoDaddy 也可以，这里再推荐一个 NameSilo。本篇......
     </div>
   </a>
   
@@ -777,14 +794,18 @@ CDN：CDN 的全称是 Content Delivery Network，即内容分发网络。CDN �
     </h3>
     <div class="post-content-preview">
       准备工作
+
+
 安装 JDK
-  Charles 由 Java 开发，请先安装好 JDK（笔者 JDK 版本为 1.8.0_91）。
+Charles 由 Java 开发，请先安装好 JDK（笔者 JDK 版本为 1.8.0_91）。
+
 
 关闭 VPN/代理
-  切记： 为了正常使用 Charles，请关闭自己的 VPN 或者其他代理设置。
+切记： 为了正常使用 Charles，请关闭自己的 VPN 或者其他代理设置。
 
 
-Charles 客户端配置安装好 Charles 后，在菜单栏勾选 Proxy -&gt; macOS Proxy，macOS 系统 HTTP/HTTPS ......
+Charles 客户端配置
+安装好 Charles 后，在菜单栏勾选 Proxy -&gt; macOS Proxy，macOS 系统 HTTP/HTTPS ......
     </div>
   </a>
   
@@ -1018,15 +1039,15 @@ Charles 客户端配置安装好 Charles 后，在菜单栏勾选 Proxy -&gt; ma
   <div class="tags">
     
     
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
     <a href="/tags/#Hexo" title="Hexo" rel="10">Hexo</a>
     
     
     
     <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1210,11 +1231,11 @@ Charles 客户端配置安装好 Charles 后，在菜单栏勾选 Proxy -&gt; ma
     
     
     
-    <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
-    
-    
-    
     <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
+    
+    
+    
+    <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
     
     
     

@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,20 +472,25 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 <a target="_blank" rel="noopener" href="https://github.com/YLongo/logback-chinese-manual">YLongo/logback-chinese-manual</a> 此项目为 <code>logback 中文手册</code>。</p>
+        <h2 id="声明">声明</h2>
+<p>博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 <a target="_blank" rel="noopener" href="https://github.com/YLongo/logback-chinese-manual">YLongo/logback-chinese-manual</a> 此项目为 <code>logback 中文手册</code>。</p>
 <p>项目在线地址：<a target="_blank" rel="noopener" href="https://logbackcn.gitbook.io/logback">https://logbackcn.gitbook.io/logback</a></p>
 <p>Logback 官网地址：<a target="_blank" rel="noopener" href="https://logback.qos.ch/manual/index.html">https://logback.qos.ch/manual/index.html</a></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Logback 继承自 log4j。</p>
+<h2 id="简介">简介</h2>
+<p>Logback 继承自 log4j。</p>
 <p>Logback 的架构非常的通用，适用不同的使用场景。Logback 被分成三个不同的模块：logback-core，logback-classic，logback-access。</p>
 <p>logback-core 是其它两个模块的基础。logback-classic 模块可以看作是 log4j 的一个优化版本，它天然的支持 SLF4J，所以你可以随意的从其它日志框架（例如：log4j 或者 java.util.logging）切回到 logack。</p>
 <p>logback-access 可以与 Servlet 容器进行整合，例如：Tomcat、Jetty。它提供了 http 访问日志的功能。</p>
-<h2 id="什么是-logback"><a href="#什么是-logback" class="headerlink" title="什么是 logback"></a>什么是 logback</h2><p>logback 继承自 log4j，它建立在有十年工业经验的日志系统之上。它比其它所有的日志系统更快并且更小，包含了许多独特并且有用的特性。</p>
-<h2 id="天才第一步"><a href="#天才第一步" class="headerlink" title="天才第一步"></a>天才第一步</h2><h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>logback-classic 模块需要在 classpath 添加 slf4j-api.jar、logback-core.jar 以及 logback-classic.jar。</p>
+<h2 id="什么是-logback">什么是 logback</h2>
+<p>logback 继承自 log4j，它建立在有十年工业经验的日志系统之上。它比其它所有的日志系统更快并且更小，包含了许多独特并且有用的特性。</p>
+<h2 id="天才第一步">天才第一步</h2>
+<h3 id="要求">要求</h3>
+<p>logback-classic 模块需要在 classpath 添加 slf4j-api.jar、logback-core.jar 以及 logback-classic.jar。</p>
 <p><em>Example 1.1: Basic template for logging</em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> chapters.introduction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Logger logger = LoggerFactory.getLogger(<span class="string">&quot;chapters.introduction.HelloWorld1&quot;</span>);</span><br><span class="line">        logger.debug(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>类 <code>HelloWorld1</code> 定义在包 <code>chapters.introduction</code> 中，它导入了两个类 <code>Logger</code>、<code>LoggerFactory</code>，这两个类定义在 SLF4J API 中，在 org.slf4j 包中。</p>
 <p>在这个例子中，<code>main()</code> 包含了一个 DEBUG 级别的日志语句，输出信息为 “hello world”</p>
-<p>运行 <code>HelloWord1</code> 将会在控制台看到一行日志。由于 logback 默认的配置策略：当没有默认的配置时，logback 将会在 root logger 中新增一个 <code>ConsoleAppender</code> </p>
+<p>运行 <code>HelloWord1</code> 将会在控制台看到一行日志。由于 logback 默认的配置策略：当没有默认的配置时，logback 将会在 root logger 中新增一个 <code>ConsoleAppender</code></p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">11</span>:<span class="number">58</span>:<span class="number">56</span>.<span class="number">662</span><span class="meta"> [main] DEBUG chapters.introduction.HelloWorld1 - hello world</span></span><br></pre></td></tr></table></figure>
 <p>Logback 通过一个内部的状态系统来报告它本身的状态信息。发生在 logback 生命周期中的事件可以通过 <code>StatusManager</code> 来获取。</p>
 <p><em>Example: Printing Logger Status</em></p>
@@ -502,7 +507,8 @@
 <li>如果你想在每个类中打印日志，那么你需要将当前类的全称或者当前类当作参数，调用  <code>org.slf4j.LoggerFactory.getLogger()</code> 方法。</li>
 <li>使用实例 logger 来调用不同的方法来打印日志。例：debug()，info()，warn()，error()。通过这些方法将会在配置好的 appender 中输出日志。</li>
 </ol>
-<h2 id="构建-logback"><a href="#构建-logback" class="headerlink" title="构建 logback"></a>构建 logback</h2><p>logback 使用 Maven 作为构建工具。</p>
+<h2 id="构建-logback">构建 logback</h2>
+<p>logback 使用 Maven 作为构建工具。</p>
 <p>如果你安装了 Maven，你可以在 logback 的解压文件夹中运行 <code>mvn install</code> 来构建 logback 以及它所包含的模块。Maven 会自动下载 logback 需要的其它类库。</p>
 <p>Logback 的压缩包包含了完整的源码，所以你可以根据自己的需要随意更改。而且只要你使用 LGPL 跟 EPL 协议，你甚至可以发布你更改后的版本。</p>
 

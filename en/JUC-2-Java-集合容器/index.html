@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -476,7 +476,8 @@
 <p><img src="1.png" alt="1"></p>
 <p>Java 中的集合包括三大类，它们是 <code>Set</code>（集）、<code>List</code>（列表）和 <code>Map</code>（映射），它们都处于 <code>java.util</code> 包中，<code>Set</code>、<code>List</code> 和 <code>Map</code> 都是接口，它们有各自的实现类。</p>
 <p><code>Collection</code> 是最基本的集合接口，声明了适用于 Java 集合的通用方法，<code>list</code> 和 <code>set</code> 都继承自 <code>Collection</code> 接口。</p>
-<h2 id="Collection接口的方法"><a href="#Collection接口的方法" class="headerlink" title="Collection接口的方法"></a><code>Collection</code>接口的方法</h2><ul>
+<h2 id="Collection接口的方法"><code>Collection</code>接口的方法</h2>
+<ul>
 <li><code>boolean add(Object o)</code>：向集合中加入一个对象的引用</li>
 <li><code>void clear()</code>：删除集合中所有的对象，即不再持有这些对象的引用</li>
 <li><code>boolean isEmpty()</code>：判断集合是否为空</li>
@@ -487,224 +488,232 @@
 <li><code>Object[] toArray()</code>：返回一个数组，该数组中包括集合中的所有元素</li>
 </ul>
 <p>关于：<code>Iterator()</code> 和 <code>toArray()</code> 方法都用于集合的所有的元素，前者返回一个 <code>Iterator</code> 对象，后者返回一个包含集合中所有元素的数组。<code>Collection</code> 没有 <code>get()</code> 方法来取得某个元素。只能通过 <code>iterator()</code>遍历元素。</p>
-<h2 id="Iterator-接口声明了如下方法"><a href="#Iterator-接口声明了如下方法" class="headerlink" title="Iterator 接口声明了如下方法"></a><code>Iterator</code> 接口声明了如下方法</h2><ul>
+<h2 id="Iterator-接口声明了如下方法"><code>Iterator</code> 接口声明了如下方法</h2>
+<ul>
 <li><code>hasNext()</code>：判断集合中元素是否遍历完毕，如果没有，就返回 <code>true</code></li>
-<li><code>next()</code> ：返回下一个元素 </li>
+<li><code>next()</code> ：返回下一个元素</li>
 <li><code>remove()</code>：从集合中删除上一个有 <code>next()</code> 方法返回的元素</li>
 </ul>
-<h2 id="List、Set、Map-的区别"><a href="#List、Set、Map-的区别" class="headerlink" title="List、Set、Map 的区别"></a><code>List</code>、<code>Set</code>、<code>Map</code> 的区别</h2><h3 id="结构特点"><a href="#结构特点" class="headerlink" title="结构特点"></a>结构特点</h3><ul>
+<h2 id="List、Set、Map-的区别"><code>List</code>、<code>Set</code>、<code>Map</code> 的区别</h2>
+<h3 id="结构特点">结构特点</h3>
+<ul>
 <li><code>List</code> 和 <code>Set</code> 是存储<strong>单列数据的集合</strong>，<code>Map</code> 是存储键值对这样的双列数据的集合；</li>
 <li><code>List</code> 中存储的数据是有<strong>顺序</strong>的，并且值<strong>允许重复</strong>；</li>
 <li><code>Set</code> 中存储的数据是<strong>无顺序</strong>的，并且<strong>不允许重复</strong>，但元素在集合中的位置是由元素的 <code>hashcode</code> 决定，即位置是固定的（<code>Set</code> 集合是根据 <code>hashcode</code> 来进行数据存储的，所以位置是固定的，但是这个位置不是用户可以控制的，所以对于用户来说 <code>set</code> 中的元素还是无序的）。</li>
 <li><code>Map</code> 中存储的数据是无序的，它的键是不允许重复的，但是值是允许重复的；</li>
 </ul>
-<h3 id="实现类"><a href="#实现类" class="headerlink" title="实现类"></a>实现类</h3><h4 id="List-接口有三个实现类"><a href="#List-接口有三个实现类" class="headerlink" title="List 接口有三个实现类"></a><code>List</code> 接口有三个实现类</h4><ul>
-<li><code>ArrayList</code> 基于数组实现，非线程安全，效率高，增删慢，查找快； </li>
-<li><code>LinkedList</code> 基于链表实现，链表内存是散列的，增删快，查找慢； </li>
+<h3 id="实现类">实现类</h3>
+<h4 id="List-接口有三个实现类"><code>List</code> 接口有三个实现类</h4>
+<ul>
+<li><code>ArrayList</code> 基于数组实现，非线程安全，效率高，增删慢，查找快；</li>
+<li><code>LinkedList</code> 基于链表实现，链表内存是散列的，增删快，查找慢；</li>
 <li><code>Vector</code> 基于数组实现，线程安全，效率低，增删慢，查找慢；</li>
 </ul>
 <p><strong>适用场景：</strong></p>
 <p>当需要对数据进行多次访问的情况下选用 <code>ArrayList</code>；当需要对数据进行多次增加删除修改时采用 <code>LinkedList</code>；如果考虑到线程的安全因素，则用 <code>Vector</code>。</p>
-<h4 id="Set-接口有两个实现类："><a href="#Set-接口有两个实现类：" class="headerlink" title="Set 接口有两个实现类："></a><code>Set</code> 接口有两个实现类：</h4><ul>
-<li><code>HashSet</code> 底层是由 <code>HashMap</code> 实现，不允许集合中有重复的值，使用该方式时需要重写 <code>equals()</code> 和 <code>hashCode()</code> 方法； </li>
+<h4 id="Set-接口有两个实现类："><code>Set</code> 接口有两个实现类：</h4>
+<ul>
+<li><code>HashSet</code> 底层是由 <code>HashMap</code> 实现，不允许集合中有重复的值，使用该方式时需要重写 <code>equals()</code> 和 <code>hashCode()</code> 方法；</li>
 <li><code>LinkedHashSet</code> 继承于 <code>HashSet</code>，同时又基于 <code>LinkedHashMap</code> 来进行实现，底层使用的是 <code>LinkedHashMap</code>；</li>
 </ul>
 <p><strong>适用场景：</strong></p>
 <p><code>HashSet</code> 是基于哈希算法实现的，其性能通常都优于 <code>TreeSet</code>，存取速度快；在我们需要排序的功能时，我们才使用 <code>TreeSet</code>。</p>
-<h4 id="Map-接口有四个实现类"><a href="#Map-接口有四个实现类" class="headerlink" title="Map 接口有四个实现类"></a><code>Map</code> 接口有四个实现类</h4><ul>
-<li><code>HashMap</code> 基于哈希表的 <code>Map</code> 接口实现，非线程安全，高效，支持 <code>null</code> 值和 <code>null</code> 键； </li>
-<li><code>HashTable</code> 线程安全，低效，不支持 <code>null</code> 值和 <code>null</code> 键； </li>
-<li><code>LinkedHashMap</code> 是 <code>HashMap</code> 的一个子类，保存了记录的插入顺序，先插入的先遍历到； </li>
+<h4 id="Map-接口有四个实现类"><code>Map</code> 接口有四个实现类</h4>
+<ul>
+<li><code>HashMap</code> 基于哈希表的 <code>Map</code> 接口实现，非线程安全，高效，支持 <code>null</code> 值和 <code>null</code> 键；</li>
+<li><code>HashTable</code> 线程安全，低效，不支持 <code>null</code> 值和 <code>null</code> 键；</li>
+<li><code>LinkedHashMap</code> 是 <code>HashMap</code> 的一个子类，保存了记录的插入顺序，先插入的先遍历到；</li>
 <li><code>SortMap</code> 接口，其实现类是 <code>TreeMap</code>（非线程安全基于红黑树实现），能够把它保存的记录根据键排序，默认是键值的升序排序；</li>
 </ul>
 <p><strong>适用场景：</strong></p>
 <p><code>HashTable</code> 线程安全，如果考虑到线程的安全因素，则用 <code>HashTable</code>；<code>HashMap</code> 适用于 <code>Map</code> 中插入、删除和定位元素；<code>Treemap</code> 适用于按自然顺序（按升序遍历）或自定义顺序遍历键 <code>key</code>；<code>LinkedHashMap</code> 保存了记录的插入顺序，先插入的先遍历到。</p>
-<h2 id="List、Set、Map-初始容量"><a href="#List、Set、Map-初始容量" class="headerlink" title="List、Set、Map 初始容量"></a><code>List</code>、<code>Set</code>、<code>Map</code> 初始容量</h2><p><strong>初始容量</strong>：就是创建时可容纳的默认元素个数。</p>
+<h2 id="List、Set、Map-初始容量"><code>List</code>、<code>Set</code>、<code>Map</code> 初始容量</h2>
+<p><strong>初始容量</strong>：就是创建时可容纳的默认元素个数。</p>
 <p><strong>加载因子</strong>：表示某个阀值，用0~1之间的小数来表示，当已有元素占比达到这个阀值后，底层将进行扩容操作。</p>
 <p><strong>扩容方式</strong>，即指定每次扩容后的大小的规则，比如翻倍等。当底层实现涉及到扩容时，容器或重新分配一段更大的连续内存（如果是离散分配则不需要重新分配，离散分配都是插入新元素时动态分配内存），要将容器原来的数据全部复制到新的内存上，这无疑使效率大大降低。</p>
 <html>
 <table style="width: 1066px; height: 529px;" border="1" cellspacing="0" cellpadding="0" align="left">
-            <tbody>
-                <tr>
-                    <td>
-                        <p align="center"><strong>Class</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>初始大小</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>加载因子</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>扩容倍数</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>底层实现</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>Code</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>是否线程安全</strong></p>
-                    </td>
-                    <td>
-                        <p align="center"><strong>同步方式</strong></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p align="center">ArrayList</p>
-                    </td>
-                    <td>
-                        <p align="center">10</p>
-                    </td>
-                    <td>
-                        <p align="center">1</p>
-                    </td>
-                    <td>
-                        <p align="center">1.5倍</p>
-                    </td>
-                    <td>
-                        <p align="center">Object数组</p>
-                    </td>
-                    <td>
-                        <p align="left">int newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1);<br>
-                            "&gt;&gt;"右移符号，所以是除以2，所以新的容量是就的1.5倍<br>
-                            Arrays.copyOf 调用 System.arraycopy 扩充数组</p>
-                    </td>
-                    <td>
-                        <p align="center">线程不安全</p>
-                    </td>
-                    <td>
-                        <p align="center">-</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p align="center">Vector</p>
-                    </td>
-                    <td>
-                        <p align="center">10</p>
-                    </td>
-                    <td>
-                        <p align="center">1</p>
-                    </td>
-                    <td>
-                        <p align="center">2倍</p>
-                    </td>
-                    <td>
-                        <p align="center">Object数组</p>
-                    </td>
-                    <td>
-                        <p align="left">int newCapacity = oldCapacity +
-                            ((capacityIncrement &gt; 0) ?<br>
-                            capacityIncrement : oldCapacity);<br>
-                            capacityIncrement默认为0，所以是加上本身，也就是2*oldCapacity，2倍大小<br>
-                            Arrays.copyOf 调用 System.arraycopy 扩充数组</p>
-                    </td>
-                    <td>
-                        <p align="center">线程安全</p>
-                    </td>
-                    <td>
-                        <p align="center">synchronized</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p align="center">HashSet</p>
-                    </td>
-                    <td>
-                        <p align="center">16</p>
-                    </td>
-                    <td>
-                        <p align="center">0.75f</p>
-                    </td>
-                    <td>
-                        <p align="center">2倍</p>
-                    </td>
-                    <td>
-                        <p align="center">HashMap&lt;E,Object&gt;</p>
-                    </td>
-                    <td>
-                        <p align="left">add方法实际调用HashMap的方法put</p>
-                    </td>
-                    <td>
-                        <p align="center">线程不安全</p>
-                    </td>
-                    <td>
-                        <p align="center">-</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p align="center">HashMap</p>
-                    </td>
-                    <td>
-                        <p align="center">16</p>
-                    </td>
-                    <td>
-                        <p align="center">0.75f</p>
-                    </td>
-                    <td>
-                        <p align="center">2倍</p>
-                    </td>
-                    <td>
-                        <p align="center">Map.Entry</p>
-                    </td>
-                    <td>
-                        <p align="left">void addEntry(int hash, K key, V
-                            value, int bucketIndex) {<br>
-                            &nbsp; &nbsp; if ((size &gt;= threshold) &amp;&amp; (null !=
-                            table[bucketIndex])) {<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; resize(2 * table.length);<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; hash = (null != key) ? hash(key) : 0;<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; bucketIndex = indexFor(hash, table.length);<br>
-                            &nbsp; &nbsp; }<br>
-                            <br>
-                            &nbsp; &nbsp; createEntry(hash, key, value, bucketIndex);<br>
-                            }</p>
-                    </td>
-                    <td>
-                        <p align="center">线程不安全</p>
-                    </td>
-                    <td>
-                        <p align="center">-</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p align="center">Hashtable</p>
-                    </td>
-                    <td>
-                        <p align="center">11</p>
-                    </td>
-                    <td>
-                        <p align="center">0.75f</p>
-                    </td>
-                    <td>
-                        <p align="center">2倍+1</p>
-                    </td>
-                    <td>
-                        <p align="center">Hashtable.Entry数组</p>
-                    </td>
-                    <td>
-                        <p align="left">int newCapacity = (oldCapacity
-                            &lt;&lt; 1) + 1;<br>
-                            if (newCapacity - MAX_ARRAY_SIZE &gt; 0) {<br>
-                            &nbsp; &nbsp; if (oldCapacity == MAX_ARRAY_SIZE)<br>
-                            &nbsp; &nbsp; &nbsp; &nbsp; return;<br>
-                            &nbsp; &nbsp; newCapacity = MAX_ARRAY_SIZE;<br>
-                            }</p>
-                    </td>
-                    <td>
-                        <p align="center">线程安全</p>
-                    </td>
-                    <td>
-                        <p align="center">synchronized</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+			<tbody>
+				<tr>
+					<td>
+						<p align="center"><strong>Class</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>初始大小</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>加载因子</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>扩容倍数</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>底层实现</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>Code</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>是否线程安全</strong></p>
+					</td>
+					<td>
+						<p align="center"><strong>同步方式</strong></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p align="center">ArrayList</p>
+					</td>
+					<td>
+						<p align="center">10</p>
+					</td>
+					<td>
+						<p align="center">1</p>
+					</td>
+					<td>
+						<p align="center">1.5倍</p>
+					</td>
+					<td>
+						<p align="center">Object数组</p>
+					</td>
+					<td>
+						<p align="left">int newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1);<br>
+							"&gt;&gt;"右移符号，所以是除以2，所以新的容量是就的1.5倍<br>
+							Arrays.copyOf 调用 System.arraycopy 扩充数组</p>
+					</td>
+					<td>
+						<p align="center">线程不安全</p>
+					</td>
+					<td>
+						<p align="center">-</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p align="center">Vector</p>
+					</td>
+					<td>
+						<p align="center">10</p>
+					</td>
+					<td>
+						<p align="center">1</p>
+					</td>
+					<td>
+						<p align="center">2倍</p>
+					</td>
+					<td>
+						<p align="center">Object数组</p>
+					</td>
+					<td>
+						<p align="left">int newCapacity = oldCapacity +
+							((capacityIncrement &gt; 0) ?<br>
+							capacityIncrement : oldCapacity);<br>
+							capacityIncrement默认为0，所以是加上本身，也就是2*oldCapacity，2倍大小<br>
+							Arrays.copyOf 调用 System.arraycopy 扩充数组</p>
+					</td>
+					<td>
+						<p align="center">线程安全</p>
+					</td>
+					<td>
+						<p align="center">synchronized</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p align="center">HashSet</p>
+					</td>
+					<td>
+						<p align="center">16</p>
+					</td>
+					<td>
+						<p align="center">0.75f</p>
+					</td>
+					<td>
+						<p align="center">2倍</p>
+					</td>
+					<td>
+						<p align="center">HashMap&lt;E,Object&gt;</p>
+					</td>
+					<td>
+						<p align="left">add方法实际调用HashMap的方法put</p>
+					</td>
+					<td>
+						<p align="center">线程不安全</p>
+					</td>
+					<td>
+						<p align="center">-</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p align="center">HashMap</p>
+					</td>
+					<td>
+						<p align="center">16</p>
+					</td>
+					<td>
+						<p align="center">0.75f</p>
+					</td>
+					<td>
+						<p align="center">2倍</p>
+					</td>
+					<td>
+						<p align="center">Map.Entry</p>
+					</td>
+					<td>
+						<p align="left">void addEntry(int hash, K key, V
+							value, int bucketIndex) {<br>
+							&nbsp; &nbsp; if ((size &gt;= threshold) &amp;&amp; (null !=
+							table[bucketIndex])) {<br>
+							&nbsp; &nbsp; &nbsp; &nbsp; resize(2 * table.length);<br>
+							&nbsp; &nbsp; &nbsp; &nbsp; hash = (null != key) ? hash(key) : 0;<br>
+							&nbsp; &nbsp; &nbsp; &nbsp; bucketIndex = indexFor(hash, table.length);<br>
+							&nbsp; &nbsp; }<br>
+							<br>
+							&nbsp; &nbsp; createEntry(hash, key, value, bucketIndex);<br>
+							}</p>
+					</td>
+					<td>
+						<p align="center">线程不安全</p>
+					</td>
+					<td>
+						<p align="center">-</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p align="center">Hashtable</p>
+					</td>
+					<td>
+						<p align="center">11</p>
+					</td>
+					<td>
+						<p align="center">0.75f</p>
+					</td>
+					<td>
+						<p align="center">2倍+1</p>
+					</td>
+					<td>
+						<p align="center">Hashtable.Entry数组</p>
+					</td>
+					<td>
+						<p align="left">int newCapacity = (oldCapacity
+							&lt;&lt; 1) + 1;<br>
+							if (newCapacity - MAX_ARRAY_SIZE &gt; 0) {<br>
+							&nbsp; &nbsp; if (oldCapacity == MAX_ARRAY_SIZE)<br>
+							&nbsp; &nbsp; &nbsp; &nbsp; return;<br>
+							&nbsp; &nbsp; newCapacity = MAX_ARRAY_SIZE;<br>
+							}</p>
+					</td>
+					<td>
+						<p align="center">线程安全</p>
+					</td>
+					<td>
+						<p align="center">synchronized</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 </html>
 
         <hr>

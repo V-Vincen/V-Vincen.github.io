@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -488,9 +488,10 @@
       jdbcType、javaType、ofType 的区别
     </h3>
     <div class="post-content-preview">
-      MyBatis 中何时使用 jdbcType这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
+      MyBatis 中何时使用 jdbcType
+这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
 
-当......
+......
     </div>
   </a>
   
@@ -523,7 +524,8 @@
       一对一、一对多、多对多查询
     </h3>
     <div class="post-content-preview">
-      场景使用三张数据表：
+      场景
+使用三张数据表：
 
 student 学生表
 teacher 教师表
@@ -534,7 +536,7 @@ position 职位表
 
 一对一关系，从老师角度：老师对职位一对一
 一对多关系，从职位角度：职位对老师一对多
-多对多关系：查找被教授教导的所有学生（首先职位对老......
+多对多关系：查找被教授教导的所有学生（首先职位对......
     </div>
   </a>
   
@@ -568,9 +570,10 @@ position 职位表
     </h3>
     <div class="post-content-preview">
       设计模式的6大原则，单一职责原则，开放封闭原则，里式替换原则，依赖导致原则，迪米特原则 和 接口隔离原则。
-单一职责原则（Single Responsibility Principle，SRP）就一个类而言，应该仅有一个引起它变化的原因
+单一职责原则（Single Responsibility Principle，SRP）
+就一个类而言，应该仅有一个引起它变化的原因
 
-通俗的讲就是我们不要让一个承担过多的职责，如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。......
+通俗的讲就是我们不要让一个承担过多的职责，如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力......
     </div>
   </a>
   
@@ -603,7 +606,8 @@ position 职位表
       Docker 数据管理深入
     </h3>
     <div class="post-content-preview">
-      Docker 数据卷数据卷 是一个可供一个或多个容器使用的特殊目录，它绕过 UFS，可以提供很多有用的特性：
+      Docker 数据卷
+数据卷 是一个可供一个或多个容器使用的特殊目录，它绕过 UFS，可以提供很多有用的特性：
 
 数据卷 可以在容器之间共享和重用
 对 数据卷 的修改会立马生效
@@ -611,7 +615,7 @@ position 职位表
 数据卷 默认会一直存在，即使容器被删除
 
 
-注意：数据卷的使用，类似于 Linux 下对目录或文件进行 mount，镜像中的被指定为挂载点的目录中的文件会隐藏掉，能显示看的是挂载的数据......
+注意：数据卷的使用，类似于 Linux 下对目录或文件进行 mount，镜像中的被指定为挂载点的目录中的文件会隐藏掉，能显示看的是挂载的数......
     </div>
   </a>
   
@@ -649,10 +653,13 @@ position 职位表
 数据卷（Volumes）
 挂载主机目录 (Bind mounts)
 
-数据卷数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。
-创建数据卷1docker volume create my-vol
-数据卷列表1docker volume ls
-查看数据......
+数据卷
+数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。
+创建数据卷
+1docker volume create my-vol
+数据卷列表
+1docker volume ls
+查......
     </div>
   </a>
   
@@ -685,8 +692,9 @@ position 职位表
       Docker 仓库
     </h3>
     <div class="post-content-preview">
-      访问 Docker 仓库仓库（Repository）是集中存放镜像的地方。
-一个容易混淆的概念是注册服务器（Registry）。实际上注册服务器是管理仓库的具体服务器，每个服务器上可以有多个仓库，而每个仓库下面有多个镜像。从这方面来说，仓库可以被认为是一个具体的项目或目录。例如对于仓库地址 dl.dockerpool.com/ubuntu 来说，dl.dockerpool.com 是注册服务......
+      访问 Docker 仓库
+仓库（Repository）是集中存放镜像的地方。
+一个容易混淆的概念是注册服务器（Registry）。实际上注册服务器是管理仓库的具体服务器，每个服务器上可以有多个仓库，而每个仓库下面有多个镜像。从这方面来说，仓库可以被认为是一个具体的项目或目录。例如对于仓库地址 dl.dockerpool.com/ubuntu 来说，dl.dockerpool.com 是注册服......
     </div>
   </a>
   
@@ -719,10 +727,12 @@ position 职位表
       Docker 容器
     </h3>
     <div class="post-content-preview">
-      操作 Docker 容器容器是 Docker 又一核心概念。
+      操作 Docker 容器
+容器是 Docker 又一核心概念。
 简单的说，容器是独立运行的一个或一组应用，以及它们的运行态环境。对应的，虚拟机可以理解为模拟运行的一整套操作系统（提供了运行态环境和其他系统环境）和跑在上面的应用。
 本章将具体介绍如何来管理一个容器，包括创建、启动和停止等。
-Docker 启动容器启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（sto......
+Docker 启动容器
+启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（s......
     </div>
   </a>
   
@@ -811,8 +821,9 @@ RUN、COPY、ADD、EXPOSE、WORKDIR、ONBUILD、USER、VOLUME等
       Dockerfile 定制镜像
     </h3>
     <div class="post-content-preview">
-      Dockerfile 定制镜像从刚才的 docker commit 的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
-Dockerfile 是一个文本文件，其内包含......
+      Dockerfile 定制镜像
+从刚才的 docker commit 的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
+Dockerfile 是一个文本文件，其内包......
     </div>
   </a>
   
@@ -845,9 +856,12 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 删除本地镜像
     </h3>
     <div class="post-content-preview">
-      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
-用 ID、镜像名、摘要删除镜像其中，&lt;镜像&gt; 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
-比如我们有这么一些镜像：123456$ docker image lsREPOSITO......
+      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：
+1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
+用 ID、镜像名、摘要删除镜像
+其中，&lt;镜像&gt; 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
+比如我们有这么一些镜像：
+123456$ docker image lsREPOS......
     </div>
   </a>
   
@@ -1048,15 +1062,15 @@ Dockerfile 是一个文本文件，其内包含......
   <div class="tags">
     
     
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
+    
+    
+    
     <a href="/tags/#Hexo" title="Hexo" rel="10">Hexo</a>
     
     
     
     <a href="/tags/#Hexo-Theme-LiveMyLife" title="Hexo-Theme-LiveMyLife" rel="8">Hexo-Theme-LiveMyLife</a>
-    
-    
-    
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1240,11 +1254,11 @@ Dockerfile 是一个文本文件，其内包含......
     
     
     
-    <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
-    
-    
-    
     <a href="/tags/#Apache HttpClient" title="Apache HttpClient" rel="1">Apache HttpClient</a>
+    
+    
+    
+    <a href="/tags/#OpenFeign" title="OpenFeign" rel="5">OpenFeign</a>
     
     
     

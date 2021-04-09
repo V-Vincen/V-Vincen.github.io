@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -472,23 +472,38 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="进程命令"><a href="#进程命令" class="headerlink" title="进程命令"></a>进程命令</h2><h3 id="Mac-查看进程号"><a href="#Mac-查看进程号" class="headerlink" title="Mac 查看进程号"></a>Mac 查看进程号</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep 软件或者进程号</span><br><span class="line">ps aux | grep 软件或者进程号</span><br></pre></td></tr></table></figure>
-<h3 id="查看进程监听的端口"><a href="#查看进程监听的端口" class="headerlink" title="查看进程监听的端口"></a>查看进程监听的端口</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -nP -p 进程号 | grep LISTEN</span><br><span class="line">sudo lsof -nP | grep LISTEN | grep 进程号</span><br></pre></td></tr></table></figure>
-<p>或者<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ltnp | grep 进程号</span><br></pre></td></tr></table></figure></p>
-<h2 id="端口命令"><a href="#端口命令" class="headerlink" title="端口命令"></a>端口命令</h2><h3 id="Mac-查看端口号"><a href="#Mac-查看端口号" class="headerlink" title="Mac 查看端口号"></a>Mac 查看端口号</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -i:端口号</span><br></pre></td></tr></table></figure>
-<p>注：Windows 查看端口号<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 端口号</span><br></pre></td></tr></table></figure></p>
-<h3 id="查看监听端口的进程"><a href="#查看监听端口的进程" class="headerlink" title="查看监听端口的进程"></a>查看监听端口的进程</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -nP | grep LISTEN | grep 端口号</span><br></pre></td></tr></table></figure>
+        <h2 id="进程命令">进程命令</h2>
+<h3 id="Mac-查看进程号">Mac 查看进程号</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep 软件或者进程号</span><br><span class="line">ps aux | grep 软件或者进程号</span><br></pre></td></tr></table></figure>
+<h3 id="查看进程监听的端口">查看进程监听的端口</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -nP -p 进程号 | grep LISTEN</span><br><span class="line">sudo lsof -nP | grep LISTEN | grep 进程号</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ltnp | grep 进程号</span><br></pre></td></tr></table></figure>
+<h2 id="端口命令">端口命令</h2>
+<h3 id="Mac-查看端口号">Mac 查看端口号</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -i:端口号</span><br></pre></td></tr></table></figure>
+<p>注：Windows 查看端口号</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an | grep 端口号</span><br></pre></td></tr></table></figure>
+<h3 id="查看监听端口的进程">查看监听端口的进程</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -nP | grep LISTEN | grep 端口号</span><br></pre></td></tr></table></figure>
 <ul>
 <li>-n 表示不显示主机名</li>
 <li>-P 表示不显示端口俗称</li>
 <li>不加 sudo 只能查看以当前用户运行的程序</li>
 </ul>
-<h2 id="上传下载"><a href="#上传下载" class="headerlink" title="上传下载"></a>上传下载</h2><p>先来回顾 ssh 连接远程服务器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh username@192.168.100.100</span><br></pre></td></tr></table></figure></p>
-<h3 id="从服务器上下载文件"><a href="#从服务器上下载文件" class="headerlink" title="从服务器上下载文件"></a>从服务器上下载文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/remote_path/filename /loacal_path（如：/Users/mac/Desktop）</span><br></pre></td></tr></table></figure>
-<h3 id="上传本地文件到服务器"><a href="#上传本地文件到服务器" class="headerlink" title="上传本地文件到服务器"></a>上传本地文件到服务器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /loacal_path/filename username@servername:/remote_path</span><br></pre></td></tr></table></figure>
-<h3 id="从服务器下载整个目录"><a href="#从服务器下载整个目录" class="headerlink" title="从服务器下载整个目录"></a>从服务器下载整个目录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:/remote_dir /local_dir（如：/Users/mac/Desktop）</span><br></pre></td></tr></table></figure>
-<h3 id="上传目录到服务器"><a href="#上传目录到服务器" class="headerlink" title="上传目录到服务器"></a>上传目录到服务器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r local_dir username@servername:/remote_dir</span><br></pre></td></tr></table></figure>
-<h3 id="压缩（加密）"><a href="#压缩（加密）" class="headerlink" title="压缩（加密）"></a>压缩（加密）</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -e ~/wantPath/zipName.zip /filePath/fileName</span><br></pre></td></tr></table></figure>
+<h2 id="上传下载">上传下载</h2>
+<p>先来回顾 ssh 连接远程服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh username@192.168.100.100</span><br></pre></td></tr></table></figure>
+<h3 id="从服务器上下载文件">从服务器上下载文件</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp username@servername:/remote_path/filename /loacal_path（如：/Users/mac/Desktop）</span><br></pre></td></tr></table></figure>
+<h3 id="上传本地文件到服务器">上传本地文件到服务器</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /loacal_path/filename username@servername:/remote_path</span><br></pre></td></tr></table></figure>
+<h3 id="从服务器下载整个目录">从服务器下载整个目录</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@servername:/remote_dir /local_dir（如：/Users/mac/Desktop）</span><br></pre></td></tr></table></figure>
+<h3 id="上传目录到服务器">上传目录到服务器</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r local_dir username@servername:/remote_dir</span><br></pre></td></tr></table></figure>
+<h3 id="压缩（加密）">压缩（加密）</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -e ~/wantPath/zipName.zip /filePath/fileName</span><br></pre></td></tr></table></figure>
 <p>输入上述命令回车，出现 <code>enter password</code>，输入你想设置的加密密码，然后敲回车，要求输入验证密码，再输入一遍刚刚设置的密码，敲回车即可。（密码为你解压缩时的密码）</p>
 <p><code>~/filePath/zipName.zip</code>：压缩后文件存放的路径及名称。</p>
 <p><code>/filePath/fileName</code>：想要压缩的文件及路径。</p>
