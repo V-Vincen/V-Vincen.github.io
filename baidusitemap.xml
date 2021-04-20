@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://v-vincen.life/en/JDK8-9-Map-%E5%87%A0%E4%B8%AA%E6%96%B0%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2021-04-20</lastmod>
+  </url>
+  <url>
     <loc>https://v-vincen.life/en/JUC-Java-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/</loc>
     <lastmod>2021-04-10</lastmod>
   </url>
