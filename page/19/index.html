@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -474,6 +474,128 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Ubuntu-Ubuntu-常用命令/">
+    <h2 class="post-title">
+      [Ubuntu] Ubuntu 常用命令
+    </h2>
+    <h3 class="post-subtitle">
+      Ubuntu 常用命令
+    </h3>
+    <div class="post-content-preview">
+      防火墙相关命令（Ubuntu）
+安装方法
+1sudo apt-get install ufw
+使用方法
+启用
+12sudo ufw default deny sudo ufw enable
+通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。
+对于大部分防火墙操作来说， 其......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Ubuntu-6-1-Ubuntu-安装-MySQL-8-0/">
+    <h2 class="post-title">
+      [Ubuntu] 6.1 Ubuntu 安装 MySQL 8.0
+    </h2>
+    <h3 class="post-subtitle">
+      Ubuntu 安装 MySQL 8.0
+    </h3>
+    <div class="post-content-preview">
+      删除历史版本 MySQL
+sudo apt-get remove mysql-*
+然后清理残留的数据
+dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
+它会跳出一个对话框，你选择 yes 就好了
+安装 MySQL 8.0
+下载deb包
+
+运行命令
+1sudo dpkg -i mysql-apt-config_0.......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Ubuntu-6-Ubuntu-安装-MySQL-5-7/">
+    <h2 class="post-title">
+      [Ubuntu] 6 Ubuntu 安装 MySQL 5.7
+    </h2>
+    <h3 class="post-subtitle">
+      Ubuntu 安装 MySQL 5.7
+    </h3>
+    <div class="post-content-preview">
+      安装
+更新数据源
+1apt-get update
+安装 MySQL
+1apt-get install mysql-server
+系统将提示您在安装过程中创建 root 密码。选择一个安全的密码，并确保你记住它，因为你以后需要它。接下来，我们将完成 MySQL 的配置。
+配置
+因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-07-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -761,236 +883,6 @@ nano
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Linux-6-Linux-压缩命令/">
-    <h2 class="post-title">
-      [Linux] 6 Linux 压缩命令
-    </h2>
-    <h3 class="post-subtitle">
-      Linux 压缩命令
-    </h3>
-    <div class="post-content-preview">
-      tar
-
-
-
-命令
-语法
-参数
-参数说明
-
-
-
-
-tar
-tar [-cxzjvf] 压缩打包文档的名称 欲打包目录
-
-
-
-
-
-
--c
-建立一个归档文件的参数指令
-
-
-
-
--x
-解开一个归档文件的参数指令
-
-
-
-
--z
-是否需要用 gzip 压缩
-
-
-
-
--j
-是否需要用 bzip2 压缩
-
-
-
-
--v
-压缩的过程中显示文件
-
-
-
-
--f
-使用档名，在 f 之后要立即接档名
-
-
-
-
--tf
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Linux-5-Linux-开关机命令/">
-    <h2 class="post-title">
-      [Linux] 5 Linux 开关机命令
-    </h2>
-    <h3 class="post-subtitle">
-      Linux 开关机命令
-    </h3>
-    <div class="post-content-preview">
-      shutdown 命令
-
-shutdown 命令可以用来进行关机程序，并且在关机以前传送讯息给所有使用者正在执行的程序
-shutdown 也可以用来重开机。
-
-
-
-
-命令
-语法
-参数
-参数说明
-
-
-
-
-shutdown
-shutdown [-t seconds] [-rkhncfF] time [message]
-
-
-
-
-
-
--t seconds
-设定在几秒钟之后进行关机程序
-
-
-
-
--k
-......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Linux-4-Linux-系统管理命令/">
-    <h2 class="post-title">
-      [Linux] 4 Linux 系统管理命令
-    </h2>
-    <h3 class="post-subtitle">
-      Linux 系统管理命令
-    </h3>
-    <div class="post-content-preview">
-      系统管理命令
-
-
-
-命令
-说明
-
-
-
-
-stat
-显示指定文件的相关信息,比ls命令显示内容更多
-
-
-who
-显示在线登录用户
-
-
-hostname
-显示主机名称
-
-
-uname
-显示系统信息
-
-
-top
-显示当前系统中耗费资源最多的进程
-
-
-ps
-显示瞬间的进程状态
-
-
-du
-显示指定的文件（目录）已使用的磁盘空间的总量
-
-
-df
-显示文件系统磁盘空间的使用情况
-
-
-free
-显示当前内存......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -1042,24 +934,24 @@ free
 <div class="widget">
   <ul>
     
+    <a href="../../en/TCP-IP-OSI-and-TCP-IP/">
+      <li>[TCP/IP] OSI and TCP/IP</li>
+    </a>
+    
+    <a href="../../en/TCP-IP-What-is-TCP-IP/">
+      <li>[TCP/IP] What is TCP/IP</li>
+    </a>
+    
+    <a href="../../en/JDK8-10-%E9%80%9A%E7%94%A8-Builder-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">
+      <li>[JDK8] 10 通用 Builder 创建对象</li>
+    </a>
+    
     <a href="../../en/JDK8-9-Map-%E5%87%A0%E4%B8%AA%E6%96%B0%E6%96%B9%E6%B3%95/">
       <li>[JDK8] 9 Map 几个新方法</li>
     </a>
     
     <a href="../../en/JUC-Java-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/">
       <li>[JUC] Java 并发编程知识点梳理</li>
-    </a>
-    
-    <a href="../../en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/">
-      <li>How to apply JsDelivr CDN in Hexo-theme-livemylife Theme</li>
-    </a>
-    
-    <a href="../../en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
-      <li>How to Use Internationalization（i18n）</li>
-    </a>
-    
-    <a href="../../en/How-to-Use-Mathjax/">
-      <li>How to Use Mathjax</li>
     </a>
     
   </ul>
@@ -1238,7 +1130,7 @@ free
     
     
     
-    <a href="/tags/#JDK8" title="JDK8" rel="10">JDK8</a>
+    <a href="/tags/#JDK8" title="JDK8" rel="11">JDK8</a>
     
     
     
@@ -1346,6 +1238,10 @@ free
     
     
     
+    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
+    
+    
+    
     <a href="/tags/#Thread" title="Thread" rel="4">Thread</a>
     
     
@@ -1374,11 +1270,11 @@ free
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
-    
-    
-    
     <a href="/tags/#Enum" title="Enum" rel="1">Enum</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
     
     
     
@@ -1423,7 +1319,7 @@ free
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1493,6 +1389,10 @@ free
     
     <a href="/categories/#Registry">
       <li>Registry</li>
+    </a>
+    
+    <a href="/categories/#TCP/IP">
+      <li>TCP/IP</li>
     </a>
     
     <a href="/categories/#Ubuntu">

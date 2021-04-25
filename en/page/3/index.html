@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -474,6 +474,111 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Logback-8-从 Log4j 迁移/">
+    <h2 class="post-title">
+      [Logback] 8 从 Log4j 迁移
+    </h2>
+    <h3 class="post-subtitle">
+      Migration from log4j...
+    </h3>
+    <div class="post-content-preview">
+      本章涉及到的内容为将 log4j 的组件，例如 appender 或者 layout 迁移到 logback-classic。
+仅仅调用 log4j 客户端 API 的软件，也就是  org.apache.log4j 包中 Logger 或者 Category 类，可以通过 SLF4J 迁移工具 使用 SLF4J 来进行自动迁移。为了将 log4j.property 文件转换为同等的 log......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-12-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Logback" title="Logback">Logback</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Logback-7-Filters/">
+    <h2 class="post-title">
+      [Logback] 7 Filters
+    </h2>
+    <h3 class="post-subtitle">
+      Filters...
+    </h3>
+    <div class="post-content-preview">
+      在之前的章节中介绍的 方法打印以及基本选择规则 是 logback-classic 的核心。在这章中，将介绍其它的过滤方法。
+logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组成一个任意复杂的过滤策略。它们在很大程度上受到 Linux iptables 的启发。
+在 logback-classic 中
+在 logback-classic 中，有两种类型的过滤器，regular ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-12-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Logback" title="Logback">Logback</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Logback-6-Layouts/">
+    <h2 class="post-title">
+      [Logback] 6 Layout
+    </h2>
+    <h3 class="post-subtitle">
+      Layout...
+    </h3>
+    <div class="post-content-preview">
+      什么是 layout？
+layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
+12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  S......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-12-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Logback" title="Logback">Logback</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -734,112 +839,6 @@ Springboot 项目配置
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Zip4j-Zip4j-A-Java-library-for-zip-files/">
-    <h2 class="post-title">
-      [Zip4j] Zip4j - A Java library for zip files
-    </h2>
-    <h3 class="post-subtitle">
-      Zip4j is the most comprehensive Java library for zip files or streams...
-    </h3>
-    <div class="post-content-preview">
-      之前开发过程中遇到一个需求：需要解密解压处理客户上传的 .zip 文件。先度娘了一波，但是发现都不太符合自己的要求，然后又谷歌了一波。发现也没有找到，最后在 stackoverflow 上看到了 Password protected zip file in java 这样一篇解答。因为在搜索解决方案的时候，看到 Jdk 有自带的 java.util.zip 类，所以刚开始想的是直接用 Jdk......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-12-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Zip4j" title="Zip4j">Zip4j</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Calling-Third-party-API-OpenFeign-1-Feign-makes-writing-java-http-clients-easier/">
-    <h2 class="post-title">
-      [Calling Third-party API - OpenFeign] 1 Feign makes writing java http clients easier
-    </h2>
-    <h3 class="post-subtitle">
-      Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
-    </h3>
-    <div class="post-content-preview">
-      OpenFeign 简介
-Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Service 客户端变得很简单。使用 Feign 只需要创建一个接口加上对应的注解，比如：FeignClient 注解。Feign 有可插拔的注解，包括 Feign 注解和 JAX-RS 注解。Feign 也支持编码器和解码器，Spring Cloud Open Feign 对 F......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-11-18
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
-    
-    <a href="/tags/#OpenFeign" title="OpenFeign">OpenFeign</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Calling-Third-party-API-Apache-HttpClient-HttpClient-Tutorial/">
-    <h2 class="post-title">
-      [Calling Third-party API - Apache HttpClient] HttpClient Tutorial
-    </h2>
-    <h3 class="post-subtitle">
-      HttpClient is a HTTP/1.1 compliant HTTP agent implementation based on HttpCore. It also provides reusable components for client-side authentication, HTTP state management, and HTTP connection management...
-    </h3>
-    <div class="post-content-preview">
-      Apache HttpClient 简介
-
-HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。HttpClient 已经应用在很多的项目中，比如 Apache Jakarta 上很著名的另外两个开源项目 Cactus 和 HTMLUnit 都使......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-11-18
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
-    
-    <a href="/tags/#Apache HttpClient" title="Apache HttpClient">Apache HttpClient</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -891,24 +890,24 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
 <div class="widget">
   <ul>
     
+    <a href="../../TCP-IP-OSI-and-TCP-IP/">
+      <li>[TCP/IP] OSI and TCP/IP</li>
+    </a>
+    
+    <a href="../../TCP-IP-What-is-TCP-IP/">
+      <li>[TCP/IP] What is TCP/IP</li>
+    </a>
+    
+    <a href="../../JDK8-10-%E9%80%9A%E7%94%A8-Builder-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">
+      <li>[JDK8] 10 通用 Builder 创建对象</li>
+    </a>
+    
     <a href="../../JDK8-9-Map-%E5%87%A0%E4%B8%AA%E6%96%B0%E6%96%B9%E6%B3%95/">
       <li>[JDK8] 9 Map 几个新方法</li>
     </a>
     
     <a href="../../JUC-Java-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/">
       <li>[JUC] Java 并发编程知识点梳理</li>
-    </a>
-    
-    <a href="../../How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/">
-      <li>How to apply JsDelivr CDN in Hexo-theme-livemylife Theme</li>
-    </a>
-    
-    <a href="../../How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/">
-      <li>How to Use Internationalization（i18n）</li>
-    </a>
-    
-    <a href="../../How-to-Use-Mathjax/">
-      <li>How to Use Mathjax</li>
     </a>
     
   </ul>
@@ -1087,7 +1086,7 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
     
     
     
-    <a href="/tags/#JDK8" title="JDK8" rel="10">JDK8</a>
+    <a href="/tags/#JDK8" title="JDK8" rel="11">JDK8</a>
     
     
     
@@ -1195,6 +1194,10 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
     
     
     
+    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
+    
+    
+    
     <a href="/tags/#Thread" title="Thread" rel="4">Thread</a>
     
     
@@ -1223,11 +1226,11 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
-    
-    
-    
     <a href="/tags/#Enum" title="Enum" rel="1">Enum</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
     
     
     
@@ -1272,7 +1275,7 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
@@ -1342,6 +1345,10 @@ HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、�
     
     <a href="/categories/#Registry">
       <li>Registry</li>
+    </a>
+    
+    <a href="/categories/#TCP/IP">
+      <li>TCP/IP</li>
     </a>
     
     <a href="/categories/#Ubuntu">
