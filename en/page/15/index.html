@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -474,6 +474,78 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Registry-2-Docker-Registry-客户端配置/">
+    <h2 class="post-title">
+      [Registry] 2 Docker Registry 客户端配置
+    </h2>
+    <h3 class="post-subtitle">
+      Docker Registry 客户端配置
+    </h3>
+    <div class="post-content-preview">
+      概述
+我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）
+12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&qu......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-08-28
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Registry" title="Registry">Registry</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Registry-1-Docker-Registry-私服和-WebUI-安装/">
+    <h2 class="post-title">
+      [Registry] 1 Docker Registry 私服和 WebUI 安装
+    </h2>
+    <h3 class="post-subtitle">
+      Docker Registry 私服和 WebUI 安装
+    </h3>
+    <div class="post-content-preview">
+      安装 Docker Registry 私服
+概述
+官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。
+安装
+Registry 官网 Docker Hub 下载地址......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-08-28
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Registry" title="Registry">Registry</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -807,81 +879,6 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-1-Git-简介和安装/">
-    <h2 class="post-title">
-      [Git] 1 Git 简介和安装
-    </h2>
-    <h3 class="post-subtitle">
-      Git 简介和安装
-    </h3>
-    <div class="post-content-preview">
-      概述
-
-Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
-
-安装 Git
-下载
-Git 官网下载安装说明：https://git......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Docker-Compose-4-2-Docker-Compose-部署-MySQL/">
-    <h2 class="post-title">
-      [Docker Compose] 4.2 Docker Compose 部署 MySQL
-    </h2>
-    <h3 class="post-subtitle">
-      Docker Compose 部署 MySQL
-    </h3>
-    <div class="post-content-preview">
-      MySQL5：docker-compose.yml
-1234567891011121314151617181920212223version: &#x27;3.1&#x27;services:  mysql:    restart: always    image: mysql:5.7.22    container_name: mysql    ports:      - 3306:330......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker Compose" title="Docker Compose">Docker Compose</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -933,6 +930,14 @@ Git 官网下载安装说明：https://git......
 <div class="widget">
   <ul>
     
+    <a href="../../Generics-%E6%B3%9B%E5%9E%8B%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">
+      <li>[Generics] 泛型实现原理</li>
+    </a>
+    
+    <a href="../../Java-%E6%9D%82%E8%AE%B0-Java-%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E9%A3%8E%E9%99%A9/">
+      <li>[Java 杂记] Java 内存泄露风险</li>
+    </a>
+    
     <a href="../../TCP-IP-OSI-and-TCP-IP/">
       <li>[TCP/IP] OSI and TCP/IP</li>
     </a>
@@ -943,14 +948,6 @@ Git 官网下载安装说明：https://git......
     
     <a href="../../JDK8-10-%E9%80%9A%E7%94%A8-Builder-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">
       <li>[JDK8] 10 通用 Builder 创建对象</li>
-    </a>
-    
-    <a href="../../JDK8-9-Map-%E5%87%A0%E4%B8%AA%E6%96%B0%E6%96%B9%E6%B3%95/">
-      <li>[JDK8] 9 Map 几个新方法</li>
-    </a>
-    
-    <a href="../../JUC-Java-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/">
-      <li>[JUC] Java 并发编程知识点梳理</li>
     </a>
     
   </ul>
@@ -1105,6 +1102,10 @@ Git 官网下载安装说明：https://git......
     
     
     
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
+    
+    
+    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
     
     
@@ -1153,7 +1154,7 @@ Git 官网下载安装说明：https://git......
     
     
     
-    <a href="/tags/#Java 杂记" title="Java 杂记" rel="10">Java 杂记</a>
+    <a href="/tags/#Java 杂记" title="Java 杂记" rel="11">Java 杂记</a>
     
     
     
@@ -1273,10 +1274,6 @@ Git 官网下载安装说明：https://git......
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="1">Generics</a>
-    
-    
-    
     <a href="/tags/#Guava Cache" title="Guava Cache" rel="1">Guava Cache</a>
     
     
@@ -1318,7 +1315,7 @@ Git 官网下载安装说明：https://git......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
