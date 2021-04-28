@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -474,6 +474,42 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/JUC-3-3-ArrayBlockingQueue-和-LinkedBlockingQueue/">
+    <h2 class="post-title">
+      [JUC] 3.3 ArrayBlockingQueue 和 LinkedBlockingQueue
+    </h2>
+    <h3 class="post-subtitle">
+      Java 并发容器
+    </h3>
+    <div class="post-content-preview">
+      ArrayBlockingQueue
+概述
+ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要指定长度的，所以使用 ArrayBlockingQueue 时必须指定长度，也就是它是一个有界阻塞队列。（有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。）
+它实现了 BlockingQueue接口，有着队列、集合以及阻塞队列的所有方法。它内部使用......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-10-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JUC" title="JUC">JUC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -819,44 +855,6 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Thread-2-线程的安全问题/">
-    <h2 class="post-title">
-      [Thread] 2 线程的安全问题
-    </h2>
-    <h3 class="post-subtitle">
-      线程的安全问题
-    </h3>
-    <div class="post-content-preview">
-      假设一个场景
-需求：创建三个窗口卖票，总票数为100张。
-线程安全问题：卖票过程中，出现了重票、错票。
-问题的原因：当某个线程操作车票的过程中，尚未操作完成时，其他线程参与进来，也操作车票。
-如何解决：当一个线程a 在操作 ticket 的时候，其他线程不能参与进来。直到线程a 操作完 ticket 时，其他线程才可以操作 ticket 。这种情况即使线程a 出现了阻塞，也不能改变。
-在 J......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-09-06
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Thread" title="Thread">Thread</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -908,6 +906,10 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
 <div class="widget">
   <ul>
     
+    <a href="../../en/Spring-8-Spring-%E7%94%A8%E5%88%B0%E4%BA%86%E9%82%A3%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+      <li>[Spring] 8 Spring 用到了那些设计模式</li>
+    </a>
+    
     <a href="../../en/Generics-%E6%B3%9B%E5%9E%8B%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">
       <li>[Generics] 泛型实现原理</li>
     </a>
@@ -922,10 +924,6 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     <a href="../../en/TCP-IP-What-is-TCP-IP/">
       <li>[TCP/IP] What is TCP/IP</li>
-    </a>
-    
-    <a href="../../en/JDK8-10-%E9%80%9A%E7%94%A8-Builder-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/">
-      <li>[JDK8] 10 通用 Builder 创建对象</li>
     </a>
     
   </ul>
@@ -1184,7 +1182,7 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     
     
-    <a href="/tags/#Spring" title="Spring" rel="8">Spring</a>
+    <a href="/tags/#Spring" title="Spring" rel="9">Spring</a>
     
     
     
@@ -1212,11 +1210,11 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     
     
-    <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
-    
-    
-    
     <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
+    
+    
+    
+    <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
     
     
     
@@ -1293,7 +1291,7 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
