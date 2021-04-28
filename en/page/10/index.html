@@ -250,6 +250,17 @@
           
           
           <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               ABOUT
@@ -264,17 +275,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -474,6 +474,81 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Calling-Third-party-API-WebService-1-WebService/">
+    <h2 class="post-title">
+      [Calling Third-party API - WebService] 1 WebService
+    </h2>
+    <h3 class="post-subtitle">
+      WebService
+    </h3>
+    <div class="post-content-preview">
+      WebService 概述
+WebService 是什么
+WebService 是一种跨编程语言和跨操作系统平台的远程调用技术。
+Web service 是一个平台独立的，低耦合的，自包含的、基于可编程的 web 的应用程序，可使用开放的 XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。
+Web Service 技术，能......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-03-14
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
+    
+    <a href="/tags/#WebService" title="WebService">WebService</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Annotation-自定义注解/">
+    <h2 class="post-title">
+      [Annotation] 自定义注解
+    </h2>
+    <h3 class="post-subtitle">
+      Annotation
+    </h3>
+    <div class="post-content-preview">
+      什么是注解（Annotation）
+Java注解是什么，以下是引用自维基百科的内容：
+
+Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的特殊语法元数据。Java 语言中的类、方法、变量、参数和包等都可以被标注。和 Javadoc 不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-03-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Annotation" title="Annotation">Annotation</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -771,79 +846,6 @@ Git 的区域分为 工作区、暂存区、本地仓库区。
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-11-Dubbo-Hystrix-实现服务熔断/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 11 Dubbo + Hystrix 实现服务熔断
-    </h2>
-    <h3 class="post-subtitle">
-      Dubbo + Hystrix 实现服务熔断
-    </h3>
-    <div class="post-content-preview">
-      熔断器简介
-在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以通过 RPC 相互调用。为了保证其高可用，单个服务通常会集群部署。由于网络原因或者自身的原因，服务并不能保证 100% 可用，如果单个服务出现问题，调用这个服务就会出现线程阻塞，此时若有大量的请求涌入，Servlet 容器的线程资源会被消耗完毕，导致服务瘫痪。服务与服务之间的依赖性，故障会传播，会对整个微服务系统造成......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Dubbo-Zookeeper-10-Dubbo-Kryo-实现高速序列化/">
-    <h2 class="post-title">
-      [Dubbo Zookeeper] 10 Dubbo + Kryo 实现高速序列化
-    </h2>
-    <h3 class="post-subtitle">
-      Dubbo + Kryo 实现高速序列化
-    </h3>
-    <div class="post-content-preview">
-      Dubbo 中的序列化
-Dubbo RPC 是 Dubbo 体系中最核心的一种高性能、高吞吐量的远程调用方式，可以称之为多路复用的 TCP 长连接调用：
-
-长连接：避免了每次调用新建 TCP 连接，提高了调用的响应速度
-多路复用：单个 TCP 连接可交替传输多个请求和响应的消息，降低了连接的等待闲置时间，从而减少了同样并发数下的网络连接数，提高了系统吞吐量
-
-Dubbo RPC 主要用于两个......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-20
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -895,6 +897,14 @@ Dubbo RPC 主要用于两个......
 <div class="widget">
   <ul>
     
+    <a href="../../JUC-Unsafe/">
+      <li>[JUC] Unsafe</li>
+    </a>
+    
+    <a href="../../JUC-synchronized-%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/">
+      <li>[JUC] synchronized 的底层实现</li>
+    </a>
+    
     <a href="../../Spring-8-Spring-%E7%94%A8%E5%88%B0%E4%BA%86%E9%82%A3%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
       <li>[Spring] 8 Spring 用到了那些设计模式</li>
     </a>
@@ -905,14 +915,6 @@ Dubbo RPC 主要用于两个......
     
     <a href="../../Java-%E6%9D%82%E8%AE%B0-Java-%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E9%A3%8E%E9%99%A9/">
       <li>[Java 杂记] Java 内存泄露风险</li>
-    </a>
-    
-    <a href="../../TCP-IP-OSI-and-TCP-IP/">
-      <li>[TCP/IP] OSI and TCP/IP</li>
-    </a>
-    
-    <a href="../../TCP-IP-What-is-TCP-IP/">
-      <li>[TCP/IP] What is TCP/IP</li>
     </a>
     
   </ul>
@@ -1107,7 +1109,7 @@ Dubbo RPC 主要用于两个......
     
     
     
-    <a href="/tags/#JUC" title="JUC" rel="6">JUC</a>
+    <a href="/tags/#JUC" title="JUC" rel="7">JUC</a>
     
     
     
@@ -1199,11 +1201,11 @@ Dubbo RPC 主要用于两个......
     
     
     
-    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
     
     
     
@@ -1280,7 +1282,7 @@ Dubbo RPC 主要用于两个......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

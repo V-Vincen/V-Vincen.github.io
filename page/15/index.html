@@ -250,6 +250,17 @@
           
           
           <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/about/">
               
               ABOUT
@@ -264,17 +275,6 @@
             <a href="/categories/">
               
               CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -474,6 +474,91 @@
       <!-- Main Content -->
 
 
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Thread-4-线程创建新增方式（JKD-5-0）/">
+    <h2 class="post-title">
+      [Thread] 4 线程创建新增方式（JKD 5.0）
+    </h2>
+    <h3 class="post-subtitle">
+      JKD 5.0 线程创建新增方式
+    </h3>
+    <div class="post-content-preview">
+      新增方式一：实现 Callable 接口
+与使用 Runnable 相比，Callable 功能更强大些
+
+相比 run() 方法，可以有返回值
+方法可以抛出异常
+支持泛型的返回值
+需要借助 FutureTask 类，比如获取返回结果
+
+Future 接口
+
+可以对具体 Runnable、Callable 任务的执行结果进行取消、查询是否完成、获取结果等。
+FutureTask 是 Futu......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-09-09
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Thread" title="Thread">Thread</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/en/Thread-3-线程的通信/">
+    <h2 class="post-title">
+      [Thread] 3 线程的通信
+    </h2>
+    <h3 class="post-subtitle">
+      线程的通信
+    </h3>
+    <div class="post-content-preview">
+      假设一个场景
+需求：使用两个线程打印 1-100。线程1、线程2交替打印。
+涉及到三个方法
+
+wait()：一旦执行此方法，当前线程就进入阻塞状态，并释放同步监视器。
+notify()：一旦执行此方法，就会唤醒被 wait() 的一个线程。如果有多个线程被 wait()，就唤醒优先级高的那个。
+notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
+
+12345678......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-09-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Thread" title="Thread">Thread</a>
+    
+  </div>
+  
+
+</div>
+<hr>
 
 <div class="post-preview">
   
@@ -791,84 +876,6 @@ GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个�
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Docker-Docker-常用命令/">
-    <h2 class="post-title">
-      [Docker] Docker 常用命令
-    </h2>
-    <h3 class="post-subtitle">
-      Docker 常用命令
-    </h3>
-    <div class="post-content-preview">
-      查看 Docker 版本
-1docker version
-构建 Docker 镜像
-commit 构建
-
-先启动一个基本容器生成，然后在该容器中完成自己所需的操作，最后用 commit 命令来生成一个新的 image。
-下命令中：
-&lt;CONTAINER ID&gt;：为在基础容器中完成需求后的容器 id；
-&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 i......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-4-TortoiseGit-简介和安装/">
-    <h2 class="post-title">
-      [Git] 4 TortoiseGit 简介和安装
-    </h2>
-    <h3 class="post-subtitle">
-      TortoiseGit 简介和安装
-    </h3>
-    <div class="post-content-preview">
-      概述
-TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git 只支持 Windows 系统，有一个前辈海龟 SVN，TortoiseSVN 和 TortoiseGit 都是非常优秀的开源的版本库客户端。 分为 32 位版与 64 位版。并且支持各种语言，包括简体中文。
-安装 TortoiseGit
-下载
-下载地址：https://tortoisegit.org/......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -920,6 +927,14 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 <div class="widget">
   <ul>
     
+    <a href="../../en/JUC-Unsafe/">
+      <li>[JUC] Unsafe</li>
+    </a>
+    
+    <a href="../../en/JUC-synchronized-%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/">
+      <li>[JUC] synchronized 的底层实现</li>
+    </a>
+    
     <a href="../../en/Spring-8-Spring-%E7%94%A8%E5%88%B0%E4%BA%86%E9%82%A3%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
       <li>[Spring] 8 Spring 用到了那些设计模式</li>
     </a>
@@ -930,14 +945,6 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     
     <a href="../../en/Java-%E6%9D%82%E8%AE%B0-Java-%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E9%A3%8E%E9%99%A9/">
       <li>[Java 杂记] Java 内存泄露风险</li>
-    </a>
-    
-    <a href="../../en/TCP-IP-OSI-and-TCP-IP/">
-      <li>[TCP/IP] OSI and TCP/IP</li>
-    </a>
-    
-    <a href="../../en/TCP-IP-What-is-TCP-IP/">
-      <li>[TCP/IP] What is TCP/IP</li>
     </a>
     
   </ul>
@@ -1132,7 +1139,7 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     
     
     
-    <a href="/tags/#JUC" title="JUC" rel="6">JUC</a>
+    <a href="/tags/#JUC" title="JUC" rel="7">JUC</a>
     
     
     
@@ -1224,11 +1231,11 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     
     
     
-    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#TCP/IP" title="TCP/IP" rel="2">TCP/IP</a>
     
     
     
@@ -1305,7 +1312,7 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

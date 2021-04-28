@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-164526897-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164526897-1');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?49e5faf2bfd6c26c1eb20bad10ef10c7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="Java,v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/favicon.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://v-vincen.life/en/JUC-synchronized-的底层实现/">
+  <title>
+    
+      [JUC] synchronized 的底层实现 - JavaDev | 一如Java深似海
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--light">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'light';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'hexo-theme-livemylife/blog'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- 
+		<a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
+
+		 -->
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Live My Life</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io//img/header_img/categories_bg3.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/img/header_img/categories_bg3.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#JUC" title="JUC">JUC</a>
+              
+            </div>
+            <h1>[JUC] synchronized 的底层实现</h1>
+            <h2 class="subheading">Unsafe、CAS、Java Object Layout、Lock Upgrade...</h2>
+            <span class="meta">
+              Posted by Mr.Vincent on
+              2021-04-28
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">24</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">5.7k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="用户态与内核态">用户态与内核态</h2>
+<p>JDK 早期，synchronized 叫做重量级锁， 因为申请锁资源必须通过 kernel（指大多数操作系统的核心部分），系统调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">;hello.asm</span><br><span class="line">;write(int fd, const void *buffer, size_t nbytes)</span><br><span class="line"></span><br><span class="line">section data</span><br><span class="line">    msg db &quot;Hello&quot;, 0xA</span><br><span class="line">    len equ $ - msg</span><br><span class="line"></span><br><span class="line">section .text</span><br><span class="line">global _start</span><br><span class="line">_start:</span><br><span class="line"></span><br><span class="line">    mov edx, len</span><br><span class="line">    mov ecx, msg</span><br><span class="line">    mov ebx, 1 ;文件描述符1 std_out</span><br><span class="line">    mov eax, 4 ;write函数系统调用号 4</span><br><span class="line">    int 0x80</span><br><span class="line"></span><br><span class="line">    mov ebx, 0</span><br><span class="line">    mov eax, 1 ;exit函数系统调用号</span><br><span class="line">    int 0x80</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="CAS">CAS</h2>
+<p>CAS：<code>Compare And Swap（Compare And Exchange）</code>，一般被称为：自旋（自旋锁）、无锁（无重量锁）。因为经常配合循环操作，直到完成为止，所以泛指一类操作。<code>cas(v, a, b) </code>，变量 v，期待值 a, 修改值 b。</p>
+<p>说到 CAS，一般都会被问到 – ABA 问题。举个例子：你的女朋友在离开你的这段儿时间经历了别的人，自旋就是你空转等待，一直等到她接纳你为止。那如何解决这个问题呢？通常解决办法 – 版本号 <code>AtomicStampedReference</code>（或者说又叫做原子操作），基础类型简单值不需要版本号。</p>
+<p><img src="cas.png" alt="cas"></p>
+<h2 id="Unsafe-类">Unsafe 类</h2>
+<p>Java 和 C++ 语言的一个重要区别就是 Java 中我们无法直接操作一块内存区域，不能像 C++ 中那样可以自己申请内存和释放内存。Java 中的 Unsafe 类为我们提供了类似 C++ 手动管理内存的能力。Unsafe 类，全限定名是 <code>sun.misc.Unsafe</code>，从名字中我们可以看出来这个类对普通程序员来说是“危险”的，一般应用开发者不会用到这个类。Unsafe 的功能如下图：</p>
+<p><img src="unsafe.png" alt="unsafe"></p>
+<p>其具体功能在这里就不细说了，后续博主会另开一篇博文来探讨 Unsafe 类。这里主要讲解的是，Unsafe 这个类的 CAS 底层操作原理。所有的原子类的操作都是使用的 Unsafe 中的 <code>CompareAndSwap</code> 方法，这个方法的原理就是上面所说的 CAS 操作的原理，而这个方法是 Unsafe 这个类提供的。所以原子类的底层原理就是 CAS。以 <code>AtomicInteger</code> 类为例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">incrementAndGet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">            <span class="keyword">int</span> current = get();</span><br><span class="line">            <span class="keyword">int</span> next = current + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (compareAndSet(current, next))</span><br><span class="line">                <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">compareAndSet</span><span class="params">(<span class="keyword">int</span> expect, <span class="keyword">int</span> update)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> unsafe.compareAndSwapInt(<span class="keyword">this</span>, valueOffset, expect, update);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>Unsafe:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">native</span> <span class="keyword">boolean</span> <span class="title">compareAndSwapInt</span><span class="params">(Object var1, <span class="keyword">long</span> var2, <span class="keyword">int</span> var4, <span class="keyword">int</span> var5)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>运用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mashibing.jol;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sun.misc.Unsafe;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">T02_TestUnsafe</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> T02_TestUnsafe t = <span class="keyword">new</span> T02_TestUnsafe();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//Unsafe unsafe = Unsafe.getUnsafe();</span></span><br><span class="line"></span><br><span class="line">        Field unsafeField = Unsafe.class.getDeclaredFields()[<span class="number">0</span>];</span><br><span class="line">        unsafeField.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        Unsafe unsafe = (Unsafe) unsafeField.get(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        Field f = T02_TestUnsafe.class.getDeclaredField(<span class="string">&quot;i&quot;</span>);</span><br><span class="line">        <span class="keyword">long</span> offset = unsafe.objectFieldOffset(f);</span><br><span class="line">        System.out.println(offset);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> success = unsafe.compareAndSwapInt(t, offset, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">        System.out.println(success);</span><br><span class="line">        System.out.println(t.i);</span><br><span class="line">        <span class="comment">//unsafe.compareAndSwapInt()</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>jdk8u（jdk 的原文件）：unsafe.cpp（c++），<code>cmpxchg = compare and exchange</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UNSAFE_ENTRY</span>(jboolean, <span class="built_in">Unsafe_CompareAndSwapInt</span>(JNIEnv *env, jobject unsafe, jobject obj, jlong offset, jint e, jint x))</span><br><span class="line">  <span class="built_in">UnsafeWrapper</span>(<span class="string">&quot;Unsafe_CompareAndSwapInt&quot;</span>);</span><br><span class="line">  oop p = JNIHandles::<span class="built_in">resolve</span>(obj);</span><br><span class="line">  jint* addr = (jint *) <span class="built_in">index_oop_from_field_offset_long</span>(p, offset);</span><br><span class="line">  <span class="keyword">return</span> (jint)(Atomic::<span class="built_in">cmpxchg</span>(x, addr, e)) == e;</span><br><span class="line">UNSAFE_END</span><br></pre></td></tr></table></figure>
+<p>jdk8u（jdk 的原文件）：atomic_linux_x86.inline.hpp，<code>is_MP = Multi Processor</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> jint     <span class="title">Atomic::cmpxchg</span>    <span class="params">(jint     exchange_value, <span class="keyword">volatile</span> jint*     dest, jint     compare_value)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> mp = os::<span class="built_in">is_MP</span>();</span><br><span class="line">  <span class="function">__asm__ <span class="title">volatile</span> <span class="params">(LOCK_IF_MP(%<span class="number">4</span>) <span class="string">&quot;cmpxchgl %1,(%3)&quot;</span></span></span></span><br><span class="line">                    : <span class="string">&quot;=a&quot;</span> (exchange_value)</span><br><span class="line">                    : <span class="string">&quot;r&quot;</span> (exchange_value), <span class="string">&quot;a&quot;</span> (compare_value), <span class="string">&quot;r&quot;</span> (dest), <span class="string">&quot;r&quot;</span> (mp)</span><br><span class="line">                    : <span class="string">&quot;cc&quot;</span>, <span class="string">&quot;memory&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> exchange_value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>jdk8u（jdk 的原文件）：os.hpp，<code>is_MP()</code>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">is_MP</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// During bootstrap if _processor_count is not yet initialized</span></span><br><span class="line">  <span class="comment">// we claim to be MP as that is safest. If any platform has a</span></span><br><span class="line">  <span class="comment">// stub generator that might be triggered in this phase and for</span></span><br><span class="line">  <span class="comment">// which being declared MP when in fact not, is a problem - then</span></span><br><span class="line">  <span class="comment">// the bootstrap routine for the stub generator needs to check</span></span><br><span class="line">  <span class="comment">// the processor count directly and leave the bootstrap routine</span></span><br><span class="line">  <span class="comment">// in place until called after initialization has ocurred.</span></span><br><span class="line">  <span class="keyword">return</span> (_processor_count != <span class="number">1</span>) || AssumeMP;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>jdk8u（jdk 的原文件）：atomic_linux_x86.inline.hpp。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LOCK_IF_MP(mp) <span class="meta-string">&quot;cmp $0, &quot;</span> #mp <span class="meta-string">&quot;; je 1f; lock; 1: &quot;</span></span></span><br></pre></td></tr></table></figure>
+<p>最终实现：<code>cmpxchg = cas</code> 修改变量值，<strong>注意</strong> <code>cmpxchg</code> cpu 指令或者说 <code>cas</code>，它并不是具备原子操作，那为什么 <code>compareAndSet()</code> 方法具备原子性呢，那是因为这个该方法底层调用的 cpu 指令，分别是两个指令 <code>lock</code> 和 <code>cmpxchg</code>。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lock cmpxchg 指令</span><br></pre></td></tr></table></figure>
+<p>硬件：<code>lock</code> 指令在执行后面指令的时候锁定一个北桥信号（不采用锁总线的方式），通俗易懂的讲的话就是，加了 <code>lock</code> 指令后，其他 cpu 不允许对 <code>cmpxchg</code> 指令中的值进行修改。</p>
+<h2 id="对象在内存中的存储布局">对象在内存中的存储布局</h2>
+<h3 id="JOL：Java-Object-Layout">JOL：Java Object Layout</h3>
+<p>可以通过以下工具来查看 Java 对象的布局：<code>JOL = Java Object Layout</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.openjdk.jol<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jol-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在开始之前我们先来看个例子：先看下在 JVM 中，一个引用的长度占用多少字节。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.openjdk.jol.vm.VM;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaObjectLayout</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;------------VM details---------------&quot;</span>);</span><br><span class="line">        System.out.println(VM.current().details());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个 details() 方法由 JOL 类库中的 HotspotUnsafe 类实现，源码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">details</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    StringWriter sw = <span class="keyword">new</span> StringWriter();</span><br><span class="line">    PrintWriter out = <span class="keyword">new</span> PrintWriter(sw);</span><br><span class="line"></span><br><span class="line">    out.println(<span class="string">&quot;# Running &quot;</span> + (addressSize * <span class="number">8</span>) + <span class="string">&quot;-bit HotSpot VM.&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (compressedOopsEnabled) &#123;</span><br><span class="line">        <span class="keyword">if</span> (narrowOopBase != <span class="number">0</span>) &#123;</span><br><span class="line">            out.println(<span class="string">&quot;# Using compressed oop with &quot;</span> +</span><br><span class="line">                    formatAddressAsHexByAddressSize(narrowOopBase) + <span class="string">&quot; base address and &quot;</span> +</span><br><span class="line">                    narrowOopShift + <span class="string">&quot;-bit shift.&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            out.println(<span class="string">&quot;# Using compressed oop with &quot;</span> + narrowOopShift + <span class="string">&quot;-bit shift.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (compressedKlassOopsEnabled) &#123;</span><br><span class="line">        <span class="keyword">if</span> (narrowKlassBase != <span class="number">0</span>) &#123;</span><br><span class="line">            out.println(<span class="string">&quot;# Using compressed klass with &quot;</span> +</span><br><span class="line">                    formatAddressAsHexByAddressSize(narrowKlassBase) + <span class="string">&quot; base address and &quot;</span> +</span><br><span class="line">                    narrowKlassShift + <span class="string">&quot;-bit shift.&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            out.println(<span class="string">&quot;# Using compressed klass with &quot;</span> + narrowKlassShift + <span class="string">&quot;-bit shift.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!isAccurate &amp;&amp; (compressedOopsEnabled || compressedKlassOopsEnabled)) &#123;</span><br><span class="line">        out.println(<span class="string">&quot;# WARNING | Compressed references base/shifts are guessed by the experiment!&quot;</span>);</span><br><span class="line">        out.println(<span class="string">&quot;# WARNING | Therefore, computed addresses are just guesses, and ARE NOT RELIABLE.&quot;</span>);</span><br><span class="line">        out.println(<span class="string">&quot;# WARNING | Make sure to attach Serviceability Agent to get the reliable addresses.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    out.println(<span class="string">&quot;# Objects are &quot;</span> + objectAlignment + <span class="string">&quot; bytes aligned.&quot;</span>);</span><br><span class="line"></span><br><span class="line">    out.printf(<span class="string">&quot;# %-19s: %d, %d, %d, %d, %d, %d, %d, %d, %d [bytes]%n&quot;</span>,</span><br><span class="line">            <span class="string">&quot;Field sizes by type&quot;</span>,</span><br><span class="line">            oopSize,</span><br><span class="line">            sizes.booleanSize,</span><br><span class="line">            sizes.byteSize,</span><br><span class="line">            sizes.charSize,</span><br><span class="line">            sizes.shortSize,</span><br><span class="line">            sizes.intSize,</span><br><span class="line">            sizes.floatSize,</span><br><span class="line">            sizes.longSize,</span><br><span class="line">            sizes.doubleSize</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    out.printf(<span class="string">&quot;# %-19s: %d, %d, %d, %d, %d, %d, %d, %d, %d [bytes]%n&quot;</span>,</span><br><span class="line">            <span class="string">&quot;Array element sizes&quot;</span>,</span><br><span class="line">            U.arrayIndexScale(Object[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">boolean</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">byte</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">char</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">short</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">int</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">float</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">long</span>[].class),</span><br><span class="line">            U.arrayIndexScale(<span class="keyword">double</span>[].class)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    out.close();</span><br><span class="line">    <span class="keyword">return</span> sw.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">------------VM details---------------</span></span><br><span class="line"># <span class="built_in">WARNING</span>: Unable <span class="keyword">to</span> attach Serviceability Agent. You can try again <span class="keyword">with</span> escalated <span class="keyword">privileges</span>. Two <span class="keyword">options</span>: a) use -Djol.tryWithSudo=<span class="keyword">true</span> <span class="keyword">to</span> try <span class="keyword">with</span> sudo; b) echo <span class="number">0</span> | sudo tee /proc/sys/kernel/yama/ptrace_scope</span><br><span class="line"># Running <span class="number">64</span>-<span class="type">bit</span> HotSpot VM.</span><br><span class="line"># <span class="keyword">Using</span> compressed oop <span class="keyword">with</span> <span class="number">3</span>-<span class="type">bit</span> shift.</span><br><span class="line"># <span class="keyword">Using</span> compressed klass <span class="keyword">with</span> <span class="number">3</span>-<span class="type">bit</span> shift.</span><br><span class="line"># <span class="built_in">WARNING</span> | Compressed <span class="keyword">references</span> base/shifts are guessed <span class="keyword">by</span> the experiment!</span><br><span class="line"># <span class="built_in">WARNING</span> | Therefore, computed addresses are just guesses, <span class="keyword">and</span> ARE <span class="keyword">NOT</span> RELIABLE.</span><br><span class="line"># <span class="built_in">WARNING</span> | Make sure <span class="keyword">to</span> attach Serviceability Agent <span class="keyword">to</span> <span class="keyword">get</span> the reliable addresses.</span><br><span class="line"># Objects are <span class="number">8</span> bytes aligned.</span><br><span class="line"># Field sizes <span class="keyword">by</span> <span class="keyword">type</span>: <span class="number">4</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">8</span> [bytes]</span><br><span class="line"># <span class="keyword">Array</span> element sizes: <span class="number">4</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">8</span> [bytes]</span><br></pre></td></tr></table></figure>
+<p>运行结果中可以看到：</p>
+<ul>
+<li>JVM 是64位的 HotSpot。</li>
+<li>默认开启 oop（Ordinary Object Pointer，普通对象指针）压缩，可设置 JVM 参数 <code>-XX:-UseCompressedOops</code> 关闭指针压缩。</li>
+<li>默认开启 Class pointer（类对象指针）的压缩，可设置 JVM 参数 <code>-XX:-UseCompressedClassPointer</code> 关闭指针压缩。</li>
+<li>对象按照8字节来对齐。</li>
+<li>对象属性（即上方的 Field sizes by type）的长度：4字节（oopSize, 普通对象引用），其余的基本类型的字节数和java中一致。</li>
+<li>6.数组类型（即上方的 Array element sizes）的长度：4字节（引用的长度），其余的基本类型的字节数和 java 中一致。</li>
+</ul>
+<p>由此可以得出，当前 JVM 使用4字节保存对象的引用。（关于 oop 压缩和 class pointer 的压缩，可以参考这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/a469517790/article/details/104916916">https://blog.csdn.net/a469517790/article/details/104916916</a> ）</p>
+<h3 id="Java-对象在内存中的布局">Java 对象在内存中的布局</h3>
+<p>先来看张图：</p>
+<p><img src="jol.png" alt="jol"></p>
+<h4 id="普通对象布局">普通对象布局</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">结构</th>
+<th style="text-align:left">字节数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">markword</td>
+<td style="text-align:left">8Bytes</td>
+<td style="text-align:left">用于标记锁信息、GC 信息、IdentityHashCode 等</td>
+</tr>
+<tr>
+<td style="text-align:left">klass pointer 类指针</td>
+<td style="text-align:left">4Bytes</td>
+<td style="text-align:left">用于标记该对象是哪个 Class 的实例 开启内存压缩（-XX:+UseCompressedClassPointer）后为4字节，默认是开启的， 不开启内存压缩为8个字节（下面有例子）</td>
+</tr>
+<tr>
+<td style="text-align:left">成员变量</td>
+<td style="text-align:left">视成员变量的类型和数量而定</td>
+<td style="text-align:left">如果没有成员变量，则这一块为空</td>
+</tr>
+<tr>
+<td style="text-align:left">padding 对齐</td>
+<td style="text-align:left">视上述字节而定</td>
+<td style="text-align:left">一个对象占用的字节数必须是8的倍数，不足的用 padding 对齐</td>
+</tr>
+</tbody>
+</table>
+<p>接下来看看普通对象的布局案例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ordinaryObjectLayout</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------------Object---------------&quot;</span>);</span><br><span class="line">    Object o = <span class="keyword">new</span> Object();</span><br><span class="line">    String s = ClassLayout.parseInstance(o).toPrintable();</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">------------Ordinary Object---------------</span><br><span class="line"># WARNING: Unable <span class="keyword">to</span> attach Serviceability Agent. You can <span class="keyword">try</span> again <span class="keyword">with</span> escalated privileges. Two options: a) use -<span class="module-access"><span class="module"><span class="identifier">Djol</span>.</span></span>tryWithSudo=<span class="literal">true</span> <span class="keyword">to</span> <span class="keyword">try</span> <span class="keyword">with</span> sudo; b) echo <span class="number">0</span> <span class="pattern-match">| sudo tee <span class="operator">/</span>proc<span class="operator">/</span>sys<span class="operator">/</span>kernel<span class="operator">/</span>yama<span class="operator">/</span>ptrace<span class="constructor">_scope</span></span></span><br><span class="line">java.lang.Object <span class="keyword">object</span> internals:</span><br><span class="line"> OFFSET  SIZE   TYPE DESCRIPTION                               VALUE</span><br><span class="line">      <span class="number">0</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           <span class="number">01</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> (<span class="number">00000001</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">1</span>)</span><br><span class="line">      <span class="number">4</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> (<span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">0</span>)</span><br><span class="line">      <span class="number">8</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           e5 <span class="number">01</span> <span class="number">00</span> f8 (<span class="number">11100101</span> <span class="number">00000001</span> <span class="number">00000000</span> <span class="number">11111000</span>) <span class="number">(-134217243)</span></span><br><span class="line">     <span class="number">12</span>     <span class="number">4</span>        (loss due <span class="keyword">to</span> the next <span class="keyword">object</span> alignment)</span><br><span class="line">Instance size: <span class="number">16</span> <span class="built_in">bytes</span></span><br><span class="line">Space losses: <span class="number">0</span> <span class="built_in">bytes</span> internal + <span class="number">4</span> <span class="built_in">bytes</span> <span class="keyword">external</span> = <span class="number">4</span> <span class="built_in">bytes</span> total</span><br></pre></td></tr></table></figure>
+<p><img src="ol.png" alt="ol"></p>
+<p>可以看到，前12个字节都是 object header，什么是 object header？引用 <a target="_blank" rel="noopener" href="http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html">OpenJDK</a> 的专业术语的原文：</p>
+<blockquote>
+<p><strong>object header:</strong> Common structure at the beginning of every GC-managed heap object. (Every oop points to an object header.) Includes fundamental information about the heap object’s layout, type, GC state, synchronization state, and identity hash code. Consists of two words. <strong>In arrays it is immediately followed by a length field</strong>. Note that both Java objects and VM-internal objects have a common object header format.</p>
+</blockquote>
+<p>对象头是由 GC 管理的，堆中的 Java 对象的开始部分，由两个部分组成：mark word 和 klass pointer。</p>
+<blockquote>
+<p><strong>mark word:</strong> The first word of every object header. Usually a set of bitfields including synchronization state and identity hash code. May also be a pointer (with characteristic low bit encoding) to synchronization related information. During GC, may contain GC state bits.</p>
+<p><strong>klass pointer:</strong> The second word of every object header. Points to another object (a metaobject) which describes the layout and behavior of the original object. For Java objects, the “klass” contains a C++ style “vtable”.</p>
+</blockquote>
+<p>所以，这12字节中前8个字节（前两行）是 markword，后4个字节（第三行）是对象指针。由于 Object 类没有成员变量，这块为空，因此最后4个字节（第四行）是对齐。</p>
+<p><strong>注意：</strong> 如果执行的时候使用 JVM 参数 <code>-XX:-UseCompressedClassPointers</code> 关闭类指针压缩，则 class pointer 将占用8字节。</p>
+<h4 id="数组对象布局">数组对象布局</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">结构</th>
+<th style="text-align:left">字节数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">markword</td>
+<td style="text-align:left">8Bytes</td>
+<td style="text-align:left">用于标记锁信息、GC 信息、IdentityHashCode 等。</td>
+</tr>
+<tr>
+<td style="text-align:left">klass pointer 类指针</td>
+<td style="text-align:left">4Bytes</td>
+<td style="text-align:left">用于标记该对象是哪个 Class 的实例 开启内存压缩后为4字节，默认是开启的。 通过（-XX:+UseCompressedClassPointer）可以关闭内存压缩，为8个字节（下面有例子）。</td>
+</tr>
+<tr>
+<td style="text-align:left">数组长度</td>
+<td style="text-align:left">4Bytes</td>
+<td style="text-align:left">标记数组有多少个元素</td>
+</tr>
+<tr>
+<td style="text-align:left">数组内容</td>
+<td style="text-align:left">根据数组类型 m 和长度 n 而定，长度为 m*n</td>
+<td style="text-align:left">如果元素为基本类型，比如 byte、boolean、short、char、int、long、double，则 m 为对应的基本类型长度；如果元素为对象，m 是4字节的引用（前文已经提到：当前 JVM 使用4字节保存对象的引用）；如果数组长度为0，这一块为空。</td>
+</tr>
+<tr>
+<td style="text-align:left">padding 对齐</td>
+<td style="text-align:left">视上述字节而定</td>
+<td style="text-align:left">一个对象占用的字节数必须是8的倍数，不足的用 padding 对齐。</td>
+</tr>
+</tbody>
+</table>
+<p>同理可以查看数组对象的布局：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">arrayLayout</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------------Array Object[2]---------------&quot;</span>);</span><br><span class="line">    Object[] os = <span class="keyword">new</span> Object[<span class="number">2</span>];</span><br><span class="line">    System.out.println(ClassLayout.parseInstance(os).toPrintable());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">------------Array Object[<span class="number">2</span>]---------------</span><br><span class="line"># WARNING: Unable to attach Serviceability Agent. You can try again with escalated privileges. Two options: a) use -Djol.tryWithSudo=true to try with sudo<span class="comment">; b) echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope</span></span><br><span class="line">[Ljava.lang.Object<span class="comment">; object internals:</span></span><br><span class="line"> OFFSET  SIZE               TYPE DESCRIPTION                               VALUE</span><br><span class="line">      <span class="number">0</span>     <span class="number">4</span>                    (object header)                           <span class="number">01 00 00 00</span> (<span class="number">00000001</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">1</span>)</span><br><span class="line">      <span class="number">4</span>     <span class="number">4</span>                    (object header)                           <span class="number">00 00 00 00</span> (<span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">0</span>)</span><br><span class="line">      <span class="number">8</span>     <span class="number">4</span>                    (object header)                           <span class="number">4</span>c <span class="number">23</span> <span class="number">00</span> f8 (<span class="number">01001100</span> <span class="number">00100011</span> <span class="number">00000000</span> <span class="number">11111000</span>) (-<span class="number">134208692</span>)</span><br><span class="line">     <span class="number">12</span>     <span class="number">4</span>                    (object header)                           <span class="number">02 00 00 00</span> (<span class="number">00000010</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">2</span>)</span><br><span class="line">     <span class="number">16</span>     <span class="number">8</span>   java.lang.Object Object<span class="comment">;.&lt;elements&gt;                        N/A</span></span><br><span class="line">Instance size: <span class="number">24</span> bytes</span><br><span class="line">Space losses: <span class="number">0</span> bytes internal + <span class="number">0</span> bytes external = <span class="number">0</span> bytes total</span><br></pre></td></tr></table></figure>
+<p><img src="al.png" alt="al"></p>
+<p>可以看到，从偏移量12开始，数组长度为4字节（上文 object header 的引用里提到，这两个部分之后，紧接着就是数组长度），值为2，然后16字节开始，为2x4=8字节的数组内容（上文提到：<strong>每个对象的引用长度为4字节</strong>）。</p>
+<h4 id="加上-syncronized-关键字">加上 syncronized 关键字</h4>
+<p>现在用 syncronized 对该对象加锁，看看 markword 有什么变化。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">syncronizedLayout</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;------------syncronized---------------&quot;</span>);</span><br><span class="line">    Object o = <span class="keyword">new</span> Object();</span><br><span class="line">    <span class="keyword">synchronized</span> (o) &#123;</span><br><span class="line">        System.out.println(ClassLayout.parseInstance(o).toPrintable());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">------------syncronized Object---------------</span><br><span class="line"># WARNING: Unable <span class="keyword">to</span> attach Serviceability Agent. You can <span class="keyword">try</span> again <span class="keyword">with</span> escalated privileges. Two options: a) use -<span class="module-access"><span class="module"><span class="identifier">Djol</span>.</span></span>tryWithSudo=<span class="literal">true</span> <span class="keyword">to</span> <span class="keyword">try</span> <span class="keyword">with</span> sudo; b) echo <span class="number">0</span> <span class="pattern-match">| sudo tee <span class="operator">/</span>proc<span class="operator">/</span>sys<span class="operator">/</span>kernel<span class="operator">/</span>yama<span class="operator">/</span>ptrace<span class="constructor">_scope</span></span></span><br><span class="line">java.lang.Object <span class="keyword">object</span> internals:</span><br><span class="line"> OFFSET  SIZE   TYPE DESCRIPTION                               VALUE</span><br><span class="line">      <span class="number">0</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           e0 <span class="number">08</span> <span class="number">58</span> <span class="number">07</span> (<span class="number">11100000</span> <span class="number">00001000</span> <span class="number">01011000</span> <span class="number">00000111</span>) (<span class="number">123209952</span>)</span><br><span class="line">      <span class="number">4</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           <span class="number">00</span> <span class="number">70</span> <span class="number">00</span> <span class="number">00</span> (<span class="number">00000000</span> <span class="number">01110000</span> <span class="number">00000000</span> <span class="number">00000000</span>) (<span class="number">28672</span>)</span><br><span class="line">      <span class="number">8</span>     <span class="number">4</span>        (<span class="keyword">object</span> header)                           e5 <span class="number">01</span> <span class="number">00</span> f8 (<span class="number">11100101</span> <span class="number">00000001</span> <span class="number">00000000</span> <span class="number">11111000</span>) <span class="number">(-134217243)</span></span><br><span class="line">     <span class="number">12</span>     <span class="number">4</span>        (loss due <span class="keyword">to</span> the next <span class="keyword">object</span> alignment)</span><br><span class="line">Instance size: <span class="number">16</span> <span class="built_in">bytes</span></span><br><span class="line">Space losses: <span class="number">0</span> <span class="built_in">bytes</span> internal + <span class="number">4</span> <span class="built_in">bytes</span> <span class="keyword">external</span> = <span class="number">4</span> <span class="built_in">bytes</span> total</span><br></pre></td></tr></table></figure>
+<p>可以看到，markword 的前4个字节的内容发生了变化。因此，<strong>syncronized 加锁后，会修改了该对象的 markword</strong>。</p>
+<blockquote>
+<p>jdk8u（jdk 的原文件）: markOop.hpp（markword）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Bit-format of an object header (most significant first, big endian layout below):</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  32 bits:</span></span><br><span class="line"><span class="comment">//  --------</span></span><br><span class="line"><span class="comment">//             hash:25 ------------&gt;| age:4    biased_lock:1 lock:2 (normal object)</span></span><br><span class="line"><span class="comment">//             JavaThread*:23 epoch:2 age:4    biased_lock:1 lock:2 (biased object)</span></span><br><span class="line"><span class="comment">//             size:32 ------------------------------------------&gt;| (CMS free block)</span></span><br><span class="line"><span class="comment">//             PromotedObject*:29 ----------&gt;| promo_bits:3 -----&gt;| (CMS promoted object)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  64 bits:</span></span><br><span class="line"><span class="comment">//  --------</span></span><br><span class="line"><span class="comment">//  unused:25 hash:31 --&gt;| unused:1   age:4    biased_lock:1 lock:2 (normal object)</span></span><br><span class="line"><span class="comment">//  JavaThread*:54 epoch:2 unused:1   age:4    biased_lock:1 lock:2 (biased object)</span></span><br><span class="line"><span class="comment">//  PromotedObject*:61 ---------------------&gt;| promo_bits:3 -----&gt;| (CMS promoted object)</span></span><br><span class="line"><span class="comment">//  size:64 -----------------------------------------------------&gt;| (CMS free block)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  unused:25 hash:31 --&gt;| cms_free:1 age:4    biased_lock:1 lock:2 (COOPs &amp;&amp; normal object)</span></span><br><span class="line"><span class="comment">//  JavaThread*:54 epoch:2 cms_free:1 age:4    biased_lock:1 lock:2 (COOPs &amp;&amp; biased object)</span></span><br><span class="line"><span class="comment">//  narrowOop:32 unused:24 cms_free:1 unused:4 promo_bits:3 -----&gt;| (COOPs &amp;&amp; CMS promoted object)</span></span><br><span class="line"><span class="comment">//  unused:21 size:35 --&gt;| cms_free:1 unused:7 ------------------&gt;| (COOPs &amp;&amp; CMS free block)</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="锁升级过程">锁升级过程</h2>
+<p>锁升级过程：new -&gt; 偏向锁 -&gt; 轻量级锁 （无锁, 自旋锁，自适应自旋）-&gt; 重量级锁。</p>
+<p><img src="lock_step.png" alt="lock_step"></p>
+<p><img src="markword.png" alt="markword"></p>
+<p>synchronized 优化的过程和 markword 息息相关。用 markword 中最低的三位代表锁状态，其中1位是偏向锁位，两位是普通锁位。</p>
+<ul>
+<li>
+<p><code>Object o = new Object();</code>，锁 = 0 01 无锁态。注意：如果偏向锁打开，默认是匿名偏向状态。</p>
+</li>
+<li>
+<p><code>o.hashCode();</code>，001 + hashcode</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">little endian</span><br><span class="line"><span class="number">00000001</span> <span class="number">10101101</span> <span class="number">00110100</span> <span class="number">00110110</span></span><br><span class="line"><span class="number">01011001</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">big endian </span><br><span class="line"><span class="number">00000000</span> <span class="number">00000000</span> <span class="number">00000000</span> <span class="number">01011001</span> </span><br><span class="line"><span class="number">00110110</span> <span class="number">00110100</span> <span class="number">10101101</span> <span class="number">00000000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>默认情况，偏向锁有个延时，默认是4秒。why? 因为 JVM 虚拟机自己有一些默认启动的线程，里面有好多 sync 代码，这些 sync 代码启动时就知道肯定会有竞争，如果使用偏向锁，就会造成偏向锁不断的进行锁撤销和锁升级的操作，效率较低。下面参数可以控制偏向锁的延时启动时间：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-XX:BiasedLockingStartupDelay=0</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>如果设定上述参数，<code>new Object () - &gt; 101 偏向锁 -&gt; 线程ID为0 -&gt; Anonymous BiasedLock</code>。打开偏向锁，new 出来的对象，默认就是一个可偏向匿名对象101。</p>
+</li>
+<li>
+<p>如果有线程上锁，上偏向锁，指的就是把 markword 的线程 ID 改为自己线程 ID 的过程。偏向锁不可重偏向、批量偏向、批量撤销。</p>
+</li>
+<li>
+<p>如果有线程竞争，撤销偏向锁，升级轻量级锁。线程在自己的线程栈生成 LockRecord，用 CAS 操作将 markword 设置为指向自己这个线程的 LR 的指针，设置成功者得到锁。</p>
+</li>
+<li>
+<p>如果竞争加剧，竞争加剧。有线程超过10次自旋（<code>-XX:PreBlockSpin</code>）或者自旋线程数超过 CPU 核数的一半（1.6之后，加入自适应自旋 <code>Adapative Self Spinning</code>，JVM 自己控制）。升级重量级锁，向操作系统申请资源，linux mutex CPU 从3级-0级系统调用，线程挂起，进入等待队列，等待操作系统的调度，然后再映射回用户空间。</p>
+</li>
+</ul>
+<p><strong>注意：</strong> 以上实验环境是 JDK 11，打开就是偏向锁，而 JDK 8默认对象头是无锁。偏向锁默认是打开的，但是有一个时延，如果要观察到偏向锁，应该设定参数。</p>
+<p><strong>为什么有自旋锁还需要重量级锁？</strong></p>
+<blockquote>
+<p>自旋是消耗 CPU 资源的，如果锁的时间长，或者自旋线程多，CPU 会被大量消耗。重量级锁有等待队列，所有拿不到锁的进入等待队列，不需要消耗 CPU 资源。</p>
+</blockquote>
+<p><strong>偏向锁是否一定比自旋锁效率高？</strong></p>
+<blockquote>
+<p>不一定，在明确知道会有多线程竞争的情况下，偏向锁肯定会涉及锁撤销，这时候直接使用自旋锁。JVM 启动过程，会有很多线程竞争（明确），所以默认情况启动时不打开偏向锁，过一段儿时间再打开。</p>
+</blockquote>
+<p><strong>如果计算过对象的 hashCode，则对象无法进入偏向状态！</strong></p>
+<blockquote>
+<p>轻量级锁重量级锁的 hashCode 存在与什么地方？答案：线程栈中，轻量级锁的 LR 中，或是代表重量级锁的 ObjectMonitor 的成员中。</p>
+</blockquote>
+<p><strong>关于 epoch：（不重要）</strong></p>
+<blockquote>
+<p><strong>批量重偏向与批量撤销</strong>渊源：从偏向锁的加锁解锁过程中可看出，当只有一个线程反复进入同步块时，偏向锁带来的性能开销基本可以忽略，但是当有其他线程尝试获得锁时，就需要等到 safe point 时，再将偏向锁撤销为无锁状态或升级为轻量级，会消耗一定的性能，所以在多线程竞争频繁的情况下，偏向锁不仅不能提高性能，还会导致性能下降。于是，就有了批量重偏向与批量撤销的机制。</p>
+<p><strong>原理</strong>以 class 为单位，为每个 class 维护<strong>解决场景</strong>批量重偏向（bulk rebias）机制是为了解决：一个线程创建了大量对象并执行了初始的同步操作，后来另一个线程也来将这些对象作为锁对象进行操作，这样会导致大量的偏向锁撤销操作。批量撤销（bulk revoke）机制是为了解决：在明显多线程竞争剧烈的场景下使用偏向锁是不合适的。</p>
+<p>一个偏向锁撤销计数器，每一次该 class 的对象发生偏向撤销操作时，该计数器+1，当这个值达到重偏向阈值（默认20）时，JVM 就认为该 class 的偏向锁有问题，因此会进行批量重偏向。每个 class 对象会有一个对应的 epoch 字段，每个处于偏向锁状态对象的 Mark Word 中也有该字段，其初始值为创建该对象时 class 中的 epoch 的值。每次发生批量重偏向时，就将该值+1，同时遍历 JVM 中所有线程的栈，找到该 class 所有正处于加锁状态的偏向锁，将其 epoch 字段改为新值。下次获得锁时，发现当前对象的 epoch 值和 class 的 epoch 不相等，那就算当前已经偏向了其他线程，也不会执行撤销操作，而是直接通过 CAS 操作将其 Mark Word 的 Thread Id 改成当前线程 Id。当达到重偏向阈值后，假设该 class 计数器继续增长，当其达到批量撤销的阈值后（默认40），JVM 就认为该 class 的使用场景存在多线程竞争，会标记该 class 为不可偏向，之后，对于该 class 的锁，直接走轻量级锁的逻辑。</p>
+</blockquote>
+<h3 id="简单总结">简单总结</h3>
+<p>锁升级的过程。JDK 较早的版本，OS 的资源，互斥量用户态 -&gt; 内核态的转换重量级，效率比较低。现代版本进行了优化，无锁 -&gt; 偏向锁 -&gt; 轻量级锁（自旋锁）-&gt; 重量级锁。</p>
+<p>偏向锁 markword 上记录当前线程指针，下次同一个线程加锁的时候，不需要争用，只需要判断线程指针是否同一个，所以，偏向锁，偏向加锁的第一个线程 。hashCode 备份在线程栈上，线程销毁，锁降级为无锁。</p>
+<p>有争用，锁升级为轻量级锁，每个线程有自己的 LockRecord 在自己的线程栈上，用 CAS 去争用 markword 的 LR 的指针，指针指向哪个线程的 LR，哪个线程就拥有锁。</p>
+<p>自旋超过10次，升级为重量级锁。如果太多线程自旋 CPU 消耗过大，不如升级为重量级锁，进入等待队列（不消耗 CPU <code>-XX:PreBlockSpin</code>）。</p>
+<p>自旋锁在 JDK 1.4.2 中引入，使用 <code>-XX:+UseSpinning</code> 来开启。JDK 6 中变为默认开启，并且引入了自适应的自旋锁（适应性自旋锁）。自适应自旋锁意味着自旋的时间（次数）不再固定，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定。如果在同一个锁对象上，自旋等待刚刚成功获得过锁，并且持有锁的线程正在运行中，那么虚拟机就会认为这次自旋也是很有可能再次成功，进而它将允许自旋等待持续相对更长的时间。如果对于某个锁，自旋很少成功获得过，那在以后尝试获取这个锁时将可能省略掉自旋过程，直接阻塞线程，避免浪费处理器资源。</p>
+<p>偏向锁由于有锁撤销的过程 revoke，会消耗系统资源.所以，在锁争用特别激烈的时候，用偏向锁未必效率高。还不如直接使用轻量级锁。</p>
+<h2 id="锁重入">锁重入</h2>
+<p>sychronized 是可重入锁，重入次数必须记录，因为要解锁几次必须得对应。</p>
+<h2 id="synchronized-vs-Lock（CAS）">synchronized vs Lock（CAS）</h2>
+<p>在高争用、高耗时的环境下，synchronized 效率更高。在低争用、低耗时的环境下，CAS 效率更高。synchronized 到重量级之后是等待队列，不消耗 CPU，CAS 等待期间消耗 CPU。当然一切以实测为准。</p>
+<h2 id="锁消除-lock-eliminate">锁消除 <code>lock eliminate</code></h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(String str1,String str2)</span></span>&#123;</span><br><span class="line">         StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">         sb.append(str1).append(str2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们都知道 StringBuffer 是线程安全的，因为它的关键方法都是被 synchronized 修饰过的，但我们看上面这段代码，我们会发现，sb 这个引用只会在 add 方法中使用，不可能被其它线程引用（因为是局部变量，栈私有），因此 sb 是不可能共享的资源，JVM 会自动消除 StringBuffer 对象内部的锁。</p>
+<h2 id="锁粗化-lock-coarsening">锁粗化 <code>lock coarsening</code></h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">(String str)</span></span>&#123;</span><br><span class="line">       </span><br><span class="line">       <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">       StringBuffer sb = <span class="keyword">new</span> StringBuffer():</span><br><span class="line">       <span class="keyword">while</span>(i &lt; <span class="number">100</span>)&#123;</span><br><span class="line">           sb.append(str);</span><br><span class="line">           i++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> sb.toString():</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JVM 会检测到这样一连串的操作都对同一个对象加锁（while 循环内 100 次执行 append，没有锁粗化的就要进行 100  次加锁、解锁），此时 JVM 就会将加锁的范围粗化到这一连串的操作的外部（比如 while 虚幻体外），使得这一连串操作只需要加一次锁即可。</p>
+<h2 id="锁降级（不重要）">锁降级（不重要）</h2>
+<p>其实，只被 VMThread 访问，降级也就没啥意义了。所以可以简单认为锁降级不存在！可参考：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/63859501">https://www.zhihu.com/question/63859501</a></p>
+<h2 id="超线程">超线程</h2>
+<p>一个 ALU + 两组 Registers + PC。可参考：<a target="_blank" rel="noopener" href="http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html">http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/en/JUC-Unsafe/" data-toggle="tooltip" data-placement="top" title="[JUC] Unsafe">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/en/Spring-8-Spring-用到了那些设计模式/" data-toggle="tooltip" data-placement="top" title="[Spring] 8 Spring 用到了那些设计模式">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=[JUC] synchronized 的底层实现&body=Hi,I found this website and thought you might like it https://v-vincen.life/en/JUC-synchronized-的底层实现/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'c5c071e55f689f41560d',
+      clientSecret: '1e8aabf73ccb26e519ee937ea1ddd241c5d13b79',
+      repo: 'blog-comment',
+      owner: 'V-Vincen',
+      admin: 'V-Vincen',
+      id: 'Wed Apr 28 2021 16:02:19 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://www.v-vincen.icu/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%94%A8%E6%88%B7%E6%80%81%E4%B8%8E%E5%86%85%E6%A0%B8%E6%80%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">用户态与内核态</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CAS"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">CAS</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Unsafe-%E7%B1%BB"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Unsafe 类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%AD%98%E5%82%A8%E5%B8%83%E5%B1%80"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">对象在内存中的存储布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JOL%EF%BC%9AJava-Object-Layout"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">JOL：Java Object Layout</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Java-%E5%AF%B9%E8%B1%A1%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">Java 对象在内存中的布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E5%B8%83%E5%B1%80"><span class="toc-nav-number">4.2.1.</span> <span class="toc-nav-text">普通对象布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B8%83%E5%B1%80"><span class="toc-nav-number">4.2.2.</span> <span class="toc-nav-text">数组对象布局</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8A%A0%E4%B8%8A-syncronized-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-nav-number">4.2.3.</span> <span class="toc-nav-text">加上 syncronized 关键字</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%81%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">锁升级过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">简单总结</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%81%E9%87%8D%E5%85%A5"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">锁重入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#synchronized-vs-Lock%EF%BC%88CAS%EF%BC%89"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">synchronized vs Lock（CAS）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%81%E6%B6%88%E9%99%A4-lock-eliminate"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">锁消除 lock eliminate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%81%E7%B2%97%E5%8C%96-lock-coarsening"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">锁粗化 lock coarsening</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%94%81%E9%99%8D%E7%BA%A7%EF%BC%88%E4%B8%8D%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">锁降级（不重要）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B6%85%E7%BA%BF%E7%A8%8B"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">超线程</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#JUC" title="JUC">JUC</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="http://teacherye.com/" target="_blank">Teacher Ye</a>
+          </li>
+          
+          <li>
+            <a href="https://goldenaarcher.github.io/" target="_blank">GoldenaArcher</a>
+          </li>
+          
+          <li>
+            <a href="https://www.cnblogs.com/guoyinghome/" target="_blank">鸢羽_颖</a>
+          </li>
+          
+          <li>
+            <a href="https://cungudafa.top" target="_blank">cungudafa</a>
+          </li>
+          
+          <li>
+            <a href="https://www.hm1006.cn" target="_blank">hmblog</a>
+          </li>
+          
+          <li>
+            <a href="https://yremp.live" target="_blank">Yremp</a>
+          </li>
+          
+          <li>
+            <a href="https://vuial.cn" target="_blank">Vuial</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Mr.Vincent
+          2021
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/mouseclick.js"  content='The first step is as good as half over...,Laugh and grow fat...,Man proposes God disposes...,When all else is lost the future still remains...,Wasting time is robbing oneself...,Sharp tools make good work...,Cease to struggle and you cease to live...,A friend in need is a friend indeed...,Faith can move mountains...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivr = "https://cdn.jsdelivr.net/gh/";
+    let gh = "V-Vincen";
+    let ghPages = gh + ".github.io";
+    let pagePath = "en/JUC-synchronized-的底层实现/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages;
+    } else {
+      jsdelivrurl = jsdelivr + gh + "/" + ghPages + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://v-vincen.life/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/V-Vincen/V-Vincen.github.io' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
