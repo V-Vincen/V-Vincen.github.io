@@ -253,9 +253,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -477,64 +477,45 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>什么是 Hexo ？</h1>
-<hr>
+        <h1 id="什么是-Hexo-？"><a href="#什么是-Hexo-？" class="headerlink" title="什么是 Hexo ？"></a>什么是 Hexo ？</h1><hr>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h1>安装</h1>
-<hr>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
 <p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请提交问题，我会尽力解决您的问题。</p>
-<h1>安装前提</h1>
-<hr>
+<h1 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h1><hr>
 <p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
 <ul>
 <li>Node.js (Should be at least nodejs 6.9)</li>
-<li>Git<br>
-如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</li>
+<li>Git<br>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
-<p>如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。</p>
 <blockquote>
-<p><strong>Mac 用户</strong><br>
-您在编译时可能会遇到问题，请先到 App Store &gt; 安装Xcode，Xcode 完成后，启动并进入<strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> 安装命令行工具。</p>
+<p><strong>Mac 用户</strong><br>您在编译时可能会遇到问题，请先到 App Store &gt; 安装Xcode，Xcode 完成后，启动并进入<strong>Preferences -&gt; Download -&gt; Command Line Tools -&gt; Install</strong> 安装命令行工具。</p>
 </blockquote>
-<h1>安装 Git</h1>
-<hr>
+<h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><hr>
 <ul>
-<li>
-<p>Windows：下载并安装 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>.</p>
+<li><p>Windows：下载并安装 <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>.</p>
 </li>
-<li>
-<p>Mac：使用 <a target="_blank" rel="noopener" href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a> ：<code>brew install</code> git;或下载 <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/git-osx-installer/">安装程序</a> 安装。</p>
+<li><p>Mac：使用 <a target="_blank" rel="noopener" href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a target="_blank" rel="noopener" href="http://www.macports.org/">MacPorts</a> ：<code>brew install</code> git;或下载 <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/git-osx-installer/">安装程序</a> 安装。</p>
 </li>
-<li>
-<p>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></p>
+<li><p>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></p>
 </li>
-<li>
-<p>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
+<li><p>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></p>
 </li>
 </ul>
 <blockquote>
-<p><strong>Windows 用户</strong><br>
-由于众所周知的原因，从上面的链接下载 git for windows最好挂上一个代理，否则下载速度十分缓慢。也可以参考<a target="_blank" rel="noopener" href="https://github.com/waylau/git-for-win">这个页面</a>，收录了存储于百度云的下载地址。</p>
+<p><strong>Windows 用户</strong><br>由于众所周知的原因，从上面的链接下载 git for windows最好挂上一个代理，否则下载速度十分缓慢。也可以参考<a target="_blank" rel="noopener" href="https://github.com/waylau/git-for-win">这个页面</a>，收录了存储于百度云的下载地址。</p>
 </blockquote>
-<h1>安装 Node.js</h1>
-<hr>
+<h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><hr>
 <p>安装 Node.js 的最佳方式是使用 <a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">nvm</a>。</p>
-<p>cURL:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span></span><br></pre></td></tr></table></figure>
-<p>Wget:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span></span><br></pre></td></tr></table></figure>
-<p>安装完成后，重启终端并执行下列命令即可安装 Node.js。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nvm install stable</span></span><br></pre></td></tr></table></figure>
-<p>或者您也可以下载 <a target="_blank" rel="noopener" href="http://nodejs.org/">安装程序</a> 来安装。</p>
+<p>cURL:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span></span><br></pre></td></tr></table></figure></p>
+<p>Wget:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh</span></span><br></pre></td></tr></table></figure></p>
+<p>安装完成后，重启终端并执行下列命令即可安装 Node.js。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nvm install stable</span></span><br></pre></td></tr></table></figure><br>或者您也可以下载 <a target="_blank" rel="noopener" href="http://nodejs.org/">安装程序</a> 来安装。</p>
 <blockquote>
-<p><strong>Windows 用户</strong><br>
-对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选 <strong>Add to PATH</strong>选项。另外，您也可以使用 <strong>Git Bash</strong>，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单 ，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用 <strong>Git Bash</strong> 来进行操作。</p>
+<p><strong>Windows 用户</strong><br>对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选 <strong>Add to PATH</strong>选项。另外，您也可以使用 <strong>Git Bash</strong>，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单 ，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用 <strong>Git Bash</strong> 来进行操作。</p>
 </blockquote>
-<h1>安装 Hexo</h1>
-<hr>
-<p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
+<h1 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h1><hr>
+<p>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->
@@ -678,7 +659,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 Hexo ？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">安装前提</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">安装 Git</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">安装 Node.js</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">安装 Hexo</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Hexo-%EF%BC%9F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是 Hexo ？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">安装前提</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Git"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">安装 Git</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Node-js"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">安装 Node.js</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">安装 Hexo</span></a></li></ol>
         
         </div>
       </aside>

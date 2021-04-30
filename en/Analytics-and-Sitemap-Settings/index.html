@@ -253,9 +253,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -479,139 +479,96 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Google-Analytics-Settings">Google Analytics Settings</h2>
-<h3 id="代码（脚本）嵌入网站中">代码（脚本）嵌入网站中</h3>
-<ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://analytics.google.com/">登录谷歌分析平台</a>，创建用户。</p>
+        <h2 id="Google-Analytics-Settings"><a href="#Google-Analytics-Settings" class="headerlink" title="Google Analytics Settings"></a>Google Analytics Settings</h2><h3 id="代码（脚本）嵌入网站中"><a href="#代码（脚本）嵌入网站中" class="headerlink" title="代码（脚本）嵌入网站中"></a>代码（脚本）嵌入网站中</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://analytics.google.com/">登录谷歌分析平台</a>，创建用户。</li>
+<li><p>获取代码（脚本）。<br>  <img src="1.png" alt="1"></p>
 </li>
-<li>
-<p>获取代码（脚本）。<br>
-<img src="1.png" alt="1"></p>
-</li>
-<li>
-<p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
+<li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;https://www.googletagmanager.com/gtag/js?id=UA-164526897-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  window.dataLayer = window.dataLayer || [];</span><br><span class="line">  function gtag()&#123;dataLayer.push(arguments);&#125;</span><br><span class="line">  gtag(&#x27;js&#x27;, new Date());</span><br><span class="line"></span><br><span class="line">  gtag(&#x27;config&#x27;, &#x27;UA-xxxxxx-xx&#x27;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ga_track_id</code> 为 <strong>跟踪 ID</strong>。</p>
-<p><img src="2.png" alt="2"></p>
+<li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ga_track_id</code> 为 <strong>跟踪 ID</strong>。</p>
+<p>  <img src="2.png" alt="2"></p>
 </li>
 </ul>
-<h2 id="Baidu-Analytics-Settings">Baidu Analytics Settings</h2>
+<h2 id="Baidu-Analytics-Settings"><a href="#Baidu-Analytics-Settings" class="headerlink" title="Baidu Analytics Settings"></a>Baidu Analytics Settings</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/10000186631/welcome/login">登录百度统计平台</a>，添加 <strong>自有网站</strong>。</p>
+<p>  <img src="3.png" alt="3"></p>
+</li>
+</ul>
 <ul>
-<li>
-<p><a target="_blank" rel="noopener" href="https://tongji.baidu.com/web/10000186631/welcome/login">登录百度统计平台</a>，添加 <strong>自有网站</strong>。</p>
-<p><img src="3.png" alt="3"></p>
+<li><p>获取代码（脚本）。</p>
+<p>  <img src="4.png" alt="4"></p>
 </li>
-<li>
-<p>获取代码（脚本）。</p>
-<p><img src="4.png" alt="4"></p>
-</li>
-<li>
-<p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
+<li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 脚本。</p>
   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">  var hm = document.createElement(&quot;script&quot;);</span><br><span class="line">  hm.src = &quot;https://hm.baidu.com/hm.js?ba_track_id&quot;;</span><br><span class="line">  var s = document.getElementsByTagName(&quot;script&quot;)[0]; </span><br><span class="line">  s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ba_track_id</code> 为脚本中的 <strong>ba_track_id</strong>。</p>
+<li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>ba_track_id</code> 为脚本中的 <strong>ba_track_id</strong>。</p>
   <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">ba_track_id:</span> b<span class="built_in">a_track</span>_id</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Google-Sitemap-Settings">Google Sitemap Settings</h2>
-<h3 id="验证网站所有权">验证网站所有权</h3>
-<ul>
-<li>
-<p>先进入 <a target="_blank" rel="noopener" href="https://www.google.com/webmasters/#?modal_active=none">google 站点平台</a>，点击右上角的登录，如果还没有谷歌账号的要先注册一个谷歌账号。然后添加资源，这里选择网址前缀，输入博客首页，例如：<a href="https://v-vincen.life/">https://v-vincen.life/</a></p>
-<p><img src="5.png" alt="5"></p>
+<h2 id="Google-Sitemap-Settings"><a href="#Google-Sitemap-Settings" class="headerlink" title="Google Sitemap Settings"></a>Google Sitemap Settings</h2><h3 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h3><ul>
+<li><p>先进入 <a target="_blank" rel="noopener" href="https://www.google.com/webmasters/#?modal_active=none">google 站点平台</a>，点击右上角的登录，如果还没有谷歌账号的要先注册一个谷歌账号。然后添加资源，这里选择网址前缀，输入博客首页，例如：<a href="https://v-vincen.life/">https://v-vincen.life/</a></p>
+<p>  <img src="5.png" alt="5"></p>
 </li>
-<li>
-<p>点击继续，验证网站所有权，使用HTML标记验证。</p>
-<p><img src="6.png" alt="6"></p>
+<li><p>点击继续，验证网站所有权，使用HTML标记验证。</p>
+<p>  <img src="6.png" alt="6"></p>
 </li>
-<li>
-<p>修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
+<li><p>修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;google-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;X7_M3eeaLhvjhG34NuQBgu2gdyRlAtMB4utP5AgEBc&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>把上面红框的内容复制下来，并粘贴到 <code>head.ejs</code> 文件中，通过验证。</p>
+<li><p>把上面红框的内容复制下来，并粘贴到 <code>head.ejs</code> 文件中，通过验证。</p>
 </li>
 </ul>
-<h3 id="安装-sitemap-插件">安装 sitemap 插件</h3>
-<ul>
-<li>
-<p>在 hexo 根目录执行下面两个命令。</p>
-  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>sitemap</code> 配置。</p>
+<h3 id="安装-sitemap-插件"><a href="#安装-sitemap-插件" class="headerlink" title="安装 sitemap 插件"></a>安装 sitemap 插件</h3><ul>
+<li>在 hexo 根目录执行下面两个命令。  <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure></li>
+<li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>sitemap</code> 配置。</p>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don&#x27;t forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>sitemap.xml</code> 文件。</p>
-<p><img src="7.png" alt="7"></p>
+<li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>sitemap.xml</code> 文件。</p>
+<p>  <img src="7.png" alt="7"></p>
 </li>
 </ul>
-<h3 id="提交谷歌站点地图">提交谷歌站点地图</h3>
-<ul>
-<li>
-<p>接着进入谷歌站点，提交刚才验证网站的站点地图。</p>
-<p><img src="8.png" alt="8"></p>
+<h3 id="提交谷歌站点地图"><a href="#提交谷歌站点地图" class="headerlink" title="提交谷歌站点地图"></a>提交谷歌站点地图</h3><ul>
+<li><p>接着进入谷歌站点，提交刚才验证网站的站点地图。</p>
+<p>  <img src="8.png" alt="8"></p>
 </li>
-<li>
-<p>等待谷歌收录，最后谷歌搜索 <code>site:v-vincen.life</code>，看下网页是否被谷歌收录</p>
-<p><img src="9.png" alt="9"></p>
+<li><p>等待谷歌收录，最后谷歌搜索 <code>site:v-vincen.life</code>，看下网页是否被谷歌收录</p>
+<p>  <img src="9.png" alt="9"></p>
 </li>
 </ul>
-<h2 id="Baidu-Sitemap-Settings">Baidu Sitemap Settings</h2>
-<h3 id="验证网站所有权-2">验证网站所有权</h3>
-<ul>
-<li>
-<p>先进入 <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/site/index#/">百度站点平台</a>，「用户中心」-&gt; 「站点管理」-&gt; 「添加网站」，添加需要管理的网站地址。</p>
-<p><img src="10.png" alt="10"></p>
+<h2 id="Baidu-Sitemap-Settings"><a href="#Baidu-Sitemap-Settings" class="headerlink" title="Baidu Sitemap Settings"></a>Baidu Sitemap Settings</h2><h3 id="验证网站所有权-1"><a href="#验证网站所有权-1" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h3><ul>
+<li><p>先进入 <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/site/index#/">百度站点平台</a>，「用户中心」-&gt; 「站点管理」-&gt; 「添加网站」，添加需要管理的网站地址。</p>
+<p>  <img src="10.png" alt="10"></p>
 </li>
-<li>
-<p>验证有三种方式：文件、html标签、cname。这里采用的是 html 标签的形式，修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
+<li><p>验证有三种方式：文件、html标签、cname。这里采用的是 html 标签的形式，修改 <code>hexo-theme-livemylife</code> 主题的 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件。</p>
   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;baidu-site-verification&quot;</span> <span class="attr">content</span>=<span class="string">&quot;PpzM9WxOJU&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>添加完相应的标签之后，上传到自己的博客之中，百度站点验证通过。</p>
+<li><p>添加完相应的标签之后，上传到自己的博客之中，百度站点验证通过。</p>
 </li>
 </ul>
-<h3 id="安装-baidu-sitemap-插件">安装 baidu-sitemap 插件</h3>
-<ul>
-<li>
-<p>在 hexo 根目录执行下面两个命令。</p>
-  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>Baidusitemap</code> 配置。</p>
+<h3 id="安装-baidu-sitemap-插件"><a href="#安装-baidu-sitemap-插件" class="headerlink" title="安装 baidu-sitemap 插件"></a>安装 baidu-sitemap 插件</h3><ul>
+<li>在 hexo 根目录执行下面两个命令。  <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure></li>
+<li><p>修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件，<code>url</code> 换成自己的博客首页，并且需改 <code>Baidusitemap</code> 配置。</p>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://v-vincen.life</span>    <span class="comment"># <span class="doctag">Note:</span> don&#x27;t forget to modify the CNAME file to your url</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br></pre></td></tr></table></figure>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>baidusitemap.xml</code> 文件。</p>
+<li><p>执行 <code>hexo g -d</code> 命令，发现在根目录 <code>public</code> 文件夹下新增了 <code>baidusitemap.xml</code> 文件。</p>
 </li>
 </ul>
-<h3 id="百度站点收录">百度站点收录</h3>
-<ul>
-<li>
-<p>「资源提交」-&gt; 「普通收录」-&gt; 「资源提交」-&gt; 「sitemap」，填写数据文件地址，点击 「提交」。</p>
-<p><img src="11.png" alt="11"></p>
+<h3 id="百度站点收录"><a href="#百度站点收录" class="headerlink" title="百度站点收录"></a>百度站点收录</h3><ul>
+<li><p>「资源提交」-&gt; 「普通收录」-&gt; 「资源提交」-&gt; 「sitemap」，填写数据文件地址，点击 「提交」。</p>
+<p>  <img src="11.png" alt="11"></p>
 </li>
-<li>
-<p>接下来要做的就是等待了，过上一两天就会在这里看到提取的 url 数量了。</p>
+<li><p>接下来要做的就是等待了，过上一两天就会在这里看到提取的 url 数量了。</p>
 </li>
 </ul>
-<h3 id="自动推送（可添加）">自动推送（可添加）</h3>
-<p><a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2#h2_article_title9">自动推送</a>：是轻量级链接提交组件，将自动推送的 JS 代码放置在站点每一个页面源代码中，当页面被访问时，页面链接会自动推送给百度，有利于新页面更快被百度发现。</p>
+<h3 id="自动推送（可添加）"><a href="#自动推送（可添加）" class="headerlink" title="自动推送（可添加）"></a>自动推送（可添加）</h3><p><a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/college/courseinfo?id=267&amp;page=2#h2_article_title9">自动推送</a>：是轻量级链接提交组件，将自动推送的 JS 代码放置在站点每一个页面源代码中，当页面被访问时，页面链接会自动推送给百度，有利于新页面更快被百度发现。</p>
 <ul>
-<li>
-<p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 代码。</p>
+<li><p><code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/themes/livemylife/layout/_partial/head.ejs"><code>head.ejs</code></a> 文件中，已经添加了下面的 js 代码。</p>
   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">(function()&#123;</span><br><span class="line">    var bp = document.createElement(&#x27;script&#x27;);</span><br><span class="line">    var curProtocol = window.location.protocol.split(&#x27;:&#x27;)[0];</span><br><span class="line">    if (curProtocol === &#x27;https&#x27;)&#123;</span><br><span class="line">   bp.src = &#x27;https://zz.bdstatic.com/linksubmit/push.js&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">  else&#123;</span><br><span class="line">  bp.src = &#x27;http://push.zhanzhang.baidu.com/push.js&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>Baidusitemap.baidu_push</code> 为 <code>true</code>。</p>
+<li><p>直接修改 <code>hexo-theme-livemylife</code> 主题 <a target="_blank" rel="noopener" href="https://github.com/V-Vincen/hexo-theme-livemylife/blob/master/_config.yml"><code>_config.yml</code></a> 配置文件 <code>Baidusitemap.baidu_push</code> 为 <code>true</code>。</p>
   <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Baidusitemap</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br><span class="line">    <span class="attr">baidu_push:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -763,7 +720,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Google-Analytics-Settings"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Google Analytics Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%88%E8%84%9A%E6%9C%AC%EF%BC%89%E5%B5%8C%E5%85%A5%E7%BD%91%E7%AB%99%E4%B8%AD"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">代码（脚本）嵌入网站中</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Baidu-Analytics-Settings"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Baidu Analytics Settings</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Google-Sitemap-Settings"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Google Sitemap Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">验证网站所有权</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-sitemap-%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">安装 sitemap 插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4%E8%B0%B7%E6%AD%8C%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">提交谷歌站点地图</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Baidu-Sitemap-Settings"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Baidu Sitemap Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83-2"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">验证网站所有权</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-baidu-sitemap-%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">安装 baidu-sitemap 插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%99%BE%E5%BA%A6%E7%AB%99%E7%82%B9%E6%94%B6%E5%BD%95"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">百度站点收录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81%EF%BC%88%E5%8F%AF%E6%B7%BB%E5%8A%A0%EF%BC%89"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">自动推送（可添加）</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Google-Analytics-Settings"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Google Analytics Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%EF%BC%88%E8%84%9A%E6%9C%AC%EF%BC%89%E5%B5%8C%E5%85%A5%E7%BD%91%E7%AB%99%E4%B8%AD"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">代码（脚本）嵌入网站中</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Baidu-Analytics-Settings"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Baidu Analytics Settings</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Google-Sitemap-Settings"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Google Sitemap Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">验证网站所有权</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-sitemap-%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">安装 sitemap 插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%90%E4%BA%A4%E8%B0%B7%E6%AD%8C%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">提交谷歌站点地图</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Baidu-Sitemap-Settings"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Baidu Sitemap Settings</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%AA%8C%E8%AF%81%E7%BD%91%E7%AB%99%E6%89%80%E6%9C%89%E6%9D%83-1"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">验证网站所有权</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-baidu-sitemap-%E6%8F%92%E4%BB%B6"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">安装 baidu-sitemap 插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%99%BE%E5%BA%A6%E7%AB%99%E7%82%B9%E6%94%B6%E5%BD%95"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">百度站点收录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%87%AA%E5%8A%A8%E6%8E%A8%E9%80%81%EF%BC%88%E5%8F%AF%E6%B7%BB%E5%8A%A0%EF%BC%89"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">自动推送（可添加）</span></a></li></ol></li></ol>
         
         </div>
       </aside>

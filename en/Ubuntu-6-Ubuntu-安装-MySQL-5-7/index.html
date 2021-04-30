@@ -253,9 +253,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -415,7 +415,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">597</span> In Total
+              Words <span class="post-count">593</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -477,56 +477,28 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="安装">安装</h2>
-<h3 id="更新数据源">更新数据源</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
-<h3 id="安装-MySQL">安装 MySQL</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure>
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="更新数据源"><a href="#更新数据源" class="headerlink" title="更新数据源"></a>更新数据源</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+<h3 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install mysql-server</span><br></pre></td></tr></table></figure>
 <p>系统将提示您在安装过程中创建 root 密码。选择一个安全的密码，并确保你记住它，因为你以后需要它。接下来，我们将完成 MySQL 的配置。</p>
-<h2 id="配置">配置</h2>
-<p>因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 MySQL 上，您需要手动初始化数据目录，但 Mysql 5.7 已经自动完成了。</p>
-<p>运行安全脚本：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 MySQL 上，您需要手动初始化数据目录，但 Mysql 5.7 已经自动完成了。</p>
+<p>运行安全脚本：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
 <p>这将提示您输入您在之前步骤中创建的 root 密码。您可以按 Y，然后 ENTER 接受所有后续问题的默认值，但是要询问您是否要更改 root 密码。您只需在之前步骤中进行设置即可，因此无需现在更改。</p>
-<h2 id="测试">测试</h2>
-<p>按上边方式安装完成后，MySQL 应该已经开始自动运行了。要测试它，请检查其状态。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lusifer@ubuntu:~$ systemctl status mysql.service</span><br><span class="line">● mysql.service - MySQL Community Server</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)</span><br><span class="line">   Active: active (running) since Tue 2017-11-21 13:04:34 CST; 3min 24s ago</span><br><span class="line"> Main PID: 2169 (mysqld)</span><br><span class="line">   CGroup: /system.slice/mysql.service</span><br><span class="line">           └─2169 /usr/sbin/mysqld</span><br><span class="line"></span><br><span class="line">Nov 21 13:04:33 ubuntu systemd[1]: Starting MySQL Community Server...</span><br><span class="line">Nov 21 13:04:34 ubuntu systemd[1]: Started MySQL Community Server.</span><br></pre></td></tr></table></figure>
-<p>查看 MySQL 版本：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -p -u root version</span><br></pre></td></tr></table></figure>
-<h2 id="配置远程访问">配置远程访问</h2>
-<h3 id="修改配置文件">修改配置文件</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
-<h3 id="注释掉-语句前面加上-即可-：">注释掉(语句前面加上 # 即可)：</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind-address = 127.0.0.1</span><br></pre></td></tr></table></figure>
-<h3 id="重启-MySQL">重启 MySQL</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
-<h3 id="登录-MySQL">登录 MySQL</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<h3 id="授权-root-用户允许所有人连接">授权 root 用户允许所有人连接</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27;你的 mysql root 账户密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="因弱口令无法成功授权解决步骤">因弱口令无法成功授权解决步骤</h2>
-<h3 id="查看和设置密码安全级别">查看和设置密码安全级别</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_policy;</span><br><span class="line"><span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure>
-<h3 id="查看和设置密码长度限制">查看和设置密码长度限制</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_length;</span><br><span class="line"><span class="built_in">set</span> global validate_password_length=1;</span><br></pre></td></tr></table></figure>
-<h2 id="常用命令">常用命令</h2>
-<h3 id="启动">启动</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
-<h3 id="停止">停止</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql stop</span><br></pre></td></tr></table></figure>
-<h3 id="重启">重启</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
-<h2 id="其它配置">其它配置</h2>
-<p>修改配置<code>mysqld.cnf</code>配置文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
-<h3 id="配置默认字符集">配置默认字符集</h3>
-<p>在<code>[mysqld]</code>节点上增加如下配置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
-<p>在<code>[mysqld]</code>节点底部增加如下配置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">default-storage-engine=INNODB</span><br><span class="line">character-set-server=utf8</span><br><span class="line">collation-server=utf8_general_ci</span><br></pre></td></tr></table></figure>
-<h3 id="配置忽略数据库大小写敏感">配置忽略数据库大小写敏感</h3>
-<p>在<code>[mysqld]</code>节点底部增加如下配置</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lower-case-table-names = 1</span><br></pre></td></tr></table></figure>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>按上边方式安装完成后，MySQL 应该已经开始自动运行了。要测试它，请检查其状态。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lusifer@ubuntu:~$ systemctl status mysql.service</span><br><span class="line">● mysql.service - MySQL Community Server</span><br><span class="line">   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)</span><br><span class="line">   Active: active (running) since Tue 2017-11-21 13:04:34 CST; 3min 24s ago</span><br><span class="line"> Main PID: 2169 (mysqld)</span><br><span class="line">   CGroup: /system.slice/mysql.service</span><br><span class="line">           └─2169 /usr/sbin/mysqld</span><br><span class="line"></span><br><span class="line">Nov 21 13:04:33 ubuntu systemd[1]: Starting MySQL Community Server...</span><br><span class="line">Nov 21 13:04:34 ubuntu systemd[1]: Started MySQL Community Server.</span><br></pre></td></tr></table></figure></p>
+<p>查看 MySQL 版本：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -p -u root version</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置远程访问"><a href="#配置远程访问" class="headerlink" title="配置远程访问"></a>配置远程访问</h2><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure>
+<h3 id="注释掉-语句前面加上-即可-："><a href="#注释掉-语句前面加上-即可-：" class="headerlink" title="注释掉(语句前面加上 # 即可)："></a>注释掉(语句前面加上 # 即可)：</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bind-address = 127.0.0.1</span><br></pre></td></tr></table></figure>
+<h3 id="重启-MySQL"><a href="#重启-MySQL" class="headerlink" title="重启 MySQL"></a>重启 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+<h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<h3 id="授权-root-用户允许所有人连接"><a href="#授权-root-用户允许所有人连接" class="headerlink" title="授权 root 用户允许所有人连接"></a>授权 root 用户允许所有人连接</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27;你的 mysql root 账户密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="因弱口令无法成功授权解决步骤"><a href="#因弱口令无法成功授权解决步骤" class="headerlink" title="因弱口令无法成功授权解决步骤"></a>因弱口令无法成功授权解决步骤</h2><h3 id="查看和设置密码安全级别"><a href="#查看和设置密码安全级别" class="headerlink" title="查看和设置密码安全级别"></a>查看和设置密码安全级别</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_policy;</span><br><span class="line"><span class="built_in">set</span> global validate_password_policy=0;</span><br></pre></td></tr></table></figure>
+<h3 id="查看和设置密码长度限制"><a href="#查看和设置密码长度限制" class="headerlink" title="查看和设置密码长度限制"></a>查看和设置密码长度限制</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_length;</span><br><span class="line"><span class="built_in">set</span> global validate_password_length=1;</span><br></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql stop</span><br></pre></td></tr></table></figure>
+<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
+<h2 id="其它配置"><a href="#其它配置" class="headerlink" title="其它配置"></a>其它配置</h2><p>修改配置<code>mysqld.cnf</code>配置文件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/mysql/mysql.conf.d/mysqld.cnf</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置默认字符集"><a href="#配置默认字符集" class="headerlink" title="配置默认字符集"></a>配置默认字符集</h3><p>在<code>[mysqld]</code>节点上增加如下配置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure><br>在<code>[mysqld]</code>节点底部增加如下配置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">default-storage-engine=INNODB</span><br><span class="line">character-set-server=utf8</span><br><span class="line">collation-server=utf8_general_ci</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置忽略数据库大小写敏感"><a href="#配置忽略数据库大小写敏感" class="headerlink" title="配置忽略数据库大小写敏感"></a>配置忽略数据库大小写敏感</h3><p>在<code>[mysqld]</code>节点底部增加如下配置<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lower-case-table-names = 1</span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->

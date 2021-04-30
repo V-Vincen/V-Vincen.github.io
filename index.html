@@ -250,9 +250,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -533,8 +533,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       Practice something...
     </h3>
     <div class="post-content-preview">
-      先来写个基本类
-1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age;......
+      先来写个基本类1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age; ......
     </div>
   </a>
   
@@ -571,9 +570,8 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       反射相关练习
     </h3>
     <div class="post-content-preview">
-      先来写几个基本类：
-12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
-12345678910111213/** * @author vincent */@Datapublic class......
+      先来写几个基本类：12345678/** * @author vincent */@Datapublic class FatherClass &#123;    public String fatherName;    public int fatherAge;&#125;
+12345678910111213/** * @author vincent */@Datapublic class ......
     </div>
   </a>
   
@@ -606,7 +604,8 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       Unsafe...
     </h3>
     <div class="post-content-preview">
-      ...
+      Java 和 C++ 语言的一个重要区别就是 Java 中我们无法直接操作一块内存区域，不能像 C++ 中那样可以自己申请内存和释放内存。Java 中的 Unsafe 类为我们提供了类似 C++ 手动管理内存的能力。Unsafe 类，全限定名是 sun.misc.Unsafe，从名字中我们可以看出来这个类对普通程序员来说是“危险”的，一般应用开发者不会用到这个类。
+基本介绍如下 Unsafe......
     </div>
   </a>
   
@@ -672,16 +671,10 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
       Design Pattern...
     </h3>
     <div class="post-content-preview">
-      Spring 用到了那些设计模式
-简单工厂（非23种设计模式中的一种）
-实现方式
-BeanFactory。Spring 中的 BeanFactory 就是简单工厂模式的体现，根据传入一个唯一的标识来获得 Bean 对象，但是否是在传入参数后创建还是传入参数前创建这个要根据具体情况来定。
-实质
-由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类。
-实现原理
-bean 容器的启动阶段
-
-读......
+      Spring 用到了那些设计模式简单工厂（非23种设计模式中的一种）实现方式BeanFactory。Spring 中的 BeanFactory 就是简单工厂模式的体现，根据传入一个唯一的标识来获得 Bean 对象，但是否是在传入参数后创建还是传入参数前创建这个要根据具体情况来定。
+实质由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类。
+实现原理bean 容器的启动阶段
+读取 bean......
     </div>
   </a>
   
@@ -714,10 +707,8 @@ bean 容器的启动阶段
       Generic implementation principle...
     </h3>
     <div class="post-content-preview">
-      泛型实现原理
-JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，褒贬不一，废话不多说，先来看看他的原理。泛型是提供给 javac 编译器使用的，可以限定集合中的输入类型，让编译器拦截源程序中的非法输入，编译器编译带类型说明的集合时会去掉类型信息，对于参数化得泛型类型，getClass() 方法的返回值和原始类型完全一样。
-对于下面这个源程序：
-12345678public cla......
+      泛型实现原理JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，褒贬不一，废话不多说，先来看看他的原理。泛型是提供给 javac 编译器使用的，可以限定集合中的输入类型，让编译器拦截源程序中的非法输入，编译器编译带类型说明的集合时会去掉类型信息，对于参数化得泛型类型，getClass() 方法的返回值和原始类型完全一样。
+对于下面这个源程序：12345678public class......
     </div>
   </a>
   
@@ -751,11 +742,8 @@ JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，�
     </h3>
     <div class="post-content-preview">
       虽然 Java 程序员不用像 C、C++ 程序员那样时刻关注内存的使用情况，JVM 会帮我们处理好这些，但并不是说有了 GC 就可以高枕无忧，内存泄露相关的问题一般在测试的时候很难发现，一旦上线流量起来可能马上就是一个诡异的线上故障。
-内存泄露的定义
-如果 GC 无法回收内存中不再使用的对象，则定义为内存有泄露。
-潜在的内存泄露场景
-未关闭的资源类
-当我们在程序中打开一个新的流或者是新建一个......
+内存泄露的定义如果 GC 无法回收内存中不再使用的对象，则定义为内存有泄露。
+潜在的内存泄露场景未关闭的资源类当我们在程序中打开一个新的流或者是新建一个网络连......
     </div>
   </a>
   
@@ -789,9 +777,7 @@ JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，�
     </h3>
     <div class="post-content-preview">
       今天我们先学习一下以太网最基本也是重要的知识 —— OSI 参考模型。
-OSI参考模型
-OSI 的来源
-OSI（Open System Interconnect），即开放式系统互联。一般都叫 OSI 参考模型，是 ISO（国际标准化组织）组织在1985年研究的网络互连模型。ISO 为了更好的使网络应用更为普及，推出了 OSI 参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公......
+OSI参考模型OSI 的来源OSI（Open System Interconnect），即开放式系统互联。一般都叫 OSI 参考模型，是 ISO（国际标准化组织）组织在1985年研究的网络互连模型。ISO 为了更好的使网络应用更为普及，推出了 OSI 参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都......
     </div>
   </a>
   
@@ -824,9 +810,8 @@ OSI（Open System Interconnect），即开放式系统互联。一般都叫 OSI 
       The Internet protocol suite is the conceptual model and set of communications protocols used in the Internet and similar computer networks. It is commonly known as TCP/IP because the foundational protocols in the suite are the Transmission Control Protocol (TCP) and the Internet Protocol (IP)...
     </h3>
     <div class="post-content-preview">
-      什么是 IP 和 TCP？
-Internet 协议（IP）是 Internet 的地址系统，具有将数据包从源设备传递到目标设备的核心功能。IP 是建立网络连接的主要方式，奠定了 Internet 的基础。IP 不负责数据包排序或错误检查。这样的功能需要另一种协议，通常是 TCP。
-TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消息写好后，拼图分解成碎片。接着，各个碎片可能经过不......
+      什么是 IP 和 TCP？Internet 协议（IP）是 Internet 的地址系统，具有将数据包从源设备传递到目标设备的核心功能。IP 是建立网络连接的主要方式，奠定了 Internet 的基础。IP 不负责数据包排序或错误检查。这样的功能需要另一种协议，通常是 TCP。
+TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消息写好后，拼图分解成碎片。接着，各个碎片可能经过不同......
     </div>
   </a>
   

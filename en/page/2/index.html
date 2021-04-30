@@ -250,9 +250,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -490,7 +490,7 @@
       A free CDN for Open Source fast, reliable, and automated...
     </h3>
     <div class="post-content-preview">
-      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 – 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
+      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 — 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
 今天博主想在这里讲一下，在 hexo-theme-livemylife 主题中，JsDelivr CDN 应用加速。众所周知，国内访问 Github 的体验一直不是很好，具体原因就不在这里阐述了。而......
     </div>
   </a>
@@ -593,9 +593,7 @@ Mathjax......
       
     </h3>
     <div class="post-content-preview">
-      Spring Cloud 基础
-什么是 Spring Cloud？
-Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如 服务发现注册、配置中心、智能路由、消息总线、负载均衡、断路器、数据监控 等，都可以用 Spring Boot 的开发风格做到一键启动和部署。Spring Cloud 并没有重复制造轮子，它......
+      Spring Cloud 基础什么是 Spring Cloud？Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开发便利性巧妙地简化了分布式系统基础设施的开发，如 服务发现注册、配置中心、智能路由、消息总线、负载均衡、断路器、数据监控 等，都可以用 Spring Boot 的开发风格做到一键启动和部署。Spring Cloud 并没有重复制造轮子，它只是......
     </div>
   </a>
   
@@ -628,10 +626,8 @@ Spring Cloud 是一系列框架的有序集合。它利用  Spring Boot 的开�
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      前言
-上文中讲到了 Feign 结合 SpringBoot 注解的具体用法以及 CircuitBreaker Fallbacks 的用法。具体可阅览 Feign Spring Cloud CircuitBreaker Fallbacks。今天博主要总结的是如何运用 Spring Cloud Feign 来实现文件上传下载功能。还是老规矩直接上案例代码。
-Serveer
-pom.xml 和 C......
+      前言上文中讲到了 Feign 结合 SpringBoot 注解的具体用法以及 CircuitBreaker Fallbacks 的用法。具体可阅览 Feign Spring Cloud CircuitBreaker Fallbacks。今天博主要总结的是如何运用 Spring Cloud Feign 来实现文件上传下载功能。还是老规矩直接上案例代码。
+Serveerpom.xml 和 Com......
     </div>
   </a>
   
@@ -667,10 +663,9 @@ pom.xml 和 C......
     </h3>
     <div class="post-content-preview">
       前言
-
 Feign makes writing java http clients easier ：主要讲述了 Feign 的基本用法。
 DefaultFeignClient Case and Summary：主要举例 Feign 原生注解调用第三方服务、Feign 结合 SpringMvc 注解调用第三方服务，并且简要封装了一个创建 Feign 构造器的工具类。
-Feign Call Ca......
+Feign Call Cas......
     </div>
   </a>
   
@@ -706,10 +701,7 @@ Feign Call Ca......
     </h3>
     <div class="post-content-preview">
       上文博主已经举例并总结了 Feign 的大部分用法。那么接下来，博主结合实际真正开发中的情况，简单模拟了一个案例。需求大致如下：A 公司需要对接并获取 B 公司的用户信息和部门信息。在这里可以把 A 公司看做是调用方，B 公司是被调用方。或者说 A 公司是客户端，B 公司是服务端。那么直接上代码。
-Server
-Commons
-ResponseDto
-12345678910111213141......
+ServerCommonsResponseDto12345678910111213141516......
     </div>
   </a>
   
@@ -777,8 +769,7 @@ ResponseDto
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      Summary
-根据 GitHub OpenFeign 官方文档，博主在这里对 Feign.builder() 模式进行了简要的封装。 同时对 Feign.builder() 配置协约 .contract(Contract contract) 做了进一步的说明和举例。contract 我暂时把它翻译为协约，这个属性在构造 Feign 对象实例时，用于定义 Feign 对象实例与之配合使用的注......
+      Summary根据 GitHub OpenFeign 官方文档，博主在这里对 Feign.builder() 模式进行了简要的封装。 同时对 Feign.builder() 配置协约 .contract(Contract contract) 做了进一步的说明和举例。contract 我暂时把它翻译为协约，这个属性在构造 Feign 对象实例时，用于定义 Feign 对象实例与之配合使用的注解......
     </div>
   </a>
   
@@ -813,17 +804,14 @@ ResponseDto
       Profiles are a core feature of the framework — allowing us to map our beans to different profiles — for example, dev, test, and prod....
     </h3>
     <div class="post-content-preview">
-      简介
-Profile 的意思是配置，对于应用程序来说，不同的环境需要不同的配置。
-比如：
+      简介Profile 的意思是配置，对于应用程序来说，不同的环境需要不同的配置。比如：
 
 开发环境，应用需要连接一个可供调试的数据库单机进程
 生产环境，应用需要使用正式发布的数据库，通常是高可用的集群
 测试环境，应用只需要使用内存式的模拟数据库
 
 Spring 框架提供了多 profile 的管理功能，我们可以使用 profile 功能来区分不同环境的配置。
-区分 Bean 对象
-首先，我......
+区分 Bean 对象首先，我们先看......
     </div>
   </a>
   

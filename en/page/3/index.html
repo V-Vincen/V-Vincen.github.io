@@ -250,9 +250,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -490,11 +490,10 @@
       Case and Summary...
     </h3>
     <div class="post-content-preview">
-      为什么使用 Logback
-记得前几年工作的时候，公司使用的日志框架还是 log4j，大约从16年中到现在，日志框架基本都换成了logback，总结一下，logback 大约有以下的一些优点：
+      为什么使用 Logback记得前几年工作的时候，公司使用的日志框架还是 log4j，大约从16年中到现在，日志框架基本都换成了logback，总结一下，logback 大约有以下的一些优点：
 
 内核重写、测试充分、初始化内存加载更小，这一切让 logback 性能和 log4j 相比有诸多倍的提升。
-logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点，只是这样，再理解......
+logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点，只是这样，再理解 ......
     </div>
   </a>
   
@@ -527,17 +526,15 @@ logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点
       ParallelStream...
     </h3>
     <div class="post-content-preview">
-      前言
-在 Java7 之前，如果想要并行处理一个集合，我们需要以下几步
+      前言在 Java7 之前，如果想要并行处理一个集合，我们需要以下几步
 
 手动分成几部分
 为每部分创建线程
 在适当的时候合并
 
 并且还需要关注多个线程之间共享变量的修改问题。而 Java8 为我们提供了并行流，可以一键开启并行模式。是不是很酷呢？让我们来看看吧。
-认识和开启并行流
-什么是并行流： 并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
-例如有这么一......
+认识和开启并行流什么是并行流： 并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
+例如有这么一个需......
     </div>
   </a>
   
@@ -570,11 +567,8 @@ logback 非常自然地直接实现了 slf4j，这个严格来说算不上优点
       Lambda 总结
     </h3>
     <div class="post-content-preview">
-      引言
-Java8 最大的特性就是引入 Lambda 表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。
-Java 重要的函数式接口
-什么是函数式接口
-函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用 @FunctionalInterface 注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会......
+      引言Java8 最大的特性就是引入 Lambda 表达式，即函数式编程，可以将行为进行传递。总结就是：使用不可变值与函数，函数对不可变值进行处理，映射成另一个值。
+Java 重要的函数式接口什么是函数式接口函数接口是只有一个抽象方法的接口，用作 Lambda 表达式的类型。使用 @FunctionalInterface 注解修饰的类，编译器会检测该类是否只有一个抽象方法或接口，否则，会报错。......
     </div>
   </a>
   
@@ -607,16 +601,13 @@ Java 重要的函数式接口
       The difference between http and rpc...
     </h3>
     <div class="post-content-preview">
-      区别
-传输协议
-
+      区别传输协议
 RPC：可以基于 TCP 协议，也可以基于 HTTP 协议。
 HTTP：基于 HTTP 协议。
 
 传输效率
-
-RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。
-HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀个......
+RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。    
+HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀......
     </div>
   </a>
   
@@ -650,9 +641,8 @@ HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内�
     </h3>
     <div class="post-content-preview">
       Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top 10。
-vue-Element-Admin
-Github Star：63.7K
-Github Repo：https://github.com/Pan......
+vue-Element-AdminGithub Star：63.7K
+Github Repo：https://github.com/PanJ......
     </div>
   </a>
   
@@ -721,8 +711,7 @@ Github Repo：https://github.com/Pan......
     <div class="post-content-preview">
       在之前的章节中介绍的 方法打印以及基本选择规则 是 logback-classic 的核心。在这章中，将介绍其它的过滤方法。
 logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组成一个任意复杂的过滤策略。它们在很大程度上受到 Linux iptables 的启发。
-在 logback-classic 中
-在 logback-classic 中，有两种类型的过滤器，regular ......
+在 logback-classic 中在 logback-classic 中，有两种类型的过滤器，regular 过......
     </div>
   </a>
   
@@ -755,9 +744,8 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Layout...
     </h3>
     <div class="post-content-preview">
-      什么是 layout？
-layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
-12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  S......
+      什么是 layout？layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
+12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  St......
     </div>
   </a>
   
@@ -790,8 +778,7 @@ layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 
       Encoder...
     </h3>
     <div class="post-content-preview">
-      什么是 encoder
-encoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 P......
+      什么是 encoderencoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 Pa......
     </div>
   </a>
   
@@ -824,9 +811,8 @@ encoder 将日志事件转换为字节数组，同时将字节数组写入到一
       Appenders...
     </h3>
     <div class="post-content-preview">
-      什么是 Appender
-logback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
-1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;im......
+      什么是 Appenderlogback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
+1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;imp......
     </div>
   </a>
   

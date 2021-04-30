@@ -253,9 +253,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -477,10 +477,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>由于 Linux 目前很热门，越来越多的人在学习 Linux，但是买一台服务放家里来学习，实在是很浪费。那么如何解决这个问题？虚拟机软件是很好的选择，常用的虚拟机软件有 <code>VMware Workstations、Virtual Box、Parallels Desktop（for Mac）</code> 等。在使用虚拟机软件的时候，很多初学者都会遇到很多问题，而 VMware 的网络连接问题是大家遇到最多问题之一。在学习交流群里面，几乎每天都会有同学问到这些问题，写这篇详解也是因为群里童鞋网络出故障，然后在帮他解决的过程中，对自己的理解也做一个总结。接下来，我们就一起来探讨一下关于 VMware Workstations 网络连接的三种模式。</p>
-<h2 id="VMware-三种网络模式">VMware 三种网络模式</h2>
-<p>VMware 为我们提供了三种网络工作模式，它们分别是：<code>Bridged</code>（桥接模式）、<code>NAT</code>（网络地址转换模式）、<code>Host-Only</code>（仅主机模式）。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>由于 Linux 目前很热门，越来越多的人在学习 Linux，但是买一台服务放家里来学习，实在是很浪费。那么如何解决这个问题？虚拟机软件是很好的选择，常用的虚拟机软件有 <code>VMware Workstations、Virtual Box、Parallels Desktop（for Mac）</code> 等。在使用虚拟机软件的时候，很多初学者都会遇到很多问题，而 VMware 的网络连接问题是大家遇到最多问题之一。在学习交流群里面，几乎每天都会有同学问到这些问题，写这篇详解也是因为群里童鞋网络出故障，然后在帮他解决的过程中，对自己的理解也做一个总结。接下来，我们就一起来探讨一下关于 VMware Workstations 网络连接的三种模式。</p>
+<h2 id="VMware-三种网络模式"><a href="#VMware-三种网络模式" class="headerlink" title="VMware 三种网络模式"></a>VMware 三种网络模式</h2><p>VMware 为我们提供了三种网络工作模式，它们分别是：<code>Bridged</code>（桥接模式）、<code>NAT</code>（网络地址转换模式）、<code>Host-Only</code>（仅主机模式）。</p>
 <p>打开 VMware 虚拟机，我们可以在选项栏的“编辑”下的“虚拟网络编辑器”中看到 <code>VMnet0</code>（桥接模式）、<code>VMnet1</code>（仅主机模式）、<code>VMnet8</code>（NAT模式），那么这些都是有什么作用呢？作用如下：</p>
 <ul>
 <li><code>VMnet0</code> 表示的是用于桥接模式下的虚拟交换机；</li>
@@ -491,11 +489,9 @@
 <p>同时，在主机上对应的有 VMware Network Adapter VMnet1 和 VMware Network Adapter VMnet8 两块虚拟网卡，它们分别作用于仅主机模式与NAT模式下。在“网络连接”中我们可以看到这两块虚拟网卡，如果将这两块卸载了，可以在 vmware 的“编辑”下的“虚拟网络编辑器”中点击“还原默认设置”，可重新将虚拟网卡还原。</p>
 <p><img src="2.png" alt="2"></p>
 <p>小伙伴看到这里，肯定有疑问，为什么在真机上没有 VMware Network Adapter VMnet0 虚拟网卡呢？那么接下来，我们就一起来看一下这是为什么。</p>
-<h2 id="Bridged（桥接模式）"><code>Bridged</code>（桥接模式）</h2>
-<p>什么是桥接模式？桥接模式就是将主机网卡与虚拟机虚拟的网卡利用虚拟网桥进行通信。在桥接的作用下，类似于把物理主机虚拟为一个交换机，所有桥接设置的虚拟机连接到这个交换机的一个接口上，物理主机也同样插在这个交换机当中，所以所有桥接下的网卡与网卡都是交换模式的，相互可以访问而不干扰。在桥接模式下，虚拟机 ip 地址需要与主机在同一个网段，如果需要联网，则网关与 DNS 需要与主机网卡一致。其网络结构如下图所示：</p>
+<h2 id="Bridged（桥接模式）"><a href="#Bridged（桥接模式）" class="headerlink" title="Bridged（桥接模式）"></a><code>Bridged</code>（桥接模式）</h2><p>什么是桥接模式？桥接模式就是将主机网卡与虚拟机虚拟的网卡利用虚拟网桥进行通信。在桥接的作用下，类似于把物理主机虚拟为一个交换机，所有桥接设置的虚拟机连接到这个交换机的一个接口上，物理主机也同样插在这个交换机当中，所以所有桥接下的网卡与网卡都是交换模式的，相互可以访问而不干扰。在桥接模式下，虚拟机 ip 地址需要与主机在同一个网段，如果需要联网，则网关与 DNS 需要与主机网卡一致。其网络结构如下图所示：</p>
 <p><img src="3.png" alt="3"></p>
-<h3 id="如何设置桥接模式">如何设置桥接模式</h3>
-<p>接下来，我们就来实际操作，如何设置桥接模式。首先，安装完系统之后，在开启系统之前，点击“编辑虚拟机设置”来设置网卡模式。</p>
+<h3 id="如何设置桥接模式"><a href="#如何设置桥接模式" class="headerlink" title="如何设置桥接模式"></a>如何设置桥接模式</h3><p>接下来，我们就来实际操作，如何设置桥接模式。首先，安装完系统之后，在开启系统之前，点击“编辑虚拟机设置”来设置网卡模式。</p>
 <p><img src="4.png" alt="4"></p>
 <p>点击“网络适配器”，选择“桥接模式”，然后“确定”。</p>
 <p><img src="5.png" alt="5"></p>
@@ -510,12 +506,10 @@
 <p>能 ping 通外网 ip，证明桥接模式设置成功。那主机与虚拟机之间的通信是否正常呢？我们就用远程工具来测试一下。</p>
 <p><img src="10.png" alt="10"></p>
 <p>主机与虚拟机通信正常。这就是桥接模式的设置步骤，相信大家应该学会了如何去设置桥接模式了。桥接模式配置简单，但如果你的网络环境 ip 资源很缺少或对 ip 管理比较严格的话，那桥接模式就不太适用了。如果真是这种情况的话，我们该如何解决呢？接下来，我们就来认识 VMware 的另一种网络模式：<code>NAT 模式</code>。</p>
-<h2 id="NAT（地址转换模式）"><code>NAT</code>（地址转换模式）</h2>
-<p>刚刚我们说到，如果你的网络 ip 资源紧缺，但是你又希望你的虚拟机能够联网，这时候 NAT 模式是最好的选择。NAT 模式借助虚拟 NAT 设备和虚拟 DHCP 服务器，使得虚拟机可以联网。其网络结构如下图所示：</p>
+<h2 id="NAT（地址转换模式）"><a href="#NAT（地址转换模式）" class="headerlink" title="NAT（地址转换模式）"></a><code>NAT</code>（地址转换模式）</h2><p>刚刚我们说到，如果你的网络 ip 资源紧缺，但是你又希望你的虚拟机能够联网，这时候 NAT 模式是最好的选择。NAT 模式借助虚拟 NAT 设备和虚拟 DHCP 服务器，使得虚拟机可以联网。其网络结构如下图所示：</p>
 <p><img src="11.png" alt="11"></p>
 <p>在 NAT 模式中，主机网卡直接与虚拟 NAT 设备相连，然后虚拟 NAT 设备与虚拟 DHCP 服务器一起连接在虚拟交换机 VMnet8 上，这样就实现了虚拟机联网。那么我们会觉得很奇怪，为什么需要虚拟网卡 VMware Network Adapter VMnet8 呢？原来我们的 VMware Network Adapter VMnet8 虚拟网卡主要是为了实现主机与虚拟机之间的通信。在之后的设置步骤中，我们可以加以验证。</p>
-<h3 id="如何设置地址转换模式">如何设置地址转换模式</h3>
-<p>首先，设置虚拟机中 NAT 模式的选项，打开 VMware，点击“编辑”下的“虚拟网络编辑器”，设置 NAT 参数及 DHCP 参数。</p>
+<h3 id="如何设置地址转换模式"><a href="#如何设置地址转换模式" class="headerlink" title="如何设置地址转换模式"></a>如何设置地址转换模式</h3><p>首先，设置虚拟机中 NAT 模式的选项，打开 VMware，点击“编辑”下的“虚拟网络编辑器”，设置 NAT 参数及 DHCP 参数。</p>
 <p><img src="12.png" alt="12"></p>
 <p><img src="13.png" alt="13"></p>
 <p><img src="14.png" alt="14"></p>
@@ -535,18 +529,15 @@
 <p>如此看来，虚拟机能联通外网，确实不是通过 VMware Network Adapter VMnet8 虚拟网卡，那么为什么要有这块虚拟网卡呢？之前我们就说 VMware Network Adapter VMnet8 的作用是主机与虚拟机之间的通信，接下来，我们就用远程连接工具来测试一下。</p>
 <p><img src="22.png" alt="22"></p>
 <p>然后，将 VMware Network Adapter VMnet8 启用之后，发现远程工具可以连接上虚拟机了。那么，这就是 NAT 模式，利用虚拟的 NAT 设备以及虚拟 DHCP 服务器来使虚拟机连接外网，而 VMware Network Adapter VMnet8 虚拟网卡是用来与虚拟机通信的。</p>
-<h2 id="Host-Only（仅主机模式）"><code>Host-Only</code>（仅主机模式）</h2>
-<p><code>Host-Only</code> 模式其实就是 NAT 模式去除了虚拟 NAT 设备，然后使用 VMware Network Adapter VMnet1 虚拟网卡连接 VMnet1 虚拟交换机来与虚拟机通信的，<code>Host-Only</code> 模式将虚拟机与外网隔开，使得虚拟机成为一个独立的系统，只与主机相互通讯。其网络结构如下图所示：</p>
+<h2 id="Host-Only（仅主机模式）"><a href="#Host-Only（仅主机模式）" class="headerlink" title="Host-Only（仅主机模式）"></a><code>Host-Only</code>（仅主机模式）</h2><p><code>Host-Only</code> 模式其实就是 NAT 模式去除了虚拟 NAT 设备，然后使用 VMware Network Adapter VMnet1 虚拟网卡连接 VMnet1 虚拟交换机来与虚拟机通信的，<code>Host-Only</code> 模式将虚拟机与外网隔开，使得虚拟机成为一个独立的系统，只与主机相互通讯。其网络结构如下图所示：</p>
 <p><img src="23.png" alt="23"></p>
-<h3 id="如何设置仅主机模式">如何设置仅主机模式</h3>
-<p>通过上图，我们可以发现，如果要使得虚拟机能联网，我们可以将主机网卡共享给 VMware Network Adapter VMnet1 网卡，从而达到虚拟机联网的目的。接下来，我们就来测试一下。首先设置“虚拟网络编辑器”，可以设置 DHCP 的起始范围。</p>
+<h3 id="如何设置仅主机模式"><a href="#如何设置仅主机模式" class="headerlink" title="如何设置仅主机模式"></a>如何设置仅主机模式</h3><p>通过上图，我们可以发现，如果要使得虚拟机能联网，我们可以将主机网卡共享给 VMware Network Adapter VMnet1 网卡，从而达到虚拟机联网的目的。接下来，我们就来测试一下。首先设置“虚拟网络编辑器”，可以设置 DHCP 的起始范围。</p>
 <p><img src="24.png" alt="24"></p>
 <p>设置虚拟机为仅主机模式。</p>
 <p><img src="25.png" alt="25"></p>
 <p>开机启动系统，然后设置网卡文件。</p>
 <p><img src="26.png" alt="26"></p>
-<p>保存退出，然后重启网卡，利用远程工具测试能否与主机通信。<br>
-<img src="27.png" alt="27"></p>
+<p>保存退出，然后重启网卡，利用远程工具测试能否与主机通信。<br><img src="27.png" alt="27"></p>
 <p>主机与虚拟机之间可以通信，现在设置虚拟机联通外网。</p>
 <p><img src="28.png" alt="28"></p>
 <p>我们可以看到上图有一个提示，强制将VMware Network Adapter VMnet1的ip设置成192.168.137.1，那么接下来，我们就要将虚拟机的DHCP的子网和起始地址进行修改，点击“虚拟网络编辑器”</p>

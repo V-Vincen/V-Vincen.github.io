@@ -253,9 +253,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -477,14 +477,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>开启服务</h1>
-<p>Mac 本身是包含 <code>apache</code> 服务器的，我们只要打开就可以使用了，根本不用去部署什么 <code>tomcat</code>。</p>
-<p>打开终端，输入命令：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="literal">start</span></span><br></pre></td></tr></table></figure>
+        <h1 id="开启服务"><a href="#开启服务" class="headerlink" title="开启服务"></a>开启服务</h1><p>Mac 本身是包含 <code>apache</code> 服务器的，我们只要打开就可以使用了，根本不用去部署什么 <code>tomcat</code>。</p>
+<p>打开终端，输入命令：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl <span class="literal">start</span></span><br></pre></td></tr></table></figure></p>
 <p>输入本机开机密码，密码输入完成之后在本地浏览器中输入 <code>127.0.0.1</code> 或者 <code>localhost</code>，出现 <code>it works!</code> 表明服务器已经启动了，就是这么简单。如果失败可以重启 <code>sudo apachectl restart</code>。</p>
 <p>进入文件夹 <code>/Library/WebServer</code>，这个文件夹就是本地服务器的文件夹，然后你就可以把你自己的文件放入到其中的 <code>Documents</code> 文件夹中,他的路径对应的就是 <code>127.0.0.1/你的文件名</code>。例如我在 <code>Documents</code> 中放了个文件夹 <code>TestDownload</code>，其中有个压缩包叫测试下载 <code>.zip</code>，那么我就可以在浏览器中直接使用 <code>127.0.0.1/TestDownload/测试下载.zip</code> 访问。注意这种文件是直接就开始下载的，如果是图片会直接打开。</p>
-<h2 id="相关命令">相关命令</h2>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 重启 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl restart</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl stop</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl start</span><br></pre></td></tr></table></figure>
+<h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 重启 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl restart</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl stop</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 开启 apache</span></span><br><span class="line">sudo /usr/sbin/apachectl start</span><br></pre></td></tr></table></figure>
 
 
         <hr>
@@ -633,7 +630,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">开启服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">相关命令</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%BC%80%E5%90%AF%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">开启服务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">相关命令</span></a></li></ol></li></ol>
         
         </div>
       </aside>
