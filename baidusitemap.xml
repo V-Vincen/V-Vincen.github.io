@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-5-2-Start-a-Consumer-Application-Feign/</loc>
+    <lastmod>2021-05-27</lastmod>
+  </url>
+  <url>
+    <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/</loc>
+    <lastmod>2021-05-27</lastmod>
+  </url>
+  <url>
     <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-4-Start-a-Provider-Application/</loc>
     <lastmod>2021-05-26</lastmod>
   </url>
   <url>
-    <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-2-Create-a-unified-parent-dependency-management/</loc>
+    <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/</loc>
     <lastmod>2021-05-26</lastmod>
   </url>
   <url>
