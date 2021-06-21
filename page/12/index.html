@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,46 @@
   <!-- top end -->
   
 
+  <a href="/en/Dubbo-Zookeeper-9-Dubbo-的负载均衡/">
+    <h2 class="post-title">
+      [Dubbo Zookeeper] 9 Dubbo 的负载均衡
+    </h2>
+    <h3 class="post-subtitle">
+      Dubbo 的负载均衡
+    </h3>
+    <div class="post-content-preview">
+      概述在集群负载均衡时，Dubbo 提供了多种均衡策略，缺省为 random 随机调用。
+负载均衡策略Random LoadBalance
+随机，按权重设置随机概率。
+在一个截面上碰撞的概率高，但调用量越大分布越均匀，而且按概率使用权重后也比较均匀，有利于动态调整提供者权重。
+
+RoundRobin LoadBalance
+轮询，按公约后的权重设置轮询比率。
+存在慢的提供者累积请求的问题，比如......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-01-20
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Dubbo-Zookeeper-8-Dubbo-应用案例/">
     <h2 class="post-title">
       [Dubbo Zookeeper] 8 Dubbo 应用案例
@@ -491,12 +531,9 @@
     </h3>
     <div class="post-content-preview">
       概述
-
 案例相关配置可参考 GitHub：https://github.com/apache/dubbo-spring-boot-project/tree/master/dubbo-spring-boot-samples
-创建服务接口项目
-创建一个名为 hello-dubbo-service-user-api 的项目，该项目只负责定义接口
-POM
-1234567891011121314151......
+创建服务接口项目创建一个名为 hello-dubbo-service-user-api 的项目，该项目只负责定义接口
+POM1234567891011121314151617......
     </div>
   </a>
   
@@ -529,8 +566,7 @@ POM
       什么是 Dubbo
     </h3>
     <div class="post-content-preview">
-      概述
-Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源 Java RPC 分布式服务框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。她最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，Dubbo 采用的是一种非常简单的模型，要么是提......
+      概述Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源 Java RPC 分布式服务框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。她最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或者最大限度地松耦合）。从服务模型的角度来看，Dubbo 采用的是一种非常简单的模型，要么是提供......
     </div>
   </a>
   
@@ -564,15 +600,13 @@ Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源 J
     </h3>
     <div class="post-content-preview">
       Zookeeper 的三种工作模式
-
 单机模式：存在单点故障。
 集群模式：在多台机器上部署 Zookeeper 集群，适合线上环境使用。
 伪集群模式：在一台机器同时运行多个 Zookeeper 实例，仍然有单点故障问题，当然其中配置的端口号要错开的，适合实验环境模拟集群使用。
 
 Zookeeper 的三种端口号
-
 2181：客户端连接 Zookeeper 集群使用的监听端口号。
-3888：选......
+3888：选举 ......
     </div>
   </a>
   
@@ -605,14 +639,10 @@ Zookeeper 的三种端口号
       Linux 下手动安装 Zookeeper
     </h3>
     <div class="post-content-preview">
-      概述
-Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用手动安装的方式部署。
+      概述Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用手动安装的方式部署。
 注意： 集群为大于等于3个奇数，如 3、5、7,不宜太多，集群机器多了选举和数据同步耗时长，不稳定。
-单机模式
-下载
-进入要下载的版本的目录，选择 .tar.gz 文件下载，下载链接：http://archive.apache.org/dist/zookeeper/
-安装
-注意： 需要先安......
+单机模式下载进入要下载的版本的目录，选择 .tar.gz 文件下载，下载链接：http://archive.apache.org/dist/zookeeper/
+安装注意： 需要先安装 Ja......
     </div>
   </a>
   
@@ -645,12 +675,9 @@ Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式�
       基于 Docker 安装 Zookeeper
     </h3>
     <div class="post-content-preview">
-      概述
-Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用 Docker 的方式部署。
+      概述Zookeeper 部署有三种方式，单机模式、集群模式、伪集群模式，以下采用 Docker 的方式部署。
 注意： 集群为大于等于3个奇数，如 3、5、7,不宜太多，集群机器多了选举和数据同步耗时长，不稳定。
-单机模式
-docker-compose.yml
-123456789101112version: &#x27;3.1&#x27;services:    zoo1:        i......
+单机模式docker-compose.yml123456789101112version: &#x27;3.1&#x27;services:    zoo1:        imag......
     </div>
   </a>
   
@@ -684,13 +711,9 @@ docker-compose.yml
     </h3>
     <div class="post-content-preview">
       什么是临时顺序节点？
-
 Zookeeper 的数据存储结构就像一棵树，这棵树由节点组成，这种节点叫做 Znode。
-Znode 分为四种类型：
-持久节点（PERSISTENT）
-默认的节点类型。创建节点的客户端与 Zookeeper 断开连接后，该节点依旧存在。
-持久节点顺序节点（PERSISTENT_SEQUENTIAL）
-所谓顺序节点，就是在创建节点时，Zookeeper 根据创建的时间......
+Znode 分为四种类型：持久节点（PERSISTENT）默认的节点类型。创建节点的客户端与 Zookeeper 断开连接后，该节点依旧存在。
+持久节点顺序节点（PERSISTENT_SEQUENTIAL）所谓顺序节点，就是在创建节点时，Zookeeper 根据创建的时间顺序给该......
     </div>
   </a>
   
@@ -723,12 +746,10 @@ Znode 分为四种类型：
       什么是 Zookeeper
     </h3>
     <div class="post-content-preview">
-      概述
-ZooKeeper 是一种分布式协调服务，用于管理大型主机。在分布式环境中协调和管理服务是一个复杂的过程。ZooKeeper 通过其简单的架构和 API 解决了这个问题。ZooKeeper 允许开发人员专注于核心应用程序逻辑，而不必担心应用程序的分布式特性。
-Zookeeper 的数据模型
-Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树，也很像文件系统的目录。
+      概述ZooKeeper 是一种分布式协调服务，用于管理大型主机。在分布式环境中协调和管理服务是一个复杂的过程。ZooKeeper 通过其简单的架构和 API 解决了这个问题。ZooKeeper 允许开发人员专注于核心应用程序逻辑，而不必担心应用程序的分布式特性。
+Zookeeper 的数据模型Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树，也很像文件系统的目录。
 
-树......
+树是由......
     </div>
   </a>
   
@@ -761,14 +782,12 @@ Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树�
       什么是分布式锁
     </h3>
     <div class="post-content-preview">
-      概述
-为了防止分布式系统中的多个进程之间相互干扰，我们需要一种分布式协调技术来对这些进程进行调度。而这个分布式协调技术的核心就是来实现这个分布式锁。
+      概述为了防止分布式系统中的多个进程之间相互干扰，我们需要一种分布式协调技术来对这些进程进行调度。而这个分布式协调技术的核心就是来实现这个分布式锁。
 为什么要使用分布式锁
-
 
 成员变量 A 存在 JVM1、JVM2、JVM3 三个 JVM 内存中
 成员变量 A 同时都会在 JVM 分配一块内存，三个请求发过来同时对这个变量操作，显然结果是不对的
-不是同时发过来，三个请求分别操作三个不同 JV......
+不是同时发过来，三个请求分别操作三个不同 JVM ......
     </div>
   </a>
   
@@ -802,14 +821,14 @@ Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树�
     </h3>
     <div class="post-content-preview">
       目前市场上主流的套微服务架构解决方案：
-
 Spring Boot + Spring Cloud Netflix = Java 原生云开发
- Spring Boot + Dubbo + Zookeeper 
+ **Spring Boot + Dubbo + Zookeeper** 
+
+
 
 概述
-
 Apache Dubbo (incubating) |ˈdʌbəʊ| 是一款高性能、轻量级的开源 Java RPC 框架。
-ZooKeeper 是一种分布式协调服务，用于管理大型......
+ZooKeeper 是一种分布式协调服务，用于......
     </div>
   </a>
   
@@ -820,46 +839,6 @@ ZooKeeper 是一种分布式协调服务，用于管理大型......
   <div class="tags">
     
     <a href="/tags/#Dubbo Zookeeper" title="Dubbo Zookeeper">Dubbo Zookeeper</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-5-Git-实战总结/">
-    <h2 class="post-title">
-      [Git] 5 Git 实战总结
-    </h2>
-    <h3 class="post-subtitle">
-      Git 实战总结
-    </h3>
-    <div class="post-content-preview">
-      Git 介绍
-
-Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
-
-Git 与 SVN 区别
-Git 不仅仅是个版本控制系统，它......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-01-14
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
     
   </div>
   
@@ -922,6 +901,10 @@ Git 不仅仅是个版本控制系统，它......
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -932,10 +915,6 @@ Git 不仅仅是个版本控制系统，它......
     
     <a href="../../en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../en/Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1307,7 +1286,7 @@ Git 不仅仅是个版本控制系统，它......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

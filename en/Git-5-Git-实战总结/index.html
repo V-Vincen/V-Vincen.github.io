@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -477,15 +477,12 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="Git-介绍">Git 介绍</h2>
-<ul>
+        <h2 id="Git-介绍"><a href="#Git-介绍" class="headerlink" title="Git 介绍"></a>Git 介绍</h2><ul>
 <li>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</li>
 <li>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</li>
 <li>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</li>
 </ul>
-<h3 id="Git-与-SVN-区别">Git 与 SVN 区别</h3>
-<p>Git 不仅仅是个版本控制系统，它也是个内容管理系统（CMS）,工作管理系统等。<br>
-如果你是一个具有使用SVN背景的人，你需要做一定的思想转换，来适应 Git 提供的一些概念和特征。</p>
+<h3 id="Git-与-SVN-区别"><a href="#Git-与-SVN-区别" class="headerlink" title="Git 与 SVN 区别"></a>Git 与 SVN 区别</h3><p>Git 不仅仅是个版本控制系统，它也是个内容管理系统（CMS）,工作管理系统等。<br>如果你是一个具有使用SVN背景的人，你需要做一定的思想转换，来适应 Git 提供的一些概念和特征。</p>
 <p>Git 与 SVN 区别点：</p>
 <ul>
 <li>Git 是分布式的，SVN 不是：这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。</li>
@@ -494,18 +491,12 @@
 <li>Git 没有一个全局的版本号，而 SVN 有：目前为止这是跟SVN相比 Git 缺少的最大的一个特征。</li>
 <li>Git 的内容完整性要优于 SVN：Git 的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</li>
 </ul>
-<h3 id="Git-安装配置">Git 安装配置</h3>
-<p>在使用 Git 前我们需要先安装 Git。Git 目前支持 Linux/Unix、Solaris、Mac 和 Windows 平台上运行。Git 各平台安装包下载地址为：<a target="_blank" rel="noopener" href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
-<p><strong>Windows 平台上安装（不再赘述）</strong>：<a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/">https://wvincen.gitee.io/2019/08/22/Git-1-Git-简介和安装/</a></p>
-<p><strong>Mac 上安装 Git</strong><br>
-通过 <code>Homebrew</code> 安装 Git：<code>brew install git</code></p>
-<p><strong>用户信息</strong><br>
-配置个人的用户名称和电子邮件地址：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
-<p>如果用了 <code>--global</code> 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
+<h3 id="Git-安装配置"><a href="#Git-安装配置" class="headerlink" title="Git 安装配置"></a>Git 安装配置</h3><p>在使用 Git 前我们需要先安装 Git。Git 目前支持 Linux/Unix、Solaris、Mac 和 Windows 平台上运行。Git 各平台安装包下载地址为：<a target="_blank" rel="noopener" href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
+<p><strong>Windows 平台上安装（不再赘述）</strong>：<a target="_blank" rel="noopener" href="https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/">https://wvincen.gitee.io/2019/08/22/Git-1-Git-%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/</a></p>
+<p><strong>Mac 上安装 Git</strong><br>通过 <code>Homebrew</code> 安装 Git：<code>brew install git</code></p>
+<p><strong>用户信息</strong><br>配置个人的用户名称和电子邮件地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure><br>如果用了 <code>--global</code> 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
 <p>如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 <code>--global</code> 选项重新配置即可，新的设定保存在当前项目的 <code>.git/config</code> 文件里。</p>
-<h3 id="Git-基本原理">Git 基本原理</h3>
-<p>Git 有以下工作区：</p>
+<h3 id="Git-基本原理"><a href="#Git-基本原理" class="headerlink" title="Git 基本原理"></a>Git 基本原理</h3><p>Git 有以下工作区：</p>
 <ul>
 <li>工作区：就是你在电脑里能看到的目录。</li>
 <li>暂存区：英文叫 <code>stage</code>, 或 <code>index</code>。一般存放在 <code>.git</code> 目录下的 <code>index</code> 文件（<code>.git/index</code>）中，所以我们把暂存区有时也叫作索引（<code>index</code>）。</li>
@@ -521,65 +512,29 @@
 <p>当执行 <code>git rm --cached &lt;file&gt;</code> 命令时，会直接从暂存区删除文件，工作区则不做出改变。</p>
 <p>当执行 <code>git checkout .</code> 或者 <code>git checkout -- &lt;file&gt;</code> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。</p>
 <p>当执行 <code>git checkout HEAD .</code> 或者 <code>git checkout HEAD &lt;file&gt;</code> 命令时，会用 <code>HEAD</code> 指向的 <code>master</code> 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。</p>
-<h2 id="Git-基本操作">Git 基本操作</h2>
-<h3 id="创建新仓库">创建新仓库</h3>
-<p>创建新文件夹，打开，然后执行</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">init</span></span><br></pre></td></tr></table></figure>
-<p>以创建新的 git 仓库。</p>
-<h3 id="检出仓库">检出仓库</h3>
-<p>执行如下命令以创建一个本地仓库的克隆版本：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">/path</span>/to/repository</span><br></pre></td></tr></table></figure>
-<p>如果是远端服务器上的仓库，你的命令会是这个样子：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone username<span class="variable">@host</span><span class="symbol">:/path/to/repository</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加和提交">添加和提交</h3>
-<p>你可以提出更改（把它们添加到暂存区），使用如下命令：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br><span class="line">git <span class="builtin-name">add</span> *</span><br></pre></td></tr></table></figure>
-<p>这是 git 基本工作流程的第一步；</p>
-<p>使用如下命令以实际提交改动：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;代码提交信息&quot;</span></span><br></pre></td></tr></table></figure>
-<p>现在，你的改动已经提交到了 <code>HEAD</code>，但是还没到你的远端仓库。</p>
-<h3 id="推送改动">推送改动</h3>
-<p>你的改动现在已经在本地仓库的 <code>HEAD</code> 中了。执行如下命令以将这些改动提交到远端仓库：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure>
-<p>可以把 <code>master</code> 换成你想要推送的任何分支。</p>
-<p>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>&lt;server&gt;</span><br></pre></td></tr></table></figure>
-<p>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
-<h3 id="分支">分支</h3>
-<p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，<code>master</code> 是“默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。</p>
-<p>创建一个叫做“feature_x”的分支，并切换过去：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> feature_x</span><br></pre></td></tr></table></figure>
-<p>切换回主分支：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">master</span></span><br></pre></td></tr></table></figure>
-<p>再把新建的分支删掉：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git branch -d feature_x</span></span><br></pre></td></tr></table></figure>
-<p>除非你将分支推送到远端仓库，不然该分支就是不为他人所见的：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="分支更新与合并">分支更新与合并</h3>
-<p>要更新你的本地仓库至最新改动，执行：</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h2><h3 id="创建新仓库"><a href="#创建新仓库" class="headerlink" title="创建新仓库"></a>创建新仓库</h3><p>创建新文件夹，打开，然后执行<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">init</span></span><br></pre></td></tr></table></figure><br>以创建新的 git 仓库。</p>
+<h3 id="检出仓库"><a href="#检出仓库" class="headerlink" title="检出仓库"></a>检出仓库</h3><p>执行如下命令以创建一个本地仓库的克隆版本：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">/path</span>/to/repository</span><br></pre></td></tr></table></figure></p>
+<p>如果是远端服务器上的仓库，你的命令会是这个样子：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone username<span class="variable">@host</span><span class="symbol">:/path/to/repository</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="添加和提交"><a href="#添加和提交" class="headerlink" title="添加和提交"></a>添加和提交</h3><p>你可以提出更改（把它们添加到暂存区），使用如下命令：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br><span class="line">git <span class="builtin-name">add</span> *</span><br></pre></td></tr></table></figure><br>这是 git 基本工作流程的第一步；</p>
+<p>使用如下命令以实际提交改动：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;代码提交信息&quot;</span></span><br></pre></td></tr></table></figure><br>现在，你的改动已经提交到了 <code>HEAD</code>，但是还没到你的远端仓库。</p>
+<h3 id="推送改动"><a href="#推送改动" class="headerlink" title="推送改动"></a>推送改动</h3><p>你的改动现在已经在本地仓库的 <code>HEAD</code> 中了。执行如下命令以将这些改动提交到远端仓库：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure><br>可以把 <code>master</code> 换成你想要推送的任何分支。</p>
+<p>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add </span><span class="keyword">origin </span>&lt;server&gt;</span><br></pre></td></tr></table></figure><br>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
+<h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，<code>master</code> 是“默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。</p>
+<p>创建一个叫做“feature_x”的分支，并切换过去：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> feature_x</span><br></pre></td></tr></table></figure></p>
+<p>切换回主分支：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">master</span></span><br></pre></td></tr></table></figure></p>
+<p>再把新建的分支删掉：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git branch -d feature_x</span></span><br></pre></td></tr></table></figure></p>
+<p>除非你将分支推送到远端仓库，不然该分支就是不为他人所见的：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> &lt;branch&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="分支更新与合并"><a href="#分支更新与合并" class="headerlink" title="分支更新与合并"></a>分支更新与合并</h3><p>要更新你的本地仓库至最新改动，执行：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure></p>
 <p>以在你的工作目录中获取（<code>fetch</code>）并合并（<code>merge</code>）远端的改动。</p>
-<p>要合并其他分支到你的当前分支（例如 <code>master</code>），执行：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="tag">&lt;<span class="name">branch</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在这两种情况下，git 都会尝试去自动合并改动。遗憾的是，这可能并非每次都成功，并可能出现冲突（<code>conflicts</code>）。 这时候就需要你修改这些文件来手动合并这些冲突（<code>conflicts</code>）。改完之后，你需要执行如下命令以将它们标记为合并成功：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<p>在合并改动之前，你可以使用如下命令预览差异：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="tag">&lt;<span class="name">source_branch</span>&gt;</span> <span class="tag">&lt;<span class="name">target_branch</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="标签">标签</h3>
-<p>通常我们在发布版本的时候会打上标签。这个概念早已存在，在 SVN 中也有。你可以执行如下命令创建一个叫做 1.0.0 的标签：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> tag <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span> <span class="number">1</span>b<span class="number">2</span>e<span class="number">1</span>d<span class="number">63</span>ff</span><br></pre></td></tr></table></figure>
-<p>1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。可以使用下列命令获取提交 ID：</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-<p>你也可以使用少一点的提交 ID 前几位，只要它的指向具有唯一性。</p>
-<h3 id="替换本地改动">替换本地改动</h3>
-<p>假如你操作失误（当然，这最好永远不要发生），你可以使用如下命令替换掉本地改动：</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="comment">-- &lt;filename&gt;</span></span><br></pre></td></tr></table></figure>
-<p>此命令会使用 <code>HEAD</code> 中的最新内容替换掉你的工作目录中的文件。已添加到暂存区的改动以及新文件都不会受到影响。</p>
-<p>假如你想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将你本地主分支指向它：</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch <span class="built_in">origin</span></span><br><span class="line">git <span class="built_in">reset</span> --hard <span class="built_in">origin</span>/master</span><br></pre></td></tr></table></figure>
-<h2 id="Git-权限控制介绍">Git 权限控制介绍</h2>
-<h3 id="Git角色介绍">Git角色介绍</h3>
-<p>首先来了解下，Git 中的五种角色：</p>
+<p>要合并其他分支到你的当前分支（例如 <code>master</code>），执行：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="tag">&lt;<span class="name">branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在这两种情况下，git 都会尝试去自动合并改动。遗憾的是，这可能并非每次都成功，并可能出现冲突（<code>conflicts</code>）。 这时候就需要你修改这些文件来手动合并这些冲突（<code>conflicts</code>）。改完之后，你需要执行如下命令以将它们标记为合并成功：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="builtin-name">add</span> &lt;filename&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在合并改动之前，你可以使用如下命令预览差异：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="tag">&lt;<span class="name">source_branch</span>&gt;</span> <span class="tag">&lt;<span class="name">target_branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>通常我们在发布版本的时候会打上标签。这个概念早已存在，在 SVN 中也有。你可以执行如下命令创建一个叫做 1.0.0 的标签：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> tag <span class="number">1</span>.<span class="number">0</span>.<span class="number">0</span> <span class="number">1</span>b<span class="number">2</span>e<span class="number">1</span>d<span class="number">63</span>ff</span><br></pre></td></tr></table></figure></p>
+<p>1b2e1d63ff 是你想要标记的提交 ID 的前 10 位字符。可以使用下列命令获取提交 ID：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><br>你也可以使用少一点的提交 ID 前几位，只要它的指向具有唯一性。</p>
+<h3 id="替换本地改动"><a href="#替换本地改动" class="headerlink" title="替换本地改动"></a>替换本地改动</h3><p>假如你操作失误（当然，这最好永远不要发生），你可以使用如下命令替换掉本地改动：<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="comment">-- &lt;filename&gt;</span></span><br></pre></td></tr></table></figure><br>此命令会使用 <code>HEAD</code> 中的最新内容替换掉你的工作目录中的文件。已添加到暂存区的改动以及新文件都不会受到影响。</p>
+<p>假如你想丢弃你在本地的所有改动与提交，可以到服务器上获取最新的版本历史，并将你本地主分支指向它：<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch <span class="built_in">origin</span></span><br><span class="line">git <span class="built_in">reset</span> --hard <span class="built_in">origin</span>/master</span><br></pre></td></tr></table></figure></p>
+<h2 id="Git-权限控制介绍"><a href="#Git-权限控制介绍" class="headerlink" title="Git 权限控制介绍"></a>Git 权限控制介绍</h2><h3 id="Git角色介绍"><a href="#Git角色介绍" class="headerlink" title="Git角色介绍"></a>Git角色介绍</h3><p>首先来了解下，Git 中的五种角色：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -610,12 +565,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>相关权限如下：</p>
 <p><img src="2.png" alt="2"></p>
 <p>可以将特定 <code>branch</code>，例如 <code>master</code>、<code>develop</code> 等设为保护分支，由代码管理员进行维护，合并开发人员提交的代码。</p>
-<h2 id="Git-版本管理">Git 版本管理</h2>
-<h3 id="建立项目">建立项目</h3>
-<p>Git 对于权限控制分为三种级别：私有、内部、公开。</p>
+<h2 id="Git-版本管理"><a href="#Git-版本管理" class="headerlink" title="Git 版本管理"></a>Git 版本管理</h2><h3 id="建立项目"><a href="#建立项目" class="headerlink" title="建立项目"></a>建立项目</h3><p>Git 对于权限控制分为三种级别：私有、内部、公开。</p>
 <ul>
 <li>私有：项目访问权限必须明确授权给每个用户，未授权的用户无法访问。</li>
 <li>内部：该项目允许已登录的用户访问。</li>
@@ -624,8 +578,7 @@
 <p>为了保证代码的安全性，所有项目的建立均为私有，同时在管理员面板中关闭内部和公开项目的建立（Restricted visibility levels）。</p>
 <p>Git 中支持将项目按照 group 进行划分，例如我们可以建立如下 group：车联网(一级 group)\项目A（二级 group）</p>
 <p>从而将不同的人员分配到不同的 group 级别，实现不同级别的权限配置。</p>
-<h3 id="分支管理">分支管理</h3>
-<p>Git 在技术层面上是一个无中心的分布式版本控制系统，但在管理层面上，保持一个中心版本库（<code>Gitlab</code>）。</p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>Git 在技术层面上是一个无中心的分布式版本控制系统，但在管理层面上，保持一个中心版本库（<code>Gitlab</code>）。</p>
 <p><img src="3.png" alt="3"></p>
 <p>一个中心版本库（我们叫它 <code>origin</code> ）至少包括两个分支，即 <code>主分支（master）</code>和 <code>开发分支（develop）</code></p>
 <p><img src="4.png" alt="4"></p>
@@ -634,34 +587,25 @@
 <p><code>辅助分支</code> 分为三类，我们称之为 <code>Feature branches</code>，<code>Release branches</code>，<code>Hotfix branches</code>。</p>
 <p>下图就是整个版本管理的生命周期：</p>
 <p><img src="5.png" alt="5"></p>
-<h4 id="Feature-branches"><code>Feature branches</code></h4>
-<p><code>Feature branches</code>，起源于 <code>develop</code>分支，最终也会归于 <code>develop</code> 分支。</p>
+<h4 id="Feature-branches"><a href="#Feature-branches" class="headerlink" title="Feature branches"></a><code>Feature branches</code></h4><p><code>Feature branches</code>，起源于 <code>develop</code>分支，最终也会归于 <code>develop</code> 分支。</p>
 <p><code>Feature branches</code> 常用于开发一个独立的新功能，且其最终的结局必然只有两个，其一是合并入 <code>develop</code> 分支，其二是被抛弃。最典型的 <code>Fearture branches</code> 一定是存在于团队开发者那里，而不应该是 <code>中心版本库</code> 中。</p>
-<p><code>Feature branches</code> 起源于 <code>develop</code> 分支，实现方法是：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> myfeature develop</span><br></pre></td></tr></table></figure>
-<p><code>Feature branches</code> 最终将在开发完成后合并到 <code>develop</code> 分支，实现方式是：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git checkout devleop</span><br><span class="line"></span><br><span class="line">git <span class="keyword">merge</span> --<span class="keyword">no</span>-ff myfeature</span><br><span class="line">（--<span class="keyword">no</span>-ff，即 not fast forward，其作用是：要求 git <span class="keyword">merge</span> 即使在 fast forward 条件下也要产生一个新的 <span class="keyword">merge</span> commit；</span><br><span class="line">此处，要求采用 --<span class="keyword">no</span>-ff 的方式进行分支合并，其目的在于，希望保持原有 Feature branches 整个提交链的完整性）</span><br><span class="line"></span><br><span class="line">git branch -<span class="keyword">d</span> myfeature</span><br><span class="line"></span><br><span class="line">git push origin develop</span><br></pre></td></tr></table></figure>
+<p><code>Feature branches</code> 起源于 <code>develop</code> 分支，实现方法是：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> myfeature develop</span><br></pre></td></tr></table></figure></p>
+<p><code>Feature branches</code> 最终将在开发完成后合并到 <code>develop</code> 分支，实现方式是：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git checkout devleop</span><br><span class="line"></span><br><span class="line">git <span class="keyword">merge</span> --<span class="keyword">no</span>-ff myfeature</span><br><span class="line">（--<span class="keyword">no</span>-ff，即 not fast forward，其作用是：要求 git <span class="keyword">merge</span> 即使在 fast forward 条件下也要产生一个新的 <span class="keyword">merge</span> commit；</span><br><span class="line">此处，要求采用 --<span class="keyword">no</span>-ff 的方式进行分支合并，其目的在于，希望保持原有 Feature branches 整个提交链的完整性）</span><br><span class="line"></span><br><span class="line">git branch -<span class="keyword">d</span> myfeature</span><br><span class="line"></span><br><span class="line">git push origin develop</span><br></pre></td></tr></table></figure></p>
 <p><img src="6.png" alt="6"></p>
-<h4 id="Release-branch"><code>Release branch</code></h4>
-<p><code>Release branch</code>，起源于 <code>develop</code> 分支，最终归于 <code>develop</code> 或 <code>master</code> 分支。这类分支建议命名为 <code>release-*</code>。</p>
+<h4 id="Release-branch"><a href="#Release-branch" class="headerlink" title="Release branch"></a><code>Release branch</code></h4><p><code>Release branch</code>，起源于 <code>develop</code> 分支，最终归于 <code>develop</code> 或 <code>master</code> 分支。这类分支建议命名为 <code>release-*</code>。</p>
 <p><code>Relase branch</code> 通常负责 <code>短期的发布前准备工作</code>、<code>小 bug 的修复工作</code>、<code>版本号等元信息的准备工作</code>。与此同时，<code>develop</code> 分支又可以承接下一个新功能的开发工作了。</p>
 <p><code>Release branch</code> 产生新提交的最好时机是 <code>develop</code> 分支已经基本到达预期的状态，至少希望新功能已经完全从 <code>Feature branches</code> 合并到 <code>develop</code> 分支了。</p>
-<p>创建<code>Release branches</code>，方法是：</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="keyword">release</span><span class="number">-1.2</span> develop</span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span> （这个脚本用于将代码所有涉及版本信息的地方都统一修改到 <span class="number">1.2</span>，另外，需要用户根据自己的项目去编写适合的 bump-<span class="keyword">version</span>.sh ）</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -a -m &quot;Bumped version number to 1.2&quot;</span><br></pre></td></tr></table></figure>
+<p>创建<code>Release branches</code>，方法是：<br><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="keyword">release</span><span class="number">-1.2</span> develop</span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span> （这个脚本用于将代码所有涉及版本信息的地方都统一修改到 <span class="number">1.2</span>，另外，需要用户根据自己的项目去编写适合的 bump-<span class="keyword">version</span>.sh ）</span><br><span class="line"></span><br><span class="line">git <span class="keyword">commit</span> -a -m &quot;Bumped version number to 1.2&quot;</span><br></pre></td></tr></table></figure></p>
 <p>在一段短时间内，在 <code>Release branches</code> 上，我们可以继续修复 bug。在此阶段，严禁新功能的并入，新功能应该是被合并到 <code>develop</code> 分支的。</p>
-<p>经过若干 bug 修复后，<code>Release branches</code> 上的代码已经达到可发布状态，此时，需要完成三个动作：第一是将 <code>Release branches</code> 合并到 <code>master</code> 分支，第二是一定要为 <code>master</code> 上的这个新提交打 <code>TAG（记录里程碑）</code>，第三是要将 <code>Release branches</code> 合并回 <code>develop</code> 分支。</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">master</span></span><br><span class="line"></span><br><span class="line">git merge --no-ff release-<span class="number">1.2</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">tag</span> <span class="title">-a</span> <span class="number">1.2</span> （使用 -u/-s/-a 参数会创建 <span class="keyword">tag</span> <span class="title">对象，而非软 tag</span>）</span><br><span class="line"></span><br><span class="line">git checkout develop</span><br><span class="line"></span><br><span class="line">git merge --no-ff release-<span class="number">1.2</span></span><br><span class="line"></span><br><span class="line">git branch -d release-<span class="number">1.2</span></span><br></pre></td></tr></table></figure>
-<h4 id="Hotfix-branches"><code>Hotfix branches</code></h4>
-<p><code>Hotfix branches</code> 源于 <code>master</code>，归于 <code>develop</code> 或 <code>master</code>，通常命名为 <code>hotfix-*</code>。</p>
+<p>经过若干 bug 修复后，<code>Release branches</code> 上的代码已经达到可发布状态，此时，需要完成三个动作：第一是将 <code>Release branches</code> 合并到 <code>master</code> 分支，第二是一定要为 <code>master</code> 上的这个新提交打 <code>TAG（记录里程碑）</code>，第三是要将 <code>Release branches</code> 合并回 <code>develop</code> 分支。<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="literal">master</span></span><br><span class="line"></span><br><span class="line">git merge --no-ff release-<span class="number">1.2</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">tag</span> <span class="title">-a</span> <span class="number">1.2</span> （使用 -u/-s/-a 参数会创建 <span class="keyword">tag</span> <span class="title">对象，而非软 tag</span>）</span><br><span class="line"></span><br><span class="line">git checkout develop</span><br><span class="line"></span><br><span class="line">git merge --no-ff release-<span class="number">1.2</span></span><br><span class="line"></span><br><span class="line">git branch -d release-<span class="number">1.2</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="Hotfix-branches"><a href="#Hotfix-branches" class="headerlink" title="Hotfix branches"></a><code>Hotfix branches</code></h4><p><code>Hotfix branches</code> 源于 <code>master</code>，归于 <code>develop</code> 或 <code>master</code>，通常命名为 <code>hotfix-*</code>。</p>
 <p><code>Hotfix branches</code> 类似于 <code>Release branch</code>，但产生此分支总是非预期的关键 bug。</p>
 <p>建议设立 <code>Hotfix branches</code> 的原因是：希望避免 <code>develop分支</code> 新功能的开发必须为 bug 修复让路的情况。</p>
 <p><img src="7.png" alt="7"></p>
-<p>建立 <code>Hotfix branches</code>，方法是：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hotfix-<span class="number">1.2</span>.<span class="number">1</span> <span class="literal">master</span></span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line">git commit -a -m <span class="string">&quot;Bumpt version to 1.2.1&quot;</span> （然后可以开始问题修复工作）</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;Fixed severe production problem&quot;</span> （在问题修复后，进行第二次提交）</span><br></pre></td></tr></table></figure>
-<p>bug 修复后，需要将 <code>Hotfix branches</code> 合并回 <code>master</code> 分支，同时也需要合并回 <code>develop</code> 分支，方法是：</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> checkout master</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> tag -a <span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> checkout develop</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> branch -d hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h2 id="操作流程">操作流程</h2>
-<p>下面我们就在测试环境，进行一次实战演练。如下是涉及到的角色和权限：</p>
+<p>建立 <code>Hotfix branches</code>，方法是：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b hotfix-<span class="number">1.2</span>.<span class="number">1</span> <span class="literal">master</span></span><br><span class="line"></span><br><span class="line">./bump-<span class="keyword">version</span>.sh <span class="number">1.2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line">git commit -a -m <span class="string">&quot;Bumpt version to 1.2.1&quot;</span> （然后可以开始问题修复工作）</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;Fixed severe production problem&quot;</span> （在问题修复后，进行第二次提交）</span><br></pre></td></tr></table></figure></p>
+<p>bug 修复后，需要将 <code>Hotfix branches</code> 合并回 <code>master</code> 分支，同时也需要合并回 <code>develop</code> 分支，方法是：<br><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> checkout master</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> tag -a <span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> checkout develop</span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> merge --no-ff hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">git</span> branch -d hotfix-<span class="number">1</span>.<span class="number">2</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><p>下面我们就在测试环境，进行一次实战演练。如下是涉及到的角色和权限：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -693,6 +637,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>首先项目经理新建 group 和子 group，接着在 group 下新建了一个项目 project。</p>
 <p><img src="8.png" alt="8"></p>
 <p>由项目经理 给开发人员分配权限。</p>

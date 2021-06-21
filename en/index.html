@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -490,8 +490,7 @@
       Access the service by using RestTemplate and FeignClient with load balancing...
     </h3>
     <div class="post-content-preview">
-      概述
-Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变得更简单。使用 Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用 Feign 注解和 JAX-RS 注解。Feign 支持可插拔的编码器和解码器。Feign 默认集成了 Ribbon，Nacos 也很好的兼容了 Feign，默认实现了负载均衡的效果。更多详情可查看：https://v-vin......
+      概述Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变得更简单。使用 Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用 Feign 注解和 JAX-RS 注解。Feign 支持可插拔的编码器和解码器。Feign 默认集成了 Ribbon，Nacos 也很好的兼容了 Feign，默认实现了负载均衡的效果。更多详情可查看：https://v-vinc......
     </div>
   </a>
   
@@ -516,6 +515,37 @@ Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变�
   <!-- top end -->
   
 
+  <a href="/en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+    <h2 class="post-title">
+      [Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      ...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2021-05-27
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
     <h2 class="post-title">
       [Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer
@@ -524,12 +554,8 @@ Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变�
       Combining the LoadBalanceClient and RestTemolate explicitly to access the RESTful service...
     </h3>
     <div class="post-content-preview">
-      概述
-服务消费者的创建与服务提供者大同小异，这里采用最原始的一种方式，即显示的使用 LoadBalanceClient 和 RestTemplate 结合的方式来访问。
-案例
-POM
-创建一个工程名为 hello-spring-cloud-alibaba-nacos-consumer 的服务消费者项目，pom.xml 配置如下：
-1234567891011121314151617181920......
+      概述服务消费者的创建与服务提供者大同小异，这里采用最原始的一种方式，即显示的使用 LoadBalanceClient 和 RestTemplate 结合的方式来访问。
+案例POM创建一个工程名为 hello-spring-cloud-alibaba-nacos-consumer 的服务消费者项目，pom.xml 配置如下：12345678910111213141516171819202122......
     </div>
   </a>
   
@@ -562,12 +588,8 @@ POM
       Sample illustrates how to register a service to Nacos...
     </h3>
     <div class="post-content-preview">
-      概述
-通过一个简单的示例来感受一下如何将服务注册到 Nacos，其实和 Eureka 没有太大差别。
-案例
-POM
-创建一个工程名为 hello-spring-cloud-alibaba-nacos-provider 的服务提供者项目，pom.xml 配置如下：
-12345678910111213141516171819202122232425262728293031323334353637......
+      概述通过一个简单的示例来感受一下如何将服务注册到 Nacos，其实和 Eureka 没有太大差别。
+案例POM创建一个工程名为 hello-spring-cloud-alibaba-nacos-provider 的服务提供者项目，pom.xml 配置如下：123456789101112131415161718192021222324252627282930313233343536373839......
     </div>
   </a>
   
@@ -600,14 +622,12 @@ POM
       Dependency Management...
     </h3>
     <div class="post-content-preview">
-      概述
-Spring Cloud Alibaba 项目都是基于 Spring Cloud，而 Spring Cloud 项目又是基于 Spring Boot 进行开发，并且都是使用 Maven 做项目管理工具。在实际开发中，我们一般都会创建一个依赖管理项目作为 Maven 的 Parent 项目使用，这样做可以极大的方便我们对 Jar 包版本的统一管理。
-版本说明
-组件版本关系
+      概述Spring Cloud Alibaba 项目都是基于 Spring Cloud，而 Spring Cloud 项目又是基于 Spring Boot 进行开发，并且都是使用 Maven 做项目管理工具。在实际开发中，我们一般都会创建一个依赖管理项目作为 Maven 的 Parent 项目使用，这样做可以极大的方便我们对 Jar 包版本的统一管理。
+版本说明组件版本关系
 
 
 
-Spri......
+Spring......
     </div>
   </a>
   
@@ -640,11 +660,9 @@ Spri......
       An easy-to-use dynamic service discovery, configuration and service management platform for building cloud native applications...
     </h3>
     <div class="post-content-preview">
-      概述
-在 Spring Cloud Netflix 阶段我们采用 Eureka 做作为我们的服务注册与发现服务器，现利用 Spring Cloud Alibaba 提供的 Nacos 组件替代该方案。
-什么是 Nacos
-Nacos 致力于帮助您发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管理。
-Nacos 帮助您更敏......
+      概述在 Spring Cloud Netflix 阶段我们采用 Eureka 做作为我们的服务注册与发现服务器，现利用 Spring Cloud Alibaba 提供的 Nacos 组件替代该方案。
+什么是 NacosNacos 致力于帮助您发现、配置和管理微服务。Nacos 提供了一组简单易用的特性集，帮助您快速实现动态服务发现、服务配置、服务元数据及流量管理。
+Nacos 帮助您更敏捷和......
     </div>
   </a>
   
@@ -679,12 +697,10 @@ Nacos 帮助您更敏......
     <div class="post-content-preview">
       在学习 Spring Cloud Alibaba 之前，先来简单回顾下。
 目前市场上主流的套微服务架构解决方案：
-
 Spring Boot + Spring Cloud Netflix = Java 原生云开发
 Spring Boot + Dubbo + Zookeeper
 
-回顾
-博主在之前的博文中，对于上面的两套方案也做了简单是总结和案例练习。今天博主想要讲述的是基于 Spring Cl......
+回顾博主在之前的博文中，对于上面的两套方案也做了简单是总结和案例练习。今天博主想要讲述的是基于 Spring Clou......
     </div>
   </a>
   
@@ -718,8 +734,7 @@ Spring Boot + Dubbo + Zookeeper
     </h3>
     <div class="post-content-preview">
       Java 和 C++ 语言的一个重要区别就是 Java 中我们无法直接操作一块内存区域，不能像 C++ 中那样可以自己申请内存和释放内存。Java 中的 Unsafe 类为我们提供了类似 C++ 手动管理内存的能力。Unsafe 类，全限定名是 sun.misc.Unsafe，从名字中我们可以看出来这个类对普通程序员来说是“危险”的，一般应用开发者不会用到这个类。
-基本介绍
-如下 Unsaf......
+基本介绍如下 Unsafe......
     </div>
   </a>
   
@@ -752,9 +767,7 @@ Spring Boot + Dubbo + Zookeeper
       Unsafe、CAS、Java Object Layout、Lock Upgrade...
     </h3>
     <div class="post-content-preview">
-      用户态与内核态
-JDK 早期，synchronized 叫做重量级锁， 因为申请锁资源必须通过 kernel（指大多数操作系统的核心部分），系统调用。
-123456789101112131415161718192021;hello.asm;write(int fd, const void *buffer, size_t nbytes)section data    msg db &quot;......
+      用户态与内核态JDK 早期，synchronized 叫做重量级锁， 因为申请锁资源必须通过 kernel（指大多数操作系统的核心部分），系统调用。123456789101112131415161718192021;hello.asm;write(int fd, const void *buffer, size_t nbytes)section data    msg db &quot;He......
     </div>
   </a>
   
@@ -787,16 +800,10 @@ JDK 早期，synchronized 叫做重量级锁， 因为申请锁资源必须通�
       Design Pattern...
     </h3>
     <div class="post-content-preview">
-      Spring 用到了那些设计模式
-简单工厂（非23种设计模式中的一种）
-实现方式
-BeanFactory。Spring 中的 BeanFactory 就是简单工厂模式的体现，根据传入一个唯一的标识来获得 Bean 对象，但是否是在传入参数后创建还是传入参数前创建这个要根据具体情况来定。
-实质
-由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类。
-实现原理
-bean 容器的启动阶段
-
-读......
+      Spring 用到了那些设计模式简单工厂（非23种设计模式中的一种）实现方式BeanFactory。Spring 中的 BeanFactory 就是简单工厂模式的体现，根据传入一个唯一的标识来获得 Bean 对象，但是否是在传入参数后创建还是传入参数前创建这个要根据具体情况来定。
+实质由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类。
+实现原理bean 容器的启动阶段
+读取 bean......
     </div>
   </a>
   
@@ -807,42 +814,6 @@ bean 容器的启动阶段
   <div class="tags">
     
     <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Generics-泛型实现原理/">
-    <h2 class="post-title">
-      [Generics] 泛型实现原理
-    </h2>
-    <h3 class="post-subtitle">
-      Generic implementation principle...
-    </h3>
-    <div class="post-content-preview">
-      泛型实现原理
-JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，褒贬不一，废话不多说，先来看看他的原理。泛型是提供给 javac 编译器使用的，可以限定集合中的输入类型，让编译器拦截源程序中的非法输入，编译器编译带类型说明的集合时会去掉类型信息，对于参数化得泛型类型，getClass() 方法的返回值和原始类型完全一样。
-对于下面这个源程序：
-12345678public cla......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2021-04-27
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Generics" title="Generics">Generics</a>
     
   </div>
   
@@ -901,6 +872,10 @@ JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，�
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -911,10 +886,6 @@ JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，�
     
     <a href="Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1286,7 +1257,7 @@ JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

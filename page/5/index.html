@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,41 @@
   <!-- top end -->
   
 
+  <a href="/en/Logback-3-Logback 的配置/">
+    <h2 class="post-title">
+      [Logback] 3 Logback 的配置
+    </h2>
+    <h3 class="post-subtitle">
+      Configuration...
+    </h3>
+    <div class="post-content-preview">
+      我们开始通过多种配置 logback，以及许多示例的配置脚本。logback 依赖的配置框架 - Joran 将会在之后的章节介绍
+配置 logback在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
+可以通过编程或者配置 XML 脚本或者 ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-12-31
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Logback" title="Logback">Logback</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Logback-2-架构/">
     <h2 class="post-title">
       [Logback] 2 架构
@@ -490,11 +525,9 @@
       Architecture...
     </h3>
     <div class="post-content-preview">
-      logback 的架构
-跟 简介 类似
-Logger, Appender 和 Layouts
-Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
-Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logbac......
+      logback 的架构跟 简介 类似
+Logger, Appender 和 LayoutsLogback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
+Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logback-......
     </div>
   </a>
   
@@ -527,12 +560,10 @@ Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接�
       Introduction to logback...
     </h3>
     <div class="post-content-preview">
-      声明
-博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
+      声明博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
 项目在线地址：https://logbackcn.gitbook.io/logback
 Logback 官网地址：https://logback.qos.ch/manual/index.html
-简介
-Logbac......
+简介Logback ......
     </div>
   </a>
   
@@ -565,8 +596,7 @@ Logbac......
       JRebel is a productivity tool that allows developers to reload code changes instantly... XRebel is a performance tool for Java development which gives developers real time performance insights to help them understand and resolve potential issues faster and earlier, during the development phase...
     </h3>
     <div class="post-content-preview">
-      JRebel 简介
-JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任......
+      JRebel 简介JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任何......
     </div>
   </a>
   
@@ -600,7 +630,6 @@ JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省�
     </h3>
     <div class="post-content-preview">
       IDEA 配置
-
 添加一个运行配置（Remote JVM Debug 项）
 打开 Remote 项配置对话框
 远程 JVM 参数配置提示
@@ -608,10 +637,7 @@ JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省�
 
 
 
-远程 Java 程序配置
-Springboot 项目配置
-启动命令：
-1java -agentlib:jdwp=tra......
+远程 Java 程序配置Springboot 项目配置启动命令：1java -agentlib:jdwp=transpo......
     </div>
   </a>
   
@@ -677,8 +703,7 @@ Springboot 项目配置
       Feign is a Java to HTTP client binder inspired by Retrofit, JAXRS-2.0, and WebSocket. Feign's first goal was reducing the complexity of binding Denominator uniformly to HTTP APIs regardless of ReSTfulness...
     </h3>
     <div class="post-content-preview">
-      OpenFeign 简介
-Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Service 客户端变得很简单。使用 Feign 只需要创建一个接口加上对应的注解，比如：FeignClient 注解。Feign 有可插拔的注解，包括 Feign 注解和 JAX-RS 注解。Feign 也支持编码器和解码器，Spring Cloud Open Feign 对 F......
+      OpenFeign 简介Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Service 客户端变得很简单。使用 Feign 只需要创建一个接口加上对应的注解，比如：FeignClient 注解。Feign 有可插拔的注解，包括 Feign 注解和 JAX-RS 注解。Feign 也支持编码器和解码器，Spring Cloud Open Feign 对 Fe......
     </div>
   </a>
   
@@ -714,8 +739,7 @@ Feign 是一个声明式的 Web Service 客户端。它的出现使开发 Web Se
     </h3>
     <div class="post-content-preview">
       Apache HttpClient 简介
-
-HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。HttpClient 已经应用在很多的项目中，比如 Apache Jakarta 上很著名的另外两个开源项目 Cactus 和 HTMLUnit 都使......
+HttpClient 是 Apache Jakarta Common 下的子项目，用来提供高效的、最新的、功能丰富的支持 HTTP 协议的客户端编程工具包，并且它支持 HTTP 协议最新的版本和建议。HttpClient 已经应用在很多的项目中，比如 Apache Jakarta 上很著名的另外两个开源项目 Cactus 和 HTMLUnit 都使用......
     </div>
   </a>
   
@@ -787,10 +811,9 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
       What is a "table-driven method"?
     </h3>
     <div class="post-content-preview">
-      什么叫表驱动法
-表驱动法，又称之为表驱动、表驱动方法。“表”是几乎所有数据结构课本都要讨论的非常有用的数据结构。表驱动方法出于特定的目的来使用表，程序员们经常谈到“表驱动”方法，但是课本中却从未提到过什么是“表驱动”方法。来自 Google 的解释：表驱动法是一种编程模式，它的本质是，从表里查询信息来代替逻辑语句（if,case）。
+      什么叫表驱动法表驱动法，又称之为表驱动、表驱动方法。“表”是几乎所有数据结构课本都要讨论的非常有用的数据结构。表驱动方法出于特定的目的来使用表，程序员们经常谈到“表驱动”方法，但是课本中却从未提到过什么是“表驱动”方法。来自 Google 的解释：表驱动法是一种编程模式，它的本质是，从表里查询信息来代替逻辑语句（if,case）。
 先来看个案例：
-通过月份来获取当月的天数（仅作为案例演示，......
+通过月份来获取当月的天数（仅作为案例演示，获......
     </div>
   </a>
   
@@ -801,39 +824,6 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
   <div class="tags">
     
     <a href="/tags/#Java 杂记" title="Java 杂记">Java 杂记</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Calling-Third-party-API-2-Java-API-Core-Java-APIs-for-making-Java-http-requests/">
-    <h2 class="post-title">
-      [Calling Third-party API - Java API] 2 Core Java APIs for making Java http requests
-    </h2>
-    <h3 class="post-subtitle">
-      A URLConnection with support for HTTP-specific features. An HttpClient can be used to send requests and retrieve their responses...
-    </h3>
-    <div class="post-content-preview">
-      Since Java 1.1 there has been an HTTP client in the core libraries provided with the JDK. With Java 11 a new client was added. One of these might be a good choice if you are sensitive about adding ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-11-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Calling Third-party API" title="Calling Third-party API">Calling Third-party API</a>
     
   </div>
   
@@ -896,6 +886,10 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -906,10 +900,6 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
     
     <a href="../../en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../en/Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1281,7 +1271,7 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

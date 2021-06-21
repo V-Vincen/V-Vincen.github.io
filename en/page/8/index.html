@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,44 @@
   <!-- top end -->
   
 
+  <a href="/en/反射、自定义注解、Lambda-结合练习/">
+    <h2 class="post-title">
+      反射、自定义注解、Lambda 结合练习
+    </h2>
+    <h3 class="post-subtitle">
+      Reflect、Annotation and Lambda
+    </h3>
+    <div class="post-content-preview">
+      比较同一类型，两个对象中不同的属性值12345678/** * @author vincent */@Retention(RetentionPolicy.RUNTIME)public @interface TransferETC &#123;    String name();    boolean required() default true;&#125;
+123456789101112......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-08-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Annotation" title="Annotation">Annotation</a>
+    
+    <a href="/tags/#JDK8" title="JDK8">JDK8</a>
+    
+    <a href="/tags/#Reflect" title="Reflect">Reflect</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Java-杂记-Java-中精度丢失问题/">
     <h2 class="post-title">
       [Java 杂记] Java 中精度丢失问题
@@ -491,8 +529,7 @@
     </h3>
     <div class="post-content-preview">
       Java 开发过程中我们有时会遇到一些有必要的运算，而一些项目尤其是金融相关的项目对这些运算的精度要求较高。那么为什么会出现精度丢失的情况，我们又该如何解决这种问题呢？
-问题原因
-首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近......
+问题原因首先计算机进行的是二进制运算，我们输入的十进制数字会先转换成二进制，进行运算后再转换为十进制输出。 Float 和 Double 提供了快速的运算，然而问题在于转换为二进制的时候，有些数字不能完全转换，只能无限接近于......
     </div>
   </a>
   
@@ -525,19 +562,12 @@
       How to use analytics and sitemap...
     </h3>
     <div class="post-content-preview">
-      Google Analytics Settings
-代码（脚本）嵌入网站中
-
-
+      Google Analytics Settings代码（脚本）嵌入网站中
 登录谷歌分析平台，创建用户。
-
-
-获取代码（脚本）。
-
-
+获取代码（脚本）。  
 
 hexo-theme-livemylife 主题 head.ejs 文件中，已经添加了下面的 js 脚本。
-  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt......
+  123456789&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;&lt;scri......
     </div>
   </a>
   
@@ -610,10 +640,8 @@ CDN：CDN 的全称是 Content Delivery Network，即内容分发网络。CDN �
       How to deploy hexo...
     </h3>
     <div class="post-content-preview">
-      Github Pages 部署
-如果对 Github Pages 还不是很了解的话，可以先参考 [Hexo] 2 开始搭建 Github Pages。很多同学都不会满足于让其他人用 username.github.io 这样奇奇怪怪的域名来访问自己的个人博客。
-购买个性域名
-这里推荐 阿里云，毕竟国内大公司，另外还有很多人推荐的 GoDaddy 也可以，这里再推荐一个 NameSilo。本篇......
+      Github Pages 部署如果对 Github Pages 还不是很了解的话，可以先参考 [Hexo] 2 开始搭建 Github Pages。很多同学都不会满足于让其他人用 username.github.io 这样奇奇怪怪的域名来访问自己的个人博客。
+购买个性域名这里推荐 阿里云，毕竟国内大公司，另外还有很多人推荐的 GoDaddy 也可以，这里再推荐一个 NameSilo。本篇以阿......
     </div>
   </a>
   
@@ -649,18 +677,14 @@ CDN：CDN 的全称是 Content Delivery Network，即内容分发网络。CDN �
     </h3>
     <div class="post-content-preview">
       准备工作
-
-
 安装 JDK
-Charles 由 Java 开发，请先安装好 JDK（笔者 JDK 版本为 1.8.0_91）。
-
+  Charles 由 Java 开发，请先安装好 JDK（笔者 JDK 版本为 1.8.0_91）。
 
 关闭 VPN/代理
-切记： 为了正常使用 Charles，请关闭自己的 VPN 或者其他代理设置。
+  切记： 为了正常使用 Charles，请关闭自己的 VPN 或者其他代理设置。
 
 
-Charles 客户端配置
-安装好 Charles 后，在菜单栏勾选 Proxy -&gt; macOS Proxy，macOS 系统 HTTP/HTTPS ......
+Charles 客户端配置安装好 Charles 后，在菜单栏勾选 Proxy -&gt; macOS Proxy，macOS 系统 HTTP/HTTPS ......
     </div>
   </a>
   
@@ -727,8 +751,7 @@ Charles 客户端配置
     </h3>
     <div class="post-content-preview">
       在 [Atom] 1 Atom 中，对 Atom 已经有了大致的了解。今天我重点介绍一个插件，我们千辛万苦才配置好的 Atom，哪天电脑出了问题，需要重新安装配置 Atom，相信这个过程你一定不想来第二遍，所以我们的备份插件 sync-settings 就闪亮登场了，它的配置不麻烦，但过程比较曲折，所以提出来详细说明。
-sync-settings
-sync-settings 的备份，其实是把......
+sync-settingssync-settings 的备份，其实是把 ......
     </div>
   </a>
   
@@ -761,15 +784,14 @@ sync-settings 的备份，其实是把......
       A hackable text editor for the 21st Century...
     </h3>
     <div class="post-content-preview">
-      Atom 介绍
-Atom 是 Github 开源的文本编辑器，这个编辑器完全是使用Web技术构建的（基于Node-Webkit）。启动速度快，提供很多常用功能的插件和主题，可以说 Atom 已经足以胜任“半个 IDE”了。
+      Atom 介绍Atom 是 Github 开源的文本编辑器，这个编辑器完全是使用Web技术构建的（基于Node-Webkit）。启动速度快，提供很多常用功能的插件和主题，可以说 Atom 已经足以胜任“半个 IDE”了。
 
 个人感觉有如下几个优点：
 
 多平台支持（Windows、Mac、Linux）
 界面美观、现代化,使用舒适
 多文件管理（Atom 提供了文件树列表的功能）
-设置管理很方便......
+设置管理很方便，......
     </div>
   </a>
   
@@ -802,52 +824,13 @@ Atom 是 Github 开源的文本编辑器，这个编辑器完全是使用Web技�
       npm is the package manager for Node.js...
     </h3>
     <div class="post-content-preview">
-      npm 命令
-npm init（初始化）
-npm init 引导输出一个 package.json 文件。
-1234567➜  jsDeliver git:(master) npm init --helpnpm init [--force|-f|--yes|-y|--scope]npm init &lt;@scope&gt; (same as &#96;npx &lt;@scope&gt;&......
+      npm 命令npm init（初始化）npm init 引导输出一个 package.json 文件。1234567➜  jsDeliver git:(master) npm init --helpnpm init [--force|-f|--yes|-y|--scope]npm init &lt;@scope&gt; (same as &#96;npx &lt;@scope&gt;&#x2......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by Mr.Vincent on
     2020-05-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#npm" title="npm">npm</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/npm-1-npm/">
-    <h2 class="post-title">
-      [npm] 1 npm
-    </h2>
-    <h3 class="post-subtitle">
-      npm is the package manager for Node.js...
-    </h3>
-    <div class="post-content-preview">
-      前言
-随着前端工程的发展，npm 已然成为每个前端开发者的必备技能，然而大多数人对它的使用也只是停留在使用 npm 安装一些依赖包而已。作为全世界最大规模的包管理器，每周大约有30亿次的下载量，npm 的功能远不止安装依赖这么简单，本文的目的就是介绍 npm 更多的功能。
-npm 安装和管理
-npm 是 Node.js 自带的一个包管理工具，在 Node.js 官网 安装 Node.js 后......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-05-11
   </p>
   <div class="tags">
     
@@ -914,6 +897,10 @@ npm 是 Node.js 自带的一个包管理工具，在 Node.js 官网 安装 Node.
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -924,10 +911,6 @@ npm 是 Node.js 自带的一个包管理工具，在 Node.js 官网 安装 Node.
     
     <a href="../../Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1299,7 +1282,7 @@ npm 是 Node.js 自带的一个包管理工具，在 Node.js 官网 安装 Node.
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

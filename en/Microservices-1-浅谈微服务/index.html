@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -477,50 +477,35 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="微服务架构的概念">微服务架构的概念</h2>
-<p><img src="microservices.png" alt="microservices.png"><br>
-微服务架构是一种架构概念，旨在通过将功能分解到各个离散的服务中以实现对解决方案的解耦。它的主要作用是将功能分解到离散的各个服务当中，从而降低系统的耦合性，并提供更加灵活的服务支持。</p>
-<h3 id="概念">概念</h3>
-<p>把一个大型的单个应用程序和服务拆分为数个甚至数十个的支持微服务，它可扩展单个组件而不是整个的应用程序堆栈，从而满足服务等级协议。</p>
-<h3 id="定义">定义</h3>
-<p>围绕业务领域组件来创建应用，这些应用可独立地进行开发、管理和迭代。在分散的组件中使用云架构和平台式部署、管理和服务功能，使产品交付变得更加简单。</p>
-<h3 id="本质">本质</h3>
-<p>用一些功能比较明确、业务比较精练的服务去解决更大、更实际的问题。</p>
+        <h2 id="微服务架构的概念"><a href="#微服务架构的概念" class="headerlink" title="微服务架构的概念"></a>微服务架构的概念</h2><p><img src="microservices.png" alt="microservices.png"><br>微服务架构是一种架构概念，旨在通过将功能分解到各个离散的服务中以实现对解决方案的解耦。它的主要作用是将功能分解到离散的各个服务当中，从而降低系统的耦合性，并提供更加灵活的服务支持。</p>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>把一个大型的单个应用程序和服务拆分为数个甚至数十个的支持微服务，它可扩展单个组件而不是整个的应用程序堆栈，从而满足服务等级协议。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>围绕业务领域组件来创建应用，这些应用可独立地进行开发、管理和迭代。在分散的组件中使用云架构和平台式部署、管理和服务功能，使产品交付变得更加简单。</p>
+<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p>用一些功能比较明确、业务比较精练的服务去解决更大、更实际的问题。</p>
 <p>PS： 微服务这个概念是 2012 年出现的，作为加快 Web 和移动应用程序开发进程的一种方法，2014 年开始受到各方的关注，同年为微服务的元年。</p>
-<h2 id="传统架构与微服务架构的区别">传统架构与微服务架构的区别</h2>
-<h3 id="系统架构需要遵循的三个标准">系统架构需要遵循的三个标准</h3>
-<ul>
+<h2 id="传统架构与微服务架构的区别"><a href="#传统架构与微服务架构的区别" class="headerlink" title="传统架构与微服务架构的区别"></a>传统架构与微服务架构的区别</h2><h3 id="系统架构需要遵循的三个标准"><a href="#系统架构需要遵循的三个标准" class="headerlink" title="系统架构需要遵循的三个标准"></a>系统架构需要遵循的三个标准</h3><ul>
 <li>提高敏捷性：及时响应业务需求，促进企业发展</li>
 <li>提升用户体验：提升用户体验，减少用户流失</li>
 <li>降低成本：降低增加产品、客户或业务方案的成本</li>
 </ul>
-<h3 id="传统的开发模式">传统的开发模式</h3>
-<p>先来看看传统的 WEB 开发方式，通过对比比较容易理解什么是 <strong>微服务架构</strong>。和 <strong>微服务</strong> 相对应的，这种方式一般被称为 <strong>单体式开发</strong>（Monolithic）。</p>
-<p>既所有的功能打包在一个 WAR 包里，基本没有外部依赖（除了容器），部署在一个 JavaEE 容器（Tomcat，JBoss，WebLogic）里，包含了 DO/DAO，Service，UI 等所有逻辑。<br>
-<img src="1.png" alt="1"></p>
-<h4 id="优点">优点</h4>
-<ul>
+<h3 id="传统的开发模式"><a href="#传统的开发模式" class="headerlink" title="传统的开发模式"></a>传统的开发模式</h3><p>先来看看传统的 WEB 开发方式，通过对比比较容易理解什么是 <strong>微服务架构</strong>。和 <strong>微服务</strong> 相对应的，这种方式一般被称为 <strong>单体式开发</strong>（Monolithic）。</p>
+<p>既所有的功能打包在一个 WAR 包里，基本没有外部依赖（除了容器），部署在一个 JavaEE 容器（Tomcat，JBoss，WebLogic）里，包含了 DO/DAO，Service，UI 等所有逻辑。<br><img src="1.png" alt="1"></p>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
 <li>开发简单，集中式管理</li>
 <li>基本不会重复开发</li>
 <li>功能都在本地，没有分布式的管理和调用消耗</li>
 </ul>
-<h4 id="缺点">缺点</h4>
-<ul>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
 <li>效率低：开发都在同一个项目改代码，相互等待，冲突不断</li>
 <li>维护难：代码功功能耦合在一起，新人不知道何从下手</li>
 <li>不灵活：构建时间长，任何小修改都要重构整个项目，耗时</li>
 <li>稳定性差：一个微小的问题，都可能导致整个应用挂掉</li>
 <li>扩展性不够：无法满足高并发下的业务需求</li>
 </ul>
-<h3 id="微服务架构">微服务架构</h3>
-<h4 id="目的">目的</h4>
-<p>有效的拆分应用，实现敏捷开发和部署<br>
-<img src="2.png" alt="2"></p>
-<h4 id="开发和交付中的伸缩立方">开发和交付中的伸缩立方</h4>
-<p><img src="3.png" alt="3"></p>
+<h3 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>有效的拆分应用，实现敏捷开发和部署<br><img src="2.png" alt="2"></p>
+<h4 id="开发和交付中的伸缩立方"><a href="#开发和交付中的伸缩立方" class="headerlink" title="开发和交付中的伸缩立方"></a>开发和交付中的伸缩立方</h4><p><img src="3.png" alt="3"></p>
 <ul>
 <li><strong>X轴</strong>： 运行多个负载均衡器之后的运行实例</li>
-<li><strong>Y轴</strong>： 将应用进一步分解为微服务（分库）</li>
+<li><strong>Y轴</strong>： 将应用进一步分解为微服务（分库） </li>
 <li><strong>Z轴</strong>： 大数据量时，将服务分区（分表）</li>
 </ul>
 

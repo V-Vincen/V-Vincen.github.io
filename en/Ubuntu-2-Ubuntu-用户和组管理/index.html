@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -411,7 +411,7 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">6</span> Minutes
+              Estimated Reading Time <span class="post-count">5</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
@@ -477,33 +477,18 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。</p>
-<h2 id="使用-Root-用户">使用 Root 用户</h2>
-<p>在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们使用。</p>
-<h3 id="设置-Root-账户密码">设置 Root 账户密码</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
-<h3 id="切换到-Root">切换到 Root</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure>
-<h3 id="设置允许远程登录-Root">设置允许远程登录 Root</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># Authentication:</span></span><br><span class="line">LoginGraceTime 120</span><br><span class="line"><span class="comment">#PermitRootLogin without-password    //注释此行</span></span><br><span class="line">PermitRootLogin yes                  //加入此行</span><br><span class="line">StrictModes yes</span><br></pre></td></tr></table></figure>
-<h3 id="重启服务">重启服务</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
-<h2 id="用户账户说明">用户账户说明</h2>
-<h3 id="普通用户：">普通用户：</h3>
-<p>普通用户在系统上的任务是进行普通操作</p>
-<h3 id="超级管理员：">超级管理员：</h3>
-<p>管理员在系统上的任务是对普通用户和整个系统进行管理。对系统具有绝对的控制权，能够对系统进行一切操作。用 root 表示，root 用户在系统中拥有最高权限，默认下 Ubuntu 用户的 root 用户是不能登录的。</p>
-<h3 id="安装时创建的系统用户：">安装时创建的系统用户：</h3>
-<p>此用户创建时被添加到 admin 组中，在 Ubuntu 中，admin 组中的用户默认是可以使用 sudo 命令来执行只有管理员才能执行的命令的。如果不使用 sudo 就是一个普通用户。</p>
-<h2 id="组账户说明">组账户说明</h2>
-<h3 id="私有组">私有组</h3>
-<p>当创建一个用户时没有指定属于哪个组，Linux 就会建立一个与用户同名的私有组，此私有组只含有该用户。</p>
-<h3 id="标准组">标准组</h3>
-<p>当创建一个用户时可以选定一个标准组，如果一个用户同时属于多个组时，登录后所属的组为主组，其他的为附加组。</p>
-<h2 id="账户系统文件说明">账户系统文件说明</h2>
-<h3 id="etc-passwd"><code>/etc/passwd</code></h3>
-<p>每一行代表一个账号，众多账号是系统正常运行所必须的，例如 bin，nobody 每行定义一个用户账户，此文件对所有用户可读。每行账户包含如下信息：</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。</p>
+<h2 id="使用-Root-用户"><a href="#使用-Root-用户" class="headerlink" title="使用 Root 用户"></a>使用 Root 用户</h2><p>在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们使用。</p>
+<h3 id="设置-Root-账户密码"><a href="#设置-Root-账户密码" class="headerlink" title="设置 Root 账户密码"></a>设置 Root 账户密码</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
+<h3 id="切换到-Root"><a href="#切换到-Root" class="headerlink" title="切换到 Root"></a>切换到 Root</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su</span><br></pre></td></tr></table></figure>
+<h3 id="设置允许远程登录-Root"><a href="#设置允许远程登录-Root" class="headerlink" title="设置允许远程登录 Root"></a>设置允许远程登录 Root</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line"><span class="comment"># Authentication:</span></span><br><span class="line">LoginGraceTime 120</span><br><span class="line"><span class="comment">#PermitRootLogin without-password    //注释此行</span></span><br><span class="line">PermitRootLogin yes                  //加入此行</span><br><span class="line">StrictModes yes</span><br></pre></td></tr></table></figure>
+<h3 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+<h2 id="用户账户说明"><a href="#用户账户说明" class="headerlink" title="用户账户说明"></a>用户账户说明</h2><h3 id="普通用户："><a href="#普通用户：" class="headerlink" title="普通用户："></a>普通用户：</h3><p>普通用户在系统上的任务是进行普通操作</p>
+<h3 id="超级管理员："><a href="#超级管理员：" class="headerlink" title="超级管理员："></a>超级管理员：</h3><p>管理员在系统上的任务是对普通用户和整个系统进行管理。对系统具有绝对的控制权，能够对系统进行一切操作。用 root 表示，root 用户在系统中拥有最高权限，默认下 Ubuntu 用户的 root 用户是不能登录的。</p>
+<h3 id="安装时创建的系统用户："><a href="#安装时创建的系统用户：" class="headerlink" title="安装时创建的系统用户："></a>安装时创建的系统用户：</h3><p>此用户创建时被添加到 admin 组中，在 Ubuntu 中，admin 组中的用户默认是可以使用 sudo 命令来执行只有管理员才能执行的命令的。如果不使用 sudo 就是一个普通用户。</p>
+<h2 id="组账户说明"><a href="#组账户说明" class="headerlink" title="组账户说明"></a>组账户说明</h2><h3 id="私有组"><a href="#私有组" class="headerlink" title="私有组"></a>私有组</h3><p>当创建一个用户时没有指定属于哪个组，Linux 就会建立一个与用户同名的私有组，此私有组只含有该用户。</p>
+<h3 id="标准组"><a href="#标准组" class="headerlink" title="标准组"></a>标准组</h3><p>当创建一个用户时可以选定一个标准组，如果一个用户同时属于多个组时，登录后所属的组为主组，其他的为附加组。</p>
+<h2 id="账户系统文件说明"><a href="#账户系统文件说明" class="headerlink" title="账户系统文件说明"></a>账户系统文件说明</h2><h3 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a><code>/etc/passwd</code></h3><p>每一行代表一个账号，众多账号是系统正常运行所必须的，例如 bin，nobody 每行定义一个用户账户，此文件对所有用户可读。每行账户包含如下信息：</p>
 <p><code>root:x:0:0:root:/root:/bin/bash</code></p>
 <ul>
 <li><strong>用户名</strong>： 就是账号，用来对应 UID，root UID 是 0。</li>
@@ -514,14 +499,12 @@
 <li><strong>宿主目录（主文件夹）</strong>： 用户登录系统后所进入的目录 root 在 /root/itcast</li>
 <li><strong>命令解释器（shell）</strong>： 指定该用户使用的 shell ，默认的是 /bin/bash</li>
 </ul>
-<h3 id="etc-shadow"><code>/etc/shadow</code></h3>
-<p>为了增加系统的安全性，用户口令通常用 shadow passwords 保护。只有 root 可读。每行包含如下信息：</p>
+<h3 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a><code>/etc/shadow</code></h3><p>为了增加系统的安全性，用户口令通常用 shadow passwords 保护。只有 root 可读。每行包含如下信息：</p>
 <p><code>root:$6$Reu571.V$Ci/kd.OTzaSGU.TagZ5KjYx2MLzQv2IkZ24E1.yeTT3Pp4o/yniTjus/rRaJ92Z18MVy6suf1W5uxxurqssel.:17465:0:99999:7:::</code></p>
 <ul>
 <li><strong>账号名称</strong>：需要和 /etc/passwd 一致。</li>
-<li><strong>密码</strong>：经过加密，虽然加密，但不表示不会被破解，该文件默认权限如下：
-<ul>
-<li>-rw------- 1 root root 1560 Oct 26 17:20 passwd</li>
+<li><strong>密码</strong>：经过加密，虽然加密，但不表示不会被破解，该文件默认权限如下：<ul>
+<li>-rw———- 1 root root 1560 Oct 26 17:20 passwd</li>
 <li>只有root能都读写</li>
 </ul>
 </li>
@@ -533,8 +516,7 @@
 <li><strong>密码到期禁用账户时间</strong>：在用户口令过期后到禁用账户的天数</li>
 <li><strong>保留</strong></li>
 </ul>
-<h3 id="etc-group"><code>/etc/group</code></h3>
-<p>用户组的配置文件</p>
+<h3 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a><code>/etc/group</code></h3><p>用户组的配置文件</p>
 <p><code>root:x:0:</code></p>
 <ul>
 <li><strong>用户组名称</strong></li>
@@ -542,8 +524,7 @@
 <li><strong>GID</strong>： 用户组的ID</li>
 <li><strong>此用户支持的账号名称</strong>：一个账号可以加入多个用户组，例如想要 itcast 加入 root 这个用户组，将该账号填入该字段即可 root❌0:root, icast 将用户进行分组是 Linux 对用户进行管理及控制访问权限的一种手段。一个中可以有多个用户，一个用户可以同时属于多个组。该文件对所有用户可读。</li>
 </ul>
-<h3 id="etc-gshadow"><code>/etc/gshadow</code></h3>
-<p>该文件用户定义用户组口令，组管理员等信息只有root用户可读。</p>
+<h3 id="etc-gshadow"><a href="#etc-gshadow" class="headerlink" title="/etc/gshadow"></a><code>/etc/gshadow</code></h3><p>该文件用户定义用户组口令，组管理员等信息只有root用户可读。</p>
 <p><code>root:\*::</code></p>
 <ul>
 <li><strong>用户组名</strong></li>
@@ -551,25 +532,18 @@
 <li><strong>用户组管理员的账号</strong></li>
 <li><strong>用户组所属账号</strong></li>
 </ul>
-<h2 id="账户管理常用命令">账户管理常用命令</h2>
-<h3 id="增加用户">增加用户</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">useradd 用户名</span><br><span class="line">useradd -u (UID号)</span><br><span class="line">useradd -p (口令)</span><br><span class="line">useradd -g (分组)</span><br><span class="line">useradd -s (SHELL)</span><br><span class="line">useradd -d (用户目录)</span><br></pre></td></tr></table></figure>
+<h2 id="账户管理常用命令"><a href="#账户管理常用命令" class="headerlink" title="账户管理常用命令"></a>账户管理常用命令</h2><h3 id="增加用户"><a href="#增加用户" class="headerlink" title="增加用户"></a>增加用户</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">useradd 用户名</span><br><span class="line">useradd -u (UID号)</span><br><span class="line">useradd -p (口令)</span><br><span class="line">useradd -g (分组)</span><br><span class="line">useradd -s (SHELL)</span><br><span class="line">useradd -d (用户目录)</span><br></pre></td></tr></table></figure>
 <p>如：<code>useradd lusifer</code></p>
 <p>增加用户名为 lusifer 的账户</p>
-<h3 id="修改用户">修改用户</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">usermod -u (新UID)</span><br><span class="line">usermod -d (用户目录)</span><br><span class="line">usermod -g (组名)</span><br><span class="line">usermod -s (SHELL)</span><br><span class="line">usermod -p (新口令)</span><br><span class="line">usermod -l (新登录名)</span><br><span class="line">usermod -L (锁定用户账号密码)</span><br><span class="line">usermod -U (解锁用户账号)</span><br></pre></td></tr></table></figure>
+<h3 id="修改用户"><a href="#修改用户" class="headerlink" title="修改用户"></a>修改用户</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">usermod -u (新UID)</span><br><span class="line">usermod -d (用户目录)</span><br><span class="line">usermod -g (组名)</span><br><span class="line">usermod -s (SHELL)</span><br><span class="line">usermod -p (新口令)</span><br><span class="line">usermod -l (新登录名)</span><br><span class="line">usermod -L (锁定用户账号密码)</span><br><span class="line">usermod -U (解锁用户账号)</span><br></pre></td></tr></table></figure>
 <p>如：<code>usermod -u 1024 -g group2 -G root lusifer</code></p>
 <p>将 lusifer 用户 uid 修改为 1024，默认组改为系统中已经存在的 group2，并且加入到系统管理员组</p>
-<h3 id="删除用户">删除用户</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel 用户名 (删除用户账号)</span><br><span class="line">userdel -r 删除账号时同时删除目录</span><br></pre></td></tr></table></figure>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel 用户名 (删除用户账号)</span><br><span class="line">userdel -r 删除账号时同时删除目录</span><br></pre></td></tr></table></figure>
 <p>如：<code>userdel -r lusifer</code></p>
 <p>删除用户名为 lusifer 的账户并同时删除 lusifer 的用户目录</p>
-<h3 id="组账户维护">组账户维护</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">groupadd 组账户名 (创建新组)</span><br><span class="line">groupadd -g 指定组GID</span><br><span class="line">groupmod -g 更改组的GID</span><br><span class="line">groupmod -n 更改组账户名</span><br><span class="line">groupdel 组账户名 (删除指定组账户)</span><br></pre></td></tr></table></figure>
-<h3 id="口令维护">口令维护</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">passwd 用户账户名 (设置用户口令)</span><br><span class="line">passwd -l 用户账户名 (锁定用户账户)</span><br><span class="line">passwd -u 用户账户名 (解锁用户账户)</span><br><span class="line">passwd -d 用户账户名 (删除账户口令)</span><br><span class="line">gpasswd -a 用户账户名 组账户名 (将指定用户添加到指定组)</span><br><span class="line">gpasswd -d 用户账户名 组账户名 (将用户从指定组中删除)</span><br><span class="line">gpasswd -A 用户账户名 组账户名 (将用户指定为组的管理员)</span><br></pre></td></tr></table></figure>
-<h3 id="用户和组状态">用户和组状态</h3>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su 用户名(切换用户账户)</span><br><span class="line">id 用户名(显示用户的UID，GID)</span><br><span class="line">whoami (显示当前用户名称)</span><br><span class="line">groups (显示用户所属组)</span><br></pre></td></tr></table></figure>
+<h3 id="组账户维护"><a href="#组账户维护" class="headerlink" title="组账户维护"></a>组账户维护</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">groupadd 组账户名 (创建新组)</span><br><span class="line">groupadd -g 指定组GID</span><br><span class="line">groupmod -g 更改组的GID</span><br><span class="line">groupmod -n 更改组账户名</span><br><span class="line">groupdel 组账户名 (删除指定组账户)</span><br></pre></td></tr></table></figure>
+<h3 id="口令维护"><a href="#口令维护" class="headerlink" title="口令维护"></a>口令维护</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">passwd 用户账户名 (设置用户口令)</span><br><span class="line">passwd -l 用户账户名 (锁定用户账户)</span><br><span class="line">passwd -u 用户账户名 (解锁用户账户)</span><br><span class="line">passwd -d 用户账户名 (删除账户口令)</span><br><span class="line">gpasswd -a 用户账户名 组账户名 (将指定用户添加到指定组)</span><br><span class="line">gpasswd -d 用户账户名 组账户名 (将用户从指定组中删除)</span><br><span class="line">gpasswd -A 用户账户名 组账户名 (将用户指定为组的管理员)</span><br></pre></td></tr></table></figure>
+<h3 id="用户和组状态"><a href="#用户和组状态" class="headerlink" title="用户和组状态"></a>用户和组状态</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">su 用户名(切换用户账户)</span><br><span class="line">id 用户名(显示用户的UID，GID)</span><br><span class="line">whoami (显示当前用户名称)</span><br><span class="line">groups (显示用户所属组)</span><br></pre></td></tr></table></figure>
 
         <hr>
         <!-- Pager -->

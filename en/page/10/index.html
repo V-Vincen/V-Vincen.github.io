@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -479,6 +479,43 @@
   
   <!-- top start (article top hot config) -->
   
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/en/JDK8-6-Lambda-表达式练习/">
+    <h2 class="post-title">
+      [JDK8] 6 Lambda 表达式练习
+    </h2>
+    <h3 class="post-subtitle">
+      Practice something...
+    </h3>
+    <div class="post-content-preview">
+      先来写个基本类1234567891011121314151617181920212223242526public class LambdaTest &#123;    @Data    class Student &#123;        private Integer id;        private String name;        private Integer age; ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2020-04-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#JDK8" title="JDK8">JDK8</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
   <!-- top end -->
   
 
@@ -490,12 +527,9 @@
       FastJson 的用法
     </h3>
     <div class="post-content-preview">
-      前言
-FastJson的介绍
-JSON 协议使用方便，越来越流行，JSON 的处理器有很多,这里我介绍一下 FastJson，FastJson 是阿里的开源框架，被不少企业使用,是一个极其优秀的Json 框架，Github 地址: https://github.com/alibaba/fastjson
+      前言FastJson的介绍JSON 协议使用方便，越来越流行，JSON 的处理器有很多,这里我介绍一下 FastJson，FastJson 是阿里的开源框架，被不少企业使用,是一个极其优秀的Json 框架，Github 地址: https://github.com/alibaba/fastjson
 FastJson 的特点
-
-FastJson 速度快，无论序列化和反序列化，都是当之无愧的......
+FastJson 速度快，无论序列化和反序列化，都是当之无愧的 fa......
     </div>
   </a>
   
@@ -528,16 +562,10 @@ FastJson 速度快，无论序列化和反序列化，都是当之无愧的.....
       Mac 进程、端口、上传下载等命令
     </h3>
     <div class="post-content-preview">
-      进程命令
-Mac 查看进程号
-12ps -ef | grep 软件或者进程号ps aux | grep 软件或者进程号
-查看进程监听的端口
-12sudo lsof -nP -p 进程号 | grep LISTENsudo lsof -nP | grep LISTEN | grep 进程号
-或者
-1netstat -ltnp | grep 进程号
-端口命令
-Mac 查看端口号
-1sudo ls......
+      进程命令Mac 查看进程号12ps -ef | grep 软件或者进程号ps aux | grep 软件或者进程号
+查看进程监听的端口12sudo lsof -nP -p 进程号 | grep LISTENsudo lsof -nP | grep LISTEN | grep 进程号
+或者1netstat -ltnp | grep 进程号
+端口命令Mac 查看端口号1sudo lsof -i:......
     </div>
   </a>
   
@@ -570,18 +598,11 @@ Mac 查看端口号
       Mac 安装配置 Nginx
     </h3>
     <div class="post-content-preview">
-      用 Homebrew 来安装 Nginx
-安装
-1brew install nginx
-查看 nginx 版本
-1nginx -v
-启动 nginx
-1nginx
-也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：
-1brew services start nginx
-
-查看 nginx 是否启动成功
-在浏览器中访问：在浏览器中访问：ht......
+      用 Homebrew 来安装 Nginx安装1brew install nginx
+查看 nginx 版本1nginx -v
+启动 nginx1nginx
+也可以使用下面的命令启动，但是配置文件 nginx.conf 修改后用这个命令执行不生效，故不建议使用：1brew services start nginx
+查看 nginx 是否启动成功在浏览器中访问：在浏览器中访问：http://lo......
     </div>
   </a>
   
@@ -614,12 +635,8 @@ Mac 查看端口号
       CXF、AXIS 客户端开发
     </h3>
     <div class="post-content-preview">
-      JAX-WS 规范
-AX-WS（Java API For XML Web Service），JAX-WS 规范是一组 XML web services 的 JAVA API，它运行时实现会将这些 API 的调用转换成为对应的 SOAP 消息，是 Sun 公司提出的一套关于 WebService 的开发标准。
-CXF 开发客户端
-创建 Maven 工程
-pom.xml
-123456789101......
+      JAX-WS 规范AX-WS（Java API For XML Web Service），JAX-WS 规范是一组 XML web services 的 JAVA API，它运行时实现会将这些 API 的调用转换成为对应的 SOAP 消息，是 Sun 公司提出的一套关于 WebService 的开发标准。
+CXF 开发客户端创建 Maven 工程pom.xml1234567891011121......
     </div>
   </a>
   
@@ -654,12 +671,9 @@ pom.xml
       SOAP 消息和 WSDL 文件解析
     </h3>
     <div class="post-content-preview">
-      SOAP 消息的调试抓取
-使用 Postman 测试 WebService 接口
+      SOAP 消息的调试抓取使用 Postman 测试 WebService 接口
 
-
-request
-12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.e......
+request12345678910&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://service.cxf.wsservice.exam......
     </div>
   </a>
   
@@ -695,9 +709,8 @@ request
     </h3>
     <div class="post-content-preview">
       CXF 简介
-
 Apache CXF = Celtix + XFire
-Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache CXF 了，以下简称为 CXF。CXF 继承了 Celtix 和 XFire 两大开源项目的精华，提供了对 JAX-WS 全面的支持，并且提供了多种 Binding 、DataBinding、Transport 以及各种......
+Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache CXF 了，以下简称为 CXF。CXF 继承了 Celtix 和 XFire 两大开源项目的精华，提供了对 JAX-WS 全面的支持，并且提供了多种 Binding 、DataBinding、Transport 以及各种 ......
     </div>
   </a>
   
@@ -732,11 +745,9 @@ Apache CXF 的前身叫 Apache CeltiXfire，现在已经正式更名为 Apache C
       WebService
     </h3>
     <div class="post-content-preview">
-      WebService 概述
-WebService 是什么
-WebService 是一种跨编程语言和跨操作系统平台的远程调用技术。
+      WebService 概述WebService 是什么WebService 是一种跨编程语言和跨操作系统平台的远程调用技术。
 Web service 是一个平台独立的，低耦合的，自包含的、基于可编程的 web 的应用程序，可使用开放的 XML（标准通用标记语言下的一个子集）标准来描述、发布、发现、协调和配置这些应用程序，用于开发分布式的互操作的应用程序。
-Web Service 技术，能......
+Web Service 技术，能使得......
     </div>
   </a>
   
@@ -771,10 +782,9 @@ Web Service 技术，能......
       Annotation
     </h3>
     <div class="post-content-preview">
-      什么是注解（Annotation）
-Java注解是什么，以下是引用自维基百科的内容：
+      什么是注解（Annotation）Java注解是什么，以下是引用自维基百科的内容：
 
-Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的特殊语法元数据。Java 语言中的类、方法、变量、参数和包等都可以被标注。和 Javadoc 不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时......
+Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的特殊语法元数据。Java 语言中的类、方法、变量、参数和包等都可以被标注。和 Javadoc 不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java 虚拟机可以保留标注内容，在运行时可......
     </div>
   </a>
   
@@ -807,45 +817,8 @@ Java 注解又称 Java 标注，是 JDK5.0 版本开始支持加入源代码的�
       A container object which may or may not contain a non-null value.
     </h3>
     <div class="post-content-preview">
-      概述
-到目前为止，臭名昭著的空指针异常是导致 Java 应用程序失败的最常见原因。以前，为了解决空指针异常，Google 公司著名的 Guava 项目引入了 Optional 类， Guava 通过使用检查空值的方式来防止代码污染，它鼓励程序员写更干净的代码。受到 Google Guava 的启发，Optional 类已经成为 Java 8 类库的一部分。
-Optional&lt;T&gt;......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-03-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JDK8" title="JDK8">JDK8</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/JDK8-4-Stream-API/">
-    <h2 class="post-title">
-      [JDK8] 4 Stream API
-    </h2>
-    <h3 class="post-subtitle">
-      Stream API
-    </h3>
-    <div class="post-content-preview">
-      Stream API 说明
-Java 8 中有两大最为重要的改变。第一个是 Lambda 表达式；另一个则是 Stream API。
-Stream API（java.util.stream）把整正真的函数式编程风格引入到 Java 中。这是目前为止对 Java 类库最好的补充，因为 Stream API 可以极大提供 Java 程序员的生成力，让程序员写出高效率、干净、简洁的代码。
-Stre......
+      概述到目前为止，臭名昭著的空指针异常是导致 Java 应用程序失败的最常见原因。以前，为了解决空指针异常，Google 公司著名的 Guava 项目引入了 Optional 类， Guava 通过使用检查空值的方式来防止代码污染，它鼓励程序员写更干净的代码。受到 Google Guava 的启发，Optional 类已经成为 Java 8 类库的一部分。
+Optional&lt;T&gt; ......
     </div>
   </a>
   
@@ -918,6 +891,10 @@ Stre......
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -928,10 +905,6 @@ Stre......
     
     <a href="../../Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1303,7 +1276,7 @@ Stre......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

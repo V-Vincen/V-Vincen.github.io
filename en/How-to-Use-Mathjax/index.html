@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -415,7 +415,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">709</span> In Total
+              Words <span class="post-count">700</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -479,56 +479,30 @@
 
         <p>博主本人自己改编的 <code>hexo-theme-livemylife</code> 主题，有小伙伴在用时，问我是否支持 Mathjax 数学公式，由于工作原因未能增加此功能，在此次的 <code>hexo-theme-livemylife</code> 主题升级中，博主对之前小伙伴们提出的问题做了一个统一的修复和升级。那么让我们来看看 Mathjax 在 <code>hexo-theme-livemylife</code> 主题中是如何应用的。</p>
 <blockquote>
-<p>Mathjax: Beautiful and accessible math in all browsers.<br>
-A JavaScript display engine for mathematics that works in all browsers.<br>
-No more setup for readers. It just works.</p>
+<p>Mathjax: Beautiful and accessible math in all browsers.<br>A JavaScript display engine for mathematics that works in all browsers.<br>No more setup for readers. It just works.</p>
 </blockquote>
 <p>上述是 Mathjax 官网原文解释。官网地址：<a target="_blank" rel="noopener" href="https://www.mathjax.org/">https://www.mathjax.org/</a></p>
-<h2 id="安装渲染器">安装渲染器</h2>
-<p>hexo 默认的渲染器是 marked，并不支持 mathjax。kramed 是在 marked 基础上修改的，支持了mathjax。在 hexo 工程目录下的 node_modules 中可以找到对应的渲染器文件夹。同时在你的工程目录下用以下命令安装 kramed。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>如果你安装了 hexo-math 包，卸载再安装 hexo-renderer-mathjax 包。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure>
-<p>更新 mathjax 的 CDN，打开 <code>node_modules/hexo-renderer-mathjax/mathjax.html</code>（可做可不做）。但是，我把 http 改成 https 了：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>改成：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装渲染器"><a href="#安装渲染器" class="headerlink" title="安装渲染器"></a>安装渲染器</h2><p>hexo 默认的渲染器是 marked，并不支持 mathjax。kramed 是在 marked 基础上修改的，支持了mathjax。在 hexo 工程目录下的 node_modules 中可以找到对应的渲染器文件夹。同时在你的工程目录下用以下命令安装 kramed。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure></p>
+<p>如果你安装了 hexo-math 包，卸载再安装 hexo-renderer-mathjax 包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure></p>
+<p>更新 mathjax 的 CDN，打开 <code>node_modules/hexo-renderer-mathjax/mathjax.html</code>（可做可不做）。但是，我把 http 改成 https 了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>改成：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>如果小伙伴你用的是博主本人写的 <code>hexo-theme-livemylife</code> 主题的话，那么上述步骤，博主本人已经帮你完成了。那接下来让我们一起看几个渲染后的 mathjax 案例：</p>
-<p><em>Example1:</em></p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When <span class="symbol">$</span>a \<span class="keyword">ne</span> <span class="number">0</span><span class="symbol">$</span>, there are two solutions to \(ax^<span class="number">2</span> + bx + c = <span class="number">0</span>\) <span class="keyword">and</span> they are</span><br><span class="line"><span class="symbol">$</span><span class="symbol">$</span>x = &#123;-b \pm \<span class="built_in">sqrt</span>&#123;b^<span class="number">2</span><span class="number">-4</span>ac&#125; \over <span class="number">2</span>a&#125;.<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure>
-<p><em>Preview:</em><br>
-When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
-<p><em>Example2:</em></p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">$$f(<span class="params">x_1</span>,<span class="params">x_2</span>,\<span class="params">underbrace</span>&#123;\<span class="params">ldots</span>&#125;<span class="params">_</span>&#123;\<span class="params">rm</span> <span class="params">ldots</span>&#125; ,<span class="params">x_n</span>)</span> = x_1^<span class="number">2</span> + x_2^<span class="number">2</span> + \underbrace&#123;\cdots&#125;_&#123;\rm cdots&#125; + x_n^<span class="number">2</span>$$</span><br></pre></td></tr></table></figure>
-<p><em>Preview:</em><br>
-$$f(x_1,x_2,\underbrace{\ldots}<em>{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}</em>{\rm cdots} + x_n^2$$</p>
-<p><em>Example4:</em></p>
-<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">vmatrix ||、Bmatrix&#123;&#125;、pmatrix()</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p><em>Preview:</em><br>
-$$<br>
-\begin{bmatrix} 1&amp;x&amp;x^2\ 1&amp;y&amp;y^2\ 1&amp;z&amp;z^2 \end{bmatrix}<br>
-\<br>
-\begin{bmatrix} 1&amp;x&amp;x^2\\ 1&amp;y&amp;y^2\\ 1&amp;z&amp;z^2 \end{bmatrix}<br>
-\<br>
-vmatrix ||、Bmatrix{}、pmatrix()<br>
-$$</p>
-<p><em>Example5:</em></p>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">f(x)=</span><br><span class="line"><span class="symbol">\b</span>egin&#123;cases&#125;</span><br><span class="line">0&amp; <span class="symbol">\t</span>ext&#123;x=0&#125;<span class="symbol">\\</span><span class="symbol">\\</span></span><br><span class="line">1&amp; <span class="symbol">\t</span>ext&#123;x!=0&#125;</span><br><span class="line"><span class="symbol">\e</span>nd&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p><em>Preview:</em><br>
-$$<br>
-f(x)=<br>
-\begin{cases}<br>
-0&amp; \text{x=0}\\<br>
-1&amp; \text{x!=0}<br>
-\end{cases}<br>
-$$</p>
-<p><em>Example6:</em></p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span><span class="symbol">$</span>\lim_&#123;n \rightarrow +\infty&#125; \<span class="built_in">frac</span>&#123;<span class="number">1</span>&#125;&#123;n(n+<span class="number">1</span>)&#125;<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure>
-<p><em>Preview:</em><br>
-$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$</p>
-<p>更多用法可参考 mathjax 官网：<a target="_blank" rel="noopener" href="https://www.mathjax.org/">https://www.mathjax.org/</a><br>
-或者参考：<a target="_blank" rel="noopener" href="https://rmshadows.gitee.io/2020/Markdown/#%E6%9D%A5%E6%BA%90-2">https://rmshadows.gitee.io/2020/Markdown/#来源-2</a></p>
+<p><em>Example1:</em><br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">When <span class="symbol">$</span>a \<span class="keyword">ne</span> <span class="number">0</span><span class="symbol">$</span>, there are two solutions to \(ax^<span class="number">2</span> + bx + c = <span class="number">0</span>\) <span class="keyword">and</span> they are</span><br><span class="line"><span class="symbol">$</span><span class="symbol">$</span>x = &#123;-b \pm \<span class="built_in">sqrt</span>&#123;b^<span class="number">2</span><span class="number">-4</span>ac&#125; \over <span class="number">2</span>a&#125;.<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure><br><em>Preview:</em><br>When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are</p>
+<script type="math/tex; mode=display">x = {-b \pm \sqrt{b^2-4ac} \over 2a}.</script><p><em>Example2:</em><br><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">$$f(<span class="params">x_1</span>,<span class="params">x_2</span>,\<span class="params">underbrace</span>&#123;\<span class="params">ldots</span>&#125;<span class="params">_</span>&#123;\<span class="params">rm</span> <span class="params">ldots</span>&#125; ,<span class="params">x_n</span>)</span> = x_1^<span class="number">2</span> + x_2^<span class="number">2</span> + \underbrace&#123;\cdots&#125;_&#123;\rm cdots&#125; + x_n^<span class="number">2</span>$$</span><br></pre></td></tr></table></figure><br><em>Preview:</em></p>
+<script type="math/tex; mode=display">f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2</script><p><em>Example4:</em><br><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">\begin&#123;bmatrix&#125; 1<span class="variable">&amp;x</span><span class="variable">&amp;x</span>^2\\\\ 1<span class="variable">&amp;y</span><span class="variable">&amp;y</span>^2\\\\ 1<span class="variable">&amp;z</span><span class="variable">&amp;z</span>^2 \<span class="meta">end</span>&#123;bmatrix&#125;</span><br><span class="line">\\</span><br><span class="line">vmatrix ||、Bmatrix&#123;&#125;、pmatrix()</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><br><em>Preview:</em></p>
+<script type="math/tex; mode=display">
+\begin{bmatrix} 1&x&x^2\\ 1&y&y^2\\ 1&z&z^2 \end{bmatrix}
+\\
+\begin{bmatrix} 1&x&x^2\\\\ 1&y&y^2\\\\ 1&z&z^2 \end{bmatrix}
+\\
+vmatrix ||、Bmatrix{}、pmatrix()</script><p><em>Example5:</em><br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">f(x)=</span><br><span class="line"><span class="symbol">\b</span>egin&#123;cases&#125;</span><br><span class="line">0&amp; <span class="symbol">\t</span>ext&#123;x=0&#125;<span class="symbol">\\</span><span class="symbol">\\</span></span><br><span class="line">1&amp; <span class="symbol">\t</span>ext&#123;x!=0&#125;</span><br><span class="line"><span class="symbol">\e</span>nd&#123;cases&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure><br><em>Preview:</em></p>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+0& \text{x=0}\\\\
+1& \text{x!=0}
+\end{cases}</script><p><em>Example6:</em><br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span><span class="symbol">$</span>\lim_&#123;n \rightarrow +\infty&#125; \<span class="built_in">frac</span>&#123;<span class="number">1</span>&#125;&#123;n(n+<span class="number">1</span>)&#125;<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure><br><em>Preview:</em></p>
+<script type="math/tex; mode=display">\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}</script><p>更多用法可参考 mathjax 官网：<a target="_blank" rel="noopener" href="https://www.mathjax.org/">https://www.mathjax.org/</a><br>或者参考：<a target="_blank" rel="noopener" href="https://rmshadows.gitee.io/2020/Markdown/#%E6%9D%A5%E6%BA%90-2">https://rmshadows.gitee.io/2020/Markdown/#%E6%9D%A5%E6%BA%90-2</a></p>
 
 
         <hr>

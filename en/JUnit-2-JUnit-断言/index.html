@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -477,12 +477,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="什么是断言">什么是断言</h2>
-<hr>
+        <h2 id="什么是断言"><a href="#什么是断言" class="headerlink" title="什么是断言"></a>什么是断言</h2><hr>
 <p>断言是编程术语，表示为一些布尔表达式，程序员相信在程序中的某个特定点该表达式值为真，可以在任何时候启用和禁用断言验证，因此可以在测试时启用断言而在部署时禁用断言。同样，程序投入运行后，最终用户在遇到问题时可以重新启用断言。</p>
 <p>使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 false 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/JunitX）。</p>
-<h2 id="常用断言方法">常用断言方法</h2>
-<hr>
+<h2 id="常用断言方法"><a href="#常用断言方法" class="headerlink" title="常用断言方法"></a>常用断言方法</h2><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -525,10 +524,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="测试断言效果">测试断言效果</h2>
-<hr>
-<p>在之前的单元测试类中创建一个名为 <code>testAssert</code> 方法来查看断言效果</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"> * 测试断言</span><br><span class="line"> */</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssert</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String obj1 = <span class="string">&quot;junit&quot;</span>;</span><br><span class="line">    String obj2 = <span class="string">&quot;junit&quot;</span>;</span><br><span class="line">    String obj3 = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    String obj4 = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    String obj5 = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> var1 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> var2 = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span>[] arithmetic1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span>[] arithmetic2 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">    assertEquals(obj1, obj2);</span><br><span class="line"></span><br><span class="line">    assertSame(obj3, obj4);</span><br><span class="line"></span><br><span class="line">    assertNotSame(obj2, obj4);</span><br><span class="line"></span><br><span class="line">    assertNotNull(obj1);</span><br><span class="line"></span><br><span class="line">    assertNull(obj5);</span><br><span class="line"></span><br><span class="line">    assertTrue(<span class="string">&quot;为真&quot;</span>, var1 == var2);</span><br><span class="line"></span><br><span class="line">    assertArrayEquals(arithmetic1, arithmetic2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
+<h2 id="测试断言效果"><a href="#测试断言效果" class="headerlink" title="测试断言效果"></a>测试断言效果</h2><hr>
+<p>在之前的单元测试类中创建一个名为 <code>testAssert</code> 方法来查看断言效果<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"> * 测试断言</span><br><span class="line"> */</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssert</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String obj1 = <span class="string">&quot;junit&quot;</span>;</span><br><span class="line">    String obj2 = <span class="string">&quot;junit&quot;</span>;</span><br><span class="line">    String obj3 = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    String obj4 = <span class="string">&quot;test&quot;</span>;</span><br><span class="line">    String obj5 = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> var1 = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> var2 = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span>[] arithmetic1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span>[] arithmetic2 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line">    assertEquals(obj1, obj2);</span><br><span class="line"></span><br><span class="line">    assertSame(obj3, obj4);</span><br><span class="line"></span><br><span class="line">    assertNotSame(obj2, obj4);</span><br><span class="line"></span><br><span class="line">    assertNotNull(obj1);</span><br><span class="line"></span><br><span class="line">    assertNull(obj5);</span><br><span class="line"></span><br><span class="line">    assertTrue(<span class="string">&quot;为真&quot;</span>, var1 == var2);</span><br><span class="line"></span><br><span class="line">    assertArrayEquals(arithmetic1, arithmetic2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
 
         <hr>
         <!-- Pager -->

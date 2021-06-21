@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -415,7 +415,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">336</span> In Total
+              Words <span class="post-count">335</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -477,8 +477,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。</p>
 <p>2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：</p>
 <ul>
 <li>对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。</li>
@@ -487,22 +486,16 @@
 <li>增加对 Docker, NeGet, npm, Bower 的支持。</li>
 <li>提供新的管理接口，以及增强对自动任务的管理。</li>
 </ul>
-<h2 id="基于-Docker-安装-Nexus">基于 Docker 安装 Nexus</h2>
-<p>GitLab 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/sonatype/nexus3">https://hub.docker.com/r/sonatype/nexus3</a></p>
+<h2 id="基于-Docker-安装-Nexus"><a href="#基于-Docker-安装-Nexus" class="headerlink" title="基于 Docker 安装 Nexus"></a>基于 Docker 安装 Nexus</h2><p>GitLab 官网 Docker Hub 下载地址：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/sonatype/nexus3">https://hub.docker.com/r/sonatype/nexus3</a></p>
 <p>我们使用 Docker 来安装和运行 Nexus，配置版本为最新版 3.18 版。</p>
-<h3 id="docker-compose-yml-配置如下"><code>docker-compose.yml</code> 配置如下</h3>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nexus:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">sonatype/nexus3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8081</span><span class="string">:8081</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/nexus/data:/nexus-data</span></span><br></pre></td></tr></table></figure>
-<p><font color=red>注意：</font>启动时如果出现权限问题可以使用：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /usr/<span class="built_in">local</span>/docker/nexus/data</span><br></pre></td></tr></table></figure>
-<p>赋予数据卷目录可读可写的权限</p>
-<h3 id="登录控制台验证安装">登录控制台验证安装</h3>
-<ul>
+<h3 id="docker-compose-yml-配置如下"><a href="#docker-compose-yml-配置如下" class="headerlink" title="docker-compose.yml 配置如下"></a><code>docker-compose.yml</code> 配置如下</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.1&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nexus:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">sonatype/nexus3</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nexus</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8081</span><span class="string">:8081</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/usr/local/docker/nexus/data:/nexus-data</span></span><br></pre></td></tr></table></figure>
+<p><font color=red>注意：</font>启动时如果出现权限问题可以使用：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 /usr/<span class="built_in">local</span>/docker/nexus/data</span><br></pre></td></tr></table></figure><br>赋予数据卷目录可读可写的权限</p>
+<h3 id="登录控制台验证安装"><a href="#登录控制台验证安装" class="headerlink" title="登录控制台验证安装"></a>登录控制台验证安装</h3><ul>
 <li>访问地址：<a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">http://ip:8081</a> （默认端口号8081）</li>
 <li>默认用户名：<code>admin</code>，默认密码在 <code>/nexus-data/admin.password</code> 内（老版本默认密码：<code>admin123</code>）</li>
 </ul>
 <p><img src="1.png" alt="1"></p>
-<h3 id="初始化设置">初始化设置</h3>
-<ul>
+<h3 id="初始化设置"><a href="#初始化设置" class="headerlink" title="初始化设置"></a>初始化设置</h3><ul>
 <li>重设密码</li>
 </ul>
 <p><img src="2.png" alt="2"></p>

@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,40 @@
   <!-- top end -->
   
 
+  <a href="/en/Java-杂记-RequestBody-和-RequestParam-区别/">
+    <h2 class="post-title">
+      [Java 杂记] @RequestBody 和 @RequestParam 区别
+    </h2>
+    <h3 class="post-subtitle">
+      RequestBody 和 RequestParam 区别
+    </h3>
+    <div class="post-content-preview">
+      前言一直有这么一个疑问：在使用 postman 工具测试 api 接口的时候，如何使用 json 字符串传值呢，而不是使用 x-www-form-urlencoded 类型，毕竟通过 key-value 传值是有局限性的。假如我要测试批量插入数据的接口呢，使用 x-www-form-urlencoded 方法根本就不适用于这种场景。
+那么如何通过 postman 工具使用 json 字符串传......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-12-24
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java 杂记" title="Java 杂记">Java 杂记</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Java-杂记-四种常见的-POST-提交数据方式/">
     <h2 class="post-title">
       [Java 杂记] 四种常见的 POST 提交数据方式
@@ -525,14 +559,12 @@
     </h3>
     <div class="post-content-preview">
       手写文档存在的问题
-
 文档需要更新的时候，需要再次发送一份给前端，也就是文档更新交流不及时。
 接口返回结果不明确
 不能直接在线测试接口，通常需要使用工具，比如：Postman
 接口文档太多，不好管理
 
-使用 Swagger 解决问题
-Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定是完美的，当然也有缺点，最明显的就是代码植入性比较强。Swagger 是一个规范和完......
+使用 Swagger 解决问题Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定是完美的，当然也有缺点，最明显的就是代码植入性比较强。Swagger 是一个规范和完整的......
     </div>
   </a>
   
@@ -565,8 +597,7 @@ Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定
       线程池的使用练习
     </h3>
     <div class="post-content-preview">
-      Executor
-1234567891011121314/** * Executor：线程池中的顶层接口 */public class _01_T_MyExecutor implements Executor &#123;    public static void main(String[] args) &#123;        new _01_T_MyExecutor().execut......
+      Executor1234567891011121314/** * Executor：线程池中的顶层接口 */public class _01_T_MyExecutor implements Executor &#123;    public static void main(String[] args) &#123;        new _01_T_MyExecutor().execute......
     </div>
   </a>
   
@@ -599,14 +630,13 @@ Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定
       线程池的使用
     </h3>
     <div class="post-content-preview">
-      前言
-在 Java 中，我们可以利用多线程来最大化地压榨 CPU 多核计算的能力。但是，线程本身是把双刃剑，我们需要知道它的利弊，才能在实际系统中游刃有余地运用。
+      前言在 Java 中，我们可以利用多线程来最大化地压榨 CPU 多核计算的能力。但是，线程本身是把双刃剑，我们需要知道它的利弊，才能在实际系统中游刃有余地运用。
 在进入主题之前，我们先了解一下线程池的基本概念。
 
 线程池，本质上是一种对象池，用于管理线程资源。
 在任务执行前，需要从线程池中拿出线程来执行。
 在任务执行完成之后，需要把线程放回线程池。
-通过线程的这种反复利用机制，可以有效地避......
+通过线程的这种反复利用机制，可以有效地避免......
     </div>
   </a>
   
@@ -639,10 +669,8 @@ Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定
       ConcurrentLinkedQueue
     </h3>
     <div class="post-content-preview">
-      案例
-有 N 张火车票，每张票都有一个编号，同时又 10 个窗口对外售票，请写一个模拟程序。
-线程不安全
-12345678910111213141516171819202122232425/** * 有 N 张火车票，每张票都有一个编号，同时又10个窗口对外售票，请写一个模拟程序。 *  * 分析下面的程序可能会产生那些问题？ * 重复销售？超量销售？ * * ArrayList 是线程不安......
+      案例有 N 张火车票，每张票都有一个编号，同时又 10 个窗口对外售票，请写一个模拟程序。
+线程不安全12345678910111213141516171819202122232425/** * 有 N 张火车票，每张票都有一个编号，同时又10个窗口对外售票，请写一个模拟程序。 *  * 分析下面的程序可能会产生那些问题？ * 重复销售？超量销售？ * * ArrayList 是线程不安全的......
     </div>
   </a>
   
@@ -675,10 +703,8 @@ Swagger 也就是为了解决这个问题，当然也不能说 Swagger 就一定
       wait、notify/notifyAll；Lock、Condition；CountDownLatch
     </h3>
     <div class="post-content-preview">
-      面试题一
-写一个固定容量同步容器，拥有 put 和 get 方法，以及 getCount 方法，能够支持 2 个生成者线程和 10 个消费者线程的阻塞调用。
-wait、notify/notifyAll 方法
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051......
+      面试题一写一个固定容量同步容器，拥有 put 和 get 方法，以及 getCount 方法，能够支持 2 个生成者线程和 10 个消费者线程的阻塞调用。
+wait、notify/notifyAll 方法12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152......
     </div>
   </a>
   
@@ -711,9 +737,8 @@ wait、notify/notifyAll 方法
       多线程练习
     </h3>
     <div class="post-content-preview">
-      ReentrantLock
-练习一：
-1234567891011121314151617181920212223242526272829303132333435/** * ReentrantLock 用于替代 Synchronized，本例中由于 m1 锁定 this，只有 m1 执行完毕的时候，m2 才能执行， * 这里是复习 Synchronized 最原始的语义。 */public c......
+      ReentrantLock练习一：
+1234567891011121314151617181920212223242526272829303132333435/** * ReentrantLock 用于替代 Synchronized，本例中由于 m1 锁定 this，只有 m1 执行完毕的时候，m2 才能执行， * 这里是复习 Synchronized 最原始的语义。 */public cl......
     </div>
   </a>
   
@@ -746,9 +771,7 @@ wait、notify/notifyAll 方法
       多线程练习
     </h3>
     <div class="post-content-preview">
-      synchronized
-练习一：
-12345678910111213//synchronized 关键词：对某个对象加锁public class _001_Synchronized_O &#123;        private int count = 10;    private Object o = new Object();    public void m() &#123;    ......
+      synchronized练习一：12345678910111213//synchronized 关键词：对某个对象加锁public class _001_Synchronized_O &#123;        private int count = 10;    private Object o = new Object();    public void m() &#123;      ......
     </div>
   </a>
   
@@ -781,48 +804,8 @@ wait、notify/notifyAll 方法
       Java 并发容器
     </h3>
     <div class="post-content-preview">
-      ArrayBlockingQueue
-概述
-ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要指定长度的，所以使用 ArrayBlockingQueue 时必须指定长度，也就是它是一个有界阻塞队列。（有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。）
-它实现了 BlockingQueue接口，有着队列、集合以及阻塞队列的所有方法。它内部使用......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-10-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#JUC" title="JUC">JUC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/JUC-3-2-Java-并发容器-队列/">
-    <h2 class="post-title">
-      [JUC] 3.2 Java 并发容器 -- 队列
-    </h2>
-    <h3 class="post-subtitle">
-      Queue 队列总结
-    </h3>
-    <div class="post-content-preview">
-      简介
-Queue（队列）：一种特殊的线性表，它只允许在表的前端（front）进行删除操作，只允许在表的后端（rear）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。
-每个元素总是从队列的 rear 端进入队列，然后等待该元素之前的所有元素出队之后，当前元素才能出对，遵循先进先出（FIFO）原则。
-下面是 Queue 类的继承关系图：
-
-图中我们可以看到，最上层是 Coll......
+      ArrayBlockingQueue概述ArrayBlockingQueue，顾名思义：基于数组的阻塞队列。数组是要指定长度的，所以使用 ArrayBlockingQueue 时必须指定长度，也就是它是一个有界阻塞队列。（有界是指他的容量大小是固定的，不能扩充容量，在初始化时就必须确定队列大小。）
+它实现了 BlockingQueue接口，有着队列、集合以及阻塞队列的所有方法。它内部使用 R......
     </div>
   </a>
   
@@ -895,6 +878,10 @@ Queue（队列）：一种特殊的线性表，它只允许在表的前端（fro
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -905,10 +892,6 @@ Queue（队列）：一种特殊的线性表，它只允许在表的前端（fro
     
     <a href="../../en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../en/Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1280,7 +1263,7 @@ Queue（队列）：一种特殊的线性表，它只允许在表的前端（fro
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

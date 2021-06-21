@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -479,11 +479,9 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述">概述</h2>
-<p>Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。</p>
-<h2 id="各种连接池性能对比测试">各种连接池性能对比测试</h2>
-<p>测试执行申请归还连接 1,000,000（一百万）次总耗时性能对比。</p>
-<h3 id="测试环境">测试环境</h3>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。</p>
+<h2 id="各种连接池性能对比测试"><a href="#各种连接池性能对比测试" class="headerlink" title="各种连接池性能对比测试"></a>各种连接池性能对比测试</h2><p>测试执行申请归还连接 1,000,000（一百万）次总耗时性能对比。</p>
+<h3 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -506,7 +504,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="基准测试结果">基准测试结果</h3>
+</div>
+<h3 id="基准测试结果"><a href="#基准测试结果" class="headerlink" title="基准测试结果"></a>基准测试结果</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -585,8 +584,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="结论">结论</h3>
-<ul>
+</div>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><ul>
 <li>Druid 是性能最好的数据库连接池，tomcat-jdbc 和 druid 性能接近。</li>
 <li>proxool 在激烈并发时会抛异常，完全不靠谱。</li>
 <li>c3p0 和 proxool 都相当慢，慢到影响 sql 执行效率的地步。</li>

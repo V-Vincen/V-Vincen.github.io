@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,45 @@
   <!-- top end -->
   
 
+  <a href="/en/Microservices-5-The-difference-between-http-and-rpc/">
+    <h2 class="post-title">
+      [Microservices] 5 The difference between http and rpc
+    </h2>
+    <h3 class="post-subtitle">
+      The difference between http and rpc...
+    </h3>
+    <div class="post-content-preview">
+      区别传输协议
+RPC：可以基于 TCP 协议，也可以基于 HTTP 协议。
+HTTP：基于 HTTP 协议。
+
+传输效率
+RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。    
+HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2021-01-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Microservices" title="Microservices">Microservices</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Github-Open-Source-GitHub-s-10-essential-open-source-projects/">
     <h2 class="post-title">
       [Github (Open-Source)] GitHub's 10 essential open source projects
@@ -491,9 +530,8 @@
     </h3>
     <div class="post-content-preview">
       Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top 10。
-vue-Element-Admin
-Github Star：63.7K
-Github Repo：https://github.com/Pan......
+vue-Element-AdminGithub Star：63.7K
+Github Repo：https://github.com/PanJ......
     </div>
   </a>
   
@@ -562,8 +600,7 @@ Github Repo：https://github.com/Pan......
     <div class="post-content-preview">
       在之前的章节中介绍的 方法打印以及基本选择规则 是 logback-classic 的核心。在这章中，将介绍其它的过滤方法。
 logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组成一个任意复杂的过滤策略。它们在很大程度上受到 Linux iptables 的启发。
-在 logback-classic 中
-在 logback-classic 中，有两种类型的过滤器，regular ......
+在 logback-classic 中在 logback-classic 中，有两种类型的过滤器，regular 过......
     </div>
   </a>
   
@@ -596,9 +633,8 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Layout...
     </h3>
     <div class="post-content-preview">
-      什么是 layout？
-layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
-12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  S......
+      什么是 layout？layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
+12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  St......
     </div>
   </a>
   
@@ -631,8 +667,7 @@ layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 
       Encoder...
     </h3>
     <div class="post-content-preview">
-      什么是 encoder
-encoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 P......
+      什么是 encoderencoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 Pa......
     </div>
   </a>
   
@@ -665,9 +700,8 @@ encoder 将日志事件转换为字节数组，同时将字节数组写入到一
       Appenders...
     </h3>
     <div class="post-content-preview">
-      什么是 Appender
-logback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
-1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;im......
+      什么是 Appenderlogback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
+1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;imp......
     </div>
   </a>
   
@@ -701,9 +735,8 @@ logback 将写入日志事件的任务委托给一个名为 appender 的组件�
     </h3>
     <div class="post-content-preview">
       我们开始通过多种配置 logback，以及许多示例的配置脚本。logback 依赖的配置框架 - Joran 将会在之后的章节介绍
-配置 logback
-在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
-可以通过编程或者配置 XML 脚本或者......
+配置 logback在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
+可以通过编程或者配置 XML 脚本或者 ......
     </div>
   </a>
   
@@ -736,11 +769,9 @@ logback 将写入日志事件的任务委托给一个名为 appender 的组件�
       Architecture...
     </h3>
     <div class="post-content-preview">
-      logback 的架构
-跟 简介 类似
-Logger, Appender 和 Layouts
-Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
-Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logbac......
+      logback 的架构跟 简介 类似
+Logger, Appender 和 LayoutsLogback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
+Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logback-......
     </div>
   </a>
   
@@ -773,12 +804,10 @@ Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接�
       Introduction to logback...
     </h3>
     <div class="post-content-preview">
-      声明
-博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
+      声明博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
 项目在线地址：https://logbackcn.gitbook.io/logback
 Logback 官网地址：https://logback.qos.ch/manual/index.html
-简介
-Logbac......
+简介Logback ......
     </div>
   </a>
   
@@ -789,40 +818,6 @@ Logbac......
   <div class="tags">
     
     <a href="/tags/#Logback" title="Logback">Logback</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/IDEA-JRebel-XRebel-插件安装和使用/">
-    <h2 class="post-title">
-      [IDEA] JRebel & XRebel 插件安装和使用
-    </h2>
-    <h3 class="post-subtitle">
-      JRebel is a productivity tool that allows developers to reload code changes instantly... XRebel is a performance tool for Java development which gives developers real time performance insights to help them understand and resolve potential issues faster and earlier, during the development phase...
-    </h3>
-    <div class="post-content-preview">
-      JRebel 简介
-JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省了大量重启时间，提高了个人开发效率。JRebel 是一款 JAVA 虚拟机插件，它使得 JAVA 程序员能在不进行重部署的情况下，即时看到代码的改变对一个应用程序带来的影响。JRebel 使你能即时分别看到代码、类和资源的变化，你可以一个个地上传而不是一次性全部部署。当程序员在开发环境中对任......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2020-12-30
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#IDEA" title="IDEA">IDEA</a>
     
   </div>
   
@@ -885,6 +880,10 @@ JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省�
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -895,10 +894,6 @@ JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省�
     
     <a href="../../Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1270,7 +1265,7 @@ JRebel 是一套 JavaEE 开发工具。Jrebel 可快速实现热部署，节省�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 

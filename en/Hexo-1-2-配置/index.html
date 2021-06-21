@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -478,8 +478,8 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>您可以在 _config.yml 中修改大部分的配置。</p>
-<h3 id="网站">网站</h3>
-<hr>
+<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -514,9 +514,10 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。</p>
-<h3 id="网址">网址</h3>
-<hr>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -544,16 +545,15 @@
 <tr>
 <td>permalink_defaults</td>
 <td>永久链接中各部分的默认值</td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
-<p><strong>网站存放在子目录</strong><br>
-如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
+<p><strong>网站存放在子目录</strong><br>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
 </blockquote>
-<h3 id="目录">目录</h3>
-<hr>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -601,16 +601,15 @@
 <tr>
 <td>skip_render</td>
 <td>跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。</td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
-<p><strong>提示</strong><br>
-如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</p>
+<p><strong>提示</strong><br>如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。</p>
 </blockquote>
-<h3 id="文章">文章</h3>
-<hr>
+<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -673,16 +672,15 @@
 <tr>
 <td>highlight</td>
 <td>代码块的设置</td>
-<td></td>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
-<p><strong>相对地址</strong><br>
-默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站&gt; 域名为<code>example.com</code>,您有一篇文章名为<code>hello</code>，那么绝对链接可能像这样：<code>http://example.com/hello.html</code>，它是绝对于域名的。相对链接像这样：<code>/hello.html</code>，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议用绝对地址。</p>
+<p><strong>相对地址</strong><br>默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站&gt; 域名为<code>example.com</code>,您有一篇文章名为<code>hello</code>，那么绝对链接可能像这样：<code>http://example.com/hello.html</code>，它是绝对于域名的。相对链接像这样：<code>/hello.html</code>，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议用绝对地址。</p>
 </blockquote>
-<h3 id="分类-标签">分类 &amp; 标签</h3>
-<hr>
+<h3 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -705,13 +703,13 @@
 <tr>
 <td>tag_map</td>
 <td>标签别名</td>
-<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="日期-时间格式">日期 / 时间格式</h3>
-<hr>
+</div>
+<h3 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h3><hr>
 <p>Hexo 使用 <a target="_blank" rel="noopener" href="http://momentjs.com/">Moment.js</a> 来解析和显示时间。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -733,8 +731,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="分页">分页</h3>
-<hr>
+</div>
+<h3 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -756,8 +755,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="扩展">扩展</h3>
-<hr>
+</div>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><hr>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -776,6 +776,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
 
         <hr>
@@ -924,7 +925,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BD%91%E7%AB%99"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">网站</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BD%91%E5%9D%80"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">网址</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">目录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E7%AB%A0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">文章</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB-%E6%A0%87%E7%AD%BE"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">分类 &amp; 标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">日期 &#x2F; 时间格式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E9%A1%B5"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">分页</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">扩展</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BD%91%E7%AB%99"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">网站</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BD%91%E5%9D%80"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">网址</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">目录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E7%AB%A0"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">文章</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E7%B1%BB-amp-%E6%A0%87%E7%AD%BE"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">分类 &amp; 标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">日期 &#x2F; 时间格式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E9%A1%B5"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">分页</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%89%A9%E5%B1%95"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">扩展</span></a></li></ol>
         
         </div>
       </aside>

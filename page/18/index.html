@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -482,6 +482,40 @@
   <!-- top end -->
   
 
+  <a href="/en/Spring-Session-Spring-Session-完成-session-共享/">
+    <h2 class="post-title">
+      [Spring Session] Spring Session 完成 session 共享
+    </h2>
+    <h3 class="post-subtitle">
+      session 共享
+    </h3>
+    <div class="post-content-preview">
+      在传统的单服务架构中，一般来说，只有一个服务器，那么不存在 Session 共享问题，但是在分布式/集群项目中，Session 共享则是一个必须面对的问题，先看一个简单的架构图：
+在这样的架构中，会出现一些单服务中不存在的问题，例如客户端发起一个请求，这个请求到达 Nginx 上之后，被 Nginx 转发到 Tomcat A 上，然后在 Tomcat A 上往 session 中保存了一份数......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-08-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring Session" title="Spring Session">Spring Session</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Java-杂记-GoF-单例模式/">
     <h2 class="post-title">
       [Java 杂记] GoF 单例模式
@@ -490,12 +524,11 @@
       单例模式
     </h3>
     <div class="post-content-preview">
-      简介
-单例对象（Singleton）是一种常用的设计模式。在Java应用中，单例对象能保证在一个 JVM 中，该对象只有一个实例存在。这样的模式有几个好处：
+      简介单例对象（Singleton）是一种常用的设计模式。在Java应用中，单例对象能保证在一个 JVM 中，该对象只有一个实例存在。这样的模式有几个好处：
 单例模式的优点：
 
 由于单例模式只生产一个实例，减少了系统性能开销，当一个对象的产生需要比较多的资源时，如读取配置、产生其他依赖对象时，则可以通过在应用启动时直接产生一个单例对象，然后永久驻留内存的方式来解决
-单例模式可以在系统设置全局......
+单例模式可以在系统设置全局的......
     </div>
   </a>
   
@@ -529,11 +562,10 @@
     </h3>
     <div class="post-content-preview">
       GoF（“四人帮”，又称 Gang of Four，即 Erich Gamma, Richard Helm, Ralph Johnson &amp; John Vlissides）
-设计模式的分类
-总体来说设计模式分为三大类：
+设计模式的分类总体来说设计模式分为三大类：
 
 创建型模式（5个）：单例模式、原型模式、建造者模式、工厂模式、抽象工厂模式。
-结构型模式（7个）：桥接模式、外观模式、组合模式、装饰模式、适配器模式、代理模式、享元......
+结构型模式（7个）：桥接模式、外观模式、组合模式、装饰模式、适配器模式、代理模式、享元模......
     </div>
   </a>
   
@@ -566,10 +598,9 @@
       注解配置整合
     </h3>
     <div class="post-content-preview">
-      基本概念
-SSM：Spring+SpringMVC+MyBatis
+      基本概念SSM：Spring+SpringMVC+MyBatis
 Spring
-Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring......
+Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring ......
     </div>
   </a>
   
@@ -602,10 +633,9 @@ Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Ja
       xml 配置整合
     </h3>
     <div class="post-content-preview">
-      基本概念
-SSM：Spring+SpringMVC+MyBatis
+      基本概念SSM：Spring+SpringMVC+MyBatis
 Spring
-Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring......
+Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Java 开发框架，由 Rod Johnson 在其著作 Expert One-On-One J2EE Development and Design 中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。Spring ......
     </div>
   </a>
   
@@ -638,12 +668,10 @@ Spring 是一个开源框架，Spring 是于2003年兴起的一个轻量级的Ja
       脏读、不可重复读、幻读
     </h3>
     <div class="post-content-preview">
-      脏读、不可重复读、幻读
-理解这三种由于并发访问导致的数据读取问题，再理解事务隔离级别就简单多了。
-脏读
-脏读：读取未提交数据
+      脏读、不可重复读、幻读理解这三种由于并发访问导致的数据读取问题，再理解事务隔离级别就简单多了。
+脏读脏读：读取未提交数据
 例：
-A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误并执行回滚操作，那么 A 事务读取到的数据就是脏数据。就好像原本的数据比较干净、纯粹，此时由于 B 事务更改了它，这个数据变得不再纯粹。这个时候 A 事务立即读取了这个脏数据，但事务 B 良心发现，......
+A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误并执行回滚操作，那么 A 事务读取到的数据就是脏数据。就好像原本的数据比较干净、纯粹，此时由于 B 事务更改了它，这个数据变得不再纯粹。这个时候 A 事务立即读取了这个脏数据，但事务 B 良心发现，又用......
     </div>
   </a>
   
@@ -678,10 +706,9 @@ A 事务读取 B 事务尚未提交的数据，此时如果 B 事务发生错误
     <div class="post-content-preview">
       AOP 简介
 
-
 AOP（Aspect-Oriented Programming, 面向切面编程）: 是一种新的方法论，是对传统 OOP（Object-Oriented Programming，面向对象编程） 的补充。
 AOP 的主要编程对象是切面（aspect），而切面是模块化的横切关注点。
-在应用 AOP 编程时， 仍然需要定义公共功能，但可以明确的定义这个功能在哪里， 以什么方式应用,......
+在应用 AOP 编程时， 仍然需要定义公共功能，但可以明确的定义这个功能在哪里， 以什么方式应用, ......
     </div>
   </a>
   
@@ -714,10 +741,9 @@ AOP 的主要编程对象是切面（aspect），而切面是模块化的横切�
       jdbcType、javaType、ofType 的区别
     </h3>
     <div class="post-content-preview">
-      MyBatis 中何时使用 jdbcType
-这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
+      MyBatis 中何时使用 jdbcType这个 SQL 有时候这样写：select * from user where name = #&#123;name&#125; ,有时候可以这样写: select * from user where name = #&#123;name,jdbcType=VARCHAR&#125; ,到底什么时候使用 jdbcType 呢,什么时候不使用呢?
 
-......
+当......
     </div>
   </a>
   
@@ -750,8 +776,7 @@ AOP 的主要编程对象是切面（aspect），而切面是模块化的横切�
       一对一、一对多、多对多查询
     </h3>
     <div class="post-content-preview">
-      场景
-使用三张数据表：
+      场景使用三张数据表：
 
 student 学生表
 teacher 教师表
@@ -762,7 +787,7 @@ position 职位表
 
 一对一关系，从老师角度：老师对职位一对一
 一对多关系，从职位角度：职位对老师一对多
-多对多关系：查找被教授教导的所有学生（首先职位对......
+多对多关系：查找被教授教导的所有学生（首先职位对老......
     </div>
   </a>
   
@@ -796,10 +821,9 @@ position 职位表
     </h3>
     <div class="post-content-preview">
       设计模式的6大原则，单一职责原则，开放封闭原则，里式替换原则，依赖导致原则，迪米特原则 和 接口隔离原则。
-单一职责原则（Single Responsibility Principle，SRP）
-就一个类而言，应该仅有一个引起它变化的原因
+单一职责原则（Single Responsibility Principle，SRP）就一个类而言，应该仅有一个引起它变化的原因
 
-通俗的讲就是我们不要让一个承担过多的职责，如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力......
+通俗的讲就是我们不要让一个承担过多的职责，如果一个类承担的职责过多，就等于把这些职责耦合在一起，一个职责的变化可能会削弱或者抑制这个类完成其他职责的能力。......
     </div>
   </a>
   
@@ -810,48 +834,6 @@ position 职位表
   <div class="tags">
     
     <a href="/tags/#Java 杂记" title="Java 杂记">Java 杂记</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Docker-7-2-Docker-数据管理深入/">
-    <h2 class="post-title">
-      [Docker] 7.2 Docker 数据管理深入
-    </h2>
-    <h3 class="post-subtitle">
-      Docker 数据管理深入
-    </h3>
-    <div class="post-content-preview">
-      Docker 数据卷
-数据卷 是一个可供一个或多个容器使用的特殊目录，它绕过 UFS，可以提供很多有用的特性：
-
-数据卷 可以在容器之间共享和重用
-对 数据卷 的修改会立马生效
-对 数据卷 的更新，不会影响镜像
-数据卷 默认会一直存在，即使容器被删除
-
-
-注意：数据卷的使用，类似于 Linux 下对目录或文件进行 mount，镜像中的被指定为挂载点的目录中的文件会隐藏掉，能显示看的是挂载的数......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-07-18
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
     
   </div>
   
@@ -914,6 +896,10 @@ position 职位表
       <li>[Spring Cloud Alibaba] 5.2 Start a Consumer Application - Feign</li>
     </a>
     
+    <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-Feign/">
+      <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - Feign</li>
+    </a>
+    
     <a href="../../en/Spring-Cloud-Alibaba-5-1-Start-a-Consumer-Application-LoadBalancer/">
       <li>[Spring Cloud Alibaba] 5.1 Start a Consumer Application - LoadBalancer</li>
     </a>
@@ -924,10 +910,6 @@ position 职位表
     
     <a href="../../en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
       <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
-    </a>
-    
-    <a href="../../en/Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/">
-      <li>[Spring Cloud Alibaba] 3 Nacos Dynamic Naming and Configuration Service</li>
     </a>
     
   </ul>
@@ -1299,7 +1281,7 @@ position 职位表
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
