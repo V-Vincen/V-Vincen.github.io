@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -490,10 +490,12 @@
       线程的基本概念
     </h3>
     <div class="post-content-preview">
-      基本的进程线程概念进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
+      基本的进程线程概念
+进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
 系统中的进程线程模型是这样的：
+
 进程从操作系统获得基本的内存空间，所有的线程共享着进程的内存地址空间。当然，每个线程也会拥有自己私有的内存地址范围，其他线程不能访问。
-由于所有的线程共享进程的......
+由于所有的线程共享进......
     </div>
   </a>
   
@@ -526,7 +528,9 @@
       Docker Registry 客户端配置
     </h3>
     <div class="post-content-preview">
-      概述我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&quot......
+      概述
+我们的教学案例使用的是 Ubuntu Server 16.04 LTS 版本，属于 systemd 系统，需要在 /etc/docker/daemon.json 中增加如下内容（如果文件不存在请新建该文件）
+12345678&#123;  &quot;registry-mirrors&quot;: [    &quot;https://registry.docker-cn.com&qu......
     </div>
   </a>
   
@@ -559,8 +563,11 @@
       Docker Registry 私服和 WebUI 安装
     </h3>
     <div class="post-content-preview">
-      安装 Docker Registry 私服概述官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。
-安装Registry 官网 Docker Hub 下载地址：ht......
+      安装 Docker Registry 私服
+概述
+官方的 Docker Hub 是一个用于管理公共镜像的地方，我们可以在上面找到我们想要的镜像，也可以把我们自己的镜像推送上去。但是，有时候我们的服务器无法访问互联网，或者你不希望将自己的镜像放到公网当中，那么你就需要 Docker Registry，它可以用来存储和管理自己的镜像。
+安装
+Registry 官网 Docker Hub 下载地址......
     </div>
   </a>
   
@@ -594,7 +601,9 @@
     </h3>
     <div class="post-content-preview">
       Nexus 仓库分类
-代理仓库（proxy）意为第三方仓库，如：
+
+代理仓库（proxy）
+意为第三方仓库，如：
 
 maven-central：默认 maven 中央仓库代理
 nuget.org-proxy
@@ -610,7 +619,7 @@ Mixed: 混合模式
 Strict：严格
 Permissive：宽松
 
-宿主仓库......
+宿主......
     </div>
   </a>
   
@@ -643,13 +652,14 @@ Permissive：宽松
       Nexus 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。
+      概述
+Nexus 是一个强大的仓库管理器，极大地简化了内部仓库的维护和外部仓库的访问。
 2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
 
 对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
 升级界面，极大的简化了用户界面的操作和管理。
 提供新的安装包，让部署更加简单。
-增加对 Docker, NeGet, npm, Bower ......
+增加对 Docker, NeGet, npm, Bower......
     </div>
   </a>
   
@@ -682,12 +692,16 @@ Permissive：宽松
       GitLab 初始化设置和项目创建
     </h3>
     <div class="post-content-preview">
-      GitLab 的基本设置第一次使用时需要做一些初始化设置，点击 管理区域 —&gt; 设置
-帐户和限制关闭头像功能，由于 Gravatar 头像为网络头像，在网络情况不理想时可能导致访问时卡顿
+      GitLab 的基本设置
+第一次使用时需要做一些初始化设置，点击 管理区域 --&gt; 设置
+帐户和限制
+关闭头像功能，由于 Gravatar 头像为网络头像，在网络情况不理想时可能导致访问时卡顿
 
-注册限制由于是内部代码托管服务器，可以直接关闭注册功能，由管理员统一创建用户即可
+注册限制
+由于是内部代码托管服务器，可以直接关闭注册功能，由管理员统一创建用户即可
 
-GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要先创建用户，然后通过创建的用户操作，如果你是......
+GitLab 的账户管理
+使用时请不要直接通过 root 用户操作，需要先创建用户，然后通过创建的用户操作......
     </div>
   </a>
   
@@ -720,7 +734,8 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
       GitLab 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个自托管的 Git 项目仓库，可通过 Web 界面进行访问公开的或者私人项目。它拥有与 Github 类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序（Wall）进行交流。它还提供一个代码片段收集功能可以轻......
+      概述
+GitLab 是利用 Ruby on Rails 一个开源的版本管理系统，实现一个自托管的 Git 项目仓库，可通过 Web 界面进行访问公开的或者私人项目。它拥有与 Github 类似的功能，能够浏览源代码，管理缺陷和注释。可以管理团队对仓库的访问，它非常易于浏览提交过的版本并提供一个文件历史库。团队成员可以利用内置的简单聊天程序（Wall）进行交流。它还提供一个代码片段收集功能可以......
     </div>
   </a>
   
@@ -753,12 +768,15 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
       Docker 常用命令
     </h3>
     <div class="post-content-preview">
-      查看 Docker 版本1docker version
-构建 Docker 镜像commit 构建
+      查看 Docker 版本
+1docker version
+构建 Docker 镜像
+commit 构建
+
 先启动一个基本容器生成，然后在该容器中完成自己所需的操作，最后用 commit 命令来生成一个新的 image。
 下命令中：
 &lt;CONTAINER ID&gt;：为在基础容器中完成需求后的容器 id；
-&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 imga......
+&lt;image-name&gt;：为自定义的镜像名，也就是最终所要生成的 i......
     </div>
   </a>
   
@@ -791,8 +809,11 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
       TortoiseGit 简介和安装
     </h3>
     <div class="post-content-preview">
-      概述TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git 只支持 Windows 系统，有一个前辈海龟 SVN，TortoiseSVN 和 TortoiseGit 都是非常优秀的开源的版本库客户端。 分为 32 位版与 64 位版。并且支持各种语言，包括简体中文。
-安装 TortoiseGit下载下载地址：https://tortoisegit.org/dow......
+      概述
+TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git 只支持 Windows 系统，有一个前辈海龟 SVN，TortoiseSVN 和 TortoiseGit 都是非常优秀的开源的版本库客户端。 分为 32 位版与 64 位版。并且支持各种语言，包括简体中文。
+安装 TortoiseGit
+下载
+下载地址：https://tortoisegit.org/......
     </div>
   </a>
   
@@ -825,12 +846,17 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
       Git 命令
     </h3>
     <div class="post-content-preview">
-      基本命令先来看张流程图，具体命令如下：
-配置用户信息12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
-查看配置1git config --list
+      基本命令
+
+先来看张流程图，具体命令如下：
+配置用户信息
+12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
+查看配置
+1git config --list
 初始化
 1git init
-新增提交12git addgit commit -m &#39;message......
+新增提交
+12git addgit commit -m &#39;me......
     </div>
   </a>
   
@@ -1039,11 +1065,11 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1071,11 +1097,11 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1203,11 +1229,11 @@ GitLab 的账户管理使用时请不要直接通过 root 用户操作，需要�
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

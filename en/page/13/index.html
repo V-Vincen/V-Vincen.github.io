@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -490,8 +490,12 @@
       Mac 终端链接 Linux 服务器
     </h3>
     <div class="post-content-preview">
-      远程链接打开 iTerm2，通过 ssh 命令连接 linux 服务器，命令：12# root 是服务器账户名，@ 后面的是购买的公网 ip 地址ssh root@127.0.0.1
-ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密钥。客户端（自己 Mac 的配置）：123456789➜  ~ cd ~/.ssh➜  .ssh lsconfig ......
+      远程链接
+打开 iTerm2，通过 ssh 命令连接 linux 服务器，命令：
+12# root 是服务器账户名，@ 后面的是购买的公网 ip 地址ssh root@127.0.0.1
+ssh 配置 config 快速登录服务器
+可先通过 ssh-keygen -t rsa 生成密钥。客户端（自己 Mac 的配置）：
+123456789➜  ~ cd ~/.ssh➜  .ssh lscon......
     </div>
   </a>
   
@@ -524,9 +528,11 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
       使用 Mac 自带服务器实现本地
     </h3>
     <div class="post-content-preview">
-      开启服务Mac 本身是包含 apache 服务器的，我们只要打开就可以使用了，根本不用去部署什么 tomcat。
-打开终端，输入命令：1sudo apachectl start
-输入本机开机密码，密码输入完成之后在本地浏览器中输入 127.0.0.1 或者 localhost，出现 it works! 表明服务器已经启动了，就是这么简单。如果失败可以重启 sudo apachectl res......
+      开启服务
+Mac 本身是包含 apache 服务器的，我们只要打开就可以使用了，根本不用去部署什么 tomcat。
+打开终端，输入命令：
+1sudo apachectl start
+输入本机开机密码，密码输入完成之后在本地浏览器中输入 127.0.0.1 或者 localhost，出现 it works! 表明服务器已经启动了，就是这么简单。如果失败可以重启 sudo apachectl r......
     </div>
   </a>
   
@@ -559,7 +565,8 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
       Mac 安装配置 Redis
     </h3>
     <div class="post-content-preview">
-      回顾 Homebrew 的命令1234567brew search **    //查找某个软件包brew list         //列出已经安装的软件的包brew install **   //安装某个软件包,默认安装的是稳定版本brew uninstall ** //卸载某个软件的包brew upgrade **   //更新某个软件包brew info **      //查看指定......
+      回顾 Homebrew 的命令
+1234567brew search **    //查找某个软件包brew list         //列出已经安装的软件的包brew install **   //安装某个软件包,默认安装的是稳定版本brew uninstall ** //卸载某个软件的包brew upgrade **   //更新某个软件包brew info **      //查看指......
     </div>
   </a>
   
@@ -592,9 +599,12 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
       Mac 安装配置 MySQL
     </h3>
     <div class="post-content-preview">
-      常规方法安装下载安装（.dmg）官网下载：https://dev.mysql.com/downloads/mysql/
-按照流程进行安装，注意选择 root 密码那一步时选择 legacy 
-登陆但是在终端命令行登陆 MySQL，mysql -u root -p，提示：-bash: mysql: command not found，这个是因为 /usr/local/bin 目录下缺失 mys......
+      常规方法安装
+下载安装（.dmg）
+官网下载：https://dev.mysql.com/downloads/mysql/
+按照流程进行安装，注意选择 root 密码那一步时选择 legacy
+登陆
+但是在终端命令行登陆 MySQL，mysql -u root -p，提示：-bash: mysql: command not found，这个是因为 /usr/local/bin 目录下缺失 m......
     </div>
   </a>
   
@@ -627,11 +637,15 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
       Mac 安装配置 Maven
     </h3>
     <div class="post-content-preview">
-      常规方法安装下载安装包（.tar.gz）官网下载：https://maven.apache.org/download.cgi
+      常规方法安装
+下载安装包（.tar.gz）
+官网下载：https://maven.apache.org/download.cgi
 
 解压：tar -zxvf apache-maven-3.5.0-bin.tar.gz
-配置 Maven 环境变量打开终端 ，输入 vim ~/.bash_profile
-配置 Maven 的环境变量：12export M2_HOME=&quot;/Users/dur......
+配置 Maven 环境变量
+打开终端 ，输入 vim ~/.bash_profile
+配置 Maven 的环境变量：
+12export M2_HOME=&quot;/Users......
     </div>
   </a>
   
@@ -664,11 +678,14 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
       Mac 安装配置 JDK
     </h3>
     <div class="post-content-preview">
-      常规方法安装下载安装 JDK 1.8.0（.dmg）官网下载：https://www.oracle.com/technetwork/java/javase/downloads/index.html
+      常规方法安装
+下载安装 JDK 1.8.0（.dmg）
+官网下载：https://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 
 下载完成之后双击打开可以看到有一个 apk 文件，双击按照步骤安装即可。
-配置环境变量安装好的 JDK 大概路径为：/Library/Java/JavaVirtualMachines/jdk1......
+配置环境变量
+安装好的 JDK 大概路径为：/Library/Java/JavaVirtualMachines/j......
     </div>
   </a>
   
@@ -702,11 +719,12 @@ ssh 配置 config 快速登录服务器可先通过 ssh-keygen -t rsa 生成密�
     </h3>
     <div class="post-content-preview">
       Zsh 是什么
+
 Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可以作为一个脚本语言的交互解析器。
 打开终端，在终端上输入 zsh --version 这个命令来查看我们的电脑上是否安装了 Zsh，终端查询版本为： zsh 5.3 (x86_64-apple-darwin18.0)
 查看系统当前 shell：
 
-123456789101112➜  ~ cat /etc/shells#......
+123456789101112➜  ~ cat /etc/shells......
     </div>
   </a>
   
@@ -739,7 +757,8 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
       Homebrew 的安装和简单使用
     </h3>
     <div class="post-content-preview">
-      前言作为 linux 系统的忠实粉丝，我们都很喜欢 (Debian/Ubuntu) 系列的 apt 包管理系统和 (Redhat/Fedora) 系列的 yum 包管理系统。 包括 Windows 用户都有多种方便的软件管理工具，如：360软件管理，QQ 软件管理，迅雷软件管理等多种。 Mac OS X系统下面之前有老牌的 Macports，Fink包管理系统，包括 apple 的官方Mac......
+      前言
+作为 linux 系统的忠实粉丝，我们都很喜欢 (Debian/Ubuntu) 系列的 apt 包管理系统和 (Redhat/Fedora) 系列的 yum 包管理系统。 包括 Windows 用户都有多种方便的软件管理工具，如：360软件管理，QQ 软件管理，迅雷软件管理等多种。 Mac OS X系统下面之前有老牌的 Macports，Fink包管理系统，包括 apple 的官方Ma......
     </div>
   </a>
   
@@ -774,7 +793,9 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
     <div class="post-content-preview">
       Java List 在进行 remove() 方法是通常容易踩坑，主要有以下几点：
 循环时：问题在于，删除某个元素后，因为删除元素后，后面的元素都往前移动了一位，而你的索引+1，所以实际访问的元素相对于删除的元素中间间隔了一位。
-错误的写法使用 for 循环不进行额外处理123456//错误的方法for(int i=0;i&lt;list.size();i++) &#123;	if(list......
+错误的写法
+使用 for 循环不进行额外处理
+123456//错误的方法for(int i=0;i&lt;list.size();i++) &#123;	if(li......
     </div>
   </a>
   
@@ -807,8 +828,9 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
       RequestBody 和 RequestParam 区别
     </h3>
     <div class="post-content-preview">
-      前言一直有这么一个疑问：在使用 postman 工具测试 api 接口的时候，如何使用 json 字符串传值呢，而不是使用 x-www-form-urlencoded 类型，毕竟通过 key-value 传值是有局限性的。假如我要测试批量插入数据的接口呢，使用 x-www-form-urlencoded 方法根本就不适用于这种场景。
-那么如何通过 postman 工具使用 json 字符串传......
+      前言
+一直有这么一个疑问：在使用 postman 工具测试 api 接口的时候，如何使用 json 字符串传值呢，而不是使用 x-www-form-urlencoded 类型，毕竟通过 key-value 传值是有局限性的。假如我要测试批量插入数据的接口呢，使用 x-www-form-urlencoded 方法根本就不适用于这种场景。
+那么如何通过 postman 工具使用 json 字符串......
     </div>
   </a>
   
@@ -1017,11 +1039,11 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1049,11 +1071,11 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1181,11 +1203,11 @@ Zsh 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可�
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

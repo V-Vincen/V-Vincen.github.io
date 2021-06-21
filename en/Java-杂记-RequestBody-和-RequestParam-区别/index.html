@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -411,11 +411,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
+              Estimated Reading Time <span class="post-count">4</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">946</span> In Total
+              Words <span class="post-count">1.1k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -477,14 +477,16 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一直有这么一个疑问：在使用 <strong>postman</strong> 工具测试 <strong>api</strong> 接口的时候，如何使用 <code>json</code> 字符串传值呢，而不是使用 <code>x-www-form-urlencoded</code> 类型，毕竟通过 <code>key-value</code> 传值是有局限性的。假如我要测试批量插入数据的接口呢，使用 <code>x-www-form-urlencoded</code> 方法根本就不适用于这种场景。</p>
+        <h2 id="前言">前言</h2>
+<p>一直有这么一个疑问：在使用 <strong>postman</strong> 工具测试 <strong>api</strong> 接口的时候，如何使用 <code>json</code> 字符串传值呢，而不是使用 <code>x-www-form-urlencoded</code> 类型，毕竟通过 <code>key-value</code> 传值是有局限性的。假如我要测试批量插入数据的接口呢，使用 <code>x-www-form-urlencoded</code> 方法根本就不适用于这种场景。</p>
 <p>那么如何通过 <strong>postman</strong> 工具使用 <code>json</code> 字符串传值呢，这里就引申出来了 <strong>spring</strong> 的两个注解：</p>
 <ul>
 <li>@RequestParam</li>
 <li>@RequestBody</li>
 </ul>
 <p>总而言之，这两个注解都可以在后台接收参数，但是使用场景不一样。继续往下看。</p>
-<h2 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a><code>@RequestParam</code></h2><p>先介绍一下 <code>@RequestParam</code> 的使用场景：</p>
+<h2 id="RequestParam"><code>@RequestParam</code></h2>
+<p>先介绍一下 <code>@RequestParam</code> 的使用场景：</p>
 <p>注解 <code>@RequestParam</code> 接收的参数是<strong>来自 <code>requestHeader</code></strong> 中，即<strong>请求头</strong>。通常用于 <code>GET</code> 请求，比如常见的 <a target="_blank" rel="noopener" href="https://v_vincen.gitee.io/404.html">url：http://localhost:8081/spring-boot-study/novel/findByAuthorAndType?author=唐家三少&amp;type=已完结</a> ，其在 Controller 层的写法如下图所示：</p>
 <p><img src="1.jpeg" alt="1.jpeg"></p>
 <p><code>@RequestParam</code> 有三个配置参数：</p>
@@ -499,24 +501,28 @@
 <p><img src="3.jpeg" alt="3.jpeg"></p>
 <p>但是这样不支持批量插入数据啊，如果改用 <code>json</code> 字符串来传值的话，类型设置为 <code>application/json</code>，点击发送的话，会报错，后台接收不到值，为 <code>null</code>。</p>
 <p>这时候，注解 <code>@RequestBody</code> 就派上用场了。继续往下看。</p>
-<h2 id="RequestBody"><a href="#RequestBody" class="headerlink" title="@RequestBody"></a><code>@RequestBody</code></h2><p>先介绍一下 <code>@RequestBody</code> 的使用场景：</p>
+<h2 id="RequestBody"><code>@RequestBody</code></h2>
+<p>先介绍一下 <code>@RequestBody</code> 的使用场景：</p>
 <p>注解 <code>@RequestBody</code> 接收的参数是<strong>来自 <code>requestBody</code></strong> 中，即<strong>请求体</strong>。一般用于处理非 <code>Content-Type: application/x-www-form-urlencoded</code> 编码格式的数据，比如：<code>application/json</code>、<code>application/xml</code> 等类型的数据。就 <code>application/json</code> 类型的数据而言，使用注解 <code>@RequestBody</code> 可以将 <code>body</code> 里面所有的 <code>json</code> 数据传到后端，后端再进行解析。</p>
 <p><code>GET</code> 请求中，因为没有 <code>HttpEntity</code>，所以 <code>@RequestBody</code> 并不适用。</p>
 <p><code>POST</code> 请求中，通过 <code>HttpEntity</code> 传递的参数，必须要在请求头中声明数据的类型 <code>Content-Type</code>，<strong>SpringMVC</strong> 通过使用 <code>HandlerAdapter</code> 配置的 <strong>HttpMessageConverters</strong> 来解析 <strong>HttpEntity</strong> 中的数据，然后绑定到相应的 <strong>bean</strong> 上。</p>
-<h3 id="案例：向表中批量插入数据"><a href="#案例：向表中批量插入数据" class="headerlink" title="案例：向表中批量插入数据"></a>案例：向表中批量插入数据</h3><p>举个批量插入数据的例子，<code>Controller</code> 层的写法如下图所示：</p>
+<h3 id="案例：向表中批量插入数据">案例：向表中批量插入数据</h3>
+<p>举个批量插入数据的例子，<code>Controller</code> 层的写法如下图所示：</p>
 <p><img src="4.jpeg" alt="4.jpeg"></p>
 <p>由于 <code>@RequestBody</code> 可用来处理 <code>Content-Type</code> 为 <code>application/json</code> 编码的内容，所以在 postman 中，选择 <code>body</code> 的类型为 <code>row -&gt; JSON(application/json)</code>，这样在 <code>Headers</code> 中也会自动变为 <code>Content-Type: application/json</code> 编码格式。<code>body</code> 内的数据如下图所示：</p>
 <p><img src="5.jpeg" alt="5.jpeg"></p>
 <p>批量向表中插入两条数据，这里的 <strong>saveBatchNovel()</strong> 方法已经封装了 <strong>JPA</strong> 的 <strong>saveAll()</strong> 方法。<code>body</code> 里面的 <code>json</code> 语句的 <code>key</code> 值要与后端实体类的属性<strong>一一对应</strong>。</p>
 <p><strong>注意：</strong> 前端使用 <code>$.ajax</code> 的话，一定要指定 <code>contentType: &quot;application/json;charset=utf-8;&quot;</code>，默认为 <code>application/x-www-form-urlencoded</code>。</p>
-<h3 id="后端解析-json-数据"><a href="#后端解析-json-数据" class="headerlink" title="后端解析 json 数据"></a>后端解析 <code>json</code> 数据</h3><p>上述示例是传递到实体类中的具体写法，那么如果传递到非实体类中，<code>body</code> 里面的 <code>json</code> 数据需要怎么解析呢？我们再来看下面这个例子，在 <code>body</code> 中，我们还是输入上面的 <code>json</code> 数据，根据分析，上面的 <code>json</code> 数据是一个 <strong>List</strong> 数组内嵌套着map对象，那么在后台的接收形式可写为 <strong>List<Map<String, String>&gt;</strong>，具体代码如下图所示：</p>
+<h3 id="后端解析-json-数据">后端解析 <code>json</code> 数据</h3>
+<p>上述示例是传递到实体类中的具体写法，那么如果传递到非实体类中，<code>body</code> 里面的 <code>json</code> 数据需要怎么解析呢？我们再来看下面这个例子，在 <code>body</code> 中，我们还是输入上面的 <code>json</code> 数据，根据分析，上面的 <code>json</code> 数据是一个 <strong>List</strong> 数组内嵌套着map对象，那么在后台的接收形式可写为 <strong>List&lt;Map&lt;String, String&gt;&gt;</strong>，具体代码如下图所示：</p>
 <p><img src="6.jpeg" alt="6.jpeg"></p>
 <p><strong>postman</strong> 请求：</p>
 <p><img src="7.jpeg" alt="7.jpeg"></p>
 <p>控制台输出：</p>
 <p><img src="8.jpeg" alt="8.jpeg"></p>
 <p>得出结论，通过 <code>@RequestBody</code> 可以解析 <code>Body</code> 中 <code>json</code> 格式的数据。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>注解 <code>@RequestParam</code> 接收的参数是<strong>来自 <code>requestHeader</code></strong> 中，即<strong>请求头</strong>。<strong>通常用于 <code>GET</code> 请求</strong>，像 <code>POST</code>、<code>DELETE</code> 等其它类型的请求也可以使用。</p>
+<h2 id="总结">总结</h2>
+<p>注解 <code>@RequestParam</code> 接收的参数是<strong>来自 <code>requestHeader</code></strong> 中，即<strong>请求头</strong>。<strong>通常用于 <code>GET</code> 请求</strong>，像 <code>POST</code>、<code>DELETE</code> 等其它类型的请求也可以使用。</p>
 <p>注解 <code>@RequestBody</code> 接收的参数是<strong>来自 <code>requestBody</code></strong> 中，即<strong>请求体</strong>。一般用于处理非 <code>Content-Type: application/x-www-form-urlencoded</code> 编码格式的数据，比如：<code>application/json</code>、<code>application/xml</code> 等类型的数据。通常用于接收 <code>POST</code>、<code>DELETE</code> 等类型的请求数据，<code>GET</code> 类型也可以适用。</p>
 
 

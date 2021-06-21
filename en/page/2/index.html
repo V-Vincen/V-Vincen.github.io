@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -490,8 +490,10 @@
       Generic implementation principle...
     </h3>
     <div class="post-content-preview">
-      泛型实现原理JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，褒贬不一，废话不多说，先来看看他的原理。泛型是提供给 javac 编译器使用的，可以限定集合中的输入类型，让编译器拦截源程序中的非法输入，编译器编译带类型说明的集合时会去掉类型信息，对于参数化得泛型类型，getClass() 方法的返回值和原始类型完全一样。
-对于下面这个源程序：12345678public class......
+      泛型实现原理
+JDK 1.5增加的新特性里面有一个就是泛型。对于泛型的评价，褒贬不一，废话不多说，先来看看他的原理。泛型是提供给 javac 编译器使用的，可以限定集合中的输入类型，让编译器拦截源程序中的非法输入，编译器编译带类型说明的集合时会去掉类型信息，对于参数化得泛型类型，getClass() 方法的返回值和原始类型完全一样。
+对于下面这个源程序：
+12345678public cla......
     </div>
   </a>
   
@@ -525,8 +527,11 @@
     </h3>
     <div class="post-content-preview">
       虽然 Java 程序员不用像 C、C++ 程序员那样时刻关注内存的使用情况，JVM 会帮我们处理好这些，但并不是说有了 GC 就可以高枕无忧，内存泄露相关的问题一般在测试的时候很难发现，一旦上线流量起来可能马上就是一个诡异的线上故障。
-内存泄露的定义如果 GC 无法回收内存中不再使用的对象，则定义为内存有泄露。
-潜在的内存泄露场景未关闭的资源类当我们在程序中打开一个新的流或者是新建一个网络连......
+内存泄露的定义
+如果 GC 无法回收内存中不再使用的对象，则定义为内存有泄露。
+潜在的内存泄露场景
+未关闭的资源类
+当我们在程序中打开一个新的流或者是新建一个......
     </div>
   </a>
   
@@ -560,7 +565,9 @@
     </h3>
     <div class="post-content-preview">
       今天我们先学习一下以太网最基本也是重要的知识 —— OSI 参考模型。
-OSI参考模型OSI 的来源OSI（Open System Interconnect），即开放式系统互联。一般都叫 OSI 参考模型，是 ISO（国际标准化组织）组织在1985年研究的网络互连模型。ISO 为了更好的使网络应用更为普及，推出了 OSI 参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都......
+OSI参考模型
+OSI 的来源
+OSI（Open System Interconnect），即开放式系统互联。一般都叫 OSI 参考模型，是 ISO（国际标准化组织）组织在1985年研究的网络互连模型。ISO 为了更好的使网络应用更为普及，推出了 OSI 参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公......
     </div>
   </a>
   
@@ -593,8 +600,9 @@ OSI参考模型OSI 的来源OSI（Open System Interconnect），即开放式系�
       The Internet protocol suite is the conceptual model and set of communications protocols used in the Internet and similar computer networks. It is commonly known as TCP/IP because the foundational protocols in the suite are the Transmission Control Protocol (TCP) and the Internet Protocol (IP)...
     </h3>
     <div class="post-content-preview">
-      什么是 IP 和 TCP？Internet 协议（IP）是 Internet 的地址系统，具有将数据包从源设备传递到目标设备的核心功能。IP 是建立网络连接的主要方式，奠定了 Internet 的基础。IP 不负责数据包排序或错误检查。这样的功能需要另一种协议，通常是 TCP。
-TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消息写好后，拼图分解成碎片。接着，各个碎片可能经过不同......
+      什么是 IP 和 TCP？
+Internet 协议（IP）是 Internet 的地址系统，具有将数据包从源设备传递到目标设备的核心功能。IP 是建立网络连接的主要方式，奠定了 Internet 的基础。IP 不负责数据包排序或错误检查。这样的功能需要另一种协议，通常是 TCP。
+TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消息写好后，拼图分解成碎片。接着，各个碎片可能经过不......
     </div>
   </a>
   
@@ -627,7 +635,8 @@ TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消�
       你可以 new 一个对象...
     </h3>
     <div class="post-content-preview">
-      程序员经常会遇到灵魂拷问：你有对象吗？没有，但我可以 new 一个！12345678910public class GirlFriend &#123;    private String name;    private int age;    // 省略 getter &amp; setter ...    public static void main(String[] args) &#......
+      程序员经常会遇到灵魂拷问：你有对象吗？没有，但我可以 new 一个！
+12345678910public class GirlFriend &#123;    private String name;    private int age;    // 省略 getter &amp; setter ...    public static void main(String[] args) &......
     </div>
   </a>
   
@@ -694,14 +703,18 @@ TCP/IP 关系类似于通过邮件向某人发送写在拼图上的消息。消�
     </h3>
     <div class="post-content-preview">
       知识体系系统性梳理
+
 Java 并发之基础
+
 首先全局的了解并发的知识体系，同时了解并发理论基础和线程基础，并发关键字等，这些是理解 Java 并发框架的基础。
 
-Java 并发 - 知识体系Java 并发 - 理论基础
+Java 并发 - 知识体系
+Java 并发 - 理论基础
+
 多线程的出现是要解决什么问题的？
 线程不安全是指什么？举例说明
 并发出现线程不安全的本质什么？可见性，原子性和有序性。
-Java是怎么解决并发问题的？3个关键字，JMM 和8个......
+Java是怎么解决并发问题的？3个关键字，JMM......
     </div>
   </a>
   
@@ -734,7 +747,7 @@ Java是怎么解决并发问题的？3个关键字，JMM 和8个......
       A free CDN for Open Source fast, reliable, and automated...
     </h3>
     <div class="post-content-preview">
-      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 — 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
+      在早期之前博主，就写过一篇有关 JsDelivr CDN 加速的博文 – 免费 CDN 提速 Github 静态资源访问 ，如果还不知道 JsDelivr 是什么的小伙伴，可以先看上面这篇文章。
 今天博主想在这里讲一下，在 hexo-theme-livemylife 主题中，JsDelivr CDN 应用加速。众所周知，国内访问 Github 的体验一直不是很好，具体原因就不在这里阐述了。而......
     </div>
   </a>
@@ -1013,11 +1026,11 @@ Mathjax......
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1045,11 +1058,11 @@ Mathjax......
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1177,11 +1190,11 @@ Mathjax......
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

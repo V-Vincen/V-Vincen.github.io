@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -492,7 +492,9 @@
     <div class="post-content-preview">
       我们无需手动编写 实体类、DAO、XML 配置文件，只需要使用 MyBatis 提供的一个 Maven 插件就可以自动生成所需的各种文件便能够满足基本的业务需求，如果业务比较复杂只需要修改相关文件即可。
 配置插件
-在 pom.xml 文件中增加 mybatis-generator-maven-plugin 插件12345678910111213141516171819202122232425......
+
+在 pom.xml 文件中增加 mybatis-generator-maven-plugin 插件
+123456789101112131415161718192021222324......
     </div>
   </a>
   
@@ -527,8 +529,10 @@
       整合 Druid、MyBatis 和 PageHelper
     </h3>
     <div class="post-content-preview">
-      Spring Boot 整合 Druid概述Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
-Druid 是目前最好的数据库连接池......
+      Spring Boot 整合 Druid
+概述
+Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
+Druid 是目前最好的数据库连......
     </div>
   </a>
   
@@ -566,7 +570,9 @@ Druid 是目前最好的数据库连接池......
     </h3>
     <div class="post-content-preview">
       本章为 Thymeleaf 语法参考，主要介绍如：循环、判断、模板布局、内置对象等。
-声明修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法。12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&qu......
+声明
+修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法。
+12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&......
     </div>
   </a>
   
@@ -599,7 +605,9 @@ Druid 是目前最好的数据库连接池......
       Thymeleaf 常用语法
     </h3>
     <div class="post-content-preview">
-      引入 Thymeleaf修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法，这是下面语法的前提。12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;&lt;html xmlns=&......
+      引入 Thymeleaf
+修改 html 标签用于引入 thymeleaf 引擎，这样才可以在其他标签里使用 th:* 语法，这是下面语法的前提。
+12&lt;!DOCTYPE html SYSTEM &quot;http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd&quot;&gt;&lt;html xmlns......
     </div>
   </a>
   
@@ -632,9 +640,11 @@ Druid 是目前最好的数据库连接池......
       什么是 Thymeleaf
     </h3>
     <div class="post-content-preview">
-      Thymeleaf 简介概述Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点
+      Thymeleaf 简介
+概述
+Thymeleaf 是一个跟 Velocity、FreeMarker 类似的模板引擎，它可以完全替代 JSP 。相较与其他的模板引擎，它有如下三个极吸引人的特点
 
-Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签里增......
+Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。这是由于它支持 html 原型，然后在 html 标签......
     </div>
   </a>
   
@@ -668,10 +678,14 @@ Thymeleaf 在有网络和无网络的环境下皆可运行，即它可以让美�
     </h3>
     <div class="post-content-preview">
       引入依赖
+
 主要增加spring-boot-starter-thymeleaf 和 nekohtml 这两个依赖
 
 spring-boot-starter-thymeleaf：Thymeleaf 自动配置
-nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：1234567891011121314151617181920212223242526272829303132......
+nekohtml：允许使用非严格的 HTML 语法
+完整的 pom.xml 如下：
+
+123456789101112131415161718192021222324252627282930......
     </div>
   </a>
   
@@ -706,9 +720,13 @@ nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：123456
       Spring Boot 常用配置
     </h3>
     <div class="post-content-preview">
-      Spring Boot 常用配置概述本章节主要介绍一下Spring Boot中的一些常用配置，比如：自定义Banner、配置日志、关闭特定的自动配置等。
+      Spring Boot 常用配置
+概述
+本章节主要介绍一下Spring Boot中的一些常用配置，比如：自定义Banner、配置日志、关闭特定的自动配置等。
 自定义 Banner
-在Spring Boot启动的时候会有一个默认的启动图案1234567  .   ____          _            __ _ _ /\\ / ___&#x27;_ __ _ _(_)_ __  __......
+
+在Spring Boot启动的时候会有一个默认的启动图案
+1234567  .   ____          _            __ _ _ /\\ / ___&#x27;_ __ _ _(_)_ __......
     </div>
   </a>
   
@@ -741,8 +759,9 @@ nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：123456
       Spring Boot 单元测试
     </h3>
     <div class="post-content-preview">
-      概述主要是通过@RunWith和@SpringBootTest注解来开启单元测试功能
-1234567891011121314151617181920212223242526272829303132333435363738394041package com.funtl.hello.spring.boot;import org.junit.Before;import org.junit.Test......
+      概述
+主要是通过@RunWith和@SpringBootTest注解来开启单元测试功能
+1234567891011121314151617181920212223242526272829303132333435363738394041package com.funtl.hello.spring.boot;import org.junit.Before;import org.junit.Tes......
     </div>
   </a>
   
@@ -775,12 +794,19 @@ nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：123456
       Spring Boot 第一个应用程序
     </h3>
     <div class="post-content-preview">
-      概述这里我们使用 Intellij IDEA 来新建一个 Spring Boot 项目。
+      概述
+这里我们使用 Intellij IDEA 来新建一个 Spring Boot 项目。
 打开 IDEA -&gt; New Project -&gt; Spring Initializr
+
 填写项目信息
+
 选择 Spring Boot 版本及 Web 开发所需的依赖
+
 保存项目到指定目录
-工程目录结构创建完成后的工程目录结构如下：123456789101112131415161718192021......
+
+工程目录结构
+创建完成后的工程目录结构如下：
+12345678910111213141516171......
     </div>
   </a>
   
@@ -813,8 +839,11 @@ nekohtml：允许使用非严格的 HTML 语法完整的 pom.xml 如下：123456
       什么是 Spring Boot
     </h3>
     <div class="post-content-preview">
-      Spring 简史Spring 1.x 时代在 Spring1.x 时代，都是通过 xml 文件配置 bean，随着项目的不断扩大，需要将 xml 配置分放到不同的配置文件中，需要频繁的在 java 类和 xml 配置文件中切换。
-Spring 2.x 时代随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用注解对 Bean 进行申明和注入，大大的减少了 xml 配置文件，同时......
+      Spring 简史
+Spring 1.x 时代
+在 Spring1.x 时代，都是通过 xml 文件配置 bean，随着项目的不断扩大，需要将 xml 配置分放到不同的配置文件中，需要频繁的在 java 类和 xml 配置文件中切换。
+Spring 2.x 时代
+随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用注解对 Bean 进行申明和注入，大大的减少了 xml 配置文件......
     </div>
   </a>
   
@@ -1023,11 +1052,11 @@ Spring 2.x 时代随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用�
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1055,11 +1084,11 @@ Spring 2.x 时代随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1187,11 +1216,11 @@ Spring 2.x 时代随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用�
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

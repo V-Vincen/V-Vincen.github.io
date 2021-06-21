@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -478,7 +478,7 @@
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
         <p>使用 Dockerfile 去构建镜像好比堆积木、使用 pom 去构建 maven 项目一样，有异曲同工之妙，下面就把 Dockerfile 中主要的命令介绍一下。</p>
-<h2 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h2><div class="table-container">
+<h2 id="组成部分">组成部分</h2>
 <table>
 <thead>
 <tr>
@@ -505,50 +505,98 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="各命令详解"><a href="#各命令详解" class="headerlink" title="各命令详解"></a>各命令详解</h2><h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><p>指定哪种镜像作为新镜像的基础镜像，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
-<h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><p>指明该镜像的作者和其电子邮件，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER vector4wang <span class="string">&quot;xxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><p>在新镜像内部执行的命令，比如安装一些软件、配置一些基础环境，可使用<code>\</code>来换行，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN <span class="built_in">echo</span> <span class="string">&#x27;hello docker!&#x27;</span> \</span><br><span class="line">    &gt; /usr/<span class="built_in">local</span>/file.txt</span><br></pre></td></tr></table></figure><br>也可以使用 <code>exec</code> 格式 <code>RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</code>的命令，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN [<span class="string">&quot;apt-get&quot;</span>,<span class="string">&quot;install&quot;</span>,<span class="string">&quot;-y&quot;</span>,<span class="string">&quot;nginx&quot;</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="各命令详解">各命令详解</h2>
+<h3 id="FROM">FROM</h3>
+<p>指定哪种镜像作为新镜像的基础镜像，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu:14.04</span><br></pre></td></tr></table></figure>
+<h3 id="MAINTAINER">MAINTAINER</h3>
+<p>指明该镜像的作者和其电子邮件，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER vector4wang <span class="string">&quot;xxxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="RUN">RUN</h3>
+<p>在新镜像内部执行的命令，比如安装一些软件、配置一些基础环境，可使用<code>\</code>来换行，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN <span class="built_in">echo</span> <span class="string">&#x27;hello docker!&#x27;</span> \</span><br><span class="line">    &gt; /usr/<span class="built_in">local</span>/file.txt</span><br></pre></td></tr></table></figure>
+<p>也可以使用 <code>exec</code> 格式 <code>RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</code>的命令，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN [<span class="string">&quot;apt-get&quot;</span>,<span class="string">&quot;install&quot;</span>,<span class="string">&quot;-y&quot;</span>,<span class="string">&quot;nginx&quot;</span>]</span><br></pre></td></tr></table></figure>
 <p>要注意的是，<strong><code>executable</code> 是命令，后面的 <code>param</code> 是参数</strong></p>
-<h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><p>将主机的文件复制到镜像内，如果目的位置不存在，Docker 会自动创建所有需要的目录结构，但是它只是单纯的复制，并不会去做文件提取和解压工作。如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COPY application.yml /etc/springboot/hello-service/src/resources</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意：需要复制的目录一定要放在 Dockerfile 文件的同级目录下</strong><br>原因：</p>
+<h3 id="COPY">COPY</h3>
+<p>将主机的文件复制到镜像内，如果目的位置不存在，Docker 会自动创建所有需要的目录结构，但是它只是单纯的复制，并不会去做文件提取和解压工作。如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COPY application.yml /etc/springboot/hello-service/src/resources</span><br></pre></td></tr></table></figure>
+<p><strong>注意：需要复制的目录一定要放在 Dockerfile 文件的同级目录下</strong><br>
+原因：</p>
 <blockquote>
-<p>因为构建环境将会上传到 Docker 守护进程，而复制是在 Docker 守护进程中进行的。任何位于构建环境之外的东西都是不可用的。COPY 指令的目的的位置则必须是容器内部的一个绝对路径。<br>—-《THE DOCKER BOOK》</p>
+<p>因为构建环境将会上传到 Docker 守护进程，而复制是在 Docker 守护进程中进行的。任何位于构建环境之外的东西都是不可用的。COPY 指令的目的的位置则必须是容器内部的一个绝对路径。<br>
+—《THE DOCKER BOOK》</p>
 </blockquote>
-<h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><p>将主机的文件复制到镜像中，跟 <code>COPY</code> 一样，限制条件和使用方式都一样，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD application.yml /etc/springboot/hello-service/src/resources</span><br></pre></td></tr></table></figure></p>
+<h3 id="ADD">ADD</h3>
+<p>将主机的文件复制到镜像中，跟 <code>COPY</code> 一样，限制条件和使用方式都一样，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ADD application.yml /etc/springboot/hello-service/src/resources</span><br></pre></td></tr></table></figure>
 <p>但是 <code>ADD</code> 会对压缩文件（<code>tar</code>, <code>gzip</code>, <code>bzip2</code>, <code>etc</code>）做提取和解压操作。</p>
-<h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><p>暴露镜像的端口供主机做映射，启动镜像时，使用 <code>-P</code> 参数来讲镜像端口与宿主机的随机端口做映射。使用方式（可指定多个）：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE 8080 </span><br><span class="line">EXPOSE 8081</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><p>在构建镜像时，指定镜像的工作目录，之后的命令都是基于此工作目录，如果不存在，则会创建目录。如<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WORKDIR /usr/<span class="built_in">local</span></span><br><span class="line">WORKDIR webservice</span><br><span class="line">RUN <span class="built_in">echo</span> <span class="string">&#x27;hello docker&#x27;</span> &gt; text.txt</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<h3 id="EXPOSE">EXPOSE</h3>
+<p>暴露镜像的端口供主机做映射，启动镜像时，使用 <code>-P</code> 参数来讲镜像端口与宿主机的随机端口做映射。使用方式（可指定多个）：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE 8080 </span><br><span class="line">EXPOSE 8081</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="WORKDIR">WORKDIR</h3>
+<p>在构建镜像时，指定镜像的工作目录，之后的命令都是基于此工作目录，如果不存在，则会创建目录。如</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WORKDIR /usr/<span class="built_in">local</span></span><br><span class="line">WORKDIR webservice</span><br><span class="line">RUN <span class="built_in">echo</span> <span class="string">&#x27;hello docker&#x27;</span> &gt; text.txt</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>最终会在 <code>/usr/local/webservice/</code> 目录下生成 text.txt 文件。</p>
-<h3 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h3><p>当一个包含 <code>ONBUILD</code> 命令的镜像被用作其他镜像的基础镜像时(比如用户的镜像需要从某为准备好的位置添加源代码，或者用户需要执行特定于构建镜像的环境的构建脚本)，该命令就会执行。<br>如创建镜像 <code>image-A</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br><span class="line">...</span><br><span class="line">ONBUILD ADD . /var/www</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>然后创建镜像 <code>image-B</code> ，指定 <code>image-A</code> 为基础镜像，如<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM image-A</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>然后在构建 <code>image-B</code> 的时候，日志上显示如下:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Step 0 : FROM image-A</span><br><span class="line"><span class="comment"># Execting 1 build triggers</span></span><br><span class="line">Step onbuild-0 : ADD . /var/www</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<h3 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h3><p>指定该镜像以什么样的用户去执行，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER mongo</span><br></pre></td></tr></table></figure></p>
-<h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><p>用来向基于镜像创建的容器添加卷。比如你可以将 <code>mongodb</code> 镜像中存储数据的 <code>data</code> 文件指定为主机的某个文件。(容器内部建议不要存储任何数据)<br>如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME /data/db /data/configdb</span><br></pre></td></tr></table></figure><br><strong>注意</strong>：<code>VOLUME 主机目录 容器目录</code></p>
-<h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p>容器启动时需要执行的命令，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure><br>同样可以使用 <code>exec</code> 语法，如<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;/bin/bash&quot;</span>]</span><br></pre></td></tr></table></figure><br>当有多个 <code>CMD</code> 的时候，只有最后一个生效。</p>
-<h3 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h3><p>作用和用法和 <code>CMD</code> 一模一样</p>
-<h3 id="CMD和ENTRYPOINT的区别"><a href="#CMD和ENTRYPOINT的区别" class="headerlink" title="CMD和ENTRYPOINT的区别"></a>CMD和ENTRYPOINT的区别</h3><p><code>CMD</code> 和 <code>ENTRYPOINT</code> 同样作为容器启动时执行的命令，区别有以下几点：</p>
+<h3 id="ONBUILD">ONBUILD</h3>
+<p>当一个包含 <code>ONBUILD</code> 命令的镜像被用作其他镜像的基础镜像时(比如用户的镜像需要从某为准备好的位置添加源代码，或者用户需要执行特定于构建镜像的环境的构建脚本)，该命令就会执行。<br>
+如创建镜像 <code>image-A</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br><span class="line">...</span><br><span class="line">ONBUILD ADD . /var/www</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>然后创建镜像 <code>image-B</code> ，指定 <code>image-A</code> 为基础镜像，如</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM image-A</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>然后在构建 <code>image-B</code> 的时候，日志上显示如下:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Step 0 : FROM image-A</span><br><span class="line"><span class="comment"># Execting 1 build triggers</span></span><br><span class="line">Step onbuild-0 : ADD . /var/www</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="USER">USER</h3>
+<p>指定该镜像以什么样的用户去执行，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USER mongo</span><br></pre></td></tr></table></figure>
+<h3 id="VOLUME">VOLUME</h3>
+<p>用来向基于镜像创建的容器添加卷。比如你可以将 <code>mongodb</code> 镜像中存储数据的 <code>data</code> 文件指定为主机的某个文件。(容器内部建议不要存储任何数据)<br>
+如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME /data/db /data/configdb</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：<code>VOLUME 主机目录 容器目录</code></p>
+<h3 id="CMD">CMD</h3>
+<p>容器启动时需要执行的命令，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
+<p>同样可以使用 <code>exec</code> 语法，如</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;/bin/bash&quot;</span>]</span><br></pre></td></tr></table></figure>
+<p>当有多个 <code>CMD</code> 的时候，只有最后一个生效。</p>
+<h3 id="ENTRYPOINT">ENTRYPOINT</h3>
+<p>作用和用法和 <code>CMD</code> 一模一样</p>
+<h3 id="CMD和ENTRYPOINT的区别">CMD和ENTRYPOINT的区别</h3>
+<p><code>CMD</code> 和 <code>ENTRYPOINT</code> 同样作为容器启动时执行的命令，区别有以下几点：</p>
 <ul>
 <li><code>CMD</code> 的命令会被 <code>docker run</code> 的命令覆盖而 <code>ENTRYPOINT</code> 不会</li>
 </ul>
 <p>如使用 <code>CMD [&quot;/bin/bash&quot;]</code> 或 <code>ENTRYPOINT [&quot;/bin/bash&quot;]</code> 后，再使用 <code>docker run -ti  image</code> 启动容器，它会自动进入容器内部的交互终端，如同使用 <code>docker run -ti image /bin/bash</code>。</p>
-<p>但是如果启动镜像的命令为 <code>docker run -ti image /bin/ps</code>，使用 <code>CMD</code> 后面的命令就会被覆盖转而执行 <code>bin/ps</code> 命令，而 <code>ENTRYPOINT</code> 的则不会，而是会把 <code>docker run</code>  后面的命令当做 <code>ENTRYPOINT</code> 执行命令的参数。<br>以下例子比较容易理解：</p>
-<p>Dockerfile 中为<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">ENTRYPOINT [<span class="string">&quot;/user/sbin/nginx&quot;</span>]</span><br></pre></td></tr></table></figure><br>然后通过启动 build 之后的容器<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti image -g <span class="string">&quot;daemon off&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p>此时 <code>-g &quot;daemon off&quot;</code> 会被当成参数传递给 <code>ENTRYPOINT</code> ，最终的命令变成了<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/user/sbin/nginx -g <span class="string">&quot;daemon off&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>但是如果启动镜像的命令为 <code>docker run -ti image /bin/ps</code>，使用 <code>CMD</code> 后面的命令就会被覆盖转而执行 <code>bin/ps</code> 命令，而 <code>ENTRYPOINT</code> 的则不会，而是会把 <code>docker run</code>  后面的命令当做 <code>ENTRYPOINT</code> 执行命令的参数。<br>
+以下例子比较容易理解：</p>
+<p>Dockerfile 中为</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">ENTRYPOINT [<span class="string">&quot;/user/sbin/nginx&quot;</span>]</span><br></pre></td></tr></table></figure>
+<p>然后通过启动 build 之后的容器</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti image -g <span class="string">&quot;daemon off&quot;</span></span><br></pre></td></tr></table></figure>
+<p>此时 <code>-g &quot;daemon off&quot;</code> 会被当成参数传递给 <code>ENTRYPOINT</code> ，最终的命令变成了</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/user/sbin/nginx -g <span class="string">&quot;daemon off&quot;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>CMD</code> 和 <code>ENTRYPOINT</code> 都存在时</li>
 </ul>
-<p><code>CMD</code> 和 <code>ENTRYPOINT</code> 都存在时，<code>CMD</code> 的指令变成了 <code>ENTRYPOINT</code> 的参数，并且此 <code>CMD</code> 提供的参数会被 <code>docker run</code> 后面的命令覆盖，如：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">ENTRYPOINT [<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;i am&quot;</span>]</span><br><span class="line">CMD [<span class="string">&quot;docker&quot;</span>]</span><br></pre></td></tr></table></figure></p>
+<p><code>CMD</code> 和 <code>ENTRYPOINT</code> 都存在时，<code>CMD</code> 的指令变成了 <code>ENTRYPOINT</code> 的参数，并且此 <code>CMD</code> 提供的参数会被 <code>docker run</code> 后面的命令覆盖，如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">ENTRYPOINT [<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;i am&quot;</span>]</span><br><span class="line">CMD [<span class="string">&quot;docker&quot;</span>]</span><br></pre></td></tr></table></figure>
 <p>之后启动构建之后的容器</p>
 <ul>
 <li>使用 <code>docker run -ti image</code></li>
 </ul>
-<p>输出<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello i am docker&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>输出</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello i am docker&quot;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>使用 <code>docker run -ti image world</code></li>
 </ul>
-<p>输出<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello i am world&quot;</span></span><br></pre></td></tr></table></figure><br>指令比较多，可以通过分类（如开头的表格）的办法去记忆</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>自己写了个简单的示例，非常简单<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br><span class="line">MAINTAINER vector4wang xxxx@qq.com</span><br><span class="line"></span><br><span class="line">WORKDIR /usr/<span class="built_in">local</span>/docker</span><br><span class="line">ADD temp.zip ./add/</span><br><span class="line">COPY temp.zip ./copy/</span><br><span class="line">EXPOSE 22</span><br><span class="line">RUN groupadd -r vector4wang &amp;&amp; useradd -r -g vector4wang vector4wang</span><br><span class="line">USER vector4wang</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [<span class="string">&quot;/bin/bash&quot;</span>]</span><br></pre></td></tr></table></figure><br>下面是运行过程</p>
+<p>输出</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;hello i am world&quot;</span></span><br></pre></td></tr></table></figure>
+<p>指令比较多，可以通过分类（如开头的表格）的办法去记忆</p>
+<h3 id="示例">示例</h3>
+<p>自己写了个简单的示例，非常简单</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu</span><br><span class="line">MAINTAINER vector4wang xxxx@qq.com</span><br><span class="line"></span><br><span class="line">WORKDIR /usr/<span class="built_in">local</span>/docker</span><br><span class="line">ADD temp.zip ./add/</span><br><span class="line">COPY temp.zip ./copy/</span><br><span class="line">EXPOSE 22</span><br><span class="line">RUN groupadd -r vector4wang &amp;&amp; useradd -r -g vector4wang vector4wang</span><br><span class="line">USER vector4wang</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [<span class="string">&quot;/bin/bash&quot;</span>]</span><br></pre></td></tr></table></figure>
+<p>下面是运行过程</p>
 <p><img src="1.jpg" alt="1"></p>
 <p><img src="2.jpg" alt="2"></p>
 <p>参考简书：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/10ed530766af">https://www.jianshu.com/p/10ed530766af</a></p>

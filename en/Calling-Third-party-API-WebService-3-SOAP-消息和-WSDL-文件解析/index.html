@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -417,7 +417,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">788</span> In Total
+              Words <span class="post-count">791</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -479,15 +479,22 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="SOAP-消息的调试抓取"><a href="#SOAP-消息的调试抓取" class="headerlink" title="SOAP 消息的调试抓取"></a>SOAP 消息的调试抓取</h2><h3 id="使用-Postman-测试-WebService-接口"><a href="#使用-Postman-测试-WebService-接口" class="headerlink" title="使用 Postman 测试 WebService 接口"></a>使用 Postman 测试 WebService 接口</h3><p><img src="3.png" alt="3"></p>
+        <h2 id="SOAP-消息的调试抓取">SOAP 消息的调试抓取</h2>
+<h3 id="使用-Postman-测试-WebService-接口">使用 Postman 测试 WebService 接口</h3>
+<p><img src="3.png" alt="3"></p>
 <p><img src="4.png" alt="4"></p>
-<p><strong>request</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soapenv:Envelope</span> <span class="attr">xmlns:soapenv</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> </span></span><br><span class="line">xmlns:ser=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Header</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">         <span class="comment">&lt;!--Optional:--&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">arg0</span>&gt;</span>vincent<span class="tag">&lt;/<span class="name">arg0</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>response</strong><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soap:Envelope</span> <span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">soap:Body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ns2:sayHelloResponse</span> <span class="attr">xmlns:ns2</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">return</span>&gt;</span>sayHellovincent<span class="tag">&lt;/<span class="name">return</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ns2:sayHelloResponse</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">soap:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soap:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="SoapUI-工具测试-WebService-接口"><a href="#SoapUI-工具测试-WebService-接口" class="headerlink" title="SoapUI 工具测试 WebService 接口"></a>SoapUI 工具测试 WebService 接口</h3><p>SoapUI Pro 是需要付费的，对于日常的测试，开源版的功能已经够用了。这里把两个版本的下载地址都分享一下：</p>
+<p><strong>request</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soapenv:Envelope</span> <span class="attr">xmlns:soapenv</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> </span></span><br><span class="line">xmlns:ser=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Header</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">         <span class="comment">&lt;!--Optional:--&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">arg0</span>&gt;</span>vincent<span class="tag">&lt;/<span class="name">arg0</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ser:sayHello</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">soapenv:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soapenv:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>response</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">soap:Envelope</span> <span class="attr">xmlns:soap</span>=<span class="string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">soap:Body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ns2:sayHelloResponse</span> <span class="attr">xmlns:ns2</span>=<span class="string">&quot;http://service.cxf.wsservice.example.com/&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">return</span>&gt;</span>sayHellovincent<span class="tag">&lt;/<span class="name">return</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ns2:sayHelloResponse</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">soap:Body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">soap:Envelope</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="SoapUI-工具测试-WebService-接口">SoapUI 工具测试 WebService 接口</h3>
+<p>SoapUI Pro 是需要付费的，对于日常的测试，开源版的功能已经够用了。这里把两个版本的下载地址都分享一下：</p>
 <ul>
-<li><p>SoapUI Pro破解版下载地址：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ">https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ</a> （密码：epyh）</p>
+<li>
+<p>SoapUI Pro破解版下载地址：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ">https://pan.baidu.com/s/1LyZQYoIxLqbGRAnB8PBJuQ</a> （密码：epyh）</p>
 </li>
-<li><p>SoapUI Open Source下载地址：<a target="_blank" rel="noopener" href="https://www.soapui.org/downloads/soapui.html">https://www.soapui.org/downloads/soapui.html</a></p>
+<li>
+<p>SoapUI Open Source下载地址：<a target="_blank" rel="noopener" href="https://www.soapui.org/downloads/soapui.html">https://www.soapui.org/downloads/soapui.html</a></p>
 </li>
 </ul>
 <p>开源版进入页面后点击 Download SoapUI Open Source 即可进行下载。</p>
@@ -495,10 +502,12 @@
 <p>操作如图下：</p>
 <p><img src="6.jpg" alt="6"></p>
 <p><img src="7.png" alt="7"></p>
-<h2 id="WSDL-文件解析"><a href="#WSDL-文件解析" class="headerlink" title="WSDL 文件解析"></a>WSDL 文件解析</h2><h3 id="wsdl-报文总体概述"><a href="#wsdl-报文总体概述" class="headerlink" title="wsdl 报文总体概述"></a>wsdl 报文总体概述</h3><p><img src="8.png" alt="8"></p>
+<h2 id="WSDL-文件解析">WSDL 文件解析</h2>
+<h3 id="wsdl-报文总体概述">wsdl 报文总体概述</h3>
+<p><img src="8.png" alt="8"></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">definitions</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">types</span>&gt;</span></span><br><span class="line">	  	定义 web service 使用的数据类型。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">types</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="tag">&lt;<span class="name">message</span>&gt;</span></span><br><span class="line">		每个消息均由一个或多个部件组成。可以把它当做 java 中一个函数调用的参数。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">portType</span>&gt;</span></span><br><span class="line">		它类似 Java 中的一个函数库（或一个模块、或一个类）。</span><br><span class="line">	<span class="tag">&lt;/<span class="name">portType</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">binding</span>&gt;</span></span><br><span class="line">		为每个端口定义消息格式和协议细节。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">binding</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="wsdl-definitions"><a href="#wsdl-definitions" class="headerlink" title="wsdl:definitions"></a><code>wsdl:definitions</code></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wsdl:definitions</span> <span class="attr">xmlns:xsd</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line">xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;</span><br><span class="line">xmlns:tns=&quot;http://service.cxf.wsservice.example.com/&quot;</span><br><span class="line">xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;</span><br><span class="line">xmlns:ns1=&quot;http://schemas.xmlsoap.org/soap/http&quot;</span><br><span class="line">name=&quot;WebServiceIService&quot;</span><br><span class="line">targetNamespace=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">wsdl:definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<div class="table-container">
+<h3 id="wsdl-definitions"><code>wsdl:definitions</code></h3>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">wsdl:definitions</span> <span class="attr">xmlns:xsd</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line">xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;</span><br><span class="line">xmlns:tns=&quot;http://service.cxf.wsservice.example.com/&quot;</span><br><span class="line">xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;</span><br><span class="line">xmlns:ns1=&quot;http://schemas.xmlsoap.org/soap/http&quot;</span><br><span class="line">name=&quot;WebServiceIService&quot;</span><br><span class="line">targetNamespace=&quot;http://service.cxf.wsservice.example.com/&quot;&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">wsdl:definitions</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -525,10 +534,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="wsdl-types"><a href="#wsdl-types" class="headerlink" title="wsdl:types"></a><code>wsdl:types</code></h3><p>我们 java 定义的服务接口中某方法的输入参数和返回值。</p>
+<h3 id="wsdl-types"><code>wsdl:types</code></h3>
+<p>我们 java 定义的服务接口中某方法的输入参数和返回值。</p>
 <p><img src="9.png" alt="9"></p>
-<h3 id="wsdl-message"><a href="#wsdl-message" class="headerlink" title="wsdl:message"></a><code>wsdl:message</code></h3><p>通信消息的数据结构的抽象类型化定义。使用 Types 所定义的类型来定义整个消息的数据结构。</p>
+<h3 id="wsdl-message"><code>wsdl:message</code></h3>
+<p>通信消息的数据结构的抽象类型化定义。使用 Types 所定义的类型来定义整个消息的数据结构。</p>
 <p><img src="10.png" alt="10"></p>
 <p>WebService 中每个方法包含两部分：</p>
 <ul>
@@ -536,14 +546,17 @@
 <li>其实质都是基于 SOAP 协议将其封装为消息，所以每一个方法对应有两个消息，一个输入一个输出回应。简单而言，就是方法和 message 的关系是 N:2N 的关系，一对二。</li>
 <li>message 中的具体内容是 part，结合前面可知，message 中的 part 内容请到前面定义过的 types 中去看，它会引用之前的 type 相关内容。</li>
 </ul>
-<h3 id="wsdl-portType"><a href="#wsdl-portType" class="headerlink" title="wsdl:portType"></a><code>wsdl:portType</code></h3><p><img src="11.png" alt="11"></p>
+<h3 id="wsdl-portType"><code>wsdl:portType</code></h3>
+<p><img src="11.png" alt="11"></p>
 <ul>
 <li>portType：接口</li>
 <li>operation：接口中定义的方法</li>
 </ul>
-<h3 id="wsdl-binding"><a href="#wsdl-binding" class="headerlink" title="wsdl:binding"></a><code>wsdl:binding</code></h3><p>特定端口类型的具体协议和数据格式规范的绑定：</p>
+<h3 id="wsdl-binding"><code>wsdl:binding</code></h3>
+<p>特定端口类型的具体协议和数据格式规范的绑定：</p>
 <p><img src="12.png" alt="12"></p>
-<h3 id="wsdl-service"><a href="#wsdl-service" class="headerlink" title="wsdl:service"></a><code>wsdl:service</code></h3><p>负责将网络通信地址赋给一个具体的绑定：</p>
+<h3 id="wsdl-service"><code>wsdl:service</code></h3>
+<p>负责将网络通信地址赋给一个具体的绑定：</p>
 <p><img src="13.png" alt="13"></p>
 <p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/hgx_suiyuesusu/article/details/88918192">https://blog.csdn.net/hgx_suiyuesusu/article/details/88918192</a></p>
 

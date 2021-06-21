@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -477,12 +477,16 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>ZooKeeper 是一种分布式协调服务，用于管理大型主机。在分布式环境中协调和管理服务是一个复杂的过程。ZooKeeper 通过其简单的架构和 API 解决了这个问题。ZooKeeper 允许开发人员专注于核心应用程序逻辑，而不必担心应用程序的分布式特性。</p>
-<h2 id="Zookeeper-的数据模型"><a href="#Zookeeper-的数据模型" class="headerlink" title="Zookeeper 的数据模型"></a>Zookeeper 的数据模型</h2><p>Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树，也很像文件系统的目录。</p>
+        <h2 id="概述">概述</h2>
+<p>ZooKeeper 是一种分布式协调服务，用于管理大型主机。在分布式环境中协调和管理服务是一个复杂的过程。ZooKeeper 通过其简单的架构和 API 解决了这个问题。ZooKeeper 允许开发人员专注于核心应用程序逻辑，而不必担心应用程序的分布式特性。</p>
+<h2 id="Zookeeper-的数据模型">Zookeeper 的数据模型</h2>
+<p>Zookeeper 的数据模型是什么样子呢？它很像数据结构当中的树，也很像文件系统的目录。</p>
 <p><img src="1.png" alt="1"></p>
-<p>树是由节点所组成，Zookeeper 的数据存储也同样是基于节点，这种节点叫做 <strong>Znode</strong>。但是，不同于树的节点，Znode 的引用方式是路径引用，类似于文件路径：<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/动物/</span>猫</span><br><span class="line"><span class="regexp">/汽车/</span>宝马</span><br></pre></td></tr></table></figure></p>
+<p>树是由节点所组成，Zookeeper 的数据存储也同样是基于节点，这种节点叫做 <strong>Znode</strong>。但是，不同于树的节点，Znode 的引用方式是路径引用，类似于文件路径：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/动物/</span>猫</span><br><span class="line"><span class="regexp">/汽车/</span>宝马</span><br></pre></td></tr></table></figure>
 <p>这样的层级结构，让每一个 Znode 节点拥有唯一的路径，就像命名空间一样对不同信息作出清晰的隔离。</p>
-<h2 id="Znode-包含哪些元素"><a href="#Znode-包含哪些元素" class="headerlink" title="Znode 包含哪些元素"></a>Znode 包含哪些元素</h2><p><img src="2.png" alt="2"></p>
+<h2 id="Znode-包含哪些元素">Znode 包含哪些元素</h2>
+<p><img src="2.png" alt="2"></p>
 <ul>
 <li><code>data</code>：Znode 存储的数据信息。</li>
 <li><code>ACL</code>：记录 Znode 的访问权限，即哪些人或哪些 IP 可以访问本节点。</li>
@@ -490,14 +494,22 @@
 <li><code>child</code>：当前节点的子节点引用</li>
 </ul>
 <p>这里需要注意一点，Zookeeper 是为读多写少的场景所设计。Znode 并不是用来存储大规模业务数据，而是用于存储少量的状态和配置信息，<strong>每个节点的数据最大不能超过 1MB</strong>。</p>
-<h2 id="Zookeeper-的基本操作"><a href="#Zookeeper-的基本操作" class="headerlink" title="Zookeeper 的基本操作"></a>Zookeeper 的基本操作</h2><h3 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">create</span></span><br></pre></td></tr></table></figure>
-<h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
-<h3 id="判断节点是否存在"><a href="#判断节点是否存在" class="headerlink" title="判断节点是否存在"></a>判断节点是否存在</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exists</span><br></pre></td></tr></table></figure>
-<h3 id="获得一个节点的数据"><a href="#获得一个节点的数据" class="headerlink" title="获得一个节点的数据"></a>获得一个节点的数据</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getData</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置一个节点的数据"><a href="#设置一个节点的数据" class="headerlink" title="设置一个节点的数据"></a>设置一个节点的数据</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setData</span></span><br></pre></td></tr></table></figure>
-<h3 id="获取节点下的所有子节点"><a href="#获取节点下的所有子节点" class="headerlink" title="获取节点下的所有子节点"></a>获取节点下的所有子节点</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getChildren</span></span><br></pre></td></tr></table></figure>
+<h2 id="Zookeeper-的基本操作">Zookeeper 的基本操作</h2>
+<h3 id="创建节点">创建节点</h3>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">create</span></span><br></pre></td></tr></table></figure>
+<h3 id="删除节点">删除节点</h3>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断节点是否存在">判断节点是否存在</h3>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exists</span><br></pre></td></tr></table></figure>
+<h3 id="获得一个节点的数据">获得一个节点的数据</h3>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getData</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置一个节点的数据">设置一个节点的数据</h3>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">setData</span></span><br></pre></td></tr></table></figure>
+<h3 id="获取节点下的所有子节点">获取节点下的所有子节点</h3>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getChildren</span></span><br></pre></td></tr></table></figure>
 <p>这其中，<code>exists</code>，<code>getData</code>，<code>getChildren</code> 属于读操作。Zookeeper 客户端在请求读操作的时候，可以选择是否设置 <strong>Watch</strong>。</p>
-<h2 id="Zookeeper-的事件通知"><a href="#Zookeeper-的事件通知" class="headerlink" title="Zookeeper 的事件通知"></a>Zookeeper 的事件通知</h2><p>我们可以把 <strong>Watch</strong> 理解成是注册在特定 Znode 上的触发器。当这个 Znode 发生改变，也就是调用了 <code>create</code>，<code>delete</code>，<code>setData</code> 方法的时候，将会触发 Znode 上注册的对应事件，请求 Watch 的客户端会接收到异步通知。</p>
+<h2 id="Zookeeper-的事件通知">Zookeeper 的事件通知</h2>
+<p>我们可以把 <strong>Watch</strong> 理解成是注册在特定 Znode 上的触发器。当这个 Znode 发生改变，也就是调用了 <code>create</code>，<code>delete</code>，<code>setData</code> 方法的时候，将会触发 Znode 上注册的对应事件，请求 Watch 的客户端会接收到异步通知。</p>
 <p>具体交互过程如下：</p>
 <ul>
 <li>客户端调用 <code>getData</code> 方法，<code>watch</code> 参数是 <code>true</code>。服务端接到请求，返回节点数据，并且在对应的哈希表里插入被 Watch 的 Znode 路径，以及 Watcher 列表。</li>
@@ -507,30 +519,40 @@
 <li>当被 Watch 的 Znode 已删除，服务端会查找哈希表，找到该 Znode 对应的所有 Watcher，异步通知客户端，并且删除哈希表中对应的 Key-Value。</li>
 </ul>
 <p><img src="4.png" alt="4"></p>
-<h2 id="Zookeeper-的一致性"><a href="#Zookeeper-的一致性" class="headerlink" title="Zookeeper 的一致性"></a>Zookeeper 的一致性</h2><p>Zookeeper 身为分布式系统协调服务，如果自身挂了如何处理呢？为了防止单机挂掉的情况，Zookeeper 维护了一个集群。如下图：</p>
+<h2 id="Zookeeper-的一致性">Zookeeper 的一致性</h2>
+<p>Zookeeper 身为分布式系统协调服务，如果自身挂了如何处理呢？为了防止单机挂掉的情况，Zookeeper 维护了一个集群。如下图：</p>
 <p><img src="5.png" alt="5"></p>
 <p>Zookeeper Service 集群是一主多从结构。在更新数据时，首先更新到主节点（这里的节点是指服务器，不是 Znode），再同步到从节点。在读取数据时，直接读取任意从节点。为了保证主从节点的数据一致性，Zookeeper 采用了 <strong>ZAB 协议</strong>，这种协议非常类似于一致性算法 <strong>Paxos</strong> 和 <strong>Raft</strong>。</p>
-<h3 id="什么是-ZAB"><a href="#什么是-ZAB" class="headerlink" title="什么是 ZAB"></a>什么是 ZAB</h3><p>Zookeeper Atomic Broadcast，有效解决了 Zookeeper 集群崩溃恢复，以及主从同步数据的问题。</p>
-<h3 id="ZAB-协议定义的三种节点状态"><a href="#ZAB-协议定义的三种节点状态" class="headerlink" title="ZAB 协议定义的三种节点状态"></a>ZAB 协议定义的三种节点状态</h3><ul>
+<h3 id="什么是-ZAB">什么是 ZAB</h3>
+<p>Zookeeper Atomic Broadcast，有效解决了 Zookeeper 集群崩溃恢复，以及主从同步数据的问题。</p>
+<h3 id="ZAB-协议定义的三种节点状态">ZAB 协议定义的三种节点状态</h3>
+<ul>
 <li>Looking ：选举状态。</li>
 <li>Following ：Follower 节点（从节点）所处的状态。</li>
 <li>Leading ：Leader 节点（主节点）所处状态。</li>
 </ul>
-<h3 id="最大-ZXID"><a href="#最大-ZXID" class="headerlink" title="最大 ZXID"></a>最大 ZXID</h3><p>最大 ZXID 也就是节点本地的最新事务编号，包含 epoch 和计数两部分。epoch 是纪元的意思，相当于 Raft 算法选主时候的 term。</p>
-<h3 id="ZAB-的崩溃恢复"><a href="#ZAB-的崩溃恢复" class="headerlink" title="ZAB 的崩溃恢复"></a>ZAB 的崩溃恢复</h3><p>假如 Zookeeper 当前的主节点挂掉了，集群会进行崩溃恢复。ZAB 的崩溃恢复分成三个阶段：</p>
-<h4 id="Leader-election"><a href="#Leader-election" class="headerlink" title="Leader election"></a>Leader election</h4><p>选举阶段，此时集群中的节点处于 Looking 状态。它们会各自向其他节点发起投票，投票当中包含自己的服务器 ID 和最新事务 ID（ZXID）。</p>
+<h3 id="最大-ZXID">最大 ZXID</h3>
+<p>最大 ZXID 也就是节点本地的最新事务编号，包含 epoch 和计数两部分。epoch 是纪元的意思，相当于 Raft 算法选主时候的 term。</p>
+<h3 id="ZAB-的崩溃恢复">ZAB 的崩溃恢复</h3>
+<p>假如 Zookeeper 当前的主节点挂掉了，集群会进行崩溃恢复。ZAB 的崩溃恢复分成三个阶段：</p>
+<h4 id="Leader-election">Leader election</h4>
+<p>选举阶段，此时集群中的节点处于 Looking 状态。它们会各自向其他节点发起投票，投票当中包含自己的服务器 ID 和最新事务 ID（ZXID）。</p>
 <p><img src="6.png" alt="6"></p>
 <p>接下来，节点会用自身的 ZXID 和从其他节点接收到的 ZXID 做比较，如果发现别人家的 ZXID 比自己大，也就是数据比自己新，那么就重新发起投票，投票给目前已知最大的 ZXID 所属节点。</p>
 <p><img src="7.png" alt="7"></p>
 <p>每次投票后，服务器都会统计投票数量，判断是否有某个节点得到半数以上的投票。如果存在这样的节点，该节点将会成为准 Leader，状态变为 Leading。其他节点的状态变为 Following。</p>
 <p><img src="8.png" alt="8"></p>
-<h4 id="Discovery"><a href="#Discovery" class="headerlink" title="Discovery"></a>Discovery</h4><p>发现阶段，用于在从节点中发现最新的 ZXID 和事务日志。或许有人会问：既然 Leader 被选为主节点，已经是集群里数据最新的了，为什么还要从节点中寻找最新事务呢？</p>
+<h4 id="Discovery">Discovery</h4>
+<p>发现阶段，用于在从节点中发现最新的 ZXID 和事务日志。或许有人会问：既然 Leader 被选为主节点，已经是集群里数据最新的了，为什么还要从节点中寻找最新事务呢？</p>
 <p>这是为了防止某些意外情况，比如因网络原因在上一阶段产生多个 Leader 的情况。</p>
 <p>所以这一阶段，Leader 集思广益，接收所有 Follower 发来各自的最新 epoch 值。Leader 从中选出最大的 epoch，基于此值加 1，生成新的 epoch 分发给各个 Follower。</p>
 <p>各个 Follower 收到全新的 epoch 后，返回 ACK 给 Leader，带上各自最大的 ZXID 和历史事务日志。Leader 选出最大的 ZXID，并更新自身历史日志。</p>
-<h4 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a>Synchronization</h4><p>同步阶段，把 Leader 刚才收集得到的最新历史事务日志，同步给集群中所有的 Follower。只有当半数 Follower 同步成功，这个准 Leader 才能成为正式的 Leader。</p>
+<h4 id="Synchronization">Synchronization</h4>
+<p>同步阶段，把 Leader 刚才收集得到的最新历史事务日志，同步给集群中所有的 Follower。只有当半数 Follower 同步成功，这个准 Leader 才能成为正式的 Leader。</p>
 <p>自此，故障恢复正式完成。</p>
-<h3 id="ZAB-的数据写入"><a href="#ZAB-的数据写入" class="headerlink" title="ZAB 的数据写入"></a>ZAB 的数据写入</h3><h4 id="Broadcast"><a href="#Broadcast" class="headerlink" title="Broadcast"></a>Broadcast</h4><p>ZAB 的数据写入涉及到 Broadcast 阶段，简单来说，就是 Zookeeper 常规情况下更新数据的时候，由 Leader 广播到所有的 Follower。其过程如下：</p>
+<h3 id="ZAB-的数据写入">ZAB 的数据写入</h3>
+<h4 id="Broadcast">Broadcast</h4>
+<p>ZAB 的数据写入涉及到 Broadcast 阶段，简单来说，就是 Zookeeper 常规情况下更新数据的时候，由 Leader 广播到所有的 Follower。其过程如下：</p>
 <ul>
 <li>客户端发出写入数据请求给任意 Follower。</li>
 <li>Follower 把写入数据请求转发给 Leader。</li>
@@ -540,9 +562,13 @@
 </ul>
 <p><img src="9.png" alt="9"></p>
 <p>ZAB 协议既不是强一致性，也不是弱一致性，而是处于两者之间的<strong>单调一致性（顺序一致性）</strong>。它依靠事务 ID 和版本号，保证了数据的更新和读取是有序的。</p>
-<h2 id="Zookeeper-的应用场景"><a href="#Zookeeper-的应用场景" class="headerlink" title="Zookeeper 的应用场景"></a>Zookeeper 的应用场景</h2><h3 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h3><p>这是雅虎研究员设计 Zookeeper 的初衷。利用 Zookeeper 的临时顺序节点，可以轻松实现分布式锁。</p>
-<h3 id="服务注册和发现"><a href="#服务注册和发现" class="headerlink" title="服务注册和发现"></a>服务注册和发现</h3><p>利用 Znode 和 Watcher，可以实现分布式服务的注册和发现。最著名的应用就是阿里的分布式 RPC 框架 Dubbo。</p>
-<h3 id="共享配置和状态信息"><a href="#共享配置和状态信息" class="headerlink" title="共享配置和状态信息"></a>共享配置和状态信息</h3><p>Redis 的分布式解决方案 Codis，就利用了 Zookeeper 来存放数据路由表和 codis-proxy 节点的元信息。同时 codis-config 发起的命令都会通过 ZooKeeper 同步到各个存活的 codis-proxy。</p>
+<h2 id="Zookeeper-的应用场景">Zookeeper 的应用场景</h2>
+<h3 id="分布式锁">分布式锁</h3>
+<p>这是雅虎研究员设计 Zookeeper 的初衷。利用 Zookeeper 的临时顺序节点，可以轻松实现分布式锁。</p>
+<h3 id="服务注册和发现">服务注册和发现</h3>
+<p>利用 Znode 和 Watcher，可以实现分布式服务的注册和发现。最著名的应用就是阿里的分布式 RPC 框架 Dubbo。</p>
+<h3 id="共享配置和状态信息">共享配置和状态信息</h3>
+<p>Redis 的分布式解决方案 Codis，就利用了 Zookeeper 来存放数据路由表和 codis-proxy 节点的元信息。同时 codis-config 发起的命令都会通过 ZooKeeper 同步到各个存活的 codis-proxy。</p>
 <p>此外，Kafka、HBase、Hadoop，也都依靠Zookeeper同步节点信息，实现高可用。</p>
 
 

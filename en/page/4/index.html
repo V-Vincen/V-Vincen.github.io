@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -490,13 +490,16 @@
       The difference between http and rpc...
     </h3>
     <div class="post-content-preview">
-      区别传输协议
+      区别
+传输协议
+
 RPC：可以基于 TCP 协议，也可以基于 HTTP 协议。
 HTTP：基于 HTTP 协议。
 
 传输效率
-RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。    
-HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀......
+
+RPC：使⽤自定义的 TCP 协议，可以让请求报⽂体积更小，或者使⽤ HTTP2 协议，也可以很好的减少报⽂的体积，提⾼传输效率。
+HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内容，如果是基于 HTTP2.0，那么简单的封装一下是可以作为⼀个......
     </div>
   </a>
   
@@ -530,8 +533,9 @@ HTTP：如果是基于 HTTP1.1 的协议，请求中会包含很多⽆用的内�
     </h3>
     <div class="post-content-preview">
       Web 开发中几乎的平台都需要一个后台管理，但是从零开发一套后台控制面板并不容易，幸运的是有很多开源免费的后台控制面板可以给开发者使用，那么有哪些优秀的开源免费的控制面板呢？我在 Github 上收集了一些优秀的后台控制面板，并总结得出 Top 10。
-vue-Element-AdminGithub Star：63.7K
-Github Repo：https://github.com/PanJ......
+vue-Element-Admin
+Github Star：63.7K
+Github Repo：https://github.com/Pan......
     </div>
   </a>
   
@@ -600,7 +604,8 @@ Github Repo：https://github.com/PanJ......
     <div class="post-content-preview">
       在之前的章节中介绍的 方法打印以及基本选择规则 是 logback-classic 的核心。在这章中，将介绍其它的过滤方法。
 logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组成一个任意复杂的过滤策略。它们在很大程度上受到 Linux iptables 的启发。
-在 logback-classic 中在 logback-classic 中，有两种类型的过滤器，regular 过......
+在 logback-classic 中
+在 logback-classic 中，有两种类型的过滤器，regular ......
     </div>
   </a>
   
@@ -633,8 +638,9 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Layout...
     </h3>
     <div class="post-content-preview">
-      什么是 layout？layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
-12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  St......
+      什么是 layout？
+layout 是 logback 的组件，负责将日志事件转换为字符串。Layout 接口中的 format() 方法接受一个表示日志事件的对象 （任何类型）并返回一个字符串。Layout 接口的概要如下：
+12345678public interface Layout&lt;E&gt; extends ContextAware, LifeCycle &#123;  S......
     </div>
   </a>
   
@@ -667,7 +673,8 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Encoder...
     </h3>
     <div class="post-content-preview">
-      什么是 encoderencoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 Pa......
+      什么是 encoder
+encoder 将日志事件转换为字节数组，同时将字节数组写入到一个 OutputStream 中。encoder 在 logback 0.9.19 版本引进。在之前的版本中，大多数的 appender 依赖 layout 将日志事件转换为 string，然后再通过 java.io.Writer 写出。在之前的版本中，用户需要在 FileAppender 中内置一个 P......
     </div>
   </a>
   
@@ -700,8 +707,9 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Appenders...
     </h3>
     <div class="post-content-preview">
-      什么是 Appenderlogback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
-1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;imp......
+      什么是 Appender
+logback 将写入日志事件的任务委托给一个名为 appender 的组件。Appender 必须实现 ch.qos.logback.core.Appender 接口。该接口的方法如下：
+1234567891011package ch.qos.logback.core;  import ch.qos.logback.core.spi.ContextAware;im......
     </div>
   </a>
   
@@ -735,8 +743,9 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
     </h3>
     <div class="post-content-preview">
       我们开始通过多种配置 logback，以及许多示例的配置脚本。logback 依赖的配置框架 - Joran 将会在之后的章节介绍
-配置 logback在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
-可以通过编程或者配置 XML 脚本或者 ......
+配置 logback
+在应用程序当中使用日志语句需要耗费大量的精力。根据调查，大约有百分之四的代码用于打印日志。即使在一个中型应用的代码当中也有成千上万条日志的打印语句。考虑到这种情况，我们需要使用工具来管理这些日志语句。
+可以通过编程或者配置 XML 脚本或者......
     </div>
   </a>
   
@@ -769,9 +778,11 @@ logback 过滤器基于三元逻辑，允许它们组装或者链接在一起组
       Architecture...
     </h3>
     <div class="post-content-preview">
-      logback 的架构跟 简介 类似
-Logger, Appender 和 LayoutsLogback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
-Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logback-......
+      logback 的架构
+跟 简介 类似
+Logger, Appender 和 Layouts
+Logback 构建在三个主要的类上：Logger，Appender 和 Layouts。这三个不同类型的组件一起作用能够让开发者根据消息的类型以及日志的级别来打印日志。
+Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接口作为 logbac......
     </div>
   </a>
   
@@ -804,10 +815,12 @@ Logger 类作为 logback-classic 模块的一部分。Appender 与 Layouts 接�
       Introduction to logback...
     </h3>
     <div class="post-content-preview">
-      声明博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
+      声明
+博客中 Logback 标签下的全部文章，均来自于 Github 开源项目 YLongo/logback-chinese-manual 此项目为 logback 中文手册。
 项目在线地址：https://logbackcn.gitbook.io/logback
 Logback 官网地址：https://logback.qos.ch/manual/index.html
-简介Logback ......
+简介
+Logbac......
     </div>
   </a>
   
@@ -1016,11 +1029,11 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1048,11 +1061,11 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1180,11 +1193,11 @@ Logback 官网地址：https://logback.qos.ch/manual/index.html
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

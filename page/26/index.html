@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -491,7 +491,9 @@
     </h3>
     <div class="post-content-preview">
       POM
-在 pom.xml 文件中新增 com.alibaba:druid 和 mysql:mysql-connector-java 依赖12345678910&lt;dependency&gt;    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;    &lt;artifactId&gt;druid&lt;/artifactId&gt;    &lt......
+
+在 pom.xml 文件中新增 com.alibaba:druid 和 mysql:mysql-connector-java 依赖
+12345678910&lt;dependency&gt;    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;    &lt;artifactId&gt;druid&lt;/artifactId&gt;    &......
     </div>
   </a>
   
@@ -526,8 +528,10 @@
       Druid 简介
     </h3>
     <div class="post-content-preview">
-      概述Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
-各种连接池性能对比测试测试执行申请归还连接 1,000,000（一百万）次总......
+      概述
+Druid 是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和 SQL 解析器组成。该项目主要是为了扩展 JDBC 的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计 SQL 信息、SQL 性能收集、SQL 注入检查、SQL 翻译等，程序员可以通过定制来实现自己需要的功能。
+各种连接池性能对比测试
+测试执行申请归还连接 1,000,000（一百万）......
     </div>
   </a>
   
@@ -562,8 +566,9 @@
       MyBatis 简介
     </h3>
     <div class="post-content-preview">
-      概述MyBatis 是一个优秀的基于 Java 的持久层框架，它内部封装了 JDBC，使开发者只需关注 SQL 语句本身，而不用再花费精力去处理诸如注册驱动、创建 Connection、配置 Statement 等繁杂过程。
-Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement、PreparedStatement 等）配置起来，并通过 Java 对......
+      概述
+MyBatis 是一个优秀的基于 Java 的持久层框架，它内部封装了 JDBC，使开发者只需关注 SQL 语句本身，而不用再花费精力去处理诸如注册驱动、创建 Connection、配置 Statement 等繁杂过程。
+Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement、PreparedStatement 等）配置起来，并通过 Java ......
     </div>
   </a>
   
@@ -596,9 +601,11 @@ Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement
       Spring MVC @ResponseBody
     </h3>
     <div class="post-content-preview">
-      简介@ResponseBody
+      简介
+@ResponseBody
 注解表示该方法的返回的结果直接写入 HTTP 响应正文（ResponseBody）中，一般在异步获取数据时使用，通常是在使用 @RequestMapping 后，返回值通常解析为跳转路径，加上 @ResponseBody 后返回结果不会被解析为跳转路径，而是直接写入HTTP 响应正文中。
-作用该注解用于将 Controller 的方法返回的对象，通过适当的 H......
+作用
+该注解用于将 Controller 的方法返回的对象，通过适当的......
     </div>
   </a>
   
@@ -631,11 +638,12 @@ Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement
       Spring MVC @ModelAttribute
     </h3>
     <div class="post-content-preview">
-      简介@ModelAttribute 具有如下三个作用：
+      简介
+@ModelAttribute 具有如下三个作用：
 
 绑定请求参数到命令对象：放在功能处理方法的入参上时，用于将多个请求参数绑定到一个命令对象，从而简化绑定流程，而且自动暴露为模型数据用于视图页面展示时使用
 暴露 @RequestMapping 方法返回值为模型数据：放在功能处理方法的返回值上时，是暴露功能处理方法的返回值为模型数据，用于视图页面展示时使用
-暴露表单引用对象为模型数据：放......
+暴露表单引用对象为模型数据：......
     </div>
   </a>
   
@@ -668,7 +676,9 @@ Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement
       Spring MVC 标签库
     </h3>
     <div class="post-content-preview">
-      声明表单标签库在使用 SpringMVC 的时候我们可以使用 Spring 封装的一系列表单标签，这些标签都可以访问到 ModelMap 中的内容。我们需要先在 JSP 中声明使用的标签，具体做法是在 JSP 文件的顶部加入以下指令：1&lt;%@ taglib prefix=&quot;form&quot; uri=&quot;http://www.springframework.org/......
+      声明表单标签库
+在使用 SpringMVC 的时候我们可以使用 Spring 封装的一系列表单标签，这些标签都可以访问到 ModelMap 中的内容。我们需要先在 JSP 中声明使用的标签，具体做法是在 JSP 文件的顶部加入以下指令：
+1&lt;%@ taglib prefix=&quot;form&quot; uri=&quot;http://www.springframework.or......
     </div>
   </a>
   
@@ -702,12 +712,13 @@ Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement
     </h3>
     <div class="post-content-preview">
       概述
+
 在多人协同开发时，特别是规模较大的项目，为了方便日后的代码维护和管理，我们会将每个开发人员的工作细分到具体的功能和模块上。随着项目的不断扩大，模块也会越来越多，后续会更加难以维护和扩展，为了应对这种情况后期我们还会采用微服务架构的方式进行开发。
 以当前教程为例，我们可以将模块划分为如下形式：
 
 统一的依赖管理（dependencies）
 通用的工具类（commons）
-领域模型（dom......
+领域模型（do......
     </div>
   </a>
   
@@ -743,12 +754,14 @@ Mybatis 通过 xml 或注解的方式将要执行的各种 Statement（Statement
     </h3>
     <div class="post-content-preview">
       拦截器简介
+
 Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 Filter，用于对处理器进行预处理和后处理。
 常见应用场景
 
+
 日志记录：记录请求信息的日志，以便进行信息监控、信息统计、计算 PV（Page View）等
 权限检查：如登录检测，进入处理器检测检测是否登录，如果没有直接返回到登录页面
-性能监控：有时候系统在某段时间莫名其妙的慢，可以通过拦截器在......
+性能监控：有时候系统在某段时间莫名其妙的慢，可以通过拦截......
     </div>
   </a>
   
@@ -782,7 +795,8 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     </h3>
     <div class="post-content-preview">
       概述
-12345678910111213141516171819202122232425package com.funtl.my.shop.web.controller;import com.funtl.my.shop.service.UserService;import org.springframework.beans.factory.annotation.Autowired;impor......
+
+12345678910111213141516171819202122232425package com.funtl.my.shop.web.controller;import com.funtl.my.shop.service.UserService;import org.springframework.beans.factory.annotation.Autowired;impo......
     </div>
   </a>
   
@@ -816,7 +830,9 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     </h3>
     <div class="post-content-preview">
       POM
-在 pom.xml 配置文件中增加 org.springframework:spring-webmvc 依赖12345&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &lt;......
+
+在 pom.xml 配置文件中增加 org.springframework:spring-webmvc 依赖
+12345&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;    &l......
     </div>
   </a>
   
@@ -1025,11 +1041,11 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1057,11 +1073,11 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1189,11 +1205,11 @@ Spring Web MVC 的处理器拦截器，类似于 Servlet 开发中的过滤器 F
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

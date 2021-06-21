@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -495,10 +495,13 @@
 数据卷（Volumes）
 挂载主机目录 (Bind mounts)
 
-数据卷数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。
-创建数据卷1docker volume create my-vol
-数据卷列表1docker volume ls
-查看数据......
+数据卷
+数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。
+创建数据卷
+1docker volume create my-vol
+数据卷列表
+1docker volume ls
+查......
     </div>
   </a>
   
@@ -531,8 +534,9 @@
       Docker 仓库
     </h3>
     <div class="post-content-preview">
-      访问 Docker 仓库仓库（Repository）是集中存放镜像的地方。
-一个容易混淆的概念是注册服务器（Registry）。实际上注册服务器是管理仓库的具体服务器，每个服务器上可以有多个仓库，而每个仓库下面有多个镜像。从这方面来说，仓库可以被认为是一个具体的项目或目录。例如对于仓库地址 dl.dockerpool.com/ubuntu 来说，dl.dockerpool.com 是注册服务......
+      访问 Docker 仓库
+仓库（Repository）是集中存放镜像的地方。
+一个容易混淆的概念是注册服务器（Registry）。实际上注册服务器是管理仓库的具体服务器，每个服务器上可以有多个仓库，而每个仓库下面有多个镜像。从这方面来说，仓库可以被认为是一个具体的项目或目录。例如对于仓库地址 dl.dockerpool.com/ubuntu 来说，dl.dockerpool.com 是注册服......
     </div>
   </a>
   
@@ -565,10 +569,12 @@
       Docker 容器
     </h3>
     <div class="post-content-preview">
-      操作 Docker 容器容器是 Docker 又一核心概念。
+      操作 Docker 容器
+容器是 Docker 又一核心概念。
 简单的说，容器是独立运行的一个或一组应用，以及它们的运行态环境。对应的，虚拟机可以理解为模拟运行的一整套操作系统（提供了运行态环境和其他系统环境）和跑在上面的应用。
 本章将具体介绍如何来管理一个容器，包括创建、启动和停止等。
-Docker 启动容器启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（sto......
+Docker 启动容器
+启动容器有两种方式，一种是基于镜像新建一个容器并启动，另外一个是将在终止状态（s......
     </div>
   </a>
   
@@ -657,8 +663,9 @@ RUN、COPY、ADD、EXPOSE、WORKDIR、ONBUILD、USER、VOLUME等
       Dockerfile 定制镜像
     </h3>
     <div class="post-content-preview">
-      Dockerfile 定制镜像从刚才的 docker commit 的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
-Dockerfile 是一个文本文件，其内包含......
+      Dockerfile 定制镜像
+从刚才的 docker commit 的学习中，我们可以了解到，镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
+Dockerfile 是一个文本文件，其内包......
     </div>
   </a>
   
@@ -691,9 +698,12 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 删除本地镜像
     </h3>
     <div class="post-content-preview">
-      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
-用 ID、镜像名、摘要删除镜像其中，&lt;镜像&gt; 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
-比如我们有这么一些镜像：123456$ docker image lsREPOSITO......
+      如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：
+1$ docker image rm [选项] &lt;镜像1&gt; [&lt;镜像2&gt; ...]
+用 ID、镜像名、摘要删除镜像
+其中，&lt;镜像&gt; 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
+比如我们有这么一些镜像：
+123456$ docker image lsREPOS......
     </div>
   </a>
   
@@ -726,7 +736,8 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 列出镜像
     </h3>
     <div class="post-content-preview">
-      要想列出已经下载下来的镜像，可以使用 docker image ls 命令。123456789$ docker image lsREPOSITORY           TAG                 IMAGE ID            CREATED             SIZEredis                latest              5f51535......
+      要想列出已经下载下来的镜像，可以使用 docker image ls 命令。
+123456789$ docker image lsREPOSITORY           TAG                 IMAGE ID            CREATED             SIZEredis                latest              5f5153......
     </div>
   </a>
   
@@ -759,7 +770,8 @@ Dockerfile 是一个文本文件，其内包含......
       Docker 获取镜像
     </h3>
     <div class="post-content-preview">
-      使用 Docker 镜像在之前的介绍中，我们知道镜像是 Docker 的三大组件之一。
+      使用 Docker 镜像
+在之前的介绍中，我们知道镜像是 Docker 的三大组件之一。
 Docker 运行容器前需要本地存在对应的镜像，如果本地不存在该镜像，Docker 会从镜像仓库下载该镜像。
 本章将介绍更多关于镜像的内容，包括：
 
@@ -767,8 +779,9 @@ Docker 运行容器前需要本地存在对应的镜像，如果本地不存在�
 管理本地主机上的镜像；
 介绍镜像实现的基本原理。
 
-镜像的实现原理Docker 镜像是怎么实现增量的修改和维护的？
-每个镜像都由很多层次构......
+镜像的实现原理
+Docker 镜像是怎么实现增量的修改和维护的？
+每个镜像都由很多层......
     </div>
   </a>
   
@@ -801,8 +814,8 @@ Docker 运行容器前需要本地存在对应的镜像，如果本地不存在�
       Docker 安装
     </h3>
     <div class="post-content-preview">
-      安装 DockerDocker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
-
+      安装 Docker
+Docker 在 1.13 版本之后，从 2017 年的 3 月 1 日开始，版本命名规则变为如下：
 
 
 
@@ -825,9 +838,8 @@ Edge 版本
 
 
 
-
 同时 Docker 划分为 CE 和 EE。CE 即社区版（免费，支持周期三个月），EE 即企业版，强调安全，付费使用。
-Docker CE 每月......
+Docker CE 每月发......
     </div>
   </a>
   
@@ -861,16 +873,18 @@ Docker CE 每月......
     </h3>
     <div class="post-content-preview">
       Docker 包括三个基本概念
+
 镜像（Image）
 容器（Container）
 仓库（Repository）
 
 理解了这三个概念，就理解了 Docker 的整个生命周期。
-Docker 引擎Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
+Docker 引擎
+Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
 
 一种服务器，它是一种称为守护进程并且长时间运行的程序。
 REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。
-一个......
+......
     </div>
   </a>
   
@@ -1079,11 +1093,11 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1111,11 +1125,11 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1243,11 +1257,11 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

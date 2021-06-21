@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -415,7 +415,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">271</span> In Total
+              Words <span class="post-count">275</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -477,17 +477,28 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h2 id="用-Homebrew-来安装-Nginx"><a href="#用-Homebrew-来安装-Nginx" class="headerlink" title="用 Homebrew 来安装 Nginx"></a>用 Homebrew 来安装 Nginx</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
-<h3 id="查看-nginx-版本"><a href="#查看-nginx-版本" class="headerlink" title="查看 nginx 版本"></a>查看 nginx 版本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
-<h3 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
-<p>也可以使用下面的命令启动，但是配置文件 <code>nginx.conf</code> 修改后用这个命令执行不生效，故不建议使用：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure><br><img src="1.png" alt="1"></p>
-<h3 id="查看-nginx-是否启动成功"><a href="#查看-nginx-是否启动成功" class="headerlink" title="查看 nginx 是否启动成功"></a>查看 nginx 是否启动成功</h3><p>在浏览器中访问：在浏览器中访问：<a target="_blank" rel="noopener" href="https://v-vincen.github.io/404.html">http://localhost:18080</a>，如果出现如下界面，则说明启动成功。，如果出现如下界面，则说明启动成功。</p>
+        <h2 id="用-Homebrew-来安装-Nginx">用 Homebrew 来安装 Nginx</h2>
+<h3 id="安装">安装</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+<h3 id="查看-nginx-版本">查看 nginx 版本</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
+<h3 id="启动-nginx">启动 nginx</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+<p>也可以使用下面的命令启动，但是配置文件 <code>nginx.conf</code> 修改后用这个命令执行不生效，故不建议使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure>
+<p><img src="1.png" alt="1"></p>
+<h3 id="查看-nginx-是否启动成功">查看 nginx 是否启动成功</h3>
+<p>在浏览器中访问：在浏览器中访问：<a target="_blank" rel="noopener" href="https://v-vincen.github.io/404.html">http://localhost:18080</a>，如果出现如下界面，则说明启动成功。，如果出现如下界面，则说明启动成功。</p>
 <p><img src="2.png" alt="2"></p>
 <p><strong>注</strong>：端口号是在配置文件 <code>nginx.conf</code> 里面配置的，默认端口是 8080 ，配置文件的位置 <code>/usr/local/etc/nginx</code>。</p>
-<h3 id="关闭-nginx"><a href="#关闭-nginx" class="headerlink" title="关闭 nginx"></a>关闭 nginx</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
-<p>也可以使用下面的命令启动，但是配置文件 <code>nginx.conf</code> 修改后用这个命令执行不生效，故不建议使用：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services stop nginx</span><br></pre></td></tr></table></figure></p>
-<h3 id="重新加载-nginx"><a href="#重新加载-nginx" class="headerlink" title="重新加载 nginx"></a>重新加载 nginx</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
-<h3 id="常用的指令有"><a href="#常用的指令有" class="headerlink" title="常用的指令有"></a>常用的指令有</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload 重新加载配置</span><br><span class="line">nginx -s reopen 重启</span><br><span class="line">nginx -s stop 停止</span><br><span class="line">nginx -s quit 退出</span><br><span class="line">nginx -V 查看版本，以及配置文件地址</span><br><span class="line">nginx -v 查看版本</span><br><span class="line">nginx -c filename 指定配置文件</span><br><span class="line">nginx -h 帮助</span><br></pre></td></tr></table></figure>
+<h3 id="关闭-nginx">关闭 nginx</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
+<p>也可以使用下面的命令启动，但是配置文件 <code>nginx.conf</code> 修改后用这个命令执行不生效，故不建议使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services stop nginx</span><br></pre></td></tr></table></figure>
+<h3 id="重新加载-nginx">重新加载 nginx</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<h3 id="常用的指令有">常用的指令有</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload 重新加载配置</span><br><span class="line">nginx -s reopen 重启</span><br><span class="line">nginx -s stop 停止</span><br><span class="line">nginx -s quit 退出</span><br><span class="line">nginx -V 查看版本，以及配置文件地址</span><br><span class="line">nginx -v 查看版本</span><br><span class="line">nginx -c filename 指定配置文件</span><br><span class="line">nginx -h 帮助</span><br></pre></td></tr></table></figure>
 
 
         <hr>

@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -524,9 +524,11 @@ Spring Boot Admin 有两个角色组成，一个是 Spring Boot Admin......
       服务链路追踪
     </h3>
     <div class="post-content-preview">
-      概述这篇文章主要讲解服务追踪组件 ZipKin。
-ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitter 公司开源，它致力于收集服务的定时数据，以解决微服务架构中的延迟问题，包括数据的收集、存储、查找和展现。它的理论模型来自于 Google Dapper 论文。
-每个服务向 ZipKin 报告计时数据，ZipKin 会根据调用关系通过 ZipKin UI 生成依......
+      概述
+这篇文章主要讲解服务追踪组件 ZipKin。
+ZipKin 简介
+ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitter 公司开源，它致力于收集服务的定时数据，以解决微服务架构中的延迟问题，包括数据的收集、存储、查找和展现。它的理论模型来自于 Google Dapper 论文。
+每个服务向 ZipKin 报告计时数据，ZipKin 会根据调用关系通过 ZipKin UI 生......
     </div>
   </a>
   
@@ -592,8 +594,11 @@ ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitt
       使用路由网关的服务过滤功能
     </h3>
     <div class="post-content-preview">
-      概述Zuul 不仅仅只是路由，还有很多强大的功能，本节演示一下它的服务过滤功能，比如用在安全验证方面。
-创建服务过滤器继承 ZuulFilter 类并在类上增加 @Component 注解就可以使用服务过滤功能了，非常简单方便123456789101112131415161718192021222324252627282930313233343536373839404142434445464......
+      概述
+Zuul 不仅仅只是路由，还有很多强大的功能，本节演示一下它的服务过滤功能，比如用在安全验证方面。
+创建服务过滤器
+继承 ZuulFilter 类并在类上增加 @Component 注解就可以使用服务过滤功能了，非常简单方便
+123456789101112131415161718192021222324252627282930313233343536373839404142434445......
     </div>
   </a>
   
@@ -626,8 +631,10 @@ ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitt
       使用路由网关统一访问接口
     </h3>
     <div class="post-content-preview">
-      概述在微服务架构中，需要几个基础的服务治理组件，包括服务注册与发现、服务消费、负载均衡、熔断器、智能路由、配置管理等，由这几个基础组件相互协作，共同组建了一个简单的微服务系统。一个简单的微服务系统如下图：
-在 Spring Cloud 微服务系统中，一种常见的负载均衡方式是，客户端的请求首先经过负载均衡（Zuul、Ngnix），再到达服务网关（Zuul 集群），然后再到具体的服。服务统一注册......
+      概述
+在微服务架构中，需要几个基础的服务治理组件，包括服务注册与发现、服务消费、负载均衡、熔断器、智能路由、配置管理等，由这几个基础组件相互协作，共同组建了一个简单的微服务系统。一个简单的微服务系统如下图：
+
+在 Spring Cloud 微服务系统中，一种常见的负载均衡方式是，客户端的请求首先经过负载均衡（Zuul、Ngnix），再到达服务网关（Zuul 集群），然后再到具体的服。服务统一......
     </div>
   </a>
   
@@ -660,8 +667,11 @@ ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitt
       使用熔断器仪表盘监控
     </h3>
     <div class="post-content-preview">
-      概述在 Ribbon 和 Feign 项目增加 Hystrix 仪表盘功能，两个项目的改造方式相同
-创建熔断器仪表盘在 pom.xml 中增加依赖1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-starter......
+      概述
+在 Ribbon 和 Feign 项目增加 Hystrix 仪表盘功能，两个项目的改造方式相同
+创建熔断器仪表盘
+在 pom.xml 中增加依赖
+1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-star......
     </div>
   </a>
   
@@ -694,7 +704,8 @@ ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitt
       使用熔断器防止服务雪崩
     </h3>
     <div class="post-content-preview">
-      概述在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以通过 RPC 相互调用，在 Spring Cloud 中可以用 RestTemplate + Ribbon 和 Feign 来调用。为了保证其高可用，单个服务通常会集群部署。由于网络原因或者自身的原因，服务并不能保证 100% 可用，如果单个服务出现问题，调用这个服务就会出现线程阻塞，此时若有大量的请求涌入，Servlet ......
+      概述
+在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以通过 RPC 相互调用，在 Spring Cloud 中可以用 RestTemplate + Ribbon 和 Feign 来调用。为了保证其高可用，单个服务通常会集群部署。由于网络原因或者自身的原因，服务并不能保证 100% 可用，如果单个服务出现问题，调用这个服务就会出现线程阻塞，此时若有大量的请求涌入，Servlet......
     </div>
   </a>
   
@@ -727,10 +738,11 @@ ZipKin 简介ZipKin 是一个开放源代码的分布式跟踪系统，由 Twitt
       创建服务消费者（Feign）
     </h3>
     <div class="post-content-preview">
-      概述Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变得更简单。使用 Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用 Feign 注解和 JAX-RS 注解。Feign 支持可插拔的编码器和解码器。Feign 默认集成了 Ribbon，并和 Eureka 结合，默认实现了负载均衡的效果
+      概述
+Feign 是一个声明式的伪 Http 客户端，它使得写 Http 客户端变得更简单。使用 Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用 Feign 注解和 JAX-RS 注解。Feign 支持可插拔的编码器和解码器。Feign 默认集成了 Ribbon，并和 Eureka 结合，默认实现了负载均衡的效果
 
 Feign 采用的是基于接口的注解
-Feign 整合了 ......
+Feign 整合了......
     </div>
   </a>
   
@@ -763,10 +775,11 @@ Feign 整合了 ......
       创建服务消费者（Ribbon）
     </h3>
     <div class="post-content-preview">
-      概述在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于 http restful 的。Spring cloud 有两种服务调用方式，一种是 ribbon + restTemplate，另一种是 feign。在这一篇文章首先讲解下基于 ribbon + rest。
+      概述
+在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于 http restful 的。Spring cloud 有两种服务调用方式，一种是 ribbon + restTemplate，另一种是 feign。在这一篇文章首先讲解下基于 ribbon + rest。
 Ribbon 简介
-Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的一些行为。
-准......
+
+Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的一些行为。......
     </div>
   </a>
   
@@ -799,8 +812,11 @@ Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的�
       创建服务提供者
     </h3>
     <div class="post-content-preview">
-      概述当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除。
-创建服务提供者POM123456789101112131415161718192021222324252627282930313233343536373839404......
+      概述
+当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除。
+创建服务提供者
+POM
+123456789101112131415161718192021222324252627282930313233343536373839......
     </div>
   </a>
   
@@ -1009,11 +1025,11 @@ Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的�
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1041,11 +1057,11 @@ Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1173,11 +1189,11 @@ Ribbon 是一个负载均衡客户端，可以很好的控制 http 和 tcp 的�
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

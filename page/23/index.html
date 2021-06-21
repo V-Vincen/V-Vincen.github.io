@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -490,8 +490,11 @@
       创建服务提供者
     </h3>
     <div class="post-content-preview">
-      概述当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除。
-创建服务提供者POM123456789101112131415161718192021222324252627282930313233343536373839404......
+      概述
+当 Client 向 Server 注册时，它会提供一些元数据，例如主机和端口，URL，主页等。Eureka Server 从每个 Client 实例接收心跳消息。 如果心跳超时，则通常将该实例从注册 Server 中删除。
+创建服务提供者
+POM
+123456789101112131415161718192021222324252627282930313233343536373839......
     </div>
   </a>
   
@@ -524,8 +527,11 @@
       服务注册与发现
     </h3>
     <div class="post-content-preview">
-      概述在这里，我们需要用的组件是 Spring Cloud Netflix 的 Eureka，Eureka 是一个服务注册和发现模块
-创建服务注册中心其 pom.xml 文件配置如下：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;?xml version=&q......
+      概述
+在这里，我们需要用的组件是 Spring Cloud Netflix 的 Eureka，Eureka 是一个服务注册和发现模块
+创建服务注册中心
+其 pom.xml 文件配置如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;?xml version......
     </div>
   </a>
   
@@ -558,8 +564,10 @@
       统一的依赖管理
     </h3>
     <div class="post-content-preview">
-      概述Spring Cloud 项目都是基于 Spring Boot 进行开发，并且都是使用 Maven 做项目管理工具。在实际开发中，我们一般都会创建一个依赖管理项目作为 Maven 的 Parent 项目使用，这样做可以极大的方便我们对 Jar 包版本的统一管理。
-创建依赖管理项目创建一个工程名为 hello-spring-cloud-dependencies 的项目，pom.xml 配置......
+      概述
+Spring Cloud 项目都是基于 Spring Boot 进行开发，并且都是使用 Maven 做项目管理工具。在实际开发中，我们一般都会创建一个依赖管理项目作为 Maven 的 Parent 项目使用，这样做可以极大的方便我们对 Jar 包版本的统一管理。
+创建依赖管理项目
+创建一个工程名为 hello-spring-cloud-dependencies 的项目，pom.xml ......
     </div>
   </a>
   
@@ -593,10 +601,12 @@
     </h3>
     <div class="post-content-preview">
       目前市场上主流的套微服务架构解决方案：
- **Spring Boot + Spring Cloud Netflix = Java 原生云开发** 
+
+ Spring Boot + Spring Cloud Netflix = Java 原生云开发 
 Spring Boot + Dubbo + Zookeeper
 
-概述  Spring Cloud 是一个相对比较新的微服务框架，2016 才推出 1.0 的 Release 版本. 但是其更新特别快，几乎每 1-2 个月就有一次更新，虽然 Sp......
+概述
+Spring Cloud 是一个相对比较新的微服务框架，2016 才推出 1.0 的 Release 版本. 但是其更新特别快，几乎每 1-2 个月就有一次更新，虽然 Spring......
     </div>
   </a>
   
@@ -630,6 +640,7 @@ Spring Boot + Dubbo + Zookeeper
     </h3>
     <div class="post-content-preview">
       微服务架构需要考虑的问题
+
 API Gateway
 服务间调用
 服务发现
@@ -637,8 +648,12 @@ API Gateway
 服务部署
 数据调用
 
-六种常见的微服务架构设计模式：聚合器微服务设计模式这是一种最常见也最简单的设计模式：
-聚合器调用多个服务实现应用程序所需的功能。它可以是一个简单的 WEB 页面，将检索到的数据进行处理展示。它也可以是一个更高层次的组合微服务，对检索到的数据增加业务逻辑后进一步发布成一个新的微服务，这符合 ......
+
+六种常见的微服务架构设计模式：
+聚合器微服务设计模式
+这是一种最常见也最简单的设计模式：
+
+聚合器调用多个服务实现应用程序所需的功能。它可以是一个简单的 WEB 页面，将检索到的数据进行处理展示。它也可以是一个更高层次的组合微服务，对检索到的数据增加业务逻辑后进一步发布成一个新的微服务......
     </div>
   </a>
   
@@ -671,15 +686,17 @@ API Gateway
       Their small scale and relative isolation can lead to many additional benefits, such as easier maintenance, improved productivity, greater fault tolerance, better business alignment, and more...
     </h3>
     <div class="post-content-preview">
-      概述要实际的应用微服务，需要解决以下问题：
+      概述
+要实际的应用微服务，需要解决以下问题：
 
 客户端如何访问这些服务
 每个服务之间如何通信
 如此多的服务，如何实现？
 服务挂了，如何解决？（备份方案，应急处理机制）
 
-客户端如何访问这些服务原来的 Monolithic 方式开发，所有的服务都是本地的，UI 可以直接调用，现在按功能拆分成独立的服务，跑在独立的一般都在独立的虚拟机上的 Java 进程了。客户端 UI 如何访问他？
-后台有 N ......
+客户端如何访问这些服务
+原来的 Monolithic 方式开发，所有的服务都是本地的，UI 可以直接调用，现在按功能拆分成独立的服务，跑在独立的一般都在独立的虚拟机上的 Java 进程了。客户端 UI 如何访问他？
+后台有 ......
     </div>
   </a>
   
@@ -712,7 +729,9 @@ API Gateway
       Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others...
     </h3>
     <div class="post-content-preview">
-      特征官方的定义
+      特征
+官方的定义
+
 一系列的独立的服务共同组成系统
 单独部署，跑在自己的进程中
 每个服务为独立的业务开发
@@ -720,6 +739,7 @@ API Gateway
 非常强调隔离性
 
 大概的标准
+
 分布式服务组成的系统
 按照业务，而不是技术来划分组织
 做有生命的产品而不是项目
@@ -728,7 +748,7 @@ API Gateway
 高度容错性
 快速演化和迭代
 
-SOA 和微服务的区......
+SOA 和微服......
     </div>
   </a>
   
@@ -761,9 +781,13 @@ SOA 和微服务的区......
       Microservices are a modern approach to software whereby application code is delivered in small, manageable pieces, independent of others...
     </h3>
     <div class="post-content-preview">
-      微服务架构的概念微服务架构是一种架构概念，旨在通过将功能分解到各个离散的服务中以实现对解决方案的解耦。它的主要作用是将功能分解到离散的各个服务当中，从而降低系统的耦合性，并提供更加灵活的服务支持。
-概念把一个大型的单个应用程序和服务拆分为数个甚至数十个的支持微服务，它可扩展单个组件而不是整个的应用程序堆栈，从而满足服务等级协议。
-定义围绕业务领域组件来创建应用，这些应用可独立地进行开发、管理......
+      微服务架构的概念
+
+微服务架构是一种架构概念，旨在通过将功能分解到各个离散的服务中以实现对解决方案的解耦。它的主要作用是将功能分解到离散的各个服务当中，从而降低系统的耦合性，并提供更加灵活的服务支持。
+概念
+把一个大型的单个应用程序和服务拆分为数个甚至数十个的支持微服务，它可扩展单个组件而不是整个的应用程序堆栈，从而满足服务等级协议。
+定义
+围绕业务领域组件来创建应用，这些应用可独立地进行开......
     </div>
   </a>
   
@@ -797,8 +821,11 @@ SOA 和微服务的区......
     </h3>
     <div class="post-content-preview">
       在实际的项目开发中，常常需要使用到分页，分页方式分为两种：前端分页和后端分页。
-前端分页一次 ajax 请求数据的所有记录，然后在前端缓存并且计算 count 和分页逻辑，一般前端组件（例如 dataTable）会提供分页动作。特点是：简单，很适合小规模的 web 平台；当数据量大的时候会产生性能问题，在查询和网络传输的时间会很长。
-后端分页在 ajax 请求中指定页码 pageNum 和每......
+前端分页
+一次 ajax 请求数据的所有记录，然后在前端缓存并且计算 count 和分页逻辑，一般前端组件（例如 dataTable）会提供分页动作。
+特点是：简单，很适合小规模的 web 平台；当数据量大的时候会产生性能问题，在查询和网络传输的时间会很长。
+后端分页
+在 ajax 请求中指定页码 pageNum......
     </div>
   </a>
   
@@ -831,11 +858,13 @@ SOA 和微服务的区......
       Spring Boot 测试 MyBatis 案例
     </h3>
     <div class="post-content-preview">
-      使用 tk.mybatis 操作数据库经过之前章节一系列的配置之后，我们已经满足了使用 MyBaits 操作数据库的必要条件，下面是使用 tk.mybatis 操作数据库的例子。
+      使用 tk.mybatis 操作数据库
+经过之前章节一系列的配置之后，我们已经满足了使用 MyBaits 操作数据库的必要条件，下面是使用 tk.mybatis 操作数据库的例子。
 我们以测试操作用户表为例（tb_user）
 修改入口类
+
 需要使用 @MapperScan 注解来指定 Mapper 接口的路径
-PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring......
+PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spri......
     </div>
   </a>
   
@@ -1044,11 +1073,11 @@ PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring......
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1076,11 +1105,11 @@ PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring......
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1208,11 +1237,11 @@ PS： 注意这里的 @MapperScan 注解是 tk.mybatis.spring......
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

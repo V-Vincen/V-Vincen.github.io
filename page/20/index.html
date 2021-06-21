@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -491,16 +491,18 @@
     </h3>
     <div class="post-content-preview">
       Docker 包括三个基本概念
+
 镜像（Image）
 容器（Container）
 仓库（Repository）
 
 理解了这三个概念，就理解了 Docker 的整个生命周期。
-Docker 引擎Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
+Docker 引擎
+Docker 引擎是一个包含以下主要组件的客户端服务器应用程序。
 
 一种服务器，它是一种称为守护进程并且长时间运行的程序。
 REST API用于指定程序可以用来与守护进程通信的接口，并指示它做什么。
-一个......
+......
     </div>
   </a>
   
@@ -533,7 +535,8 @@ REST API用于指定程序可以用来与守护进程通信的接口，并指示
       Docker 简介
     </h3>
     <div class="post-content-preview">
-      什么是 DockerDocker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源)，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
+      什么是 Docker
+Docker 最初是 dotCloud 公司创始人 Solomon Hykes 在法国期间发起的一个公司内部项目，它是基于 dotCloud 公司多年云服务技术的一次革新，并于 2013 年 3 月以 Apache 2.0 授权协议开源，主要项目代码在 GitHub 上进行维护。Docker 项目后来还加入了 Linux 基金会，并成立推动 开放容器联盟（OCI）。
 D......
     </div>
   </a>
@@ -567,8 +570,14 @@ D......
       Ubuntu 常用命令
     </h3>
     <div class="post-content-preview">
-      防火墙相关命令（Ubuntu）安装方法1sudo apt-get install ufw
-使用方法启用12sudo ufw default deny sudo ufw enable通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。对于大部分防火墙操作来说， 其实无非就是的......
+      防火墙相关命令（Ubuntu）
+安装方法
+1sudo apt-get install ufw
+使用方法
+启用
+12sudo ufw default deny sudo ufw enable
+通过第一命令，我们设置默认的规则为allow， 这样除非指明打开的端口， 否则所有端口默认都是关闭的。第二个命令则启动了ufw。如果下次重新启动机器， ufw也会自动启动。
+对于大部分防火墙操作来说， 其......
     </div>
   </a>
   
@@ -601,12 +610,16 @@ D......
       Ubuntu 安装 MySQL 8.0
     </h3>
     <div class="post-content-preview">
-      删除历史版本 MySQLsudo apt-get remove mysql-*
+      删除历史版本 MySQL
+sudo apt-get remove mysql-*
 然后清理残留的数据
-dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
+dpkg -l |grep ^rc|awk '&#123;print $2&#125;' |sudo xargs dpkg -P
 它会跳出一个对话框，你选择 yes 就好了
-安装 MySQL 8.0下载deb包
-运行命令1sudo dpkg -i mysql-apt-confi......
+安装 MySQL 8.0
+下载deb包
+
+运行命令
+1sudo dpkg -i mysql-apt-config_0.......
     </div>
   </a>
   
@@ -639,10 +652,14 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       Ubuntu 安装 MySQL 5.7
     </h3>
     <div class="post-content-preview">
-      安装更新数据源1apt-get update
-安装 MySQL1apt-get install mysql-server
+      安装
+更新数据源
+1apt-get update
+安装 MySQL
+1apt-get install mysql-server
 系统将提示您在安装过程中创建 root 密码。选择一个安全的密码，并确保你记住它，因为你以后需要它。接下来，我们将完成 MySQL 的配置。
-配置因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本的 My......
+配置
+因为是全新安装，您需要运行附带的安全脚本。这会更改一些不太安全的默认选项，例如远程 root 登录和示例用户。在旧版本......
     </div>
   </a>
   
@@ -675,12 +692,19 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       Ubuntu 安装 Tomcat
     </h3>
     <div class="post-content-preview">
-      概述此处以 Tomcat 8.5.23 为例
+      概述
+此处以 Tomcat 8.5.23 为例
 下载地址：https://tomcat.apache.org/
-解压缩并移动到指定目录解压缩1tar -zxvf apache-tomcat-8.5.23.tar.gz
-变更目录名1mv apache-tomcat-8.5.23 tomcat
-移动目录1mv tomcat/ /usr/local/
-常用命令启动1/usr/local/tomcat......
+解压缩并移动到指定目录
+解压缩
+1tar -zxvf apache-tomcat-8.5.23.tar.gz
+变更目录名
+1mv apache-tomcat-8.5.23 tomcat
+移动目录
+1mv tomcat/ /usr/local/
+常用命令
+启动
+1/usr/local......
     </div>
   </a>
   
@@ -713,11 +737,16 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       The Java Development Kit (JDK) is one of three core technology packages used in Java programming, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment)...
     </h3>
     <div class="post-content-preview">
-      概述此处以 JDK 1.8.0_152 为例
+      概述
+此处以 JDK 1.8.0_152 为例
 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/index.html
-解压缩并移动到指定目录解压缩1tar -zxvf jdk-8u152-linux-x64.tar.gz
-创建目录1mkdir -p /usr/local/java
-移动安装包1mv jdk1.8.0_15......
+解压缩并移动到指定目录
+解压缩
+1tar -zxvf jdk-8u152-linux-x64.tar.gz
+创建目录
+1mkdir -p /usr/local/java
+移动安装包
+1mv jdk1.8......
     </div>
   </a>
   
@@ -750,9 +779,9 @@ dpkg -l |grep ^rc|awk &#39;&#123;print $2&#125;&#39; |sudo xargs dpkg -P
       Ubuntu 文件权限管理
     </h3>
     <div class="post-content-preview">
-      查看文件和目录的权限ls –al：使用ls不带参数只显示文件名称，通过ls –al 可以显示文件或者目录的权限信息。
-ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile
-......
+      查看文件和目录的权限
+ls –al：使用ls不带参数只显示文件名称，通过ls –al 可以显示文件或者目录的权限信息。
+ls -l 文件名：显示信息包括–文件类型 (d 目录，- 普通文件，l 链接文件)，文件权限，文件的用户，文件的所属组，文件的大小，文件的创建时间，文件的名称。例：-rw-r--r-- 1 lusifer lusifer 675 Oct 26 17:20 .profile......
     </div>
   </a>
   
@@ -785,8 +814,10 @@ ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件�
       Ubuntu 用户和组管理
     </h3>
     <div class="post-content-preview">
-      概述Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。
-使用 Root 用户在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们使用......
+      概述
+Linux 操作系统是一个多用户操作系统，它允许多用户同时登录到系统上并使用资源。系统会根据账户来区分每个用户的文件，进程，任务和工作环境，使得每个用户工作都不受干扰。
+使用 Root 用户
+在实际生产操作中，我们基本上都是使用超级管理员账户操作 Linux 系统，也就是 Root 用户，Linux 系统默认是关闭 Root 账户的，我们需要为 Root 用户设置一个初始密码以方便我们......
     </div>
   </a>
   
@@ -819,8 +850,10 @@ ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件�
       Ubuntu 软件包管理
     </h3>
     <div class="post-content-preview">
-      概述APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 /etc/apt/ 目录下的 sources.list 文件。
-修改数据源由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改为国......
+      概述
+APT（Advanced Packaging Tool）是 Debian/Ubuntu 类 Linux 系统中的软件包管理程序, 使用它可以找到想要的软件包, 而且安装、卸载、更新都很简便；也可以用来对 Ubuntu 进行升级; APT 的源文件为 /etc/apt/ 目录下的 sources.list 文件。
+修改数据源
+由于国内的网络环境问题，我们需要将 Ubuntu 的数据源修改......
     </div>
   </a>
   
@@ -1029,11 +1062,11 @@ ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件�
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1061,11 +1094,11 @@ ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件�
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1193,11 +1226,11 @@ ls -l 文件名：显示信息包括—文件类型 (d 目录，- 普通文件�
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

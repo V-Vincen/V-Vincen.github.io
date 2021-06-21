@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -491,7 +491,8 @@
     </h3>
     <div class="post-content-preview">
       Slf4j 简介
-slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java 程序提供日志输出的统一接口，并不是一个具体的日志实现方案，就比如 JDBC 一样，只是一种规则而已。所以单独的 slf4j 是不能工作的，必须搭配其他具体的日志实现方案，比如 apache 的 org.apache.log4j.Logger，JDK 自带的 java......
+
+slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java 程序提供日志输出的统一接口，并不是一个具体的日志实现方案，就比如 JDBC 一样，只是一种规则而已。所以单独的 slf4j 是不能工作的，必须搭配其他具体的日志实现方案，比如 apache 的 org.apache.log4j.Logger，JDK 自带的 jav......
     </div>
   </a>
   
@@ -524,8 +525,10 @@ slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java
       基于注解的装配方式
     </h3>
     <div class="post-content-preview">
-      概述截止目前为止，咱们 Bean 的装配方式是通过代码 getBean() 的方式从容器获取指定的 Bean 实例，容器首先会调用 Bean 类的无参构造器，创建空值的实例对象。除了使用 getBean() 的装配方式外，还可以使用注解的装配方式。
-容器中 Bean 的作用域在学习 Bean 的装配方式之前，我们先了解一下 Bean 的作用域。当通过 Spring 容器创建一个 Bean 实......
+      概述
+截止目前为止，咱们 Bean 的装配方式是通过代码 getBean() 的方式从容器获取指定的 Bean 实例，容器首先会调用 Bean 类的无参构造器，创建空值的实例对象。除了使用 getBean() 的装配方式外，还可以使用注解的装配方式。
+容器中 Bean 的作用域
+在学习 Bean 的装配方式之前，我们先了解一下 Bean 的作用域。当通过 Spring 容器创建一个 Bean......
     </div>
   </a>
   
@@ -559,6 +562,7 @@ slf4j 的全称是 Simple Loging Facade For Java，即它仅仅是一个为 Java
     </h3>
     <div class="post-content-preview">
       Log4j 日志级别
+
 为了方便对于日志信息的输出显示，对日志内容进行了分级管理。日志级别由高到低，共分 6 个级别：
 
 fatal(致命的)
@@ -569,10 +573,12 @@ debug
 trace(堆栈)
 
 Log4j 日志输出控制文件
-日志输出简介Log4j 的日志输出控制文件，主要由三个部分构成：
+
+日志输出简介
+Log4j 的日志输出控制文件，主要由三个部分构成：
 
 日志信息的输出位置：控制日志信息将要输出的位置，是控制台还是文件等。
-日志信息的输出格式......
+日志信息的输......
     </div>
   </a>
   
@@ -606,8 +612,9 @@ Log4j 日志输出控制文件
     </h3>
     <div class="post-content-preview">
       什么是断言
+
 断言是编程术语，表示为一些布尔表达式，程序员相信在程序中的某个特定点该表达式值为真，可以在任何时候启用和禁用断言验证，因此可以在测试时启用断言而在部署时禁用断言。同样，程序投入运行后，最终用户在遇到问题时可以重新启用断言。
-使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 false 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/Jun......
+使用断言可以创建更稳定、品质更好且 不易于出错的代码。当需要在一个值为 false 时中断当前操作的话，可以使用断言。单元测试必须使用断言（Junit/Ju......
     </div>
   </a>
   
@@ -691,7 +698,9 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring @Transactional
     </h3>
     <div class="post-content-preview">
-      概述通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org.s......
+      概述
+通过 @Transactional 注解方式，也可将事务织入到相应方法中。而使用注解方式，只需在配置文件中加入一个 tx 标签，以告诉 Spring 使用注解来完成事务的织入。该标签只需指定一个属性，事务管理器。
+1234567&lt;!-- 配置事务管理器 --&gt;&lt;bean id=&quot;transactionManager&quot; class=&quot;org......
     </div>
   </a>
   
@@ -724,8 +733,11 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring AspectJ
     </h3>
     <div class="post-content-preview">
-      概述AspectJ 主要是使用 XML 配置顾问方式自动为每个符合切入点表达式的类生成事务代理。创建测试操作步骤如下：
-创建测试项目创建一个名为 aspectj-aop 项目，pom.xml 文件如下：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525......
+      概述
+AspectJ 主要是使用 XML 配置顾问方式自动为每个符合切入点表达式的类生成事务代理。创建测试操作步骤如下：
+创建测试项目
+创建一个名为 aspectj-aop 项目，pom.xml 文件如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051......
     </div>
   </a>
   
@@ -758,11 +770,13 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring 事务管理
     </h3>
     <div class="post-content-preview">
-      概述事务原本是数据库中的概念，用于数据访问层。但一般情况下，需要将事务提升到业务层，即 Service 层。这样做是为了能够使用事务的特性来管理具体的业务。
+      概述
+事务原本是数据库中的概念，用于数据访问层。但一般情况下，需要将事务提升到业务层，即 Service 层。这样做是为了能够使用事务的特性来管理具体的业务。
 事务特性：ACID
+
 原子性（Atomicity）：原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。
 一致性（Consistency）：事务前后数据的完整性必须保持一致。
-隔离性（Isolation）：事务的......
+隔离性（Isolation）：事......
     </div>
   </a>
   
@@ -795,7 +809,9 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring IoC
     </h3>
     <div class="post-content-preview">
-      POM创建一个工程名为 spring-ioc-demo 的项目，pom.xml 文件如下：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808......
+      POM
+创建一个工程名为 spring-ioc-demo 的项目，pom.xml 文件如下：
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798......
     </div>
   </a>
   
@@ -828,8 +844,10 @@ Before 注释表示，该方法必须在类中的每个测试之前执行，以�
       Spring 的总结
     </h3>
     <div class="post-content-preview">
-      Spring 简介概述Spring 的主要作用就是为代码“解耦”，降低代码间的耦合度。根据功能的不同，可以将一个系统中的代码分为 主业务逻辑 与 系统级业务逻辑 两类。它们各自具有鲜明的特点：主业务代码间逻辑联系紧密，有具体的专业业务应用场景，复用性相对较低；系统级业务相对功能独立，没有具体的专业业务应用场景，主要是为主业务提供系统级服务，如日志、安全、事务等，复用性强。
-Spring 根据......
+      Spring 简介
+概述
+Spring 的主要作用就是为代码“解耦”，降低代码间的耦合度。根据功能的不同，可以将一个系统中的代码分为 主业务逻辑 与 系统级业务逻辑 两类。它们各自具有鲜明的特点：主业务代码间逻辑联系紧密，有具体的专业业务应用场景，复用性相对较低；系统级业务相对功能独立，没有具体的专业业务应用场景，主要是为主业务提供系统级服务，如日志、安全、事务等，复用性强。
+Spring ......
     </div>
   </a>
   
@@ -1038,11 +1056,11 @@ Spring 根据......
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1070,11 +1088,11 @@ Spring 根据......
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1202,11 +1220,11 @@ Spring 根据......
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

@@ -261,9 +261,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -272,9 +272,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -494,7 +494,8 @@
 并发容器虽然数量非常多，但依然是前面我们提到的四大类：List、Map、Set 和 Queue。
 
 并发容器关系图。
-ListCopyOnWrit......
+List
+CopyOnWri......
     </div>
   </a>
   
@@ -563,9 +564,11 @@ Java 中的集合包括三大类，它们是 Set（集）、List（列表）和 
     </h3>
     <div class="post-content-preview">
       Java 中的容器主要可以分为四个大类，分别是 List、Map、Set 和 Queue，但并不是所有的 Java 容器都是线程安全的。说到线程安全的问题，我们先来理解两个名词 同步容器 和 并发容器。
-同步容器在 Java 中，同步容器主要包括 2 类：
+同步容器
+在 Java 中，同步容器主要包括 2 类：
 Vector、Stack、HashTable
-Vector 实现了 List 接口，Vector 实际上就是一个数组，和 ArrayLi......
+
+Vector 实现了 List 接口，Vector 实际上就是一个数组，和 Array......
     </div>
   </a>
   
@@ -598,9 +601,11 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 ArrayLi.
       方法引用与构造方法引用
     </h3>
     <div class="post-content-preview">
-      方法引用什么是方法引用当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用。
+      方法引用
+什么是方法引用
+当要传递给 Lambda 体的操作，已经有实现的方法了，可以使用方法引用。
 方法引用可以看做是 Lambda 表达式深层次的表达。换句话说，方法引用就是 Lambda 表达式，也就是函数式接口的一个实例，通过方法的名字来指向一个方法，可以认为是 Lambda 表达式的一个语法糖。
-要求：实现接口的抽象方法的参数类列和返回值类型，必须与方法引用的方法的参数列表和返回值类型......
+要求：实现接口的抽象方法的参数类列和返回值类型，必须与方法引用的方法的参数列表和返回值......
     </div>
   </a>
   
@@ -634,9 +639,10 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 ArrayLi.
     </h3>
     <div class="post-content-preview">
       什么是函数式（Functional）接口
+
 只包含一个抽象方法的接口，称为函数式接口
-你可以通过 Lambda 表达式来创建接口的对象。（若 Lambda 表达式抛出一个受检异常 — 即：非运行时异常，那么该异常需要在目标接口的抽象方法上进行声明）。
-我们可以在一个接口上使用 @FunctionalInterface 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含一......
+你可以通过 Lambda 表达式来创建接口的对象。（若 Lambda 表达式抛出一个受检异常 – 即：非运行时异常，那么该异常需要在目标接口的抽象方法上进行声明）。
+我们可以在一个接口上使用 @FunctionalInterface 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含......
     </div>
   </a>
   
@@ -669,8 +675,10 @@ Vector 实现了 List 接口，Vector 实际上就是一个数组，和 ArrayLi.
       Lambda 表达式
     </h3>
     <div class="post-content-preview">
-      Lambda 表达式简介Lambda 是一个简洁匿名函数，我们可以把 Lambda 表达式理解为是一段可以传递的代码（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使 Java 的语言表达能力得到了提升。
-Lambda 表达式的应用范围Lambda 表达式本质：作为函数式接口（只有一个抽象方法的接口）的实例，Lambda 表达式和方法引用,只能用在函数式......
+      Lambda 表达式简介
+Lambda 是一个简洁匿名函数，我们可以把 Lambda 表达式理解为是一段可以传递的代码（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使 Java 的语言表达能力得到了提升。
+Lambda 表达式的应用范围
+Lambda 表达式本质：作为函数式接口（只有一个抽象方法的接口）的实例，Lambda 表达式和方法引用,只能用在函......
     </div>
   </a>
   
@@ -703,15 +711,18 @@ Lambda 表达式的应用范围Lambda 表达式本质：作为函数式接口（
       JKD 5.0 线程创建新增方式
     </h3>
     <div class="post-content-preview">
-      新增方式一：实现 Callable 接口与使用 Runnable 相比，Callable 功能更强大些
+      新增方式一：实现 Callable 接口
+与使用 Runnable 相比，Callable 功能更强大些
+
 相比 run() 方法，可以有返回值
 方法可以抛出异常
 支持泛型的返回值
 需要借助 FutureTask 类，比如获取返回结果
 
 Future 接口
+
 可以对具体 Runnable、Callable 任务的执行结果进行取消、查询是否完成、获取结果等。
-FutureTask 是 Future ......
+FutureTask 是 Futu......
     </div>
   </a>
   
@@ -744,13 +755,15 @@ FutureTask 是 Future ......
       线程的通信
     </h3>
     <div class="post-content-preview">
-      假设一个场景需求：使用两个线程打印 1-100。线程1、线程2交替打印。
+      假设一个场景
+需求：使用两个线程打印 1-100。线程1、线程2交替打印。
 涉及到三个方法
+
 wait()：一旦执行此方法，当前线程就进入阻塞状态，并释放同步监视器。
 notify()：一旦执行此方法，就会唤醒被 wait() 的一个线程。如果有多个线程被 wait()，就唤醒优先级高的那个。
 notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
 
-1234567891......
+12345678......
     </div>
   </a>
   
@@ -783,11 +796,12 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       线程的安全问题
     </h3>
     <div class="post-content-preview">
-      假设一个场景需求：创建三个窗口卖票，总票数为100张。
+      假设一个场景
+需求：创建三个窗口卖票，总票数为100张。
 线程安全问题：卖票过程中，出现了重票、错票。
 问题的原因：当某个线程操作车票的过程中，尚未操作完成时，其他线程参与进来，也操作车票。
 如何解决：当一个线程a 在操作 ticket 的时候，其他线程不能参与进来。直到线程a 操作完 ticket 时，其他线程才可以操作 ticket 。这种情况即使线程a 出现了阻塞，也不能改变。
-在 Ja......
+在 J......
     </div>
   </a>
   
@@ -820,10 +834,12 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
       线程的基本概念
     </h3>
     <div class="post-content-preview">
-      基本的进程线程概念进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
+      基本的进程线程概念
+进程和线程算是操作系统内两个很基本、很重要的概念了，进程是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程是进程的组成部分，它代表了一条顺序的执行流。
 系统中的进程线程模型是这样的：
+
 进程从操作系统获得基本的内存空间，所有的线程共享着进程的内存地址空间。当然，每个线程也会拥有自己私有的内存地址范围，其他线程不能访问。
-由于所有的线程共享进程的......
+由于所有的线程共享进......
     </div>
   </a>
   
@@ -1032,11 +1048,11 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     
     
-    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
-    
-    
-    
     <a href="/tags/#Atom" title="Atom" rel="2">Atom</a>
+    
+    
+    
+    <a href="/tags/#Annotation" title="Annotation" rel="2">Annotation</a>
     
     
     
@@ -1064,11 +1080,11 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     
     
-    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
-    
-    
-    
     <a href="/tags/#Git" title="Git" rel="7">Git</a>
+    
+    
+    
+    <a href="/tags/#Generics" title="Generics" rel="2">Generics</a>
     
     
     
@@ -1196,11 +1212,11 @@ notifyAll()：一旦执行此方法，就会唤醒所以被 wait() 的线程。
     
     
     
-    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
-    
-    
-    
     <a href="/tags/#Swagger2" title="Swagger2" rel="1">Swagger2</a>
+    
+    
+    
+    <a href="/tags/#Spring Session" title="Spring Session" rel="1">Spring Session</a>
     
     
     

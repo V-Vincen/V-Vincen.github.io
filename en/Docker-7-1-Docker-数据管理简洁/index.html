@@ -264,9 +264,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -275,9 +275,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -415,7 +415,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">599</span> In Total
+              Words <span class="post-count">602</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -482,19 +482,27 @@
 <li>数据卷（Volumes）</li>
 <li>挂载主机目录 (Bind mounts)</li>
 </ul>
-<h2 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h2><p>数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。</p>
-<p><strong>创建数据卷</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create my-vol</span><br></pre></td></tr></table></figure></p>
-<p><strong>数据卷列表</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume ls</span><br></pre></td></tr></table></figure></p>
-<p><strong>查看数据卷具体信息</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume inspect my-vol</span><br></pre></td></tr></table></figure></p>
-<p><strong>删除数据卷</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume rm my-vol</span><br></pre></td></tr></table></figure></p>
-<p><strong>清除无主的数据卷</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume prune</span><br></pre></td></tr></table></figure></p>
-<p><strong>启动一个容器并挂载一个数据卷到容器的/webapp目录（两种方式：）</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -P --name nginx -v my-vol:/webapp nginx</span><br></pre></td></tr></table></figure><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -P --name nginx --mount <span class="built_in">source</span>=my-vol,target=/webapp nginx</span><br></pre></td></tr></table></figure></p>
-<font color=red>**要点：**</font>
-
+<h2 id="数据卷">数据卷</h2>
+<p>数据卷用来保存对容器的修改/数据，可供容器之间共享和重用，数据卷独立于容器，不会随着容器删除而删除。</p>
+<p><strong>创建数据卷</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create my-vol</span><br></pre></td></tr></table></figure>
+<p><strong>数据卷列表</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
+<p><strong>查看数据卷具体信息</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume inspect my-vol</span><br></pre></td></tr></table></figure>
+<p><strong>删除数据卷</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume rm my-vol</span><br></pre></td></tr></table></figure>
+<p><strong>清除无主的数据卷</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume prune</span><br></pre></td></tr></table></figure>
+<p><strong>启动一个容器并挂载一个数据卷到容器的/webapp目录（两种方式：）</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -P --name nginx -v my-vol:/webapp nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -P --name nginx --mount <span class="built_in">source</span>=my-vol,target=/webapp nginx</span><br></pre></td></tr></table></figure>
+<p><font color=red><strong>要点：</strong></font></p>
 <ul>
-<li>如果本地数据卷或者本地目录尚未创建，-v命令则会自动创建,—mount则会报错</li>
+<li>如果本地数据卷或者本地目录尚未创建，-v命令则会自动创建,–mount则会报错</li>
 <li>如果是容器里的目录不存在，两者都会自动创建</li>
-<li>—mount命令解析：<ul>
+<li>–mount命令解析：
+<ul>
 <li>由多个键=值组成</li>
 <li>有 type = bind/volume/tmpfs，（省略该字段则默认为volume）</li>
 <li>可使用source/src =本机目录文件，（省略该字段则为匿名卷）</li>
@@ -503,10 +511,21 @@
 </ul>
 </li>
 </ul>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>测试一下两个容器通过数据卷来数据共享（<font color=red>注意：数据卷仅仅保存挂载目录里的数据</font>）</p>
-<p><strong>容器一：</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 82:80 --name nginx-v -v my-vol-test:/webapp nginx</span><br></pre></td></tr></table></figure><br>进入 nginx-v 容器，到挂载的目录下创建一个文件 test<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx-v bash</span><br><span class="line"><span class="built_in">cd</span> webapp/</span><br><span class="line">touch <span class="built_in">test</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>容器二：</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 83:80 --name nginx-v1 --mount src=my-vol-test,target=/mywebapp nginx</span><br></pre></td></tr></table></figure><br>进入 nginx-v1 容器，到挂载目录下查看是否有 test 文件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx-v1 bash</span><br><span class="line"><span class="built_in">cd</span> mywebapp/</span><br><span class="line">ls</span><br></pre></td></tr></table></figure></p>
-<h2 id="挂载目录"><a href="#挂载目录" class="headerlink" title="挂载目录"></a>挂载目录</h2><p>将一个本地绝对路径挂载到 tomcat 容器的绝对路径，可通过此方法来部署 web 应用<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8082:8080 --name tomcat-mount -v /usr/<span class="built_in">local</span>/kun/aa:/usr/<span class="built_in">local</span>/tomcat/webapps/aa tomcat</span><br></pre></td></tr></table></figure><br>或者<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8082:8080 --name tomcat-mount --mount <span class="built_in">type</span>=<span class="built_in">bind</span>,src=/usr/<span class="built_in">local</span>/kun/aa,target=/usr/<span class="built_in">local</span>/tomcat/webapps/aa tomcat</span><br></pre></td></tr></table></figure></p>
+<h3 id="测试">测试</h3>
+<p>测试一下两个容器通过数据卷来数据共享（<font color=red>注意：数据卷仅仅保存挂载目录里的数据</font>）</p>
+<p><strong>容器一：</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 82:80 --name nginx-v -v my-vol-test:/webapp nginx</span><br></pre></td></tr></table></figure>
+<p>进入 nginx-v 容器，到挂载的目录下创建一个文件 test</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx-v bash</span><br><span class="line"><span class="built_in">cd</span> webapp/</span><br><span class="line">touch <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p><strong>容器二：</strong></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 83:80 --name nginx-v1 --mount src=my-vol-test,target=/mywebapp nginx</span><br></pre></td></tr></table></figure>
+<p>进入 nginx-v1 容器，到挂载目录下查看是否有 test 文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx-v1 bash</span><br><span class="line"><span class="built_in">cd</span> mywebapp/</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+<h2 id="挂载目录">挂载目录</h2>
+<p>将一个本地绝对路径挂载到 tomcat 容器的绝对路径，可通过此方法来部署 web 应用</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8082:8080 --name tomcat-mount -v /usr/<span class="built_in">local</span>/kun/aa:/usr/<span class="built_in">local</span>/tomcat/webapps/aa tomcat</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8082:8080 --name tomcat-mount --mount <span class="built_in">type</span>=<span class="built_in">bind</span>,src=/usr/<span class="built_in">local</span>/kun/aa,target=/usr/<span class="built_in">local</span>/tomcat/webapps/aa tomcat</span><br></pre></td></tr></table></figure>
 <p><font color=red><strong>注意：</strong></font></p>
 <ul>
 <li>容器里必须是绝对路径，如果 /usr/local/tomcat/webapps 换成 /webapps 经过验证是不行的</li>
