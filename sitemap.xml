@@ -30,13 +30,6 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/</loc>
-    
-    <lastmod>2021-05-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-3-Nacos-Dynamic-Naming-and-Configuration-Service/</loc>
     
     <lastmod>2021-05-21</lastmod>
@@ -2076,14 +2069,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Atom/</loc>
+    <loc>https://v-vincen.life/tags/Annotation/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Annotation/</loc>
+    <loc>https://v-vincen.life/tags/Atom/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2132,14 +2125,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Git/</loc>
+    <loc>https://v-vincen.life/tags/Generics/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Generics/</loc>
+    <loc>https://v-vincen.life/tags/Git/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2363,14 +2356,14 @@
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Swagger2/</loc>
+    <loc>https://v-vincen.life/tags/Spring-Session/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://v-vincen.life/tags/Spring-Session/</loc>
+    <loc>https://v-vincen.life/tags/Swagger2/</loc>
     <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
