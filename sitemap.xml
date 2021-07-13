@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://v-vincen.life/en/Date-1-How-to-get-current-date-time/</loc>
+    
+    <lastmod>2021-07-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-Java-%E4%B8%AD%E7%9A%84-BigDecimal/</loc>
     
     <lastmod>2021-07-13</lastmod>
@@ -2490,6 +2497,13 @@
   
   <url>
     <loc>https://v-vincen.life/tags/Spring-RestTemplate/</loc>
+    <lastmod>2021-07-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://v-vincen.life/tags/Date/</loc>
     <lastmod>2021-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -482,6 +482,44 @@
   <!-- top end -->
   
 
+  <a href="/en/Thread-2-线程的安全问题/">
+    <h2 class="post-title">
+      [Thread] 2 线程的安全问题
+    </h2>
+    <h3 class="post-subtitle">
+      线程的安全问题
+    </h3>
+    <div class="post-content-preview">
+      假设一个场景
+需求：创建三个窗口卖票，总票数为100张。
+线程安全问题：卖票过程中，出现了重票、错票。
+问题的原因：当某个线程操作车票的过程中，尚未操作完成时，其他线程参与进来，也操作车票。
+如何解决：当一个线程a 在操作 ticket 的时候，其他线程不能参与进来。直到线程a 操作完 ticket 时，其他线程才可以操作 ticket 。这种情况即使线程a 出现了阻塞，也不能改变。
+在 J......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Mr.Vincent on
+    2019-09-06
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Thread" title="Thread">Thread</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/en/Thread-1-线程的基本概念/">
     <h2 class="post-title">
       [Thread] 1 线程的基本概念
@@ -831,49 +869,6 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/Git-3-Git-命令/">
-    <h2 class="post-title">
-      [Git] 3 Git 命令
-    </h2>
-    <h3 class="post-subtitle">
-      Git 命令
-    </h3>
-    <div class="post-content-preview">
-      基本命令
-
-先来看张流程图，具体命令如下：
-配置用户信息
-12git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱地址&quot;
-查看配置
-1git config --list
-初始化
-1git init
-新增提交
-12git addgit commit -m &#39;me......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Mr.Vincent on
-    2019-08-23
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -925,6 +920,10 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 <div class="widget">
   <ul>
     
+    <a href="../../en/Date-1-How-to-get-current-date-time/">
+      <li>[Date] 1 How to get current date time</li>
+    </a>
+    
     <a href="../../en/Java-%E6%9D%82%E8%AE%B0-Java-%E4%B8%AD%E7%9A%84-BigDecimal/">
       <li>[Java 杂记] Java 中的 BigDecimal</li>
     </a>
@@ -939,10 +938,6 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     
     <a href="../../en/Spring-Cloud-Alibaba-4-Start-a-Provider-Application/">
       <li>[Spring Cloud Alibaba] 4 Start a Provider Application</li>
-    </a>
-    
-    <a href="../../en/Spring-Cloud-Alibaba-2-Create-a-Unified-Parent-Dependency-Management/">
-      <li>[Spring Cloud Alibaba] 2 Create a Unified Parent Dependency Management</li>
     </a>
     
   </ul>
@@ -1304,6 +1299,10 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
     <a href="/tags/#Spring RestTemplate" title="Spring RestTemplate" rel="1">Spring RestTemplate</a>
     
     
+    
+    <a href="/tags/#Date" title="Date" rel="1">Date</a>
+    
+    
   </div>
 </section>
 
@@ -1314,7 +1313,7 @@ TortoiseGit，中文名海龟 Git，其作用是简化 Git 操作。海龟 Git �
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/07/">July 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">May 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">April 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">February 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/12/">December 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/11/">November 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/10/">October 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">September 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">August 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/07/">July 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">May 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">March 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">February 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">January 2020</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">December 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/10/">October 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/08/">August 2019</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/07/">July 2019</a><span class="archive-list-count">53</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/06/">June 2019</a><span class="archive-list-count">60</span></li></ul>
 </div>
 
 
