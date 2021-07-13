@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://v-vincen.life/en/Java-%E6%9D%82%E8%AE%B0-Java-%E4%B8%AD%E7%9A%84-BigDecimal/</loc>
+    <lastmod>2021-07-13</lastmod>
+  </url>
+  <url>
     <loc>https://v-vincen.life/en/Spring-Cloud-Alibaba-5-2-Start-a-Consumer-Application-Feign/</loc>
     <lastmod>2021-05-27</lastmod>
   </url>
